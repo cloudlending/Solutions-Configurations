@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "CreditRatingMatrix F Rule",
+     "clcommon__Document_Definition__r": null,
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "CreditRatingMatrix_F_Rule",
+     "clcommon__Object_Type__c": "genesis__Applications__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": null,
+     "clcommon__Rule_Json__c": {
+          "validationClassName": null,
+          "successMessage": "Rule Evaluation Passed for rule : CreditRatingMatrixFRule",
+          "successActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "solcommon.CreditRatingMatrixResultGenerator",
+                    "additionalParams": "{\"Credit Approval Status\":\"AUTO-DECLINE\",\"Action type\":\"Success\"}",
+                    "actionName": "Action1"
+               }
+          ],
+          "sObjectName": "genesis__Credit_Rating_Matrix__c",
+          "saveRuleClass": "genesis.CreditRatingMatrixRuleManagment",
+          "ruleName": "CreditRatingMatrixFRule",
+          "priority": 5,
+          "parentRuleID": null,
+          "parentRecordId": "a6s5Y000000HWyw",
+          "objectType": "genesis__Applications__c",
+          "failureMessage": "Rule Evaluation Failed for rule : CreditRatingMatrixFRule",
+          "failureActions": [],
+          "executeActions": null,
+          "evaluationExpression": "$1",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "genesis__Applications__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "100",
+                    "matchingType": "<",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Total Score",
+                    "fieldAPIName": "genesis__total_score__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               }
+          ],
+          "category": "Credit Rating Matrix Config",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 5,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Credit_Rating_Matrix_Config"
+     },
+     "solcommon__CL_Product__r": null,
+     "solcommon__Type__c": null
+}

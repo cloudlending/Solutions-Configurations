@@ -1,0 +1,374 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "ApplicationScorecardResultQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "genesis__Application_s_Scorecard__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "abbcaa96",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "dc4099bf": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "dc4099bf"
+               }
+          },
+          "queryName": "ApplicationScorecardResultQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "23bdfe10": {
+                    "queryToken": "genesis__weighted_score__c",
+                    "isAggregation": false,
+                    "id": "23bdfe10",
+                    "fieldType": "",
+                    "fieldName": "genesis__weighted_score__c",
+                    "alias": "genesis__Weighted_Score__c"
+               },
+               "a131f4f3": {
+                    "queryToken": "genesis__weight__c",
+                    "isAggregation": false,
+                    "id": "a131f4f3",
+                    "fieldType": "",
+                    "fieldName": "genesis__weight__c",
+                    "alias": "genesis__Weight__c"
+               },
+               "91df5f5b": {
+                    "queryToken": "genesis__use_input_field_as_score__c",
+                    "isAggregation": false,
+                    "id": "91df5f5b",
+                    "fieldType": "",
+                    "fieldName": "genesis__use_input_field_as_score__c",
+                    "alias": "genesis__Use_Input_Field_As_Score__c"
+               },
+               "f1bf0953": {
+                    "queryToken": "genesis__scorecard__c",
+                    "isAggregation": false,
+                    "id": "f1bf0953",
+                    "fieldType": "",
+                    "fieldName": "genesis__scorecard__c",
+                    "alias": "genesis__Scorecard__c"
+               },
+               "5fe045c8": {
+                    "queryToken": "genesis__scorecard_criteria__c",
+                    "isAggregation": false,
+                    "id": "5fe045c8",
+                    "fieldType": "",
+                    "fieldName": "genesis__scorecard_criteria__c",
+                    "alias": "genesis__Scorecard_Criteria__c"
+               },
+               "358d5252": {
+                    "queryToken": "genesis__score__c",
+                    "isAggregation": false,
+                    "id": "358d5252",
+                    "fieldType": "",
+                    "fieldName": "genesis__score__c",
+                    "alias": "genesis__Score__c"
+               },
+               "69ae1c81": {
+                    "queryToken": "genesis__rule__c",
+                    "isAggregation": false,
+                    "id": "69ae1c81",
+                    "fieldType": "",
+                    "fieldName": "genesis__rule__c",
+                    "alias": "genesis__Rule__c"
+               },
+               "04966681": {
+                    "queryToken": "genesis__related_object__c",
+                    "isAggregation": false,
+                    "id": "04966681",
+                    "fieldType": "",
+                    "fieldName": "genesis__related_object__c",
+                    "alias": "genesis__Related_Object__c"
+               },
+               "825c243e": {
+                    "queryToken": "genesis__party__c",
+                    "isAggregation": false,
+                    "id": "825c243e",
+                    "fieldType": "",
+                    "fieldName": "genesis__party__c",
+                    "alias": "genesis__Party__c"
+               },
+               "89c7b279": {
+                    "queryToken": "genesis__new_weight__c",
+                    "isAggregation": false,
+                    "id": "89c7b279",
+                    "fieldType": "",
+                    "fieldName": "genesis__new_weight__c",
+                    "alias": "genesis__New_Weight__c"
+               },
+               "e7d8f1fc": {
+                    "queryToken": "genesis__new_score__c",
+                    "isAggregation": false,
+                    "id": "e7d8f1fc",
+                    "fieldType": "",
+                    "fieldName": "genesis__new_score__c",
+                    "alias": "genesis__New_Score__c"
+               },
+               "6bb3230e": {
+                    "queryToken": "genesis__new_minimum_value__c",
+                    "isAggregation": false,
+                    "id": "6bb3230e",
+                    "fieldType": "",
+                    "fieldName": "genesis__new_minimum_value__c",
+                    "alias": "genesis__New_Minimum_Value__c"
+               },
+               "a0f972af": {
+                    "queryToken": "genesis__new_maximum_value__c",
+                    "isAggregation": false,
+                    "id": "a0f972af",
+                    "fieldType": "",
+                    "fieldName": "genesis__new_maximum_value__c",
+                    "alias": "genesis__New_Maximum_Value__c"
+               },
+               "c33ec6c2": {
+                    "queryToken": "genesis__new_matching_value__c",
+                    "isAggregation": false,
+                    "id": "c33ec6c2",
+                    "fieldType": "",
+                    "fieldName": "genesis__new_matching_value__c",
+                    "alias": "genesis__New_Matching_Value__c"
+               },
+               "56ca8e0e": {
+                    "queryToken": "genesis__new_matching_type__c",
+                    "isAggregation": false,
+                    "id": "56ca8e0e",
+                    "fieldType": "",
+                    "fieldName": "genesis__new_matching_type__c",
+                    "alias": "genesis__New_Matching_Type__c"
+               },
+               "872e4f71": {
+                    "queryToken": "genesis__new_field_type__c",
+                    "isAggregation": false,
+                    "id": "872e4f71",
+                    "fieldType": "",
+                    "fieldName": "genesis__new_field_type__c",
+                    "alias": "genesis__New_Field_Type__c"
+               },
+               "6b420e72": {
+                    "queryToken": "genesis__new_field_name__c",
+                    "isAggregation": false,
+                    "id": "6b420e72",
+                    "fieldType": "",
+                    "fieldName": "genesis__new_field_name__c",
+                    "alias": "genesis__New_Field_Name__c"
+               },
+               "4a5bd0b8": {
+                    "queryToken": "genesis__new_field_api_name__c",
+                    "isAggregation": false,
+                    "id": "4a5bd0b8",
+                    "fieldType": "",
+                    "fieldName": "genesis__new_field_api_name__c",
+                    "alias": "genesis__New_Field_API_Name__c"
+               },
+               "a541d142": {
+                    "queryToken": "genesis__minimum_value__c",
+                    "isAggregation": false,
+                    "id": "a541d142",
+                    "fieldType": "",
+                    "fieldName": "genesis__minimum_value__c",
+                    "alias": "genesis__Minimum_Value__c"
+               },
+               "86c27d9c": {
+                    "queryToken": "genesis__maximun_value__c",
+                    "isAggregation": false,
+                    "id": "86c27d9c",
+                    "fieldType": "",
+                    "fieldName": "genesis__maximun_value__c",
+                    "alias": "genesis__Maximun_Value__c"
+               },
+               "306b94b3": {
+                    "queryToken": "genesis__matching_value__c",
+                    "isAggregation": false,
+                    "id": "306b94b3",
+                    "fieldType": "",
+                    "fieldName": "genesis__matching_value__c",
+                    "alias": "genesis__Matching_Value__c"
+               },
+               "f79c754b": {
+                    "queryToken": "genesis__matching_type__c",
+                    "isAggregation": false,
+                    "id": "f79c754b",
+                    "fieldType": "",
+                    "fieldName": "genesis__matching_type__c",
+                    "alias": "genesis__Matching_Type__c"
+               },
+               "ca8b794f": {
+                    "queryToken": "genesis__input_value__c",
+                    "isAggregation": false,
+                    "id": "ca8b794f",
+                    "fieldType": "",
+                    "fieldName": "genesis__input_value__c",
+                    "alias": "genesis__Input_Value__c"
+               },
+               "05f12845": {
+                    "queryToken": "genesis__field_type__c",
+                    "isAggregation": false,
+                    "id": "05f12845",
+                    "fieldType": "",
+                    "fieldName": "genesis__field_type__c",
+                    "alias": "genesis__Field_Type__c"
+               },
+               "55c575b8": {
+                    "queryToken": "genesis__field_name__c",
+                    "isAggregation": false,
+                    "id": "55c575b8",
+                    "fieldType": "",
+                    "fieldName": "genesis__field_name__c",
+                    "alias": "genesis__Field_Name__c"
+               },
+               "eec356d6": {
+                    "queryToken": "genesis__field_api_name__c",
+                    "isAggregation": false,
+                    "id": "eec356d6",
+                    "fieldType": "",
+                    "fieldName": "genesis__field_api_name__c",
+                    "alias": "genesis__Field_API_Name__c"
+               },
+               "23082219": {
+                    "queryToken": "genesis__criteria_match__c",
+                    "isAggregation": false,
+                    "id": "23082219",
+                    "fieldType": "",
+                    "fieldName": "genesis__criteria_match__c",
+                    "alias": "genesis__Criteria_Match__c"
+               },
+               "f38a2ac6": {
+                    "queryToken": "genesis__adverse_action_reason__c",
+                    "isAggregation": false,
+                    "id": "f38a2ac6",
+                    "fieldType": "",
+                    "fieldName": "genesis__adverse_action_reason__c",
+                    "alias": "genesis__Adverse_Action_Reason__c"
+               },
+               "aac24441": {
+                    "queryToken": "genesis__actual_value__c",
+                    "isAggregation": false,
+                    "id": "aac24441",
+                    "fieldType": "",
+                    "fieldName": "genesis__actual_value__c",
+                    "alias": "genesis__Actual_Value__c"
+               },
+               "8cdb3c48": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "8cdb3c48",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "2c278137": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "2c278137",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "260997c1": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "260997c1",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "bdaedc0d": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "bdaedc0d",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "f1115e41": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "f1115e41",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "e2675947": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "e2675947",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "20483824": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "20483824",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "1d44face": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "1d44face",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "db0534c2": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "db0534c2",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "04ad93ae": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "04ad93ae",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "85a244c1": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "85a244c1",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Application_s_Scorecard__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "abbcaa96": {
+                    "rhsSelectionId": null,
+                    "paramId": "dc4099bf",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "abbcaa96",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "ApplicationScorecardResultQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null
+}

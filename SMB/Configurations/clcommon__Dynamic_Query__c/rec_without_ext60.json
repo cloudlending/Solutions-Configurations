@@ -1,0 +1,105 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": null,
+     "clcommon__From_Object__c": "genesis__Applications__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "e00eda64",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "e820cda4": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "e820cda4"
+               }
+          },
+          "queryName": "ApplicationFinancedAmountQuery",
+          "projectionsAsString": null,
+          "projections": {
+               "bee2f5dc": {
+                    "queryToken": "genesis__total_capitalized_fee__c",
+                    "isAggregation": false,
+                    "id": "bee2f5dc",
+                    "fieldType": "",
+                    "fieldName": "genesis__total_capitalized_fee__c",
+                    "alias": "TotalCapitalizedFee"
+               },
+               "886aed1a": {
+                    "queryToken": "genesis__subvention_amount__c",
+                    "isAggregation": false,
+                    "id": "886aed1a",
+                    "fieldType": "",
+                    "fieldName": "genesis__subvention_amount__c",
+                    "alias": "SubventionAmount"
+               },
+               "e931c861": {
+                    "queryToken": "genesis__down_payment__c",
+                    "isAggregation": false,
+                    "id": "e931c861",
+                    "fieldType": "",
+                    "fieldName": "genesis__down_payment__c",
+                    "alias": "DownPayment"
+               },
+               "b9435527": {
+                    "queryToken": "genesis__tax_amount__c",
+                    "isAggregation": false,
+                    "id": "b9435527",
+                    "fieldType": "",
+                    "fieldName": "genesis__tax_amount__c",
+                    "alias": "TaxAmount"
+               },
+               "2b00a8ef": {
+                    "queryToken": "genesis__fees_amount__c",
+                    "isAggregation": false,
+                    "id": "2b00a8ef",
+                    "fieldType": "",
+                    "fieldName": "genesis__fees_amount__c",
+                    "alias": "FeesAmount"
+               },
+               "3103a1e2": {
+                    "queryToken": "genesis__warranty_amount__c",
+                    "isAggregation": false,
+                    "id": "3103a1e2",
+                    "fieldType": "",
+                    "fieldName": "genesis__warranty_amount__c",
+                    "alias": "WarrantyAmount"
+               },
+               "88235de5": {
+                    "queryToken": "genesis__estimated_selling_price__c",
+                    "isAggregation": false,
+                    "id": "88235de5",
+                    "fieldType": "",
+                    "fieldName": "genesis__estimated_selling_price__c",
+                    "alias": "EstimatedSellingPrice"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Applications__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "e00eda64": {
+                    "rhsSelectionId": null,
+                    "paramId": "e820cda4",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "e00eda64",
+                    "fieldName": "Id"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "ApplicationFinancedAmountQuery",
+     "clcommon__Record_Limit__c": null
+}

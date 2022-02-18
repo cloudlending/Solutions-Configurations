@@ -1,0 +1,78 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "SMB Unsecured Principal Criteria 13",
+     "clcommon__Document_Definition__r": null,
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "SMB_Unsecured_Principal_Criteria_13",
+     "clcommon__Object_Type__c": "clcommon__Party__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": {
+          "attributes": {
+               "type": "clcommon__Rule__c"
+          },
+          "clcommon__External_ID__c": "SMB_Unsecured_Principal"
+     },
+     "clcommon__Rule_Json__c": {
+          "validationClassName": "genesis.ScorecardRulesValidator",
+          "successMessage": "Rule Evaluation Passed for rule : SMB Unsecured Principal Criteria 13",
+          "successActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.ScorecardResultGenerator",
+                    "additionalParams": "{\"Weight\":\"1\",\"Score\":\"35\",\"Action type\":\"Success\"}",
+                    "actionName": "Action1"
+               }
+          ],
+          "sObjectName": "",
+          "saveRuleClass": null,
+          "ruleName": "SMB Unsecured Principal Criteria 13",
+          "priority": 44,
+          "parentRuleID": "a3L5Y000002O3nUUAS",
+          "parentRecordId": null,
+          "objectType": "clcommon__Party__c",
+          "failureMessage": "Rule Evaluation Failed for rule : SMB Unsecured Principal Criteria 13",
+          "failureActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.ScorecardResultGenerator",
+                    "additionalParams": "{\"Action type\":\"Failure\"}",
+                    "actionName": "Action2"
+               }
+          ],
+          "executeActions": null,
+          "evaluationExpression": "$1",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "0.30",
+                    "matchingType": "<",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Back End Debt To Income Ratio",
+                    "fieldAPIName": "genesis__back_end_debt_to_income_ratio__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               }
+          ],
+          "category": "Small Business Unsecured Scorecards",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 44,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Small_Business_Unsecured_Scorecards"
+     },
+     "solcommon__CL_Product__r": null,
+     "solcommon__Type__c": null
+}

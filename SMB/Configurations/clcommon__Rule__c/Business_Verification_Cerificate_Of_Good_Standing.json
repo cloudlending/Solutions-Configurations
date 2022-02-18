@@ -1,0 +1,153 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "Business Verification - Certificate of Good Standing",
+     "clcommon__Document_Definition__r": {
+          "attributes": {
+               "type": "clcommon__Document_Definition__c"
+          },
+          "genesis__External_ID__c": "Business_Verification_Certificate_Of_Good_Standing"
+     },
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "Business_Verification_Cerificate_Of_Good_Standing",
+     "clcommon__Object_Type__c": "clcommon__Party__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": null,
+     "clcommon__Rule_Json__c": {
+          "validationClassName": "DocumentDefinitionPreSaveValidation",
+          "successMessage": "Rule Evaluation Passed for rule : Business Verification - Certificate of Good Standing",
+          "successActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.DocumentCategoryGenerateAction",
+                    "additionalParams": "{\"Action type\":\"Success\"}",
+                    "actionName": "Action1"
+               }
+          ],
+          "sObjectName": "clcommon__Document_Definition__c",
+          "saveRuleClass": null,
+          "ruleName": "Business Verification - Certificate of Good Standing",
+          "priority": 25,
+          "parentRuleID": null,
+          "parentRecordId": "a1N5Y000007I0ZpUAK",
+          "objectType": "clcommon__Party__c",
+          "failureMessage": "Rule Evaluation Failed for rule : Business Verification - Certificate of Good Standing",
+          "failureActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.DocumentCategoryGenerateAction",
+                    "additionalParams": "{\"Action type\":\"Failure\"}",
+                    "actionName": "Action2"
+               }
+          ],
+          "executeActions": null,
+          "evaluationExpression": "$1&&($2||$6)&&$3&&$4&&$5",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "BORROWER",
+                    "matchingType": "CONTAINS",
+                    "fieldType": "MULTIPICKLIST",
+                    "fieldName": "Party Types",
+                    "fieldAPIName": "clcommon__party_types__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "MANUAL",
+                    "matchingType": "==",
+                    "fieldType": "PICKLIST",
+                    "fieldName": "KYB Verification Status",
+                    "fieldAPIName": "solcommon__kyb_verification_status__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$3",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Individual",
+                    "matchingType": "!=",
+                    "fieldType": "STRING",
+                    "fieldName": "Legal Entity Type Code",
+                    "fieldAPIName": "clcommon__account__r.clcommon__legal_entity_type__r.clcommon__legal_entity_type_code__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$4",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Sole Proprietorship",
+                    "matchingType": "!=",
+                    "fieldType": "STRING",
+                    "fieldName": "Legal Entity Type Code",
+                    "fieldAPIName": "clcommon__account__r.clcommon__legal_entity_type__r.clcommon__legal_entity_type_code__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$5",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": null,
+                    "maximumValue": null,
+                    "matchingValue": "false",
+                    "matchingType": "==",
+                    "fieldType": "BOOLEAN",
+                    "fieldName": "Residential Business Indicator",
+                    "fieldAPIName": "solcommon__kyb_fraud__r.intdm__residential_business_indicator__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$6",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "MANUAL",
+                    "matchingType": "==",
+                    "fieldType": "PICKLIST",
+                    "fieldName": "KYB Verification Method",
+                    "fieldAPIName": "solcommon__kyb_verification_method__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               }
+          ],
+          "category": "DocumentDefinition",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 25,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Document_Definition"
+     },
+     "solcommon__CL_Product__r": null,
+     "solcommon__Type__c": null
+}
