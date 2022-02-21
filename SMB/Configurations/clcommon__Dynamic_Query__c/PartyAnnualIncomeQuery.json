@@ -1,0 +1,125 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "PartyAnnualIncomeQuery",
+     "clcommon__From_Object__c": "genesis__Income__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1e8c000005KhMiAAK",
+          "whereClause": null,
+          "subQueryParams": {
+               "a1f8c000001W0deAAC": {
+                    "subQueryId": "a1h8c000007N7ySAAS",
+                    "pType": "SUB_QUERY",
+                    "paramValue": "a1e8c000005KhM5AAK",
+                    "id": "a1f8c000001W0deAAC"
+               }
+          },
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "a1f8c000001W0dfAAC": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "genesis__Application__c",
+                    "id": "a1f8c000001W0dfAAC"
+               },
+               "a1f8c000001W0dcAAC": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "clcommon__Contact__c",
+                    "id": "a1f8c000001W0dcAAC"
+               }
+          },
+          "queryName": "PartyAnnualIncomeQuery",
+          "projectionsAsString": null,
+          "projections": {
+               "a1e8c000005KhMbAAK": {
+                    "queryToken": "SUM(genesis__amount__c) Income",
+                    "isAggregation": true,
+                    "id": "a1e8c000005KhMbAAK",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "genesis__amount__c",
+                    "alias": "Income"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Income__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {
+               "a1f8c000001W0ddAAC": {
+                    "subQueryId": null,
+                    "pType": "CONSTANT",
+                    "paramValue": "'Annual'",
+                    "id": "a1f8c000001W0ddAAC"
+               }
+          },
+          "connectByClauseId": null,
+          "clauses": {
+               "a1e8c000005KhMiAAK": {
+                    "rhsSelectionId": "a1e8c000005KhMhAAK",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1e8c000005KhMeAAK",
+                    "id": "a1e8c000005KhMiAAK",
+                    "fieldName": null
+               },
+               "a1e8c000005KhMhAAK": {
+                    "rhsSelectionId": "a1e8c000005KhMgAAK",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1e8c000005KhMfAAK",
+                    "id": "a1e8c000005KhMhAAK",
+                    "fieldName": null
+               },
+               "a1e8c000005KhMgAAK": {
+                    "rhsSelectionId": "a1e8c000005KhMdAAK",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1e8c000005KhMcAAK",
+                    "id": "a1e8c000005KhMgAAK",
+                    "fieldName": null
+               },
+               "a1e8c000005KhMfAAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1f8c000001W0dfAAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1e8c000005KhMfAAK",
+                    "fieldName": "genesis__Application__c"
+               },
+               "a1e8c000005KhMeAAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1f8c000001W0deAAC",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a1e8c000005KhMeAAK",
+                    "fieldName": "genesis__Contact__c"
+               },
+               "a1e8c000005KhMdAAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1f8c000001W0ddAAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1e8c000005KhMdAAK",
+                    "fieldName": "genesis__Frequency__c"
+               },
+               "a1e8c000005KhMcAAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1f8c000001W0dcAAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1e8c000005KhMcAAK",
+                    "fieldName": "genesis__Contact__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "PartyAnnualIncomeQuery",
+     "clcommon__Record_Limit__c": null
+}

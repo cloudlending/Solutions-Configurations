@@ -1,0 +1,80 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "PartyQueryForType",
+     "clcommon__From_Object__c": "clcommon__Party__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1a5Y000018XYnSQAW",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "a1b5Y00000FAw1KQAT": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "ID",
+                    "id": "a1b5Y00000FAw1KQAT"
+               }
+          },
+          "queryName": "PartyQueryForType",
+          "projectionsAsString": null,
+          "projections": {
+               "a1a5Y000018XYnPQAW": {
+                    "queryToken": "clcommon__contact__c",
+                    "isAggregation": false,
+                    "id": "a1a5Y000018XYnPQAW",
+                    "fieldType": "REFERENCE",
+                    "fieldName": "clcommon__contact__c",
+                    "alias": "Contact"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "clcommon__Party__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {
+               "a1b5Y00000FAw1LQAT": {
+                    "subQueryId": null,
+                    "pType": "CONSTANT",
+                    "paramValue": "('BORROWER' , 'CO-BORROWER', 'COSIGNER', 'PRINCIPAL')",
+                    "id": "a1b5Y00000FAw1LQAT"
+               }
+          },
+          "connectByClauseId": null,
+          "clauses": {
+               "a1a5Y000018XYnSQAW": {
+                    "rhsSelectionId": "a1a5Y000018XYnRQAW",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1a5Y000018XYnQQAW",
+                    "id": "a1a5Y000018XYnSQAW",
+                    "fieldName": null
+               },
+               "a1a5Y000018XYnRQAW": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1b5Y00000FAw1LQAT",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a1a5Y000018XYnRQAW",
+                    "fieldName": "clcommon__Type__r.Name"
+               },
+               "a1a5Y000018XYnQQAW": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1b5Y00000FAw1KQAT",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1a5Y000018XYnQQAW",
+                    "fieldName": "ID"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "PartyQueryForType",
+     "clcommon__Record_Limit__c": null
+}

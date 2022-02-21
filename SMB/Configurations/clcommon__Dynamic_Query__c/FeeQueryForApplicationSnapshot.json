@@ -1,0 +1,542 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "FeeQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "clcommon__Fee__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "77706dc3",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "1556321e": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "1556321e"
+               }
+          },
+          "queryName": "FeeQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "527ef9a0": {
+                    "queryToken": "genesis__treasury_services__c",
+                    "isAggregation": false,
+                    "id": "527ef9a0",
+                    "fieldType": "",
+                    "fieldName": "genesis__treasury_services__c",
+                    "alias": "genesis__Treasury_Services__c"
+               },
+               "a4b040dd": {
+                    "queryToken": "genesis__payment_of_fee_proceeds__c",
+                    "isAggregation": false,
+                    "id": "a4b040dd",
+                    "fieldType": "",
+                    "fieldName": "genesis__payment_of_fee_proceeds__c",
+                    "alias": "genesis__Payment_of_Fee_Proceeds__c"
+               },
+               "fd6c7dba": {
+                    "queryToken": "genesis__fee_category__c",
+                    "isAggregation": false,
+                    "id": "fd6c7dba",
+                    "fieldType": "",
+                    "fieldName": "genesis__fee_category__c",
+                    "alias": "genesis__Fee_Category__c"
+               },
+               "324b2f6a": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "324b2f6a",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "e8af1b4c": {
+                    "queryToken": "genesis__application_fee_payment__c",
+                    "isAggregation": false,
+                    "id": "e8af1b4c",
+                    "fieldType": "",
+                    "fieldName": "genesis__application_fee_payment__c",
+                    "alias": "genesis__Application_Fee_Payment__c"
+               },
+               "ce01af37": {
+                    "queryToken": "genesis__application_collateral__c",
+                    "isAggregation": false,
+                    "id": "ce01af37",
+                    "fieldType": "",
+                    "fieldName": "genesis__application_collateral__c",
+                    "alias": "genesis__Application_Collateral__c"
+               },
+               "3be30638": {
+                    "queryToken": "clcommon__waived_principal__c",
+                    "isAggregation": false,
+                    "id": "3be30638",
+                    "fieldType": "",
+                    "fieldName": "clcommon__waived_principal__c",
+                    "alias": "clcommon__Waived_Principal__c"
+               },
+               "4cc82c51": {
+                    "queryToken": "clcommon__waived_interest__c",
+                    "isAggregation": false,
+                    "id": "4cc82c51",
+                    "fieldType": "",
+                    "fieldName": "clcommon__waived_interest__c",
+                    "alias": "clcommon__Waived_Interest__c"
+               },
+               "a9997dc7": {
+                    "queryToken": "clcommon__waive__c",
+                    "isAggregation": false,
+                    "id": "a9997dc7",
+                    "fieldType": "",
+                    "fieldName": "clcommon__waive__c",
+                    "alias": "clcommon__Waive__c"
+               },
+               "a80fee52": {
+                    "queryToken": "clcommon__waive_amount__c",
+                    "isAggregation": false,
+                    "id": "a80fee52",
+                    "fieldType": "",
+                    "fieldName": "clcommon__waive_amount__c",
+                    "alias": "clcommon__Waive_Amount__c"
+               },
+               "38a30b84": {
+                    "queryToken": "clcommon__type__c",
+                    "isAggregation": false,
+                    "id": "38a30b84",
+                    "fieldType": "",
+                    "fieldName": "clcommon__type__c",
+                    "alias": "clcommon__Type__c"
+               },
+               "cff97b5c": {
+                    "queryToken": "clcommon__total_waived_amount__c",
+                    "isAggregation": false,
+                    "id": "cff97b5c",
+                    "fieldType": "",
+                    "fieldName": "clcommon__total_waived_amount__c",
+                    "alias": "clcommon__Total_Waived_Amount__c"
+               },
+               "8132a129": {
+                    "queryToken": "clcommon__total_fee_amount__c",
+                    "isAggregation": false,
+                    "id": "8132a129",
+                    "fieldType": "",
+                    "fieldName": "clcommon__total_fee_amount__c",
+                    "alias": "clcommon__Total_Fee_Amount__c"
+               },
+               "668f777f": {
+                    "queryToken": "clcommon__taxable__c",
+                    "isAggregation": false,
+                    "id": "668f777f",
+                    "fieldType": "",
+                    "fieldName": "clcommon__taxable__c",
+                    "alias": "clcommon__Taxable__c"
+               },
+               "08abcb7b": {
+                    "queryToken": "clcommon__tax_amount__c",
+                    "isAggregation": false,
+                    "id": "08abcb7b",
+                    "fieldType": "",
+                    "fieldName": "clcommon__tax_amount__c",
+                    "alias": "clcommon__Tax_Amount__c"
+               },
+               "18e797fe": {
+                    "queryToken": "clcommon__revised_original_amount__c",
+                    "isAggregation": false,
+                    "id": "18e797fe",
+                    "fieldType": "",
+                    "fieldName": "clcommon__revised_original_amount__c",
+                    "alias": "clcommon__Revised_Original_Amount__c"
+               },
+               "308ede47": {
+                    "queryToken": "clcommon__reference__c",
+                    "isAggregation": false,
+                    "id": "308ede47",
+                    "fieldType": "",
+                    "fieldName": "clcommon__reference__c",
+                    "alias": "clcommon__Reference__c"
+               },
+               "c8bf1b1d": {
+                    "queryToken": "clcommon__reason_waived__c",
+                    "isAggregation": false,
+                    "id": "c8bf1b1d",
+                    "fieldType": "",
+                    "fieldName": "clcommon__reason_waived__c",
+                    "alias": "clcommon__Reason_Waived__c"
+               },
+               "a2dc53bc": {
+                    "queryToken": "clcommon__principal_due__c",
+                    "isAggregation": false,
+                    "id": "a2dc53bc",
+                    "fieldType": "",
+                    "fieldName": "clcommon__principal_due__c",
+                    "alias": "clcommon__Principal_Due__c"
+               },
+               "1d5f2e2d": {
+                    "queryToken": "clcommon__payoff_balance__c",
+                    "isAggregation": false,
+                    "id": "1d5f2e2d",
+                    "fieldType": "",
+                    "fieldName": "clcommon__payoff_balance__c",
+                    "alias": "clcommon__Payoff_Balance__c"
+               },
+               "4a568bbb": {
+                    "queryToken": "clcommon__partial_fee_waiver__c",
+                    "isAggregation": false,
+                    "id": "4a568bbb",
+                    "fieldType": "",
+                    "fieldName": "clcommon__partial_fee_waiver__c",
+                    "alias": "clcommon__Partial_Fee_Waiver__c"
+               },
+               "83f26951": {
+                    "queryToken": "clcommon__paid__c",
+                    "isAggregation": false,
+                    "id": "83f26951",
+                    "fieldType": "",
+                    "fieldName": "clcommon__paid__c",
+                    "alias": "clcommon__Paid__c"
+               },
+               "d58866b4": {
+                    "queryToken": "clcommon__paid_amount__c",
+                    "isAggregation": false,
+                    "id": "d58866b4",
+                    "fieldType": "",
+                    "fieldName": "clcommon__paid_amount__c",
+                    "alias": "clcommon__Paid_Amount__c"
+               },
+               "73e7ea5c": {
+                    "queryToken": "clcommon__override_fee__c",
+                    "isAggregation": false,
+                    "id": "73e7ea5c",
+                    "fieldType": "",
+                    "fieldName": "clcommon__override_fee__c",
+                    "alias": "clcommon__Override_Fee__c"
+               },
+               "c0516d8a": {
+                    "queryToken": "clcommon__original_amount__c",
+                    "isAggregation": false,
+                    "id": "c0516d8a",
+                    "fieldType": "",
+                    "fieldName": "clcommon__original_amount__c",
+                    "alias": "clcommon__Original_Amount__c"
+               },
+               "b9da536c": {
+                    "queryToken": "clcommon__no_of_payments__c",
+                    "isAggregation": false,
+                    "id": "b9da536c",
+                    "fieldType": "",
+                    "fieldName": "clcommon__no_of_payments__c",
+                    "alias": "clcommon__No_of_Payments__c"
+               },
+               "d338297f": {
+                    "queryToken": "clcommon__maximum_waiver_amount__c",
+                    "isAggregation": false,
+                    "id": "d338297f",
+                    "fieldType": "",
+                    "fieldName": "clcommon__maximum_waiver_amount__c",
+                    "alias": "clcommon__Maximum_Waiver_Amount__c"
+               },
+               "48218479": {
+                    "queryToken": "clcommon__maximum_discount_amount__c",
+                    "isAggregation": false,
+                    "id": "48218479",
+                    "fieldType": "",
+                    "fieldName": "clcommon__maximum_discount_amount__c",
+                    "alias": "clcommon__Maximum_Discount_Amount__c"
+               },
+               "59b90666": {
+                    "queryToken": "clcommon__last_accrual_date__c",
+                    "isAggregation": false,
+                    "id": "59b90666",
+                    "fieldType": "",
+                    "fieldName": "clcommon__last_accrual_date__c",
+                    "alias": "clcommon__Last_Accrual_Date__c"
+               },
+               "6a832b0d": {
+                    "queryToken": "clcommon__interest_rate__c",
+                    "isAggregation": false,
+                    "id": "6a832b0d",
+                    "fieldType": "",
+                    "fieldName": "clcommon__interest_rate__c",
+                    "alias": "clcommon__Interest_Rate__c"
+               },
+               "71a184dd": {
+                    "queryToken": "clcommon__interest_due__c",
+                    "isAggregation": false,
+                    "id": "71a184dd",
+                    "fieldType": "",
+                    "fieldName": "clcommon__interest_due__c",
+                    "alias": "clcommon__Interest_Due__c"
+               },
+               "616f678a": {
+                    "queryToken": "clcommon__interest_bearing__c",
+                    "isAggregation": false,
+                    "id": "616f678a",
+                    "fieldType": "",
+                    "fieldName": "clcommon__interest_bearing__c",
+                    "alias": "clcommon__Interest_Bearing__c"
+               },
+               "1bef6525": {
+                    "queryToken": "clcommon__include_in_dues__c",
+                    "isAggregation": false,
+                    "id": "1bef6525",
+                    "fieldType": "",
+                    "fieldName": "clcommon__include_in_dues__c",
+                    "alias": "clcommon__Include_in_Dues__c"
+               },
+               "9ce8aebd": {
+                    "queryToken": "clcommon__include_in_apr__c",
+                    "isAggregation": false,
+                    "id": "9ce8aebd",
+                    "fieldType": "",
+                    "fieldName": "clcommon__include_in_apr__c",
+                    "alias": "clcommon__Include_in_APR__c"
+               },
+               "f954f839": {
+                    "queryToken": "clcommon__frequency__c",
+                    "isAggregation": false,
+                    "id": "f954f839",
+                    "fieldType": "",
+                    "fieldName": "clcommon__frequency__c",
+                    "alias": "clcommon__Frequency__c"
+               },
+               "964aa572": {
+                    "queryToken": "clcommon__fee_payment_timing__c",
+                    "isAggregation": false,
+                    "id": "964aa572",
+                    "fieldType": "",
+                    "fieldName": "clcommon__fee_payment_timing__c",
+                    "alias": "clcommon__Fee_Payment_Timing__c"
+               },
+               "3712b4e2": {
+                    "queryToken": "clcommon__fee_payment_method__c",
+                    "isAggregation": false,
+                    "id": "3712b4e2",
+                    "fieldType": "",
+                    "fieldName": "clcommon__fee_payment_method__c",
+                    "alias": "clcommon__Fee_Payment_Method__c"
+               },
+               "838a0199": {
+                    "queryToken": "clcommon__fee_paid_by__c",
+                    "isAggregation": false,
+                    "id": "838a0199",
+                    "fieldType": "",
+                    "fieldName": "clcommon__fee_paid_by__c",
+                    "alias": "clcommon__Fee_Paid_By__c"
+               },
+               "a37a7551": {
+                    "queryToken": "clcommon__fee_definition__c",
+                    "isAggregation": false,
+                    "id": "a37a7551",
+                    "fieldType": "",
+                    "fieldName": "clcommon__fee_definition__c",
+                    "alias": "clcommon__Fee_Definition__c"
+               },
+               "c0cb3a3c": {
+                    "queryToken": "clcommon__discounted_fee_percentage__c",
+                    "isAggregation": false,
+                    "id": "c0cb3a3c",
+                    "fieldType": "",
+                    "fieldName": "clcommon__discounted_fee_percentage__c",
+                    "alias": "clcommon__Discounted_Fee_Percentage__c"
+               },
+               "185739a5": {
+                    "queryToken": "clcommon__discounted_fee_amount__c",
+                    "isAggregation": false,
+                    "id": "185739a5",
+                    "fieldType": "",
+                    "fieldName": "clcommon__discounted_fee_amount__c",
+                    "alias": "clcommon__Discounted_Fee_Amount__c"
+               },
+               "7b981b54": {
+                    "queryToken": "clcommon__discount_fee__c",
+                    "isAggregation": false,
+                    "id": "7b981b54",
+                    "fieldType": "",
+                    "fieldName": "clcommon__discount_fee__c",
+                    "alias": "clcommon__Discount_Fee__c"
+               },
+               "bc33cd27": {
+                    "queryToken": "clcommon__discount_fee_by_percentage__c",
+                    "isAggregation": false,
+                    "id": "bc33cd27",
+                    "fieldType": "",
+                    "fieldName": "clcommon__discount_fee_by_percentage__c",
+                    "alias": "clcommon__Discount_Fee_By_Percentage__c"
+               },
+               "95d0ca49": {
+                    "queryToken": "clcommon__date__c",
+                    "isAggregation": false,
+                    "id": "95d0ca49",
+                    "fieldType": "",
+                    "fieldName": "clcommon__date__c",
+                    "alias": "clcommon__Date__c"
+               },
+               "cdf7c5c5": {
+                    "queryToken": "clcommon__capitalize__c",
+                    "isAggregation": false,
+                    "id": "cdf7c5c5",
+                    "fieldType": "",
+                    "fieldName": "clcommon__capitalize__c",
+                    "alias": "clcommon__Capitalize__c"
+               },
+               "61b4bf14": {
+                    "queryToken": "clcommon__balance__c",
+                    "isAggregation": false,
+                    "id": "61b4bf14",
+                    "fieldType": "",
+                    "fieldName": "clcommon__balance__c",
+                    "alias": "clcommon__Balance__c"
+               },
+               "2a879256": {
+                    "queryToken": "clcommon__approval_process__c",
+                    "isAggregation": false,
+                    "id": "2a879256",
+                    "fieldType": "",
+                    "fieldName": "clcommon__approval_process__c",
+                    "alias": "clcommon__Approval_Process__c"
+               },
+               "adbbd431": {
+                    "queryToken": "clcommon__applicable__c",
+                    "isAggregation": false,
+                    "id": "adbbd431",
+                    "fieldType": "",
+                    "fieldName": "clcommon__applicable__c",
+                    "alias": "clcommon__Applicable__c"
+               },
+               "050c5033": {
+                    "queryToken": "clcommon__active__c",
+                    "isAggregation": false,
+                    "id": "050c5033",
+                    "fieldType": "",
+                    "fieldName": "clcommon__active__c",
+                    "alias": "clcommon__Active__c"
+               },
+               "d8d14125": {
+                    "queryToken": "clcommon__accrue_interest_from__c",
+                    "isAggregation": false,
+                    "id": "d8d14125",
+                    "fieldType": "",
+                    "fieldName": "clcommon__accrue_interest_from__c",
+                    "alias": "clcommon__Accrue_Interest_From__c"
+               },
+               "8ca1768d": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "8ca1768d",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "702aaaad": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "702aaaad",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "482635a5": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "482635a5",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "1b97a0a1": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "1b97a0a1",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "1be2cc6e": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "1be2cc6e",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "eaa099b1": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "eaa099b1",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "1c5649ac": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "1c5649ac",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "2ff434c4": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "2ff434c4",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "1cf66310": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "1cf66310",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "728144ad": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "728144ad",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "3ea235c0": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "3ea235c0",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "clcommon__Fee__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "77706dc3": {
+                    "rhsSelectionId": null,
+                    "paramId": "1556321e",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "77706dc3",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "FeeQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null
+}

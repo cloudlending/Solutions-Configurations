@@ -1,0 +1,478 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "TaskQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "Task",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "52a40502",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "356fea09": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "356fea09"
+               }
+          },
+          "queryName": "TaskQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "e48d4751": {
+                    "queryToken": "genesis__user__c",
+                    "isAggregation": false,
+                    "id": "e48d4751",
+                    "fieldType": "",
+                    "fieldName": "genesis__user__c",
+                    "alias": "genesis__User__c"
+               },
+               "3cdbf6d3": {
+                    "queryToken": "genesis__task_setup__c",
+                    "isAggregation": false,
+                    "id": "3cdbf6d3",
+                    "fieldType": "",
+                    "fieldName": "genesis__task_setup__c",
+                    "alias": "genesis__Task_Setup__c"
+               },
+               "c176a1aa": {
+                    "queryToken": "genesis__task_order__c",
+                    "isAggregation": false,
+                    "id": "c176a1aa",
+                    "fieldType": "",
+                    "fieldName": "genesis__task_order__c",
+                    "alias": "genesis__Task_Order__c"
+               },
+               "ee2c1729": {
+                    "queryToken": "genesis__policy_condition_type__c",
+                    "isAggregation": false,
+                    "id": "ee2c1729",
+                    "fieldType": "",
+                    "fieldName": "genesis__policy_condition_type__c",
+                    "alias": "genesis__Policy_Condition_Type__c"
+               },
+               "602f3473": {
+                    "queryToken": "genesis__party__c",
+                    "isAggregation": false,
+                    "id": "602f3473",
+                    "fieldType": "",
+                    "fieldName": "genesis__party__c",
+                    "alias": "genesis__Party__c"
+               },
+               "beec1edd": {
+                    "queryToken": "genesis__manual_task_validation_rule_satisfied__c",
+                    "isAggregation": false,
+                    "id": "beec1edd",
+                    "fieldType": "",
+                    "fieldName": "genesis__manual_task_validation_rule_satisfied__c",
+                    "alias": "genesis__Manual_Task_Validation_Rule_Satisfied__c"
+               },
+               "9edc0d4e": {
+                    "queryToken": "genesis__is_parallel__c",
+                    "isAggregation": false,
+                    "id": "9edc0d4e",
+                    "fieldType": "",
+                    "fieldName": "genesis__is_parallel__c",
+                    "alias": "genesis__Is_Parallel__c"
+               },
+               "790db8a1": {
+                    "queryToken": "genesis__is_archived__c",
+                    "isAggregation": false,
+                    "id": "790db8a1",
+                    "fieldType": "",
+                    "fieldName": "genesis__is_archived__c",
+                    "alias": "genesis__Is_Archived__c"
+               },
+               "065e5bac": {
+                    "queryToken": "genesis__department__c",
+                    "isAggregation": false,
+                    "id": "065e5bac",
+                    "fieldType": "",
+                    "fieldName": "genesis__department__c",
+                    "alias": "genesis__Department__c"
+               },
+               "c53a0f3a": {
+                    "queryToken": "genesis__completion_mandatory__c",
+                    "isAggregation": false,
+                    "id": "c53a0f3a",
+                    "fieldType": "",
+                    "fieldName": "genesis__completion_mandatory__c",
+                    "alias": "genesis__Completion_Mandatory__c"
+               },
+               "80b37d44": {
+                    "queryToken": "genesis__asset_class__c",
+                    "isAggregation": false,
+                    "id": "80b37d44",
+                    "fieldType": "",
+                    "fieldName": "genesis__asset_class__c",
+                    "alias": "genesis__Asset_Class__c"
+               },
+               "56a506bb": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "56a506bb",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "2e451f1d": {
+                    "queryToken": "genesis__application_collateral__c",
+                    "isAggregation": false,
+                    "id": "2e451f1d",
+                    "fieldType": "",
+                    "fieldName": "genesis__application_collateral__c",
+                    "alias": "genesis__Application_Collateral__c"
+               },
+               "59136fbc": {
+                    "queryToken": "completeddatetime",
+                    "isAggregation": false,
+                    "id": "59136fbc",
+                    "fieldType": "",
+                    "fieldName": "completeddatetime",
+                    "alias": "CompletedDateTime"
+               },
+               "84d31914": {
+                    "queryToken": "tasksubtype",
+                    "isAggregation": false,
+                    "id": "84d31914",
+                    "fieldType": "",
+                    "fieldName": "tasksubtype",
+                    "alias": "TaskSubtype"
+               },
+               "64a9366b": {
+                    "queryToken": "recurrenceregeneratedtype",
+                    "isAggregation": false,
+                    "id": "64a9366b",
+                    "fieldType": "",
+                    "fieldName": "recurrenceregeneratedtype",
+                    "alias": "RecurrenceRegeneratedType"
+               },
+               "b52ccceb": {
+                    "queryToken": "recurrencemonthofyear",
+                    "isAggregation": false,
+                    "id": "b52ccceb",
+                    "fieldType": "",
+                    "fieldName": "recurrencemonthofyear",
+                    "alias": "RecurrenceMonthOfYear"
+               },
+               "7ba702b4": {
+                    "queryToken": "recurrenceinstance",
+                    "isAggregation": false,
+                    "id": "7ba702b4",
+                    "fieldType": "",
+                    "fieldName": "recurrenceinstance",
+                    "alias": "RecurrenceInstance"
+               },
+               "9dec4b36": {
+                    "queryToken": "recurrencedayofmonth",
+                    "isAggregation": false,
+                    "id": "9dec4b36",
+                    "fieldType": "",
+                    "fieldName": "recurrencedayofmonth",
+                    "alias": "RecurrenceDayOfMonth"
+               },
+               "090b0724": {
+                    "queryToken": "recurrencedayofweekmask",
+                    "isAggregation": false,
+                    "id": "090b0724",
+                    "fieldType": "",
+                    "fieldName": "recurrencedayofweekmask",
+                    "alias": "RecurrenceDayOfWeekMask"
+               },
+               "937a1ff8": {
+                    "queryToken": "recurrenceinterval",
+                    "isAggregation": false,
+                    "id": "937a1ff8",
+                    "fieldType": "",
+                    "fieldName": "recurrenceinterval",
+                    "alias": "RecurrenceInterval"
+               },
+               "4710fef9": {
+                    "queryToken": "recurrencetype",
+                    "isAggregation": false,
+                    "id": "4710fef9",
+                    "fieldType": "",
+                    "fieldName": "recurrencetype",
+                    "alias": "RecurrenceType"
+               },
+               "fbe7de1e": {
+                    "queryToken": "recurrencetimezonesidkey",
+                    "isAggregation": false,
+                    "id": "fbe7de1e",
+                    "fieldType": "",
+                    "fieldName": "recurrencetimezonesidkey",
+                    "alias": "RecurrenceTimeZoneSidKey"
+               },
+               "fbe24051": {
+                    "queryToken": "recurrenceenddateonly",
+                    "isAggregation": false,
+                    "id": "fbe24051",
+                    "fieldType": "",
+                    "fieldName": "recurrenceenddateonly",
+                    "alias": "RecurrenceEndDateOnly"
+               },
+               "1676be78": {
+                    "queryToken": "recurrencestartdateonly",
+                    "isAggregation": false,
+                    "id": "1676be78",
+                    "fieldType": "",
+                    "fieldName": "recurrencestartdateonly",
+                    "alias": "RecurrenceStartDateOnly"
+               },
+               "c11b9b49": {
+                    "queryToken": "isrecurrence",
+                    "isAggregation": false,
+                    "id": "c11b9b49",
+                    "fieldType": "",
+                    "fieldName": "isrecurrence",
+                    "alias": "IsRecurrence"
+               },
+               "55d6fb9a": {
+                    "queryToken": "recurrenceactivityid",
+                    "isAggregation": false,
+                    "id": "55d6fb9a",
+                    "fieldType": "",
+                    "fieldName": "recurrenceactivityid",
+                    "alias": "RecurrenceActivityId"
+               },
+               "165f6f58": {
+                    "queryToken": "isreminderset",
+                    "isAggregation": false,
+                    "id": "165f6f58",
+                    "fieldType": "",
+                    "fieldName": "isreminderset",
+                    "alias": "IsReminderSet"
+               },
+               "7e36d1bd": {
+                    "queryToken": "reminderdatetime",
+                    "isAggregation": false,
+                    "id": "7e36d1bd",
+                    "fieldType": "",
+                    "fieldName": "reminderdatetime",
+                    "alias": "ReminderDateTime"
+               },
+               "864f8b1f": {
+                    "queryToken": "callobject",
+                    "isAggregation": false,
+                    "id": "864f8b1f",
+                    "fieldType": "",
+                    "fieldName": "callobject",
+                    "alias": "CallObject"
+               },
+               "53dccccf": {
+                    "queryToken": "calldisposition",
+                    "isAggregation": false,
+                    "id": "53dccccf",
+                    "fieldType": "",
+                    "fieldName": "calldisposition",
+                    "alias": "CallDisposition"
+               },
+               "e107b0c8": {
+                    "queryToken": "calltype",
+                    "isAggregation": false,
+                    "id": "e107b0c8",
+                    "fieldType": "",
+                    "fieldName": "calltype",
+                    "alias": "CallType"
+               },
+               "558cf82c": {
+                    "queryToken": "calldurationinseconds",
+                    "isAggregation": false,
+                    "id": "558cf82c",
+                    "fieldType": "",
+                    "fieldName": "calldurationinseconds",
+                    "alias": "CallDurationInSeconds"
+               },
+               "54e2a79e": {
+                    "queryToken": "isarchived",
+                    "isAggregation": false,
+                    "id": "54e2a79e",
+                    "fieldType": "",
+                    "fieldName": "isarchived",
+                    "alias": "IsArchived"
+               },
+               "10fdd5c0": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "10fdd5c0",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "207e340e": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "207e340e",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "3148c535": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "3148c535",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "a5c2b425": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "a5c2b425",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "0301188e": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "0301188e",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "f4caaa34": {
+                    "queryToken": "isclosed",
+                    "isAggregation": false,
+                    "id": "f4caaa34",
+                    "fieldType": "",
+                    "fieldName": "isclosed",
+                    "alias": "IsClosed"
+               },
+               "bfd46c59": {
+                    "queryToken": "accountid",
+                    "isAggregation": false,
+                    "id": "bfd46c59",
+                    "fieldType": "",
+                    "fieldName": "accountid",
+                    "alias": "AccountId"
+               },
+               "917661f2": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "917661f2",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "d181ed29": {
+                    "queryToken": "type",
+                    "isAggregation": false,
+                    "id": "d181ed29",
+                    "fieldType": "",
+                    "fieldName": "type",
+                    "alias": "Type"
+               },
+               "47ee13eb": {
+                    "queryToken": "description",
+                    "isAggregation": false,
+                    "id": "47ee13eb",
+                    "fieldType": "",
+                    "fieldName": "description",
+                    "alias": "Description"
+               },
+               "a2bb1e6d": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "a2bb1e6d",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "ac324eeb": {
+                    "queryToken": "ishighpriority",
+                    "isAggregation": false,
+                    "id": "ac324eeb",
+                    "fieldType": "",
+                    "fieldName": "ishighpriority",
+                    "alias": "IsHighPriority"
+               },
+               "8f23fef7": {
+                    "queryToken": "priority",
+                    "isAggregation": false,
+                    "id": "8f23fef7",
+                    "fieldType": "",
+                    "fieldName": "priority",
+                    "alias": "Priority"
+               },
+               "d3da75b8": {
+                    "queryToken": "status",
+                    "isAggregation": false,
+                    "id": "d3da75b8",
+                    "fieldType": "",
+                    "fieldName": "status",
+                    "alias": "Status"
+               },
+               "4a21e961": {
+                    "queryToken": "activitydate",
+                    "isAggregation": false,
+                    "id": "4a21e961",
+                    "fieldType": "",
+                    "fieldName": "activitydate",
+                    "alias": "ActivityDate"
+               },
+               "f2f3b2fd": {
+                    "queryToken": "subject",
+                    "isAggregation": false,
+                    "id": "f2f3b2fd",
+                    "fieldType": "",
+                    "fieldName": "subject",
+                    "alias": "Subject"
+               },
+               "c8553bd4": {
+                    "queryToken": "whatid",
+                    "isAggregation": false,
+                    "id": "c8553bd4",
+                    "fieldType": "",
+                    "fieldName": "whatid",
+                    "alias": "WhatId"
+               },
+               "7c456f6a": {
+                    "queryToken": "whoid",
+                    "isAggregation": false,
+                    "id": "7c456f6a",
+                    "fieldType": "",
+                    "fieldName": "whoid",
+                    "alias": "WhoId"
+               },
+               "18682c1a": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "18682c1a",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "Task",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "52a40502": {
+                    "rhsSelectionId": null,
+                    "paramId": "356fea09",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "52a40502",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "TaskQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null
+}

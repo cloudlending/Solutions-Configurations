@@ -1,0 +1,80 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "GuarantorContracts",
+     "clcommon__From_Object__c": "staging__Interface_Party__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1e8c000005KhKpAAK",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "a1f8c000001W0cnAAC": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "a1f8c000001W0cnAAC"
+               }
+          },
+          "queryName": "GuarantorContracts",
+          "projectionsAsString": null,
+          "projections": {
+               "a1e8c000005KhKmAAK": {
+                    "queryToken": "SUM(staging__interface_contract__r.staging__principal_balance__c) PrincipalBalance",
+                    "isAggregation": true,
+                    "id": "a1e8c000005KhKmAAK",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "staging__interface_contract__r.staging__principal_balance__c",
+                    "alias": "PrincipalBalance"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "staging__Interface_Party__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {
+               "a1f8c000001W0coAAC": {
+                    "subQueryId": null,
+                    "pType": "CONSTANT",
+                    "paramValue": "'GUARANTOR'",
+                    "id": "a1f8c000001W0coAAC"
+               }
+          },
+          "connectByClauseId": null,
+          "clauses": {
+               "a1e8c000005KhKpAAK": {
+                    "rhsSelectionId": "a1e8c000005KhKnAAK",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1e8c000005KhKoAAK",
+                    "id": "a1e8c000005KhKpAAK",
+                    "fieldName": null
+               },
+               "a1e8c000005KhKoAAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1f8c000001W0coAAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1e8c000005KhKoAAK",
+                    "fieldName": "staging__Type__c"
+               },
+               "a1e8c000005KhKnAAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1f8c000001W0cnAAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1e8c000005KhKnAAK",
+                    "fieldName": "staging__Account__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "GuarantorContracts",
+     "clcommon__Record_Limit__c": null
+}

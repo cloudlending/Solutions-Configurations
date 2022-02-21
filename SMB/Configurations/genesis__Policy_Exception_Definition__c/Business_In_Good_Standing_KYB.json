@@ -1,0 +1,27 @@
+{
+     "attributes": {
+          "type": "genesis__Policy_Exception_Definition__c"
+     },
+     "genesis__Active__c": true,
+     "genesis__Adverse_Action_Reason__r": null,
+     "genesis__Condition_Type__c": "Document",
+     "genesis__Description__c": "Business In Good Standing (KYB) - verifies that the business is in good standing with the Secretary of State (SOS), as well as confirms the the business's state of incorporation.",
+     "genesis__Enable_Override__c": false,
+     "genesis__Evaluation_Expression__c": "1 OR 2 OR 3 OR 4",
+     "genesis__External_ID__c": "Business_In_Good_Standing_KYB",
+     "genesis__Object_Type__c": "clcommon__Party__c",
+     "genesis__Policy_Condition_Generation_Rule__r": {
+          "attributes": {
+               "type": "clcommon__Rule__c"
+          },
+          "clcommon__External_ID__c": "Business_In_Good_Standing_Verification"
+     },
+     "genesis__Policy_Condition_Name__c": "Business In Good Standing (KYB)",
+     "genesis__Portal_Description__c": "Any one of the following documents can be used to verify that your business is in good standing with the Secretary of State.",
+     "genesis__Portal_Title__c": "Business In Good Standing",
+     "genesis__Requires_Approval__c": false,
+     "genesis__Requires_Officer_Explanation__c": false,
+     "genesis__Type__c": "KYB",
+     "solcommon__Portal_Description__c": null,
+     "solcommon__Portal_Title__c": null
+}

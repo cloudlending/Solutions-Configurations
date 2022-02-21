@@ -1,0 +1,182 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "IncomeQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "genesis__Income__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "3f4c961c",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "125daa07": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "125daa07"
+               }
+          },
+          "queryName": "IncomeQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "0c7fdd07": {
+                    "queryToken": "genesis__taxable__c",
+                    "isAggregation": false,
+                    "id": "0c7fdd07",
+                    "fieldType": "",
+                    "fieldName": "genesis__taxable__c",
+                    "alias": "genesis__Taxable__c"
+               },
+               "1e4cc947": {
+                    "queryToken": "genesis__income_type__c",
+                    "isAggregation": false,
+                    "id": "1e4cc947",
+                    "fieldType": "",
+                    "fieldName": "genesis__income_type__c",
+                    "alias": "genesis__Income_Type__c"
+               },
+               "38e8590c": {
+                    "queryToken": "genesis__frequency__c",
+                    "isAggregation": false,
+                    "id": "38e8590c",
+                    "fieldType": "",
+                    "fieldName": "genesis__frequency__c",
+                    "alias": "genesis__Frequency__c"
+               },
+               "b8b2f39c": {
+                    "queryToken": "genesis__contact__c",
+                    "isAggregation": false,
+                    "id": "b8b2f39c",
+                    "fieldType": "",
+                    "fieldName": "genesis__contact__c",
+                    "alias": "genesis__Contact__c"
+               },
+               "c222b7f0": {
+                    "queryToken": "genesis__amount__c",
+                    "isAggregation": false,
+                    "id": "c222b7f0",
+                    "fieldType": "",
+                    "fieldName": "genesis__amount__c",
+                    "alias": "genesis__Amount__c"
+               },
+               "d8777666": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "d8777666",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "abc91b30": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "abc91b30",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "fdf597c9": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "fdf597c9",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "cb86dece": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "cb86dece",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "d4650d7c": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "d4650d7c",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "04ed219e": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "04ed219e",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "320c5fbd": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "320c5fbd",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "528708e7": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "528708e7",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "f8127001": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "f8127001",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "2ca2c3da": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "2ca2c3da",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "de1c4223": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "de1c4223",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Income__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "3f4c961c": {
+                    "rhsSelectionId": null,
+                    "paramId": "125daa07",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "3f4c961c",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "IncomeQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null
+}
