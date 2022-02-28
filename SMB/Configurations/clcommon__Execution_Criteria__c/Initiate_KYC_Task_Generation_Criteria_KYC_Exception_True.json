@@ -2,7 +2,12 @@
      "attributes": {
           "type": "clcommon__Execution_Criteria__c"
      },
-     "RecordType": null,
+     "RecordType": {
+          "attributes": {
+               "type": "RecordType"
+          },
+          "DeveloperName": "Task_Setup"
+     },
      "clcommon__External_ID__c": "Initiate_KYC_Task_Generation_Criteria_KYC_Exception_True",
      "clcommon__Field_API_Name__c": "solcommon__KYC_Exception__c",
      "clcommon__Field_Name__c": "KYC Exception",
@@ -24,6 +29,5 @@
                "type": "genesis__Task_Setup__c"
           },
           "genesis__External_ID__c": "Initiate_KYC"
-     },
-     "solcommon__Release_Checksum__c": "5a20f0b1acf3bae0464e1ec824c9e0209d55295ac3bfb527f12f9f6f7cb6f7c5"
+     }
 }

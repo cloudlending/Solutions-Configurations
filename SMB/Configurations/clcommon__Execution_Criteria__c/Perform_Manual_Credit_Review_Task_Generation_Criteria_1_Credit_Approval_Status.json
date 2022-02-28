@@ -2,7 +2,12 @@
      "attributes": {
           "type": "clcommon__Execution_Criteria__c"
      },
-     "RecordType": null,
+     "RecordType": {
+          "attributes": {
+               "type": "RecordType"
+          },
+          "DeveloperName": "Task_Setup"
+     },
      "clcommon__External_ID__c": "Perform_Manual_Credit_Review_Task_Generation_Criteria_1_Credit_Approval_Status",
      "clcommon__Field_API_Name__c": "solcommon__Credit_Approval_Status__c",
      "clcommon__Field_Name__c": "Credit Approval Status",
@@ -24,6 +29,5 @@
                "type": "genesis__Task_Setup__c"
           },
           "genesis__External_ID__c": "Perform_Manual_Credit_Review"
-     },
-     "solcommon__Release_Checksum__c": "36e035a653846eea2b937f9a897b3bb8e94d861537c9daeadfd670b060713cc4"
+     }
 }
