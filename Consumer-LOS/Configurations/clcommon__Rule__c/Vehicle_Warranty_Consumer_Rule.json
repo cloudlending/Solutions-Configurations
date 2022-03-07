@@ -1,0 +1,79 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "Vehicle Warranty",
+     "clcommon__Document_Definition__r": {
+          "attributes": {
+               "type": "clcommon__Document_Definition__c"
+          },
+          "genesis__External_ID__c": "Vehicle_Warranty_Consumer"
+     },
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "Vehicle_Warranty_Consumer_Rule",
+     "clcommon__Object_Type__c": "genesis__Application_Collateral__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": null,
+     "clcommon__Rule_Json__c": {
+          "validationClassName": "DocumentDefinitionPreSaveValidation",
+          "successMessage": "Rule Evaluation Passed for rule : Vehicle Warranty",
+          "successActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.DocumentCategoryGenerateAction",
+                    "additionalParams": "{\"Action type\":\"Success\"}",
+                    "actionName": "Action1"
+               }
+          ],
+          "sObjectName": "clcommon__Document_Definition__c",
+          "saveRuleClass": null,
+          "ruleName": "Vehicle Warranty",
+          "priority": 42,
+          "parentRuleID": null,
+          "parentRecordId": "a1Z6O000004DwzRUAS",
+          "objectType": "genesis__Application_Collateral__c",
+          "failureMessage": "Rule Evaluation Failed for rule : Vehicle Warranty",
+          "failureActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.DocumentCategoryGenerateAction",
+                    "additionalParams": "{\"Action type\":\"Failure\"}",
+                    "actionName": "Action2"
+               }
+          ],
+          "executeActions": null,
+          "evaluationExpression": "$1",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "genesis__Application_Collateral__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Titled Vehicles",
+                    "matchingType": "==",
+                    "fieldType": "STRING",
+                    "fieldName": "Collateral Type Name",
+                    "fieldAPIName": "genesis__collateral__r.clcommon__collateral_type__r.name",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               }
+          ],
+          "category": "DocumentDefinition",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 42,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Document_Definition"
+     },
+     "solcommon__CL_Product__r": null,
+     "solcommon__Type__c": null,
+     "solcommon__Release_Checksum__c": null
+}

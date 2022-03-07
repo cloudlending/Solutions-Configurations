@@ -1,0 +1,89 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "Credit Policy - LTV Rule",
+     "clcommon__Document_Definition__r": null,
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "Credit_Policy_LTV_Rule_Consumer_Rule",
+     "clcommon__Object_Type__c": "genesis__Applications__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": null,
+     "clcommon__Rule_Json__c": {
+          "validationClassName": null,
+          "successMessage": "Rule Evaluation Passed for rule : Credit Policy – LTV Rule",
+          "successActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.PolicyConditionGenerationAction",
+                    "additionalParams": "{\"Action type\":\"Success\"}",
+                    "actionName": "Action1"
+               }
+          ],
+          "sObjectName": "",
+          "saveRuleClass": "genesis.PolicyConditionGenerationRuleManagement",
+          "ruleName": "Credit Policy – LTV Rule",
+          "priority": 16,
+          "parentRuleID": null,
+          "parentRecordId": null,
+          "objectType": "genesis__Applications__c",
+          "failureMessage": "Rule Evaluation Failed for rule : Credit Policy – LTV Rule",
+          "failureActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.PolicyConditionGenerationAction",
+                    "additionalParams": "{\"Action type\":\"Failure\"}",
+                    "actionName": "Action2"
+               }
+          ],
+          "executeActions": null,
+          "evaluationExpression": "$1||$2",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "genesis__Applications__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Auto Loan",
+                    "matchingType": "==",
+                    "fieldType": "STRING",
+                    "fieldName": "Product Name",
+                    "fieldAPIName": "genesis__cl_product__r.clcommon__product_name__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
+                    "relatedObject": "genesis__Applications__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Home Equity Loan",
+                    "matchingType": "==",
+                    "fieldType": "STRING",
+                    "fieldName": "Product Name",
+                    "fieldAPIName": "genesis__cl_product__r.clcommon__product_name__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               }
+          ],
+          "category": "PolicyConditionGenerationConfig",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 16,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Policy_Condition_Generation_Config"
+     },
+     "solcommon__CL_Product__r": null,
+     "solcommon__Type__c": null,
+     "solcommon__Release_Checksum__c": null
+}
