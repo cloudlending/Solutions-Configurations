@@ -2,7 +2,12 @@
      "attributes": {
           "type": "clcommon__Execution_Criteria__c"
      },
-     "RecordType": null,
+     "RecordType": {
+          "attributes": {
+               "type": "RecordType"
+          },
+          "DeveloperName": "Task_Setup"
+     },
      "clcommon__External_ID__c": "Book_Loan_To_Core_Task_Generation_Criteria_1_Closing_Documents_Signed",
      "clcommon__Field_API_Name__c": "solcommon__Closing_Documents_Signed__c",
      "clcommon__Field_Name__c": "Closing Documents Signed",
@@ -24,6 +29,5 @@
                "type": "genesis__Task_Setup__c"
           },
           "genesis__External_ID__c": "Book_Loan_To_Core"
-     },
-     "solcommon__Release_Checksum__c": "c160acfb8e499e2b472ca8b24b13118af98c8c085d8377e1aaf203dc81d3c87c"
+     }
 }
