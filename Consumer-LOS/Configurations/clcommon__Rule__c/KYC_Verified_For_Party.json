@@ -1,0 +1,72 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "KYC Verified For Party",
+     "clcommon__Document_Definition__r": null,
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "KYC_Verified_For_Party",
+     "clcommon__Object_Type__c": "clcommon__Party__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": null,
+     "clcommon__Rule_Json__c": {
+          "validationClassName": null,
+          "successMessage": "Rule Evaluation Passed for rule : KYC Verified For Party",
+          "successActions": [],
+          "sObjectName": "",
+          "saveRuleClass": null,
+          "ruleName": "KYC Verified For Party",
+          "priority": 2,
+          "parentRuleID": null,
+          "parentRecordId": null,
+          "objectType": "clcommon__Party__c",
+          "failureMessage": "Rule Evaluation Failed for rule : KYC Verified For Party",
+          "failureActions": [],
+          "executeActions": null,
+          "evaluationExpression": "$1||$2",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "APPROVED",
+                    "matchingType": "==",
+                    "fieldType": "PICKLIST",
+                    "fieldName": "KYC Verification Status",
+                    "fieldAPIName": "solcommon__kyc_verification_status__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "True",
+                    "matchingType": "==",
+                    "fieldType": "BOOLEAN",
+                    "fieldName": "KYC Complete",
+                    "fieldAPIName": "solcommon__kyc_complete__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               }
+          ],
+          "category": "Workflow Orchestration Rules",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 2,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Workflow_Orchestration_Rules_Consumer"
+     },
+     "solcommon__CL_Product__r": null,
+     "solcommon__Type__c": null
+}

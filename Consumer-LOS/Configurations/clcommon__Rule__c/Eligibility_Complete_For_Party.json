@@ -1,0 +1,72 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "Eligibility Complete For Party",
+     "clcommon__Document_Definition__r": null,
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "Eligibility_Complete_For_Party",
+     "clcommon__Object_Type__c": "clcommon__Party__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": null,
+     "clcommon__Rule_Json__c": {
+          "validationClassName": null,
+          "successMessage": "Rule Evaluation Passed for rule : Eligibility Complete For Party",
+          "successActions": [],
+          "sObjectName": "",
+          "saveRuleClass": null,
+          "ruleName": "Eligibility Complete For Party",
+          "priority": 3,
+          "parentRuleID": null,
+          "parentRecordId": null,
+          "objectType": "clcommon__Party__c",
+          "failureMessage": "Rule Evaluation Failed for rule : Eligibility Complete For Party",
+          "failureActions": [],
+          "executeActions": null,
+          "evaluationExpression": "$1||$2",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "APPROVED",
+                    "matchingType": "==",
+                    "fieldType": "PICKLIST",
+                    "fieldName": "Eligibility Status",
+                    "fieldAPIName": "solcommon__eligibility_status__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "True",
+                    "matchingType": "==",
+                    "fieldType": "BOOLEAN",
+                    "fieldName": "Eligibility Complete",
+                    "fieldAPIName": "solcommon__eligibility_complete__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               }
+          ],
+          "category": "Workflow Orchestration Rules",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 5,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Workflow_Orchestration_Rules_Consumer"
+     },
+     "solcommon__CL_Product__r": null,
+     "solcommon__Type__c": null
+}
