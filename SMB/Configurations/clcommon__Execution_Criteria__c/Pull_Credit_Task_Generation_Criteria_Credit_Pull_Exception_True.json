@@ -2,7 +2,12 @@
      "attributes": {
           "type": "clcommon__Execution_Criteria__c"
      },
-     "RecordType": null,
+     "RecordType": {
+          "attributes": {
+               "type": "RecordType"
+          },
+          "DeveloperName": "Task_Setup"
+     },
      "clcommon__External_ID__c": "Pull_Credit_Task_Generation_Criteria_Credit_Pull_Exception_True",
      "clcommon__Field_API_Name__c": "solcommon__Credit_Analysis_Exception__c",
      "clcommon__Field_Name__c": "Credit Pull Exception",
@@ -24,6 +29,5 @@
                "type": "genesis__Task_Setup__c"
           },
           "genesis__External_ID__c": "Pull_Credit"
-     },
-     "solcommon__Release_Checksum__c": "1e72d449dd8b456ea24940b0dd00473b65bd8b59b0bf4630c9cccfc3f130d7e8"
+     }
 }

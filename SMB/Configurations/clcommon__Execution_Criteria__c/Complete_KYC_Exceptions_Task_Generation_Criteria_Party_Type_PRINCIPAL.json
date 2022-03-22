@@ -2,7 +2,12 @@
      "attributes": {
           "type": "clcommon__Execution_Criteria__c"
      },
-     "RecordType": null,
+     "RecordType": {
+          "attributes": {
+               "type": "RecordType"
+          },
+          "DeveloperName": "Task_Setup"
+     },
      "clcommon__External_ID__c": "Complete_KYC_Exceptions_Task_Generation_Criteria_Party_Type_PRINCIPAL",
      "clcommon__Field_API_Name__c": "clcommon__Party_Types__c",
      "clcommon__Field_Name__c": "Party Types",
@@ -24,6 +29,5 @@
                "type": "genesis__Task_Setup__c"
           },
           "genesis__External_ID__c": "Complete_KYC_Exceptions"
-     },
-     "solcommon__Release_Checksum__c": "0c64f61f8f7b2b11f2997c86517b1be378fd61eb590327aebfd2e285cff50899"
+     }
 }

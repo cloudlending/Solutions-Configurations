@@ -2,7 +2,12 @@
      "attributes": {
           "type": "clcommon__Execution_Criteria__c"
      },
-     "RecordType": null,
+     "RecordType": {
+          "attributes": {
+               "type": "RecordType"
+          },
+          "DeveloperName": "Policy_Condition_Definition"
+     },
      "clcommon__External_ID__c": "Individual_Score_Below_600_Credit_Score_Policy_Mitigated",
      "clcommon__Field_API_Name__c": "solcommon__Credit_Score_Policy_Mitigated__c",
      "clcommon__Field_Name__c": "Credit Score Policy Mitigated",
@@ -24,6 +29,5 @@
      },
      "genesis__Scorecard_Object_Reference__c": null,
      "genesis__Task_Setup_Object_Reference__c": null,
-     "genesis__Task_Setup__r": null,
-     "solcommon__Release_Checksum__c": "65230c4e91e45793890dad4664daa03247be2a487dddccd457c8ecc00e27d24e"
+     "genesis__Task_Setup__r": null
 }

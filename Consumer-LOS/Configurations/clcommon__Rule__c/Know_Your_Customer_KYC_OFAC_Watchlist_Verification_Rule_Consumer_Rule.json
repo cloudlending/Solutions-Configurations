@@ -1,0 +1,73 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "Know Your Customer (KYC) - OFAC/Watchlist Verification Rule",
+     "clcommon__Document_Definition__r": null,
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "Know_Your_Customer_KYC_OFAC_Watchlist_Verification_Rule_Consumer_Rule",
+     "clcommon__Object_Type__c": "clcommon__Party__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": null,
+     "clcommon__Rule_Json__c": {
+          "validationClassName": null,
+          "successMessage": "Rule Evaluation Passed for rule : Know Your Customer (KYC) – OFAC/Watchlist Verification Rule",
+          "successActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.PolicyConditionGenerationAction",
+                    "additionalParams": "{\"Action type\":\"Success\"}",
+                    "actionName": "Action1"
+               }
+          ],
+          "sObjectName": "",
+          "saveRuleClass": "genesis.PolicyConditionGenerationRuleManagement",
+          "ruleName": "Know Your Customer (KYC) – OFAC/Watchlist Verification Rule",
+          "priority": 5,
+          "parentRuleID": null,
+          "parentRecordId": null,
+          "objectType": "clcommon__Party__c",
+          "failureMessage": "Rule Evaluation Failed for rule : Know Your Customer (KYC) – OFAC/Watchlist Verification Rule",
+          "failureActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.PolicyConditionGenerationAction",
+                    "additionalParams": "{\"Action type\":\"Failure\"}",
+                    "actionName": "Action2"
+               }
+          ],
+          "executeActions": null,
+          "evaluationExpression": "$1",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "TRUE",
+                    "matchingType": "==",
+                    "fieldType": "BOOLEAN",
+                    "fieldName": "Global Watchlist Indicator",
+                    "fieldAPIName": "solcommon__kyc_fraud__r.intdm__global_watchlist_indicator__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               }
+          ],
+          "category": "PolicyConditionGenerationConfig",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 5,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Policy_Condition_Generation_Config"
+     },
+     "solcommon__CL_Product__r": null,
+     "solcommon__Type__c": null
+}

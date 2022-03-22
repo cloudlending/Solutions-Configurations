@@ -1,0 +1,478 @@
+{
+     "attributes": {
+          "type": "ints__Integration_Configuration__c"
+     },
+     "Name": "Meridian Link",
+     "ints__API_Endpoint__c": null,
+     "ints__API_Named_Credential__c": "CustomMeridianLink",
+     "ints__Active__c": true,
+     "ints__Adaptor_Class__c": null,
+     "ints__Authorization_Named_Credential__c": "MeridianLink",
+     "ints__Execution_Priority__c": 1,
+     "ints__External_ID__c": "Meridian_Link",
+     "ints__HTTP_Method__c": null,
+     "ints__Header_Parameters__c": null,
+     "ints__Integration_Service__c": "Credit Check",
+     "ints__Request_Mapping__c": {
+          "thirdPartySystem": {
+               "name": "MeridianLink",
+               "dynamicDataMapping": [
+                    {
+                         "Alias": "enquiry-id_request-by-enquiry-id"
+                    }
+               ],
+               "filters": [
+                    {
+                         "tablename": "clcommon__Party__c",
+                         "tableAlias": "Borrower",
+                         "fields": [
+                              {
+                                   "Alias": "borrowerFirstName",
+                                   "fieldAPI": "clcommon__Contact__r.FirstName"
+                              },
+                              {
+                                   "Alias": "borrowerMiddleName",
+                                   "fieldAPI": "clcommon__Contact__r.ints__Middle_Name__c"
+                              },
+                              {
+                                   "Alias": "borrowerLastname",
+                                   "fieldAPI": "clcommon__Contact__r.LastName"
+                              },
+                              {
+                                   "Alias": "borrowerSSN",
+                                   "fieldAPI": "clcommon__Contact__r.ints__Social_Security_Number__c"
+                              },
+                              {
+                                   "Alias": "borrowerStreet",
+                                   "fieldAPI": "clcommon__Contact__r.MailingStreet"
+                              },
+                              {
+                                   "Alias": "borrowerCity",
+                                   "fieldAPI": "clcommon__Contact__r.MailingCity"
+                              },
+                              {
+                                   "Alias": "borrowerState",
+                                   "fieldAPI": "clcommon__Contact__r.MailingState"
+                              },
+                              {
+                                   "Alias": "borrowerPostalCode",
+                                   "fieldAPI": "clcommon__Contact__r.MailingPostalCode"
+                              }
+                         ],
+                         "whereClause": "Id =:partyId"
+                    },
+                    {
+                         "tablename": "clcommon__Party__c",
+                         "tableAlias": "CoBorrower1",
+                         "fields": [
+                              {
+                                   "Alias": "coborrowerFirstName",
+                                   "fieldAPI": "clcommon__Contact__r.FirstName"
+                              },
+                              {
+                                   "Alias": "coborrowerMiddleName",
+                                   "fieldAPI": "clcommon__Contact__r.ints__Middle_Name__c"
+                              },
+                              {
+                                   "Alias": "coborrowerLastname",
+                                   "fieldAPI": "clcommon__Contact__r.LastName"
+                              },
+                              {
+                                   "Alias": "coborrowerSSN",
+                                   "fieldAPI": "clcommon__Contact__r.ints__Social_Security_Number__c"
+                              },
+                              {
+                                   "Alias": "coborrowerStreet",
+                                   "fieldAPI": "clcommon__Contact__r.MailingStreet"
+                              },
+                              {
+                                   "Alias": "coborrowerCity",
+                                   "fieldAPI": "clcommon__Contact__r.MailingCity"
+                              },
+                              {
+                                   "Alias": "coborrowerState",
+                                   "fieldAPI": "clcommon__Contact__r.MailingState"
+                              },
+                              {
+                                   "Alias": "coborrowerPostalCode",
+                                   "fieldAPI": "clcommon__Contact__r.MailingPostalCode"
+                              }
+                         ],
+                         "whereClause": "genesis__Application__c =:applicationId AND clcommon__Type__r.name != 'BORROWER'"
+                    }
+               ],
+               "otherParameters": {
+                    "TransUnion": "N",
+                    "Submitting_Party_Id": "SyncTestSubmittingPartyId",
+                    "Receiving_Party_Id": "D1",
+                    "Experian": "N",
+                    "Equifax": "Y",
+                    "Credit_Reporting_Agency": "MeridianLink CRA"
+               }
+          }
+     },
+     "ints__Response_Mapping__c": {
+          "StorageConfiguration": {
+               "StoreInDB": "True"
+          },
+          "DMLOperations": [
+               {
+                    "DML": "Insert",
+                    "ObjectMapping": [
+                         {
+                              "objectName": "Attachment",
+                              "objectAlias": "EMBEDDEDCLSFILE",
+                              "fields": [
+                                   {
+                                        "Alias": "DOCUMENT",
+                                        "fieldAPI": "body"
+                                   },
+                                   {
+                                        "Alias": "MIMEType",
+                                        "fieldAPI": "contentType"
+                                   },
+                                   {
+                                        "Alias": "party",
+                                        "fieldAPI": "parentId"
+                                   },
+                                   {
+                                        "Alias": "CLSName",
+                                        "fieldAPI": "Name"
+                                   }
+                              ]
+                         },
+                         {
+                              "objectName": "ints__Credit_Report__c",
+                              "objectAlias": "RESPONSE=>RESPONSECLSDATA=>CREDITCLSRESPONSE",
+                              "fields": [
+                                   {
+                                        "Alias": "CreditRatingCodeType",
+                                        "fieldAPI": "ints__CreditRatingCodeType__c"
+                                   },
+                                   {
+                                        "Alias": "CreditResponseID",
+                                        "fieldAPI": "ints__CreditBureauName__c"
+                                   },
+                                   {
+                                        "Alias": "CreditReportFirstIssuedDates",
+                                        "fieldAPI": "ints__CreditReportFirstIssuedDate__c"
+                                   },
+                                   {
+                                        "Alias": "CreditReportIdentifier",
+                                        "fieldAPI": "ints__CreditReportIdentifier__c"
+                                   },
+                                   {
+                                        "Alias": "CreditReportType",
+                                        "fieldAPI": "ints__CreditReportType__c"
+                                   },
+                                   {
+                                        "Alias": "contact",
+                                        "fieldAPI": "ints__Contact__c"
+                                   },
+                                   {
+                                        "Alias": "account",
+                                        "fieldAPI": "ints__Account__c"
+                                   },
+                                   {
+                                        "Alias": "application",
+                                        "fieldAPI": "genesis__Applications__c"
+                                   }
+                              ],
+                              "children": [
+                                   {
+                                        "ObjectMapping": [
+                                             {
+                                                  "objectName": "ints__Credit_Report_Score__c",
+                                                  "objectAlias": "CREDITCLSSCORE",
+                                                  "fields": [
+                                                       {
+                                                            "Alias": "CLSValue",
+                                                            "fieldAPI": "ints__value__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSModelNameType",
+                                                            "fieldAPI": "ints__ModelNameType__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CreditRepositorySourceType",
+                                                            "fieldAPI": "ints__CreditRepositorySourceType__c"
+                                                       },
+                                                       {
+                                                            "Alias": "BorrowerID",
+                                                            "fieldAPI": "ints__BorrowerID__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CreditFileID",
+                                                            "fieldAPI": "ints__CreditFileID__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CreditScoreID",
+                                                            "fieldAPI": "ints__CreditScoreID__c"
+                                                       }
+                                                  ],
+                                                  "relationshipFields": [
+                                                       {
+                                                            "relation": "ints__CreditReport__c"
+                                                       }
+                                                  ],
+                                                  "children": [
+                                                       {
+                                                            "ObjectMapping": [
+                                                                 {
+                                                                      "objectName": "ints__Credit_Score_Factor__c",
+                                                                      "objectAlias": "CLSFACTOR",
+                                                                      "fields": [
+                                                                           {
+                                                                                "Alias": "CLSCode",
+                                                                                "fieldAPI": "ints__Code__c"
+                                                                           },
+                                                                           {
+                                                                                "Alias": "CLSText",
+                                                                                "fieldAPI": "ints__Text__c"
+                                                                           }
+                                                                      ],
+                                                                      "relationshipFields": [
+                                                                           {
+                                                                                "relation": "ints__CreditReportScore__c"
+                                                                           }
+                                                                      ]
+                                                                 }
+                                                            ]
+                                                       }
+                                                  ]
+                                             },
+                                             {
+                                                  "objectName": "ints__Credit_Report_Liability__c",
+                                                  "objectAlias": "CREDITCLSLIABILITY",
+                                                  "fields": [
+                                                       {
+                                                            "Alias": "CreditLiabilityID",
+                                                            "fieldAPI": "ints__CreditLiabilityID__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSAccountOpenedDate",
+                                                            "fieldAPI": "ints__AccountOpenedDate__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSAccountClosedDate",
+                                                            "fieldAPI": "ints__AccountClosedDate__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSAccountReportedDate",
+                                                            "fieldAPI": "ints__AccountReportedDate__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSAccountOwnershipType",
+                                                            "fieldAPI": "ints__AccountOwnershipType__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSAccountType",
+                                                            "fieldAPI": "ints__AccountType__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSCreditLimitAmount",
+                                                            "fieldAPI": "ints__CreditLimitAmount__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSAccountStatusType",
+                                                            "fieldAPI": "ints__AccountStatusType__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSMonthsReviewedCount",
+                                                            "fieldAPI": "ints__MonthsReviewedCount__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSTermsSourceType",
+                                                            "fieldAPI": "ints__TermsSourceType__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CreditBusinessType",
+                                                            "fieldAPI": "ints__CreditBusinessType__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CreditLoanType",
+                                                            "fieldAPI": "ints__CreditLoanType__c"
+                                                       },
+                                                       {
+                                                            "Alias": "BorrowerID",
+                                                            "fieldAPI": "ints__BorrowerID__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSAccountIdentifier",
+                                                            "fieldAPI": "ints__AccountIdentifier__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSTermsMonthsCount",
+                                                            "fieldAPI": "ints__TermsMonthsCount__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSTermsDescription",
+                                                            "fieldAPI": "ints__TermsDescription__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSTermsSourceType",
+                                                            "fieldAPI": "ints__TermsSourceType__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSUnpaidBalanceAmount",
+                                                            "fieldAPI": "ints__Unpaid_Balance_Amount__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSMonthlyPaymentAmount",
+                                                            "fieldAPI": "ints__MonthlyPaymentAmount__c"
+                                                       }
+                                                  ],
+                                                  "relationshipFields": [
+                                                       {
+                                                            "relation": "ints__CreditReport__c"
+                                                       }
+                                                  ]
+                                             },
+                                             {
+                                                  "objectName": "ints__Credit_Report_Inquiry__c",
+                                                  "objectAlias": "CREDITCLSINQUIRY",
+                                                  "fields": [
+                                                       {
+                                                            "Alias": "BorrowerID",
+                                                            "fieldAPI": "ints__BorrowerID__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CreditBusinessType",
+                                                            "fieldAPI": "ints__CreditBusinessType__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CreditFileID",
+                                                            "fieldAPI": "ints__CreditFileID__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSName",
+                                                            "fieldAPI": "ints__Name__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSDates",
+                                                            "fieldAPI": "ints__Date__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CreditInquiryID",
+                                                            "fieldAPI": "ints__CreditInquiryID__c"
+                                                       }
+                                                  ],
+                                                  "relationshipFields": [
+                                                       {
+                                                            "relation": "ints__CreditReport__c"
+                                                       }
+                                                  ]
+                                             },
+                                             {
+                                                  "objectName": "ints__Credit_Summary__c",
+                                                  "objectAlias": "CREDITCLSSUMMARY",
+                                                  "fields": [
+                                                       {
+                                                            "Alias": "BorrowerID",
+                                                            "fieldAPI": "ints__BorrowerID__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSName",
+                                                            "fieldAPI": "ints__Name__c"
+                                                       }
+                                                  ],
+                                                  "relationshipFields": [
+                                                       {
+                                                            "relation": "ints__CreditReport__c"
+                                                       }
+                                                  ],
+                                                  "children": [
+                                                       {
+                                                            "ObjectMapping": [
+                                                                 {
+                                                                      "objectName": "ints__Credit_Summary_Data_Set__c",
+                                                                      "objectAlias": "CLSDATACLSSET",
+                                                                      "fields": [
+                                                                           {
+                                                                                "Alias": "CLSValue",
+                                                                                "fieldAPI": "ints__value__c"
+                                                                           },
+                                                                           {
+                                                                                "Alias": "CLSName",
+                                                                                "fieldAPI": "ints__Name__c"
+                                                                           }
+                                                                      ],
+                                                                      "relationshipFields": [
+                                                                           {
+                                                                                "relation": "ints__CreditSummary__c"
+                                                                           }
+                                                                      ]
+                                                                 }
+                                                            ]
+                                                       }
+                                                  ]
+                                             },
+                                             {
+                                                  "objectName": "ints__Credit_Regulatory_Product__c",
+                                                  "objectAlias": "REGULATORYCLSPRODUCT",
+                                                  "fields": [],
+                                                  "relationshipFields": [
+                                                       {
+                                                            "relation": "ints__CreditReport__c"
+                                                       }
+                                                  ]
+                                             },
+                                             {
+                                                  "objectName": "ints__Credit_File__c",
+                                                  "objectAlias": "CREDITCLSFILE",
+                                                  "fields": [
+                                                       {
+                                                            "Alias": "CreditFileID",
+                                                            "fieldAPI": "ints__Credit_File_ID__c"
+                                                       },
+                                                       {
+                                                            "Alias": "BorrowerID",
+                                                            "fieldAPI": "ints__Borrower_ID__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSResultStatusType",
+                                                            "fieldAPI": "ints__Result_Status_Type__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CreditRepositorySourceType",
+                                                            "fieldAPI": "ints__Credit_Repository_Source_Type__c"
+                                                       },
+                                                       {
+                                                            "Alias": "CLSInfileDate",
+                                                            "fieldAPI": "ints__Infile_Date__c"
+                                                       }
+                                                  ],
+                                                  "relationshipFields": [
+                                                       {
+                                                            "relation": "ints__Credit_Report__c"
+                                                       }
+                                                  ],
+                                                  "children": [
+                                                       {
+                                                            "ObjectMapping": [
+                                                                 {
+                                                                      "objectName": "ints__Credit_Alert_Message__c",
+                                                                      "objectAlias": "CLSALERTCLSMESSAGE",
+                                                                      "fields": [],
+                                                                      "relationshipFields": [
+                                                                           {
+                                                                                "relation": "ints__Credit_File__c"
+                                                                           }
+                                                                      ]
+                                                                 }
+                                                            ]
+                                                       }
+                                                  ]
+                                             }
+                                        ]
+                                   }
+                              ]
+                         }
+                    ]
+               }
+          ]
+     },
+     "ints__Third_Party_System__c": "MeridianLink",
+     "ints__Type__c": "Hard Pull",
+     "ints__Use_Mocker__c": false
+}
