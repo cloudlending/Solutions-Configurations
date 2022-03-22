@@ -2,7 +2,12 @@
      "attributes": {
           "type": "clcommon__Execution_Criteria__c"
      },
-     "RecordType": null,
+     "RecordType": {
+          "attributes": {
+               "type": "RecordType"
+          },
+          "DeveloperName": "Task_Setup"
+     },
      "clcommon__External_ID__c": "Initiate_KYB_Task_Generation_Criteria_Party_Type_BORROWER",
      "clcommon__Field_API_Name__c": "clcommon__Party_Types__c",
      "clcommon__Field_Name__c": "Party Types",
@@ -24,6 +29,5 @@
                "type": "genesis__Task_Setup__c"
           },
           "genesis__External_ID__c": "Initiate_KYB"
-     },
-     "solcommon__Release_Checksum__c": "9f24caf973d6c4f5a5f67a5eac576063b0608e7b2ac10e4f0400972532e2d406"
+     }
 }

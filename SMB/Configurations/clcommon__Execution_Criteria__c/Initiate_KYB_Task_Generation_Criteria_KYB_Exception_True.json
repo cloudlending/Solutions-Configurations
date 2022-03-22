@@ -2,7 +2,12 @@
      "attributes": {
           "type": "clcommon__Execution_Criteria__c"
      },
-     "RecordType": null,
+     "RecordType": {
+          "attributes": {
+               "type": "RecordType"
+          },
+          "DeveloperName": "Task_Setup"
+     },
      "clcommon__External_ID__c": "Initiate_KYB_Task_Generation_Criteria_KYB_Exception_True",
      "clcommon__Field_API_Name__c": "solcommon__KYB_Exception__c",
      "clcommon__Field_Name__c": "KYB Exception",
@@ -24,6 +29,5 @@
                "type": "genesis__Task_Setup__c"
           },
           "genesis__External_ID__c": "Initiate_KYB"
-     },
-     "solcommon__Release_Checksum__c": "5f9a056eec283ada4a35b583475878d69d7bc04d0d99fefad9e369ba6462a5ce"
+     }
 }

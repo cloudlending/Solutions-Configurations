@@ -2,7 +2,12 @@
      "attributes": {
           "type": "clcommon__Execution_Criteria__c"
      },
-     "RecordType": null,
+     "RecordType": {
+          "attributes": {
+               "type": "RecordType"
+          },
+          "DeveloperName": "Task_Setup"
+     },
      "clcommon__External_ID__c": "Pull_Credit_Task_Generation_Criteria_Party_Type_PRINCIPAL",
      "clcommon__Field_API_Name__c": "clcommon__Party_Types__c",
      "clcommon__Field_Name__c": "Party Types",
@@ -24,6 +29,5 @@
                "type": "genesis__Task_Setup__c"
           },
           "genesis__External_ID__c": "Pull_Credit"
-     },
-     "solcommon__Release_Checksum__c": "d5ace7490d8caa35062df2398c5abb00ae8fcd9b3f59268d0f2af475d230776b"
+     }
 }
