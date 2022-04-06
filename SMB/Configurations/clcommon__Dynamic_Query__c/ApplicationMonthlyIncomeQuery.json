@@ -1,0 +1,104 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "ApplicationMonthlyIncomeQuery",
+     "clcommon__From_Object__c": "genesis__Income__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1V8c000007WgBCEA0",
+          "whereClause": null,
+          "subQueryParams": {
+               "a1W8c000007WepFEAS": {
+                    "subQueryId": "a1Y8c00000BYqgLEAT",
+                    "pType": "SUB_QUERY",
+                    "paramValue": "a1V8c000007WgAtEAK",
+                    "id": "a1W8c000007WepFEAS"
+               }
+          },
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "a1W8c000007WepDEAS": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "ID",
+                    "id": "a1W8c000007WepDEAS"
+               }
+          },
+          "queryName": "ApplicationMonthlyIncomeQuery",
+          "projectionsAsString": null,
+          "projections": {
+               "a1V8c000007WgB7EAK": {
+                    "queryToken": "SUM(genesis__amount__c) MonthlyIncome",
+                    "isAggregation": true,
+                    "id": "a1V8c000007WgB7EAK",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "genesis__amount__c",
+                    "alias": "MonthlyIncome"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Income__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {
+               "a1W8c000007WepEEAS": {
+                    "subQueryId": null,
+                    "pType": "CONSTANT",
+                    "paramValue": "'Monthly'",
+                    "id": "a1W8c000007WepEEAS"
+               }
+          },
+          "connectByClauseId": null,
+          "clauses": {
+               "a1V8c000007WgBCEA0": {
+                    "rhsSelectionId": "a1V8c000007WgBBEA0",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1V8c000007WgBAEA0",
+                    "id": "a1V8c000007WgBCEA0",
+                    "fieldName": null
+               },
+               "a1V8c000007WgBBEA0": {
+                    "rhsSelectionId": "a1V8c000007WgB9EAK",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1V8c000007WgB8EAK",
+                    "id": "a1V8c000007WgBBEA0",
+                    "fieldName": null
+               },
+               "a1V8c000007WgBAEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WepFEAS",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgBAEA0",
+                    "fieldName": "genesis__Contact__c"
+               },
+               "a1V8c000007WgB9EAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WepEEAS",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgB9EAK",
+                    "fieldName": "genesis__Frequency__c"
+               },
+               "a1V8c000007WgB8EAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WepDEAS",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgB8EAK",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "ApplicationMonthlyIncomeQuery",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "f7372a24955bbd4c1295f234fcb2b581c01aa19eefda402ace502d9fd27c1f3f"
+}

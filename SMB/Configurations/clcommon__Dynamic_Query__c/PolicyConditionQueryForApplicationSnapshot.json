@@ -1,0 +1,247 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "PolicyConditionQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "genesis__Policy_Exception__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "dacc6058",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "99d3a12f": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "99d3a12f"
+               }
+          },
+          "queryName": "PolicyConditionQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "ee5b5d4d": {
+                    "queryToken": "genesis__type__c",
+                    "isAggregation": false,
+                    "id": "ee5b5d4d",
+                    "fieldType": "",
+                    "fieldName": "genesis__type__c",
+                    "alias": "genesis__Type__c"
+               },
+               "0c467ad0": {
+                    "queryToken": "genesis__status__c",
+                    "isAggregation": false,
+                    "id": "0c467ad0",
+                    "fieldType": "",
+                    "fieldName": "genesis__status__c",
+                    "alias": "genesis__Status__c"
+               },
+               "b4ebfe9c": {
+                    "queryToken": "genesis__policy_exception_definition__c",
+                    "isAggregation": false,
+                    "id": "b4ebfe9c",
+                    "fieldType": "",
+                    "fieldName": "genesis__policy_exception_definition__c",
+                    "alias": "genesis__Policy_Exception_Definition__c"
+               },
+               "7bbd8019": {
+                    "queryToken": "genesis__party__c",
+                    "isAggregation": false,
+                    "id": "7bbd8019",
+                    "fieldType": "",
+                    "fieldName": "genesis__party__c",
+                    "alias": "genesis__Party__c"
+               },
+               "ed61b5e0": {
+                    "queryToken": "genesis__override__c",
+                    "isAggregation": false,
+                    "id": "ed61b5e0",
+                    "fieldType": "",
+                    "fieldName": "genesis__override__c",
+                    "alias": "genesis__Override__c"
+               },
+               "64d0647e": {
+                    "queryToken": "genesis__officer_comments__c",
+                    "isAggregation": false,
+                    "id": "64d0647e",
+                    "fieldType": "",
+                    "fieldName": "genesis__officer_comments__c",
+                    "alias": "genesis__Officer_Comments__c"
+               },
+               "69b6e3ef": {
+                    "queryToken": "genesis__description__c",
+                    "isAggregation": false,
+                    "id": "69b6e3ef",
+                    "fieldType": "",
+                    "fieldName": "genesis__description__c",
+                    "alias": "genesis__Description__c"
+               },
+               "12400f0e": {
+                    "queryToken": "genesis__condition_type__c",
+                    "isAggregation": false,
+                    "id": "12400f0e",
+                    "fieldType": "",
+                    "fieldName": "genesis__condition_type__c",
+                    "alias": "genesis__Condition_Type__c"
+               },
+               "1cafa3ed": {
+                    "queryToken": "genesis__collateral__c",
+                    "isAggregation": false,
+                    "id": "1cafa3ed",
+                    "fieldType": "",
+                    "fieldName": "genesis__collateral__c",
+                    "alias": "genesis__Collateral__c"
+               },
+               "e1004620": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "e1004620",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "e16e2f68": {
+                    "queryToken": "genesis__application_collateral__c",
+                    "isAggregation": false,
+                    "id": "e16e2f68",
+                    "fieldType": "",
+                    "fieldName": "genesis__application_collateral__c",
+                    "alias": "genesis__Application_Collateral__c"
+               },
+               "c016f26c": {
+                    "queryToken": "genesis__active__c",
+                    "isAggregation": false,
+                    "id": "c016f26c",
+                    "fieldType": "",
+                    "fieldName": "genesis__active__c",
+                    "alias": "genesis__Active__c"
+               },
+               "ab62b554": {
+                    "queryToken": "genesis__account__c",
+                    "isAggregation": false,
+                    "id": "ab62b554",
+                    "fieldType": "",
+                    "fieldName": "genesis__account__c",
+                    "alias": "genesis__Account__c"
+               },
+               "17f11db9": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "17f11db9",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "ab6a6fcc": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "ab6a6fcc",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "75ee05a9": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "75ee05a9",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "b7e83d70": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "b7e83d70",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "919b1e28": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "919b1e28",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "3d99f1c2": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "3d99f1c2",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "3f7de2f4": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "3f7de2f4",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "78353db0": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "78353db0",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "8af65427": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "8af65427",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "cec5dcdf": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "cec5dcdf",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "72b9c1e9": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "72b9c1e9",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Policy_Exception__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "dacc6058": {
+                    "rhsSelectionId": null,
+                    "paramId": "99d3a12f",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "dacc6058",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "PolicyConditionQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "fc9df339332e83ec50060857e28fc991625db002dd30b875952786da37ba0cae"
+}

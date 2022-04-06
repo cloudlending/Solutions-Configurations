@@ -1,0 +1,126 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "PartyBackEndLiabilityQuery",
+     "clcommon__From_Object__c": "genesis__Liability__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1V8c000007WgBmEAK",
+          "whereClause": null,
+          "subQueryParams": {
+               "a1W8c000007WepWEAS": {
+                    "subQueryId": "a1Y8c00000BYqgWEAT",
+                    "pType": "SUB_QUERY",
+                    "paramValue": "a1V8c000007WgBPEA0",
+                    "id": "a1W8c000007WepWEAS"
+               }
+          },
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "a1W8c000007WepUEAS": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "genesis__Application__c",
+                    "id": "a1W8c000007WepUEAS"
+               },
+               "a1W8c000007WepTEAS": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "clcommon__Contact__c",
+                    "id": "a1W8c000007WepTEAS"
+               }
+          },
+          "queryName": "PartyBackEndLiabilityQuery",
+          "projectionsAsString": null,
+          "projections": {
+               "a1V8c000007WgBfEAK": {
+                    "queryToken": "SUM(genesis__payment_amount__c) PaymentAmountLiability",
+                    "isAggregation": true,
+                    "id": "a1V8c000007WgBfEAK",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "genesis__payment_amount__c",
+                    "alias": "PaymentAmountLiability"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Liability__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {
+               "a1W8c000007WepVEAS": {
+                    "subQueryId": null,
+                    "pType": "CONSTANT",
+                    "paramValue": "true",
+                    "id": "a1W8c000007WepVEAS"
+               }
+          },
+          "connectByClauseId": null,
+          "clauses": {
+               "a1V8c000007WgBmEAK": {
+                    "rhsSelectionId": "a1V8c000007WgBlEAK",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1V8c000007WgBjEAK",
+                    "id": "a1V8c000007WgBmEAK",
+                    "fieldName": null
+               },
+               "a1V8c000007WgBlEAK": {
+                    "rhsSelectionId": "a1V8c000007WgBkEAK",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1V8c000007WgBiEAK",
+                    "id": "a1V8c000007WgBlEAK",
+                    "fieldName": null
+               },
+               "a1V8c000007WgBkEAK": {
+                    "rhsSelectionId": "a1V8c000007WgBhEAK",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1V8c000007WgBgEAK",
+                    "id": "a1V8c000007WgBkEAK",
+                    "fieldName": null
+               },
+               "a1V8c000007WgBjEAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WepWEAS",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgBjEAK",
+                    "fieldName": "genesis__Contact__c"
+               },
+               "a1V8c000007WgBiEAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WepVEAS",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgBiEAK",
+                    "fieldName": "genesis__Include_For_DTI__c"
+               },
+               "a1V8c000007WgBhEAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WepUEAS",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgBhEAK",
+                    "fieldName": "genesis__Application__c"
+               },
+               "a1V8c000007WgBgEAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WepTEAS",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgBgEAK",
+                    "fieldName": "genesis__Contact__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "PartyBackEndLiabilityQuery",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "f6e99cc9da4b8a99fd83a73f7c61784d8541b50b39b9bdd4a94fcb1953e35d18"
+}

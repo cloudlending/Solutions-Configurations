@@ -1,0 +1,98 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "InsuranceQuery",
+     "clcommon__From_Object__c": "genesis__Insurance__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1V8c000007WgAmEAK",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "a1W8c000007Wep1EAC": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "ID",
+                    "id": "a1W8c000007Wep1EAC"
+               }
+          },
+          "queryName": "InsuranceQuery",
+          "projectionsAsString": null,
+          "projections": {
+               "a1V8c000007WgAlEAK": {
+                    "queryToken": "genesis__health_premium_mid_calculation__c",
+                    "isAggregation": false,
+                    "id": "a1V8c000007WgAlEAK",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "genesis__health_premium_mid_calculation__c",
+                    "alias": "HealthPremiumMidCalculation"
+               },
+               "a1V8c000007WgAkEAK": {
+                    "queryToken": "genesis__life_premium_mid_calculation__c",
+                    "isAggregation": false,
+                    "id": "a1V8c000007WgAkEAK",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "genesis__life_premium_mid_calculation__c",
+                    "alias": "LifePremiumMidCalculation"
+               },
+               "a1V8c000007WgAjEAK": {
+                    "queryToken": "genesis__odf__c",
+                    "isAggregation": false,
+                    "id": "a1V8c000007WgAjEAK",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "genesis__odf__c",
+                    "alias": "odf"
+               },
+               "a1V8c000007WgAiEAK": {
+                    "queryToken": "genesis__insurance_term__c",
+                    "isAggregation": false,
+                    "id": "a1V8c000007WgAiEAK",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "genesis__insurance_term__c",
+                    "alias": "InsuranceTerm"
+               },
+               "a1V8c000007WgAhEAK": {
+                    "queryToken": "genesis__single_premium_disability_rate__c",
+                    "isAggregation": false,
+                    "id": "a1V8c000007WgAhEAK",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "genesis__single_premium_disability_rate__c",
+                    "alias": "DisabilityRate"
+               },
+               "a1V8c000007WgAgEAK": {
+                    "queryToken": "genesis__single_premium_rate__c",
+                    "isAggregation": false,
+                    "id": "a1V8c000007WgAgEAK",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "genesis__single_premium_rate__c",
+                    "alias": "PremiumRate"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Insurance__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "a1V8c000007WgAmEAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007Wep1EAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgAmEAK",
+                    "fieldName": "ID"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "InsuranceQuery",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "840d00fa08a4a97045094bea3d879e185c3e030446c88e37d0c0dba5531905c2"
+}

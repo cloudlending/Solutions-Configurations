@@ -1,0 +1,303 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "EmploymentInformationQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "genesis__Employment_Information__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "554627ab",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "d4f05300": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "d4f05300"
+               }
+          },
+          "queryName": "EmploymentInformationQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "4b73330e": {
+                    "queryToken": "genesis__type_of_business__c",
+                    "isAggregation": false,
+                    "id": "4b73330e",
+                    "fieldType": "",
+                    "fieldName": "genesis__type_of_business__c",
+                    "alias": "genesis__Type_of_business__c"
+               },
+               "ff22c0e4": {
+                    "queryToken": "genesis__start_date__c",
+                    "isAggregation": false,
+                    "id": "ff22c0e4",
+                    "fieldType": "",
+                    "fieldName": "genesis__start_date__c",
+                    "alias": "genesis__Start_Date__c"
+               },
+               "197e4abe": {
+                    "queryToken": "genesis__self_employed__c",
+                    "isAggregation": false,
+                    "id": "197e4abe",
+                    "fieldType": "",
+                    "fieldName": "genesis__self_employed__c",
+                    "alias": "genesis__Self_Employed__c"
+               },
+               "a9d48781": {
+                    "queryToken": "genesis__position__c",
+                    "isAggregation": false,
+                    "id": "a9d48781",
+                    "fieldType": "",
+                    "fieldName": "genesis__position__c",
+                    "alias": "genesis__Position__c"
+               },
+               "0448e303": {
+                    "queryToken": "genesis__phone__c",
+                    "isAggregation": false,
+                    "id": "0448e303",
+                    "fieldType": "",
+                    "fieldName": "genesis__phone__c",
+                    "alias": "genesis__Phone__c"
+               },
+               "12efb9eb": {
+                    "queryToken": "genesis__occupation__c",
+                    "isAggregation": false,
+                    "id": "12efb9eb",
+                    "fieldType": "",
+                    "fieldName": "genesis__occupation__c",
+                    "alias": "genesis__Occupation__c"
+               },
+               "1480106a": {
+                    "queryToken": "genesis__number_of_years_on_job__c",
+                    "isAggregation": false,
+                    "id": "1480106a",
+                    "fieldType": "",
+                    "fieldName": "genesis__number_of_years_on_job__c",
+                    "alias": "genesis__Number_of_years_on_job__c"
+               },
+               "0c91b11f": {
+                    "queryToken": "genesis__name_of_employer__c",
+                    "isAggregation": false,
+                    "id": "0c91b11f",
+                    "fieldType": "",
+                    "fieldName": "genesis__name_of_employer__c",
+                    "alias": "genesis__Name_of_employer__c"
+               },
+               "eb62c6ac": {
+                    "queryToken": "genesis__is_current_employer__c",
+                    "isAggregation": false,
+                    "id": "eb62c6ac",
+                    "fieldType": "",
+                    "fieldName": "genesis__is_current_employer__c",
+                    "alias": "genesis__Is_Current_Employer__c"
+               },
+               "0f878328": {
+                    "queryToken": "genesis__foriegn_city_postal_code__c",
+                    "isAggregation": false,
+                    "id": "0f878328",
+                    "fieldType": "",
+                    "fieldName": "genesis__foriegn_city_postal_code__c",
+                    "alias": "genesis__Foriegn_City_Postal_Code__c"
+               },
+               "1487dc8d": {
+                    "queryToken": "genesis__end_date__c",
+                    "isAggregation": false,
+                    "id": "1487dc8d",
+                    "fieldType": "",
+                    "fieldName": "genesis__end_date__c",
+                    "alias": "genesis__End_Date__c"
+               },
+               "cb098a47": {
+                    "queryToken": "genesis__employer_zipcode__c",
+                    "isAggregation": false,
+                    "id": "cb098a47",
+                    "fieldType": "",
+                    "fieldName": "genesis__employer_zipcode__c",
+                    "alias": "genesis__Employer_Zipcode__c"
+               },
+               "ca24bf20": {
+                    "queryToken": "genesis__employer_street__c",
+                    "isAggregation": false,
+                    "id": "ca24bf20",
+                    "fieldType": "",
+                    "fieldName": "genesis__employer_street__c",
+                    "alias": "genesis__Employer_Street__c"
+               },
+               "2188e916": {
+                    "queryToken": "genesis__employer_state__c",
+                    "isAggregation": false,
+                    "id": "2188e916",
+                    "fieldType": "",
+                    "fieldName": "genesis__employer_state__c",
+                    "alias": "genesis__Employer_State__c"
+               },
+               "6fecfac9": {
+                    "queryToken": "genesis__employer_country__c",
+                    "isAggregation": false,
+                    "id": "6fecfac9",
+                    "fieldType": "",
+                    "fieldName": "genesis__employer_country__c",
+                    "alias": "genesis__Employer_Country__c"
+               },
+               "0d880c5a": {
+                    "queryToken": "genesis__employer_city__c",
+                    "isAggregation": false,
+                    "id": "0d880c5a",
+                    "fieldType": "",
+                    "fieldName": "genesis__employer_city__c",
+                    "alias": "genesis__Employer_City__c"
+               },
+               "f122de07": {
+                    "queryToken": "genesis__contact__c",
+                    "isAggregation": false,
+                    "id": "f122de07",
+                    "fieldType": "",
+                    "fieldName": "genesis__contact__c",
+                    "alias": "genesis__Contact__c"
+               },
+               "ff75975a": {
+                    "queryToken": "genesis__average_monthly_income__c",
+                    "isAggregation": false,
+                    "id": "ff75975a",
+                    "fieldType": "",
+                    "fieldName": "genesis__average_monthly_income__c",
+                    "alias": "genesis__Average_Monthly_Income__c"
+               },
+               "475bc81f": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "475bc81f",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "0bc67e48": {
+                    "queryToken": "genesis__address_line_2__c",
+                    "isAggregation": false,
+                    "id": "0bc67e48",
+                    "fieldType": "",
+                    "fieldName": "genesis__address_line_2__c",
+                    "alias": "genesis__Address_Line_2__c"
+               },
+               "d82e7e72": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "d82e7e72",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "96f5ea4e": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "96f5ea4e",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "c01faae3": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "c01faae3",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "696dfc7c": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "696dfc7c",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "8b64198c": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "8b64198c",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "f8b5c3a4": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "f8b5c3a4",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "9a3d5090": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "9a3d5090",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "7bb77bc3": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "7bb77bc3",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "3eefb355": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "3eefb355",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "4daf4527": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "4daf4527",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "e1b3776d": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "e1b3776d",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Employment_Information__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "554627ab": {
+                    "rhsSelectionId": null,
+                    "paramId": "d4f05300",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "554627ab",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "EmploymentInformationQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "f8fe1fcf7258b772bb9f45701a1f22d00cd69d60a0136a76eed7709faae4d263"
+}

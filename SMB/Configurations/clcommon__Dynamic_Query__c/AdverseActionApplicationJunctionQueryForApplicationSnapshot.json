@@ -1,0 +1,167 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "AdverseActionApplicationJunctionQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "genesis__Adverse_Action_Application_Junction__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "c7904c54",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "5b7615e9": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "5b7615e9"
+               }
+          },
+          "queryName": "AdverseActionApplicationJunctionQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "d38993d2": {
+                    "queryToken": "genesis__isdeleted__c",
+                    "isAggregation": false,
+                    "id": "d38993d2",
+                    "fieldType": "",
+                    "fieldName": "genesis__isdeleted__c",
+                    "alias": "genesis__isdeleted__c"
+               },
+               "2798322e": {
+                    "queryToken": "genesis__adverse_reason_code__c",
+                    "isAggregation": false,
+                    "id": "2798322e",
+                    "fieldType": "",
+                    "fieldName": "genesis__adverse_reason_code__c",
+                    "alias": "genesis__Adverse_Reason_Code__c"
+               },
+               "7dfd94b1": {
+                    "queryToken": "genesis__active__c",
+                    "isAggregation": false,
+                    "id": "7dfd94b1",
+                    "fieldType": "",
+                    "fieldName": "genesis__active__c",
+                    "alias": "genesis__Active__c"
+               },
+               "81300b42": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "81300b42",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "51edcdaf": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "51edcdaf",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "029a1040": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "029a1040",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "41fba7cc": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "41fba7cc",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "09fe862e": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "09fe862e",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "189b1e4f": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "189b1e4f",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "d6819052": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "d6819052",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "a0f13dfe": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "a0f13dfe",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "bb2c965b": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "bb2c965b",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "bef9f511": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "bef9f511",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "88df3d98": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "88df3d98",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Adverse_Action_Application_Junction__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "c7904c54": {
+                    "rhsSelectionId": null,
+                    "paramId": "5b7615e9",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "c7904c54",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "AdverseActionApplicationJunctionQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "60ca6c195d127f8f40fbd0ae262a50faa92be9ea2ec14c6e0071082454dc6de2"
+}

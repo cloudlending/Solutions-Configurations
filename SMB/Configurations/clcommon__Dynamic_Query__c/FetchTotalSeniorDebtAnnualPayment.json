@@ -1,0 +1,66 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "FetchTotalSeniorDebtAnnualPayment",
+     "clcommon__From_Object__c": "genesis__Applications__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1V8c000007WgCWEA0",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "a1W8c000007WepsEAC": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "a1W8c000007WepsEAC"
+               }
+          },
+          "queryName": "FetchTotalSeniorDebtAnnualPayment",
+          "projectionsAsString": null,
+          "projections": {
+               "a1V8c000007WgCREA0": {
+                    "queryToken": "genesis__total_senior_debt_annual_payment__c",
+                    "isAggregation": false,
+                    "id": "a1V8c000007WgCREA0",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "genesis__total_senior_debt_annual_payment__c",
+                    "alias": "TSDAP"
+               },
+               "a1V8c000007WgCQEA0": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "a1V8c000007WgCQEA0",
+                    "fieldType": "ID",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Applications__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "a1V8c000007WgCWEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WepsEAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgCWEA0",
+                    "fieldName": "Id"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "FetchTotalSeniorDebtAnnualPayment",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "5873dee17c6217f19023c874c5a0f6c5822c0d0230594f91a9bd4254c5fb0c2f"
+}

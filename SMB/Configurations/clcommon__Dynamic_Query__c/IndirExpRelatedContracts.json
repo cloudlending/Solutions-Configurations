@@ -1,0 +1,58 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "IndirExpRelatedContracts",
+     "clcommon__From_Object__c": "staging__Interface_Contract__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1V8c000007WgAfEAK",
+          "whereClause": null,
+          "subQueryParams": {
+               "a1W8c000007Wep0EAC": {
+                    "subQueryId": "a1Y8c00000BYqgDEAT",
+                    "pType": "SUB_QUERY",
+                    "paramValue": "a1V8c000007WgAYEA0",
+                    "id": "a1W8c000007Wep0EAC"
+               }
+          },
+          "startWithClauseId": null,
+          "runtimeParams": {},
+          "queryName": "IndirExpRelatedContracts",
+          "projectionsAsString": null,
+          "projections": {
+               "a1V8c000007WgAeEAK": {
+                    "queryToken": "SUM(staging__principal_balance__c) TotalAmount",
+                    "isAggregation": true,
+                    "id": "a1V8c000007WgAeEAK",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "staging__principal_balance__c",
+                    "alias": "TotalAmount"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "staging__Interface_Contract__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "a1V8c000007WgAfEAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007Wep0EAC",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgAfEAK",
+                    "fieldName": "ID"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "IndirExpRelatedContracts",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "cef4cac60e75f84992b422063ac6cda94f7e2f261a0bac483059d2840bda2cb5"
+}

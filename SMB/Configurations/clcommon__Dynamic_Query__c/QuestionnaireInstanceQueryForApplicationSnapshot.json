@@ -1,0 +1,183 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "QuestionnaireInstanceQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "clcommon__Questionnaire_Instance__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "5ff5dc9a",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "1906ff41": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "1906ff41"
+               }
+          },
+          "queryName": "QuestionnaireInstanceQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "f1c70079": {
+                    "queryToken": "genesis__party__c",
+                    "isAggregation": false,
+                    "id": "f1c70079",
+                    "fieldType": "",
+                    "fieldName": "genesis__party__c",
+                    "alias": "genesis__Party__c"
+               },
+               "955aa003": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "955aa003",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "fd848544": {
+                    "queryToken": "genesis__application_collateral__c",
+                    "isAggregation": false,
+                    "id": "fd848544",
+                    "fieldType": "",
+                    "fieldName": "genesis__application_collateral__c",
+                    "alias": "genesis__Application_Collateral__c"
+               },
+               "e3d18eb6": {
+                    "queryToken": "clcommon__status__c",
+                    "isAggregation": false,
+                    "id": "e3d18eb6",
+                    "fieldType": "",
+                    "fieldName": "clcommon__status__c",
+                    "alias": "clcommon__Status__c"
+               },
+               "96c12d96": {
+                    "queryToken": "clcommon__questionnaire_definition__c",
+                    "isAggregation": false,
+                    "id": "96c12d96",
+                    "fieldType": "",
+                    "fieldName": "clcommon__questionnaire_definition__c",
+                    "alias": "clcommon__Questionnaire_Definition__c"
+               },
+               "7939523c": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "7939523c",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "49641f1a": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "49641f1a",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "ee1e8151": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "ee1e8151",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "6f9aaf67": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "6f9aaf67",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "2267a56f": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "2267a56f",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "53ae674d": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "53ae674d",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "ac1c7b83": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "ac1c7b83",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "bd6288dd": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "bd6288dd",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "bdba5d43": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "bdba5d43",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "0de557a6": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "0de557a6",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "f0ef8660": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "f0ef8660",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "clcommon__Questionnaire_Instance__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "5ff5dc9a": {
+                    "rhsSelectionId": null,
+                    "paramId": "1906ff41",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "5ff5dc9a",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "QuestionnaireInstanceQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "c7565870982ff0eb338c56a3ce27b3a97f44d5aabb9a3bdf38fb6ed3a71556c8"
+}

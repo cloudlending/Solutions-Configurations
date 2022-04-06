@@ -1,0 +1,199 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "StepUpScheduleQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "clcommon__StepUp_Schedule__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "36e3083f",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "92f9b849": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "92f9b849"
+               }
+          },
+          "queryName": "StepUpScheduleQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "6fe3e837": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "6fe3e837",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "9cb6b317": {
+                    "queryToken": "clcommon__stepup_option__c",
+                    "isAggregation": false,
+                    "id": "9cb6b317",
+                    "fieldType": "",
+                    "fieldName": "clcommon__stepup_option__c",
+                    "alias": "clcommon__StepUp_Option__c"
+               },
+               "d7e8cbcf": {
+                    "queryToken": "clcommon__stepup_factor__c",
+                    "isAggregation": false,
+                    "id": "d7e8cbcf",
+                    "fieldType": "",
+                    "fieldName": "clcommon__stepup_factor__c",
+                    "alias": "clcommon__StepUp_Factor__c"
+               },
+               "c611ee09": {
+                    "queryToken": "clcommon__start_date__c",
+                    "isAggregation": false,
+                    "id": "c611ee09",
+                    "fieldType": "",
+                    "fieldName": "clcommon__start_date__c",
+                    "alias": "clcommon__Start_Date__c"
+               },
+               "1804b0dd": {
+                    "queryToken": "clcommon__sequence__c",
+                    "isAggregation": false,
+                    "id": "1804b0dd",
+                    "fieldType": "",
+                    "fieldName": "clcommon__sequence__c",
+                    "alias": "clcommon__Sequence__c"
+               },
+               "9ce5eca0": {
+                    "queryToken": "clcommon__frequency__c",
+                    "isAggregation": false,
+                    "id": "9ce5eca0",
+                    "fieldType": "",
+                    "fieldName": "clcommon__frequency__c",
+                    "alias": "clcommon__Frequency__c"
+               },
+               "9783919b": {
+                    "queryToken": "clcommon__external_id__c",
+                    "isAggregation": false,
+                    "id": "9783919b",
+                    "fieldType": "",
+                    "fieldName": "clcommon__external_id__c",
+                    "alias": "clcommon__External_Id__c"
+               },
+               "88676920": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "88676920",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "13ebd92e": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "13ebd92e",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "f45ae81a": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "f45ae81a",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "2e491cec": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "2e491cec",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "e3a39481": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "e3a39481",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "7dfb9e90": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "7dfb9e90",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "b1b474d4": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "b1b474d4",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "c337f6ff": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "c337f6ff",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "086eaa19": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "086eaa19",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "1887b397": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "1887b397",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "c85bdf5e": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "c85bdf5e",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "clcommon__StepUp_Schedule__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "36e3083f": {
+                    "rhsSelectionId": null,
+                    "paramId": "92f9b849",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "36e3083f",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "StepUpScheduleQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "8892d1ba2f40693c09b67959cba3c4ae6736b90f93c16719b6998d5ce9b54f65"
+}

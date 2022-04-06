@@ -1,0 +1,159 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "ApplicationNoteQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "genesis__Application_Note__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "d3f1dfe3",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "f111ddac": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "f111ddac"
+               }
+          },
+          "queryName": "ApplicationNoteQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "bf1dc790": {
+                    "queryToken": "genesis__note__c",
+                    "isAggregation": false,
+                    "id": "bf1dc790",
+                    "fieldType": "",
+                    "fieldName": "genesis__note__c",
+                    "alias": "genesis__Note__c"
+               },
+               "0d247a01": {
+                    "queryToken": "genesis__meeting_schedule__c",
+                    "isAggregation": false,
+                    "id": "0d247a01",
+                    "fieldType": "",
+                    "fieldName": "genesis__meeting_schedule__c",
+                    "alias": "genesis__Meeting_Schedule__c"
+               },
+               "4d6ea28b": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "4d6ea28b",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "8c822ac2": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "8c822ac2",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "4af247a2": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "4af247a2",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "f556b8fa": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "f556b8fa",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "5c53b394": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "5c53b394",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "41a51aa4": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "41a51aa4",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "6b4d1cd2": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "6b4d1cd2",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "210e05d9": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "210e05d9",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "f891738e": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "f891738e",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "847d60b2": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "847d60b2",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "75f95de5": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "75f95de5",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Application_Note__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "d3f1dfe3": {
+                    "rhsSelectionId": null,
+                    "paramId": "f111ddac",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "d3f1dfe3",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "ApplicationNoteQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "addb1d41a183adc2c30cd5335429a95bb5d45131f6700bb73617ac07c0e44cce"
+}

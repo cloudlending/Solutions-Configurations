@@ -1,0 +1,103 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "BorrowerPartiesInRelationship",
+     "clcommon__From_Object__c": "staging__Interface_Party__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1V8c000007WgAVEA0",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {},
+          "queryName": "BorrowerPartiesInRelationship",
+          "projectionsAsString": null,
+          "projections": {
+               "a1V8c000007WgAQEA0": {
+                    "queryToken": "staging__interface_contract__c",
+                    "isAggregation": false,
+                    "id": "a1V8c000007WgAQEA0",
+                    "fieldType": "REFERENCE",
+                    "fieldName": "staging__interface_contract__c",
+                    "alias": "Interface_Contract__c"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "staging__Interface_Party__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {
+               "a1W8c000007WeovEAC": {
+                    "subQueryId": "a1Y8c00000BYqgAEAT",
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "a1V8c000007WgAFEA0",
+                    "id": "a1W8c000007WeovEAC"
+               },
+               "a1W8c000007WeouEAC": {
+                    "subQueryId": "a1Y8c00000BYqgAEAT",
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "a1V8c000007WgAEEA0",
+                    "id": "a1W8c000007WeouEAC"
+               }
+          },
+          "constants": {
+               "a1W8c000007WeotEAC": {
+                    "subQueryId": null,
+                    "pType": "CONSTANT",
+                    "paramValue": "'BORROWER'",
+                    "id": "a1W8c000007WeotEAC"
+               }
+          },
+          "connectByClauseId": null,
+          "clauses": {
+               "a1V8c000007WgAVEA0": {
+                    "rhsSelectionId": "a1V8c000007WgATEA0",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1V8c000007WgAUEA0",
+                    "id": "a1V8c000007WgAVEA0",
+                    "fieldName": null
+               },
+               "a1V8c000007WgAUEA0": {
+                    "rhsSelectionId": "a1V8c000007WgASEA0",
+                    "paramId": null,
+                    "operator": "OR",
+                    "lhsSelectionId": "a1V8c000007WgAREA0",
+                    "id": "a1V8c000007WgAUEA0",
+                    "fieldName": null
+               },
+               "a1V8c000007WgATEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeotEAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgATEA0",
+                    "fieldName": "staging__Type__c"
+               },
+               "a1V8c000007WgASEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeovEAC",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgASEA0",
+                    "fieldName": "staging__Account__c"
+               },
+               "a1V8c000007WgAREA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeouEAC",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgAREA0",
+                    "fieldName": "staging__Account__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "BorrowerPartiesInRelationship",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "6ef229a17e6d105adca5615e93309827216642a986c99d705142bef4c8668960"
+}

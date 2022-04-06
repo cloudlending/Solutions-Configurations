@@ -1,0 +1,58 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "ApplicationQuery",
+     "clcommon__From_Object__c": "genesis__Applications__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1V8c000007WgBOEA0",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "a1W8c000007WepLEAS": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "ID",
+                    "id": "a1W8c000007WepLEAS"
+               }
+          },
+          "queryName": "ApplicationQuery",
+          "projectionsAsString": null,
+          "projections": {
+               "a1V8c000007WgBNEA0": {
+                    "queryToken": "genesis__payment_amount__c",
+                    "isAggregation": false,
+                    "id": "a1V8c000007WgBNEA0",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "genesis__payment_amount__c",
+                    "alias": "PaymentAmount"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Applications__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "a1V8c000007WgBOEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WepLEAS",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgBOEA0",
+                    "fieldName": "ID"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "ApplicationQuery",
+     "clcommon__Record_Limit__c": 1,
+     "clcommon__Release_Checksum__c": "ee0373b04dd4e61a29f2d43650e70affaca6a7fb4a6356973bcf88565372c2a2"
+}

@@ -1,0 +1,151 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "CovenantAssociationQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "clcommon__Covenant_Association__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "ce125073",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "a0e05b92": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "a0e05b92"
+               }
+          },
+          "queryName": "CovenantAssociationQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "485b7b91": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "485b7b91",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "3fc3674d": {
+                    "queryToken": "clcommon__covenant__c",
+                    "isAggregation": false,
+                    "id": "3fc3674d",
+                    "fieldType": "",
+                    "fieldName": "clcommon__covenant__c",
+                    "alias": "clcommon__Covenant__c"
+               },
+               "48b7c112": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "48b7c112",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "4e0a8921": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "4e0a8921",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "5f446964": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "5f446964",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "4068158f": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "4068158f",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "c8f56d77": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "c8f56d77",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "d312125c": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "d312125c",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "aad4f78b": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "aad4f78b",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "291c0eb3": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "291c0eb3",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "638a6323": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "638a6323",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "fe227d4b": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "fe227d4b",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "clcommon__Covenant_Association__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "ce125073": {
+                    "rhsSelectionId": null,
+                    "paramId": "a0e05b92",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "ce125073",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "CovenantAssociationQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "41da936c2cb6a306f1a4c70aafdb26034752108a98f884801c5fcb408cd52665"
+}

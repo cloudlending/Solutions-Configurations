@@ -1,0 +1,151 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "AccountRelationships",
+     "clcommon__From_Object__c": "clcommon__Relationship__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": null,
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": "a1V8c000007WgAIEA0",
+          "runtimeParams": {
+               "a1W8c000007WeosEAC": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "a1W8c000007WeosEAC"
+               }
+          },
+          "queryName": "AccountRelationships",
+          "projectionsAsString": null,
+          "projections": {
+               "a1V8c000007WgAFEA0": {
+                    "queryToken": "clcommon__related_entity__c",
+                    "isAggregation": false,
+                    "id": "a1V8c000007WgAFEA0",
+                    "fieldType": "REFERENCE",
+                    "fieldName": "clcommon__related_entity__c",
+                    "alias": "Related_Entity__c"
+               },
+               "a1V8c000007WgAEEA0": {
+                    "queryToken": "clcommon__entity__c",
+                    "isAggregation": false,
+                    "id": "a1V8c000007WgAEEA0",
+                    "fieldType": "REFERENCE",
+                    "fieldName": "clcommon__entity__c",
+                    "alias": "Entity__c"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "clcommon__Relationship__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {
+               "a1W8c000007WeorEAC": {
+                    "subQueryId": "a1Y8c00000BYqgAEAT",
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "a1V8c000007WgAFEA0",
+                    "id": "a1W8c000007WeorEAC"
+               },
+               "a1W8c000007WeoqEAC": {
+                    "subQueryId": "a1Y8c00000BYqgAEAT",
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "a1V8c000007WgAEEA0",
+                    "id": "a1W8c000007WeoqEAC"
+               }
+          },
+          "constants": {},
+          "connectByClauseId": "a1V8c000007WgAPEA0",
+          "clauses": {
+               "a1V8c000007WgAMEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeorEAC",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgAMEA0",
+                    "fieldName": "clcommon__Related_Entity__c"
+               },
+               "a1V8c000007WgAPEA0": {
+                    "rhsSelectionId": "a1V8c000007WgAMEA0",
+                    "paramId": null,
+                    "operator": "OR",
+                    "lhsSelectionId": "a1V8c000007WgAOEA0",
+                    "id": "a1V8c000007WgAPEA0",
+                    "fieldName": null
+               },
+               "a1V8c000007WgAOEA0": {
+                    "rhsSelectionId": "a1V8c000007WgALEA0",
+                    "paramId": null,
+                    "operator": "OR",
+                    "lhsSelectionId": "a1V8c000007WgANEA0",
+                    "id": "a1V8c000007WgAOEA0",
+                    "fieldName": null
+               },
+               "a1V8c000007WgANEA0": {
+                    "rhsSelectionId": "a1V8c000007WgAKEA0",
+                    "paramId": null,
+                    "operator": "OR",
+                    "lhsSelectionId": "a1V8c000007WgAJEA0",
+                    "id": "a1V8c000007WgANEA0",
+                    "fieldName": null
+               },
+               "a1V8c000007WgALEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeorEAC",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgALEA0",
+                    "fieldName": "clcommon__Entity__c"
+               },
+               "a1V8c000007WgAKEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeoqEAC",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgAKEA0",
+                    "fieldName": "clcommon__Related_Entity__c"
+               },
+               "a1V8c000007WgAJEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeoqEAC",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgAJEA0",
+                    "fieldName": "clcommon__Entity__c"
+               },
+               "a1V8c000007WgAIEA0": {
+                    "rhsSelectionId": "a1V8c000007WgAHEA0",
+                    "paramId": null,
+                    "operator": "OR",
+                    "lhsSelectionId": "a1V8c000007WgAGEA0",
+                    "id": "a1V8c000007WgAIEA0",
+                    "fieldName": null
+               },
+               "a1V8c000007WgAHEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeosEAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgAHEA0",
+                    "fieldName": "clcommon__Related_Entity__c"
+               },
+               "a1V8c000007WgAGEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeosEAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgAGEA0",
+                    "fieldName": "clcommon__Entity__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "AccountRelationships",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "a679118ca3964dfe6e91145f6ff3adcf65eb374d1bd7408f28cb8f349e3491da"
+}

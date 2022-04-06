@@ -1,0 +1,359 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "AddressQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "clcommon__Address__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "PartyQueryForApplicationSnapshot"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "f7a7fb25",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "13b68353": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "clcommon__Account__c",
+                    "id": "13b68353"
+               }
+          },
+          "queryName": "AddressQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "8d1aa202": {
+                    "queryToken": "genesis__active__c",
+                    "isAggregation": false,
+                    "id": "8d1aa202",
+                    "fieldType": "",
+                    "fieldName": "genesis__active__c",
+                    "alias": "genesis__Active__c"
+               },
+               "ef5bf20a": {
+                    "queryToken": "clcommon__zip_code__c",
+                    "isAggregation": false,
+                    "id": "ef5bf20a",
+                    "fieldType": "",
+                    "fieldName": "clcommon__zip_code__c",
+                    "alias": "clcommon__Zip_Code__c"
+               },
+               "5f0b0466": {
+                    "queryToken": "clcommon__street_address__c",
+                    "isAggregation": false,
+                    "id": "5f0b0466",
+                    "fieldType": "",
+                    "fieldName": "clcommon__street_address__c",
+                    "alias": "clcommon__Street_Address__c"
+               },
+               "4ce3eefe": {
+                    "queryToken": "clcommon__state_province__c",
+                    "isAggregation": false,
+                    "id": "4ce3eefe",
+                    "fieldType": "",
+                    "fieldName": "clcommon__state_province__c",
+                    "alias": "clcommon__State_Province__c"
+               },
+               "175e3762": {
+                    "queryToken": "clcommon__state_province_code__c",
+                    "isAggregation": false,
+                    "id": "175e3762",
+                    "fieldType": "",
+                    "fieldName": "clcommon__state_province_code__c",
+                    "alias": "clcommon__State_Province_Code__c"
+               },
+               "e0fd53a7": {
+                    "queryToken": "clcommon__start_date__c",
+                    "isAggregation": false,
+                    "id": "e0fd53a7",
+                    "fieldType": "",
+                    "fieldName": "clcommon__start_date__c",
+                    "alias": "clcommon__Start_Date__c"
+               },
+               "da54009c": {
+                    "queryToken": "clcommon__shipping_address__c",
+                    "isAggregation": false,
+                    "id": "da54009c",
+                    "fieldType": "",
+                    "fieldName": "clcommon__shipping_address__c",
+                    "alias": "clcommon__Shipping_Address__c"
+               },
+               "4df5a851": {
+                    "queryToken": "clcommon__primary_address__c",
+                    "isAggregation": false,
+                    "id": "4df5a851",
+                    "fieldType": "",
+                    "fieldName": "clcommon__primary_address__c",
+                    "alias": "clcommon__Primary_Address__c"
+               },
+               "b0165bca": {
+                    "queryToken": "clcommon__previous_address__c",
+                    "isAggregation": false,
+                    "id": "b0165bca",
+                    "fieldType": "",
+                    "fieldName": "clcommon__previous_address__c",
+                    "alias": "clcommon__Previous_Address__c"
+               },
+               "42059aca": {
+                    "queryToken": "clcommon__other_address__c",
+                    "isAggregation": false,
+                    "id": "42059aca",
+                    "fieldType": "",
+                    "fieldName": "clcommon__other_address__c",
+                    "alias": "clcommon__Other_Address__c"
+               },
+               "e43cd0c2": {
+                    "queryToken": "clcommon__military_postal_service_center__c",
+                    "isAggregation": false,
+                    "id": "e43cd0c2",
+                    "fieldType": "",
+                    "fieldName": "clcommon__military_postal_service_center__c",
+                    "alias": "clcommon__Military_Postal_Service_Center__c"
+               },
+               "51577fcd": {
+                    "queryToken": "clcommon__military_post_office_box__c",
+                    "isAggregation": false,
+                    "id": "51577fcd",
+                    "fieldType": "",
+                    "fieldName": "clcommon__military_post_office_box__c",
+                    "alias": "clcommon__Military_Post_Office_Box__c"
+               },
+               "621838e3": {
+                    "queryToken": "clcommon__military_po_type__c",
+                    "isAggregation": false,
+                    "id": "621838e3",
+                    "fieldType": "",
+                    "fieldName": "clcommon__military_po_type__c",
+                    "alias": "clcommon__Military_PO_Type__c"
+               },
+               "b3143488": {
+                    "queryToken": "clcommon__military_address__c",
+                    "isAggregation": false,
+                    "id": "b3143488",
+                    "fieldType": "",
+                    "fieldName": "clcommon__military_address__c",
+                    "alias": "clcommon__Military_Address__c"
+               },
+               "5bed6d72": {
+                    "queryToken": "clcommon__mailing_address__c",
+                    "isAggregation": false,
+                    "id": "5bed6d72",
+                    "fieldType": "",
+                    "fieldName": "clcommon__mailing_address__c",
+                    "alias": "clcommon__Mailing_Address__c"
+               },
+               "8c47a43e": {
+                    "queryToken": "clcommon__foreign_city_postal_code__c",
+                    "isAggregation": false,
+                    "id": "8c47a43e",
+                    "fieldType": "",
+                    "fieldName": "clcommon__foreign_city_postal_code__c",
+                    "alias": "clcommon__Foreign_City_Postal_Code__c"
+               },
+               "5110703e": {
+                    "queryToken": "clcommon__end_date__c",
+                    "isAggregation": false,
+                    "id": "5110703e",
+                    "fieldType": "",
+                    "fieldName": "clcommon__end_date__c",
+                    "alias": "clcommon__End_Date__c"
+               },
+               "bfb69820": {
+                    "queryToken": "clcommon__current_address__c",
+                    "isAggregation": false,
+                    "id": "bfb69820",
+                    "fieldType": "",
+                    "fieldName": "clcommon__current_address__c",
+                    "alias": "clcommon__Current_Address__c"
+               },
+               "256ee6f9": {
+                    "queryToken": "clcommon__county__c",
+                    "isAggregation": false,
+                    "id": "256ee6f9",
+                    "fieldType": "",
+                    "fieldName": "clcommon__county__c",
+                    "alias": "clcommon__County__c"
+               },
+               "53e45d46": {
+                    "queryToken": "clcommon__country__c",
+                    "isAggregation": false,
+                    "id": "53e45d46",
+                    "fieldType": "",
+                    "fieldName": "clcommon__country__c",
+                    "alias": "clcommon__Country__c"
+               },
+               "84f52106": {
+                    "queryToken": "clcommon__country_code__c",
+                    "isAggregation": false,
+                    "id": "84f52106",
+                    "fieldType": "",
+                    "fieldName": "clcommon__country_code__c",
+                    "alias": "clcommon__Country_Code__c"
+               },
+               "e69d1686": {
+                    "queryToken": "clcommon__contact__c",
+                    "isAggregation": false,
+                    "id": "e69d1686",
+                    "fieldType": "",
+                    "fieldName": "clcommon__contact__c",
+                    "alias": "clcommon__Contact__c"
+               },
+               "7e882853": {
+                    "queryToken": "clcommon__city__c",
+                    "isAggregation": false,
+                    "id": "7e882853",
+                    "fieldType": "",
+                    "fieldName": "clcommon__city__c",
+                    "alias": "clcommon__City__c"
+               },
+               "3dae0f21": {
+                    "queryToken": "clcommon__billing_address__c",
+                    "isAggregation": false,
+                    "id": "3dae0f21",
+                    "fieldType": "",
+                    "fieldName": "clcommon__billing_address__c",
+                    "alias": "clcommon__Billing_Address__c"
+               },
+               "03a0b64c": {
+                    "queryToken": "clcommon__application_location__c",
+                    "isAggregation": false,
+                    "id": "03a0b64c",
+                    "fieldType": "",
+                    "fieldName": "clcommon__application_location__c",
+                    "alias": "clcommon__Application_Location__c"
+               },
+               "861e5b0a": {
+                    "queryToken": "clcommon__address_line_2__c",
+                    "isAggregation": false,
+                    "id": "861e5b0a",
+                    "fieldType": "",
+                    "fieldName": "clcommon__address_line_2__c",
+                    "alias": "clcommon__Address_Line_2__c"
+               },
+               "60356979": {
+                    "queryToken": "clcommon__account__c",
+                    "isAggregation": false,
+                    "id": "60356979",
+                    "fieldType": "",
+                    "fieldName": "clcommon__account__c",
+                    "alias": "clcommon__Account__c"
+               },
+               "989fee03": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "989fee03",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "44d8755e": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "44d8755e",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "a6717551": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "a6717551",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "bc32d125": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "bc32d125",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "6372456c": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "6372456c",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "4c0c6156": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "4c0c6156",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "287e0333": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "287e0333",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "e9081637": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "e9081637",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "467651b3": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "467651b3",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "e61a2756": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "e61a2756",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "f9172ac2": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "f9172ac2",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "clcommon__Address__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "f7a7fb25": {
+                    "rhsSelectionId": null,
+                    "paramId": "13b68353",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "f7a7fb25",
+                    "fieldName": "clcommon__Account__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "AddressQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "2fe134157ddd34ca138f0fc9f19d263176023aa431b78d8c5b343de1abe90c00"
+}

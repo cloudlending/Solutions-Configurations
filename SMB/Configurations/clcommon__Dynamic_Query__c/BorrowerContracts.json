@@ -1,0 +1,81 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "BorrowerContracts",
+     "clcommon__From_Object__c": "staging__Interface_Party__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1V8c000007WgA1EAK",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "a1W8c000007WeoiEAC": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "a1W8c000007WeoiEAC"
+               }
+          },
+          "queryName": "BorrowerContracts",
+          "projectionsAsString": null,
+          "projections": {
+               "a1V8c000007Wg9yEAC": {
+                    "queryToken": "SUM(staging__interface_contract__r.staging__principal_balance__c) PrincipalBalance",
+                    "isAggregation": true,
+                    "id": "a1V8c000007Wg9yEAC",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "staging__interface_contract__r.staging__principal_balance__c",
+                    "alias": "PrincipalBalance"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "staging__Interface_Party__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {
+               "a1W8c000007WeojEAC": {
+                    "subQueryId": null,
+                    "pType": "CONSTANT",
+                    "paramValue": "'BORROWER'",
+                    "id": "a1W8c000007WeojEAC"
+               }
+          },
+          "connectByClauseId": null,
+          "clauses": {
+               "a1V8c000007WgA1EAK": {
+                    "rhsSelectionId": "a1V8c000007Wg9zEAC",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1V8c000007WgA0EAK",
+                    "id": "a1V8c000007WgA1EAK",
+                    "fieldName": null
+               },
+               "a1V8c000007WgA0EAK": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeojEAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgA0EAK",
+                    "fieldName": "staging__Type__c"
+               },
+               "a1V8c000007Wg9zEAC": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeoiEAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007Wg9zEAC",
+                    "fieldName": "staging__Account__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "BorrowerContracts",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "e82d8d2f015b7f6b0f1285c379e13953220d9ffae49d6e4514d7e05efccafa24"
+}

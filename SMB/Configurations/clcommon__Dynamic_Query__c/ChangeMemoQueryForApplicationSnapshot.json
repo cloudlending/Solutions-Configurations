@@ -1,0 +1,207 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "ChangeMemoQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "genesis__Change_Memo__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "7ae3c833",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "9cbc9f69": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "9cbc9f69"
+               }
+          },
+          "queryName": "ChangeMemoQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "1707cf30": {
+                    "queryToken": "genesis__term__c",
+                    "isAggregation": false,
+                    "id": "1707cf30",
+                    "fieldType": "",
+                    "fieldName": "genesis__term__c",
+                    "alias": "genesis__Term__c"
+               },
+               "517a9998": {
+                    "queryToken": "genesis__status__c",
+                    "isAggregation": false,
+                    "id": "517a9998",
+                    "fieldType": "",
+                    "fieldName": "genesis__status__c",
+                    "alias": "genesis__Status__c"
+               },
+               "06776678": {
+                    "queryToken": "genesis__loan_amount__c",
+                    "isAggregation": false,
+                    "id": "06776678",
+                    "fieldType": "",
+                    "fieldName": "genesis__loan_amount__c",
+                    "alias": "genesis__Loan_Amount__c"
+               },
+               "f4a4348b": {
+                    "queryToken": "genesis__interest_rate__c",
+                    "isAggregation": false,
+                    "id": "f4a4348b",
+                    "fieldType": "",
+                    "fieldName": "genesis__interest_rate__c",
+                    "alias": "genesis__Interest_Rate__c"
+               },
+               "a134631c": {
+                    "queryToken": "genesis__counter_offer_type__c",
+                    "isAggregation": false,
+                    "id": "a134631c",
+                    "fieldType": "",
+                    "fieldName": "genesis__counter_offer_type__c",
+                    "alias": "genesis__Counter_Offer_Type__c"
+               },
+               "d21d0a18": {
+                    "queryToken": "genesis__counter_offer_acceptance_date__c",
+                    "isAggregation": false,
+                    "id": "d21d0a18",
+                    "fieldType": "",
+                    "fieldName": "genesis__counter_offer_acceptance_date__c",
+                    "alias": "genesis__Counter_Offer_Acceptance_Date__c"
+               },
+               "04bad4b4": {
+                    "queryToken": "genesis__comments__c",
+                    "isAggregation": false,
+                    "id": "04bad4b4",
+                    "fieldType": "",
+                    "fieldName": "genesis__comments__c",
+                    "alias": "genesis__Comments__c"
+               },
+               "5a30367f": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "5a30367f",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "d013c81c": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "d013c81c",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "80b1c974": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "80b1c974",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "d5437689": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "d5437689",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "1d0d29ce": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "1d0d29ce",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "a1effa44": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "a1effa44",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "726a63cc": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "726a63cc",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "beaf23c8": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "beaf23c8",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "9495cfd9": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "9495cfd9",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "2627b088": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "2627b088",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "57fdeef4": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "57fdeef4",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "ce9f0690": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "ce9f0690",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Change_Memo__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "7ae3c833": {
+                    "rhsSelectionId": null,
+                    "paramId": "9cbc9f69",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "7ae3c833",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "ChangeMemoQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "c2a7f930363adefdbeec2be4f872676a4c8ed1a674a05cea49af1c4ab1d56025"
+}

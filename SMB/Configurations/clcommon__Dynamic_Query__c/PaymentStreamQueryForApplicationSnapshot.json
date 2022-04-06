@@ -1,0 +1,247 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "PaymentStreamQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "genesis__Payment_Stream__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "60b9506a",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "b9f8d06c": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "b9f8d06c"
+               }
+          },
+          "queryName": "PaymentStreamQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "12b051e3": {
+                    "queryToken": "genesis__start_date__c",
+                    "isAggregation": false,
+                    "id": "12b051e3",
+                    "fieldType": "",
+                    "fieldName": "genesis__start_date__c",
+                    "alias": "genesis__Start_Date__c"
+               },
+               "d1ad02f3": {
+                    "queryToken": "genesis__sequence__c",
+                    "isAggregation": false,
+                    "id": "d1ad02f3",
+                    "fieldType": "",
+                    "fieldName": "genesis__sequence__c",
+                    "alias": "genesis__Sequence__c"
+               },
+               "4195a7e0": {
+                    "queryToken": "genesis__seasonal_payment__c",
+                    "isAggregation": false,
+                    "id": "4195a7e0",
+                    "fieldType": "",
+                    "fieldName": "genesis__seasonal_payment__c",
+                    "alias": "genesis__Seasonal_Payment__c"
+               },
+               "fbd23b6e": {
+                    "queryToken": "genesis__rate_type__c",
+                    "isAggregation": false,
+                    "id": "fbd23b6e",
+                    "fieldType": "",
+                    "fieldName": "genesis__rate_type__c",
+                    "alias": "genesis__Rate_Type__c"
+               },
+               "cc99d20f": {
+                    "queryToken": "genesis__pricing_basis__c",
+                    "isAggregation": false,
+                    "id": "cc99d20f",
+                    "fieldType": "",
+                    "fieldName": "genesis__pricing_basis__c",
+                    "alias": "genesis__Pricing_Basis__c"
+               },
+               "c3686186": {
+                    "queryToken": "genesis__payment_type__c",
+                    "isAggregation": false,
+                    "id": "c3686186",
+                    "fieldType": "",
+                    "fieldName": "genesis__payment_type__c",
+                    "alias": "genesis__Payment_Type__c"
+               },
+               "0b7f2892": {
+                    "queryToken": "genesis__payment_frequency__c",
+                    "isAggregation": false,
+                    "id": "0b7f2892",
+                    "fieldType": "",
+                    "fieldName": "genesis__payment_frequency__c",
+                    "alias": "genesis__Payment_Frequency__c"
+               },
+               "faec9804": {
+                    "queryToken": "genesis__payment_amount__c",
+                    "isAggregation": false,
+                    "id": "faec9804",
+                    "fieldType": "",
+                    "fieldName": "genesis__payment_amount__c",
+                    "alias": "genesis__Payment_Amount__c"
+               },
+               "b4e876db": {
+                    "queryToken": "genesis__number_of_payments__c",
+                    "isAggregation": false,
+                    "id": "b4e876db",
+                    "fieldType": "",
+                    "fieldName": "genesis__number_of_payments__c",
+                    "alias": "genesis__Number_of_Payments__c"
+               },
+               "b78f6852": {
+                    "queryToken": "genesis__interest_rate__c",
+                    "isAggregation": false,
+                    "id": "b78f6852",
+                    "fieldType": "",
+                    "fieldName": "genesis__interest_rate__c",
+                    "alias": "genesis__Interest_Rate__c"
+               },
+               "08affc74": {
+                    "queryToken": "genesis__interest_rate_adjustment_period__c",
+                    "isAggregation": false,
+                    "id": "08affc74",
+                    "fieldType": "",
+                    "fieldName": "genesis__interest_rate_adjustment_period__c",
+                    "alias": "genesis__Interest_Rate_Adjustment_Period__c"
+               },
+               "33000f1b": {
+                    "queryToken": "genesis__interest_rate_adjustment_frequency__c",
+                    "isAggregation": false,
+                    "id": "33000f1b",
+                    "fieldType": "",
+                    "fieldName": "genesis__interest_rate_adjustment_frequency__c",
+                    "alias": "genesis__Interest_Rate_Adjustment_Frequency__c"
+               },
+               "c8d28bc7": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "c8d28bc7",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "51e589e8": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "51e589e8",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "8593311f": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "8593311f",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "d516f548": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "d516f548",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "a9390abc": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "a9390abc",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "bb34ed06": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "bb34ed06",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "ab1e13ec": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "ab1e13ec",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "fbc2f771": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "fbc2f771",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "58431155": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "58431155",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "78d331b4": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "78d331b4",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "0aba5cf9": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "0aba5cf9",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "61595c16": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "61595c16",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Payment_Stream__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "60b9506a": {
+                    "rhsSelectionId": null,
+                    "paramId": "b9f8d06c",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "60b9506a",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "PaymentStreamQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "1bab647356cacf6d527b71d55a5882146d46b888470b2d1240f07b3fec7df077"
+}

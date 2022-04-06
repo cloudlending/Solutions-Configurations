@@ -1,0 +1,191 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "CreditMemoQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "genesis__Credit_Memo__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a3431cc3",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "27c882a5": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "27c882a5"
+               }
+          },
+          "queryName": "CreditMemoQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "fa99b7e4": {
+                    "queryToken": "genesis__risk_assessments__c",
+                    "isAggregation": false,
+                    "id": "fa99b7e4",
+                    "fieldType": "",
+                    "fieldName": "genesis__risk_assessments__c",
+                    "alias": "genesis__Risk_Assessments__c"
+               },
+               "af101e27": {
+                    "queryToken": "genesis__loan_information__c",
+                    "isAggregation": false,
+                    "id": "af101e27",
+                    "fieldType": "",
+                    "fieldName": "genesis__loan_information__c",
+                    "alias": "genesis__Loan_Information__c"
+               },
+               "8342425f": {
+                    "queryToken": "genesis__financial_information__c",
+                    "isAggregation": false,
+                    "id": "8342425f",
+                    "fieldType": "",
+                    "fieldName": "genesis__financial_information__c",
+                    "alias": "genesis__Financial_Information__c"
+               },
+               "02df8b2f": {
+                    "queryToken": "genesis__covenants__c",
+                    "isAggregation": false,
+                    "id": "02df8b2f",
+                    "fieldType": "",
+                    "fieldName": "genesis__covenants__c",
+                    "alias": "genesis__Covenants__c"
+               },
+               "9bbe0c68": {
+                    "queryToken": "genesis__borrowing_entity_information__c",
+                    "isAggregation": false,
+                    "id": "9bbe0c68",
+                    "fieldType": "",
+                    "fieldName": "genesis__borrowing_entity_information__c",
+                    "alias": "genesis__Borrowing_Entity_Information__c"
+               },
+               "cdd0f1a0": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "cdd0f1a0",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "d1976502": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "d1976502",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "bc78ae24": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "bc78ae24",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "501c695f": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "501c695f",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "7a6cbb50": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "7a6cbb50",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "ad5d25ee": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "ad5d25ee",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "20712479": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "20712479",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "65c6bea8": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "65c6bea8",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "4ca83a2e": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "4ca83a2e",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "85a03de5": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "85a03de5",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "a531c369": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "a531c369",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "881c6883": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "881c6883",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Credit_Memo__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "a3431cc3": {
+                    "rhsSelectionId": null,
+                    "paramId": "27c882a5",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a3431cc3",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "CreditMemoQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "f22c01646463ef226d4a7804dc05ad5ec25ee81f676f90ef5513a4f91406443e"
+}

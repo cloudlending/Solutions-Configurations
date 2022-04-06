@@ -1,0 +1,215 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "PointsQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "clcommon__Points__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "fd695b80",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "fbb89aad": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "fbb89aad"
+               }
+          },
+          "queryName": "PointsQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "41977b37": {
+                    "queryToken": "genesis__points_setup__c",
+                    "isAggregation": false,
+                    "id": "41977b37",
+                    "fieldType": "",
+                    "fieldName": "genesis__points_setup__c",
+                    "alias": "genesis__Points_Setup__c"
+               },
+               "343554c8": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "343554c8",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "0fad6ef8": {
+                    "queryToken": "clcommon__points__c",
+                    "isAggregation": false,
+                    "id": "0fad6ef8",
+                    "fieldType": "",
+                    "fieldName": "clcommon__points__c",
+                    "alias": "clcommon__Points__c"
+               },
+               "24b31513": {
+                    "queryToken": "clcommon__points_type__c",
+                    "isAggregation": false,
+                    "id": "24b31513",
+                    "fieldType": "",
+                    "fieldName": "clcommon__points_type__c",
+                    "alias": "clcommon__Points_Type__c"
+               },
+               "2316a87c": {
+                    "queryToken": "clcommon__points_override__c",
+                    "isAggregation": false,
+                    "id": "2316a87c",
+                    "fieldType": "",
+                    "fieldName": "clcommon__points_override__c",
+                    "alias": "clcommon__Points_Override__c"
+               },
+               "994638df": {
+                    "queryToken": "clcommon__points_amount__c",
+                    "isAggregation": false,
+                    "id": "994638df",
+                    "fieldType": "",
+                    "fieldName": "clcommon__points_amount__c",
+                    "alias": "clcommon__Points_Amount__c"
+               },
+               "4e03278e": {
+                    "queryToken": "clcommon__points_amount_override__c",
+                    "isAggregation": false,
+                    "id": "4e03278e",
+                    "fieldType": "",
+                    "fieldName": "clcommon__points_amount_override__c",
+                    "alias": "clcommon__Points_Amount_Override__c"
+               },
+               "3f6fee20": {
+                    "queryToken": "clcommon__computation_type__c",
+                    "isAggregation": false,
+                    "id": "3f6fee20",
+                    "fieldType": "",
+                    "fieldName": "clcommon__computation_type__c",
+                    "alias": "clcommon__Computation_Type__c"
+               },
+               "38c2ac0c": {
+                    "queryToken": "clcommon__accounts_payable__c",
+                    "isAggregation": false,
+                    "id": "38c2ac0c",
+                    "fieldType": "",
+                    "fieldName": "clcommon__accounts_payable__c",
+                    "alias": "clcommon__Accounts_Payable__c"
+               },
+               "9eabdede": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "9eabdede",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "402725d5": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "402725d5",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "e897d157": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "e897d157",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "cb78156c": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "cb78156c",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "aa685c0b": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "aa685c0b",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "49b1de0e": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "49b1de0e",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "f13a5df8": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "f13a5df8",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "ed770ca2": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "ed770ca2",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "c59193bf": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "c59193bf",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "0a8272ec": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "0a8272ec",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "39e6e062": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "39e6e062",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "clcommon__Points__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "fd695b80": {
+                    "rhsSelectionId": null,
+                    "paramId": "fbb89aad",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "fd695b80",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "PointsQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "ecd7fe71d7f4a4e3452276f18b1b5accbd02543d25e2de7ed8bb2209360687e5"
+}

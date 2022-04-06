@@ -1,0 +1,175 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "YieldQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "genesis__Yield__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "d1c676e0",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "3b440043": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "3b440043"
+               }
+          },
+          "queryName": "YieldQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "990151f8": {
+                    "queryToken": "genesis__yield_percentage__c",
+                    "isAggregation": false,
+                    "id": "990151f8",
+                    "fieldType": "",
+                    "fieldName": "genesis__yield_percentage__c",
+                    "alias": "genesis__Yield_Percentage__c"
+               },
+               "5793d298": {
+                    "queryToken": "genesis__yield_definition__c",
+                    "isAggregation": false,
+                    "id": "5793d298",
+                    "fieldType": "",
+                    "fieldName": "genesis__yield_definition__c",
+                    "alias": "genesis__Yield_Definition__c"
+               },
+               "8fb81b51": {
+                    "queryToken": "genesis__user_computed_yield__c",
+                    "isAggregation": false,
+                    "id": "8fb81b51",
+                    "fieldType": "",
+                    "fieldName": "genesis__user_computed_yield__c",
+                    "alias": "genesis__User_Computed_Yield__c"
+               },
+               "1d6f8e76": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "1d6f8e76",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "c408316c": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "c408316c",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "228a2c62": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "228a2c62",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "7c4ea41b": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "7c4ea41b",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "f2f56164": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "f2f56164",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "8561e720": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "8561e720",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "2fd224f5": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "2fd224f5",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "b11f4313": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "b11f4313",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "a46b6aad": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "a46b6aad",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "a9d8c3da": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "a9d8c3da",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "918c48cc": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "918c48cc",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "072a345e": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "072a345e",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Yield__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "d1c676e0": {
+                    "rhsSelectionId": null,
+                    "paramId": "3b440043",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "d1c676e0",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "YieldQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "c602fef3e1f9dcd201bfe6e7c068f74a872eac95b530661a80d8f63b166057ec"
+}

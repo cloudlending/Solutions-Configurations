@@ -1,0 +1,104 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "ApplicationQuarterlyLiabilityQuery",
+     "clcommon__From_Object__c": "genesis__Liability__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1V8c000007WgCKEA0",
+          "whereClause": null,
+          "subQueryParams": {
+               "a1W8c000007WepnEAC": {
+                    "subQueryId": "a1Y8c00000BYqgLEAT",
+                    "pType": "SUB_QUERY",
+                    "paramValue": "a1V8c000007WgAtEAK",
+                    "id": "a1W8c000007WepnEAC"
+               }
+          },
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "a1W8c000007WeplEAC": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "ID",
+                    "id": "a1W8c000007WeplEAC"
+               }
+          },
+          "queryName": "ApplicationQuarterlyLiabilityQuery",
+          "projectionsAsString": null,
+          "projections": {
+               "a1V8c000007WgCFEA0": {
+                    "queryToken": "SUM(genesis__payment_amount__c) QuarterlyDebt",
+                    "isAggregation": true,
+                    "id": "a1V8c000007WgCFEA0",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "genesis__payment_amount__c",
+                    "alias": "QuarterlyDebt"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "genesis__Liability__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {
+               "a1W8c000007WepmEAC": {
+                    "subQueryId": null,
+                    "pType": "CONSTANT",
+                    "paramValue": "'Quarterly'",
+                    "id": "a1W8c000007WepmEAC"
+               }
+          },
+          "connectByClauseId": null,
+          "clauses": {
+               "a1V8c000007WgCKEA0": {
+                    "rhsSelectionId": "a1V8c000007WgCJEA0",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1V8c000007WgCIEA0",
+                    "id": "a1V8c000007WgCKEA0",
+                    "fieldName": null
+               },
+               "a1V8c000007WgCJEA0": {
+                    "rhsSelectionId": "a1V8c000007WgCHEA0",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1V8c000007WgCGEA0",
+                    "id": "a1V8c000007WgCJEA0",
+                    "fieldName": null
+               },
+               "a1V8c000007WgCIEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WepnEAC",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgCIEA0",
+                    "fieldName": "genesis__Contact__c"
+               },
+               "a1V8c000007WgCHEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WepmEAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgCHEA0",
+                    "fieldName": "genesis__Payment_Frequency__c"
+               },
+               "a1V8c000007WgCGEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeplEAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgCGEA0",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "ApplicationQuarterlyLiabilityQuery",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "7ba5c5b3b174441cb77c906fc3ee4e6d9340e56761ed4fe3f8e12e785bd2f5ec"
+}

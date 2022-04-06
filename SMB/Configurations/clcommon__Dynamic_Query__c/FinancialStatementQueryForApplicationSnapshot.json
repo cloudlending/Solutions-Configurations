@@ -1,0 +1,271 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "FinancialStatementQueryForApplicationSnapshot",
+     "clcommon__From_Object__c": "clcommon__Financial_Statement__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": {
+          "attributes": {
+               "type": "clcommon__Dynamic_Query__c"
+          },
+          "clcommon__External_Id__c": "ApplicationSnapshotQuery"
+     },
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "649c43b5",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "19d44362": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "19d44362"
+               }
+          },
+          "queryName": "FinancialStatementQueryForApplicationSnapshot",
+          "projectionsAsString": null,
+          "projections": {
+               "ae6ec915": {
+                    "queryToken": "genesis__application__c",
+                    "isAggregation": false,
+                    "id": "ae6ec915",
+                    "fieldType": "",
+                    "fieldName": "genesis__application__c",
+                    "alias": "genesis__Application__c"
+               },
+               "ef4885c1": {
+                    "queryToken": "clcommon__template__c",
+                    "isAggregation": false,
+                    "id": "ef4885c1",
+                    "fieldType": "",
+                    "fieldName": "clcommon__template__c",
+                    "alias": "clcommon__Template__c"
+               },
+               "c6b33e2e": {
+                    "queryToken": "clcommon__statement_year__c",
+                    "isAggregation": false,
+                    "id": "c6b33e2e",
+                    "fieldType": "",
+                    "fieldName": "clcommon__statement_year__c",
+                    "alias": "clcommon__Statement_Year__c"
+               },
+               "c8c1ddba": {
+                    "queryToken": "clcommon__statement_type__c",
+                    "isAggregation": false,
+                    "id": "c8c1ddba",
+                    "fieldType": "",
+                    "fieldName": "clcommon__statement_type__c",
+                    "alias": "clcommon__Statement_Type__c"
+               },
+               "e7a814e7": {
+                    "queryToken": "clcommon__statement_date__c",
+                    "isAggregation": false,
+                    "id": "e7a814e7",
+                    "fieldType": "",
+                    "fieldName": "clcommon__statement_date__c",
+                    "alias": "clcommon__Statement_Date__c"
+               },
+               "daf47a15": {
+                    "queryToken": "clcommon__statement_analysis_type__c",
+                    "isAggregation": false,
+                    "id": "daf47a15",
+                    "fieldType": "",
+                    "fieldName": "clcommon__statement_analysis_type__c",
+                    "alias": "clcommon__Statement_Analysis_Type__c"
+               },
+               "2d2bdc44": {
+                    "queryToken": "clcommon__previous_statement__c",
+                    "isAggregation": false,
+                    "id": "2d2bdc44",
+                    "fieldType": "",
+                    "fieldName": "clcommon__previous_statement__c",
+                    "alias": "clcommon__Previous_Statement__c"
+               },
+               "047860fb": {
+                    "queryToken": "clcommon__parameters__c",
+                    "isAggregation": false,
+                    "id": "047860fb",
+                    "fieldType": "",
+                    "fieldName": "clcommon__parameters__c",
+                    "alias": "clcommon__Parameters__c"
+               },
+               "288a2c5f": {
+                    "queryToken": "clcommon__months_covered__c",
+                    "isAggregation": false,
+                    "id": "288a2c5f",
+                    "fieldType": "",
+                    "fieldName": "clcommon__months_covered__c",
+                    "alias": "clcommon__Months_Covered__c"
+               },
+               "4f12522d": {
+                    "queryToken": "clcommon__credit_analyst__c",
+                    "isAggregation": false,
+                    "id": "4f12522d",
+                    "fieldType": "",
+                    "fieldName": "clcommon__credit_analyst__c",
+                    "alias": "clcommon__Credit_Analyst__c"
+               },
+               "693b5db4": {
+                    "queryToken": "clcommon__collateral__c",
+                    "isAggregation": false,
+                    "id": "693b5db4",
+                    "fieldType": "",
+                    "fieldName": "clcommon__collateral__c",
+                    "alias": "clcommon__Collateral__c"
+               },
+               "4c5d5371": {
+                    "queryToken": "clcommon__audit_method__c",
+                    "isAggregation": false,
+                    "id": "4c5d5371",
+                    "fieldType": "",
+                    "fieldName": "clcommon__audit_method__c",
+                    "alias": "clcommon__Audit_Method__c"
+               },
+               "70a73d34": {
+                    "queryToken": "clcommon__annualized__c",
+                    "isAggregation": false,
+                    "id": "70a73d34",
+                    "fieldType": "",
+                    "fieldName": "clcommon__annualized__c",
+                    "alias": "clcommon__Annualized__c"
+               },
+               "6ad3c401": {
+                    "queryToken": "clcommon__accounting_basis__c",
+                    "isAggregation": false,
+                    "id": "6ad3c401",
+                    "fieldType": "",
+                    "fieldName": "clcommon__accounting_basis__c",
+                    "alias": "clcommon__Accounting_Basis__c"
+               },
+               "17255802": {
+                    "queryToken": "clcommon__accountant_name__c",
+                    "isAggregation": false,
+                    "id": "17255802",
+                    "fieldType": "",
+                    "fieldName": "clcommon__accountant_name__c",
+                    "alias": "clcommon__Accountant_Name__c"
+               },
+               "96ada1e9": {
+                    "queryToken": "clcommon__account__c",
+                    "isAggregation": false,
+                    "id": "96ada1e9",
+                    "fieldType": "",
+                    "fieldName": "clcommon__account__c",
+                    "alias": "clcommon__Account__c"
+               },
+               "9eb49166": {
+                    "queryToken": "lastreferenceddate",
+                    "isAggregation": false,
+                    "id": "9eb49166",
+                    "fieldType": "",
+                    "fieldName": "lastreferenceddate",
+                    "alias": "LastReferencedDate"
+               },
+               "b7c8796e": {
+                    "queryToken": "lastvieweddate",
+                    "isAggregation": false,
+                    "id": "b7c8796e",
+                    "fieldType": "",
+                    "fieldName": "lastvieweddate",
+                    "alias": "LastViewedDate"
+               },
+               "c7fabb72": {
+                    "queryToken": "systemmodstamp",
+                    "isAggregation": false,
+                    "id": "c7fabb72",
+                    "fieldType": "",
+                    "fieldName": "systemmodstamp",
+                    "alias": "SystemModstamp"
+               },
+               "eab773c8": {
+                    "queryToken": "lastmodifiedby.name",
+                    "isAggregation": false,
+                    "id": "eab773c8",
+                    "fieldType": "",
+                    "fieldName": "lastmodifiedby.name",
+                    "alias": "LastModifiedBy.Name"
+               },
+               "278a91dd": {
+                    "queryToken": "lastmodifieddate",
+                    "isAggregation": false,
+                    "id": "278a91dd",
+                    "fieldType": "",
+                    "fieldName": "lastmodifieddate",
+                    "alias": "LastModifiedDate"
+               },
+               "cf04e17b": {
+                    "queryToken": "createdby.name",
+                    "isAggregation": false,
+                    "id": "cf04e17b",
+                    "fieldType": "",
+                    "fieldName": "createdby.name",
+                    "alias": "CreatedBy.Name"
+               },
+               "91a3b00c": {
+                    "queryToken": "createddate",
+                    "isAggregation": false,
+                    "id": "91a3b00c",
+                    "fieldType": "",
+                    "fieldName": "createddate",
+                    "alias": "CreatedDate"
+               },
+               "8793b2b9": {
+                    "queryToken": "name",
+                    "isAggregation": false,
+                    "id": "8793b2b9",
+                    "fieldType": "",
+                    "fieldName": "name",
+                    "alias": "Name"
+               },
+               "2a52f96d": {
+                    "queryToken": "isdeleted",
+                    "isAggregation": false,
+                    "id": "2a52f96d",
+                    "fieldType": "",
+                    "fieldName": "isdeleted",
+                    "alias": "IsDeleted"
+               },
+               "a4e809b0": {
+                    "queryToken": "owner.name",
+                    "isAggregation": false,
+                    "id": "a4e809b0",
+                    "fieldType": "",
+                    "fieldName": "owner.name",
+                    "alias": "Owner.Name"
+               },
+               "411d5dcc": {
+                    "queryToken": "id",
+                    "isAggregation": false,
+                    "id": "411d5dcc",
+                    "fieldType": "",
+                    "fieldName": "id",
+                    "alias": "Id"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "clcommon__Financial_Statement__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {},
+          "connectByClauseId": null,
+          "clauses": {
+               "649c43b5": {
+                    "rhsSelectionId": null,
+                    "paramId": "19d44362",
+                    "operator": "IN",
+                    "lhsSelectionId": null,
+                    "id": "649c43b5",
+                    "fieldName": "genesis__Application__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "FinancialStatementQueryForApplicationSnapshot",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "618623aeb7ba9d8195804d3286b0cdf18811681cf64edcdad4ff6b1b2f44579e"
+}

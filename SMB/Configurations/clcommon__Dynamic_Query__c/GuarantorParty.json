@@ -1,0 +1,81 @@
+{
+     "attributes": {
+          "type": "clcommon__Dynamic_Query__c"
+     },
+     "clcommon__External_Id__c": "GuarantorParty",
+     "clcommon__From_Object__c": "clcommon__Party__c",
+     "clcommon__Group_By__c": null,
+     "clcommon__Is_Query_JSON_provided__c": false,
+     "clcommon__Order_By__c": null,
+     "clcommon__Parent_Query__r": null,
+     "clcommon__Query_Json__c": {
+          "whereClauseId": "a1V8c000007WgADEA0",
+          "whereClause": null,
+          "subQueryParams": {},
+          "startWithClauseId": null,
+          "runtimeParams": {
+               "a1W8c000007WeooEAC": {
+                    "subQueryId": null,
+                    "pType": "CONTEXT_VALUE",
+                    "paramValue": "Id",
+                    "id": "a1W8c000007WeooEAC"
+               }
+          },
+          "queryName": "GuarantorParty",
+          "projectionsAsString": null,
+          "projections": {
+               "a1V8c000007WgAAEA0": {
+                    "queryToken": "SUM(clcommon__contingent_liability__c) ContingencyLiability",
+                    "isAggregation": true,
+                    "id": "a1V8c000007WgAAEA0",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "clcommon__contingent_liability__c",
+                    "alias": "ContingencyLiability"
+               }
+          },
+          "parentQueryId": null,
+          "objectName": "clcommon__Party__c",
+          "id": null,
+          "fnParams": {},
+          "executeQueryParams": {},
+          "constants": {
+               "a1W8c000007WeopEAC": {
+                    "subQueryId": null,
+                    "pType": "CONSTANT",
+                    "paramValue": "'GUARANTOR'",
+                    "id": "a1W8c000007WeopEAC"
+               }
+          },
+          "connectByClauseId": null,
+          "clauses": {
+               "a1V8c000007WgADEA0": {
+                    "rhsSelectionId": "a1V8c000007WgABEA0",
+                    "paramId": null,
+                    "operator": "AND",
+                    "lhsSelectionId": "a1V8c000007WgACEA0",
+                    "id": "a1V8c000007WgADEA0",
+                    "fieldName": null
+               },
+               "a1V8c000007WgACEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeopEAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgACEA0",
+                    "fieldName": "clcommon__Type__r.Name"
+               },
+               "a1V8c000007WgABEA0": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1W8c000007WeooEAC",
+                    "operator": "=",
+                    "lhsSelectionId": null,
+                    "id": "a1V8c000007WgABEA0",
+                    "fieldName": "clcommon__Account__c"
+               }
+          },
+          "clauseOrder": {}
+     },
+     "clcommon__Query_Name__c": "GuarantorParty",
+     "clcommon__Record_Limit__c": null,
+     "clcommon__Release_Checksum__c": "7246212d99fa406cf690048c7e18e9c7550df2f7d2bc1e0c617ec12851d01780"
+}
