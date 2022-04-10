@@ -31,7 +31,7 @@
           "ruleName": "Secondary Identification Document - Utility Bill",
           "priority": 8,
           "parentRuleID": null,
-          "parentRecordId": "a1N5Y000007I0ZPUA0",
+          "parentRecordId": "a1S8c000003uwqFEAQ",
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : Secondary Identification Document - Utility Bill",
           "failureActions": [
@@ -106,6 +106,21 @@
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$5",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "True",
+                    "matchingType": "==",
+                    "fieldType": "BOOLEAN",
+                    "fieldName": "Active",
+                    "fieldAPIName": "clcommon__active__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
                }
           ],
           "category": "DocumentDefinition",
@@ -118,8 +133,9 @@
           },
           "clcommon__External_ID__c": "Document_Definition"
      },
+     "genesis__Department_Members__r": null,
      "solcommon__CL_Product__r": null,
      "solcommon__Release_Checksum__c": null,
      "solcommon__Type__c": null,
-     "clcommon__Release_Checksum__c": "8dc89a6110c571721396e6062d9dafd04a72bebf60e65530510a4622a4fa96a1"
+     "clcommon__Release_Checksum__c": "8d37bc3ce70c8084c92d1397747a04db6bef1ec67e610ba4c13106717a9e25f5"
 }
