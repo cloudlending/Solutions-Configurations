@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessOwnedNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessOwnedNext",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "isGuarantor": "$this.attr(isGuarantor);",
+               "genesis__Applications__c": {
+                    "solcommon__Portal_Stage__c": "AdditionalOwners",
+                    "id": "$global.attr(applicationId);"
+               },
+               "ownership": "$this.attr(clcommon__Percent_Ownership__c);"
+          },
+          "validation": [
+               "OwnershipInformationDetails"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(OwnerInformationSteps).appearance(current);",
+                         "value": "next"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "External_Id__c": "ActorS0391"
+     },
+     "clcommon__Component_Structure_Name__c": "los_ownership_informations_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalOwnershipInfo",
+     "clcommon__Unique_Action_Name__c": "OwnershipInformationDetails+businessOwnedNext",
+     "clcommon__Validation_Class__c": null,
+     "External_Id__c": "OwnershipInformationDetailsSbusinessOwnedNext",
+     "clcommon__Release_Checksum__c": "d3686006928a069741635e96c3f06f035075a2fc63f49ee8c29d2e140c45a54d"
+}

@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "prefillOwnership",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "prefillOwnership",
+          "property": {},
+          "appearance": {
+               "style": "secondary",
+               "position": "bottom-left",
+               "render": false
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$this.attr(isGuarantor);",
+                         "value": "$global.attr(guarantor);"
+                    },
+                    {
+                         "field": "$this.attr(clcommon__Percent_Ownership__c);",
+                         "value": "$global.attr(ownership);"
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "External_Id__c": "ActorS0391"
+     },
+     "clcommon__Component_Structure_Name__c": "los_ownership_informations_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "OwnershipInformationDetails+prefillOwnership",
+     "clcommon__Validation_Class__c": null,
+     "External_Id__c": "OwnershipInformationDetailsSprefillOwnership",
+     "clcommon__Release_Checksum__c": "10c7d4b879866772e857d3d2a675bcc55e055e75b331309b43c612e5634927df"
+}

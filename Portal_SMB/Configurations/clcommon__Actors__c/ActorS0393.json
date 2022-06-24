@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "External_Id__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "grid": {
+                    "field": {
+                         "clcommon__Contact__r.MailingPostalCode": {
+                              "sm": 6
+                         },
+                         "clcommon__Contact__r.MailingState": {
+                              "sm": 6
+                         },
+                         "clcommon__Contact__r.LastName": {
+                              "sm": 6
+                         },
+                         "clcommon__Contact__r.FirstName": {
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true,
+               "renderFields": {
+                    "Id": false,
+                    "clcommon__Type__r.Name": false
+               },
+               "fieldAlignment": {
+                    "clcommon__Percent_Ownership__c": "right"
+               },
+               "title": "Owner Information"
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);",
+                    "partyId": "$global.attr(selectedParty);"
+               },
+               "structureName": "los_add_new_owner_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "AddOwnerDetails",
+     "External_Id__c": "ActorS0393",
+     "clcommon__Release_Checksum__c": "c4a29883c884a850cb424f88f747a49c66124dfe5a70abd3833b0bb563ded9f5"
+}

@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "otherCollateralNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "otherCollateralNext",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Next"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(ApplicationSteps).appearance(current);",
+                         "value": "next"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "External_Id__c": "ActorS0401"
+     },
+     "clcommon__Component_Structure_Name__c": "get_collateral_list",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "ListOfCollaterals+otherCollateralNext",
+     "clcommon__Validation_Class__c": null,
+     "External_Id__c": "ListOfCollateralsSotherCollateralNext",
+     "clcommon__Release_Checksum__c": "d46ef65bea702269d647a87fad4c744d904f8c3e709fc3140aa68712f36c0d6c"
+}

@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "otherOwnersBack",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "otherOwnersBack",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Back",
+               "render": false
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(OwnerInformationSteps).appearance(current);",
+                         "value": "previous"
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "External_Id__c": "ActorS0392"
+     },
+     "clcommon__Component_Structure_Name__c": "los_additional_owners_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "AdditionalOwnerDetails+otherOwnersBack",
+     "clcommon__Validation_Class__c": null,
+     "External_Id__c": "AdditionalOwnerDetailsSotherOwnersBack",
+     "clcommon__Release_Checksum__c": "6edc960765f4a0d7a7511b9f3df81a96341aa67d18ba0a72b5216264f3283d79"
+}

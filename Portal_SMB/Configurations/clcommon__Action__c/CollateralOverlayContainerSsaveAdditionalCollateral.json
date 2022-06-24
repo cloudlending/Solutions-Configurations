@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveAdditionalCollateral",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "saveAdditionalCollateral",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Save"
+          },
+          "remoteActionArguments": {
+               "collateral": "$state(CollateralOverlayContainer)[0];",
+               "genesis__Applications__c": {
+                    "solcommon__Portal_Stage__c": "ReviewAndSubmit",
+                    "id": "$global.attr(applicationId);"
+               }
+          },
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "CollateralOverlayContainer"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "ListOfCollaterals"
+                    },
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "CollateralOverlayContainer"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "External_Id__c": "ActorS0402"
+     },
+     "clcommon__Component_Structure_Name__c": "add_collateral_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveCollateral",
+     "clcommon__Unique_Action_Name__c": "CollateralOverlayContainer+saveAdditionalCollateral",
+     "clcommon__Validation_Class__c": null,
+     "External_Id__c": "CollateralOverlayContainerSsaveAdditionalCollateral",
+     "clcommon__Release_Checksum__c": "a99d8e2d7edbd6fee3b7dbb6d71f87114622a680eaa6284f6c9e322534c296b6"
+}

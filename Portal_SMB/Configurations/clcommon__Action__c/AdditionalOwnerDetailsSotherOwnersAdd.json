@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "otherOwnersAdd",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "otherOwnersAdd",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "Add Owner"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "AddOwnerContainer"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "BusinessOwnerDetail"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "AddOwnerDetails"
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "External_Id__c": "ActorS0392"
+     },
+     "clcommon__Component_Structure_Name__c": "los_additional_owners_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "AdditionalOwnerDetails+otherOwnersAdd",
+     "clcommon__Validation_Class__c": null,
+     "External_Id__c": "AdditionalOwnerDetailsSotherOwnersAdd",
+     "clcommon__Release_Checksum__c": "8f7a5de499ae33f5a6db9bf5869a02c4289ee56a5bb4f957f96c0a77e41caf80"
+}

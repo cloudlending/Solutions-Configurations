@@ -1,0 +1,33 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "External_Id__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "columns": 1,
+               "blankMessage": "No Records to display",
+               "title": "Owners",
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "review_owner_information"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "OwnerSummary",
+     "External_Id__c": "ActorS0395",
+     "clcommon__Release_Checksum__c": "214173aa73fb05cd69f49fa5638d522f3c3eceba18c64f3887ff7f20adcfa12f"
+}

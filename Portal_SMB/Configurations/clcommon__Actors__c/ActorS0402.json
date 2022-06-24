@@ -1,0 +1,69 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "External_Id__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderFields": {
+                    "clcommon__Insurance_Company__r.BillingStreet": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Life Insurance\"",
+                    "clcommon__Airport__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Aircraft\" ",
+                    "clcommon__Manufacturer__c": false,
+                    "clcommon__Account_Number__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Savings/CD's\" ",
+                    "clcommon__Insurance_Company__r.BillingState": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Life Insurance\"",
+                    "clcommon__Policy_Number__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Life Insurance\"",
+                    "clcommon__Description__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"All Business Assets\" or $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Equipment\" or $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Securities\"",
+                    "clcommon__Estimated_Value__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Aircraft\" or $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Receivables\" or $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"All Business Assets\" or $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Ship\"  or $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Equipment\" or or $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Recreational Vehicle\"",
+                    "clcommon__Insurance_Company__r.Name": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Life Insurance\"",
+                    "clcommon__Purchase_Money__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Ship\" or $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Equipment\" or $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Recreational Vehicle\"",
+                    "clcommon__Local_Jurisdiction_Type__c": false,
+                    "clcommon__Stock_Type__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Securities\"",
+                    "clcommon__Insurance_Company__r.BillingCity": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Life Insurance\"",
+                    "clcommon__Insurance_Amount__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Life Insurance\"",
+                    "clcommon__Vehicle_Type__c": "or $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Recreational Vehicle\"",
+                    "clcommon__Port_Name__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Ship\" ",
+                    "clcommon__Vehicle_Identification_Number__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Aircraft\" or $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Ship\"  or or $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Recreational Vehicle\"",
+                    "clcommon__Property_Unit_Number__c": false,
+                    "clcommon__Collateral_Type__r.Id": false,
+                    "clcommon__Insurance_Company__r.BillingPostalCode": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Life Insurance\"",
+                    "clcommon__Model__c": false,
+                    "clcommon__Issued_By__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Securities\"",
+                    "clcommon__Collateral_Local_Jurisdiction__c": false,
+                    "clcommon__Number_of_Shares__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Securities\"",
+                    "clcommon__Possessory_Current_Balance__c": "$this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Savings/CD's\" "
+               },
+               "title": "Collateral Details",
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "collateralId": "$global.attr(selectedCollateral);",
+                    "appId": "$global.attr(applicationId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "add_collateral_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "CollateralOverlayContainer",
+     "External_Id__c": "ActorS0402",
+     "clcommon__Release_Checksum__c": "5344767a5f11b5f912a25ed8586353541c312c9098aaa184943a12de77917a4e"
+}

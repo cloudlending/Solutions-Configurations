@@ -1,0 +1,66 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessBasicsNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessBasicsNext",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "account": {
+                    "name": "$this.attr(clcommon__Account__r.Name);",
+                    "BillingStreet": "$this.attr(clcommon__Account__r.BillingStreet);",
+                    "BillingCity": "$this.attr(clcommon__Account__r.BillingCity);",
+                    "BillingState": "$this.attr(clcommon__Account__r.BillingState);",
+                    "BillingPostalCode": "$this.attr(clcommon__Account__r.BillingPostalCode);",
+                    "Phone": "$this.attr(clcommon__Account__r.Phone);",
+                    "id": "$this.attr(clcommon__Account__r.Id);"
+               },
+               "genesis__Business_Information__c": {
+                    "genesis__DBA_Name__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);",
+                    "genesis__Tax_Identification_Number__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
+                    "genesis__Date_Business_Established__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Date_Business_Established__c);",
+                    "id": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.Id);"
+               },
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);",
+                    "solcommon__Portal_Stage__c": "BusinessAnnualRevenue"
+               }
+          },
+          "validation": [
+               "BusinessBasicDetail"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(BusinessInformationSteps).appearance(current);",
+                         "value": "next"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "External_Id__c": "ActorS0387"
+     },
+     "clcommon__Component_Structure_Name__c": "los_basic_business_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveBusinessInfo",
+     "clcommon__Unique_Action_Name__c": "BusinessBasicDetail+businessBasicsNext",
+     "clcommon__Validation_Class__c": null,
+     "External_Id__c": "BusinessBasicDetailSbusinessBasicsNext",
+     "clcommon__Release_Checksum__c": "64d202bf5b7c41523a9ca2c520a61418fdc3f6843ca40e7f626e2eccce034552"
+}

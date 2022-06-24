@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessOwnedBack",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessOwnedBack",
+          "property": {},
+          "appearance": {
+               "label": "Back",
+               "style": "secondary",
+               "position": "bottom-left"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(ApplicationSteps).appearance(current);",
+                         "value": "previous"
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "External_Id__c": "ActorS0391"
+     },
+     "clcommon__Component_Structure_Name__c": "los_ownership_informations_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "OwnershipInformationDetails+businessOwnedBack",
+     "clcommon__Validation_Class__c": null,
+     "External_Id__c": "OwnershipInformationDetailsSbusinessOwnedBack",
+     "clcommon__Release_Checksum__c": "4ba16f63831c5b91704695a34accede85690312f018c64a3aeb74b4eaa5b8eae"
+}

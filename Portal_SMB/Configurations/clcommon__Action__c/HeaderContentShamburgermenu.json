@@ -1,0 +1,39 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "hamburgermenu",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "hamburgermenu",
+          "property": {},
+          "appearance": {
+               "label": "$global.attr(userInfo).attr(firstName); $global.attr(userInfo).attr(lastName); <i class=\"fa fa-angle-down\" style=\"font-size:20px;\" aria-hidden=\"true\"></i>",
+               "style": "tertiary",
+               "render": "$global.attr(userInfo).attr(userType); != \"Guest\" and false",
+               "position": "top-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "hamburger_menu"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "context",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "External_Id__c": "ActorS0376"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "HeaderContent+hamburgermenu",
+     "clcommon__Validation_Class__c": null,
+     "External_Id__c": "HeaderContentShamburgermenu",
+     "clcommon__Release_Checksum__c": "790509d2dcfe467c5fff7e5cf46d65967fdc8a8f2a285e2d20ec88f89fc43948"
+}

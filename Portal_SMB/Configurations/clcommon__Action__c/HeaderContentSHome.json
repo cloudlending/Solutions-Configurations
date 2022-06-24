@@ -1,0 +1,37 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "Home",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "Home",
+          "property": {},
+          "appearance": {
+               "label": "Home",
+               "render": "$global.attr(userInfo).attr(userType); != \"Guest\" and  false",
+               "style": "tertiary",
+               "position": "top-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "home"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "External_Id__c": "ActorS0376"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "HeaderContent+Home",
+     "clcommon__Validation_Class__c": null,
+     "External_Id__c": "HeaderContentSHome",
+     "clcommon__Release_Checksum__c": "0366b762392d5a458f911270025248852c0ed63a3605a1f1d0bedc527462f6d3"
+}

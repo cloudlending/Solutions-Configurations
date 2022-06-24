@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "External_Id__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "noLabelFields": [
+                    "existingCustomer"
+               ],
+               "grid": {
+                    "field": {
+                         "existingCustomer": {
+                              "selectButton": {
+                                   "xs": 12,
+                                   "sm": 6
+                              }
+                         }
+                    }
+               },
+               "title": "Are you an existing customer of Thrive Bank?",
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "structureName": "los_existing_customer"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "ExistingCustomer",
+     "External_Id__c": "ActorS0378",
+     "clcommon__Release_Checksum__c": "579a2f177c259432154667f927bb9b0d020db41d1ed6ef1050dc13de366f304b"
+}
