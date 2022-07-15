@@ -3,12 +3,13 @@
           "type": "clcommon__Rule__c"
      },
      "Name": "Rule for KYB Policy",
+     "clcommon__Document_Definition__r": null,
      "clcommon__Enabled__c": true,
      "clcommon__External_ID__c": "Rule_for_KYB_Policy",
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "d5882d60c2252e92ea02b8dfe139ab9aa1e7918e6cb5804b88aac6684ba17898",
+     "clcommon__Release_Checksum__c": "7313c58c26222e23cea121b2e899b8676420e984e680f969d694c2577d54c4d7",
      "clcommon__Rule_Json__c": {
           "abortQueueExecutionOnFailure": null,
           "category": "PolicyConditionGenerationConfig",
@@ -91,5 +92,11 @@
           "successMessage": "Rule Evaluation Passed for rule : Rule for KYB Policy",
           "validationClassName": null
      },
-     "clcommon__Rule_Priority__c": 1
+     "clcommon__Rule_Priority__c": 1,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Policy_Condition_Generation_Config"
+     }
 }

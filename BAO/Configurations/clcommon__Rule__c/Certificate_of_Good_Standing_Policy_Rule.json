@@ -3,12 +3,13 @@
           "type": "clcommon__Rule__c"
      },
      "Name": "Certificate of Good Standing Policy Rule",
+     "clcommon__Document_Definition__r": null,
      "clcommon__Enabled__c": true,
      "clcommon__External_ID__c": "Certificate_of_Good_Standing_Policy_Rule",
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "0c1b87d52f272442b2e1d0bcd005a9b78f1e3aed25c1a2317f73be8a6f0c3f1b",
+     "clcommon__Release_Checksum__c": "11e2e7e06efb221094a61d7e29f39c8edd4e9290807f81060821579757ebbfa6",
      "clcommon__Rule_Json__c": {
           "abortQueueExecutionOnFailure": null,
           "category": "PolicyConditionGenerationConfig",
@@ -136,5 +137,11 @@
           "successMessage": "Rule Evaluation Passed for rule : Certificate of Good Standing Policy Rule",
           "validationClassName": null
      },
-     "clcommon__Rule_Priority__c": 1
+     "clcommon__Rule_Priority__c": 1,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Policy_Condition_Generation_Config"
+     }
 }
