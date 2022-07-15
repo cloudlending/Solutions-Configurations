@@ -3,12 +3,13 @@
           "type": "clcommon__Rule__c"
      },
      "Name": "proof of address policy rule",
+     "clcommon__Document_Definition__r": null,
      "clcommon__Enabled__c": true,
      "clcommon__External_ID__c": "proof_of_address_policy_rule",
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "7c169f5987aca62cb6fec1ba1358766350b9388fb32e6ff124a79d539b1cf57e",
+     "clcommon__Release_Checksum__c": "9a3f52a1bf6bda08ee9664761e83f555e77a039ea4c5379ed912d70f70fb2365",
      "clcommon__Rule_Json__c": {
           "abortQueueExecutionOnFailure": null,
           "category": "PolicyConditionGenerationConfig",
@@ -136,5 +137,11 @@
           "successMessage": "Rule Evaluation Passed for rule : proof of address policy rule",
           "validationClassName": null
      },
-     "clcommon__Rule_Priority__c": 1
+     "clcommon__Rule_Priority__c": 1,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Policy_Condition_Generation_Config"
+     }
 }

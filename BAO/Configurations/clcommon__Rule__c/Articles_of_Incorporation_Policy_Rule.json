@@ -3,12 +3,13 @@
           "type": "clcommon__Rule__c"
      },
      "Name": "Articles of Incorporation Policy Rule",
+     "clcommon__Document_Definition__r": null,
      "clcommon__Enabled__c": true,
      "clcommon__External_ID__c": "Articles_of_Incorporation_Policy_Rule",
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "1a0d3437074614c00a0623aafb3a8823376e912f3cd0dfce9d49ab5a63a2add5",
+     "clcommon__Release_Checksum__c": "db5a85c63cfb05762573797490b7a04b52c72ee02929bf2cdacf7f34a884f8ab",
      "clcommon__Rule_Json__c": {
           "abortQueueExecutionOnFailure": null,
           "category": "PolicyConditionGenerationConfig",
@@ -136,5 +137,11 @@
           "successMessage": "Rule Evaluation Passed for rule : Articles of Incorporation Policy Rule",
           "validationClassName": null
      },
-     "clcommon__Rule_Priority__c": 1
+     "clcommon__Rule_Priority__c": 1,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Policy_Condition_Generation_Config"
+     }
 }

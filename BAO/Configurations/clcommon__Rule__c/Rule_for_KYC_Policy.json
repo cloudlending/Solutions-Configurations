@@ -3,12 +3,13 @@
           "type": "clcommon__Rule__c"
      },
      "Name": "Rule for KYC Policy",
+     "clcommon__Document_Definition__r": null,
      "clcommon__Enabled__c": true,
      "clcommon__External_ID__c": "Rule_for_KYC_Policy",
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "98269c1d37fb35da3592bd33b8b1044e1a0fa9dd94ca6880063bda4425905801",
+     "clcommon__Release_Checksum__c": "6a4dd309bd61ba94d48e2a469f49d709ceefe33795937823913c42e162b9ed85",
      "clcommon__Rule_Json__c": {
           "abortQueueExecutionOnFailure": null,
           "category": "PolicyConditionGenerationConfig",
@@ -91,5 +92,11 @@
           "successMessage": "Rule Evaluation Passed for rule : Rule for KYC Policy",
           "validationClassName": null
      },
-     "clcommon__Rule_Priority__c": 1
+     "clcommon__Rule_Priority__c": 1,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Policy_Condition_Generation_Config"
+     }
 }

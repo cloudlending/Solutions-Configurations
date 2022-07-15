@@ -14,11 +14,35 @@
      "intframework__Generate_File__c": false,
      "intframework__HTTP_Content_Type__c": "application/json",
      "intframework__HTTP_Method__c": "POST",
+     "intframework__Integration_API_Type__r": {
+          "attributes": {
+               "type": "intframework__Integration_API_Type__c"
+          },
+          "intframework__External_Id__c": "Create_Customer_Request"
+     },
+     "intframework__Integration_Configuration__r": {
+          "attributes": {
+               "type": "intframework__Integration_Configuration__c"
+          },
+          "intframework__External_Id__c": "Coresmen_Config"
+     },
+     "intframework__Integration_Family__r": {
+          "attributes": {
+               "type": "intframework__Integration_Family__c"
+          },
+          "intframework__External_Id__c": "Coresmen"
+     },
+     "intframework__Integration_Provider__r": {
+          "attributes": {
+               "type": "intframework__Integration_Provider__c"
+          },
+          "intframework__External_Id__c": "Q2"
+     },
      "intframework__Log_Filter__c": null,
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 1,
-     "intframework__Release_Checksum__c": "8532fdb8a629c22c01c60cb932c7795aca97664201ba8ae6664f521b5e1e5e8f",
+     "intframework__Release_Checksum__c": "b8f4a7c6422a644795b51eafd32a8dada174179e126da285456c32e28c937179",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "filters": [
@@ -99,7 +123,7 @@
                          "objectAPI": "Account"
                     },
                     {
-                         "whereClause": "clcommon__Current_Address__c != TRUE AND ( clcommon__Contact__r.AccountId = :accountId OR clcommon__Account__c = :accountId )",
+                         "whereClause": "clcommon__Current_Address__c != TRUE AND ( clcommon__Contact__r.AccountId = :accountId OR clcommon__Account__c = :accountId ) AND (clcommon__city__c != null) ",
                          "fields": [
                               {
                                    "fieldAPI": "clcommon__Primary_Address__c",
@@ -126,7 +150,7 @@
                                    "externalField": "isPreviousAddress"
                               },
                               {
-                                   "fieldAPI": "clcommon__Country__c",
+                                   "fieldAPI": "clcommon__Country_Code__c",
                                    "externalField": "countryCode"
                               },
                               {
@@ -138,7 +162,7 @@
                                    "externalField": "city"
                               },
                               {
-                                   "fieldAPI": "clcommon__State_Province__c",
+                                   "fieldAPI": "clcommon__State_Province_Code__c",
                                    "externalField": "stateProvince"
                               },
                               {
@@ -280,6 +304,36 @@
                {
                     "objectMappings": [
                          {
+                              "whereClause": "clcommon__Personal_Information__c = :personalInfoId",
+                              "fields": [
+                                   {
+                                        "fieldAPI": "clcommon__CIF__c",
+                                        "externalField": "data.applicationMessage.applicationList.application[0].applicantList.applicant[0].partyId"
+                                   }
+                              ],
+                              "objectAPI": "Contact"
+                         }
+                    ],
+                    "dmlOperation": "Update"
+               },
+               {
+                    "objectMappings": [
+                         {
+                              "whereClause": "genesis__Business_Information__c = :businessInfoId",
+                              "fields": [
+                                   {
+                                        "fieldAPI": "clcommon__CIF__c",
+                                        "externalField": "data.applicationMessage.applicationList.application[0].applicantList.applicant[0].partyId"
+                                   }
+                              ],
+                              "objectAPI": "Account"
+                         }
+                    ],
+                    "dmlOperation": "Update"
+               },
+               {
+                    "objectMappings": [
+                         {
                               "whereClause": "Id = :businessInfoId",
                               "fields": [
                                    {
@@ -295,24 +349,10 @@
                          }
                     ],
                     "dmlOperation": "Update"
-               },
-               {
-                    "objectMappings": [
-                         {
-                              "whereClause": "Id = :accountId AND genesis__Business_Information__c = :businessInfoId",
-                              "fields": [
-                                   {
-                                        "fieldAPI": "clcommon__CIF__c",
-                                        "externalField": "data.applicationMessage.applicationList.application[0].applicantList.applicant[0].partyId"
-                                   }
-                              ],
-                              "objectAPI": "Account"
-                         }
-                    ],
-                    "dmlOperation": "Update"
                }
           ],
           "StorageConfiguration": {
+               "stopExecutionOnUpdateFailureIfAny": "ALL",
                "PublishAsJSON": "True",
                "StoreInDB": "True"
           }

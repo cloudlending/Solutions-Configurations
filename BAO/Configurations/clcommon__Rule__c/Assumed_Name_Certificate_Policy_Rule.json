@@ -3,12 +3,13 @@
           "type": "clcommon__Rule__c"
      },
      "Name": "Assumed Name Certificate Policy Rule",
+     "clcommon__Document_Definition__r": null,
      "clcommon__Enabled__c": true,
      "clcommon__External_ID__c": "Assumed_Name_Certificate_Policy_Rule",
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "784bc445e44b5db0b15b84c0c5ba0ebcaab28c4c2bc40b0e56479d585f020993",
+     "clcommon__Release_Checksum__c": "668f17bfa1617f2b8ff8e8e05d06bd3d96c65f0a9c5a389c0970af989cb426c7",
      "clcommon__Rule_Json__c": {
           "abortQueueExecutionOnFailure": null,
           "category": "PolicyConditionGenerationConfig",
@@ -121,5 +122,11 @@
           "successMessage": "Rule Evaluation Passed for rule : Assumed Name Certificate Policy Rule",
           "validationClassName": null
      },
-     "clcommon__Rule_Priority__c": 1
+     "clcommon__Rule_Priority__c": 1,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Policy_Condition_Generation_Config"
+     }
 }
