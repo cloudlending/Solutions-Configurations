@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": true,
+               "fieldColumns": 1,
+               "noLabelFields": [
+                    "clcommon__Account__r.clcommon__Legal_Entity_Type__c"
+               ],
+               "title": "Select your business's legal classification",
+               "renderFields": {
+                    "clcommon__Account__r.Id": false
+               },
+               "grid": {
+                    "field": {
+                         "clcommon__Account__r.clcommon__Legal_Entity_Type__c": {
+                              "selectButton": {
+                                   "xs": 12,
+                                   "sm": 6
+                              }
+                         }
+                    }
+               }
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "los_legal_entity_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "BusinessEntityDetails",
+     "clcommon__External_ID__c": "ActorS0385",
+     "clcommon__Release_Checksum__c": "4f5b5b88178f24057230eabe584027c943ada5ae1b80f7deee687fbe099d7e57"
+}

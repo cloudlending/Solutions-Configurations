@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{ $this.attr(clcommon__Account__r.Name); == \"Borrower Account\" ? \"\" : $this.attr(clcommon__Account__r.Name); };",
+                              "field": "$this.attr(clcommon__Account__r.Name);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderFields": {
+                    "clcommon__Account__r.genesis__Business_Information__r.Id": false,
+                    "clcommon__Account__r.Id": false
+               },
+               "editable": true,
+               "fieldColumns": 1,
+               "title": "Tell us about your business",
+               "grid": {
+                    "field": {
+                         "clcommon__Account__r.BillingState": {
+                              "sm": 6
+                         },
+                         "clcommon__Account__r.BillingPostalCode": {
+                              "sm": 6
+                         }
+                    }
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "los_basic_business_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "BusinessBasicDetail",
+     "clcommon__External_ID__c": "ActorS0387",
+     "clcommon__Release_Checksum__c": "35f2677c4665742b1b1f41db09aa99fd1e9feeeba178cd2a838c6c55493e512d"
+}

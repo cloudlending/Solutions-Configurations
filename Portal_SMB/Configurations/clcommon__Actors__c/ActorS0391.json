@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": true,
+               "renderFields": {
+                    "Id": false
+               },
+               "grid": {
+                    "field": {
+                         "isGuarantor": {
+                              "selectButton": {
+                                   "xs": 12,
+                                   "sm": 6
+                              }
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "title": "What percentage of your business do you own?",
+               "textBefore": "What is your percentage ownership (direct or indirect)?",
+               "fieldAlignment": {
+                    "clcommon__Percent_Ownership__c": "right"
+               }
+          },
+          "property": {
+               "structureName": "los_ownership_informations_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "OwnershipInformationDetails",
+     "clcommon__External_ID__c": "ActorS0391",
+     "clcommon__Release_Checksum__c": "0c4448a6e03ae65b5b78f0f8eec24dee7eca1bf912b2328b483f3e76dd71b1e7"
+}

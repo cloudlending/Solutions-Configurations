@@ -1,0 +1,41 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "cancelAdditionalCollateral",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "cancelAdditionalCollateral",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Cancel"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "CollateralOverlayContainer"
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "ActorS0402"
+     },
+     "clcommon__Component_Structure_Name__c": "add_collateral_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "CollateralOverlayContainer+cancelAdditionalCollateral",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "CollateralOverlayContainerScancelAdditionalCollateral",
+     "clcommon__Release_Checksum__c": "ede0812fdb1231cf3e430ffabba33c52205b1bea862eeaeaf160ca59ed497205"
+}

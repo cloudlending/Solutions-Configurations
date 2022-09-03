@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessAnnualRevenueNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessAnnualRevenueNext",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);",
+                    "solcommon__Portal_Stage__c": "BusinessFinancials"
+               },
+               "account": {
+                    "AnnualRevenue": "$this.attr(clcommon__Account__r.AnnualRevenue);",
+                    "id": "$this.attr(clcommon__Account__r.Id);"
+               }
+          },
+          "validation": [
+               "BusinessAnnualRevenueDetail"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(BusinessInformationSteps).appearance(current);",
+                         "value": "next"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "ActorS0389"
+     },
+     "clcommon__Component_Structure_Name__c": "los_business_revenue_detail",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveBusinessInfo",
+     "clcommon__Unique_Action_Name__c": "BusinessAnnualRevenueDetail+businessAnnualRevenueNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "BusinessAnnualRevenueDetailSbusinessAnnualRevenueNext",
+     "clcommon__Release_Checksum__c": "5b7cfccb41dabd6964b73e7e511117301d22c57d5252ffa93caaa3c68de629a6"
+}

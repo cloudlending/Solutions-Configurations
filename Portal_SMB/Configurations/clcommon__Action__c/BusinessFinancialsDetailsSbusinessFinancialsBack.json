@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessFinancialsBack",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessFinancialsBack",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Back"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(BusinessInformationSteps).appearance(current);",
+                         "value": "previous"
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "ActorS0388"
+     },
+     "clcommon__Component_Structure_Name__c": "los_business_financial_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "BusinessFinancialsDetails+businessFinancialsBack",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "BusinessFinancialsDetailsSbusinessFinancialsBack",
+     "clcommon__Release_Checksum__c": "661313b23f07c172a0f417a20339eec0c2d5556e06ea223586d3e0e930cabcb4"
+}

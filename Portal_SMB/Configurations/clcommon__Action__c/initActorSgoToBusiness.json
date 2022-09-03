@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToBusiness",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "goToBusiness",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "position": "bottom-left"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(ApplicationSteps).appearance(current);",
+                         "value": 1
+                    },
+                    {
+                         "field": "$nav(BusinessInformationSteps).appearance(current);",
+                         "value": "$global.attr(portalStage);"
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "ActorS0400"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "initActor+goToBusiness",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "initActorSgoToBusiness",
+     "clcommon__Release_Checksum__c": "b3cdf8a62bd6dbcbac4fa56298f3b4064442f6a5c30099214a5e9423c206ae99"
+}

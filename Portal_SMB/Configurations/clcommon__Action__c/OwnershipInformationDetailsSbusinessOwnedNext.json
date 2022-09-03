@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessOwnedNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessOwnedNext",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "isGuarantor": "$this.attr(isGuarantor);",
+               "genesis__Applications__c": {
+                    "solcommon__Portal_Stage__c": "AdditionalOwners",
+                    "id": "$global.attr(applicationId);"
+               },
+               "ownership": "$this.attr(clcommon__Percent_Ownership__c);"
+          },
+          "validation": [
+               "OwnershipInformationDetails"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(OwnerInformationSteps).appearance(current);",
+                         "value": "next"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "ActorS0391"
+     },
+     "clcommon__Component_Structure_Name__c": "los_ownership_informations_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalOwnershipInfo",
+     "clcommon__Unique_Action_Name__c": "OwnershipInformationDetails+businessOwnedNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "OwnershipInformationDetailsSbusinessOwnedNext",
+     "clcommon__Release_Checksum__c": "eccce1b09ca1ee4a57a2b936bba8ca1461ffe697573d7615de5d5b6f9152cfa2"
+}

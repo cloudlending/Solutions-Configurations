@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": true,
+               "fieldColumns": 1,
+               "grid": {
+                    "field": {
+                         "genesis__CL_Purpose__c": {
+                              "selectButton": {
+                                   "xs": 12,
+                                   "sm": 6
+                              }
+                         }
+                    }
+               },
+               "title": "What is the purpose of this loan?",
+               "noLabelFields": [
+                    "genesis__CL_Purpose__c"
+               ]
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "los_loan_purpose_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "LoanPurposeDetails",
+     "clcommon__External_ID__c": "ActorS0384",
+     "clcommon__Release_Checksum__c": "1314f3528676af8a0ef43ca987a165ede66d8d40cfbeb2b0fac51d9e6e4f0c32"
+}

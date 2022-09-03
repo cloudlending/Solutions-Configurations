@@ -1,0 +1,69 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderFields": {
+                    "id": false
+               },
+               "editableFields": {
+                    "Email": false,
+                    "LastName": false,
+                    "FirstName": false
+               },
+               "grid": {
+                    "field": {
+                         "Birthdate": {
+                              "sm": 6
+                         },
+                         "genesis__SSN__c": {
+                              "sm": 6
+                         },
+                         "MobilePhone": {
+                              "sm": 6
+                         },
+                         "MailingPostalCode": {
+                              "sm": 6
+                         },
+                         "MailingState": {
+                              "sm": 6
+                         },
+                         "MailingCity": {
+                              "sm": 6
+                         },
+                         "LastName": {
+                              "sm": 6
+                         },
+                         "FirstName": {
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true,
+               "title": "Tell us about Yourself"
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(userInfo).attr(accountId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "los_personal_information_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "PersonalInformation",
+     "clcommon__External_ID__c": "ActorS0382",
+     "clcommon__Release_Checksum__c": "1c75883792c6a1b7477bd49400456f47474513e06f0e88565f9fed3d7ac5c1ce"
+}

@@ -1,0 +1,76 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "init",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "init",
+          "property": {},
+          "appearance": {
+               "label": ""
+          },
+          "automatic": true,
+          "remoteActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(applicationId);",
+                         "value": "$result.attr(applicationId);"
+                    },
+                    {
+                         "field": "$global.attr(portalStage);",
+                         "value": "$result.attr(portalStage);"
+                    },
+                    {
+                         "field": "$global.attr(businessAccount);",
+                         "value": "$result.attr(businessAccount);"
+                    },
+                    {
+                         "field": "$global.attr(guarantor);",
+                         "value": "$result.attr(guarantor);"
+                    },
+                    {
+                         "field": "$global.attr(ownership);",
+                         "value": "$result.attr(ownership);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$result.attr(portalStage); == \"BusinessEntity\" or $result.attr(portalStage); == \"BusinessInformation\" or $result.attr(portalStage); == \"BusinessAnnualRevenue\" or $result.attr(portalStage); == \"BusinessFinancials\"",
+                         "name": "goToBusiness"
+                    },
+                    {
+                         "condition": "$result.attr(portalStage); == \"OwnerInformation\" or $result.attr(portalStage); == \"AdditionalOwners\"",
+                         "name": "goToOwner"
+                    },
+                    {
+                         "condition": "$result.attr(portalStage); == \"ReviewAndSubmit\" or $result.attr(portalStage); == \"ApplicationSubmitted\"",
+                         "name": "goToReview"
+                    },
+                    {
+                         "condition": "$result.attr(portalStage); == \"CollateralDetails\"",
+                         "name": "goToCollateral"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "ActorS0400"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalGetCurrentStage",
+     "clcommon__Unique_Action_Name__c": "initActor+init",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "initActorSinit",
+     "clcommon__Release_Checksum__c": "c903c5f3fd29bff8dd9ffc1a0674f1f028813862c02c354526a7ccbc28008a60"
+}

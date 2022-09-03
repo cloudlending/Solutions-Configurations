@@ -1,0 +1,83 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_business_financial_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "los_business_financial_details",
+     "clcommon__data__c": {
+          "structureName": "los_business_financial_details",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId'  and clcommon__type__r.Name = 'BORROWER'"
+          },
+          "sections": [
+               {
+                    "id": "",
+                    "fields": [
+                         {
+                              "id": "1f776fsadfasdase-9488-47ce-b774-4d6992ef9fa2",
+                              "fieldName": "id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Id",
+                                   "ariaLabel": "Id"
+                              }
+                         },
+                         {
+                              "id": "eea74f9asdasd-7278-42ea-8d88-b7fb129c8b5f",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Business Information ID",
+                                   "ariaLabel": "Business Information ID"
+                              }
+                         },
+                         {
+                              "id": "3719",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Total Sales",
+                                   "defaultValue": 0,
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0,
+                                             "initValue": "0"
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Total Sales"
+                              }
+                         },
+                         {
+                              "id": "3721",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Total Debt",
+                                   "defaultValue": 0,
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0,
+                                             "initValue": "0"
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Total Debt"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_business_financial_details",
+     "clcommon__Release_Checksum__c": "78679a2c6d2953414b6e16f3e2b7974d72101f9bc0ed3e16bab34ab5970338e1"
+}

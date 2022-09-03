@@ -1,0 +1,38 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "Login",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "Login",
+          "property": {},
+          "appearance": {
+               "label": "Login",
+               "render": "$global.attr(userInfo).attr(userType); == \"Guest\"",
+               "style": "tertiary",
+               "position": "top-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "redirect": "/s/"
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "ActorS0376"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "HeaderContent+Login",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "HeaderContentSLogin",
+     "clcommon__Release_Checksum__c": "a281db27f683139fcbf55d2966f5fe5b8ab0c7efa7188759a098d5f4d793f9c9"
+}

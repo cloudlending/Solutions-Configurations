@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "textBefore": "Add Property that you can pledge as collateral to secure this loan. To expedite the loan application, please add collateral whose value equals 120% the amount of the loan.",
+               "title": "Collateral",
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 6
+                    }
+               },
+               "templates": {
+                    "record": "<div style=\"margin: 20px; font-size: 16px; font-family: Roboto; line-height: 2.4;\"><div>$this.attr(clcommon__Collateral_Type__r.Name); </div><div>$this.attr(clcommon__Address__c);</div><div>$this.attr(clcommon__City__c);, $this.attr(clcommon__State__c); $this.attr(clcommon__Postal_Code__c);</div><div>Estimated Value: $this.attr(clcommon__Estimated_Value__c, currency);</div></div>"
+               },
+               "columns": 1,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "get_collateral_list"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "ListOfCollaterals",
+     "clcommon__External_ID__c": "ActorS0401",
+     "clcommon__Release_Checksum__c": "09be6e1f0262f0a929991376ce35623d2e28919b43dbba7c6f89abcc9d06cf79"
+}

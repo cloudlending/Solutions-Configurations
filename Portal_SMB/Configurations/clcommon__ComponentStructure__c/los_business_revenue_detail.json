@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_business_revenue_detail",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_business_revenue_detail",
+     "clcommon__data__c": {
+          "structureName": "los_business_revenue_detail",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId' and clcommon__type__r.Name = 'BORROWER'"
+          },
+          "sections": [
+               {
+                    "id": "1e8d9810-867e-445c-9a9b-742bb40911b6",
+                    "fields": [
+                         {
+                              "id": "2854b32c-429d-45e9-a6b6-41fc2f6d2628",
+                              "fieldName": "clcommon__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account ID",
+                                   "ariaLabel": "Account ID"
+                              }
+                         },
+                         {
+                              "id": "5221da3c-c70a-462b-a61d-a3157128444d",
+                              "fieldName": "clcommon__Account__r.AnnualRevenue",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "",
+                                   "defaultValue": 0,
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Annual Revenue is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0,
+                                             "initValue": "0"
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Annual Revenue"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_business_revenue_detail",
+     "clcommon__Release_Checksum__c": "1e43110bfc2e4999be6eab77b9baa161aeb54f37f8f7bb945efb87838537f8fc"
+}

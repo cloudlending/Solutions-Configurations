@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveAdditionalCollateral",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "saveAdditionalCollateral",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Save"
+          },
+          "remoteActionArguments": {
+               "collateral": "$state(CollateralOverlayContainer)[0];",
+               "genesis__Applications__c": {
+                    "solcommon__Portal_Stage__c": "ReviewAndSubmit",
+                    "id": "$global.attr(applicationId);"
+               }
+          },
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "CollateralOverlayContainer"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "ListOfCollaterals"
+                    },
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "CollateralOverlayContainer"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "ActorS0402"
+     },
+     "clcommon__Component_Structure_Name__c": "add_collateral_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveCollateral",
+     "clcommon__Unique_Action_Name__c": "CollateralOverlayContainer+saveAdditionalCollateral",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "CollateralOverlayContainerSsaveAdditionalCollateral",
+     "clcommon__Release_Checksum__c": "097ef97ad8a85be46f8d089eb7857d513231feb5b7e10e25311a9aa5536f75bc"
+}

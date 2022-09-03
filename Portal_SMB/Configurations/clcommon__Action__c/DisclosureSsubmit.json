@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "submit",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "submit",
+          "property": {},
+          "appearance": {
+               "label": "Submit",
+               "style": "primary"
+          },
+          "remoteActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(ReviewSteps).appearance(current);",
+                         "value": "next"
+                    }
+               ]
+          },
+          "disclosureNames": [
+               "los_loan_disclosure"
+          ],
+          "disclosureEnable": "$disclosure(los_loan_disclosure);"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "ActorS0397"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "Disclosure+submit",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "DisclosureSsubmit",
+     "clcommon__Release_Checksum__c": "924bf9b2f1f0913aaf28fbfca9bd6cdc43ed36b14c53d2119aea9b6da5eef0ca"
+}
