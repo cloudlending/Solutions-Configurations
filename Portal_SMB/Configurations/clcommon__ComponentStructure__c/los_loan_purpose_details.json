@@ -9,59 +9,58 @@
      "clcommon__Record_Access_Filter__c": "1",
      "clcommon__Unique_Name__c": "los_loan_purpose_details",
      "clcommon__data__c": {
-          "structureName": "los_loan_purpose_details",
-          "tableName": "genesis__applications__c",
-          "whereClause": {
-               "freeForm": "id = ':appId'"
-          },
           "sections": [
                {
-                    "id": "5b25ccad-f477-414d-aba0-0c15ea02b475",
                     "fields": [
                          {
-                              "id": "b090d609-68e6-4f6e-8b1b-a87ed210215a",
-                              "relationType": "reference",
                               "fieldName": "genesis__CL_Purpose__c",
-                              "relationName": "genesis__CL_Purpose__r",
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "labels": "CL Purpose"
+                              },
+                              "id": "b090d609-68e6-4f6e-8b1b-a87ed210215a",
                               "relationJson": {
-                                   "tableName": "clcommon__CL_Purpose__c",
-                                   "whereClause": {
-                                        "freeForm": "id != null"
-                                   },
                                    "sections": [
                                         {
-                                             "id": "0ad3667c-f961-4b78-9023-135c72f7c2eb",
                                              "fields": [
                                                   {
-                                                       "id": "60b273cc-01af-4c6d-8bec-75371ff5848c",
                                                        "fieldName": "Id",
                                                        "fieldUi": {
                                                             "fieldType": "string",
                                                             "label": "Record ID"
-                                                       }
+                                                       },
+                                                       "id": "60b273cc-01af-4c6d-8bec-75371ff5848c"
                                                   },
                                                   {
-                                                       "id": "38d5f8a9-c613-48be-964f-edf983b8f2ee",
                                                        "fieldName": "Name",
                                                        "fieldUi": {
                                                             "fieldType": "string",
                                                             "label": "Name"
-                                                       }
+                                                       },
+                                                       "id": "38d5f8a9-c613-48be-964f-edf983b8f2ee"
                                                   }
-                                             ]
+                                             ],
+                                             "id": "0ad3667c-f961-4b78-9023-135c72f7c2eb"
                                         }
-                                   ]
+                                   ],
+                                   "tableName": "clcommon__CL_Purpose__c",
+                                   "whereClause": {
+                                        "freeForm": "id != null"
+                                   }
                               },
-                              "fieldUi": {
-                                   "fieldType": "selectbuttons",
-                                   "labels": "CL Purpose"
-                              }
+                              "relationName": "genesis__CL_Purpose__r",
+                              "relationType": "reference"
                          }
-                    ]
+                    ],
+                    "id": "5b25ccad-f477-414d-aba0-0c15ea02b475"
                }
-          ]
+          ],
+          "structureName": "los_loan_purpose_details",
+          "tableName": "genesis__applications__c",
+          "whereClause": {
+               "freeForm": "id = ':appId'"
+          }
      },
-     "External_Id__c": "los_loan_purpose_details",
      "clcommon__External_ID__c": "los_loan_purpose_details",
-     "clcommon__Release_Checksum__c": "4de214659ccc05e036983b64a463a77ce308899f3d7532f00fe29eccdee8b3cf"
+     "clcommon__Release_Checksum__c": "fe13b699d72c01f3d3a2fca3f1a1a35b41c675709b11ce72299a1177330a7987"
 }
