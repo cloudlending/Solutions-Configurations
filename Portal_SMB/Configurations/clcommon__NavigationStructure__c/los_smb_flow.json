@@ -11,346 +11,346 @@
      "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
      "clcommon__Unique_Name__c": "los_smb_flow",
      "clcommon__data__c": {
-          "messages": {
-               "submitFailureText": "Failed to submit",
-               "loadingFailureText": "Failed to load",
-               "saveFailureText": "Failed to save",
-               "submitAnimationText": "Sending...",
-               "submitSuccessText": "Succeed",
-               "savingAnimationText": "Saving...",
-               "uploadFailureText": "Failed to upload",
-               "loadingAnimationText": "Loading...",
-               "submitExpirationText": "Failed to submit",
-               "saveSuccessText": "Succeed",
-               "uploadFileTooLargeError": "File too large"
-          },
-          "global": {
-               "selectedParty": "",
-               "applicationId": ""
-          },
-          "settings": {
-               "treeIcons": {
-                    "end": "lens",
-                    "toCollapse": "expand_more",
-                    "toExpand": "chevron_right"
-               },
-               "pagination": {
-                    "lastLinkText": "last_page",
-                    "nextLinkText": "chevron_right",
-                    "previousLinkText": "chevron_left",
-                    "firstLinkText": "first_page",
-                    "numberOfPageLinks": 5,
-                    "numberOfRecordsPerPage": 10,
-                    "recordLineTemplate": "$start; - $end; of $total;"
-               },
-               "locale": "en-us",
-               "minimumFractionDigits": 2,
-               "collapsibleIcons": {
-                    "collapsed": "expand_less",
-                    "expanded": "expand_more"
-               },
-               "uploadText": {
-                    "removeError": "close",
-                    "cancelInProgress": "Cancel",
-                    "completed": "Completed"
-               },
-               "skeleton": {
-                    "detailView": {
-                         "small": {
-                              "padding": "28px 12px 20px 12px",
-                              "height": "101.625px"
+          "start": "Home",
+          "stages": {
+               "Home": {
+                    "prerequisite": [],
+                    "layout": {
+                         "layoutId": "baf9f878-46cf-4ce2-8cbe-ed576d7f8636",
+                         "name": "ClsAppLayoutOne",
+                         "final": true,
+                         "children": [
+                              {
+                                   "layoutId": "5445c431-9292-409d-9a1a-e205de1b65b1",
+                                   "name": "Header",
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "children": [
+                                        {
+                                             "layoutId": "60c98459-8a29-4a19-84c9-9eefa889147e",
+                                             "name": "HeaderContent"
+                                        }
+                                   ]
+                              },
+                              {
+                                   "layoutId": "bdb30b4d-5f35-44cd-962b-687e785ac2b3",
+                                   "name": "Main",
+                                   "final": true,
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "children": [
+                                        {
+                                             "layoutId": "a6d30ae4-d0aa-40a5-a4c4-226959d74d99",
+                                             "name": "Sidebar1",
+                                             "layoutPrefix": "ClsAppLayoutOne"
+                                        },
+                                        {
+                                             "layoutId": "10aac415-911f-4f12-bc90-2455715ed76c",
+                                             "name": "Content",
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "children": [
+                                                  {
+                                                       "layoutId": "4ab9af31-417f-4e0d-a996-879288698dca",
+                                                       "name": "ApplicationSteps",
+                                                       "children": [
+                                                            {
+                                                                 "layoutId": "f7b7c201-d1d2-4294-9991-a5e64ba846be",
+                                                                 "name": "GettingStarted",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "de4b8f6f-abce-4be2-9d1f-cdf8cdbb29ff",
+                                                                           "name": "GettingStartedContainer",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "4e38b0db-4571-46e2-82b4-7ac61ae31137",
+                                                                                     "name": "PersonalInformationContainer",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "layoutId": "23adb365-5c89-499a-b3d5-11017f830c65",
+                                                                                               "name": "PersonalInformation"
+                                                                                          },
+                                                                                          {
+                                                                                               "layoutId": "ac2ef7f3-6fa5-4b4c-a1fc-066b32c21218",
+                                                                                               "name": "initActor"
+                                                                                          }
+                                                                                     ]
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "4cc1f7e7-dadb-46c4-b8d1-22f0c90a530a",
+                                                                                     "name": "LoanAmountContainer",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "layoutId": "d0f8377d-7151-45e4-b3f4-968cb4455827",
+                                                                                               "name": "LoanAmountDetails"
+                                                                                          }
+                                                                                     ]
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "0f7c67b4-9b34-4da5-a977-d1186c1fd7e1",
+                                                                                     "name": "LoanPurposeContainer",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "layoutId": "ba3f0ba6-a25b-4492-9775-77143494d39f",
+                                                                                               "name": "LoanPurposeDetails"
+                                                                                          }
+                                                                                     ]
+                                                                                }
+                                                                           ]
+                                                                      }
+                                                                 ]
+                                                            },
+                                                            {
+                                                                 "layoutId": "7f02903a-cf52-4421-998a-fe3d4e2db0c6",
+                                                                 "name": "BusinessInformationContainer",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "797e5898-a17b-4873-9e07-fdc33d50ac58",
+                                                                           "name": "BusinessInformationSteps",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "0ae844f4-a27e-49de-8247-328aa8d48736",
+                                                                                     "name": "BusinessEntityContainer",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "layoutId": "56ec1d34-a21b-429d-814a-18df0df41cc9",
+                                                                                               "name": "BusinessEntityDetails"
+                                                                                          }
+                                                                                     ]
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "0ae844f4-a27e-49de-8247-328dsadaa8d48736",
+                                                                                     "name": "BusinessBasicsContainer",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "layoutId": "f26ec592-7138-476f-ab92-7891948a7b9f",
+                                                                                               "name": "BusinessBasicDetail"
+                                                                                          }
+                                                                                     ]
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "0ae844f4-a27e-49dasde-8247-328aa8d48736",
+                                                                                     "name": "BusinessAnnualRevenueContainer",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "layoutId": "f26ec592-7138-476f-ab92-7891948a7b9f",
+                                                                                               "name": "BusinessAnnualRevenueDetail"
+                                                                                          }
+                                                                                     ]
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "0ae844f4-a27e-49de-8247-3asdsadsa28aa8d48736",
+                                                                                     "name": "BusinessFinancialsContainer",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "layoutId": "f26ec592-7138-476f-ab92-7891948a7b9f",
+                                                                                               "name": "BusinessFinancialsDetails"
+                                                                                          }
+                                                                                     ]
+                                                                                }
+                                                                           ]
+                                                                      }
+                                                                 ]
+                                                            },
+                                                            {
+                                                                 "layoutId": "3b4d1c64-bbc4-420f-b36b-cbb34ad84e56",
+                                                                 "name": "OwnerInformationContainer",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "3b0c2f7c-98e8-46a0-8efb-171a33b48f54",
+                                                                           "name": "OwnerInformationSteps",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "0e822dda-3270-44a1-b0e7-4b25080230c9",
+                                                                                     "name": "OwnershipInformationContainer",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "layoutId": "b5e3844b-cd79-4e03-adfe-fdf74c22094d",
+                                                                                               "name": "OwnershipInformationDetails"
+                                                                                          }
+                                                                                     ]
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "c662d4c8-48de-4dc8-a60a-cf50c825d995",
+                                                                                     "name": "AdditionalOwnersContainer",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "layoutId": "1d5b8838-f2d5-438d-b939-1176c6f4f131",
+                                                                                               "name": "AdditionalOwnerDetails"
+                                                                                          }
+                                                                                     ]
+                                                                                }
+                                                                           ]
+                                                                      }
+                                                                 ]
+                                                            },
+                                                            {
+                                                                 "layoutId": "a21a155a-c651-4795-b236-2f42ac3ae575",
+                                                                 "name": "CollateralContainer",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "b46c7b80-6b90-4788-9138-d8db7e6076f9",
+                                                                           "name": "ListOfCollaterals"
+                                                                      }
+                                                                 ]
+                                                            },
+                                                            {
+                                                                 "layoutId": "0c038ff1-dcd5-45fb-a82e-67ac2777204e",
+                                                                 "name": "ReviewContainer",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "b1d61602-ba93-4aa1-8892-de831e83e6e6",
+                                                                           "name": "ReviewSteps",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "e1b8fddd-cff1-427c-b041-96eb2576964f",
+                                                                                     "name": "ReviewAndSubmitContainer",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "layoutId": "101e674d-6feb-4d67-8832-4aaada4003a3",
+                                                                                               "name": "LoanSummary"
+                                                                                          },
+                                                                                          {
+                                                                                               "layoutId": "fad2ff67-6686-4712-a527-8bc6901abc71",
+                                                                                               "name": "OwnerSummary"
+                                                                                          },
+                                                                                          {
+                                                                                               "layoutId": "ca18d7b2-da3b-41da-b076-f1b9a5566286",
+                                                                                               "name": "Disclosure"
+                                                                                          }
+                                                                                     ]
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "548c8dd8-d8e8-4a81-9817-c9178d66f356",
+                                                                                     "name": "ApplicationStatusContainer"
+                                                                                }
+                                                                           ]
+                                                                      }
+                                                                 ]
+                                                            }
+                                                       ]
+                                                  }
+                                             ]
+                                        },
+                                        {
+                                             "layoutId": "9020472f-d8b9-438d-83e9-c1f2f3dee9f3",
+                                             "name": "Sidebar2",
+                                             "layoutPrefix": "ClsAppLayoutOne"
+                                        }
+                                   ],
+                                   "direction": "horizontal"
+                              }
+                         ]
+                    },
+                    "overlay": [
+                         {
+                              "layoutId": "08368ebc-4456-41e3-a994-ead4a9f117d8",
+                              "name": "AddOwnerContainer",
+                              "children": [
+                                   {
+                                        "layoutId": "dc6fd7ad-cc71-4593-90e9-992d9ed9d6bb",
+                                        "name": "AddOwnerDetails",
+                                        "height": "100%"
+                                   }
+                              ]
                          },
-                         "medium": {
-                              "padding": "28px 12px 20px 12px",
-                              "height": "104px"
-                         },
-                         "large": {
-                              "padding": "28px 12px 20px 12px",
-                              "height": "108.75px"
+                         {
+                              "layoutId": "0c7a2fe0-92a9-45af-9697-df18b919c5de",
+                              "name": "CollateralOverlayContainer"
                          }
-                    },
-                    "cardView": {
-                         "padding": "16px",
-                         "height": "300px"
-                    },
-                    "queueView": {
-                         "padding": "16px",
-                         "height": "150px"
-                    },
-                    "listView": {
-                         "noAction": {
-                              "padding": "12px",
-                              "height": "48px"
-                         },
-                         "withAction": {
-                              "padding": "24px 12px",
-                              "height": "72px"
-                         }
-                    }
-               },
-               "sortText": {
-                    "mostRecentLast": "(Most Recent Last)",
-                    "mostRecentFirst": "(Most Recent First)",
-                    "highToLow": "(High to Low)",
-                    "lowToHigh": "(Low to High)",
-                    "zToA": "(Z to A)",
-                    "aToZ": "(A to Z)",
-                    "sortBy": "Sort By"
-               },
-               "currencySymbol": "$",
-               "maximumFractionDigits": 2,
-               "variant": {
-                    "TextField": "outlined"
+                    ]
                }
           },
           "actors": {},
-          "stages": {
-               "Home": {
-                    "overlay": [
-                         {
-                              "children": [
-                                   {
-                                        "height": "100%",
-                                        "name": "AddOwnerDetails",
-                                        "layoutId": "dc6fd7ad-cc71-4593-90e9-992d9ed9d6bb"
-                                   }
-                              ],
-                              "name": "AddOwnerContainer",
-                              "layoutId": "08368ebc-4456-41e3-a994-ead4a9f117d8"
+          "settings": {
+               "variant": {
+                    "TextField": "outlined"
+               },
+               "maximumFractionDigits": 2,
+               "currencySymbol": "$",
+               "sortText": {
+                    "sortBy": "Sort By",
+                    "aToZ": "(A to Z)",
+                    "zToA": "(Z to A)",
+                    "lowToHigh": "(Low to High)",
+                    "highToLow": "(High to Low)",
+                    "mostRecentFirst": "(Most Recent First)",
+                    "mostRecentLast": "(Most Recent Last)"
+               },
+               "skeleton": {
+                    "listView": {
+                         "withAction": {
+                              "height": "72px",
+                              "padding": "24px 12px"
                          },
-                         {
-                              "name": "CollateralOverlayContainer",
-                              "layoutId": "0c7a2fe0-92a9-45af-9697-df18b919c5de"
+                         "noAction": {
+                              "height": "48px",
+                              "padding": "12px"
                          }
-                    ],
-                    "layout": {
-                         "children": [
-                              {
-                                   "children": [
-                                        {
-                                             "name": "HeaderContent",
-                                             "layoutId": "60c98459-8a29-4a19-84c9-9eefa889147e"
-                                        }
-                                   ],
-                                   "layoutPrefix": "ClsAppLayoutOne",
-                                   "name": "Header",
-                                   "layoutId": "5445c431-9292-409d-9a1a-e205de1b65b1"
-                              },
-                              {
-                                   "direction": "horizontal",
-                                   "children": [
-                                        {
-                                             "layoutPrefix": "ClsAppLayoutOne",
-                                             "name": "Sidebar1",
-                                             "layoutId": "a6d30ae4-d0aa-40a5-a4c4-226959d74d99"
-                                        },
-                                        {
-                                             "children": [
-                                                  {
-                                                       "children": [
-                                                            {
-                                                                 "children": [
-                                                                      {
-                                                                           "children": [
-                                                                                {
-                                                                                     "children": [
-                                                                                          {
-                                                                                               "name": "PersonalInformation",
-                                                                                               "layoutId": "23adb365-5c89-499a-b3d5-11017f830c65"
-                                                                                          },
-                                                                                          {
-                                                                                               "name": "initActor",
-                                                                                               "layoutId": "ac2ef7f3-6fa5-4b4c-a1fc-066b32c21218"
-                                                                                          }
-                                                                                     ],
-                                                                                     "name": "PersonalInformationContainer",
-                                                                                     "layoutId": "4e38b0db-4571-46e2-82b4-7ac61ae31137"
-                                                                                },
-                                                                                {
-                                                                                     "children": [
-                                                                                          {
-                                                                                               "name": "LoanAmountDetails",
-                                                                                               "layoutId": "d0f8377d-7151-45e4-b3f4-968cb4455827"
-                                                                                          }
-                                                                                     ],
-                                                                                     "name": "LoanAmountContainer",
-                                                                                     "layoutId": "4cc1f7e7-dadb-46c4-b8d1-22f0c90a530a"
-                                                                                },
-                                                                                {
-                                                                                     "children": [
-                                                                                          {
-                                                                                               "name": "LoanPurposeDetails",
-                                                                                               "layoutId": "ba3f0ba6-a25b-4492-9775-77143494d39f"
-                                                                                          }
-                                                                                     ],
-                                                                                     "name": "LoanPurposeContainer",
-                                                                                     "layoutId": "0f7c67b4-9b34-4da5-a977-d1186c1fd7e1"
-                                                                                }
-                                                                           ],
-                                                                           "name": "GettingStartedContainer",
-                                                                           "layoutId": "de4b8f6f-abce-4be2-9d1f-cdf8cdbb29ff"
-                                                                      }
-                                                                 ],
-                                                                 "name": "GettingStarted",
-                                                                 "layoutId": "f7b7c201-d1d2-4294-9991-a5e64ba846be"
-                                                            },
-                                                            {
-                                                                 "children": [
-                                                                      {
-                                                                           "children": [
-                                                                                {
-                                                                                     "children": [
-                                                                                          {
-                                                                                               "name": "BusinessEntityDetails",
-                                                                                               "layoutId": "56ec1d34-a21b-429d-814a-18df0df41cc9"
-                                                                                          }
-                                                                                     ],
-                                                                                     "name": "BusinessEntityContainer",
-                                                                                     "layoutId": "0ae844f4-a27e-49de-8247-328aa8d48736"
-                                                                                },
-                                                                                {
-                                                                                     "children": [
-                                                                                          {
-                                                                                               "name": "BusinessBasicDetail",
-                                                                                               "layoutId": "f26ec592-7138-476f-ab92-7891948a7b9f"
-                                                                                          }
-                                                                                     ],
-                                                                                     "name": "BusinessBasicsContainer",
-                                                                                     "layoutId": "0ae844f4-a27e-49de-8247-328dsadaa8d48736"
-                                                                                },
-                                                                                {
-                                                                                     "children": [
-                                                                                          {
-                                                                                               "name": "BusinessAnnualRevenueDetail",
-                                                                                               "layoutId": "f26ec592-7138-476f-ab92-7891948a7b9f"
-                                                                                          }
-                                                                                     ],
-                                                                                     "name": "BusinessAnnualRevenueContainer",
-                                                                                     "layoutId": "0ae844f4-a27e-49dasde-8247-328aa8d48736"
-                                                                                },
-                                                                                {
-                                                                                     "children": [
-                                                                                          {
-                                                                                               "name": "BusinessFinancialsDetails",
-                                                                                               "layoutId": "f26ec592-7138-476f-ab92-7891948a7b9f"
-                                                                                          }
-                                                                                     ],
-                                                                                     "name": "BusinessFinancialsContainer",
-                                                                                     "layoutId": "0ae844f4-a27e-49de-8247-3asdsadsa28aa8d48736"
-                                                                                }
-                                                                           ],
-                                                                           "name": "BusinessInformationSteps",
-                                                                           "layoutId": "797e5898-a17b-4873-9e07-fdc33d50ac58"
-                                                                      }
-                                                                 ],
-                                                                 "name": "BusinessInformationContainer",
-                                                                 "layoutId": "7f02903a-cf52-4421-998a-fe3d4e2db0c6"
-                                                            },
-                                                            {
-                                                                 "children": [
-                                                                      {
-                                                                           "children": [
-                                                                                {
-                                                                                     "children": [
-                                                                                          {
-                                                                                               "name": "OwnershipInformationDetails",
-                                                                                               "layoutId": "b5e3844b-cd79-4e03-adfe-fdf74c22094d"
-                                                                                          }
-                                                                                     ],
-                                                                                     "name": "OwnershipInformationContainer",
-                                                                                     "layoutId": "0e822dda-3270-44a1-b0e7-4b25080230c9"
-                                                                                },
-                                                                                {
-                                                                                     "children": [
-                                                                                          {
-                                                                                               "name": "AdditionalOwnerDetails",
-                                                                                               "layoutId": "1d5b8838-f2d5-438d-b939-1176c6f4f131"
-                                                                                          }
-                                                                                     ],
-                                                                                     "name": "AdditionalOwnersContainer",
-                                                                                     "layoutId": "c662d4c8-48de-4dc8-a60a-cf50c825d995"
-                                                                                }
-                                                                           ],
-                                                                           "name": "OwnerInformationSteps",
-                                                                           "layoutId": "3b0c2f7c-98e8-46a0-8efb-171a33b48f54"
-                                                                      }
-                                                                 ],
-                                                                 "name": "OwnerInformationContainer",
-                                                                 "layoutId": "3b4d1c64-bbc4-420f-b36b-cbb34ad84e56"
-                                                            },
-                                                            {
-                                                                 "children": [
-                                                                      {
-                                                                           "name": "ListOfCollaterals",
-                                                                           "layoutId": "b46c7b80-6b90-4788-9138-d8db7e6076f9"
-                                                                      }
-                                                                 ],
-                                                                 "name": "CollateralContainer",
-                                                                 "layoutId": "a21a155a-c651-4795-b236-2f42ac3ae575"
-                                                            },
-                                                            {
-                                                                 "children": [
-                                                                      {
-                                                                           "children": [
-                                                                                {
-                                                                                     "children": [
-                                                                                          {
-                                                                                               "name": "LoanSummary",
-                                                                                               "layoutId": "101e674d-6feb-4d67-8832-4aaada4003a3"
-                                                                                          },
-                                                                                          {
-                                                                                               "name": "OwnerSummary",
-                                                                                               "layoutId": "fad2ff67-6686-4712-a527-8bc6901abc71"
-                                                                                          },
-                                                                                          {
-                                                                                               "name": "Disclosure",
-                                                                                               "layoutId": "ca18d7b2-da3b-41da-b076-f1b9a5566286"
-                                                                                          }
-                                                                                     ],
-                                                                                     "name": "ReviewAndSubmitContainer",
-                                                                                     "layoutId": "e1b8fddd-cff1-427c-b041-96eb2576964f"
-                                                                                },
-                                                                                {
-                                                                                     "name": "ApplicationStatusContainer",
-                                                                                     "layoutId": "548c8dd8-d8e8-4a81-9817-c9178d66f356"
-                                                                                }
-                                                                           ],
-                                                                           "name": "ReviewSteps",
-                                                                           "layoutId": "b1d61602-ba93-4aa1-8892-de831e83e6e6"
-                                                                      }
-                                                                 ],
-                                                                 "name": "ReviewContainer",
-                                                                 "layoutId": "0c038ff1-dcd5-45fb-a82e-67ac2777204e"
-                                                            }
-                                                       ],
-                                                       "name": "ApplicationSteps",
-                                                       "layoutId": "4ab9af31-417f-4e0d-a996-879288698dca"
-                                                  }
-                                             ],
-                                             "layoutPrefix": "ClsAppLayoutOne",
-                                             "name": "Content",
-                                             "layoutId": "10aac415-911f-4f12-bc90-2455715ed76c"
-                                        },
-                                        {
-                                             "layoutPrefix": "ClsAppLayoutOne",
-                                             "name": "Sidebar2",
-                                             "layoutId": "9020472f-d8b9-438d-83e9-c1f2f3dee9f3"
-                                        }
-                                   ],
-                                   "layoutPrefix": "ClsAppLayoutOne",
-                                   "final": true,
-                                   "name": "Main",
-                                   "layoutId": "bdb30b4d-5f35-44cd-962b-687e785ac2b3"
-                              }
-                         ],
-                         "final": true,
-                         "name": "ClsAppLayoutOne",
-                         "layoutId": "baf9f878-46cf-4ce2-8cbe-ed576d7f8636"
                     },
-                    "prerequisite": []
+                    "queueView": {
+                         "height": "150px",
+                         "padding": "16px"
+                    },
+                    "cardView": {
+                         "height": "300px",
+                         "padding": "16px"
+                    },
+                    "detailView": {
+                         "large": {
+                              "height": "108.75px",
+                              "padding": "28px 12px 20px 12px"
+                         },
+                         "medium": {
+                              "height": "104px",
+                              "padding": "28px 12px 20px 12px"
+                         },
+                         "small": {
+                              "height": "101.625px",
+                              "padding": "28px 12px 20px 12px"
+                         }
+                    }
+               },
+               "uploadText": {
+                    "completed": "Completed",
+                    "cancelInProgress": "Cancel",
+                    "removeError": "close"
+               },
+               "collapsibleIcons": {
+                    "expanded": "expand_more",
+                    "collapsed": "expand_less"
+               },
+               "minimumFractionDigits": 2,
+               "locale": "en-us",
+               "pagination": {
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "numberOfRecordsPerPage": 10,
+                    "numberOfPageLinks": 5,
+                    "firstLinkText": "first_page",
+                    "previousLinkText": "chevron_left",
+                    "nextLinkText": "chevron_right",
+                    "lastLinkText": "last_page"
+               },
+               "treeIcons": {
+                    "toExpand": "chevron_right",
+                    "toCollapse": "expand_more",
+                    "end": "lens"
                }
           },
-          "start": "Home"
+          "global": {
+               "applicationId": "",
+               "selectedParty": ""
+          },
+          "messages": {
+               "uploadFileTooLargeError": "File too large",
+               "saveSuccessText": "Succeed",
+               "submitExpirationText": "Failed to submit",
+               "loadingAnimationText": "Loading...",
+               "uploadFailureText": "Failed to upload",
+               "savingAnimationText": "Saving...",
+               "submitSuccessText": "Succeed",
+               "submitAnimationText": "Sending...",
+               "saveFailureText": "Failed to save",
+               "loadingFailureText": "Failed to load",
+               "submitFailureText": "Failed to submit"
+          }
      },
      "clcommon__External_ID__c": "los_smb_flow",
      "clcommon__Release_Checksum__c": "ea524e6f29ccbc6f545ed6f818ae700b9dfce3e52b74545bebb9a981cf5c1b25"
