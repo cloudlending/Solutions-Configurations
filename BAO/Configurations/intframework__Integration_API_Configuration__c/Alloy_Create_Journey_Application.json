@@ -42,7 +42,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 0,
-     "intframework__Release_Checksum__c": "84fc5e96476f7f613cca3816613a502dea8cacf27d08fda8be7e3a8b7eec0284",
+     "intframework__Release_Checksum__c": "0ac8ecb3bcfe2873a4f5329bbca4414ab23d4584e37b038809b9ac9b95b17dd8",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "Alloy",
@@ -402,7 +402,16 @@
                                    "fieldAPI": "clcommon__Account__c",
                                    "ignoreInRequest": true,
                                    "queriesAnotherObject": "true"
-                              },
+                              }
+                         ],
+                         "whereClause": "genesis__Application__c = :appId AND clcommon__Type__r.Name = 'PRIMARY'"
+                    },
+                    {
+                         "objectAPI": "clcommon__Party__c",
+                         "objectAlias": "businessPartyDetails",
+                         "ignoreObjectAliasInRequestGeneration": true,
+                         "limitTo": "1",
+                         "fields": [
                               {
                                    "externalField": "business_type_Name",
                                    "fieldAPI": "clcommon__Account__r.oao__Business_Sub_Category_Type__c",
@@ -410,7 +419,7 @@
                                    "queriesAnotherObject": "true"
                               }
                          ],
-                         "whereClause": "genesis__Application__c = :appId AND clcommon__Type__r.Name = 'PRIMARY'"
+                         "whereClause": "genesis__Application__c = :appId AND clcommon__Type__r.Name = 'BUSINESS'"
                     },
                     {
                          "objectAPI": "genesis__Identification_Information__c",
@@ -489,10 +498,11 @@
                               {
                                    "externalField": "business_type",
                                    "objectAlias": "entities[1]$$data",
-                                   "fieldAPI": "oao__Alloy_Business_Code__c"
+                                   "fieldAPI": "oao__Alloy_Business_Code__c",
+                                   "isMandatory": true
                               }
                          ],
-                         "whereClause": "oao__Business_Category_Name__c = :Mapping__primaryPartyDetails__business_type_Name"
+                         "whereClause": "oao__Business_Category_Name__c = :Mapping__businessPartyDetails__business_type_Name"
                     },
                     {
                          "objectAPI": "genesis__Applications__c",
