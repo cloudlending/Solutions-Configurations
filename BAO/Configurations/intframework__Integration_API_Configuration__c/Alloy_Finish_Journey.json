@@ -42,7 +42,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 0,
-     "intframework__Release_Checksum__c": "6819d6c1690c49519d2d4ead268c574e7a8ff24b9bd5c809e4f81ad9507a9580",
+     "intframework__Release_Checksum__c": "296ff61e3138b10fb7b205e920c736dc52179bb5e33ff23c3c28a3d11efa2cce",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "addParties",
@@ -72,7 +72,12 @@
           }
      },
      "intframework__Request_Timeout__c": 120000,
-     "intframework__Response_Mapping__c": null,
+     "intframework__Response_Mapping__c": {
+          "StorageConfiguration": {
+               "storeInDB": "False",
+               "publishAsJson": "False"
+          }
+     },
      "intframework__Retry_On_Failure__c": false,
      "intframework__Send_File__c": false,
      "intframework__UI_Page_Name__c": null,
