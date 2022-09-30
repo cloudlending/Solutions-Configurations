@@ -44,101 +44,213 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 1,
-     "intframework__Release_Checksum__c": "70f01cc814939b1672672a6cd3b150f009d77ccf71e62dfc77f36aa2eefab7ca",
+     "intframework__Release_Checksum__c": "96c4a5ef763649fd7168a6a0d8289f9b0114fb7d8cdc340fb8c4fde49cc2ffb5",
      "intframework__Request_Mapping__c": {
-          "thirdPartySystem": {
-               "name": "Socure",
-               "useRequestGenerator": true,
-               "staticParameters": [
-                    {
-                         "externalField": "modules",
-                         "value": "kyc,fraud,emailrisk,phonerisk,addressrisk,watchliststandard,alertlist"
-                    },
-                    {
-                         "externalField": "DecisionModuleRequired",
-                         "value": "No"
-                    }
-               ],
-               "filters": [
-                    {
-                         "objectAPI": "clcommon__Party__c",
-                         "objectAlias": "PartyDetails",
-                         "ignoreObjectAliasInRequestGeneration": true,
-                         "limitTo": "1",
-                         "fields": [
-                              {
-                                   "externalField": "firstName",
-                                   "fieldAPI": "clcommon__Contact__r.FirstName",
-                                   "isMandatory": true
-                              },
-                              {
-                                   "externalField": "surName",
-                                   "fieldAPI": "clcommon__Contact__r.LastName",
-                                   "isMandatory": true
-                              },
-                              {
-                                   "externalField": "email",
-                                   "fieldAPI": "clcommon__Contact__r.Email",
-                                   "isMandatory": true
-                              },
-                              {
-                                   "externalField": "mobileNumber",
-                                   "fieldAPI": "clcommon__Contact__r.Phone",
-                                   "isMandatory": true
-                              },
-                              {
-                                   "externalField": "nationalId",
-                                   "fieldAPI": "clcommon__Contact__r.ints__Social_Security_Number__c",
-                                   "isMandatory": true
-                              },
-                              {
-                                   "externalField": "dob",
-                                   "fieldAPI": "clcommon__Contact__r.Birthdate"
-                              }
-                         ],
-                         "whereClause": "Id = :partyId"
-                    },
-                    {
-                         "objectAPI": "clcommon__Address__c",
-                         "objectAlias": "AddressDetails",
-                         "ignoreObjectAliasInRequestGeneration": true,
-                         "limitTo": "1",
-                         "fields": [
-                              {
-                                   "externalField": "country",
-                                   "fieldAPI": "clcommon__Country__c",
-                                   "isMandatory": true
-                              },
-                              {
-                                   "externalField": "zip",
-                                   "fieldAPI": "clcommon__Zip_Code__c",
-                                   "isMandatory": true
-                              },
-                              {
-                                   "externalField": "state",
-                                   "fieldAPI": "clcommon__State_Province__c",
-                                   "isMandatory": true
-                              },
-                              {
-                                   "externalField": "city",
-                                   "fieldAPI": "clcommon__City__c",
-                                   "isMandatory": true
-                              },
-                              {
-                                   "externalField": "physicalAddress",
-                                   "fieldAPI": "clcommon__Street_Address__c",
-                                   "isMandatory": true
-                              },
-                              {
-                                   "externalField": "physicalAddress2",
-                                   "fieldAPI": "clcommon__Address_Line_2__c"
-                              }
-                         ],
-                         "whereClause": "clcommon__Contact__c = :borrowerId AND clcommon__Mailing_Address__c = true"
-                    }
-               ]
+  "thirdPartySystem": {
+    "name": "LexisNexis Business InstantId",
+    "useRequestGenerator": true,
+    "delimiter": "$$",
+    "dynamicDataParameters": [
+      {
+        "externalField": "useLNForAuthReps",
+        "ignoreInRequest": true
+      }
+    ],
+    "XMLAttributes": [
+      {
+        "XMLNode": "soap:Envelope",
+        "parameters": [
+          {
+            "name": "xmlns:soap",
+            "value": "http://schemas.xmlsoap.org/soap/envelope/"
+          },
+          {
+            "name": "xmlns",
+            "value": "http://webservices.seisint.com/WsIdentity"
+          },
+          {
+            "name": "xmlns:SOAP-ENC",
+            "value": "http://schemas.xmlsoap.org/soap/encoding/"
           }
-     },
+        ]
+      }
+    ],
+    "filters": [
+      {
+        "objectAPI": "Account",
+        "objectAlias": "soap:Envelope$$soap:Body$$BusinessInstantID20Request",
+        "fields": [
+          {
+            "externalField": "SearchBy$$Company$$CompanyName",
+            "fieldAPI": "Name",
+            "isUrlParameter": "false",
+            "isMandatory": true
+          },
+          {
+            "externalField": "SearchBy$$Company$$Phone",
+            "fieldAPI": "Phone",
+            "isUrlParameter": "false"
+          },
+          {
+            "externalField": "User$$QueryId",
+            "fieldAPI": "Id",
+            "isUrlParameter": "false"
+          },
+          {
+            "externalField": "SearchBy$$Company$$FEIN",
+            "fieldAPI": "genesis__Business_Information__r.genesis__Tax_Identification_Number__c",
+            "isUrlParameter": "false"
+          }
+        ],
+        "whereClause": "Id = :accountId"
+      },
+      {
+        "objectAPI": "Account",
+        "objectAlias": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$SearchBy$$Company$$Address",
+        "orderBy": "CreatedDate Desc",
+        "fields": [
+          {
+            "externalField": "StreetAddress1",
+            "fieldAPI": "BillingStreet",
+            "isUrlParameter": "false",
+            "isMandatory": true
+          },
+          {
+            "externalField": "StreetAddress2",
+            "fieldAPI": "oao__Billing_Address_Second_Line__c",
+            "isUrlParameter": "false"
+          },
+          {
+            "externalField": "City",
+            "fieldAPI": "BillingCity",
+            "isUrlParameter": "false",
+            "isMandatory": true
+          },
+          {
+            "externalField": "Country",
+            "fieldAPI": "BillingCountry",
+            "isUrlParameter": "false"
+          },
+          {
+            "externalField": "StateProvince",
+            "fieldAPI": "BillingState",
+            "isUrlParameter": "false",
+            "isMandatory": true
+          },
+          {
+            "externalField": "Zip5",
+            "fieldAPI": "BillingPostalCode",
+            "isUrlParameter": "false",
+            "isMandatory": true
+          }
+        ],
+        "whereClause": "Id = :accountId"
+      }
+    ],
+    "staticParameters": [
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$OutputType",
+        "value": "B"
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$GlobalWatchlistThreshold",
+        "value": 0.84
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$DOBRadius",
+        "value": 0
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$ReferenceCode",
+        "value": "Corporation name"
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$BillingCode",
+        "value": "Account Manager name"
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$GLBPurpose",
+        "value": 0
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$DLPurpose",
+        "value": 0
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$AccountNumber",
+        "value": "123456789"
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$EndUser$$CompanyName",
+        "value": "Ame Corporation"
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$EndUser$$StreetAddress1",
+        "value": "123 NW Main Street"
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$EndUser$$City",
+        "value": "Cocoplum"
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$EndUser$$State",
+        "value": "FL"
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$EndUser$$Zip5",
+        "value": 33442
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$EndUser$$Phone",
+        "value": 5555551234
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$DOBMatchOptions$$Matchtype",
+        "value": "ExactCCYYMMDD"
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactAddressMatch",
+        "value": 1
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactDOBMatch",
+        "value": 1
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactDriverLicenseMatch",
+        "value": 1
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactFirstNameMatch",
+        "value": 1
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactFirstNameMatchAllowNicknames",
+        "value": 0
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactLastNameMatch",
+        "value": 1
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactPhoneMatch",
+        "value": 1
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactSSNMatch",
+        "value": 1
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$IncludeOFAC",
+        "value": 1
+      },
+      {
+        "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$NameInputOrder",
+        "value": "Unknown"
+      }
+    ]
+  }
+},
      "intframework__Request_Timeout__c": 120000,
      "intframework__Response_Mapping__c": {
           "StorageConfiguration": {
