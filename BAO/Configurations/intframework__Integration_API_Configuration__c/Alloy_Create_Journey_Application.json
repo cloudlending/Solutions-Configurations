@@ -42,7 +42,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 0,
-     "intframework__Release_Checksum__c": "0ac8ecb3bcfe2873a4f5329bbca4414ab23d4584e37b038809b9ac9b95b17dd8",
+     "intframework__Release_Checksum__c": "6140cfed2f71bb9cc60e3ef9ffaab993a64b8282948b6f06ba03f8d4308c1720",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "Alloy",
@@ -150,6 +150,11 @@
                               {
                                    "externalField": "data$$document_ssn",
                                    "fieldAPI": "clcommon__Contact__r.ints__Social_Security_Number__c"
+                              },
+                              {
+                                   "externalField": "data$$iovation_blackbox",
+                                   "fieldAPI": "oao__Iovation_Blackbox_Token__c",
+                                   "isMandatory": false
                               }
                          ],
                          "whereClause": "genesis__Application__c = :appId AND clcommon__Type__r.Name = 'PRIMARY'"
