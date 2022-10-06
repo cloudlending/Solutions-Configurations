@@ -42,7 +42,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 0,
-     "intframework__Release_Checksum__c": "b2a169350ca263b5e015302fdd1a28dd2b3cc7739db41d05af57efb98c2822b4",
+     "intframework__Release_Checksum__c": "d9d9c5f5ed47a683c0873c5e555541c6a5e73480f291aa2ff5e51579aa986784",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "addParties",
@@ -113,6 +113,11 @@
                               {
                                    "externalField": "data$$document_ssn",
                                    "fieldAPI": "clcommon__Contact__r.ints__Social_Security_Number__c"
+                              },
+                              {
+                                   "externalField": "data$$iovation_blackbox",
+                                   "fieldAPI": "oao__Iovation_Blackbox_Token__c",
+                                   "isMandatory": false
                               }
                          ],
                          "whereClause": "genesis__Application__c = :appId AND clcommon__Type__r.Name != 'PRIMARY' AND clcommon__Type__r.Name != 'BUSINESS' AND Id = :partyId"
