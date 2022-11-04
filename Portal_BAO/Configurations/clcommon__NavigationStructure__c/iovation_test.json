@@ -1,0 +1,169 @@
+{
+     "attributes": {
+          "type": "clcommon__NavigationStructure__c"
+     },
+     "Name": "iovation_test",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Description__c": null,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Is_Template__c": false,
+     "clcommon__Related_Configuration_Mapping__c": null,
+     "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
+     "clcommon__Unique_Name__c": "iovation_test",
+     "clcommon__data__c": {
+          "messages": {
+               "submitFailureText": "Failed to submit",
+               "loadingFailureText": "Failed to load",
+               "saveFailureText": "Failed to save",
+               "submitAnimationText": "Sending...",
+               "submitSuccessText": "Succeed",
+               "savingAnimationText": "Saving...",
+               "uploadFailureText": "Failed to upload",
+               "loadingAnimationText": "Loading...",
+               "submitExpirationText": "Failed to submit",
+               "saveSuccessText": "Succeed",
+               "uploadFileTooLargeError": "File too large"
+          },
+          "global": {},
+          "settings": {
+               "treeIcons": {
+                    "end": "lens",
+                    "toCollapse": "expand_more",
+                    "toExpand": "chevron_right"
+               },
+               "filters": {
+                    "invalidText": "Invalid value",
+                    "applyLabel": "Apply",
+                    "clearLabel": "Clear Filter",
+                    "notSpecifiedLabel": "Not specified",
+                    "orLabel": "or",
+                    "fromLabel": "from",
+                    "toLabel": "to",
+                    "maxNumberLabel": "Maximum",
+                    "minNumberLabel": "Mininum",
+                    "endDateLabel": "End date",
+                    "startDateLabel": "Start date",
+                    "clearAllText": "Clear All",
+                    "label": "Filtered",
+                    "icon": "filter_list",
+                    "dialogTitle": "Filters By",
+                    "keywordLabel": "Keyword"
+               },
+               "pagination": {
+                    "lastLinkText": "last_page",
+                    "nextLinkText": "chevron_right",
+                    "previousLinkText": "chevron_left",
+                    "firstLinkText": "first_page",
+                    "numberOfPageLinks": 5,
+                    "numberOfRecordsPerPage": 10,
+                    "recordLineTemplate": "$start; - $end; of $total;"
+               },
+               "locale": "en-us",
+               "minimumFractionDigits": 2,
+               "collapsibleIcons": {
+                    "collapsed": "expand_less",
+                    "expanded": "expand_more"
+               },
+               "uploadText": {
+                    "removeError": "close",
+                    "cancelInProgress": "Cancel",
+                    "completed": "Completed"
+               },
+               "skeleton": {
+                    "detailView": {
+                         "small": {
+                              "padding": "28px 12px 20px 12px",
+                              "height": "101.625px"
+                         },
+                         "medium": {
+                              "padding": "28px 12px 20px 12px",
+                              "height": "104px"
+                         },
+                         "large": {
+                              "padding": "28px 12px 20px 12px",
+                              "height": "108.75px"
+                         }
+                    },
+                    "cardView": {
+                         "padding": "16px",
+                         "height": "300px"
+                    },
+                    "queueView": {
+                         "padding": "16px",
+                         "height": "150px"
+                    },
+                    "listView": {
+                         "noAction": {
+                              "padding": "12px",
+                              "height": "48px"
+                         },
+                         "withAction": {
+                              "padding": "24px 12px",
+                              "height": "72px"
+                         }
+                    }
+               },
+               "sortText": {
+                    "mostRecentLast": "(Most Recent Last)",
+                    "mostRecentFirst": "(Most Recent First)",
+                    "highToLow": "(High to Low)",
+                    "lowToHigh": "(Low to High)",
+                    "zToA": "(Z to A)",
+                    "aToZ": "(A to Z)",
+                    "sortBy": "Sort by"
+               },
+               "currencySymbol": "$",
+               "maximumFractionDigits": 2
+          },
+          "actors": {},
+          "stages": {
+               "Home": {
+                    "layout": {
+                         "children": [
+                              {
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "name": "Header",
+                                   "layoutId": "62d8314b-0c35-4272-97bb-04d80f64f23b"
+                              },
+                              {
+                                   "direction": "horizontal",
+                                   "children": [
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar1",
+                                             "layoutId": "eecb0d4f-f38d-4ab0-b81f-693e2fe6bad0"
+                                        },
+                                        {
+                                             "children": [
+                                                  {
+                                                       "name": "iovation_script",
+                                                       "layoutId": "6429a81b-f404-45a0-a40c-318c604f9c1c"
+                                                  }
+                                             ],
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Content",
+                                             "layoutId": "22f01c47-94f6-4c61-b623-a7346033a91b"
+                                        },
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar2",
+                                             "layoutId": "5d22b4cb-9ac7-456c-b35a-c40785ad0a25"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "final": true,
+                                   "name": "Main",
+                                   "layoutId": "d8a32981-6fc2-47ae-a2e2-fdb9acf55060"
+                              }
+                         ],
+                         "final": true,
+                         "name": "ClsAppLayoutOne",
+                         "layoutId": "1abd6a38-216a-451b-a2ef-f3db4d508018"
+                    }
+               }
+          },
+          "start": "Home"
+     },
+     "clcommon__External_ID__c": "iovation_test",
+     "clcommon__Release_Checksum__c": "4f93e666cf8ade33dd6daba32c8d7e41980dd28de833591b4e1f17b89efeda36"
+}

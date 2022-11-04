@@ -1,0 +1,51 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "hideStreetAddressLinebtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "hideStreetAddressLinebtn",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(showStreetAddress2); == true",
+               "label": "Hide second address line",
+               "style": "secondary",
+               "position": "top-right"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(showStreetAddress2);",
+                         "value": false
+                    },
+                    {
+                         "field": "$this.attr(oao__Other_Address_Second_Line__c);",
+                         "value": ""
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltPersonalInformationContactUsStreetAddressPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_address_details_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltPersonalInformationContactUsStreetAddressPanel+hideStreetAddressLinebtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltPersonalInformationContactUsStreetAddressPanel_hideStreetAddressLinebtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "0feebf6d3e94a02087cd303ab5ed7eacb695a75140925871a1e8cf57b3fe81fc"
+}

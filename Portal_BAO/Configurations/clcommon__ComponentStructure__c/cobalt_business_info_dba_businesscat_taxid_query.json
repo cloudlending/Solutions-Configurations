@@ -1,0 +1,346 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_business_info_dba_businesscat_taxid_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "accountId",
+     "clcommon__Record_Access_Filter__c": "clcommon__Account__r.Id",
+     "clcommon__Unique_Name__c": "cobalt_business_info_dba_businesscat_taxid_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_business_info_dba_businesscat_taxid_query",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "clcommon__Account__r.Id='$User.accountId' and genesis__Application__r.oao__Parent_Application__c=true and genesis__Application__r.genesis__Account__r.Id=':businessAccountId' and genesis__Application__r.Id=':appId'"
+          },
+          "orderBy": "id limit 1",
+          "sections": [
+               {
+                    "id": "7facfe31-e19e-4a22-b04a-ca3d5a46fca0",
+                    "name": "Details",
+                    "fields": [
+                         {
+                              "id": "5fcebdf0-9da6-4076-b1ec-d0f789c8d77d",
+                              "fieldName": "clcommon__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account ID",
+                                   "ariaLabel": "Account ID"
+                              }
+                         },
+                         {
+                              "id": "2149fe11-e7d2-4f57-9f47-1e13670e53bd",
+                              "fieldName": "genesis__Application__r.genesis__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account ID",
+                                   "ariaLabel": "Account ID"
+                              }
+                         },
+                         {
+                              "id": "2149fe11-e7d2-4f57-9f47-1e13670e53bd",
+                              "fieldName": "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Business Infromation ID",
+                                   "ariaLabel": "Business Infromation ID"
+                              }
+                         },
+                         {
+                              "id": "2ce4135c-a83e-4fa8-89d1-4a8669e2117f",
+                              "fieldName": "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "DBA Name",
+                                   "required": true,
+                                   "regex": "^[\\s\\S]{1,100}$",
+                                   "messages": {
+                                        "regexErrorText": "DBA Name is invalid",
+                                        "requiredErrorText": "DBA Name is required"
+                                   },
+                                   "ariaLabel": "DBA Name"
+                              }
+                         },
+                         {
+                              "id": "20773b02-5955-4e32-aa66-dc82bf790f36",
+                              "fieldName": "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Unified_Business_Identifier__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Unified Business Identifier",
+                                   "required": true,
+                                   "regex": "^[a-zA-Z0-9-]+$",
+                                   "messages": {
+                                        "regexErrorText": "Unified Business Identifier is invalid",
+                                        "requiredErrorText": "Unified Business Identifier is required"
+                                   },
+                                   "ariaLabel": "Unified Business Identifier"
+                              }
+                         },
+                         {
+                              "id": "654ee840-815d-46fc-a430-a59dd2cb758e",
+                              "fieldName": "clcommon__Account__r.Phone",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Business Phone",
+                                   "ariaLabel": "Business Phone"
+                              }
+                         },
+                         {
+                              "id": "832033ea-85dc-4898-b87f-c6d68fb808f5",
+                              "fieldName": "genesis__Application__r.genesis__Account__r.oao__Same_Phone_As_Personal__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Use same phone as personal",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Use same phone as personal, Click this checkbox if you want to use the same phone number that you entered in the email and identity page, as your business phone."
+                              }
+                         },
+                         {
+                              "id": "c60f4650-5f92-495c-bba6-133d10368043",
+                              "fieldName": "genesis__Application__r.genesis__Account__r.Phone",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Business Phone",
+                                   "required": true,
+                                   "regex": "^[0-9]{10}",
+                                   "messages": {
+                                        "requiredErrorText": "Mobile Phone is required",
+                                        "regexErrorText": "Mobile Phone is invalid"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numericOnly": true,
+                                             "blocks": [
+                                                  0,
+                                                  3,
+                                                  0,
+                                                  3,
+                                                  4
+                                             ],
+                                             "delimiters": [
+                                                  "(",
+                                                  ")",
+                                                  " ",
+                                                  "-"
+                                             ]
+                                        }
+                                   },
+                                   "ariaLabel": "Mobile Phone"
+                              }
+                         },
+                         {
+                              "id": "acb5acd2-e3e9-47aa-b245-7fca513f6a28",
+                              "fieldName": "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Type of Business",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "selectOptions": [
+                                        {
+                                             "id": "LLC",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LLC",
+                                             "optionValue": "LLC"
+                                        },
+                                        {
+                                             "id": "Corporation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Corporation",
+                                             "optionValue": "Corporation"
+                                        },
+                                        {
+                                             "id": "Partnership",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Partnership",
+                                             "optionValue": "Partnership"
+                                        },
+                                        {
+                                             "id": "Sole Proprietorship",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Sole Proprietorship",
+                                             "optionValue": "Sole Proprietorship"
+                                        },
+                                        {
+                                             "id": "Non-Profit",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Non-Profit",
+                                             "optionValue": "Non-Profit"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Type of Business is required"
+                                   },
+                                   "ariaLabel": "Business Category"
+                              }
+                         },
+                         {
+                              "id": "9ecb55e5-17d2-4fa3-a9f3-88134d7c28ab",
+                              "fieldName": "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Business_Sub_Category__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Type of $this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "selectOptions": [
+                                        {
+                                             "id": "LLC",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LLC",
+                                             "optionValue": "LLC",
+                                             "optionRender": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"LLC\""
+                                        },
+                                        {
+                                             "id": "Partnership",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Partnership",
+                                             "optionValue": "Partnership",
+                                             "optionRender": false
+                                        },
+                                        {
+                                             "id": "Sole Proprietorship",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Sole Proprietorship",
+                                             "optionValue": "Sole Proprietorship",
+                                             "optionRender": false
+                                        },
+                                        {
+                                             "id": "Non-Profit",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Non-Profit",
+                                             "optionValue": "Non-Profit",
+                                             "optionRender": false
+                                        },
+                                        {
+                                             "id": "Public funds",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Public funds",
+                                             "optionValue": "Public funds",
+                                             "optionRender": false
+                                        },
+                                        {
+                                             "id": "State/Pol Subdv",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "State/Pol Subdv",
+                                             "optionValue": "State/Pol Subdv",
+                                             "optionRender": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"LLC\""
+                                        },
+                                        {
+                                             "id": "S Corporation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "S Corporation",
+                                             "optionValue": "S Corporation",
+                                             "optionRender": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"Corporation\""
+                                        },
+                                        {
+                                             "id": "C Corporation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "C Corporation",
+                                             "optionValue": "C Corporation",
+                                             "optionRender": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"Corporation\""
+                                        },
+                                        {
+                                             "id": "Non-Profit Corporation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Non-Profit Corporation",
+                                             "optionValue": "Non-Profit Corporation",
+                                             "optionRender": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"Corporation\""
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Type of Business is required"
+                                   },
+                                   "ariaLabel": "Business Category"
+                              }
+                         },
+                         {
+                              "id": "a89eee47-e396-4555-a9f8-c3892b963ebf",
+                              "fieldName": "oao__Beneficial_Owner_Certification__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Are you a beneficial owner of this business?",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "id": "Yes",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Yes",
+                                             "optionValue": true
+                                        },
+                                        {
+                                             "id": "Partnership",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "No",
+                                             "optionValue": false
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Please specify ownership status for this business"
+                                   },
+                                   "ariaLabel": "Are you a beneficial owner of this business?"
+                              }
+                         },
+                         {
+                              "id": "06d54a123b-b445480-4cba-9cfb-20d9180a0ed0",
+                              "fieldName": "oao__Percentage_Ownership__c",
+                              "fieldUi": {
+                                   "fieldType": "percent",
+                                   "label": "Percentage Ownership",
+                                   "required": true,
+                                   "regex": "^([2][5]|[2][6]|[2][7]|[2][8]|[2][9]|[3-9][0-9]){1}$|^([2][5]|[2][6]|[2][7]|[2][8]|[2][9]|[3-9][0-9])[.]([0-9]{1})$|^([2][5]|[2][6]|[2][7]|[2][8]|[2][9]|[3-9][0-9])[.]([0-9][0-9]{1})$|^([1][0][0])$",
+                                   "messages": {
+                                        "requiredErrorText": "Percentage Ownership is required",
+                                        "regexErrorText": "Enter value between 25 and 100 and must be of format XX.XX or XX.X or 100"
+                                   },
+                                   "ariaLabel": "Percentage Ownership"
+                              }
+                         },
+                         {
+                              "id": "48a44d43-6d20-46c1-bdcf-ea32b331e4dc",
+                              "fieldName": "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Tax_Identification_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Tax ID (SSN or EIN)",
+                                   "required": true,
+                                   "regex": "(^\\d{3}-\\d{2}-\\d{4}$)|(^[1-9]\\d?-\\d{7}$)",
+                                   "messages": {
+                                        "requiredErrorText": "Tax ID (SSN or EIN) is required",
+                                        "regexErrorText": "Tax ID (SSN/EIN) must be entered in XXX-XX-XXXX or XX-XXXXXXX format"
+                                   },
+                                   "ariaLabel": "Tax ID (SSN or EIN)"
+                              }
+                         },
+                         {
+                              "id": "51262dd5-52b6-4c38-b32f-d3a187c1bb12",
+                              "fieldName": "genesis__Application__r.oao__Parent_Application__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Parent Application",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Parent Application"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_business_info_dba_businesscat_taxid_query",
+     "clcommon__Release_Checksum__c": "79075e7915083370ad42fe544d33364afd79afcd20e4848c911fccbbc0d01677"
+}

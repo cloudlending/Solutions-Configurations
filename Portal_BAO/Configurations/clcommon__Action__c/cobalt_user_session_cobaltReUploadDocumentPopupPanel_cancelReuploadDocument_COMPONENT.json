@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "cancelReuploadDocument",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "cancelReuploadDocument",
+          "property": {},
+          "appearance": {
+               "label": "No",
+               "position": "bottom-right",
+               "style": "primary"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "cobaltReUploadDocumentContainer"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          }
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltReUploadDocumentPopupPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_attachments_view_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltReUploadDocumentPopupPanel+cancelReuploadDocument",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltReUploadDocumentPopupPanel_cancelReuploadDocument_COMPONENT",
+     "clcommon__Release_Checksum__c": "a17935b86eaf7dfab305988890957652341bfec1f9f13424db6084ff25216295"
+}

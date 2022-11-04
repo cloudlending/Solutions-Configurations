@@ -1,0 +1,51 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "hideMiddleNamebtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "hideMiddleNamebtn",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(showMiddleName); == true",
+               "label": "Hide middle name",
+               "style": "secondary",
+               "position": "top-right"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(showMiddleName);",
+                         "value": false
+                    },
+                    {
+                         "field": "$this.attr(MiddleName);",
+                         "value": ""
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltPersonalInformationContactUsNamePanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_personal_info_details_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltPersonalInformationContactUsNamePanel+hideMiddleNamebtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltPersonalInformationContactUsNamePanel_hideMiddleNamebtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "a5f800030621b781584ad37bd2dfe83147c7b20c4477d44b4cf2da08580ef804"
+}

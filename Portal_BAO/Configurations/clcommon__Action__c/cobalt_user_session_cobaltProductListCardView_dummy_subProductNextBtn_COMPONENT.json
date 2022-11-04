@@ -1,0 +1,60 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "dummy_subProductNextBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "dummy_subProductNextBtn",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Dummy Next",
+               "render": "$global.attr(dummy); == true"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltOpenAccountsSteps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Open Accounts"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "openAccount"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "cobaltSelectedAccountView"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltProductListCardView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_product_detail_qry",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltProductListCardView+dummy_subProductNextBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltProductListCardView_dummy_subProductNextBtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "71c3a244c63c905ff68fd18bd50ad60e39a784612927f2dacc478a9468a3937a"
+}

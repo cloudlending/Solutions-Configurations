@@ -1,0 +1,44 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderFields": {
+                    "genesis__Application__r.oao__Marijuana_Related_Business__c": "$state(cobaltCompliancesPanel).attr(oao__Marijuana_Compliance__c);==true",
+                    "genesis__Application__r.oao__Hemp_Related_Business__c": "$state(cobaltCompliancesPanel).attr(oao__Hemp_Questions__c);==true",
+                    "genesis__Application__r.oao__CBD_Related_Business__c": "$state(cobaltCompliancesPanel).attr(oao__CBD_Questions__c);==true"
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);"
+               },
+               "structureName": "cobalt_marijuana_gambling_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltMarijuanaAndGamblingPanel",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltMarijuanaAndGamblingPanel",
+     "clcommon__Release_Checksum__c": "bbd516d57f5455a71a1d8798bef766a01dec63f4575d445502c03be6e4148e0e"
+}

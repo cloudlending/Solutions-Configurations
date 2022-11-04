@@ -1,0 +1,86 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "actions": [
+                         {
+                              "name": "showMailingAddressbtn",
+                              "actorName": "cobaltBusinessInformationMailingAddressPanel",
+                              "condition": "$this.attr(genesis__Application__r.genesis__Account__r.ShippingStreet);!=null and $this.attr(genesis__Application__r.genesis__Account__r.ShippingStreet);!=\"\" and $this.attr(genesis__Application__r.genesis__Account__r.ShippingStreet);!=undefined"
+                         },
+                         {
+                              "name": "showBusinessMailingSecondAddressbtn",
+                              "actorName": "cobaltBusinessInformationMailingAddressPanel",
+                              "condition": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Shipping_Address_Second_Line__c);!=null and $this.attr(genesis__Application__r.genesis__Account__r.oao__Shipping_Address_Second_Line__c);!=\"\" and $this.attr(genesis__Application__r.genesis__Account__r.oao__Shipping_Address_Second_Line__c);!=undefined"
+                         }
+                    ],
+                    "assignments": [
+                         {
+                              "arguments": [
+                                   "default"
+                              ],
+                              "value": "$ext.dynamicStepper",
+                              "field": ""
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "genesis__Application__r.genesis__Account__r.ShippingCountryCode": false,
+                    "genesis__Application__r.genesis__Account__r.ShippingPostalCode": "$global.attr(lockBusinessDetails);==false",
+                    "genesis__Application__r.genesis__Account__r.ShippingStateCode": "$global.attr(lockBusinessDetails);==false",
+                    "genesis__Application__r.genesis__Account__r.ShippingCity": "$global.attr(lockBusinessDetails);==false",
+                    "genesis__Application__r.genesis__Account__r.oao__Shipping_Address_Second_Line__c": "$global.attr(lockBusinessDetails);==false",
+                    "genesis__Application__r.genesis__Account__r.ShippingStreet": "$global.attr(lockBusinessDetails);==false"
+               },
+               "accessibility": {
+                    "ariaLabel": "This section is responsible for collecting business mailing address"
+               },
+               "renderFields": {
+                    "genesis__Application__r.genesis__Account__r.ShippingCountryCode": "$global.attr(showMailingAddress); == true",
+                    "genesis__Application__r.genesis__Account__r.ShippingPostalCode": "$global.attr(showMailingAddress); == true",
+                    "genesis__Application__r.genesis__Account__r.ShippingStateCode": "$global.attr(showMailingAddress); == true",
+                    "genesis__Application__r.genesis__Account__r.ShippingCity": "$global.attr(showMailingAddress); == true",
+                    "genesis__Application__r.genesis__Account__r.oao__Shipping_Address_Second_Line__c": "$global.attr(showBusinessMailingSecondLineAddress);==true and $global.attr(showMailingAddress); == true",
+                    "genesis__Application__r.genesis__Account__r.ShippingStreet": "$global.attr(showMailingAddress); == true "
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderSections": {
+                    "mailingAddress": "$global.attr(showMailingAddress);==true"
+               },
+               "editable": true,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);",
+                    "businessAccountId": "$global.attr(businessAccountId);"
+               },
+               "structureName": "cobalt_business_info_account_shipping_address_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltBusinessInformationMailingAddressPanel",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltBusinessInformationMailingAddressPanel",
+     "clcommon__Release_Checksum__c": "0e11b2d90ebda8bbf3c22ccbd41a860ad73de96444a1628ea6c29ca56360a0cd"
+}

@@ -1,0 +1,54 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "closePopUpForExistingUser",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "closePopUpForExistingUser",
+          "property": {},
+          "appearance": {
+               "style": "iconic",
+               "render": false,
+               "position": "top-right",
+               "label": "close"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "cobaltAddBusinessPersonsPopup"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltAddBusinessPersonsListView",
+                              "cobaltPartiesSummaryListView",
+                              "cobaltAddBusinessPersonsForSolePropListView"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": []
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltAddBusinessPersonsPopupPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_add_new_guarantors",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltAddBusinessPersonsPopupPanel+closePopUpForExistingUser",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltAddBusinessPersonsPopupPanel_closePopUpForExistingUser_COMPONENT",
+     "clcommon__Release_Checksum__c": "11a5ecaa3aa1c1048354d1b837832692e090b4fb4d362165ee68e8ef382dea68"
+}

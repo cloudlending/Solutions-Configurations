@@ -1,0 +1,85 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_business_information_business_name_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "accountId",
+     "clcommon__Record_Access_Filter__c": "clcommon__Account__r.Id",
+     "clcommon__Unique_Name__c": "cobalt_business_information_business_name_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_business_information_business_name_query",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "clcommon__Account__r.Id='$User.accountId' and genesis__Application__r.oao__Parent_Application__c=true and genesis__Application__r.genesis__Account__r.Id=':businessAccountId' and genesis__Application__r.Id=':appId'"
+          },
+          "orderBy": "id limit 1",
+          "sections": [
+               {
+                    "id": "f2b8deb1-407d-4a80-a8bd-5696c5233e90",
+                    "fields": [
+                         {
+                              "id": "bb5e4fee-da4c-44c8-87d1-a684a54b3b63",
+                              "fieldName": "clcommon__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "User Account ID",
+                                   "ariaLabel": "User Account ID"
+                              }
+                         },
+                         {
+                              "id": "68bc0325-d7dd-4a46-ae0e-34e4131a0184",
+                              "fieldName": "clcommon__Account__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "User Account Name",
+                                   "ariaLabel": "User Account Name"
+                              }
+                         },
+                         {
+                              "id": "8340f14f-73c2-49a2-b8d5-7cca7dddf9f1",
+                              "fieldName": "genesis__Application__r.genesis__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Business Account ID",
+                                   "ariaLabel": "Business Account ID"
+                              }
+                         },
+                         {
+                              "id": "b11b86c7-0aef-4c5a-9c03-060b2e2a6088",
+                              "fieldName": "genesis__Application__r.genesis__Account__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Name of Business",
+                                   "required": true,
+                                   "ariaLabel": "Name of Business"
+                              }
+                         },
+                         {
+                              "id": "ae462985-2d6f-4839-ac7b-f3ee6dde4c5e",
+                              "fieldName": "genesis__Application__r.oao__Parent_Application__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Parent Application",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Parent Application"
+                              }
+                         },
+                         {
+                              "id": "ae462985-2d6f-4839-ac7b-f3ee6dde4c5e",
+                              "fieldName": "genesis__Application__r.genesis__Account__r.oao__Lock_Business_Details__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Lock Business Details",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Lock Business Details"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_business_information_business_name_query",
+     "clcommon__Release_Checksum__c": "1c103ee5aca5f9530722e5b6e2dd4442f11bcb1b15c18e47f585057accb06836"
+}

@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_last_login_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "userId",
+     "clcommon__Record_Access_Filter__c": "id",
+     "clcommon__Unique_Name__c": "cobalt_last_login_details",
+     "clcommon__data__c": {
+          "structureName": "cobalt_last_login_details",
+          "tableName": "user",
+          "whereClause": {
+               "freeForm": "id='$User.id'"
+          },
+          "sections": [
+               {
+                    "id": "8b7ff23c-9068-45d4-89f1-267510165083",
+                    "name": "userLastLoginSection",
+                    "title": "userLastLoginSection",
+                    "fields": [
+                         {
+                              "id": "8454c5a0-ea27-430d-9c53-9a68115265a0",
+                              "fieldName": "Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Full Name",
+                                   "ariaLabel": "Full Name"
+                              }
+                         },
+                         {
+                              "id": "7e5d2304-9bb7-4567-9278-1dc1d2b63698",
+                              "fieldName": "LastLoginDate",
+                              "fieldUi": {
+                                   "fieldType": "datetime",
+                                   "label": "Last Login",
+                                   "format": {},
+                                   "ariaLabel": "Last Login"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_last_login_details",
+     "clcommon__Release_Checksum__c": "c31f25aa13b40cfaaf8a9db5c6ae991c6143f34c54606eed5e4c4f140652d245"
+}

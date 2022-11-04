@@ -1,0 +1,179 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_cart_details_existing",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "cobalt_cart_details_existing",
+     "clcommon__data__c": {
+          "structureName": "cobalt_cart_details_existing",
+          "tableName": "oao__cart_details__c",
+          "whereClause": {
+               "freeForm": "oao__Application__c = ':appId'"
+          },
+          "sections": [
+               {
+                    "id": "7a9b9d56-d28c-463d-8274-7f49b607dd73",
+                    "name": "CartDetailsSection",
+                    "fields": [
+                         {
+                              "id": "9b140e7f-09e5-4f67-8753-4ad811bbb9e0",
+                              "fieldName": "oao__Product_Id__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Product Id",
+                                   "ariaLabel": "Product Id"
+                              }
+                         },
+                         {
+                              "id": "8051bbb9-7ee5-402d-98d0-b36f85842ad1",
+                              "fieldName": "oao__Product_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Product Name",
+                                   "ariaLabel": "Product Name"
+                              }
+                         },
+                         {
+                              "id": "eed67bfe-861c-475f-a277-0654e8045374",
+                              "fieldName": "oao__Application__r.genesis__Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Status",
+                                   "defaultValue": "NEW - ENTERED",
+                                   "selectOptions": [
+                                        {
+                                             "id": "APPROVED - APPROVED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - APPROVED",
+                                             "optionValue": "APPROVED - APPROVED"
+                                        },
+                                        {
+                                             "id": "APPROVED - CONVERTED TO CONTRACT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - CONVERTED TO CONTRACT",
+                                             "optionValue": "APPROVED - CONVERTED TO CONTRACT"
+                                        },
+                                        {
+                                             "id": "APPROVED - DOCUMENT CHECK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - DOCUMENT CHECK",
+                                             "optionValue": "APPROVED - DOCUMENT CHECK"
+                                        },
+                                        {
+                                             "id": "NEW - CREDIT PULLED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - CREDIT PULLED",
+                                             "optionValue": "NEW - CREDIT PULLED"
+                                        },
+                                        {
+                                             "id": "NEW - ENTERED",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "NEW - ENTERED",
+                                             "optionValue": "NEW - ENTERED"
+                                        },
+                                        {
+                                             "id": "NEW - IN CREDIT CHECK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - IN CREDIT CHECK",
+                                             "optionValue": "NEW - IN CREDIT CHECK"
+                                        },
+                                        {
+                                             "id": "NEW - IN REVIEW",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - IN REVIEW",
+                                             "optionValue": "NEW - IN REVIEW"
+                                        },
+                                        {
+                                             "id": "NEW - PRICING GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - PRICING GENERATED",
+                                             "optionValue": "NEW - PRICING GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW - SCORECARD GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - SCORECARD GENERATED",
+                                             "optionValue": "NEW - SCORECARD GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW - CHECKLIST GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - CHECKLIST GENERATED",
+                                             "optionValue": "NEW - CHECKLIST GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW-SUBMITTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW-SUBMITTED",
+                                             "optionValue": "NEW-SUBMITTED"
+                                        },
+                                        {
+                                             "id": "NEW - VEHICLE VALUATION REQUIRED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - VEHICLE VALUATION REQUIRED",
+                                             "optionValue": "NEW - VEHICLE VALUATION REQUIRED"
+                                        },
+                                        {
+                                             "id": "REJECTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "REJECTED",
+                                             "optionValue": "REJECTED"
+                                        },
+                                        {
+                                             "id": "PULL CREDIT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PULL CREDIT",
+                                             "optionValue": "PULL CREDIT"
+                                        },
+                                        {
+                                             "id": "CLOSING DOCUMENTS GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CLOSING DOCUMENTS GENERATED",
+                                             "optionValue": "CLOSING DOCUMENTS GENERATED"
+                                        },
+                                        {
+                                             "id": "IN - PROGRESS",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "IN - PROGRESS",
+                                             "optionValue": "IN - PROGRESS"
+                                        }
+                                   ],
+                                   "ariaLabel": "Status"
+                              }
+                         },
+                         {
+                              "id": "7edbb2df-1a2f-4ee3-9071-5184ff5ef0ba",
+                              "fieldName": "oao__Application__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Application ID",
+                                   "ariaLabel": "Application ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_cart_details_existing",
+     "clcommon__Release_Checksum__c": "892a0c6127f05fc5896cee31d04b6979e6df6f10e0164b6aae981742d514720d"
+}

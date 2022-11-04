@@ -1,0 +1,80 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "navigate": {
+                    "ineligibleConsent": {
+                         "updates": [
+                              {
+                                   "value": "cobaltIneligiblePopupContainer",
+                                   "name": "$nav.overlay.add;"
+                              }
+                         ]
+                    },
+                    "myInformation": {
+                         "updates": [
+                              {
+                                   "value": "cobaltMyInformationPopup",
+                                   "name": "$nav.overlay.add;"
+                              }
+                         ]
+                    },
+                    "overdraft": {
+                         "updates": [
+                              {
+                                   "value": "cobaltOverdraftOptionPopup",
+                                   "name": "$nav.overlay.add;"
+                              }
+                         ]
+                    },
+                    "consent": {
+                         "updates": [
+                              {
+                                   "value": "cobaltEmailAndIdentityDisclosurePopup",
+                                   "name": "$nav.overlay.add;"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderFields": {
+                    "ineligibleConsent": "$global.attr(eligibleContent);==true"
+               },
+               "textAfter": "<div class=\"ineligibleConsent $global.attr(eligibleContent);-ineligibleConsent\">I certify this business is not an <span class=\"navigate\" navigate=\"ineligibleConsent\">ineligible business</span>.</div><div class=\"myInformation $global.attr(eligibleContent);-myInformation\">I understand <span navigate=\"myInformation\" class=\"navigate\">how you use my information</span>.</div><div class=\"disclosure $global.attr(eligibleContent);-disclosure\">I consent to receive and agree to the <span class=\"navigate\" navigate=\"consent\">new account disclosures</span> electronically.</div>",
+               "noLabelFields": [
+                    "ineligibleConsent",
+                    "myInformationConcent",
+                    "electronicConsent"
+               ],
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "structureName": "cobalt_email_and_identity_logged_out_form"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltEmailAndIdentityLOFormPanel",
+     "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltEmailAndIdentityLOFormPanel",
+     "clcommon__Release_Checksum__c": "b289c8c2ed3e60316d79c5b76d1806d24b58c8cb39f7d47a029157ce7269765f"
+}

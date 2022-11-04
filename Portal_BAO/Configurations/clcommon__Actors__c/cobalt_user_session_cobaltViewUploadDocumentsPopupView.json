@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "updates": [
+                         {
+                              "value": [
+                                   "cobaltDocUploadPanel",
+                                   "cobaltDocUploadTitlePanel"
+                              ],
+                              "name": "$nav.reloads.add;"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editableFields": {
+                    "CreatedDate": false,
+                    "Name": false,
+                    "clcommon__Document_Category__r.Id": false
+               },
+               "renderFields": {
+                    "clcommon__Document_Category__r.Owner.Id": false,
+                    "clcommon__Document_Category__r.Id": false
+               },
+               "title": "Documents",
+               "queuePrimaryText": "$this.attr(Name);",
+               "blankMessage": "No documents uploaded.",
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "docCatid": "$global.attr(docCatId);"
+               },
+               "structureName": "cobalt_view_document_query"
+          },
+          "type": "queue-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltViewUploadDocumentsPopupView",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltViewUploadDocumentsPopupView",
+     "clcommon__Release_Checksum__c": "6f0a2df6a6ed0bdb40b8215cd092df2924426f8a3b2d388e9a17243b89bfec57"
+}

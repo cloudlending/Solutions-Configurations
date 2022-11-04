@@ -1,0 +1,90 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_widgets_list_view",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_widgets_list_view",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_widgets_list_view",
+          "sections": [
+               {
+                    "fields": [
+                         {
+                              "id": "cbo9",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string"
+                              }
+                         },
+                         {
+                              "id": "cb19",
+                              "fieldName": "Title__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Widget Name"
+                              }
+                         },
+                         {
+                              "id": "2a0l",
+                              "fieldName": "Description__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Description"
+                              }
+                         },
+                         {
+                              "id": "2a0p",
+                              "fieldName": "Widget_Image_Document_Id",
+                              "fieldUi": {
+                                   "fieldType": "string"
+                              }
+                         },
+                         {
+                              "id": "2p0h",
+                              "fieldName": "Widget_Image_Base64_Url",
+                              "fieldUi": {
+                                   "fieldType": "string"
+                              }
+                         },
+                         {
+                              "id": "2app",
+                              "fieldName": "Type__c",
+                              "fieldUi": {
+                                   "fieldType": "string"
+                              }
+                         },
+                         {
+                              "id": "4app",
+                              "fieldName": "Theme__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Mint",
+                                             "optionValue": "mint"
+                                        },
+                                        {
+                                             "optionText": "Mui",
+                                             "optionValue": "mui"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "2a0k",
+                              "fieldName": "Widget_Config_Json_Data__c",
+                              "fieldUi": {
+                                   "fieldType": "string"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_widgets_list_view",
+     "clcommon__Release_Checksum__c": "a428fcfd0e86ef116290866fa1716c599b6465b29afb9ccbb14198c8c7fc3148"
+}

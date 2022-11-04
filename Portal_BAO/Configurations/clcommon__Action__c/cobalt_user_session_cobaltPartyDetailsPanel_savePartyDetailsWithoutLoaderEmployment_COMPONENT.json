@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "savePartyDetailsWithoutLoaderEmployment",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "savePartyDetailsWithoutLoaderEmployment",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "label": "Save Party Details"
+          },
+          "remoteActionArguments": {
+               "oao__Position_At_Company__c": "$this.attr(oao__Position_At_Company__c);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [],
+               "actions": [
+                    {
+                         "condition": "$state(cobaltPersonalInformationIdentificationPanel).count(); > 0 and ($global.attr(partyType); == \"PRIMARY\")",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "personalInfoIdentitySaveByApi"
+                    },
+                    {
+                         "condition": "$state(cobaltPersonalInformationIdentificationPanel).count(); < 1 and ($global.attr(partyType); == \"PRIMARY\")",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "personalInfoIdentityPortalFieldSaveByApi"
+                    },
+                    {
+                         "condition": "$state(cobaltPersonalInformationIdentificationPanel).count(); > 0 and ($global.attr(partyType); != \"PRIMARY\")",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "personalInfoIdentityEmploymentAddBusinessSaveByApi"
+                    },
+                    {
+                         "condition": "$state(cobaltPersonalInformationIdentificationPanel).count(); < 1 and ($global.attr(partyType); != \"PRIMARY\")",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "personalInfoIdentityEmploymentPortalFieldAddBusinessSaveByApi"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;",
+               "showSavingAnimation": true
+          }
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "save",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltPartyDetailsPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_party_details_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltPartyDetailsPanel+savePartyDetailsWithoutLoaderEmployment",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltPartyDetailsPanel_savePartyDetailsWithoutLoaderEmployment_COMPONENT",
+     "clcommon__Release_Checksum__c": "30782d5e5cb4960bab3d6acc7a99605bd614e2f53020e8331e691c89901fe2ba"
+}

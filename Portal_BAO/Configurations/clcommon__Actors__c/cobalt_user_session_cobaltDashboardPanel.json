@@ -1,0 +1,103 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$ext.iovationHandler",
+                              "field": "$global.attr(Iovation_Blackbox_Token);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "accessibility": {
+                    "headerField": [
+                         "genesis__Application__r.Name",
+                         "genesis__Application__r.oao__Application_Timestamp__c",
+                         "genesis__Application__r.genesis__Status__c"
+                    ],
+                    "ariaLabel": "This sections lists all the Application that is made by you"
+               },
+               "editableFields": {
+                    "genesis__Application__r.oao__Fundable__c": false,
+                    "genesis__Application__r.oao__User_Type__r.Name": false,
+                    "oao__Position_At_Company__c": false,
+                    "genesis__Application__r.oao__Business_Person_Stage__c": false,
+                    "genesis__Application__r.oao__Portal_Stage__c": false,
+                    "genesis__Application__r.genesis__Account__r.Id": false,
+                    "genesis__Application__r.genesis__Account__r.BillingStreet": false,
+                    "genesis__Application__r.genesis__Status__c": false,
+                    "genesis__Application__r.Id": false,
+                    "oao__Beneficial_Owner_Certification__c": false,
+                    "genesis__Application__r.genesis__Account__r.BillingCountry": false,
+                    "clcommon__Contact__r.clcommon__Citizenship_Status__c": false,
+                    "clcommon__Account__r.oao__Origin_Session_ID__c": false,
+                    "oao__Submit_Application_Check__c": false,
+                    "genesis__Application__r.Name": false,
+                    "genesis__Application__r.genesis__Account__r.BillingCity": false,
+                    "genesis__Application__r.genesis__Account__r.BillingState": false,
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c": false,
+                    "genesis__Application__r.genesis__Account__r.oao__Lock_Business_Details__c": false,
+                    "oao__Guarantor_Stage__c": false,
+                    "genesis__Application__r.genesis__Account__r.Name": false,
+                    "clcommon__Contact__r.Id": false,
+                    "genesis__Application__r.genesis__Account__r.BillingPostalCode": false,
+                    "clcommon__Type__r.Name": false,
+                    "genesis__Application__r.oao__Application_Timestamp__c": false
+               },
+               "renderFields": {
+                    "genesis__Application__r.oao__User_Type__r.Name": false,
+                    "genesis__Application__r.oao__Fundable__c": false,
+                    "oao__Position_At_Company__c": false,
+                    "genesis__Application__r.oao__Business_Person_Stage__c": false,
+                    "genesis__Application__r.oao__Portal_Stage__c": false,
+                    "genesis__Application__r.genesis__Account__r.Id": false,
+                    "genesis__Application__r.genesis__Account__r.BillingStreet": false,
+                    "genesis__Application__r.Id": false,
+                    "oao__Beneficial_Owner_Certification__c": false,
+                    "genesis__Application__r.genesis__Account__r.BillingCountry": false,
+                    "clcommon__Contact__r.clcommon__Citizenship_Status__c": false,
+                    "clcommon__Account__r.oao__Origin_Session_ID__c": false,
+                    "oao__Submit_Application_Check__c": false,
+                    "genesis__Application__r.genesis__Account__r.BillingCity": false,
+                    "genesis__Application__r.genesis__Account__r.BillingState": false,
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c": false,
+                    "genesis__Application__r.genesis__Account__r.oao__Lock_Business_Details__c": false,
+                    "oao__Guarantor_Stage__c": false,
+                    "clcommon__Contact__r.Id": false,
+                    "genesis__Application__r.genesis__Account__r.BillingPostalCode": false,
+                    "clcommon__Type__r.Name": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "textBefore": "<img src=\"/resource/oao__Dashboard_path_image\"></img>",
+               "title": "<span class=\"welcome-title\">Welcome back<span class=\"name\">&nbsp;$global.attr(userInfo).attr(firstName);! </span></span><span class=\"welcome-subtitle\">Start a new business account application, view completed applications, or edit existing applications below.</span>"
+          },
+          "property": {
+               "structureName": "cobalt_application_fetch_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltDashboardPanel",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardPanel",
+     "clcommon__Release_Checksum__c": "e6b3ca1ffe35eabadebef33741c3e646a95c3515ab8fdfd25d3d061df37f4e14"
+}

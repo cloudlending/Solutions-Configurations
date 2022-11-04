@@ -1,0 +1,41 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "query1",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "query1",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "normal",
+               "label": ""
+          },
+          "remoteActionArguments": {
+               "DocumentCategoryId": "$global.attr(docCatId);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "query",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltViewUploadDocumentsPopupView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_view_document_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.FetchDocumentAttachmentApi",
+     "clcommon__Unique_Action_Name__c": "cobaltViewUploadDocumentsPopupView+query1",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltViewUploadDocumentsPopupView_query1_COMPONENT",
+     "clcommon__Release_Checksum__c": "5f46a9835569c2524ddd74a97a026cbf2731c8e08a77d66661bc7ca81fe3b507"
+}

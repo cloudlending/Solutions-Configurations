@@ -1,0 +1,52 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "hideBusinessMailingSecondAddressbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "hideBusinessMailingSecondAddressbtn",
+          "property": {},
+          "appearance": {
+               "enable": "$global.attr(lockBusinessDetails);==false",
+               "position": "top-right",
+               "style": "secondary",
+               "label": "Hide second address line",
+               "render": "$global.attr(showBusinessMailingSecondLineAddress);==true and  $global.attr(showMailingAddress); == true"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(showBusinessMailingSecondLineAddress);",
+                         "value": false
+                    },
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Shipping_Address_Second_Line__c);",
+                         "value": ""
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltBusinessInformationMailingAddressPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_business_info_account_shipping_address_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltBusinessInformationMailingAddressPanel+hideBusinessMailingSecondAddressbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltBusinessInformationMailingAddressPanel_hideBusinessMailingSecondAddressbtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "a14a679f83f6e675ea335fae593023dceb12d21ae02aae73aa42867e32769a64"
+}

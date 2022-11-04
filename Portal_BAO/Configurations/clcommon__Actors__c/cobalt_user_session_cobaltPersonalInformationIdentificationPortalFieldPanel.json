@@ -1,0 +1,41 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "saveFailureText": "$serverMessage;",
+               "hideLoadingError": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top"
+               },
+               "renderFields": {
+                    "genesis__State_of_Issuance__c": false,
+                    "Issuing_Country__c": false,
+                    "genesis__Identification_Type__c": false
+               },
+               "editable": true,
+               "render": "$state(cobaltPersonalInformationIdentificationPanel).count();<1",
+               "fieldColumns": 1
+          },
+          "property": {
+               "structureName": "cobalt_personal_info_portal_field"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltPersonalInformationIdentificationPortalFieldPanel",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltPersonalInformationIdentificationPortalFieldPanel",
+     "clcommon__Release_Checksum__c": "eb4314c10c3bd3414675f6b51d20969f89ff0001045884ce9f8126b2df1b3d2c"
+}

@@ -1,0 +1,93 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_actor_appearance_grouping_general",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_actor_appearance_grouping_general",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_actor_appearance_grouping_general",
+          "sections": [
+               {
+                    "id": "f57d",
+                    "name": "enableGrouping",
+                    "fields": [
+                         {
+                              "id": "4c6a",
+                              "fieldName": "enableGrouping",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Enable Grouping"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "41b6",
+                    "name": "groupingDetails",
+                    "fields": [
+                         {
+                              "id": "fdc5",
+                              "fieldName": "groupingField",
+                              "relationType": "reference",
+                              "relationName": "groupingFields",
+                              "relationJson": {
+                                   "sections": [
+                                        {
+                                             "fields": [
+                                                  {
+                                                       "id": "e1f1",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "b196",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Grouping Field",
+                                   "required": true,
+                                   "prompt": "Select field..."
+                              }
+                         },
+                         {
+                              "id": "dd74",
+                              "fieldName": "groupingDirection",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "",
+                                             "optionValue": ""
+                                        },
+                                        {
+                                             "optionText": "Ascending",
+                                             "optionValue": "ascending"
+                                        },
+                                        {
+                                             "optionText": "Descending",
+                                             "optionValue": "descending"
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_actor_appearance_grouping_general",
+     "clcommon__Release_Checksum__c": "11e4cd6da1db4ce2749ea674a56e9699f544be922aba4061d270b8de2faa281e"
+}

@@ -1,0 +1,52 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "hidedbabtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "hidedbabtn",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "secondary",
+               "label": "Hide DBA name",
+               "render": "$global.attr(showdba); == true",
+               "enable": "$global.attr(lockBusinessDetails);==false"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(showdba);",
+                         "value": false
+                    },
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);",
+                         "value": ""
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltBusinessInformationDBAPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_business_info_dba_businesscat_taxid_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltBusinessInformationDBAPanel+hidedbabtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltBusinessInformationDBAPanel_hidedbabtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "a09fc7cd86d7017dc4fc0e352c4343f16d19d5a32fd2bd0dc8499536e806f3ce"
+}

@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "actions": [
+                         {
+                              "name": "redirectToOpenAccount",
+                              "condition": "$state(cobaltStepperTitlePanel).count(); > 0 and $global.attr(openAccountTab); == \"ProductType\" and $state(cobaltGuestCustomSettingsPanel).attr(oao__Enable_Redirect_To_Open_Account__c); and $global.attr(redirect);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "sectionStyle": "layout",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderSections": {
+                    "ProductDetails": false
+               },
+               "title": "<span tabIndex = \"0\" role = \"header\" >$global.attr(pageTitle);</span>",
+               "fieldColumns": 1
+          },
+          "property": {
+               "queryName": "query1",
+               "structureName": "cobalt_cart_content"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltStepperTitlePanel",
+     "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltStepperTitlePanel",
+     "clcommon__Release_Checksum__c": "2ae7a36d2cad651c1bcfe6184ef91cdf5b83c18fe5c72f225831ab79f1198ed6"
+}

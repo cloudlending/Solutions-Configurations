@@ -1,0 +1,45 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "loaded": {
+                    "updates": [
+                         {
+                              "value": "cobaltShortLoaderContainer",
+                              "name": "$nav.overlay.remove;"
+                         }
+                    ],
+                    "assignments": [
+                         {
+                              "arguments": [
+                                   "addonComplete"
+                              ],
+                              "value": "$ext.dynamicStepper",
+                              "field": ""
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": " not $global.attr(enableCitizenContent);"
+          },
+          "property": {
+               "contentName": "cobalt_referral_content"
+          },
+          "type": "static-content",
+          "category": "content"
+     },
+     "clcommon__Actor_Name__c": "cobaltReferralPageContent",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltReferralPageContent",
+     "clcommon__Release_Checksum__c": "a2989d42a8328f506bfdd04d41e83902b87b17b3ed51335ec6ffa2b6ce72852b"
+}

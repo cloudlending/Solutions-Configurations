@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "reuploadDocument",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "reuploadDocument",
+          "property": {
+               "accept": "image/*,.pdf,.doc,.docx",
+               "maxSize": 5000000,
+               "multiple": false,
+               "uploadType": "document"
+          },
+          "appearance": {
+               "label": "Yes",
+               "position": "bottom-right",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "actionType": "linkAttachment",
+               "attachmentIds": "$uploadedAttachmentId;",
+               "documentCategoryId": "$global.attr(docCatId);",
+               "isDeleted": false
+          },
+          "uploadActionArguments": {
+               "attachmentParentId": "$global.attr(docCatId);"
+          },
+          "successHandler": {
+               "actions": [
+                    {
+                         "actorName": "cobaltDocUploadPanel",
+                         "name": "documentPollingbtn"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "uploadFailureText": "Fail to upload, please login and try again",
+               "uploadFileTooLargeError": "Upload failed, cannot upload file size greater than 5mb",
+               "uploadInvalidFileType": "The supported file type are image/*,.pdf,.doc,.docx"
+          }
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "upload",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltReUploadDocumentPopupPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_attachments_view_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "genesis.PortalApplicationDocumentManagement",
+     "clcommon__Unique_Action_Name__c": "cobaltReUploadDocumentPopupPanel+reuploadDocument",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltReUploadDocumentPopupPanel_reuploadDocument_COMPONENT",
+     "clcommon__Release_Checksum__c": "0e1b3d51bcbbb10ddec68857fd99edf771bbe61454687b4bd6f7889e65d5116e"
+}

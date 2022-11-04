@@ -1,0 +1,52 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "checkboxSave",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "checkboxSave",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {
+               "oao__Percentage_Ownership__c": "$this.attr(oao__Percentage_Ownership__c);",
+               "oao__Beneficial_Owner_Certification__c": "$this.attr(oao__Beneficial_Owner_Certification__c);",
+               "oao__Guarantor_Stage__c": "BOcertification"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [],
+               "actions": [
+                    {
+                         "actorName": "cobaltBusinessOwnerCertificationPanel",
+                         "name": "runKYCForBO"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;",
+               "showSavingAnimation": false
+          }
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "save",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltBusinessOwnerCertificationPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_benificial_consent_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltBusinessOwnerCertificationPanel+checkboxSave",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltBusinessOwnerCertificationPanel_checkboxSave_COMPONENT",
+     "clcommon__Release_Checksum__c": "e094fe338de65b1bc02fec968560c6db9735d29dc0698157d8d743baa9c903c0"
+}

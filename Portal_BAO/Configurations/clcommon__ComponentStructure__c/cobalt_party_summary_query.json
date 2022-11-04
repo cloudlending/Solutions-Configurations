@@ -1,0 +1,51 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_party_summary_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "cobalt_party_summary_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_party_summary_query",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__r.Id=':appId' and oao__Beneficial_Owner_Certification__c !=false "
+          },
+          "sections": [
+               {
+                    "id": "716f0ed3-3a77-4d71-9544-e6bd7fe11814",
+                    "name": "PartySummary",
+                    "fields": [
+                         {
+                              "id": "f729d6eb-b20f-4476-be80-907e37dd7127",
+                              "fieldName": "clcommon__Contact__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Beneficial Owner Name",
+                                   "ariaLabel": "Beneficial Owner Name"
+                              }
+                         },
+                         {
+                              "id": "b4d8168b-2b57-4f7d-8c11-5cdb8c0e6e1d",
+                              "fieldName": "oao__Percentage_Ownership__c",
+                              "fieldUi": {
+                                   "fieldType": "percent",
+                                   "label": "Percentage Ownership",
+                                   "required": true,
+                                   "regex": "^([2][5]|[2][6]|[2][7]|[2][8]|[2][9]|[3-9][0-9]){1}$|^([2][5]|[2][6]|[2][7]|[2][8]|[2][9]|[3-9][0-9])[.]([0-9]{1})$|^([2][5]|[2][6]|[2][7]|[2][8]|[2][9]|[3-9][0-9])[.]([0-9][0-9]{1})$|^([1][0][0])$",
+                                   "messages": {
+                                        "requiredErrorText": "Percentage Ownership is required",
+                                        "regexErrorText": "Enter value between 25 and 100 and must be of format XX.XX or XX.X or 100"
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_party_summary_query",
+     "clcommon__Release_Checksum__c": "f760f63c39207fc64cb58f5455ddfc3684d7ae9d7d94fa2b9b2e826aa9697f22"
+}

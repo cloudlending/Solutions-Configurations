@@ -1,0 +1,136 @@
+{
+     "attributes": {
+          "type": "clcommon__NavigationStructure__c"
+     },
+     "Name": "portal_editor_add_to_widget_library",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Description__c": null,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Is_Template__c": false,
+     "clcommon__Related_Configuration_Mapping__c": null,
+     "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
+     "clcommon__Unique_Name__c": "portal_editor_add_to_widget_library",
+     "clcommon__data__c": {
+          "start": "AddToWidgetLibraryPage",
+          "stages": {
+               "AddToWidgetLibraryPage": {
+                    "layout": {
+                         "name": "widgetToAddDetailsContainer",
+                         "children": [
+                              {
+                                   "name": "widgetDeatilsToAdd"
+                              },
+                              {
+                                   "name": "widgetImageToAdd"
+                              }
+                         ]
+                    }
+               }
+          },
+          "actors": {
+               "widgetDeatilsToAdd": {
+                    "category": "component",
+                    "type": "base-panel",
+                    "property": {
+                         "structureName": "portal_editor_add_to_widget_library_panel"
+                    },
+                    "appearance": {
+                         "title": "Add Widget",
+                         "editable": true,
+                         "expansionTop": "normal",
+                         "expansionBottom": "normal",
+                         "renderFields": {
+                              "Theme__c": false,
+                              "Widget_Image_Base64_Url": false,
+                              "Widget_Config_Json_Data__c": false
+                         },
+                         "showSectionTitle": true
+                    },
+                    "componentActions": [
+                         {
+                              "name": "addWidget",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Add Widget",
+                                   "position": "bottom-right",
+                                   "style": "primary"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_add_to_widget_library",
+                                   "executions": [
+                                        {
+                                             "name": "$addToWidgetLibrary;",
+                                             "value": [
+                                                  "widgetsListView"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "cancel",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Cancel",
+                                   "position": "top-right",
+                                   "style": "secondary"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_widget_library",
+                                   "executions": [
+                                        {
+                                             "name": "$resetDialogJson;",
+                                             "value": []
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "widgetImageToAdd": {
+                    "category": "content",
+                    "type": "static-content",
+                    "property": {
+                         "contentName": "portal_editor_add_widget_image"
+                    },
+                    "appearance": {
+                         "expansionBottom": "normal"
+                    },
+                    "componentActions": [
+                         {
+                              "name": "upload",
+                              "actionType": "upload",
+                              "property": {
+                                   "uploadType": "addWidget"
+                              },
+                              "appearance": {
+                                   "label": "Upload",
+                                   "style": "primary"
+                              },
+                              "handler": {}
+                         }
+                    ]
+               }
+          },
+          "settings": {
+               "locale": "en-us",
+               "currency": "USD",
+               "minimumFractionDigits": 2
+          },
+          "messages": {
+               "loadingAnimationText": "<span><span class=\"fa fa-spinner\"></span>Loading...</span>",
+               "savingAnimationText": "<span><span class=\"fa fa-spinner\"></span>Saving...</span>",
+               "submitAnimationText": "<span><span class=\"fa fa-spinner\"></span>Sending...</span>",
+               "loadingFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to load</span>",
+               "saveSuccessText": "<span><span class=\"fa fa-check\"></span>Succeed</span>",
+               "saveFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to save</span>",
+               "submitSuccessText": "<span><span class=\"fa fa-check\"></span>Succeed</span>",
+               "submitFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to submit</span>",
+               "submitExpirationText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to submit</span>",
+               "uploadFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to upload</span>",
+               "uploadFileTooLargeError": "<span><span class=\"fa fa-exclamation-triangle\"></span>File too large</span>"
+          }
+     },
+     "clcommon__External_ID__c": "portal_editor_add_to_widget_library",
+     "clcommon__Release_Checksum__c": "1c0d33b4effe0140deb468f9abf5080a02df26c02f3d960c8d0d03244bc91e11"
+}

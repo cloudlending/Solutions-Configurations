@@ -1,0 +1,79 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "titles": [
+                    {
+                         "name": "openAccounts",
+                         "title": "Open Accounts"
+                    },
+                    {
+                         "name": "emailIdentity",
+                         "subTitle": "Email & Identity",
+                         "title": "Information"
+                    },
+                    {
+                         "name": "personalInfo",
+                         "subTitle": "Personal Information",
+                         "title": "Information"
+                    },
+                    {
+                         "name": "citizenshipEmployment",
+                         "render": "$state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);",
+                         "subTitle": "Citizenship & Employment",
+                         "title": "Information"
+                    },
+                    {
+                         "name": "businessInfo",
+                         "subTitle": "Business Information",
+                         "title": "Information"
+                    },
+                    {
+                         "name": "activityInfo",
+                         "render": "$global.attr(accountActivity);==true",
+                         "subTitle": "Account Activity",
+                         "title": "Information"
+                    },
+                    {
+                         "name": "addbusinessperson",
+                         "title": "Users & Rights"
+                    },
+                    {
+                         "name": "addons",
+                         "title": "Additional Services"
+                    },
+                    {
+                         "name": "documentupload",
+                         "title": "Document Upload"
+                    },
+                    {
+                         "name": "review",
+                         "title": "Review"
+                    },
+                    {
+                         "render": "$global.attr(fundable);==true",
+                         "name": "funding",
+                         "title": "Funding"
+                    }
+               ],
+               "titleOrientation": "vertical"
+          },
+          "property": {},
+          "type": "steps",
+          "category": "container"
+     },
+     "clcommon__Actor_Name__c": "cobaltMainSteps",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltMainSteps",
+     "clcommon__Release_Checksum__c": "1b6c924c28a6de68346a3a77ece7fcf924a83e78202628c79ff0799619cade92"
+}

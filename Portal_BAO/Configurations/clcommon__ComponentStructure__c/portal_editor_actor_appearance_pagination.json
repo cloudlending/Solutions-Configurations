@@ -1,0 +1,124 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_actor_appearance_pagination",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_actor_appearance_pagination",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_actor_appearance_pagination",
+          "sections": [
+               {
+                    "id": "58a3",
+                    "name": "enablePagination",
+                    "fields": [
+                         {
+                              "id": "2ab3",
+                              "fieldName": "enablePagination",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Enable Pagination"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "fd89",
+                    "name": "paginationDetails",
+                    "fields": [
+                         {
+                              "id": "38ef",
+                              "fieldName": "numberOfRecordsPerPage",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Entries per Page",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span>"
+                                   },
+                                   "defaultValue": 10
+                              }
+                         },
+                         {
+                              "id": "f366",
+                              "fieldName": "numberOfPageLinks",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Page Links",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span>"
+                                   },
+                                   "defaultValue": 5
+                              }
+                         },
+                         {
+                              "id": "5b3b",
+                              "fieldName": "recordLineTemplate",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Pagination Text Template",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank"
+                                   }
+                              }
+                         },
+                         {
+                              "id": "c510",
+                              "fieldName": "firstLinkText",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "First Link Text",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'> Cannot be blank</span>"
+                                   }
+                              }
+                         },
+                         {
+                              "id": "40fe",
+                              "fieldName": "previousLinkText",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Previous Link Text",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'> Cannot be blank</span>"
+                                   }
+                              }
+                         },
+                         {
+                              "id": "c677",
+                              "fieldName": "nextLinkText",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Next Link Text",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'> Cannot be blank</span>"
+                                   }
+                              }
+                         },
+                         {
+                              "id": "c57e",
+                              "fieldName": "lastLinkText",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Last Link Text",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'> Cannot be blank</span>"
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_actor_appearance_pagination",
+     "clcommon__Release_Checksum__c": "e34242fffae202bc8a50ad6e94c7333d4b2df1c9fb6a1b69f2e94da78cee8f47"
+}

@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "dummyNextemail",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "dummyNextemail",
+          "property": {},
+          "appearance": {
+               "label": "Dummy Next email identity",
+               "style": "primary",
+               "position": "top-right",
+               "render": "$global.attr(dummyShow); == \"true\" and $global.attr(currentStep); == \"emailIdentity\""
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltEmailIdentitySuccessPanel).appearance(render);",
+                         "value": true
+                    },
+                    {
+                         "field": "$nav(cobaltEmailAndIdentityLOFormPanel).appearance(render);",
+                         "value": false
+                    },
+                    {
+                         "field": "$global.attr(pageTitle);",
+                         "value": "Verifying email"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+dummyNextemail",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltFlowStepAction_dummyNextemail_COMPONENT",
+     "clcommon__Release_Checksum__c": "22f849521a12a6557dbeb2064c8c120d0d558f106d3846f80e849eb8385df9eb"
+}

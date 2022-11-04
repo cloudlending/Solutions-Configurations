@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "dummyPopupbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "dummyPopupbtn",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Dummy Popup",
+               "render": "$global.attr(dummy); == true"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "cobaltOverdraftOptionPopup"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltProductListCardView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_product_detail_qry",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltProductListCardView+dummyPopupbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltProductListCardView_dummyPopupbtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "e67870a563a50ded2e3e7b805b57e2ae635c9944b70d0a06c902d92512b80619"
+}

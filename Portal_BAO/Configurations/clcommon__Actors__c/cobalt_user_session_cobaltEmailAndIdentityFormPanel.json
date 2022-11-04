@@ -1,0 +1,97 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "newBusinessCheck": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{($this.attr(newBusinessCheck);==true)?\"\":$global.attr(businessName);};",
+                                   "field": "$this.attr(businessAccountName);"
+                              }
+                         ]
+                    }
+               },
+               "navigate": {
+                    "ineligibleConsent": {
+                         "updates": [
+                              {
+                                   "value": "cobaltIneligiblePopupContainer",
+                                   "name": "$nav.overlay.add;"
+                              }
+                         ]
+                    },
+                    "myInformation": {
+                         "updates": [
+                              {
+                                   "value": "cobaltMyInformationPopup",
+                                   "name": "$nav.overlay.add;"
+                              }
+                         ]
+                    },
+                    "overdraft": {
+                         "updates": [
+                              {
+                                   "value": "cobaltOverdraftOptionPopup",
+                                   "name": "$nav.overlay.add;"
+                              }
+                         ]
+                    },
+                    "consent": {
+                         "updates": [
+                              {
+                                   "value": "cobaltEmailAndIdentityDisclosurePopup",
+                                   "name": "$nav.overlay.add;"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "businessAccountName": "$this.attr(newBusinessCheck);==true",
+                    "lastName": false,
+                    "emailAddress": false,
+                    "mobilePhone": false,
+                    "firstName": false
+               },
+               "renderFields": {
+                    "ineligibleConsent": "$global.attr(eligibleContent);==true"
+               },
+               "textAfter": "<div class=\"ineligibleConsent $global.attr(eligibleContent);-ineligibleConsent\">I certify this business is not an <span class=\"navigate\" navigate=\"ineligibleConsent\">ineligible business</span>.</div><div class=\"myInformation $global.attr(eligibleContent);-myInformation\">I understand <span navigate=\"myInformation\" class=\"navigate\">how you use my information</span>.</div><div class=\"disclosure $global.attr(eligibleContent);-disclosure\">I consent to receive and agree to the <span class=\"navigate\" navigate=\"consent\">new account disclosures</span> electronically.</div>",
+               "noLabelFields": [
+                    "myInformationConcent",
+                    "electronicConsent",
+                    "ineligibleConsent"
+               ],
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "structureName": "cobalt_email_and_identity_form"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltEmailAndIdentityFormPanel",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltEmailAndIdentityFormPanel",
+     "clcommon__Release_Checksum__c": "5263151f15e88cfefff45c80e818f697aa1d53ffa022b48e80867560cfc149ea"
+}

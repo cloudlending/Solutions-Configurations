@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addMoreProductBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addMoreProductBtn",
+          "property": {},
+          "appearance": {
+               "label": "<span class=\"li-add-more-products\">Add Additional Products</span>",
+               "style": "primary"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltOpenAccountsSteps).appearance(current);",
+                         "value": 0
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "What type of product are you looking for?"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltSelectedAccountView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_selected_product_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltSelectedAccountView+addMoreProductBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltSelectedAccountView_addMoreProductBtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "a680f4f4efd7a8138492d25f4e63dc8e8e139f26b379c7601d639b1ca33b6672"
+}

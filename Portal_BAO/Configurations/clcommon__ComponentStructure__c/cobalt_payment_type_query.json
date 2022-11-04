@@ -1,0 +1,68 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_payment_type_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "cobalt_payment_type_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_payment_type_query",
+          "sections": [
+               {
+                    "id": "23dd5a10-3c46-4902-b76c-0c000de5b55e",
+                    "name": "Funding Methods",
+                    "fields": [
+                         {
+                              "id": "2131b415-44c6-4c34-b4a6-b90ca2783d97",
+                              "relationType": "reference",
+                              "fieldName": "oao__Payment_Type__c",
+                              "relationName": "oao__Payment_Type__r",
+                              "relationJson": {
+                                   "tableName": "oao__Payment_Type__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null and oao__User_Type__r.Name =':userType' and oao__Active__c=true "
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "9c52f773-3a7b-4485-915b-f7d7bb717c03",
+                                             "fields": [
+                                                  {
+                                                       "id": "8f4ab11e-8a63-42d3-b483-9654faf8cb64",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "ddd5b5eb-f5a3-4bf1-8d1f-2a68161e2316",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Payment Type Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "Payment Type",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "messages": {
+                                        "requiredErrorText": "Payment Type is requried"
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_payment_type_query",
+     "clcommon__Release_Checksum__c": "58e47a1b30217cf00937e71b0265b5bae9ca69e2de061105c290f37b91222983"
+}

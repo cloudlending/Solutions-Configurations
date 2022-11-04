@@ -1,0 +1,91 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_settings_json_detail_view",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_settings_json_detail_view",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_settings_json_detail_view",
+          "sections": [
+               {
+                    "id": "d6c9",
+                    "name": "start",
+                    "title": "Start Stage",
+                    "fields": [
+                         {
+                              "id": "d7bd",
+                              "fieldName": "start",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Start Stage",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank"
+                                   }
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "2d0b",
+                    "name": "global",
+                    "title": "Global Values",
+                    "fields": [
+                         {
+                              "id": "621c",
+                              "fieldName": "global",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Golbal Values",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid JSON for global values"
+                                   }
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "99a4",
+                    "name": "settings",
+                    "title": "Settings",
+                    "fields": [
+                         {
+                              "id": "e1c7",
+                              "fieldName": "settings",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Settings",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid JSON for settings"
+                                   }
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "ee40",
+                    "name": "messages",
+                    "title": "Global Messages",
+                    "fields": [
+                         {
+                              "id": "1150",
+                              "fieldName": "messages",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Global Messages",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid JSON for messages"
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_settings_json_detail_view",
+     "clcommon__Release_Checksum__c": "24853bc273a0b827f9ae4a9fee93b290b39ed894e68c1bab7938738febf54bbd"
+}

@@ -1,0 +1,78 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "textBefore": "Required Documents",
+               "renderText": {
+                    "queueSecondaryText": "$this.attr(clcommon__Status__c); == \"SUBMITTED\" or $this.attr(clcommon__Status__c); == \"APPROVED\""
+               },
+               "renderFields": {
+                    "clcommon__Parent_Document_Category__r.Id": true
+               },
+               "queueSecondaryText": "<div class=\"$this.attr(clcommon__Parent_Document_Category__r.clcommon__Status__c);\"><span class=\"material-icons\">done</span></div>",
+               "queuePrimaryText": "<div class=\"$this.attr(clcommon__Status__c); status-container\"><div class=\"title\">$this.attr(clcommon__Category_Name__c);<span class=\"\">$this.attr(oao__Document_Name__c);</span></div><div class=\"status\">$this.attr(clcommon__Status__c);</div><div class=\"resubmit\">$this.attr(oao__Reviewer_Comments__c);</div></div>",
+               "noLabelFields": [
+                    "clcommon__Category_Name__c",
+                    "clcommon__Parent_Document_Category__r.clcommon__Category_Name__c"
+               ],
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "groupBy": {
+                    "titles": [
+                         {
+                              "title": "<span tabIndex=\"0\">Business Documents</span>",
+                              "render": "$this.attr(clcommon__Parent_Document_Category__r.clcommon__Category_Name__c); == \"Business Documents\""
+                         },
+                         {
+                              "title": "<span tabIndex=\"0\">Identification Documents</span>",
+                              "render": "$this.attr(clcommon__Parent_Document_Category__r.clcommon__Category_Name__c); == \"Identification Documents\""
+                         }
+                    ],
+                    "field": "clcommon__Parent_Document_Category__r.clcommon__Category_Name__c"
+               },
+               "fieldColumns": 1,
+               "editableFields": {
+                    "clcommon__Status__c": false,
+                    "clcommon__Parent_Document_Category__r.clcommon__Status__c": false,
+                    "clcommon__Parent_Document_Category__r.clcommon__Category_Name__c": false,
+                    "clcommon__Parent_Document_Category__r.Id": false,
+                    "clcommon__Category_Name__c": false
+               },
+               "droppableRecord": {
+                    "uploadActionName": "documentsUploadbtn",
+                    "type": "FILE"
+               },
+               "accessibility": {
+                    "ariaLabel": "This section is where you have to upload Identification documents, and Business Documents"
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);"
+               },
+               "structureName": "cobalt_fetch_document_category"
+          },
+          "type": "queue-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltDocUploadPanel",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltDocUploadPanel",
+     "clcommon__Release_Checksum__c": "38891dedc74216322c4f8032dcb6a0bb33c27194f93b230ef02e2305b91f56b7"
+}

@@ -1,0 +1,117 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_container_configuration",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_container_configuration",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_container_configuration",
+          "sections": [
+               {
+                    "id": "6ec9",
+                    "name": "general",
+                    "fields": [
+                         {
+                              "id": "c83e",
+                              "fieldName": "renderCheckbox",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Render"
+                              }
+                         },
+                         {
+                              "id": "d7b9",
+                              "fieldName": "renderStatement",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "placeholderText": "Conditionally render tabs, steps or accordion"
+                              }
+                         },
+                         {
+                              "id": "0200",
+                              "fieldName": "renderFalseStatementTabs",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "Tabs are hidden."
+                              }
+                         },
+                         {
+                              "id": "93f5",
+                              "fieldName": "renderFalseStatementSteps",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "Steps are hidden."
+                              }
+                         },
+                         {
+                              "id": "eefc",
+                              "fieldName": "renderFalseStatementAccordion",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "Accordion is hidden."
+                              }
+                         },
+                         {
+                              "id": "1j5k",
+                              "fieldName": "visibleIndexes",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Visible Indexes",
+                                   "placeholderText": "I,II,III,IV"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "6a0a",
+                    "name": "styleInfo",
+                    "fields": [
+                         {
+                              "id": "1e9b",
+                              "fieldName": "style",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Style",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Primary",
+                                             "optionValue": "primary"
+                                        },
+                                        {
+                                             "optionText": "Secondary",
+                                             "optionValue": "secondary"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "09f0",
+                              "fieldName": "titleOrientation",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Orientation",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Horizontal",
+                                             "optionValue": "horizontal"
+                                        },
+                                        {
+                                             "optionText": "Vertical",
+                                             "optionValue": "vertical"
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_container_configuration",
+     "clcommon__Release_Checksum__c": "2334a1280b4e3083af52527bf519d28ca5e7fd71ed91d2a29f09b35298ac6fb9"
+}

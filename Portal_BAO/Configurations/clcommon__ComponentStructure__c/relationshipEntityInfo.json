@@ -1,0 +1,60 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "$relationshipEntityInfo",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "$relationshipEntityInfo",
+     "clcommon__data__c": {
+          "structureName": "$relationshipEntityInfo",
+          "tableName": "clcommon__Relationship__c",
+          "whereClause": {
+               "freeForm": "clcommon__Entity__c = '$User.accountId' OR clcommon__Related_Entity__c = '$User.accountId'"
+          },
+          "orderBy": "createddate desc limit 1",
+          "sections": [
+               {
+                    "id": "3df9794a-df84-4990-ae17-4de7e17e3ede",
+                    "fields": [
+                         {
+                              "id": "e99ecf8e-3efc-451e-a11d-191570120459",
+                              "fieldName": "clcommon__Entity__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Entity"
+                              }
+                         },
+                         {
+                              "id": "e99ecf8e-3efc-451e-a11d-191570120458",
+                              "fieldName": "clcommon__Entity_Role__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Entity Role"
+                              }
+                         },
+                         {
+                              "id": "e99ecf8e-3efc-451e-a11d-191570120457",
+                              "fieldName": "clcommon__Related_Entity__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Related Entity"
+                              }
+                         },
+                         {
+                              "id": "e99ecf8e-3efc-451e-a11d-191570120456",
+                              "fieldName": "clcommon__Related_Entity_Role__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Related Entity Role"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "relationshipEntityInfo",
+     "clcommon__Release_Checksum__c": "fdd99375cffb1c808068aefaeb4785b66e26680f7273952beacb6829a789a2be"
+}

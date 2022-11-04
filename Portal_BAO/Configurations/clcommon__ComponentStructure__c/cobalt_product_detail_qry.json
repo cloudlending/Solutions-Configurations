@@ -1,0 +1,185 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_product_detail_qry",
+     "clcommon__Allow_Guest_User_Access__c": true,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "cobalt_product_detail_qry",
+     "clcommon__data__c": {
+          "structureName": "cobalt_product_detail_qry",
+          "sections": [
+               {
+                    "id": "db0a880e-f76f-4af6-9481-267d11847e4b",
+                    "name": "ProductDetails",
+                    "title": "<span class = \"benefits\"><span class=\"ben-title\">$this.attr(oao__Benefits_Title__c);</span><span class=\"ben-text\">$this.attr(oao__Benefits_Text__c);</span></span><span class = \"requirements\"><span class=\"req-title\">$this.attr(oao__Requirements_Title__c);</span><span class=\"req-text\">$this.attr(oao__Requirements_Text__c);</span></span><span class=\"footer\">$this.attr(oao__Footer__c);</span><span class=\"min-opening-deposit\"><span class=\"label\">Minimum opening deposit</span><span class=\"value\">$this.attr(clcommon__Product_Abbreviation__c);</span></span>",
+                    "fields": [
+                         {
+                              "id": "46b1b7e0-9955-4d34-bebd-997ac488e464646434e",
+                              "fieldName": "oao__Product_Id__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Product id",
+                                   "ariaLabel": "Product id"
+                              }
+                         },
+                         {
+                              "id": "d04bb5ef-7e67-4a85-beb3-8c85207220b5",
+                              "fieldName": "oao__Product_Term__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Term",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "selectOptions": [
+                                        {
+                                             "id": "12",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "12",
+                                             "optionValue": "12"
+                                        },
+                                        {
+                                             "id": "24",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "24",
+                                             "optionValue": "24"
+                                        },
+                                        {
+                                             "id": "36",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "36",
+                                             "optionValue": "36"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Term is required"
+                                   },
+                                   "ariaLabel": "Term"
+                              }
+                         },
+                         {
+                              "id": "46b1b7e0-9955-4d34-bebd-9434e",
+                              "fieldName": "clcommon__Product_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Product name",
+                                   "ariaLabel": "Product name"
+                              }
+                         },
+                         {
+                              "id": "11a5b5ce-fe73-47c0-843d-e94efe108687",
+                              "fieldName": "clcommon__Product_Abbreviation__c",
+                              "fieldUi": {
+                                   "fieldType": "String",
+                                   "label": "Minimum opening deposit",
+                                   "ariaLabel": "Minimum opening deposit"
+                              }
+                         },
+                         {
+                              "id": "ca04ec84-1d33-4edb-b4a4-6ac4f2cdd739",
+                              "fieldName": "oao__Requirements_Title__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": ""
+                              }
+                         },
+                         {
+                              "id": "ca04ec84-1d33-4edb-b4a4-6ac4f2cdd739",
+                              "fieldName": "oao__Requirements_Text__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": ""
+                              }
+                         },
+                         {
+                              "id": "ca043284-1d333-4edb-b4a4-6a23739",
+                              "fieldName": "Footer",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Footer"
+                              }
+                         },
+                         {
+                              "id": "ca04ec84-1d33-4edb-b4a4-6ac4f2cdd739",
+                              "fieldName": "oao__Benefits_Title__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": ""
+                              }
+                         },
+                         {
+                              "id": "c28a3f1c-68e3-4eab-80d8-dbe16f80188d",
+                              "fieldName": "oao__Title__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Title",
+                                   "ariaLabel": "Title"
+                              }
+                         },
+                         {
+                              "id": "ca04ec84-1d33-4edb-b4a4-6ac4f2cdd739",
+                              "fieldName": "oao__Benefits_Text__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": ""
+                              }
+                         },
+                         {
+                              "id": "b05bcd87-29a5-4a4a-8c76-0968ef31e7cb",
+                              "fieldName": "oao__IsSelected__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Is Product Selected",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Partner Account"
+                              }
+                         },
+                         {
+                              "id": "b05bcdsdfsdfa87-29345234asca5-4a4a-8c76-0968easdfasdfaf31e7cb",
+                              "fieldName": "oao__Default__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "",
+                                   "defaultValue": false
+                              }
+                         },
+                         {
+                              "id": "b05bcdasfdasdfsdfafff87-29345234asca5-4a4a-8c76-0968easdfasdfaf31e7ggcb",
+                              "fieldName": "oao__Required__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "",
+                                   "defaultValue": false
+                              }
+                         },
+                         {
+                              "id": "",
+                              "fieldName": "oao__Footer__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Footer",
+                                   "ariaLabel": "Footer"
+                              }
+                         },
+                         {
+                              "id": "9c460cf9-7a7a-4b8a-9bfd-ed523eb5955b",
+                              "fieldName": "oao__Show_Term__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Show Term?",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Show Term?"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_product_detail_qry",
+     "clcommon__Release_Checksum__c": "47399a078a690ef2c102abc9dced193437765520fe00ba01e8ce198aa365efbb"
+}

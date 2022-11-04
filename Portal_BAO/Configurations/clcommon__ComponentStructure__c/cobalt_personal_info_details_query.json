@@ -1,0 +1,124 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_personal_info_details_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "contactId",
+     "clcommon__Record_Access_Filter__c": "Id",
+     "clcommon__Unique_Name__c": "cobalt_personal_info_details_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_personal_info_details_query",
+          "tableName": "contact",
+          "whereClause": {
+               "freeForm": "id= '$User.contactId'"
+          },
+          "sections": [
+               {
+                    "id": "7ef1b3ae-3078-4b65-9a5e-392a19507f57",
+                    "name": "StateSection",
+                    "fields": [
+                         {
+                              "id": "7ba7c5a7-6ec0-4c59-9a99-52c162c9798d",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Id",
+                                   "ariaLabel": "Id"
+                              }
+                         },
+                         {
+                              "id": "d6f9aed6-256a-47a0-8d78-0e400cc87df7",
+                              "fieldName": "FirstName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "First Name",
+                                   "required": true,
+                                   "regex": "^([a-zA-ZàáâäãåąčćæęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÆÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{1,20}['.-]?[a-zA-ZàáâäãåąčćæęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÆÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{0,20}?)$",
+                                   "messages": {
+                                        "requiredErrorText": "First Name is required",
+                                        "regexErrorText": "First Name is invalid"
+                                   },
+                                   "ariaLabel": "First name"
+                              }
+                         },
+                         {
+                              "id": "374561cc-540f-451e-8ffc-df0acbc0dafb",
+                              "fieldName": "MiddleName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Middle Name",
+                                   "required": true,
+                                   "regex": "^([a-zA-ZàáâäãåąčćæęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÆÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{1,20}['.-]?[a-zA-ZàáâäãåąčćæęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÆÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{0,20}?)$",
+                                   "messages": {
+                                        "requiredErrorText": "Middle Name is required",
+                                        "regexErrorText": "Middle Name is invalid"
+                                   },
+                                   "ariaLabel": "Middle name"
+                              }
+                         },
+                         {
+                              "id": "130e5236-311b-492a-8b60-404eabedcbea",
+                              "fieldName": "LastName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Last Name",
+                                   "required": true,
+                                   "regex": "^([a-zA-ZàáâäãåąčćæęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÆÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{1,20}['.-]?[a-zA-ZàáâäãåąčćæęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÆÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{0,20}?)$",
+                                   "messages": {
+                                        "requiredErrorText": "Last Name is required",
+                                        "regexErrorText": "Last Name is invalid"
+                                   },
+                                   "ariaLabel": "Last name"
+                              }
+                         },
+                         {
+                              "id": "7bde5178-9c6d-486b-ba04-15ebce7c4629",
+                              "fieldName": "Email",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Email",
+                                   "ariaLabel": "Email"
+                              }
+                         },
+                         {
+                              "id": "ea337edb-d07b-4eb1-8036-d0ad85af1a56",
+                              "fieldName": "MobilePhone",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Mobile Phone",
+                                   "required": true,
+                                   "regex": "^[0-9]{10}",
+                                   "messages": {
+                                        "requiredErrorText": "Mobile Phone is required",
+                                        "regexErrorText": "Mobile Phone is invalid"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numericOnly": true,
+                                             "blocks": [
+                                                  0,
+                                                  3,
+                                                  0,
+                                                  3,
+                                                  4
+                                             ],
+                                             "delimiters": [
+                                                  "(",
+                                                  ")",
+                                                  " ",
+                                                  "-"
+                                             ]
+                                        }
+                                   },
+                                   "ariaLabel": "Mobile Phone"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_personal_info_details_query",
+     "clcommon__Release_Checksum__c": "6765eb2dff4903eba0be2e6a0fdd30c1318c87606d5b05558c42f8634e54bbc8"
+}

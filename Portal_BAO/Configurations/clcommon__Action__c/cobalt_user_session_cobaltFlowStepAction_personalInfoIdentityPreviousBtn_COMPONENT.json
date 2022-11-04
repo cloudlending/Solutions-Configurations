@@ -1,0 +1,85 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "personalInfoIdentityPreviousBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "personalInfoIdentityPreviousBtn",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-personal-identity-back\">Back</span>",
+               "variant": "outlined",
+               "render": "$global.attr(pageName); == \"personalinfoidentity\""
+          },
+          "remoteActionArguments": {},
+          "remoteActionProcess": {
+               "post": "$ext.dynamicStepper"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "personalInfo"
+                    },
+                    {
+                         "field": "$nav(cobaltPersonalInfoSteps).appearance(current);",
+                         "value": "contact"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "PERSONAL INFORMATION: CONTACT INFO"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "personalinfocontactUs"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "default"
+                         ]
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltPersonalInformationContactUsNamePanel",
+                              "cobaltPersonalInformationContactUsStreetAddressPanel",
+                              "cobaltPersonalInformationContactUsMailingAddressPanel"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go back to the Personal Information Contact page"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+personalInfoIdentityPreviousBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_personalInfoIdentityPreviousBtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "a1a42070b25db2894ac4973eccde01156082c05d70ff5349b9c1e5cc224a0ca2"
+}

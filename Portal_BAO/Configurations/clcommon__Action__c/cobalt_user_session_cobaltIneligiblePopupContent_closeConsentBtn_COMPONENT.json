@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "closeConsentBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "closeConsentBtn",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "style": "primary",
+               "label": "Close"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "cobaltMyInformationPopupContent"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltIneligiblePopupContent"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltIneligiblePopupContent+closeConsentBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltIneligiblePopupContent_closeConsentBtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "16e09b753b59e8d0585376ab533d53bbde5e9e15a0a44e02c215b6c6e89232ce"
+}

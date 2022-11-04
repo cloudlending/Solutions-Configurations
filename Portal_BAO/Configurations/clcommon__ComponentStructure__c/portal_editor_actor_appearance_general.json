@@ -1,0 +1,325 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_actor_appearance_general",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_actor_appearance_general",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_actor_appearance_general",
+          "sections": [
+               {
+                    "id": "bdca",
+                    "name": "general",
+                    "fields": [
+                         {
+                              "id": "4ab2",
+                              "fieldName": "name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Name",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Name cannot be blank."
+                                   }
+                              }
+                         },
+                         {
+                              "id": "0dc0",
+                              "fieldName": "type",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Type",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "List View",
+                                             "optionValue": "list-view"
+                                        },
+                                        {
+                                             "optionText": "Queue View",
+                                             "optionValue": "queue-view"
+                                        },
+                                        {
+                                             "optionText": "Card View",
+                                             "optionValue": "card-view"
+                                        },
+                                        {
+                                             "optionText": "Detail View",
+                                             "optionValue": "detail-view"
+                                        },
+                                        {
+                                             "optionText": "Panel",
+                                             "optionValue": "base-panel"
+                                        },
+                                        {
+                                             "optionText": "Tree View",
+                                             "optionValue": "tree-view"
+                                        },
+                                        {
+                                             "optionText": "Data Model",
+                                             "optionValue": "data-model"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "2817",
+                              "fieldName": "renderCheckbox",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Render"
+                              }
+                         },
+                         {
+                              "id": "9b00",
+                              "fieldName": "renderStatement",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "placeholderText": "Conditionally render this actor"
+                              }
+                         },
+                         {
+                              "id": "4b5e",
+                              "fieldName": "renderFalseStatementListView",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "This list view is hidden."
+                              }
+                         },
+                         {
+                              "id": "a590",
+                              "fieldName": "renderFalseStatementQueueView",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "This queue view is hidden."
+                              }
+                         },
+                         {
+                              "id": "6ce2",
+                              "fieldName": "renderFalseStatementCardView",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "This card view is hidden."
+                              }
+                         },
+                         {
+                              "id": "1475",
+                              "fieldName": "renderFalseStatementDetailView",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "This detail view is hidden."
+                              }
+                         },
+                         {
+                              "id": "b195",
+                              "fieldName": "renderFalseStatementPanel",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "This panel is hidden."
+                              }
+                         },
+                         {
+                              "id": "31be",
+                              "fieldName": "editableCheckbox",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Editable"
+                              }
+                         },
+                         {
+                              "id": "e585",
+                              "fieldName": "editableStatement",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "placeholderText": "Conditionally make this actor editable"
+                              }
+                         },
+                         {
+                              "id": "5ff3",
+                              "fieldName": "editableFalseStatementListView",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "This list view is not editable."
+                              }
+                         },
+                         {
+                              "id": "1f2d",
+                              "fieldName": "editableFalseStatementQueueView",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "This queue view is not editable."
+                              }
+                         },
+                         {
+                              "id": "2cdb",
+                              "fieldName": "editableFalseStatementCardView",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "This card view is not editable."
+                              }
+                         },
+                         {
+                              "id": "eede",
+                              "fieldName": "editableFalseStatementDetailView",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "This detail view is not editable."
+                              }
+                         },
+                         {
+                              "id": "2ebb",
+                              "fieldName": "editableFalseStatementPanel",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "This panel is not editable."
+                              }
+                         },
+                         {
+                              "id": "c5a2",
+                              "fieldName": "fieldColumns",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Field Columns",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "1",
+                                             "optionValue": "1"
+                                        },
+                                        {
+                                             "optionText": "2",
+                                             "optionValue": "2"
+                                        },
+                                        {
+                                             "optionText": "3",
+                                             "optionValue": "3"
+                                        },
+                                        {
+                                             "optionText": "4",
+                                             "optionValue": "4"
+                                        },
+                                        {
+                                             "optionText": "5",
+                                             "optionValue": "5"
+                                        },
+                                        {
+                                             "optionText": "6",
+                                             "optionValue": "6"
+                                        },
+                                        {
+                                             "optionText": "7",
+                                             "optionValue": "7"
+                                        },
+                                        {
+                                             "optionText": "8",
+                                             "optionValue": "8"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "bd6d",
+                              "fieldName": "columns",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Card Columns",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "1",
+                                             "optionValue": "1"
+                                        },
+                                        {
+                                             "optionText": "2",
+                                             "optionValue": "2"
+                                        },
+                                        {
+                                             "optionText": "3",
+                                             "optionValue": "3"
+                                        },
+                                        {
+                                             "optionText": "4",
+                                             "optionValue": "4"
+                                        },
+                                        {
+                                             "optionText": "5",
+                                             "optionValue": "5"
+                                        },
+                                        {
+                                             "optionText": "6",
+                                             "optionValue": "6"
+                                        },
+                                        {
+                                             "optionText": "7",
+                                             "optionValue": "7"
+                                        },
+                                        {
+                                             "optionText": "8",
+                                             "optionValue": "8"
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "ec94",
+                    "name": "expansion",
+                    "fields": [
+                         {
+                              "id": "6476",
+                              "fieldName": "expansionTop",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Expansion Top",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "None",
+                                             "optionValue": "none"
+                                        },
+                                        {
+                                             "optionText": "Normal",
+                                             "optionValue": "normal"
+                                        },
+                                        {
+                                             "optionText": "Large",
+                                             "optionValue": "large"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "47fc",
+                              "fieldName": "expansionBottom",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Expansion Bottom",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "None",
+                                             "optionValue": "none"
+                                        },
+                                        {
+                                             "optionText": "Normal",
+                                             "optionValue": "normal"
+                                        },
+                                        {
+                                             "optionText": "Large",
+                                             "optionValue": "large"
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_actor_appearance_general",
+     "clcommon__Release_Checksum__c": "a5875bbaf4bdb2e0c73018a98ce529734a25d8a7c53db3160d0f9ba535378a7b"
+}

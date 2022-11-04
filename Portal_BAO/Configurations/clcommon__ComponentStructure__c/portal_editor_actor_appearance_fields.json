@@ -1,0 +1,93 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_actor_appearance_fields",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_actor_appearance_fields",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_actor_appearance_fields",
+          "sections": [
+               {
+                    "fields": [
+                         {
+                              "id": "18dc",
+                              "fieldName": "fieldName",
+                              "fieldUi": {
+                                   "fieldType": "string"
+                              }
+                         },
+                         {
+                              "id": "78a4",
+                              "fieldName": "renderCheckbox",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Render"
+                              }
+                         },
+                         {
+                              "id": "cfcf",
+                              "fieldName": "renderStatement",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "placeholderText": "Conditionally render this field"
+                              }
+                         },
+                         {
+                              "id": "1136",
+                              "fieldName": "renderFalseStatement",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "This field is hidden."
+                              }
+                         },
+                         {
+                              "id": "3bb5",
+                              "fieldName": "editableCheckbox",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Editable"
+                              }
+                         },
+                         {
+                              "id": "bb4d",
+                              "fieldName": "editableStatement",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "placeholderText": "Conditionally make this field editable"
+                              }
+                         },
+                         {
+                              "id": "98d6",
+                              "fieldName": "editableFalseStatement",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "defaultValue": "This field is not editable."
+                              }
+                         },
+                         {
+                              "id": "3056",
+                              "fieldName": "noLabelField",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "No Label"
+                              }
+                         },
+                         {
+                              "id": "a305",
+                              "fieldName": "spanLabel",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Span Cross Columns"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_actor_appearance_fields",
+     "clcommon__Release_Checksum__c": "9bd0f49df6cd173099a5f0b8e2a427ed238c70f2ccc698753d053f37bbc1c1b2"
+}
