@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "query1",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "query1",
+          "property": {},
+          "appearance": {
+               "label": "FetchCartDetailsApi",
+               "style": "normal",
+               "position": "top-right"
+          },
+          "remoteActionArguments": {
+               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": []
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "query",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltSelectedAccountView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_selected_product_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.FetchCartDetailsApi",
+     "clcommon__Unique_Action_Name__c": "cobaltSelectedAccountView+query1",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltSelectedAccountView_query1_COMPONENT",
+     "clcommon__Release_Checksum__c": "fe1c02d9a183c14a52d17fc9cde9c21f5bcf34060e601fc9abc77ef4893666a9"
+}

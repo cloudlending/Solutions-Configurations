@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "showMiddleNamebtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "showMiddleNamebtn",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(showMiddleName); == false",
+               "label": "Show middle name",
+               "style": "secondary",
+               "position": "top-right"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(showMiddleName);",
+                         "value": true
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltPersonalInformationContactUsNamePanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_personal_info_details_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltPersonalInformationContactUsNamePanel+showMiddleNamebtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltPersonalInformationContactUsNamePanel_showMiddleNamebtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "a172f1372944a13010954d1cfb0dd8f9ec7be8eee91312beaf7d6c95d2521772"
+}

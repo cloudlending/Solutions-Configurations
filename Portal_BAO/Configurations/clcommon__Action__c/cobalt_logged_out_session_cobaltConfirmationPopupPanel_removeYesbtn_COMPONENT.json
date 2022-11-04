@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "removeYesbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "removeYesbtn",
+          "property": {},
+          "appearance": {
+               "label": "Ok",
+               "style": "primary",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {
+               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);",
+               "productId": "$global.attr(productId);",
+               "productName": "$global.attr(productName);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltCartView",
+                              "cobaltStepperTitlePanel",
+                              "cobaltProductListCardView",
+                              "cobaltSelectedAccountView"
+                         ]
+                    },
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": [
+                              "cobaltConfirmationPopup"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Delete Product"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltConfirmationPopupPanel"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.DeleteFromCartApi",
+     "clcommon__Unique_Action_Name__c": "cobaltConfirmationPopupPanel+removeYesbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltConfirmationPopupPanel_removeYesbtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "6117feb7c93aaf0f80d8dedcf0b51db34241db9cf62ce331929709020eebaa90"
+}

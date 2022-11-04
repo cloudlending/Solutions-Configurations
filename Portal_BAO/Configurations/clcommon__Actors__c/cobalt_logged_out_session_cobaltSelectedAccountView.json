@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "",
+                              "field": "$global.attr(openAccountTab);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "accessibility": {
+                    "ariaLabel": "This section lists the product that you have added to the cart"
+               },
+               "renderFields": {
+                    "oao__Required__c": false,
+                    "oao__Product_Id__c": false
+               },
+               "fieldColumns": 1,
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editableFields": {
+                    "oao__Product_Id__c": false,
+                    "clcommon__Product_Name__c": false
+               },
+               "queuePrimaryText": "<span aria-hidden=\"true\" class=\"material-icons\">done</span> $this.attr(clcommon__Product_Name__c);"
+          },
+          "property": {
+               "queryName": "query1",
+               "structureName": "cobalt_selected_product_query"
+          },
+          "type": "queue-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltSelectedAccountView",
+     "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltSelectedAccountView",
+     "clcommon__Release_Checksum__c": "22f9d7559935dc2f857035ef2067ead8fe9ebcb9304368dcbcdf2133648fd684"
+}

@@ -1,0 +1,255 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_branding_background_border_mui",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_branding_background_border_mui",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_branding_background_border_mui",
+          "sections": [
+               {
+                    "id": "a7b5",
+                    "name": "borderRadius",
+                    "fields": [
+                         {
+                              "id": "37a3",
+                              "fieldName": "borderRadius",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Border Radius",
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "0px",
+                                             "optionValue": "0"
+                                        },
+                                        {
+                                             "optionText": "2px",
+                                             "optionValue": "2"
+                                        },
+                                        {
+                                             "optionText": "4px",
+                                             "optionValue": "4"
+                                        },
+                                        {
+                                             "optionText": "6px",
+                                             "optionValue": "6"
+                                        },
+                                        {
+                                             "optionText": "8px",
+                                             "optionValue": "8"
+                                        },
+                                        {
+                                             "optionText": "10px",
+                                             "optionValue": "10"
+                                        },
+                                        {
+                                             "optionText": "12px",
+                                             "optionValue": "12"
+                                        },
+                                        {
+                                             "optionText": "15px",
+                                             "optionValue": "15"
+                                        }
+                                   ],
+                                   "defaultValue": "4"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "1c15",
+                    "name": "divisionBackgroundBorder",
+                    "title": "Division",
+                    "fields": [
+                         {
+                              "id": "0518",
+                              "fieldName": "divisionBackgroundColor",
+                              "fieldUi": {
+                                   "fieldType": "colorpicker",
+                                   "label": "Background",
+                                   "pickerOptions": {
+                                        "popupName": "ColorPalettePopup",
+                                        "allowTransparent": true
+                                   }
+                              }
+                         },
+                         {
+                              "id": "7533",
+                              "fieldName": "divisionBorderColor",
+                              "fieldUi": {
+                                   "fieldType": "colorpicker",
+                                   "label": "Border",
+                                   "pickerOptions": {
+                                        "popupName": "ColorPalettePopup",
+                                        "allowTransparent": true
+                                   }
+                              }
+                         },
+                         {
+                              "id": "a5f4",
+                              "fieldName": "divisionBorderRadius",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "With Border Radius"
+                              }
+                         },
+                         {
+                              "id": "1db5",
+                              "fieldName": "divisionShadow",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "With Shadow"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "a5a9",
+                    "name": "componentBackgroundBorder",
+                    "title": "Component",
+                    "fields": [
+                         {
+                              "id": "f7c1",
+                              "fieldName": "componentBackgroundColor",
+                              "fieldUi": {
+                                   "fieldType": "colorpicker",
+                                   "label": "Background",
+                                   "pickerOptions": {
+                                        "popupName": "ColorPalettePopup",
+                                        "allowTransparent": true
+                                   }
+                              }
+                         },
+                         {
+                              "id": "fec8",
+                              "fieldName": "componentBorderColor",
+                              "fieldUi": {
+                                   "fieldType": "colorpicker",
+                                   "label": "Border",
+                                   "pickerOptions": {
+                                        "popupName": "ColorPalettePopup",
+                                        "allowTransparent": true
+                                   }
+                              }
+                         },
+                         {
+                              "id": "0892",
+                              "fieldName": "componentBorderRadius",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "With Border Radius"
+                              }
+                         },
+                         {
+                              "id": "031f",
+                              "fieldName": "componentShadow",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "With Shadow"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "ac9f",
+                    "name": "contentBackgroundBorder",
+                    "title": "Content",
+                    "fields": [
+                         {
+                              "id": "8469",
+                              "fieldName": "contentBackgroundColor",
+                              "fieldUi": {
+                                   "fieldType": "colorpicker",
+                                   "label": "Background",
+                                   "pickerOptions": {
+                                        "popupName": "ColorPalettePopup",
+                                        "allowTransparent": true
+                                   }
+                              }
+                         },
+                         {
+                              "id": "2dd3",
+                              "fieldName": "contentBorderColor",
+                              "fieldUi": {
+                                   "fieldType": "colorpicker",
+                                   "label": "Border",
+                                   "pickerOptions": {
+                                        "popupName": "ColorPalettePopup",
+                                        "allowTransparent": true
+                                   }
+                              }
+                         },
+                         {
+                              "id": "bca2",
+                              "fieldName": "contentBorderRadius",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "With Border Radius"
+                              }
+                         },
+                         {
+                              "id": "a109",
+                              "fieldName": "contentShadow",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "With Shadow"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "fe27",
+                    "name": "containerBackgroundBorder",
+                    "title": "Container",
+                    "fields": [
+                         {
+                              "id": "4a59",
+                              "fieldName": "containerBackgroundColor",
+                              "fieldUi": {
+                                   "fieldType": "colorpicker",
+                                   "label": "Background",
+                                   "pickerOptions": {
+                                        "popupName": "ColorPalettePopup",
+                                        "allowTransparent": true
+                                   }
+                              }
+                         },
+                         {
+                              "id": "1cad",
+                              "fieldName": "containerBorderColor",
+                              "fieldUi": {
+                                   "fieldType": "colorpicker",
+                                   "label": "Border",
+                                   "pickerOptions": {
+                                        "popupName": "ColorPalettePopup",
+                                        "allowTransparent": true
+                                   }
+                              }
+                         },
+                         {
+                              "id": "790d",
+                              "fieldName": "containerBorderRadius",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "With Border Radius"
+                              }
+                         },
+                         {
+                              "id": "9967",
+                              "fieldName": "containerShadow",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "With Shadow"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_branding_background_border_mui",
+     "clcommon__Release_Checksum__c": "b09f78ff2ac2e8689b0fb6fdf1f62f9716623ee250e2edb49a9d11fa94eefea5"
+}

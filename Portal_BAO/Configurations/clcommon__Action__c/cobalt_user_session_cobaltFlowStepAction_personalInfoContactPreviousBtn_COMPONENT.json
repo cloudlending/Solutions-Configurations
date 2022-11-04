@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "personalInfoContactPreviousBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "personalInfoContactPreviousBtn",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-personal-contact-back\">Back</span>",
+               "variant": "outlined",
+               "render": "$global.attr(pageName); == \"personalinfocontactUs\" and $global.attr(typeOfApplication); == \"existing\""
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltDashboardSteps).appearance(current);",
+                         "value": "previous"
+                    },
+                    {
+                         "field": "$nav(cobaltPersonalInfoSteps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltDashboardPanel",
+                              "cobaltDashboardCardView",
+                              "cobaltFetchContactDetailsModel"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+personalInfoContactPreviousBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_personalInfoContactPreviousBtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "734040c6adf0598d9a776df8b98a96e11c0157e91087f13d10caa98fe1937eb6"
+}

@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$this.sum(oao__Percentage_Ownership__c);",
+                              "field": "$global.attr(percentageBO);"
+                         },
+                         {
+                              "value": "$this.count();",
+                              "field": "$global.attr(BOCount);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": false
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);"
+               },
+               "structureName": "cobalt_party_summary_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltBOCountListView",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltBOCountListView",
+     "clcommon__Release_Checksum__c": "c82eb5e6a51bf6e44fa927cd656819a33f93fa43ccb0ba1d9189b08c301cd292"
+}

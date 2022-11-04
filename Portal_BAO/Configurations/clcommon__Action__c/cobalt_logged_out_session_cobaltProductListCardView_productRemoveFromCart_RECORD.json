@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "productRemoveFromCart",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "productRemoveFromCart",
+          "property": {},
+          "appearance": {
+               "render": "$this.attr(oao__IsSelected__c);==true and $this.attr(oao__Required__c);==false",
+               "label": "<span class=\"lo-remove-from-cart\">Remove from cart</span>",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "productName": "$this.attr(oao__Product_Name__c);",
+               "productId": "$this.attr(oao__Product_Id__c);",
+               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$this.attr(IsSelected__c);",
+                         "value": false
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltCartView",
+                              "cobaltStepperTitlePanel"
+                         ]
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "cobaltProductListCardView"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to remove product from cart"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltProductListCardView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_product_detail_qry",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": "oao.DeleteFromCartApi",
+     "clcommon__Unique_Action_Name__c": "cobaltProductListCardView+productRemoveFromCart",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltProductListCardView_productRemoveFromCart_RECORD",
+     "clcommon__Release_Checksum__c": "e9f16659c192b3e5fc34b0133316c3284ead44ba9f01e58dc874de5c44e730bf"
+}

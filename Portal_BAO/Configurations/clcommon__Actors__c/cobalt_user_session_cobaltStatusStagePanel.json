@@ -1,0 +1,74 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "actions": [
+                         {
+                              "name": "goToActivityPage",
+                              "actorName": "cobaltFlowStepAction",
+                              "condition": "$this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"BusinessInformationIndustryCode\" and $global.attr(executeAPI);==true"
+                         },
+                         {
+                              "name": "goToAddBusinessPartiesPage",
+                              "actorName": "cobaltFlowStepAction",
+                              "condition": "$this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"AccountActivity\" and $global.attr(executeAPI);==true"
+                         },
+                         {
+                              "name": "goToAddonsPageBtn",
+                              "actorName": "cobaltFlowStepAction",
+                              "condition": "$this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"AddBusinessPersons\" and $global.attr(executeAPI);==true"
+                         },
+                         {
+                              "name": "goToReferral",
+                              "actorName": "cobaltFlowStepAction",
+                              "condition": "$this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"ApplicationReferredToView\" and $global.attr(executeAPI);==true"
+                         }
+                    ],
+                    "assignments": [
+                         {
+                              "value": "@mathjs{($this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"ApplicationReferredToView\" and $global.attr(executeAPI);==true)?false:true};",
+                              "field": "$global.attr(allowDocumentUpload);"
+                         },
+                         {
+                              "value": "@mathjs{($this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"ApplicationReferredToView\" and $global.attr(executeAPI);==true)?\"Thrive Financial does not offer business accounts to your type of business.<br><br>If you have any questions, please feel free to contact us!<br><br>Thank you for your interest in Thrive Financial!<br><br>You may now close this tab.\":$global.attr(referredText);};",
+                              "field": "$global.attr(referredText);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "render": false,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);"
+               },
+               "structureName": "cobalt_stage_panel_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltStatusStagePanel",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltStatusStagePanel",
+     "clcommon__Release_Checksum__c": "78a305080ef29e82eec277956771081ca295a59622dbc1a03ac633129a3d9594"
+}

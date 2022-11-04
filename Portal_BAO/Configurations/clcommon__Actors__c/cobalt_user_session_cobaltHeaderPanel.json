@@ -1,0 +1,54 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$ext.changeDateTimeFormat",
+                              "field": ""
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "textAfter": "<div class=\"user-info-container\"><div class=\"name\">Welcome back, $this.attr(Name);</div><div class=\"login-date\">Last login $this.attr(LastLoginDate);</div></div>",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editableFields": {
+                    "LastLoginDate": false,
+                    "Name": false
+               },
+               "renderFields": {
+                    "LastLoginDate": false,
+                    "Name": false
+               },
+               "fieldColumns": 1,
+               "textBefore": "<img aria-label=\"Website Logo\" tabIndex=\"0\" src=\"/resource/oao__CobaltLogoWhite\">"
+          },
+          "property": {
+               "structureName": "cobalt_last_login_details"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltHeaderPanel",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltHeaderPanel",
+     "clcommon__Release_Checksum__c": "64d1f34f6877890beb01565234d6b5eb2de2b99357f193d99ce7fa71d3b70735"
+}

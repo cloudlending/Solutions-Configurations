@@ -1,0 +1,44 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "$borrowerInfo",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "$borrowerInfo",
+     "clcommon__data__c": {
+          "structureName": "$borrowerInfo",
+          "tableName": "clcommon__Party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c IN $currentUserInfo.genesis__Application__c AND clcommon__Type__r.Name='Borrower'"
+          },
+          "orderBy": "createddate desc limit 1",
+          "sections": [
+               {
+                    "id": "3df9794a-df84-4990-ae17-4de7e17e3ede",
+                    "fields": [
+                         {
+                              "id": "e99ecf8e-3efc-451e-a11d-191570120459",
+                              "fieldName": "clcommon__Account__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account Name"
+                              }
+                         },
+                         {
+                              "id": "e99ecf8e-3efc-451e-a11d-191570120452",
+                              "fieldName": "clcommon__Contact__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Contact Name"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "borrowerInfo",
+     "clcommon__Release_Checksum__c": "26bd50ec9f56cbb0e26ac5d731fc71b42efe6efbb211381b124e184b22eacd97"
+}

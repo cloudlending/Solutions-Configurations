@@ -1,0 +1,120 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "applicationcontinuedocapprovebtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "applicationcontinuedocapprovebtn",
+          "property": {},
+          "appearance": {
+               "label": "<span class=\"li-view-approved-application\">Continue</span>",
+               "style": "primary",
+               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"DocumentUpload\" and $this.attr(genesis__Application__r.genesis__Status__c); == \"APPROVED\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == true and $this.attr(oao__Submit_Application_Check__c); == true and $this.attr(genesis__Application__r.oao__Fundable__c);==true"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(userType);",
+                         "value": "$this.attr(genesis__Application__r.oao__User_Type__r.Name);"
+                    },
+                    {
+                         "field": "$global.attr(fundable);",
+                         "value": "$this.attr(genesis__Application__r.oao__Fundable__c);"
+                    },
+                    {
+                         "field": "$global.attr(businessAddress);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Account__r.BillingStreet);, $this.attr(genesis__Application__r.genesis__Account__r.BillingCity);, $this.attr(genesis__Application__r.genesis__Account__r.BillingState);, $this.attr(genesis__Application__r.genesis__Account__r.BillingPostalCode);, $this.attr(genesis__Application__r.genesis__Account__r.BillingCountry);"
+                    },
+                    {
+                         "field": "$global.attr(appId);",
+                         "value": "$this.attr(genesis__Application__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(appNumber);",
+                         "value": "$this.attr(genesis__Application__r.Name);"
+                    },
+                    {
+                         "field": "$global.attr(businessAccountId);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Account__r.Id);"
+                    },
+                    {
+                         "field": "$nav(cobaltDashboardSteps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "funding"
+                    },
+                    {
+                         "field": "$global.attr(showCartView);",
+                         "value": "old"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Fund Your Account"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "fundingAccount"
+                    },
+                    {
+                         "field": "$global.attr(typeOfApplication);",
+                         "value": "existing"
+                    },
+                    {
+                         "field": "$global.attr(partyType);",
+                         "value": "$this.attr(clcommon__Type__r.Name);"
+                    },
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": "$this.attr(id);"
+                    },
+                    {
+                         "field": "$global.attr(businessCategory);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);"
+                    },
+                    {
+                         "field": "$global.attr(isBO);",
+                         "value": "$this.attr(oao__Beneficial_Owner_Certification__c);"
+                    },
+                    {
+                         "field": "$global.attr(lockBusinessDetails);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Lock_Business_Details__c);"
+                    },
+                    {
+                         "field": "$global.attr(fundable);",
+                         "value": "$this.attr(genesis__Application__r.oao__Fundable__c);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "cobaltStepperTitlePanel"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 16,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_application_fetch_query",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltDashboardPanel+applicationcontinuedocapprovebtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardPanel_applicationcontinuedocapprovebtn_RECORD",
+     "clcommon__Release_Checksum__c": "3b68b4d7b59cd5762fc750233d2ed40d9824bf15b3d15004a41431edae015af9"
+}

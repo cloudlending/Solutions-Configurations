@@ -1,0 +1,202 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_data_query_summary",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_data_query_summary",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_data_query_summary",
+          "sections": [
+               {
+                    "id": "6dce",
+                    "name": "metaData-$this.attr(changeStatus);",
+                    "title": "<div class=\"hasChanged\">You have made changes in <span class=\"structure-name\">$this.attr(existingStructureName);</span>.</div><div class=\"aboutToChange\">You are about to change <span class=\"structure-name\">$this.attr(existingStructureName);</span>.</div>",
+                    "fields": [
+                         {
+                              "id": "3a3a",
+                              "fieldName": "hasExisting",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": ""
+                              }
+                         },
+                         {
+                              "id": "6de0",
+                              "fieldName": "changeStatus",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": ""
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "133f",
+                    "name": "howToSave",
+                    "fields": [
+                         {
+                              "id": "1d48",
+                              "fieldName": "howToSaveOptions",
+                              "fieldUi": {
+                                   "fieldType": "radiobuttons",
+                                   "label": "How would you like to save the query?",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Please specify the save option."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Create a new query with a unique name",
+                                             "optionValue": "new"
+                                        },
+                                        {
+                                             "optionText": "Update the existing query",
+                                             "optionValue": "existing"
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "ab3d",
+                    "name": "general",
+                    "fields": [
+                         {
+                              "id": "4e10",
+                              "fieldName": "structureName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Query Name",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Query name cannot be blank."
+                                   }
+                              }
+                         },
+                         {
+                              "id": "9132",
+                              "fieldName": "allowGuestAccess",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Allow Guest Access"
+                              }
+                         },
+                         {
+                              "id": "b456",
+                              "fieldName": "secureFilterKey",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Secure Filter Key",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "defaultValue": "ownerId"
+                              }
+                         },
+                         {
+                              "id": "eae6",
+                              "fieldName": "secureFilterValue",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Secure Filter Value",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "defaultValue": "id"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "79b5",
+                    "name": "existingGeneral",
+                    "fields": [
+                         {
+                              "id": "5b56",
+                              "fieldName": "existingStructureId",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Existing Query Id"
+                              }
+                         },
+                         {
+                              "id": "bbbe",
+                              "fieldName": "existingStructureName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Existing Query Name"
+                              }
+                         },
+                         {
+                              "id": "fa11",
+                              "fieldName": "allowGuestAccess",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Allow Guest Access"
+                              }
+                         },
+                         {
+                              "id": "4638",
+                              "fieldName": "secureFilterKey",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Secure Filter Key",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "defaultValue": "ownerId"
+                              }
+                         },
+                         {
+                              "id": "3821",
+                              "fieldName": "secureFilterValue",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Secure Filter Value",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "defaultValue": "id"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "2ff5",
+                    "name": "json",
+                    "fields": [
+                         {
+                              "id": "6afe",
+                              "fieldName": "structureJson",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Query Details",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid JSON for query"
+                                   }
+                              }
+                         },
+                         {
+                              "id": "35a6",
+                              "fieldName": "readOnlyStructureJson",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Query Details"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_data_query_summary",
+     "clcommon__Release_Checksum__c": "57db1cc9c2cc15e09de75ecf14a5a7e80f2af530130dd6bb3cf14af8f2a40686"
+}

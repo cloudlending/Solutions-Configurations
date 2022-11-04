@@ -1,0 +1,701 @@
+{
+     "attributes": {
+          "type": "clcommon__NavigationStructure__c"
+     },
+     "Name": "portal_editor_stage_bar",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Description__c": null,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Is_Template__c": false,
+     "clcommon__Related_Configuration_Mapping__c": null,
+     "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
+     "clcommon__Unique_Name__c": "portal_editor_stage_bar",
+     "clcommon__data__c": {
+          "start": "StageBar",
+          "stages": {
+               "StageBar": {
+                    "layout": {
+                         "name": "StageBarTop",
+                         "children": [
+                              {
+                                   "name": "StageBarPanel"
+                              },
+                              {
+                                   "name": "StageBarData"
+                              },
+                              {
+                                   "name": "CurrentActorMenuPopup"
+                              },
+                              {
+                                   "name": "CurrentDivisionMenuPopup"
+                              },
+                              {
+                                   "name": "VersionsPopup"
+                              }
+                         ]
+                    }
+               }
+          },
+          "actors": {
+               "VersionsPopup": {
+                    "mode": "popup",
+                    "category": "component",
+                    "type": "queue-view",
+                    "property": {
+                         "structureName": "portal_editor_versions_queue_view_popup",
+                         "whereClause": {
+                              "navName": "$state(StageBarData).attr(navName);"
+                         }
+                    },
+                    "appearance": {
+                         "transient": true,
+                         "fieldColumns": 2,
+                         "noLabelFields": [
+                              "CreatedBy.Name",
+                              "CreatedDate"
+                         ],
+                         "pagination": {
+                              "recordLineTemplate": "$start; - $end; of $total;",
+                              "numberOfRecordsPerPage": 5,
+                              "numberOfPageLinks": 5
+                         },
+                         "popup": {
+                              "direction": "bottom",
+                              "anchor": "cursor",
+                              "width": 310,
+                              "height": 300,
+                              "margin": 20,
+                              "borderColor": "#767676",
+                              "backgroundColor": "#ffffff",
+                              "overflowY": "auto"
+                         },
+                         "textBefore": "Apply a previous configuration. Current unsaved changes will be discarded.",
+                         "blankMessage": "There is no configuration that has been saved."
+                    },
+                    "recordActions": [
+                         {
+                              "name": "revert",
+                              "actionType": "submit",
+                              "appearance": {
+                                   "label": "<span class=\"fa fa-undo\"/>"
+                              },
+                              "remoteActionAPIname": "getPortalConfiguration",
+                              "remoteActionArguments": {
+                                   "versionId": "$this.attr(id);"
+                              },
+                              "successHandler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$revertPortalConfiguration;",
+                                             "value": [
+                                                  "$result;"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$resetPopupLocation;",
+                                             "value": [
+                                                  "VersionsPopup"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "CurrentActorMenuPopup": {
+                    "mode": "popup",
+                    "category": "component",
+                    "type": "base-panel",
+                    "property": {},
+                    "appearance": {
+                         "popup": {
+                              "direction": "bottom",
+                              "anchor": "cursor",
+                              "width": 168,
+                              "height": 130,
+                              "margin": 20,
+                              "borderColor": "#ffffff",
+                              "backgroundColor": "#37444e"
+                         }
+                    },
+                    "componentActions": [
+                         {
+                              "name": "defineActor",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Define Actor",
+                                   "position": "top-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$resetPopupLocation;",
+                                             "value": [
+                                                  "CurrentActorMenuPopup",
+                                                  "CurrentDivisionMenuPopup"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$openPanel;",
+                                             "value": [
+                                                  "editActor"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "defineDataQuery",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Define Data Query",
+                                   "position": "top-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$resetPopupLocation;",
+                                             "value": [
+                                                  "CurrentActorMenuPopup"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$initializeComponentConfiguration;",
+                                             "value": []
+                                        },
+                                        {
+                                             "name": "$setDialogJson;",
+                                             "value": [
+                                                  "portal_editor_data_query"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "editActorAdvanced",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Edit Actor using JSON",
+                                   "position": "top-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$getCurrentActorStructureOrContent;"
+                                        },
+                                        {
+                                             "name": "$resetPopupLocation;",
+                                             "value": [
+                                                  "CurrentActorMenuPopup"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$setDialogJson;",
+                                             "value": [
+                                                  "portal_editor_actor"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "exportActor",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Export Actor",
+                                   "position": "top-left"
+                              },
+                              "confirmation": {
+                                   "type": "prompt",
+                                   "title": "Export Actor",
+                                   "content": "<p>Do you want to continue to export the current actor?</p>",
+                                   "showConfirmButtons": true,
+                                   "confirmText": "Yes",
+                                   "cancelText": "No"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$exportCurrentActor;"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "addToWidgetLibrary",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "render": false,
+                                   "label": "Add to Widget Library",
+                                   "position": "top-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$resetPopupLocation;",
+                                             "value": [
+                                                  "CurrentActorMenuPopup"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$setDialogJson;",
+                                             "value": [
+                                                  "portal_editor_add_to_widget_library"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "CurrentDivisionMenuPopup": {
+                    "mode": "popup",
+                    "category": "component",
+                    "type": "base-panel",
+                    "property": {},
+                    "appearance": {
+                         "popup": {
+                              "direction": "bottom",
+                              "anchor": "cursor",
+                              "width": 152,
+                              "height": 74,
+                              "margin": 20,
+                              "borderColor": "#ffffff",
+                              "backgroundColor": "#37444e"
+                         }
+                    },
+                    "componentActions": [
+                         {
+                              "name": "defineDivision",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Define Division",
+                                   "position": "top-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$resetPopupLocation;",
+                                             "value": [
+                                                  "CurrentDivisionMenuPopup"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$openPanel;",
+                                             "value": [
+                                                  "editActor"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "editDivisionAdvanced",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Edit Division using JSON",
+                                   "position": "top-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$resetPopupLocation;",
+                                             "value": [
+                                                  "CurrentActorMenuPopup",
+                                                  "CurrentDivisionMenuPopup"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$setDialogJson;",
+                                             "value": [
+                                                  "portal_editor_actor"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "StageBarData": {
+                    "category": "component",
+                    "type": "data-model",
+                    "property": {
+                         "structureName": "portal_editor_stage_bar_data",
+                         "dataObject": "$editModeStageBarData;"
+                    }
+               },
+               "StageBarPanel": {
+                    "category": "component",
+                    "type": "base-panel",
+                    "property": {
+                         "structureName": "portal_editor_stage_bar_panel",
+                         "data": "$app.attr(builderModeState);"
+                    },
+                    "appearance": {
+                         "editable": true,
+                         "renderFields": {
+                              "savingStatus": "false",
+                              "savingStatusInprogress": "$this.attr(savingStatus); == \"PENDING\"",
+                              "savingStatusSuccess": "$this.attr(savingStatus); == \"SUCCESS\"",
+                              "savingStatusFailure": "$this.attr(savingStatus); == \"FAILURE\"",
+                              "savingStatusConflict": "$this.attr(savingStatus); == \"CONFLICT\"",
+                              "importStatus": false,
+                              "importStatusInprogress": "$this.attr(importStatus); == \"PENDING\"",
+                              "importStatusSuccess": "$this.attr(importStatus); == \"SUCCESS\""
+                         },
+                         "editableFields": {
+                              "savingStatusInprogress": "false",
+                              "savingStatusSuccess": "false",
+                              "savingStatusFailure": "false",
+                              "importStatusSuccess": false,
+                              "viewportMode": "$this.attr(blocking); != true",
+                              "editActors": "$this.attr(blocking); != true",
+                              "responsive": "$this.attr(blocking); != true and $this.attr(viewportMode); != true"
+                         }
+                    },
+                    "generalHandlers": {
+                         "fieldChange": {
+                              "viewportMode": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$switchViewport;",
+                                             "value": []
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "StageBarData"
+                                        }
+                                   ]
+                              }
+                         }
+                    },
+                    "componentActions": [
+                         {
+                              "name": "editStage",
+                              "actionType": "context",
+                              "appearance": {
+                                   "label": "$this.attr(currentStage).attr(name); <span class=\"fa fa-pencil\"></span>",
+                                   "position": "top-left",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "popup": {
+                                   "direction": "bottom",
+                                   "anchor": "cursor",
+                                   "width": 140,
+                                   "height": 74,
+                                   "margin": 50,
+                                   "borderColor": "#ffffff",
+                                   "backgroundColor": "#37444e"
+                              }
+                         },
+                         {
+                              "name": "editLayout",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Configure Layout",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "context": "editStage",
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$setDialogJson;",
+                                             "value": [
+                                                  "portal_editor_layout"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "editStageAdvanced",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Edit Stage using JSON",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "context": "editStage",
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$setDialogJson;",
+                                             "value": [
+                                                  "portal_editor_stage"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "global",
+                              "actionType": "context",
+                              "appearance": {
+                                   "label": "Global <span class=\"fa fa-cog\"></span>",
+                                   "position": "top-left",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "popup": {
+                                   "direction": "bottom",
+                                   "anchor": "cursor",
+                                   "width": 116,
+                                   "height": 100,
+                                   "margin": 50,
+                                   "borderColor": "#ffffff",
+                                   "backgroundColor": "#37444e"
+                              }
+                         },
+                         {
+                              "name": "settings",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Settings",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "context": "global",
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$setDialogJson;",
+                                             "value": [
+                                                  "portal_editor_settings"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "map",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Application Map",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "context": "global",
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$openAppMap;",
+                                             "value": []
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "widgetLibrary",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Widget Library",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "context": "global",
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$setDialogJson;",
+                                             "value": [
+                                                  "portal_editor_widget_library"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$resetInteraction;",
+                                             "value": [
+                                                  [
+                                                       "widgetsListView"
+                                                  ]
+                                             ]
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": [
+                                                  "widgetLibraryDataPanel",
+                                                  "widgetLibraryDocuments",
+                                                  "widgetsListView",
+                                                  "widgetDetailsView"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "branding",
+                              "actionType": "context",
+                              "appearance": {
+                                   "label": "Branding <span class=\"fa fa-paint-brush\"></span>",
+                                   "position": "top-left",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "popup": {
+                                   "direction": "bottom",
+                                   "anchor": "cursor",
+                                   "width": 132,
+                                   "height": 74,
+                                   "margin": 50,
+                                   "borderColor": "#ffffff",
+                                   "backgroundColor": "#37444e"
+                              }
+                         },
+                         {
+                              "name": "editBranding",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Configure Branding",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "context": "branding",
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$openPanel;",
+                                             "value": [
+                                                  "editBranding"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "uploadCss",
+                              "actionType": "upload",
+                              "property": {
+                                   "uploadType": "static-resource",
+                                   "staticResourceName": "$global.attr(appName);"
+                              },
+                              "appearance": {
+                                   "label": "Upload CSS",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "context": "branding",
+                              "successHandler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$uploadCss;",
+                                             "value": []
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "versions",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Versions <span class=\"fa fa-code-fork\"></span>",
+                                   "position": "top-left",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$openVersionsPopup;",
+                                             "value": [
+                                                  "VersionsPopup"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "save",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Save <span class=\"fa fa-floppy-o\"></span>",
+                                   "position": "top-left",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$saveConfiguration;",
+                                             "value": [
+                                                  "portal_editor_json_diff"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "importActors",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Import Actor <span class=\"fa fa-upload\"></span>",
+                                   "position": "top-left",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_stage_bar",
+                                   "executions": [
+                                        {
+                                             "name": "$resetImportJsonStatus;"
+                                        }
+                                   ],
+                                   "actions": [
+                                        {
+                                             "name": "importActorsUploadType"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "importActorsUploadType",
+                              "actionType": "upload",
+                              "property": {
+                                   "uploadType": "local",
+                                   "accept": ".json"
+                              },
+                              "appearance": {
+                                   "label": "Import Actors <span class=\"fa fa-upload\"></span>",
+                                   "position": "top-left",
+                                   "enable": "$this.attr(blocking); != true"
+                              },
+                              "handler": {}
+                         }
+                    ]
+               }
+          },
+          "settings": {
+               "locale": "en-us",
+               "currency": "USD",
+               "minimumFractionDigits": 2
+          },
+          "messages": {
+               "loadingAnimationText": "<span><span class=\"fa fa-spinner\"></span>Loading...</span>",
+               "savingAnimationText": "<span><span class=\"fa fa-spinner\"></span>Saving...</span>",
+               "submitAnimationText": "<span><span class=\"fa fa-spinner\"></span>Sending...</span>",
+               "loadingFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Failed to load</span>",
+               "saveSuccessText": "<span><span class=\"fa fa-check\"></span>Succeed</span>",
+               "saveFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Failed to save</span>",
+               "submitSuccessText": "<span><span class=\"fa fa-check\"></span>Succeed</span>",
+               "submitFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Failed to submit</span>",
+               "submitExpirationText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Failed to submit</span>",
+               "uploadFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to upload</span>",
+               "uploadFileTooLargeError": "<span><span class=\"fa fa-exclamation-triangle\"></span>File too large</span>",
+               "generateFakeDataMessage": "<span>You cannot get real data. Start using fake data to continue.</span>",
+               "generateFakeDataButton": "<span>Use Fake Data <span class=\"fa fa-database\"></span></span>",
+               "fakeDataWrapperTitle": "<span><span class=\"fa fa-exclamation-triangle\"></span> Fake data is used.</span>"
+          }
+     },
+     "clcommon__External_ID__c": "portal_editor_stage_bar",
+     "clcommon__Release_Checksum__c": "bd16a300a7aa425688c02ebc53d395f89e06a8d468ceff814f10ed9ea57ec058"
+}

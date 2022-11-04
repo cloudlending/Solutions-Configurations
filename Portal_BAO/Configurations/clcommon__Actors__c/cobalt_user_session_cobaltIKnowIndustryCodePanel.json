@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "industrycodecheckbox": "$global.attr(lockBusinessDetails);==false"
+               },
+               "accessibility": {
+                    "ariaLabel": "This section contains a checkbox and if you do not check that checkbox than you will be provided with three more field namely Sector Description, Sub Sector Description, and Industry Code Description which is are picklist type field and you have to choose data related to your Business. In case you check that you will be provided with a field where you have to enter you Industry Code manually."
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "structureName": "cobaltKnownCheckbox"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltIKnowIndustryCodePanel",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltIKnowIndustryCodePanel",
+     "clcommon__Release_Checksum__c": "674e00e82468b0cffacf53003657b1604a6983e5149b2972fb48f4ad4c846c85"
+}

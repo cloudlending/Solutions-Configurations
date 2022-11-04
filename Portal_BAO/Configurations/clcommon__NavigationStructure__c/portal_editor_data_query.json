@@ -1,0 +1,2582 @@
+{
+     "attributes": {
+          "type": "clcommon__NavigationStructure__c"
+     },
+     "Name": "portal_editor_data_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Description__c": null,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Is_Template__c": false,
+     "clcommon__Related_Configuration_Mapping__c": null,
+     "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
+     "clcommon__Unique_Name__c": "portal_editor_data_query",
+     "clcommon__data__c": {
+          "start": "DataQueryDefinition",
+          "stages": {
+               "DataQueryDefinition": {
+                    "layout": {
+                         "name": "DataQueryContainer",
+                         "children": [
+                              {
+                                   "name": "DataQueryTopButtonPanel"
+                              },
+                              {
+                                   "name": "NewDataQuerySteps",
+                                   "children": [
+                                        {
+                                             "name": "SelectObject",
+                                             "children": [
+                                                  {
+                                                       "name": "SelectedObjectPanel"
+                                                  },
+                                                  {
+                                                       "name": "NewSelectObjectListView"
+                                                  }
+                                             ]
+                                        },
+                                        {
+                                             "name": "SelectComponent",
+                                             "children": [
+                                                  {
+                                                       "name": "SelectedObjectPanel"
+                                                  },
+                                                  {
+                                                       "name": "NewSelectComponentListView"
+                                                  }
+                                             ]
+                                        },
+                                        {
+                                             "name": "SelectFields",
+                                             "children": [
+                                                  {
+                                                       "name": "SelectedObjectPanel"
+                                                  },
+                                                  {
+                                                       "name": "SelectFieldsBreadcrumbs"
+                                                  },
+                                                  {
+                                                       "name": "SelectFieldsListView"
+                                                  },
+                                                  {
+                                                       "name": "FieldWorkbench"
+                                                  },
+                                                  {
+                                                       "name": "NewSelectFieldsNavPanel"
+                                                  }
+                                             ]
+                                        },
+                                        {
+                                             "name": "ConfigureFields",
+                                             "children": [
+                                                  {
+                                                       "name": "SelectedObjectPanel"
+                                                  },
+                                                  {
+                                                       "name": "FieldWorkbenchSidebar"
+                                                  },
+                                                  {
+                                                       "name": "FieldConfigurationContainer",
+                                                       "children": [
+                                                            {
+                                                                 "name": "FieldConfigurationPanel"
+                                                            },
+                                                            {
+                                                                 "name": "FieldConfigurationPicklistOptions"
+                                                            },
+                                                            {
+                                                                 "name": "FieldConfigurationReferenceTo"
+                                                            }
+                                                       ]
+                                                  },
+                                                  {
+                                                       "name": "NewConfigureFieldsNavPanel"
+                                                  }
+                                             ]
+                                        },
+                                        {
+                                             "name": "ConfigureSections",
+                                             "children": [
+                                                  {
+                                                       "name": "SelectedObjectPanel"
+                                                  },
+                                                  {
+                                                       "name": "FieldWorkbenchDraggable"
+                                                  },
+                                                  {
+                                                       "name": "SectionQueueView"
+                                                  },
+                                                  {
+                                                       "name": "NewConfigureSectionsNavPanel"
+                                                  }
+                                             ]
+                                        },
+                                        {
+                                             "name": "ConfigureQuery",
+                                             "children": [
+                                                  {
+                                                       "name": "SelectedObjectPanel"
+                                                  },
+                                                  {
+                                                       "name": "QueryWorkbench"
+                                                  },
+                                                  {
+                                                       "name": "QueryConfigurationPanel"
+                                                  },
+                                                  {
+                                                       "name": "NewConfigureQueryNavPanel"
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              {
+                                   "name": "ExistingDataQuerySteps",
+                                   "children": [
+                                        {
+                                             "name": "SelectObject",
+                                             "children": [
+                                                  {
+                                                       "name": "SelectedObjectPanel"
+                                                  },
+                                                  {
+                                                       "name": "ExistingSelectObjectListView"
+                                                  }
+                                             ]
+                                        },
+                                        {
+                                             "name": "SelectFields",
+                                             "children": [
+                                                  {
+                                                       "name": "SelectedObjectPanel"
+                                                  },
+                                                  {
+                                                       "name": "SelectFieldsBreadcrumbs"
+                                                  },
+                                                  {
+                                                       "name": "SelectFieldsListView"
+                                                  },
+                                                  {
+                                                       "name": "FieldWorkbench"
+                                                  },
+                                                  {
+                                                       "name": "ExistingSelectFieldsNavPanel"
+                                                  }
+                                             ]
+                                        },
+                                        {
+                                             "name": "ConfigureFields",
+                                             "children": [
+                                                  {
+                                                       "name": "SelectedObjectPanel"
+                                                  },
+                                                  {
+                                                       "name": "FieldWorkbenchSidebar"
+                                                  },
+                                                  {
+                                                       "name": "FieldConfigurationContainer",
+                                                       "children": [
+                                                            {
+                                                                 "name": "FieldConfigurationPanel"
+                                                            },
+                                                            {
+                                                                 "name": "FieldConfigurationPicklistOptions"
+                                                            },
+                                                            {
+                                                                 "name": "FieldConfigurationReferenceTo"
+                                                            }
+                                                       ]
+                                                  },
+                                                  {
+                                                       "name": "ExistingConfigureFieldsNavPanel"
+                                                  }
+                                             ]
+                                        },
+                                        {
+                                             "name": "ConfigureSections",
+                                             "children": [
+                                                  {
+                                                       "name": "SelectedObjectPanel"
+                                                  },
+                                                  {
+                                                       "name": "FieldWorkbenchDraggable"
+                                                  },
+                                                  {
+                                                       "name": "SectionQueueView"
+                                                  },
+                                                  {
+                                                       "name": "ExistingConfigureSectionsNavPanel"
+                                                  }
+                                             ]
+                                        },
+                                        {
+                                             "name": "ConfigureQuery",
+                                             "children": [
+                                                  {
+                                                       "name": "SelectedObjectPanel"
+                                                  },
+                                                  {
+                                                       "name": "QueryWorkbench"
+                                                  },
+                                                  {
+                                                       "name": "QueryConfigurationPanel"
+                                                  },
+                                                  {
+                                                       "name": "ExistingConfigureQueryNavPanel"
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              {
+                                   "name": "DataQueryErrorPanel"
+                              }
+                         ]
+                    }
+               },
+               "Summary": {
+                    "layout": {
+                         "name": "SummaryDetailView"
+                    }
+               }
+          },
+          "actors": {
+               "DataQueryErrorPanel": {
+                    "category": "component",
+                    "type": "base-panel"
+               },
+               "DataQueryTopButtonPanel": {
+                    "category": "component",
+                    "type": "base-panel",
+                    "property": {
+                         "structureName": "portal_editor_data_query_top_button_panel",
+                         "dataObject": "$editModeDataQueryStatus;"
+                    },
+                    "appearance": {
+                         "title": "Define Data Query",
+                         "expansionTop": "normal",
+                         "renderFields": {
+                              "selectedComponentStructureApiName": false,
+                              "forExistingSObject": "false",
+                              "differentFromExistingSObject": "false"
+                         }
+                    },
+                    "componentActions": [
+                         {
+                              "name": "cancel",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Cancel",
+                                   "style": "secondary",
+                                   "position": "top-right"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 0
+                                        },
+                                        {
+                                             "field": "$nav(ExistingDataQuerySteps).appearance(current);",
+                                             "value": 0
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": [
+                                                  "DataQueryTopButtonPanel",
+                                                  "SelectedObjectPanel",
+                                                  "NewSelectObjectListView",
+                                                  "ExistingSelectObjectListView",
+                                                  "NewSelectComponentListView",
+                                                  "SelectFieldsListView",
+                                                  "FieldWorkbench",
+                                                  "FieldWorkbenchDraggable",
+                                                  "SectionQueueView",
+                                                  "QueryWorkbench",
+                                                  "QueryConfigurationPanel",
+                                                  "SummaryDetailView"
+                                             ]
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$resetComponentConfiguration;",
+                                             "value": [
+                                                  "portal_editor_data_query"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$resetDialogJson;",
+                                             "value": [
+                                                  "DataQueryErrorPanel"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "NewDataQuerySteps": {
+                    "category": "container",
+                    "type": "steps",
+                    "appearance": {
+                         "titles": [
+                              "<span>Select Object</span>",
+                              "<span>Select Component</span>",
+                              "<span>Select Fields</span>",
+                              "<span>Configure Fields</span>",
+                              "<span>Configure Sections</span>",
+                              "<span>Configure Query</span>"
+                         ],
+                         "current": 0,
+                         "render": "$state(DataQueryTopButtonPanel).attr(forExistingSObject); == false or $state(DataQueryTopButtonPanel).attr(forExistingSObject); == undefined or $state(DataQueryTopButtonPanel).attr(forExistingSObject); == null"
+                    }
+               },
+               "ExistingDataQuerySteps": {
+                    "category": "container",
+                    "type": "steps",
+                    "appearance": {
+                         "titles": [
+                              "<span>Select Object</span>",
+                              "<span>Select Fields</span>",
+                              "<span>Configure Fields</span>",
+                              "<span>Configure Sections</span>",
+                              "<span>Configure Query</span>"
+                         ],
+                         "current": 0,
+                         "render": "$state(DataQueryTopButtonPanel).attr(forExistingSObject); == true"
+                    }
+               },
+               "SelectedObjectPanel": {
+                    "category": "component",
+                    "type": "base-panel",
+                    "property": {
+                         "structureName": "portal_editor_data_query_object",
+                         "dataObject": "$editModeDataQueryObject;"
+                    },
+                    "appearance": {
+                         "textBefore": "Object selected: $this.attr(apiName);",
+                         "renderFields": {
+                              "label": "false",
+                              "apiName": "false"
+                         },
+                         "renderText": {
+                              "textBefore": "$this.attr(apiName); != null and $this.attr(apiName); != undefined"
+                         }
+                    }
+               },
+               "NewSelectObjectListView": {
+                    "category": "component",
+                    "type": "list-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_object",
+                         "queryName": "query"
+                    },
+                    "appearance": {
+                         "highlight": true,
+                         "autoHighlight": {
+                              "apiName": "$state(SelectedObjectPanel).attr(apiName);"
+                         },
+                         "pagination": {
+                              "recordLineTemplate": "$start; - $end; of $total;",
+                              "numberOfRecordsPerPage": 10,
+                              "numberOfPageLinks": 10
+                         },
+                         "filters": {
+                              "keyword": {
+                                   "filterLabel": "Select the object that you would like to utilize to create your component.",
+                                   "fieldNames": [
+                                        "label",
+                                        "apiName"
+                                   ]
+                              }
+                         },
+                         "textAfter": "<span class=\"selected-object\">$interaction.attr(highlighted).attr(apiName);</span> is selected.",
+                         "expansionBottom": "normal",
+                         "renderText": {
+                              "textAfter": "$interaction.attr(highlighted); != null and $interaction.attr(highlighted); != undefined"
+                         }
+                    },
+                    "generalHandlers": {
+                         "clickRecord": {
+                              "navigation": "portal_editor_data_query",
+                              "executions": [
+                                   {
+                                        "name": "$updateSObjectStatusInComponentConfiguration;",
+                                        "value": [
+                                             "DataQueryTopButtonPanel"
+                                        ]
+                                   }
+                              ]
+                         }
+                    },
+                    "componentActions": [
+                         {
+                              "name": "query",
+                              "actionType": "query",
+                              "remoteActionAPIname": "getAllSObjects"
+                         },
+                         {
+                              "name": "reset",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Reset Selected Object",
+                                   "style": "normal",
+                                   "render": "$state(DataQueryTopButtonPanel).attr(differentFromExistingSObject); == true"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "executions": [
+                                        {
+                                             "name": "$resetSelectedSObject;",
+                                             "value": [
+                                                  "NewSelectObjectListView"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "next",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary",
+                                   "enable": "$interaction.attr(highlighted); != null and $interaction.attr(highlighted); != undefined",
+                                   "render": "$state(DataQueryTopButtonPanel).attr(differentFromExistingSObject); == true"
+                              },
+                              "confirmation": {
+                                   "type": "prompt",
+                                   "title": "Are you sure?",
+                                   "content": "<p>You have selected a different object. All the fields that have been configured will be removed.</p><p>Do you want to continue?</p>",
+                                   "showConfirmButtons": true,
+                                   "confirmText": "Yes",
+                                   "cancelText": "No"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 1
+                                        },
+                                        {
+                                             "field": "$state(SelectedObjectPanel);",
+                                             "value": "$interaction.attr(highlighted);"
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": [
+                                                  "NewSelectComponentListView",
+                                                  "SelectFieldsListView",
+                                                  "FieldWorkbench",
+                                                  "FieldWorkbenchDraggable",
+                                                  "SectionQueueView",
+                                                  "QueryWorkbench",
+                                                  "QueryConfigurationPanel",
+                                                  "SummaryDetailView"
+                                             ]
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$restartSObjectNameInComponentConfiguration;",
+                                             "value": [
+                                                  "NewSelectObjectListView",
+                                                  "DataQueryTopButtonPanel"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "next",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary",
+                                   "enable": "$interaction.attr(highlighted); != null and $interaction.attr(highlighted); != undefined",
+                                   "render": "$state(DataQueryTopButtonPanel).attr(differentFromExistingSObject); != true"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 1
+                                        },
+                                        {
+                                             "field": "$state(SelectedObjectPanel);",
+                                             "value": "$interaction.attr(highlighted);"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$setSObjectNameInComponentConfiguration;",
+                                             "value": [
+                                                  "NewSelectObjectListView"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "ExistingSelectObjectListView": {
+                    "category": "component",
+                    "type": "list-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_object",
+                         "queryName": "query"
+                    },
+                    "appearance": {
+                         "highlight": true,
+                         "autoHighlight": {
+                              "apiName": "$state(SelectedObjectPanel).attr(apiName);"
+                         },
+                         "pagination": {
+                              "recordLineTemplate": "$start; - $end; of $total;",
+                              "numberOfRecordsPerPage": 10,
+                              "numberOfPageLinks": 10
+                         },
+                         "filters": {
+                              "keyword": {
+                                   "filterLabel": "Select the object that you would like to utilize to create your component.",
+                                   "fieldNames": [
+                                        "label",
+                                        "apiName"
+                                   ]
+                              }
+                         },
+                         "textAfter": "<span class=\"selected-object\">$interaction.attr(highlighted).attr(apiName);</span> is selected.",
+                         "expansionBottom": "normal",
+                         "renderText": {
+                              "textAfter": "$interaction.attr(highlighted); != null and $interaction.attr(highlighted); != undefined"
+                         }
+                    },
+                    "generalHandlers": {
+                         "clickRecord": {
+                              "navigation": "portal_editor_data_query",
+                              "executions": [
+                                   {
+                                        "name": "$updateSObjectStatusInComponentConfiguration;",
+                                        "value": [
+                                             "DataQueryTopButtonPanel"
+                                        ]
+                                   }
+                              ]
+                         }
+                    },
+                    "componentActions": [
+                         {
+                              "name": "query",
+                              "actionType": "query",
+                              "remoteActionAPIname": "getAllSObjects"
+                         },
+                         {
+                              "name": "reset",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Reset Selected Object",
+                                   "style": "normal",
+                                   "render": "$state(DataQueryTopButtonPanel).attr(differentFromExistingSObject); == true"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "executions": [
+                                        {
+                                             "name": "$resetSelectedSObject;",
+                                             "value": [
+                                                  "ExistingSelectObjectListView"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "restart",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary",
+                                   "enable": "$interaction.attr(highlighted); != null and $interaction.attr(highlighted); != undefined",
+                                   "render": "$state(DataQueryTopButtonPanel).attr(differentFromExistingSObject); == true"
+                              },
+                              "confirmation": {
+                                   "type": "prompt",
+                                   "title": "Are you sure?",
+                                   "content": "<p>You have selected a different object. All the fields that have been configured will be removed.</p><p>Do you want to continue?</p>",
+                                   "showConfirmButtons": true,
+                                   "confirmText": "Yes",
+                                   "cancelText": "No"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 1
+                                        },
+                                        {
+                                             "field": "$state(SelectedObjectPanel);",
+                                             "value": "$interaction.attr(highlighted);"
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": [
+                                                  "NewSelectComponentListView",
+                                                  "SelectFieldsListView",
+                                                  "FieldWorkbench",
+                                                  "FieldWorkbenchDraggable",
+                                                  "SectionQueueView",
+                                                  "QueryWorkbench",
+                                                  "QueryConfigurationPanel",
+                                                  "SummaryDetailView"
+                                             ]
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$restartSObjectNameInComponentConfiguration;",
+                                             "value": [
+                                                  "ExistingSelectObjectListView",
+                                                  "DataQueryTopButtonPanel"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "next",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary",
+                                   "enable": "$interaction.attr(highlighted); != null and $interaction.attr(highlighted); != undefined",
+                                   "render": "$state(DataQueryTopButtonPanel).attr(differentFromExistingSObject); != true"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(ExistingDataQuerySteps).appearance(current);",
+                                             "value": 1
+                                        },
+                                        {
+                                             "field": "$state(SelectedObjectPanel);",
+                                             "value": "$interaction.attr(highlighted);"
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).reset;"
+                                        },
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).append;",
+                                             "value": {
+                                                  "data": {
+                                                       "label": "$interaction.attr(highlighted).attr(apiName);",
+                                                       "name": "$interaction.attr(highlighted).attr(apiName);"
+                                                  },
+                                                  "handler": {
+                                                       "navigation": "portal_editor_data_query",
+                                                       "assignments": [
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.sObjectName);",
+                                                                 "value": "$this.attr(name);"
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.prefix);",
+                                                                 "value": ""
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.displayType);",
+                                                                 "value": ""
+                                                            }
+                                                       ]
+                                                  }
+                                             }
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$setSObjectNameInComponentConfiguration;",
+                                             "value": [
+                                                  "ExistingSelectObjectListView"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "NewSelectComponentListView": {
+                    "category": "component",
+                    "type": "list-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_component",
+                         "queryName": "query"
+                    },
+                    "appearance": {
+                         "highlight": true,
+                         "expansionBottom": "normal",
+                         "textBefore": "<div>If you would like to utilize an existing component, select one from the list below or skip this step to create a new component.</div>",
+                         "blankMessage": "<div>No existing component is available.</div>"
+                    },
+                    "recordActions": [],
+                    "componentActions": [
+                         {
+                              "name": "query",
+                              "actionType": "query",
+                              "remoteActionAPIname": "getComponentStructureList",
+                              "remoteActionArguments": {
+                                   "sObjectName": "$state(SelectedObjectPanel).attr(apiName);"
+                              }
+                         },
+                         {
+                              "name": "back",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Back",
+                                   "style": "secondary",
+                                   "position": "bottom-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 0
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "NewSelectObjectListView"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "skip",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Skip",
+                                   "style": "normal",
+                                   "position": "bottom-right"
+                              },
+                              "confirmation": {
+                                   "type": "prompt",
+                                   "title": "Are you sure?",
+                                   "content": "<p>You have choosen to create a new Component structure rather than re-using an existing component strcuture.</p><p>Do you want to continue?</p>",
+                                   "showConfirmButtons": true,
+                                   "confirmText": "Yes",
+                                   "cancelText": "No"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 2
+                                        },
+                                        {
+                                             "field": "$state(DataQueryTopButtonPanel).attr(selectedComponentStructureApiName);",
+                                             "value": "$interaction.attr(highlighted).attr(apiName);"
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": [
+                                                  "NewSelectComponentListView"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).reset;"
+                                        },
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).append;",
+                                             "value": {
+                                                  "data": {
+                                                       "label": "$state(SelectedObjectPanel).attr(apiName);",
+                                                       "name": "$state(SelectedObjectPanel).attr(apiName);"
+                                                  },
+                                                  "handler": {
+                                                       "navigation": "portal_editor_data_query",
+                                                       "assignments": [
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.sObjectName);",
+                                                                 "value": "$this.attr(name);"
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.prefix);",
+                                                                 "value": ""
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.displayType);",
+                                                                 "value": ""
+                                                            }
+                                                       ]
+                                                  }
+                                             }
+                                        },
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": [
+                                                  "FieldWorkbench",
+                                                  "SelectFieldsListView",
+                                                  "SectionQueueView",
+                                                  "QueryWorkbench",
+                                                  "QueryConfigurationPanel"
+                                             ]
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$resetComponentConfiguration;",
+                                             "value": [
+                                                  "portal_editor_data_query"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$setSObjectNameInComponentConfiguration;",
+                                             "value": [
+                                                  "NewSelectObjectListView"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "submitNext",
+                              "actionType": "submit",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary",
+                                   "render": "$state(DataQueryTopButtonPanel).attr(selectedComponentStructureApiName); == undefined",
+                                   "enable": "$interaction.attr(highlighted); != null and $interaction.attr(highlighted); != undefined",
+                                   "disableWhenLoading": true
+                              },
+                              "messages": {
+                                   "submitFailureText": "Invalid Component Structure"
+                              },
+                              "remoteActionArguments": {
+                                   "structureName": "$interaction.attr(highlighted).attr(apiName);"
+                              },
+                              "remoteActionAPIname": "getComponentStructure",
+                              "successHandler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 2
+                                        },
+                                        {
+                                             "field": "$state(DataQueryTopButtonPanel).attr(selectedComponentStructureApiName);",
+                                             "value": "$interaction.attr(highlighted).attr(apiName);"
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).reset;"
+                                        },
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).append;",
+                                             "value": {
+                                                  "data": {
+                                                       "label": "$state(SelectedObjectPanel).attr(apiName);",
+                                                       "name": "$state(SelectedObjectPanel).attr(apiName);"
+                                                  },
+                                                  "handler": {
+                                                       "navigation": "portal_editor_data_query",
+                                                       "assignments": [
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.sObjectName);",
+                                                                 "value": "$this.attr(name);"
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.prefix);",
+                                                                 "value": ""
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.displayType);",
+                                                                 "value": ""
+                                                            }
+                                                       ]
+                                                  }
+                                             }
+                                        },
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": [
+                                                  "FieldWorkbench",
+                                                  "SelectFieldsListView",
+                                                  "SectionQueueView",
+                                                  "QueryWorkbench",
+                                                  "QueryConfigurationPanel"
+                                             ]
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$setComponentConfiguration;",
+                                             "value": [
+                                                  "$result;"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "normalNext",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary",
+                                   "render": "$state(DataQueryTopButtonPanel).attr(selectedComponentStructureApiName); != undefined and $state(DataQueryTopButtonPanel).attr(selectedComponentStructureApiName); == $interaction.attr(highlighted).attr(apiName);",
+                                   "enable": "$interaction.attr(highlighted); != null and $interaction.attr(highlighted); != undefined"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 2
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).reset;"
+                                        },
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).append;",
+                                             "value": {
+                                                  "data": {
+                                                       "label": "$state(SelectedObjectPanel).attr(apiName);",
+                                                       "name": "$state(SelectedObjectPanel).attr(apiName);"
+                                                  },
+                                                  "handler": {
+                                                       "navigation": "portal_editor_data_query",
+                                                       "assignments": [
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.sObjectName);",
+                                                                 "value": "$this.attr(name);"
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.prefix);",
+                                                                 "value": ""
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.displayType);",
+                                                                 "value": ""
+                                                            }
+                                                       ]
+                                                  }
+                                             }
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "conditionalNext",
+                              "actionType": "submit",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary",
+                                   "render": "$state(DataQueryTopButtonPanel).attr(selectedComponentStructureApiName); != undefined and $state(DataQueryTopButtonPanel).attr(selectedComponentStructureApiName); != $interaction.attr(highlighted).attr(apiName);",
+                                   "enable": "$interaction.attr(highlighted); != null and $interaction.attr(highlighted); != undefined",
+                                   "disableWhenLoading": true
+                              },
+                              "confirmation": {
+                                   "type": "prompt",
+                                   "title": "Are you sure?",
+                                   "content": "<p>You have selected a different Component structure. All the fields that have been configured will be reset to the selected Component strcuture configuration.</p><p>Do you want to continue?</p>",
+                                   "showConfirmButtons": true,
+                                   "confirmText": "Yes",
+                                   "cancelText": "No"
+                              },
+                              "messages": {
+                                   "submitFailureText": "Invalid Component Structure"
+                              },
+                              "remoteActionArguments": {
+                                   "structureName": "$interaction.attr(highlighted).attr(apiName);"
+                              },
+                              "remoteActionAPIname": "getComponentStructure",
+                              "successHandler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 2
+                                        },
+                                        {
+                                             "field": "$state(DataQueryTopButtonPanel).attr(selectedComponentStructureApiName);",
+                                             "value": "$interaction.attr(highlighted).attr(apiName);"
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).reset;"
+                                        },
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).append;",
+                                             "value": {
+                                                  "data": {
+                                                       "label": "$state(SelectedObjectPanel).attr(apiName);",
+                                                       "name": "$state(SelectedObjectPanel).attr(apiName);"
+                                                  },
+                                                  "handler": {
+                                                       "navigation": "portal_editor_data_query",
+                                                       "assignments": [
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.sObjectName);",
+                                                                 "value": "$this.attr(name);"
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.prefix);",
+                                                                 "value": ""
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.displayType);",
+                                                                 "value": ""
+                                                            }
+                                                       ]
+                                                  }
+                                             }
+                                        },
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": [
+                                                  "FieldWorkbench",
+                                                  "SelectFieldsListView",
+                                                  "SectionQueueView",
+                                                  "QueryWorkbench",
+                                                  "QueryConfigurationPanel"
+                                             ]
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$setComponentConfiguration;",
+                                             "value": [
+                                                  "$result;"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "SelectFieldsBreadcrumbs": {
+                    "category": "control",
+                    "type": "breadcrumbs",
+                    "property": {
+                         "pathField": "relationName",
+                         "pathSeparator": "."
+                    },
+                    "appearance": {
+                         "entryLabelField": "name",
+                         "entryTextAfterField": "relationName",
+                         "entrySeparator": "<span class=\"fa fa-angle-right\"/>"
+                    }
+               },
+               "SelectFieldsListView": {
+                    "category": "component",
+                    "type": "list-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_fields",
+                         "queryName": "query"
+                    },
+                    "appearance": {
+                         "multipleSelections": true,
+                         "multipleSelectionOptions": {
+                              "renderRecord": "$this.attr(displayType); != \"REFERENCE\" and $this.attr(displayType); != \"CHILDREN\"",
+                              "renderSelectAll": "false"
+                         },
+                         "autoMultipleSelections": "$state(FieldWorkbench).attrs(id);",
+                         "pagination": {
+                              "recordLineTemplate": "$start; - $end; of $total; fields",
+                              "numberOfRecordsPerPage": 10,
+                              "numberOfPageLinks": 10
+                         },
+                         "filters": {
+                              "keyword": {
+                                   "fieldNames": [
+                                        "label",
+                                        "apiName"
+                                   ]
+                              }
+                         },
+                         "renderFields": {
+                              "displayType": "false",
+                              "relationshipTable": "false",
+                              "fullName": "false",
+                              "displayGroup": "false"
+                         }
+                    },
+                    "recordActions": [
+                         {
+                              "name": "expand",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "<span class=\"fa fa-caret-right\"/>",
+                                   "render": "$this.attr(displayType); == \"REFERENCE\" or $this.attr(displayType); == \"CHILDREN\"",
+                                   "position": "top-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(SelectFieldsListView).property(remoteActionArguments.sObjectName);",
+                                             "value": "$this.attr(relationshipTable);"
+                                        },
+                                        {
+                                             "field": "$nav(SelectFieldsListView).property(remoteActionArguments.prefix);",
+                                             "value": "$this.attr(id);."
+                                        },
+                                        {
+                                             "field": "$nav(SelectFieldsListView).property(remoteActionArguments.displayType);",
+                                             "value": "$this.attr(displayType);"
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).append;",
+                                             "value": {
+                                                  "data": {
+                                                       "label": "$this.attr(apiName);",
+                                                       "name": "$this.attr(relationshipTable);",
+                                                       "relationName": "$this.attr(relationshipName);",
+                                                       "displayType": "$this.attr(displayType);",
+                                                       "idPrefix": "$this.attr(id);"
+                                                  },
+                                                  "handler": {
+                                                       "navigation": "portal_editor_data_query",
+                                                       "assignments": [
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.sObjectName);",
+                                                                 "value": "$this.attr(name);"
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.prefix);",
+                                                                 "value": "$this.attr(idPrefix);."
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.displayType);",
+                                                                 "value": "$this.attr(displayType);"
+                                                            }
+                                                       ]
+                                                  }
+                                             }
+                                        }
+                                   ]
+                              }
+                         }
+                    ],
+                    "componentActions": [
+                         {
+                              "name": "query",
+                              "actionType": "query",
+                              "remoteActionAPIname": "getSObjectDescribe",
+                              "remoteActionArguments": {
+                                   "sObjectName": "$state(SelectedObjectPanel).attr(apiName);",
+                                   "prefix": "",
+                                   "displayType": ""
+                              }
+                         }
+                    ],
+                    "generalHandlers": {
+                         "selectRecord": {
+                              "navigation": "portal_editor_data_query",
+                              "executions": [
+                                   {
+                                        "name": "$addFieldToComponentConfiguration;",
+                                        "value": []
+                                   }
+                              ]
+                         },
+                         "deselectRecord": {
+                              "navigation": "portal_editor_data_query",
+                              "cruds": [
+                                   {
+                                        "method": "remove",
+                                        "source": "$state(FieldWorkbench);",
+                                        "value": {
+                                             "id": "$args[0].attr(id);"
+                                        }
+                                   }
+                              ]
+                         }
+                    }
+               },
+               "FieldWorkbench": {
+                    "category": "component",
+                    "type": "queue-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_field_workbench",
+                         "dataObject": "$editModeDataQueryInitialFieldWorkbench;"
+                    },
+                    "appearance": {
+                         "textBefore": "Fields Selected",
+                         "renderFields": {
+                              "displayGroup": "false",
+                              "displayName": "false"
+                         },
+                         "groupBy": {
+                              "field": "displayGroup",
+                              "titles": [
+                                   {
+                                        "title": "Regular Fields",
+                                        "render": "$this.attr(displayGroup); == 0"
+                                   },
+                                   {
+                                        "title": "References",
+                                        "render": "$this.attr(displayGroup); == 1"
+                                   },
+                                   {
+                                        "title": "Children Relations",
+                                        "render": "$this.attr(displayGroup); == 2"
+                                   }
+                              ],
+                              "ascending": true
+                         }
+                    },
+                    "recordActions": [
+                         {
+                              "name": "remove",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "<span class=\"fa fa-times\"/>"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "cruds": [
+                                        {
+                                             "method": "remove",
+                                             "source": "$state(FieldWorkbench);",
+                                             "value": {
+                                                  "id": "$this.attr(id);"
+                                             }
+                                        },
+                                        {
+                                             "method": "remove",
+                                             "source": "$interaction(SelectFieldsListView).attr(selectedIds);",
+                                             "value": "$this.attr(id);"
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "NewSelectFieldsNavPanel": {
+                    "category": "component",
+                    "type": "base-panel",
+                    "appearance": {
+                         "expansionBottom": "normal"
+                    },
+                    "componentActions": [
+                         {
+                              "name": "back",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Back",
+                                   "style": "secondary",
+                                   "position": "bottom-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 1
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "next",
+                              "actionType": "submit",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary",
+                                   "enable": "$state(FieldWorkbench).count(); > 0"
+                              },
+                              "remoteActionAPIname": "getFieldDescribeList",
+                              "remoteActionArguments": {
+                                   "sObjectName": "$state(SelectedObjectPanel).attr(apiName);",
+                                   "fieldList": "$state(FieldWorkbench).attrs(id);"
+                              },
+                              "successHandler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 3
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "FieldWorkbenchSidebar"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$formFieldConfigurations;",
+                                             "value": []
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "ExistingSelectFieldsNavPanel": {
+                    "category": "component",
+                    "type": "base-panel",
+                    "appearance": {
+                         "expansionBottom": "normal"
+                    },
+                    "componentActions": [
+                         {
+                              "name": "back",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Back",
+                                   "style": "secondary",
+                                   "position": "bottom-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(ExistingDataQuerySteps).appearance(current);",
+                                             "value": 0
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "ExistingSelectObjectListView"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "next",
+                              "actionType": "submit",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary",
+                                   "enable": "$state(FieldWorkbench).count(); > 0"
+                              },
+                              "remoteActionAPIname": "getFieldDescribeList",
+                              "remoteActionArguments": {
+                                   "sObjectName": "$state(SelectedObjectPanel).attr(apiName);",
+                                   "fieldList": "$state(FieldWorkbench).attrs(id);"
+                              },
+                              "successHandler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(ExistingDataQuerySteps).appearance(current);",
+                                             "value": 2
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "FieldWorkbenchSidebar"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$formFieldConfigurations;",
+                                             "value": []
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "FieldWorkbenchSidebar": {
+                    "category": "component",
+                    "type": "queue-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_field_workbench",
+                         "dataObject": "$editModeDataQueryInitialFieldWorkbench;"
+                    },
+                    "appearance": {
+                         "textBefore": "Fields Selected",
+                         "renderFields": {
+                              "displayGroup": "false",
+                              "displayName": "false"
+                         },
+                         "groupBy": {
+                              "field": "displayGroup",
+                              "titles": [
+                                   {
+                                        "title": "Regular Fields",
+                                        "render": "$this.attr(displayGroup); == 0"
+                                   },
+                                   {
+                                        "title": "References",
+                                        "render": "$this.attr(displayGroup); == 1"
+                                   },
+                                   {
+                                        "title": "Children Relations",
+                                        "render": "$this.attr(displayGroup); == 2"
+                                   }
+                              ],
+                              "ascending": true
+                         },
+                         "highlight": true,
+                         "autoHighlight": true
+                    },
+                    "generalHandlers": {
+                         "clickRecord": {
+                              "navigation": "portal_editor_data_query",
+                              "updates": [
+                                   {
+                                        "name": "$nav.reloads.add;",
+                                        "value": [
+                                             "FieldConfigurationPanel",
+                                             "FieldConfigurationPicklistOptions",
+                                             "FieldConfigurationReferenceTo"
+                                        ]
+                                   }
+                              ],
+                              "executions": [
+                                   {
+                                        "name": "$updateFieldConfiguration;",
+                                        "value": [
+                                             {
+                                                  "highlightNextEntry": true,
+                                                  "validate": false
+                                             }
+                                        ]
+                                   }
+                              ]
+                         }
+                    }
+               },
+               "FieldConfigurationPanel": {
+                    "category": "component",
+                    "type": "detail-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_field_configuration",
+                         "dataObject": "$editModeDataQueryFieldConfiguration;"
+                    },
+                    "appearance": {
+                         "editable": true,
+                         "fieldColumns": 2,
+                         "render": "$this.attr(id); != undefined or $this.attr(id); != null",
+                         "sectionStyle": "layout",
+                         "showSectionTitle": true,
+                         "textBefore": "It is a formula field.",
+                         "renderText": {
+                              "textBefore": "$this.attr(isFormula); == true"
+                         },
+                         "editableFields": {
+                              "displayType": "false"
+                         },
+                         "renderFields": {
+                              "fieldTypeBoolean": "$this.attr(displayType); == \"BOOLEAN\"",
+                              "fieldTypePicklist": "$this.attr(displayType); == \"COMBOBOX\" or $this.attr(displayType); == \"PICKLIST\"",
+                              "fieldTypeMultiPicklist": "$this.attr(displayType); == \"MULTIPICKLIST\"",
+                              "fieldTypeCurrency": "$this.attr(displayType); == \"CURRENCY\"",
+                              "fieldTypePercent": "$this.attr(displayType); == \"PERCENT\"",
+                              "fieldTypeDate": "$this.attr(displayType); == \"DATE\"",
+                              "fieldTypeTime": "$this.attr(displayType); == \"TIME\"",
+                              "fieldTypeDateTime": "$this.attr(displayType); == \"DATETIME\"",
+                              "fieldTypeNumber": "$this.attr(displayType); == \"DOUBLE\" or $this.attr(displayType); == \"INTEGER\"",
+                              "fieldTypePlainString": "$this.attr(displayType); == \"EMAIL\" or $this.attr(displayType); == \"PHONE\" or $this.attr(displayType); == \"ENCRYPTEDSTRING\" or $this.attr(displayType); == \"ID\" or $this.attr(displayType); == \"URL\"",
+                              "fieldTypeString": "$this.attr(displayType); == \"STRING\"",
+                              "fieldTypeTextarea": "$this.attr(displayType); == \"TEXTAREA\"",
+                              "ariaLabel": "($this.attr(fieldTypeString); != \"image\")",
+                              "linkTemplate": "($this.attr(displayType); == \"URL\" and $this.attr(fieldTypePlainString); == \"link\") or ($this.attr(displayType); == \"CURRENCY\" and $this.attr(fieldTypeCurrency); == \"link\") or ($this.attr(displayType); == \"PERCENT\" and $this.attr(fieldTypePercent); == \"link\") or ($this.attr(displayType); == \"DATE\" and $this.attr(fieldTypeDate); == \"link\") or ($this.attr(displayType); == \"TIME\" and $this.attr(fieldTypeTime); == \"link\") or ($this.attr(displayType); == \"DATETIME\" and $this.attr(fieldTypeDateTime); == \"link\") or (($this.attr(displayType); == \"EMAIL\" or $this.attr(displayType); == \"PHONE\" or $this.attr(displayType); == \"ENCRYPTEDSTRING\" or $this.attr(displayType); == \"ID\") and $this.attr(fieldTypePlainString); == \"link\") or ($this.attr(displayType); == \"STRING\" and $this.attr(fieldTypeString); == \"link\")",
+                              "linkTarget": "($this.attr(displayType); == \"URL\" and $this.attr(fieldTypePlainString); == \"link\") or ($this.attr(displayType); == \"CURRENCY\" and $this.attr(fieldTypeCurrency); == \"link\") or ($this.attr(displayType); == \"PERCENT\" and $this.attr(fieldTypePercent); == \"link\") or ($this.attr(displayType); == \"DATE\" and $this.attr(fieldTypeDate); == \"link\") or ($this.attr(displayType); == \"TIME\" and $this.attr(fieldTypeTime); == \"link\") or ($this.attr(displayType); == \"DATETIME\" and $this.attr(fieldTypeDateTime); == \"link\") or (($this.attr(displayType); == \"EMAIL\" or $this.attr(displayType); == \"PHONE\" or $this.attr(displayType); == \"ENCRYPTEDSTRING\" or $this.attr(displayType); == \"ID\") and $this.attr(fieldTypePlainString); == \"link\") or ($this.attr(displayType); == \"STRING\" and $this.attr(fieldTypeString); == \"link\")",
+                              "imageTemplate": "($this.attr(displayType); == \"STRING\" and $this.attr(fieldTypeString); == \"image\")",
+                              "imageAltText": "($this.attr(displayType); == \"STRING\" and $this.attr(fieldTypeString); == \"image\")",
+                              "requiredErrorText": "$this.attr(required); == true",
+                              "regexErrorText": "$this.attr(regex); != undefined and $this.attr(regex); != null and $this.attr(regex); != \"\"",
+                              "defaultString": "$this.attr(displayType); == \"EMAIL\" or $this.attr(displayType); == \"PHONE\" or $this.attr(displayType); == \"ENCRYPTEDSTRING\" or $this.attr(displayType); == \"ID\" or $this.attr(displayType); == \"COMBOBOX\" or $this.attr(displayType); == \"PICKLIST\" or $this.attr(displayType); == \"STRING\" or $this.attr(displayType); == \"MULTIPICKLIST\" or $this.attr(displayType); == \"TEXTAREA\" or $this.attr(displayType); == \"REFERENCE\" or $this.attr(displayType); == \"URL\"",
+                              "defaultNumber": "$this.attr(displayType); == \"DOUBLE\" or $this.attr(displayType); == \"INTEGER\" or $this.attr(displayType); == \"CURRENCY\" or $this.attr(displayType); == \"PERCENT\"",
+                              "defaultBoolean": "$this.attr(displayType); == \"BOOLEAN\"",
+                              "defaultDate": "$this.attr(displayType); == \"DATE\"",
+                              "defaultTime": "$this.attr(displayType); == \"TIME\"",
+                              "defaultDateTime": "$this.attr(displayType); == \"DATETIME\"",
+                              "secure": "$this.attr(displayType); == \"STRING\" or $this.attr(displayType); == \"ENCRYPTEDSTRING\"",
+                              "selectedPrefix": "$this.attr(fieldTypePicklist); == \"selectbuttons\"",
+                              "selectedSuffix": "$this.attr(fieldTypePicklist); == \"selectbuttons\"",
+                              "expansible": "$this.attr(fieldTypePicklist); == \"multiValueIndicator\"",
+                              "delimiter": "$this.attr(fieldTypeString); == \"phone\" and $this.attr(prettyInput); == true or $this.attr(fieldTypeString); == \"ssn\" and $this.attr(prettyInput); == true or $this.attr(fieldTypeString); == \"tin\" and $this.attr(prettyInput); == true or $this.attr(fieldTypeString); == \"creditCard\" and $this.attr(prettyInput); == true",
+                              "blocks": "$this.attr(fieldTypeString); == \"phone\" and $this.attr(prettyInput); == true or $this.attr(fieldTypeString); == \"ssn\" and $this.attr(prettyInput); == true or $this.attr(fieldTypeString); == \"tin\" and $this.attr(prettyInput); == true or $this.attr(fieldTypeString); == \"creditCard\" and $this.attr(prettyInput); == true",
+                              "numeralThousandsGroupStyle": "$this.attr(fieldTypeCurrency); == \"currency\" and $this.attr(prettyInput); == true or $this.attr(fieldTypeNumber); == \"currency\" and $this.attr(prettyInput); == true or $this.attr(fieldTypeNumber); == \"range\" and $this.attr(prettyInput); == true",
+                              "PhoneRegionCode": "$this.attr(fieldTypeString); == \"phone\" and $this.attr(prettyInput); == true"
+                         },
+                         "renderSections": {
+                              "regex": "$this.attr(displayType); == \"CURRENCY\" or $this.attr(displayType); == \"PERCENT\" or $this.attr(displayType); == \"DATE\" or $this.attr(displayType); == \"TIME\" or $this.attr(displayType); == \"DATETIME\" or $this.attr(displayType); == \"DOUBLE\" or $this.attr(displayType); == \"INTEGER\" or $this.attr(displayType); == \"EMAIL\" or $this.attr(displayType); == \"PHONE\" or $this.attr(displayType); == \"ENCRYPTEDSTRING\" or $this.attr(displayType); == \"ID\" or $this.attr(displayType); == \"STRING\"",
+                              "reftext": "$this.attr(displayType); == \"REFERENCE\"",
+                              "addressComponents": "$this.attr(fieldTypeTextarea); == \"addressAutocomplete\" or $this.attr(fieldTypePlainString); == \"addressAutocomplete\" or $this.attr(fieldTypeString); == \"addressAutocomplete\"",
+                              "formatOptions": "$this.attr(displayType); == \"CURRENCY\" or $this.attr(displayType); == \"PERCENT\" or $this.attr(displayType); == \"TIME\" or $this.attr(displayType); == \"DATETIME\" or $this.attr(displayType); == \"DOUBLE\" or $this.attr(displayType); == \"INTEGER\" or $this.attr(displayType); == \"PHONE\" or $this.attr(displayType); == \"STRING\" or $this.attr(fieldTypeNumber); == \"range\"",
+                              "rangeSlider": "$this.attr(fieldTypeNumber); == \"range\" or $this.attr(fieldTypeCurrency); == \"range\""
+                         }
+                    }
+               },
+               "FieldConfigurationPicklistOptions": {
+                    "category": "component",
+                    "type": "list-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_field_configuration_picklist_options",
+                         "dataObject": "$editModeDataQueryFieldConfigurationPicklistValues;"
+                    },
+                    "appearance": {
+                         "title": "Picklist Options",
+                         "editable": true,
+                         "expansionTop": "normal",
+                         "multipleSelections": true,
+                         "multipleSelectAll": true,
+                         "render": "$this.count(); > 0",
+                         "editableFields": {
+                              "optionValue": false
+                         },
+                         "renderFields": {
+                              "optionPrefix": "$state(FieldConfigurationPanel).attr(fieldTypePicklist); == \"selectbuttons\"  or $state(FieldConfigurationPanel).attr(fieldTypePicklist); == \"picklist\" or $state(FieldConfigurationPanel).attr(fieldTypePicklist); == \"radiobuttons\" or $state(FieldConfigurationPanel).attr(fieldTypePicklist); == \"picklistAutocomplete\"",
+                              "optionSuffix": "$state(FieldConfigurationPanel).attr(fieldTypePicklist); == \"selectbuttons\"  or $state(FieldConfigurationPanel).attr(fieldTypePicklist); == \"picklist\" or $state(FieldConfigurationPanel).attr(fieldTypePicklist); == \"radiobuttons\" or $state(FieldConfigurationPanel).attr(fieldTypePicklist); == \"picklistAutocomplete\"",
+                              "optionExpansionContent": "$state(FieldConfigurationPanel).attr(fieldTypePicklist); == \"multiValueIndicator\""
+                         }
+                    }
+               },
+               "FieldConfigurationReferenceTo": {
+                    "category": "component",
+                    "type": "list-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_field_configuration_reference_to",
+                         "dataObject": "$editModeDataQueryFieldConfigurationReferenceTo;"
+                    },
+                    "appearance": {
+                         "title": "Reference Fields",
+                         "expansionTop": "normal",
+                         "multipleSelections": true,
+                         "autoMultipleSelections": [
+                              "Id",
+                              "Name"
+                         ],
+                         "render": "$this.count(); > 0",
+                         "pagination": {
+                              "recordLineTemplate": "$start; - $end; of $total; fields",
+                              "numberOfRecordsPerPage": 10,
+                              "numberOfPageLinks": 10
+                         },
+                         "filters": {
+                              "keyword": {
+                                   "fieldNames": [
+                                        "label",
+                                        "name"
+                                   ]
+                              }
+                         },
+                         "textBefore": "Selected: <span class=\"selected-names\">$interaction.attrs(selectedIds);</span>",
+                         "renderText": {
+                              "textBefore": "$interaction.attr(selectedIds).count(); > 0"
+                         }
+                    }
+               },
+               "NewConfigureFieldsNavPanel": {
+                    "category": "component",
+                    "type": "base-panel",
+                    "appearance": {
+                         "expansionBottom": "normal"
+                    },
+                    "componentActions": [
+                         {
+                              "name": "back",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Back",
+                                   "style": "secondary",
+                                   "position": "bottom-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 2
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).reset;"
+                                        },
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).append;",
+                                             "value": {
+                                                  "data": {
+                                                       "label": "$state(SelectedObjectPanel).attr(apiName);",
+                                                       "name": "$state(SelectedObjectPanel).attr(apiName);"
+                                                  },
+                                                  "handler": {
+                                                       "navigation": "portal_editor_data_query",
+                                                       "assignments": [
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.sObjectName);",
+                                                                 "value": "$this.attr(name);"
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.prefix);",
+                                                                 "value": ""
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.displayType);",
+                                                                 "value": ""
+                                                            }
+                                                       ]
+                                                  }
+                                             }
+                                        },
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "FieldWorkbench"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$updateFieldConfiguration;",
+                                             "value": [
+                                                  {
+                                                       "highlightNextEntry": false,
+                                                       "validate": false
+                                                  },
+                                                  "DataQueryErrorPanel"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "next",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "FieldWorkbenchDraggable"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$updateFieldConfiguration;",
+                                             "value": [
+                                                  {
+                                                       "highlightNextEntry": false,
+                                                       "validate": true,
+                                                       "syncSectionQueue": true
+                                                  },
+                                                  "DataQueryErrorPanel",
+                                                  {
+                                                       "regular": "Missing required values in <span class=\"error-fields\">{0}</span>",
+                                                       "reference": "Missing reference fields in <span class=\"error-fields\">{0}</span>"
+                                                  },
+                                                  {
+                                                       "navigation": "portal_editor_data_query",
+                                                       "assignments": [
+                                                            {
+                                                                 "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                                                 "value": 4
+                                                            }
+                                                       ]
+                                                  },
+                                                  [
+                                                       "fieldTypeString",
+                                                       "fieldTypeBoolean",
+                                                       "fieldTypePicklist",
+                                                       "fieldTypeMultiPicklist",
+                                                       "fieldTypeCurrency",
+                                                       "fieldTypePercent",
+                                                       "fieldTypeDate",
+                                                       "fieldTypeTime",
+                                                       "fieldTypeDateTime",
+                                                       "fieldTypeNumber",
+                                                       "fieldTypePlainString",
+                                                       "fieldTypeTextarea"
+                                                  ]
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "ExistingConfigureFieldsNavPanel": {
+                    "category": "component",
+                    "type": "base-panel",
+                    "appearance": {
+                         "expansionBottom": "normal"
+                    },
+                    "componentActions": [
+                         {
+                              "name": "back",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Back",
+                                   "style": "secondary",
+                                   "position": "bottom-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(ExistingDataQuerySteps).appearance(current);",
+                                             "value": 1
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).reset;"
+                                        },
+                                        {
+                                             "name": "$control(SelectFieldsBreadcrumbs).append;",
+                                             "value": {
+                                                  "data": {
+                                                       "label": "$state(SelectedObjectPanel).attr(apiName);",
+                                                       "name": "$state(SelectedObjectPanel).attr(apiName);"
+                                                  },
+                                                  "handler": {
+                                                       "navigation": "portal_editor_data_query",
+                                                       "assignments": [
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.sObjectName);",
+                                                                 "value": "$this.attr(name);"
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.prefix);",
+                                                                 "value": ""
+                                                            },
+                                                            {
+                                                                 "field": "$nav(SelectFieldsListView).property(remoteActionArguments.displayType);",
+                                                                 "value": ""
+                                                            }
+                                                       ]
+                                                  }
+                                             }
+                                        },
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "FieldWorkbench"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$updateFieldConfiguration;",
+                                             "value": [
+                                                  {
+                                                       "highlightNextEntry": false,
+                                                       "validate": false
+                                                  },
+                                                  "DataQueryErrorPanel"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "next",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "FieldWorkbenchDraggable"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$updateFieldConfiguration;",
+                                             "value": [
+                                                  {
+                                                       "highlightNextEntry": false,
+                                                       "validate": true,
+                                                       "syncSectionQueue": true
+                                                  },
+                                                  "DataQueryErrorPanel",
+                                                  {
+                                                       "regular": "Missing required values in <span class=\"error-fields\">{0}</span>",
+                                                       "reference": "Missing reference fields in <span class=\"error-fields\">{0}</span>"
+                                                  },
+                                                  {
+                                                       "navigation": "portal_editor_data_query",
+                                                       "assignments": [
+                                                            {
+                                                                 "field": "$nav(ExistingDataQuerySteps).appearance(current);",
+                                                                 "value": 3
+                                                            }
+                                                       ]
+                                                  },
+                                                  [
+                                                       "fieldTypeString",
+                                                       "fieldTypeBoolean",
+                                                       "fieldTypePicklist",
+                                                       "fieldTypeMultiPicklist",
+                                                       "fieldTypeCurrency",
+                                                       "fieldTypePercent",
+                                                       "fieldTypeDate",
+                                                       "fieldTypeTime",
+                                                       "fieldTypeDateTime",
+                                                       "fieldTypeNumber",
+                                                       "fieldTypePlainString",
+                                                       "fieldTypeTextarea"
+                                                  ]
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "FieldWorkbenchDraggable": {
+                    "category": "component",
+                    "type": "queue-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_field_workbench",
+                         "dataObject": "$editModeDataQueryFieldWorkbench;"
+                    },
+                    "appearance": {
+                         "textBefore": "Fields Selected",
+                         "renderFields": {
+                              "fullName": "false",
+                              "displayGroup": "false"
+                         },
+                         "groupBy": {
+                              "field": "displayGroup",
+                              "titles": [
+                                   {
+                                        "title": "Regular Fields",
+                                        "render": "$this.attr(displayGroup); == 0"
+                                   },
+                                   {
+                                        "title": "References",
+                                        "render": "$this.attr(displayGroup); == 1"
+                                   },
+                                   {
+                                        "title": "Children Relations",
+                                        "render": "$this.attr(displayGroup); == 2"
+                                   }
+                              ],
+                              "ascending": true
+                         },
+                         "draggableRecord": {
+                              "type": "portalEditorComponentField"
+                         }
+                    }
+               },
+               "SectionQueueView": {
+                    "category": "component",
+                    "type": "queue-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_section_queue_view",
+                         "dataObject": "$editModeDataQuerySections;"
+                    },
+                    "appearance": {
+                         "editable": true,
+                         "fieldColumns": 2,
+                         "expansionTop": "normal",
+                         "spanFields": [
+                              "fieldDetails"
+                         ],
+                         "droppableRecord": {
+                              "type": "portalEditorComponentField"
+                         },
+                         "datalistRemoveLabel": "<span class=\"fa fa-times\"/>"
+                    },
+                    "componentActions": [
+                         {
+                              "name": "add",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Add Sections",
+                                   "style": "normal",
+                                   "position": "top-right"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "SectionQueueView"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$appendFieldSectionEntry;",
+                                             "value": []
+                                        }
+                                   ]
+                              }
+                         }
+                    ],
+                    "recordActions": [
+                         {
+                              "nmae": "remove",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "<span class=\"fa fa-times\"/>",
+                                   "position": "top-right"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "SectionQueueView"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$removeFieldSectionEntry;",
+                                             "value": []
+                                        }
+                                   ]
+                              }
+                         }
+                    ],
+                    "generalHandlers": {
+                         "drop": {
+                              "portalEditorComponentField": {
+                                   "navigation": "portal_editor_data_query",
+                                   "executions": [
+                                        {
+                                             "name": "$updateFieldSectionMapping;",
+                                             "value": [
+                                                  "SectionQueueView",
+                                                  "portal_editor_data_query"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    }
+               },
+               "NewConfigureSectionsNavPanel": {
+                    "category": "component",
+                    "type": "base-panel",
+                    "appearance": {
+                         "expansionBottom": "normal"
+                    },
+                    "componentActions": [
+                         {
+                              "name": "back",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Back",
+                                   "style": "secondary",
+                                   "position": "bottom-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 3
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "FieldWorkbenchSidebar"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$saveFieldSectionMapping;",
+                                             "value": [
+                                                  "SectionQueueView"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "next",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary",
+                                   "enable": "$state(SectionQueueView).count(); > 0"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 5
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$saveFieldSectionMapping;",
+                                             "value": [
+                                                  "SectionQueueView"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "ExistingConfigureSectionsNavPanel": {
+                    "category": "component",
+                    "type": "base-panel",
+                    "appearance": {
+                         "expansionBottom": "normal"
+                    },
+                    "componentActions": [
+                         {
+                              "name": "back",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Back",
+                                   "style": "secondary",
+                                   "position": "bottom-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(ExistingDataQuerySteps).appearance(current);",
+                                             "value": 2
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "FieldWorkbenchSidebar"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$saveFieldSectionMapping;",
+                                             "value": [
+                                                  "SectionQueueView"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "next",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary",
+                                   "enable": "$state(SectionQueueView).count(); > 0"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(ExistingDataQuerySteps).appearance(current);",
+                                             "value": 4
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$saveFieldSectionMapping;",
+                                             "value": [
+                                                  "SectionQueueView"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "QueryWorkbench": {
+                    "category": "component",
+                    "type": "queue-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_query_workbench",
+                         "dataObject": "$editModeDataQueryQueryWorkbench;"
+                    },
+                    "appearance": {
+                         "renderFields": {
+                              "fullName": "false",
+                              "displayGroup": "false"
+                         },
+                         "groupBy": {
+                              "field": "displayGroup",
+                              "titles": [
+                                   {
+                                        "title": "Main Object",
+                                        "render": "$this.attr(displayGroup); == 0"
+                                   },
+                                   {
+                                        "title": "References",
+                                        "render": "$this.attr(displayGroup); == 1"
+                                   },
+                                   {
+                                        "title": "Children Relations",
+                                        "render": "$this.attr(displayGroup); == 2"
+                                   }
+                              ],
+                              "ascending": true
+                         },
+                         "highlight": true,
+                         "autoHighlight": true
+                    },
+                    "generalHandlers": {
+                         "clickRecord": {
+                              "navigation": "portal_editor_data_query",
+                              "updates": [
+                                   {
+                                        "name": "$nav.reloads.add;",
+                                        "value": "QueryConfigurationPanel"
+                                   }
+                              ],
+                              "executions": [
+                                   {
+                                        "name": "$updateQueryConfiguration;",
+                                        "value": [
+                                             {
+                                                  "validate": false
+                                             }
+                                        ]
+                                   }
+                              ]
+                         }
+                    }
+               },
+               "QueryConfigurationPanel": {
+                    "category": "component",
+                    "type": "detail-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_query_configuration",
+                         "dataObject": "$editModeDataQueryQueryConfiguration;"
+                    },
+                    "appearance": {
+                         "editable": true
+                    }
+               },
+               "NewConfigureQueryNavPanel": {
+                    "category": "component",
+                    "type": "base-panel",
+                    "appearance": {
+                         "expansionBottom": "normal"
+                    },
+                    "componentActions": [
+                         {
+                              "name": "Back",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Back",
+                                   "style": "secondary",
+                                   "position": "bottom-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 4
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "QueryWorkbench"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$updateQueryConfiguration;",
+                                             "value": [
+                                                  {
+                                                       "validate": false
+                                                  },
+                                                  "DataQueryErrorPanel"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "Next",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "executions": [
+                                        {
+                                             "name": "$updateQueryConfiguration;",
+                                             "value": [
+                                                  {
+                                                       "validate": true
+                                                  },
+                                                  "DataQueryErrorPanel",
+                                                  "Missing WHERE clause in <span class=\"error-fields\">{0}</span>",
+                                                  {
+                                                       "navigation": "portal_editor_data_query",
+                                                       "next": "Summary"
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "ExistingConfigureQueryNavPanel": {
+                    "category": "component",
+                    "type": "base-panel",
+                    "appearance": {
+                         "expansionBottom": "normal"
+                    },
+                    "componentActions": [
+                         {
+                              "name": "Back",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Back",
+                                   "style": "secondary",
+                                   "position": "bottom-left"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(ExistingDataQuerySteps).appearance(current);",
+                                             "value": 3
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": "QueryWorkbench"
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$updateQueryConfiguration;",
+                                             "value": [
+                                                  {
+                                                       "validate": false
+                                                  },
+                                                  "DataQueryErrorPanel"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "Next",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Next",
+                                   "style": "primary"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "executions": [
+                                        {
+                                             "name": "$updateQueryConfiguration;",
+                                             "value": [
+                                                  {
+                                                       "validate": true
+                                                  },
+                                                  "DataQueryErrorPanel",
+                                                  "Missing WHERE clause in <span class=\"error-fields\">{0}</span>",
+                                                  {
+                                                       "navigation": "portal_editor_data_query",
+                                                       "next": "Summary"
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               "SummaryDetailView": {
+                    "category": "component",
+                    "type": "detail-view",
+                    "property": {
+                         "structureName": "portal_editor_data_query_summary",
+                         "dataObject": "$editModeDataQuerySummary;"
+                    },
+                    "appearance": {
+                         "editable": true,
+                         "title": "Save Data Query",
+                         "expansionTop": "normal",
+                         "fieldColumns": 2,
+                         "spanFields": [
+                              "structureJson",
+                              "readOnlyStructureJson"
+                         ],
+                         "sectionStyle": "layout",
+                         "showSectionTitle": true,
+                         "renderSections": {
+                              "howToSave": "$this.attr(changeStatus); != \"\"",
+                              "general": "$this.attr(hasExisting); == false or ($this.attr(changeStatus); != \"\" and $this.attr(howToSaveOptions); != \"existing\")",
+                              "existingGeneral": "$this.attr(hasExisting); == true and ($this.attr(changeStatus); == \"\" or $this.attr(howToSaveOptions); == \"existing\")"
+                         },
+                         "renderFields": {
+                              "hasExisting": false,
+                              "changeStatus": false,
+                              "existingStructureId": false,
+                              "structureJson": "$this.attr(hasExisting); == false or $this.attr(changeStatus); != \"\"",
+                              "readOnlyStructureJson": "$this.attr(hasExisting); == true and $this.attr(changeStatus); == \"\""
+                         },
+                         "editableFields": {
+                              "existingStructureName": false,
+                              "readOnlyStructureJson": false
+                         }
+                    },
+                    "componentActions": [
+                         {
+                              "name": "editJson",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Edit Query Details",
+                                   "style": "normal",
+                                   "position": "top-right",
+                                   "render": "$this.attr(hasExisting); == true and $this.attr(changeStatus); == \"\""
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$this.attr(changeStatus);",
+                                             "value": "aboutToChange"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "save",
+                              "actionType": "submit",
+                              "appearance": {
+                                   "label": "Save",
+                                   "style": "primary",
+                                   "position": "top-right",
+                                   "render": "$this.attr(hasExisting); == false or ($this.attr(changeStatus); != \"\" and $this.attr(howToSaveOptions); != \"existing\")"
+                              },
+                              "remoteActionAPIname": "saveComponentStructure",
+                              "remoteActionArguments": {
+                                   "structureName": "$this.attr(structureName);",
+                                   "allowGuestAccess": "$this.attr(allowGuestAccess);",
+                                   "secureFilterKey": "$this.attr(secureFilterKey);",
+                                   "secureFilterValue": "$this.attr(secureFilterValue);",
+                                   "structureJson": "$this.attr(structureJson);"
+                              },
+                              "successHandler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 0
+                                        },
+                                        {
+                                             "field": "$nav(ExistingDataQuerySteps).appearance(current);",
+                                             "value": 0
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": [
+                                                  "DataQueryTopButtonPanel",
+                                                  "SelectedObjectPanel",
+                                                  "NewSelectObjectListView",
+                                                  "ExistingSelectObjectListView",
+                                                  "NewSelectComponentListView",
+                                                  "SelectFieldsListView",
+                                                  "FieldWorkbench",
+                                                  "FieldWorkbenchDraggable",
+                                                  "SectionQueueView",
+                                                  "QueryWorkbench",
+                                                  "QueryConfigurationPanel",
+                                                  "SummaryDetailView"
+                                             ]
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$updateComponentInNavigation;",
+                                             "value": [
+                                                  "portal_editor_data_query"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$resetDialogJson;",
+                                             "value": [
+                                                  "DataQueryErrorPanel"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "update",
+                              "actionType": "submit",
+                              "appearance": {
+                                   "label": "Update",
+                                   "style": "primary",
+                                   "position": "top-right",
+                                   "render": "$this.attr(hasExisting); == true and ($this.attr(changeStatus); == \"\" or $this.attr(howToSaveOptions); == \"existing\")"
+                              },
+                              "remoteActionAPIname": "saveComponentStructure",
+                              "remoteActionArguments": {
+                                   "structureId": "$this.attr(existingStructureId);",
+                                   "structureName": "$this.attr(existingStructureName);",
+                                   "allowGuestAccess": "$this.attr(allowGuestAccess);",
+                                   "secureFilterKey": "$this.attr(secureFilterKey);",
+                                   "secureFilterValue": "$this.attr(secureFilterValue);",
+                                   "structureJson": "$this.attr(structureJson);"
+                              },
+                              "successHandler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 0
+                                        },
+                                        {
+                                             "field": "$nav(ExistingDataQuerySteps).appearance(current);",
+                                             "value": 0
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": [
+                                                  "DataQueryTopButtonPanel",
+                                                  "SelectedObjectPanel",
+                                                  "NewSelectObjectListView",
+                                                  "ExistingSelectObjectListView",
+                                                  "NewSelectComponentListView",
+                                                  "SelectFieldsListView",
+                                                  "FieldWorkbench",
+                                                  "FieldWorkbenchDraggable",
+                                                  "SectionQueueView",
+                                                  "QueryWorkbench",
+                                                  "QueryConfigurationPanel",
+                                                  "SummaryDetailView"
+                                             ]
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$updateComponentInNavigation;",
+                                             "value": [
+                                                  "portal_editor_data_query"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$resetDialogJson;",
+                                             "value": [
+                                                  "DataQueryErrorPanel"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "cancel",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Cancel",
+                                   "style": "secondary",
+                                   "position": "top-right"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_data_query",
+                                   "assignments": [
+                                        {
+                                             "field": "$nav(NewDataQuerySteps).appearance(current);",
+                                             "value": 0
+                                        },
+                                        {
+                                             "field": "$nav(ExistingDataQuerySteps).appearance(current);",
+                                             "value": 0
+                                        }
+                                   ],
+                                   "updates": [
+                                        {
+                                             "name": "$nav.reloads.add;",
+                                             "value": [
+                                                  "DataQueryTopButtonPanel",
+                                                  "SelectedObjectPanel",
+                                                  "NewSelectObjectListView",
+                                                  "ExistingSelectObjectListView",
+                                                  "NewSelectComponentListView",
+                                                  "SelectFieldsListView",
+                                                  "FieldWorkbench",
+                                                  "FieldWorkbenchDraggable",
+                                                  "SectionQueueView",
+                                                  "QueryWorkbench",
+                                                  "QueryConfigurationPanel",
+                                                  "SummaryDetailView"
+                                             ]
+                                        }
+                                   ],
+                                   "executions": [
+                                        {
+                                             "name": "$resetComponentConfiguration;",
+                                             "value": [
+                                                  "portal_editor_data_query"
+                                             ]
+                                        },
+                                        {
+                                             "name": "$resetDialogJson;",
+                                             "value": [
+                                                  "DataQueryErrorPanel"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               }
+          },
+          "settings": {
+               "locale": "en-us",
+               "currency": "USD",
+               "minimumFractionDigits": 2
+          },
+          "messages": {
+               "loadingAnimationText": "<span><span class=\"fa fa-spinner\"></span>Loading...</span>",
+               "savingAnimationText": "<span><span class=\"fa fa-spinner\"></span>Saving...</span>",
+               "submitAnimationText": "<span><span class=\"fa fa-spinner\"></span>Sending...</span>",
+               "loadingFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to load</span>",
+               "saveSuccessText": "<span><span class=\"fa fa-check\"></span>Succeed</span>",
+               "saveFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to save</span>",
+               "submitSuccessText": "<span><span class=\"fa fa-check\"></span>Succeed</span>",
+               "submitFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to submit</span>",
+               "submitExpirationText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to submit</span>",
+               "uploadFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to upload</span>",
+               "uploadFileTooLargeError": "<span><span class=\"fa fa-exclamation-triangle\"></span>File too large</span>"
+          }
+     },
+     "clcommon__External_ID__c": "portal_editor_data_query",
+     "clcommon__Release_Checksum__c": "3f0a6aaada0c1f33159513f8123312d3ea6bda9412781db54a3191894e11c56d"
+}

@@ -1,0 +1,72 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "personalInfoContactNextDecisionBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "personalInfoContactNextDecisionBtn",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-personal-contact-next\">Next</span>",
+               "render": "$global.attr(pageName); == \"personalinfocontactUs\""
+          },
+          "remoteActionProcess": {
+               "post": "$ext.dynamicStepper"
+          },
+          "validation": [
+               "cobaltPersonalInformationContactUsNamePanel",
+               "cobaltPersonalInformationContactUsStreetAddressPanel",
+               "cobaltPersonalInformationContactUsMailingAddressPanel"
+          ],
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "default"
+                         ]
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$global.attr(showPersonalInfoMailingAddress);==true",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "personalInfoContactSaveOtherAddressAndMailingAddressBtn"
+                    },
+                    {
+                         "condition": "$global.attr(showPersonalInfoMailingAddress);==false",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "personalInfoContactSaveOtherAddressBtn"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": "Click here to save Personal Information Contact details and go to Personal Information Identification Page"
+     },
+     "clcommon__Action_Order__c": 23,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+personalInfoContactNextDecisionBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_personalInfoContactNextDecisionBtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "a4f61ff2109002df94e5313dd733a63f3ab673bd54012aef788b1dfc6081dc95"
+}

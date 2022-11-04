@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToDocumentUpload",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "goToDocumentUpload",
+          "property": {},
+          "appearance": {
+               "variant": "outlined",
+               "label": "Document Upload",
+               "style": "primary",
+               "position": "bottom-left"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "documentupload"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Document Upload"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "documentupload"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltReferralFailurePanel"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltReferralFailurePanel+goToDocumentUpload",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltReferralFailurePanel_goToDocumentUpload_COMPONENT",
+     "clcommon__Release_Checksum__c": "59bd8525de49301e260b0bfed67e7ae0357081f8998f4d06af69b00d882d156b"
+}

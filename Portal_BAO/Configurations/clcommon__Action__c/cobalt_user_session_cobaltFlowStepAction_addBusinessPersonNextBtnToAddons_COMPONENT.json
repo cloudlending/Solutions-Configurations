@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addBusinessPersonNextBtnToAddons",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addBusinessPersonNextBtnToAddons",
+          "property": {},
+          "appearance": {
+               "label": "<span class=\"li-business-parties-next\">Next</span>",
+               "style": "primary",
+               "position": "top-right",
+               "render": "$global.attr(pageName); == \"addbusinessperson\" and $global.attr(BOCount);==0"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "oao__Portal_Stage__c": "AddBusinessPersons",
+                    "Id": "$global.attr(appId);"
+               }
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "goToAddonsPageBtn"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go to Additional Services Page"
+     },
+     "clcommon__Action_Order__c": 43,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.PortalSaveBusinessInfoApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+addBusinessPersonNextBtnToAddons",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_addBusinessPersonNextBtnToAddons_COMPONENT",
+     "clcommon__Release_Checksum__c": "67e8e835d6182a40750c5d93f18d8eda4de7a8cd62b14f2d6bc9c92583373fff"
+}

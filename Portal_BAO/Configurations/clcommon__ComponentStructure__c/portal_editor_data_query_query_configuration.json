@@ -1,0 +1,44 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_data_query_query_configuration",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_data_query_query_configuration",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_data_query_query_configuration",
+          "sections": [
+               {
+                    "id": "6787",
+                    "name": "configure",
+                    "fields": [
+                         {
+                              "id": "6787",
+                              "fieldName": "whereClause",
+                              "fieldUi": {
+                                   "fieldType": "textarea",
+                                   "label": "Here you can specify a WHERE clause.",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> WHERE clause cannot be blank"
+                                   }
+                              }
+                         },
+                         {
+                              "id": "5256",
+                              "fieldName": "orderBy",
+                              "fieldUi": {
+                                   "fieldType": "textarea",
+                                   "label": "Here you can specify an orderBy."
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_data_query_query_configuration",
+     "clcommon__Release_Checksum__c": "dbc071b2683ed10a8f35f1c4fe9e4e9b255dce4c82e9985ce7201cab63dae35e"
+}

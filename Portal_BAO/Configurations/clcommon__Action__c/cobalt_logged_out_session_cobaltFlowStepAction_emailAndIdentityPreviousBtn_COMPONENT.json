@@ -1,0 +1,75 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "emailAndIdentityPreviousBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "emailAndIdentityPreviousBtn",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(currentStep); == \"emailIdentity\"",
+               "variant": "outlined",
+               "label": "<span class=\"lo-email-identity-back\">Back</span>",
+               "style": "primary",
+               "position": "top-right"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltDescisionStep).appearance(current);",
+                         "value": "flow"
+                    },
+                    {
+                         "field": "$nav(cobaltOpenAccountsSteps).appearance(current);",
+                         "value": "openAccount"
+                    },
+                    {
+                         "field": "$global.attr(pageTitle);",
+                         "value": "Open Accounts"
+                    },
+                    {
+                         "field": "$global.attr(currentStep);",
+                         "value": "openAccount"
+                    },
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "openAccount"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "default"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go back to the Open Accounts page"
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+emailAndIdentityPreviousBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltFlowStepAction_emailAndIdentityPreviousBtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "ab14565038418a413acd659b164bf0210687fcf3c83a3bad696dfe17da3e7d96"
+}

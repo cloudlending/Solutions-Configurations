@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{$this.attr(genesis__Application__r.oao__Backup_Withholding__c);==\"No\"?\"By selecting the above, I certify, under penalties of perjury, that my Tax ID(s) is/are correct, and that I am/my business is NOT subject to backup withholding.\":\"By selecting the above, I certify, under penalties of perjury, that my Tax ID(s) is/are correct, and that I am/my business is subject to backup withholding.\"};",
+                              "field": "$nav(cobaltWithholdingPanel).appearance(textAfter);"
+                         }
+                    ]
+               },
+               "fieldChange": {
+                    "genesis__Application__r.oao__Backup_Withholding__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(genesis__Application__r.oao__Backup_Withholding__c);==\"No\"?\"By selecting the above, I certify, under penalties of perjury, that my Tax ID(s) is/are correct, and that I am/my business is NOT subject to backup withholding.\":\"By selecting the above, I certify, under penalties of perjury, that my Tax ID(s) is/are correct, and that I am/my business is subject to backup withholding.\"};",
+                                   "field": "$nav(cobaltWithholdingPanel).appearance(textAfter);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderText": {
+                    "textAfter": "$this.attr(genesis__Application__r.oao__Backup_Withholding__c);==\"Yes\" or $this.attr(genesis__Application__r.oao__Backup_Withholding__c);==\"No\""
+               },
+               "render": "$global.attr(backupWithholding);==true",
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);"
+               },
+               "structureName": "cobalt_withholding_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltWithholdingPanel",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltWithholdingPanel",
+     "clcommon__Release_Checksum__c": "6e4d2389befe6995a8b23b33b20b36deb02af219fe9eb30304b27150aca7f034"
+}

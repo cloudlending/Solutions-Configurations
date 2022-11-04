@@ -1,0 +1,214 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_actor_json_detail_view",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_actor_json_detail_view",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_actor_json_detail_view",
+          "sections": [
+               {
+                    "id": "b866",
+                    "name": "general",
+                    "title": "General",
+                    "fields": [
+                         {
+                              "id": "9919",
+                              "fieldName": "name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Actor Name",
+                                   "required": true
+                              }
+                         },
+                         {
+                              "id": "4bd3",
+                              "fieldName": "fixedCategory",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Fixed Category"
+                              }
+                         },
+                         {
+                              "id": "1a8f",
+                              "fieldName": "category",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Category"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "080e",
+                    "name": "property",
+                    "title": "Property",
+                    "fields": [
+                         {
+                              "id": "ca4a",
+                              "fieldName": "property",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Property",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid property JSON"
+                                   }
+                              }
+                         },
+                         {
+                              "id": "3a90",
+                              "fieldName": "structure",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Structure",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid structure JSON"
+                                   }
+                              }
+                         },
+                         {
+                              "id": "730c",
+                              "fieldName": "content",
+                              "fieldUi": {
+                                   "fieldType": "html",
+                                   "label": "Content"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "5fce",
+                    "name": "appearance",
+                    "title": "Appearance",
+                    "fields": [
+                         {
+                              "id": "d1d0",
+                              "fieldName": "appearance",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Appearance",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid appearance JSON"
+                                   }
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "5f9c",
+                    "name": "disclosures",
+                    "title": "Disclosures",
+                    "fields": [
+                         {
+                              "id": "9b14",
+                              "fieldName": "disclosures",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Disclosures",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid JSON for disclosures"
+                                   }
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "92a3",
+                    "name": "actions",
+                    "title": "Actions",
+                    "fields": [
+                         {
+                              "id": "1e94",
+                              "fieldName": "componentActions",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Component Actions",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid JSON for component actions"
+                                   }
+                              }
+                         },
+                         {
+                              "id": "02c2",
+                              "fieldName": "recordActions",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Record Actions",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid JSON for record actions"
+                                   }
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "472f",
+                    "name": "general_handlers",
+                    "title": "General Handlers",
+                    "fields": [
+                         {
+                              "id": "2631",
+                              "fieldName": "generalHandlers",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "General Handlers",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid JSON for general handlers"
+                                   }
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "c29f",
+                    "name": "layout",
+                    "title": "Layout",
+                    "fields": [
+                         {
+                              "id": "3f65",
+                              "fieldName": "layout",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Layout",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid JSON for layout"
+                                   }
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "c528",
+                    "name": "performance",
+                    "title": "Performance",
+                    "fields": [
+                         {
+                              "id": "39d8",
+                              "fieldName": "enablePerformance",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Enable Performance"
+                              }
+                         },
+                         {
+                              "id": "abc3",
+                              "fieldName": "performance",
+                              "fieldUi": {
+                                   "fieldType": "json",
+                                   "label": "Performance",
+                                   "messages": {
+                                        "jsonErrorText": "Invalid JSON for performance"
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_actor_json_detail_view",
+     "clcommon__Release_Checksum__c": "423299d7a234f005b482a17129f1dbbe92d6be65ba06aa95267dc6b1f125e1ab"
+}

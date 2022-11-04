@@ -1,0 +1,104 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "emailAndIdentitiesNextBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "emailAndIdentitiesNextBtn",
+          "property": {},
+          "appearance": {
+               "enable": "$state(cobaltEmailAndIdentityFormPanel).attr(signerConsent); == true and $state(cobaltEmailAndIdentityFormPanel).attr(electronicConsent); == true and $state(cobaltNewAppStepperTitlePanel).count(); > 0 and $state(cobaltEmailAndIdentityFormPanel).attr(myInformationConcent); == true",
+               "render": "$global.attr(pageName); == \"emailIdentity\" and $global.attr(eligibleContent);==false",
+               "label": "<span class=\"li-email-identity-next\">Next</span>",
+               "style": "primary",
+               "position": "top-right"
+          },
+          "remoteActionArguments": {
+               "useMyInfo": "$state(cobaltEmailAndIdentityFormPanel).attr(myInformationConcent);",
+               "overdraftOption": true,
+               "newBusinessCheck": "$state(cobaltEmailAndIdentityFormPanel).attr(newBusinessCheck);",
+               "disclosureConsent": "$state(cobaltEmailAndIdentityFormPanel).attr(electronicConsent);",
+               "signerConsent": "$state(cobaltEmailAndIdentityFormPanel).attr(signerConsent);",
+               "sessionId": "$global.attr(sessionid);",
+               "businessAccountName": "$state(cobaltEmailAndIdentityFormPanel).attr(businessAccountName);",
+               "isBeneficialOwner": "$state(cobaltEmailAndIdentityFormPanel).attr(beneficialOwner);",
+               "inEligible": false
+          },
+          "validation": [
+               "cobaltEmailAndIdentityFormPanel"
+          ],
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(isBO);",
+                         "value": "@mathjs{($state(cobaltEmailAndIdentityFormPanel).attr(beneficialOwner);==null or $state(cobaltEmailAndIdentityFormPanel).attr(beneficialOwner);==undefined or $state(cobaltEmailAndIdentityFormPanel).attr(beneficialOwner);==\"\")?false:$state(cobaltEmailAndIdentityFormPanel).attr(beneficialOwner);};"
+                    },
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "personalInfo"
+                    },
+                    {
+                         "field": "$global.attr(appId);",
+                         "value": "$result.attr(appId);"
+                    },
+                    {
+                         "field": "$global.attr(fundable);",
+                         "value": "$result.attr(isFundable);"
+                    },
+                    {
+                         "field": "$global.attr(businessAccountId);",
+                         "value": "$result.attr(businessaccountid);"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Personal information: Contact info"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "personalinfocontactUs"
+                    },
+                    {
+                         "field": "$global.attr(showCartView);",
+                         "value": "old"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    },
+                    {
+                         "field": "$global.attr(partyType);",
+                         "value": "PRIMARY"
+                    },
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": "$result.attr(principalParty);"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": "Click here to create application with above given details."
+     },
+     "clcommon__Action_Order__c": 32,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.ApplicationCreationApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+emailAndIdentitiesNextBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_emailAndIdentitiesNextBtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "e0f7b254d7c2c3da7d4f876f1b89a7d7d1c007728514639ed6c069354859fcec"
+}

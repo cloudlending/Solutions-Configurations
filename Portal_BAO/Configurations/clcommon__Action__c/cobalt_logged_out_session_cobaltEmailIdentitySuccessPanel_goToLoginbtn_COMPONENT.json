@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToLoginbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "goToLoginbtn",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "<span class=\"lo-go-to-login\">GO TO LOGIN</span>"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "redirect": {
+                    "url": "/s/login",
+                    "target": "_blank"
+               }
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltEmailIdentitySuccessPanel"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltEmailIdentitySuccessPanel+goToLoginbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltEmailIdentitySuccessPanel_goToLoginbtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "b49d23af518f6021dfb90dff9733f5084809708ad5b3c7cd2f221a7a3efe56c7"
+}

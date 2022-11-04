@@ -1,0 +1,844 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_data_query_field_configuration",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_data_query_field_configuration",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_data_query_field_configuration",
+          "sections": [
+               {
+                    "id": "bfc6",
+                    "name": "displayType",
+                    "title": "Display Type",
+                    "fields": [
+                         {
+                              "id": "4543",
+                              "fieldName": "displayType",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Data Type"
+                              }
+                         },
+                         {
+                              "id": "c55e",
+                              "fieldName": "fieldTypeBoolean",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Display Type",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Boolean",
+                                             "optionValue": "boolean"
+                                        },
+                                        {
+                                             "optionText": "Switch",
+                                             "optionValue": "switch"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "449c",
+                              "fieldName": "fieldTypePicklist",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Display Type",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Picklist",
+                                             "optionValue": "picklist"
+                                        },
+                                        {
+                                             "optionText": "Radio Buttons",
+                                             "optionValue": "radiobuttons"
+                                        },
+                                        {
+                                             "optionText": "Select Buttons",
+                                             "optionValue": "selectbuttons"
+                                        },
+                                        {
+                                             "optionText": "Multi Value Indicator",
+                                             "optionValue": "multiValueIndicator"
+                                        },
+                                        {
+                                             "optionText": "Picklist Autocomplete",
+                                             "optionValue": "picklistAutocomplete"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "08ad",
+                              "fieldName": "fieldTypeMultiPicklist",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Display Type",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Multiple-Selected Picklist",
+                                             "optionValue": "multipicklist"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "7e9a",
+                              "fieldName": "fieldTypeCurrency",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Display Type",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Currency",
+                                             "optionValue": "currency"
+                                        },
+                                        {
+                                             "optionText": "Number",
+                                             "optionValue": "number"
+                                        },
+                                        {
+                                             "optionText": "String",
+                                             "optionValue": "string"
+                                        },
+                                        {
+                                             "optionText": "Link",
+                                             "optionValue": "link"
+                                        },
+                                        {
+                                             "optionText": "Range",
+                                             "optionValue": "range"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "96e0",
+                              "fieldName": "fieldTypePercent",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Display Type",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Percent",
+                                             "optionValue": "percent"
+                                        },
+                                        {
+                                             "optionText": "Number",
+                                             "optionValue": "number"
+                                        },
+                                        {
+                                             "optionText": "String",
+                                             "optionValue": "string"
+                                        },
+                                        {
+                                             "optionText": "Link",
+                                             "optionValue": "link"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "9573",
+                              "fieldName": "fieldTypeDate",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Display Type",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Date",
+                                             "optionValue": "date"
+                                        },
+                                        {
+                                             "optionText": "String",
+                                             "optionValue": "string"
+                                        },
+                                        {
+                                             "optionText": "Link",
+                                             "optionValue": "link"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "c866",
+                              "fieldName": "fieldTypeTime",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Display Type",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Time",
+                                             "optionValue": "time"
+                                        },
+                                        {
+                                             "optionText": "String",
+                                             "optionValue": "string"
+                                        },
+                                        {
+                                             "optionText": "Link",
+                                             "optionValue": "link"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "ed2b",
+                              "fieldName": "fieldTypeDateTime",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Display Type",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "DateTime",
+                                             "optionValue": "datetime"
+                                        },
+                                        {
+                                             "optionText": "String",
+                                             "optionValue": "string"
+                                        },
+                                        {
+                                             "optionText": "Link",
+                                             "optionValue": "link"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "0dad",
+                              "fieldName": "fieldTypeNumber",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Display Type",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Number",
+                                             "optionValue": "number"
+                                        },
+                                        {
+                                             "optionText": "Currency",
+                                             "optionValue": "currency"
+                                        },
+                                        {
+                                             "optionText": "Percent",
+                                             "optionValue": "percent"
+                                        },
+                                        {
+                                             "optionText": "Range",
+                                             "optionValue": "range"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "f99b",
+                              "fieldName": "fieldTypePlainString",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Display Type",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "String",
+                                             "optionValue": "string"
+                                        },
+                                        {
+                                             "optionText": "Link",
+                                             "optionValue": "link"
+                                        },
+                                        {
+                                             "optionText": "Address Auto Complete",
+                                             "optionValue": "addressAutocomplete"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "9054",
+                              "fieldName": "fieldTypeString",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Display Type",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "String",
+                                             "optionValue": "string"
+                                        },
+                                        {
+                                             "optionText": "Link",
+                                             "optionValue": "link"
+                                        },
+                                        {
+                                             "optionText": "Image",
+                                             "optionValue": "image"
+                                        },
+                                        {
+                                             "optionText": "Address Auto Complete",
+                                             "optionValue": "addressAutocomplete"
+                                        },
+                                        {
+                                             "optionText": "Credit Card",
+                                             "optionValue": "creditCard"
+                                        },
+                                        {
+                                             "optionText": "Phone",
+                                             "optionValue": "phone"
+                                        },
+                                        {
+                                             "optionText": "SSN",
+                                             "optionValue": "ssn"
+                                        },
+                                        {
+                                             "optionText": "TIN",
+                                             "optionValue": "tin"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "2480",
+                              "fieldName": "fieldTypeTextarea",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Display Type",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   },
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Text Area",
+                                             "optionValue": "textarea"
+                                        },
+                                        {
+                                             "optionText": "Address Auto Complete",
+                                             "optionValue": "addressAutocomplete"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "e1a9",
+                              "fieldName": "linkTemplate",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Link Template",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   }
+                              }
+                         },
+                         {
+                              "id": "5cef",
+                              "fieldName": "linkTarget",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Link Target"
+                              }
+                         },
+                         {
+                              "id": "e37y",
+                              "fieldName": "selectedPrefix",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Selected Prefix"
+                              }
+                         },
+                         {
+                              "id": "h68r",
+                              "fieldName": "selectedSuffix",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Selected Suffix"
+                              }
+                         },
+                         {
+                              "id": "8ty6",
+                              "fieldName": "expansible",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Expansible?",
+                                   "format": {
+                                        "compact": true
+                                   },
+                                   "expansibleIcons": [
+                                        {
+                                             "expanded": "<span class=\"fa fa-angle-double-down\"/>",
+                                             "collapsed": "<span class=\"fa fa-angle-double-up\"/>"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "a1a1",
+                              "fieldName": "imageTemplate",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Image Template"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "bd46",
+                    "name": "addressComponents",
+                    "title": "Address Components",
+                    "fields": [
+                         {
+                              "id": "2wr5",
+                              "fieldName": "streetNumber",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Street Number"
+                              }
+                         },
+                         {
+                              "id": "r5y7",
+                              "fieldName": "route",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Street Name"
+                              }
+                         },
+                         {
+                              "id": "w4t6",
+                              "fieldName": "locality",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "City"
+                              }
+                         },
+                         {
+                              "id": "1w3y",
+                              "fieldName": "administrativeAreaLevel1",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "State"
+                              }
+                         },
+                         {
+                              "id": "p9yn",
+                              "fieldName": "country",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Country"
+                              }
+                         },
+                         {
+                              "id": "1y8i",
+                              "fieldName": "postalCode",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Zip Code"
+                              }
+                         },
+                         {
+                              "id": "h6u9",
+                              "fieldName": "addressRestriction",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Country Restrictions"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "bd47",
+                    "name": "accessibility",
+                    "title": "Accessibility",
+                    "fields": [
+                         {
+                              "id": "d50e",
+                              "fieldName": "ariaLabel",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Aria Label",
+                                   "placeholder": "This label will be read by screen readers",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   }
+                              }
+                         },
+                         {
+                              "id": "a1a2",
+                              "fieldName": "imageAltText",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Image Alt Text",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Cannot be blank."
+                                   }
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "4rua",
+                    "name": "rangeSlider",
+                    "title": "Range Options",
+                    "fields": [
+                         {
+                              "id": "e4c4",
+                              "fieldName": "editableRangeValue",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Edit Range Value?",
+                                   "format": {
+                                        "compact": true
+                                   }
+                              }
+                         },
+                         {
+                              "id": "e5hj",
+                              "fieldName": "dataType",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Range Date Type",
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Number",
+                                             "optionValue": "number"
+                                        },
+                                        {
+                                             "optionText": "Currency",
+                                             "optionValue": "currency"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "1qu8",
+                              "fieldName": "min",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Range Minimum Value"
+                              }
+                         },
+                         {
+                              "id": "p0bg",
+                              "fieldName": "max",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Range Maximum Value"
+                              }
+                         },
+                         {
+                              "id": "s3f5",
+                              "fieldName": "step",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Range Step"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "w4t6",
+                    "name": "formatOptions",
+                    "title": "Format Options",
+                    "fields": [
+                         {
+                              "id": "u6i9",
+                              "fieldName": "prefix",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Prefix",
+                                   "placeholderText": "$ ₹ € #"
+                              }
+                         },
+                         {
+                              "id": "1we7",
+                              "fieldName": "suffix",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Suffix",
+                                   "placeholderText": " %  $ ;"
+                              }
+                         },
+                         {
+                              "id": "8g5k",
+                              "fieldName": "prettyInput",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Pretty Input?"
+                              }
+                         },
+                         {
+                              "id": "5ro9",
+                              "fieldName": "delimiter",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Delimiter",
+                                   "placeholderText": " .   ,   -"
+                              }
+                         },
+                         {
+                              "id": "il0r",
+                              "fieldName": "blocks",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Blocks",
+                                   "placeholderText": "3,4,2"
+                              }
+                         },
+                         {
+                              "id": "d4fg",
+                              "fieldName": "PhoneRegionCode",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Phone Region Code",
+                                   "placeholderText": "US IN AU"
+                              }
+                         },
+                         {
+                              "id": "w3ry",
+                              "fieldName": "numeralThousandsGroupStyle",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Numeral Thousands Group Style",
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Thousand",
+                                             "optionValue": "thousand"
+                                        },
+                                        {
+                                             "optionText": "Lakh",
+                                             "optionValue": "lakh"
+                                        },
+                                        {
+                                             "optionText": "Wan",
+                                             "optionValue": "wan"
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "bd46",
+                    "name": "text",
+                    "title": "Text",
+                    "fields": [
+                         {
+                              "id": "d50e",
+                              "fieldName": "label",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Label"
+                              }
+                         },
+                         {
+                              "id": "fbf8",
+                              "fieldName": "placeholderText",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Placeholder Text"
+                              }
+                         },
+                         {
+                              "id": "b424",
+                              "fieldName": "tooltip",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Tooltip"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "0aca",
+                    "name": "required",
+                    "title": "Required",
+                    "fields": [
+                         {
+                              "id": "addd",
+                              "fieldName": "required",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Required?"
+                              }
+                         },
+                         {
+                              "id": "00bd",
+                              "fieldName": "requiredErrorText",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Required Error Message"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "084f",
+                    "name": "regex",
+                    "title": "Regular Expression",
+                    "fields": [
+                         {
+                              "id": "8faa",
+                              "fieldName": "regex",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Regex Format"
+                              }
+                         },
+                         {
+                              "id": "7de1",
+                              "fieldName": "regexErrorText",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Regex Error Message"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "9bf0",
+                    "name": "misc",
+                    "title": "Miscellaneous",
+                    "fields": [
+                         {
+                              "id": "a77e",
+                              "fieldName": "defaultString",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Default Value"
+                              }
+                         },
+                         {
+                              "id": "a3ee",
+                              "fieldName": "defaultNumber",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Default Value"
+                              }
+                         },
+                         {
+                              "id": "6005",
+                              "fieldName": "defaultBoolean",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Default Value",
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "False",
+                                             "optionValue": "false"
+                                        },
+                                        {
+                                             "optionText": "True",
+                                             "optionValue": "true"
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "id": "b350",
+                              "fieldName": "defaultDate",
+                              "fieldUi": {
+                                   "fieldType": "date",
+                                   "label": "Default Value"
+                              }
+                         },
+                         {
+                              "id": "e095",
+                              "fieldName": "defaultTime",
+                              "fieldUi": {
+                                   "fieldType": "time",
+                                   "label": "Default Value"
+                              }
+                         },
+                         {
+                              "id": "c4c3",
+                              "fieldName": "defaultDateTime",
+                              "fieldUi": {
+                                   "fieldType": "datetime",
+                                   "label": "Default Value"
+                              }
+                         },
+                         {
+                              "id": "1dd9",
+                              "fieldName": "secure",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Secure?"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "224b",
+                    "name": "reftext",
+                    "title": "Reference Text",
+                    "fields": [
+                         {
+                              "id": "731f",
+                              "fieldName": "referenceLoadingText",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Reference Loading Message"
+                              }
+                         },
+                         {
+                              "id": "5ea2",
+                              "fieldName": "referenceErrorText",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Reference Error Message"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_data_query_field_configuration",
+     "clcommon__Release_Checksum__c": "aba47aa7932181ee9d075e45fc0ab15a85380debd85543ac7275bad1521d61ad"
+}

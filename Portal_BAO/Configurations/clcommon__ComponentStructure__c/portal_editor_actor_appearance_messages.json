@@ -1,0 +1,137 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "portal_editor_actor_appearance_messages",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "portal_editor_actor_appearance_messages",
+     "clcommon__data__c": {
+          "structureName": "portal_editor_actor_appearance_messages",
+          "sections": [
+               {
+                    "fields": [
+                         {
+                              "id": "5275",
+                              "fieldName": "isError",
+                              "fieldUi": {
+                                   "fieldType": "boolean"
+                              }
+                         },
+                         {
+                              "id": "fcff",
+                              "fieldName": "showHideType",
+                              "fieldUi": {
+                                   "fieldType": "string"
+                              }
+                         },
+                         {
+                              "id": "4759",
+                              "fieldName": "messageType",
+                              "fieldUi": {
+                                   "fieldType": "string"
+                              }
+                         },
+                         {
+                              "id": "4f22",
+                              "fieldName": "messagePositionType",
+                              "fieldUi": {
+                                   "fieldType": "string"
+                              }
+                         },
+                         {
+                              "id": "bec2",
+                              "fieldName": "messageSelected",
+                              "fieldUi": {
+                                   "fieldType": "boolean"
+                              }
+                         },
+                         {
+                              "id": "44f5",
+                              "fieldName": "messageLabel",
+                              "fieldUi": {
+                                   "fieldType": "string"
+                              }
+                         },
+                         {
+                              "id": "3bf7",
+                              "fieldName": "messageContent",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Text",
+                                   "placeholderText": "Enter text",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "<span class='fa fa-exclamation'></span> Text cannot be blank."
+                                   }
+                              }
+                         },
+                         {
+                              "id": "aa4d",
+                              "fieldName": "messagePosition",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Position",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "optionText": "Global",
+                                             "optionValue": "global"
+                                        },
+                                        {
+                                             "optionText": "Top",
+                                             "optionValue": "top"
+                                        },
+                                        {
+                                             "optionText": "Bottom",
+                                             "optionValue": "bottom"
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               }
+          ],
+          "staticData": [
+               {
+                    "isError": false,
+                    "showHideType": "showLoadingAnimation",
+                    "messageType": "loadingAnimationText",
+                    "messagePositionType": "loadingAnimation",
+                    "messageLabel": "Animation message when loading data is in progress"
+               },
+               {
+                    "isError": false,
+                    "showHideType": "showSavingAnimation",
+                    "messageType": "savingAnimationText",
+                    "messagePositionType": "saveSubmitAnimation",
+                    "messageLabel": "Animation message when saving data is in progress"
+               },
+               {
+                    "isError": false,
+                    "showHideType": "showSavingSuccess",
+                    "messageType": "saveSuccessText",
+                    "messagePositionType": "saveSubmitSuccess",
+                    "messageLabel": "Confirmation message when saving data succeeded"
+               },
+               {
+                    "isError": true,
+                    "showHideType": "hideLoadingError",
+                    "messageType": "loadingFailureText",
+                    "messagePositionType": "loadingError",
+                    "messageLabel": "Error message when loading data failed"
+               },
+               {
+                    "isError": true,
+                    "hideSavingError": "hideSavingError",
+                    "messageType": "saveFailureText",
+                    "messagePositionType": "saveSubmitError",
+                    "messageLabel": "Error message when saving data failed"
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "portal_editor_actor_appearance_messages",
+     "clcommon__Release_Checksum__c": "fd79bc66bec1501d135f276e3eb932f14b268b403b3e3de266110a03d378fb81"
+}

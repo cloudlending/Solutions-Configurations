@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "stepperStyleAddonsbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "stepperStyleAddonsbtn",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "normal",
+               "label": "Stepper style",
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "addonComplete"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltProductsQueueView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_cart_details_existing",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltProductsQueueView+stepperStyleAddonsbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltProductsQueueView_stepperStyleAddonsbtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "2f15ab5eeb5fc6f6afe1a7904839fb3f9f2a890e3263002e6dfaf2608c148a55"
+}

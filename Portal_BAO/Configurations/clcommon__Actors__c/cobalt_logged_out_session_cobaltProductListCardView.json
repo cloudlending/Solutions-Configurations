@@ -1,0 +1,111 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$ext.configureCardHeaderHeight",
+                              "field": ""
+                         },
+                         {
+                              "arguments": [
+                                   "$this.count();"
+                              ],
+                              "value": "$ext.makeGridDynamic",
+                              "field": ""
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": true,
+               "accessibility": {
+                    "ariaLabel": "This section contains multiple products for the product type that you have selected"
+               },
+               "showSectionTitle": true,
+               "sectionStyle": "layout",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "noLabelFields": [
+                    "oao__Benefits_Title__c",
+                    "oao__Requirements_Title__c",
+                    "clcommon__Product_Name__c",
+                    "oao__Product_Id__c",
+                    "Footer",
+                    "oao__Benefits_Text__c",
+                    "oao__Requirements_Text__c",
+                    "oao__Footer__c"
+               ],
+               "editableFields": {
+                    "oao__Show_Term__c": false,
+                    "oao__Footer__c": false,
+                    "oao__Requirements_Text__c": false,
+                    "oao__Benefits_Text__c": false,
+                    "Footer": false,
+                    "oao__Product_Term__c": "$this.attr(oao__IsSelected__c); == false",
+                    "oao__Product_Id__c": false,
+                    "oao__IsSelected__c": false,
+                    "oao__Title__c": false,
+                    "oao__Default__c": false,
+                    "clcommon__Product_Name__c": false,
+                    "oao__Requirements_Title__c": false,
+                    "oao__Benefits_Title__c": false,
+                    "oao__Required__c": false
+               },
+               "renderFields": {
+                    "oao__Show_Term__c": false,
+                    "oao__Footer__c": false,
+                    "oao__Requirements_Text__c": false,
+                    "oao__Benefits_Text__c": false,
+                    "Footer": false,
+                    "oao__Product_Term__c": "$global.attr(productType); == \"Business Certificates of Deposit\" and $this.attr(oao__Required__c); == false and $this.attr(oao__Show_Term__c);",
+                    "oao__Product_Id__c": false,
+                    "oao__IsSelected__c": false,
+                    "oao__Title__c": false,
+                    "clcommon__Product_Abbreviation__c": false,
+                    "oao__Default__c": false,
+                    "clcommon__Product_Name__c": false,
+                    "oao__Requirements_Title__c": false,
+                    "oao__Benefits_Title__c": false,
+                    "oao__Required__c": false
+               },
+               "grid": {
+                    "card": {
+                         "enable": false,
+                         "xs": 12,
+                         "sm": 4
+                    }
+               },
+               "columns": 1,
+               "fieldColumns": 1,
+               "cardSubtitle": "$this.attr(oao__Title__c);",
+               "cardTitle": "$this.attr(clcommon__Product_Name__c);"
+          },
+          "property": {
+               "queryName": "query1",
+               "structureName": "cobalt_product_detail_qry"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltProductListCardView",
+     "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltProductListCardView",
+     "clcommon__Release_Checksum__c": "42f51af859b17de82a2f0985cf0ff2fcc0e096d14ffe2409a5b893283bc309f1"
+}

@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "updateGuarantorStage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "updateGuarantorStage",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {
+               "partyId": "$global.attr(partyId);"
+          },
+          "validation": [],
+          "uploadActionArguments": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "validatePolicies"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "cobaltShortLoaderContainer"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.changeLoaderText",
+                         "value": [
+                              "Verifying your identity"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {
+               "showSubmitAnimation": false
+          }
+     },
+     "clcommon__Action_Order__c": 55,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.UpdateGuarantorStageApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+updateGuarantorStage",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_updateGuarantorStage_COMPONENT",
+     "clcommon__Release_Checksum__c": "c70c2ecc9c1a0fe5a66f5ebed1c7395c3aef5aca24fac808da9bd8d2cefee1c3"
+}

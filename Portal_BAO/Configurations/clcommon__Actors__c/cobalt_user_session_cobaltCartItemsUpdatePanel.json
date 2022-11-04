@@ -1,0 +1,31 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "sectionStyle": "layout",
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);"
+               },
+               "structureName": "cobalt_cart_details_existing"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltCartItemsUpdatePanel",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltCartItemsUpdatePanel",
+     "clcommon__Release_Checksum__c": "b499d896e5b3d67656b0530c3be6567c398257c2f8afca289eaa981b811972f2"
+}

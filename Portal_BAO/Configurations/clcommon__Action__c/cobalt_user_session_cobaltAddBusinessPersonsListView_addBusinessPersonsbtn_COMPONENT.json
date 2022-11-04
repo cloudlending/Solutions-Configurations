@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addBusinessPersonsbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addBusinessPersonsbtn",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Add Business Parties"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltAddBusinessPersonsPopupPanel).appearance(title);",
+                         "value": "Add Business Person"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "cobaltAddBusinessPersonsPopup"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "cobaltAddBusinessPersonsPopupPanel"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltAddBusinessPersonsListView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_list_of_guarantors_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltAddBusinessPersonsListView+addBusinessPersonsbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltAddBusinessPersonsListView_addBusinessPersonsbtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "f2a6ea8adc1f85c6db87af0e59dd39e291c3793227c0882f7aba0e9990175240"
+}

@@ -1,0 +1,88 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "selectAccountNextBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "selectAccountNextBtn",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(pageName);==\"openAccount\"",
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-open-accounts-next\">Next</span>",
+               "enable": "$state(cobaltNewAppStepperTitlePanel).count();>0 "
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Email & Identity"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "emailIdentity"
+                    },
+                    {
+                         "field": "$state(cobaltEmailAndIdentityFormPanel).attr(businessAccountName);",
+                         "value": "$global.attr(businessName);"
+                    },
+                    {
+                         "field": "$state(cobaltEmailAndIdentityFormPanel).attr(firstName);",
+                         "value": "$state(cobaltFetchContactDetailsModel).attr(FirstName);"
+                    },
+                    {
+                         "field": "$state(cobaltEmailAndIdentityFormPanel).attr(lastName);",
+                         "value": "$state(cobaltFetchContactDetailsModel).attr(LastName);"
+                    },
+                    {
+                         "field": "$state(cobaltEmailAndIdentityFormPanel).attr(emailAddress);",
+                         "value": "$state(cobaltFetchContactDetailsModel).attr(Email);"
+                    },
+                    {
+                         "field": "$state(cobaltEmailAndIdentityFormPanel).attr(mobilePhone);",
+                         "value": "$state(cobaltFetchContactDetailsModel).attr(MobilePhone);"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "default"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go to Email and Identity Page"
+     },
+     "clcommon__Action_Order__c": 31,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+selectAccountNextBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_selectAccountNextBtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "a4ffeb3ebae69ab303c9417ac388cc5f2b5c6171c63f41d971f262c2a4a59e8f"
+}

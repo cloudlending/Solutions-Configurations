@@ -1,0 +1,135 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_personal_identity_details_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "cobalt_personal_identity_details_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_personal_identity_details_query",
+          "sections": [
+               {
+                    "id": "35281748-8045sdfgdfas-4840-b6cc-36266cff827c",
+                    "name": "Details",
+                    "fields": [
+                         {
+                              "id": "8778678376asdfasdfsaaasdf843543adfadsfsdgsasdf6543-4437",
+                              "relationType": "reference",
+                              "fieldName": "identificationType",
+                              "relationName": "oao__Identification_Type__c",
+                              "relationJson": {
+                                   "tableName": "oao__Identification_Type__c",
+                                   "whereClause": {
+                                        "freeForm": "oao__Selected__c = true"
+                                   },
+                                   "orderBy": "Name ASC",
+                                   "sections": [
+                                        {
+                                             "id": "eb8dsdfaasdfassasfdfas22be43-2a59-4c44sada2-904f-d8a88cf1faa",
+                                             "fields": [
+                                                  {
+                                                       "id": "c994asfa4c434asasdfasdf8a8-8d47-40b7-9753-c6673ad0fff6aa8",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Identification Type",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "messages": {
+                                        "requiredErrorText": "Identification Type is required."
+                                   }
+                              }
+                         },
+                         {
+                              "id": "8778678376843543adfadsfasdf6543-4437",
+                              "relationType": "reference",
+                              "fieldName": "country",
+                              "relationName": "oao__Country__c",
+                              "relationJson": {
+                                   "tableName": "oao__Country__c",
+                                   "whereClause": {
+                                        "freeForm": "oao__Selected__c = true"
+                                   },
+                                   "orderBy": "Name ASC",
+                                   "sections": [
+                                        {
+                                             "id": "eb8d22be43-2a59-4c44sada2-904f-d8a88cf1faa",
+                                             "fields": [
+                                                  {
+                                                       "id": "c9944c434asdf8a8-8d47-40b7-9753-c6673ad06aa8",
+                                                       "fieldName": "oao__Full_Form__c",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Issued Country",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "messages": {
+                                        "requiredErrorText": "Issued Country is required."
+                                   }
+                              }
+                         },
+                         {
+                              "id": "8778678376asdfasdf843543adfadsfsdgsasdf6543-4437",
+                              "relationType": "reference",
+                              "fieldName": "state",
+                              "relationName": "oao__State__c",
+                              "relationJson": {
+                                   "tableName": "oao__State__c",
+                                   "whereClause": {
+                                        "freeForm": "oao__Selected__c = true"
+                                   },
+                                   "orderBy": "oao__Short_form__c ASC",
+                                   "sections": [
+                                        {
+                                             "id": "eb8dsdfasasfdfas22be43-2a59-4c44sada2-904f-d8a88cf1faa",
+                                             "fields": [
+                                                  {
+                                                       "id": "c994asfa4c434asasdfasdf8a8-8d47-40b7-9753-c6673ad06aa8",
+                                                       "fieldName": "oao__Short_form__c",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "State Code"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Issued State",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "messages": {
+                                        "requiredErrorText": "Issued State is required."
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_personal_identity_details_query",
+     "clcommon__Release_Checksum__c": "8c9b096602e25e92b9f0a74c9f3275e8b557d46562856e3b13386dfdef847197"
+}

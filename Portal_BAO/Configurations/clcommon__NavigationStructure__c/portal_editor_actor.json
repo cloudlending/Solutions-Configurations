@@ -1,0 +1,146 @@
+{
+     "attributes": {
+          "type": "clcommon__NavigationStructure__c"
+     },
+     "Name": "portal_editor_actor",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Description__c": null,
+     "clcommon__Is_Editor_JSON__c": true,
+     "clcommon__Is_Template__c": false,
+     "clcommon__Related_Configuration_Mapping__c": null,
+     "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
+     "clcommon__Unique_Name__c": "portal_editor_actor",
+     "clcommon__data__c": {
+          "start": "AdvancedPage",
+          "stages": {
+               "AdvancedPage": {
+                    "layout": {
+                         "name": "ActorJsonDetailView"
+                    }
+               }
+          },
+          "actors": {
+               "ActorJsonDetailView": {
+                    "category": "component",
+                    "type": "detail-view",
+                    "property": {
+                         "structureName": "portal_editor_actor_json_detail_view",
+                         "dataObject": "$editModeActor;"
+                    },
+                    "appearance": {
+                         "editable": true,
+                         "transient": true,
+                         "sectionStyle": "step",
+                         "title": "Edit Actor: $this.attr(name);",
+                         "expansionTop": "normal",
+                         "renderFields": {
+                              "structure": "$this.attr(category); == \"component\"",
+                              "content": "$this.attr(category); == \"content\"",
+                              "performance": "$this.attr(enablePerformance); == true"
+                         },
+                         "renderSections": {
+                              "general": false,
+                              "property": "$this.attr(category); == \"component\" or $this.attr(category); == \"content\"",
+                              "appearance": "$this.attr(category); != \"division\"",
+                              "disclosures": "$this.attr(category); == \"component\" or $this.attr(category); == \"content\"",
+                              "actions": "$this.attr(category); != \"division\"",
+                              "general_handlers": "$this.attr(category); == \"component\" or $this.attr(category); == \"content\"",
+                              "layout": "$this.attr(category); == \"division\" or $this.attr(category); == \"container\"",
+                              "performance": "$this.attr(category); == \"component\""
+                         }
+                    },
+                    "componentActions": [
+                         {
+                              "name": "delete",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Delete Actor",
+                                   "position": "top-right",
+                                   "style": "warning",
+                                   "render": "$this.attr(fixedCategory);"
+                              },
+                              "confirmation": {
+                                   "type": "prompt",
+                                   "title": "Are you sure?",
+                                   "content": "<p>Actors cannot be restored after being deleted.</p><p>Are you sure that you want to delete this actor?</p>",
+                                   "showConfirmButtons": true,
+                                   "confirmText": "Yes. Delete this actor.",
+                                   "cancelText": "No. Keep this actor."
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_actor",
+                                   "executions": [
+                                        {
+                                             "name": "$deleteCurrentActor;",
+                                             "value": []
+                                        },
+                                        {
+                                             "name": "$resetDialogJson;",
+                                             "value": []
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "apply",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Apply",
+                                   "position": "top-right",
+                                   "style": "primary"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_actor",
+                                   "executions": [
+                                        {
+                                             "name": "$updateCurrentActor;",
+                                             "value": [
+                                                  "portal_editor_actor"
+                                             ]
+                                        }
+                                   ]
+                              }
+                         },
+                         {
+                              "name": "cancel",
+                              "actionType": "normal",
+                              "appearance": {
+                                   "label": "Cancel",
+                                   "position": "top-right",
+                                   "style": "secondary"
+                              },
+                              "handler": {
+                                   "navigation": "portal_editor_actor",
+                                   "executions": [
+                                        {
+                                             "name": "$resetDialogJson;",
+                                             "value": []
+                                        }
+                                   ]
+                              }
+                         }
+                    ]
+               }
+          },
+          "settings": {
+               "locale": "en-us",
+               "currency": "USD",
+               "minimumFractionDigits": 2
+          },
+          "messages": {
+               "loadingAnimationText": "<span><span class=\"fa fa-spinner\"></span>Loading...</span>",
+               "savingAnimationText": "<span><span class=\"fa fa-spinner\"></span>Saving...</span>",
+               "submitAnimationText": "<span><span class=\"fa fa-spinner\"></span>Sending...</span>",
+               "loadingFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to load</span>",
+               "saveSuccessText": "<span><span class=\"fa fa-check\"></span>Succeed</span>",
+               "saveFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to save</span>",
+               "submitSuccessText": "<span><span class=\"fa fa-check\"></span>Succeed</span>",
+               "submitFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to submit</span>",
+               "submitExpirationText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to submit</span>",
+               "uploadFailureText": "<span><span class=\"fa fa-exclamation-triangle\"></span>Fail to upload</span>",
+               "uploadFileTooLargeError": "<span><span class=\"fa fa-exclamation-triangle\"></span>File too large</span>"
+          }
+     },
+     "clcommon__External_ID__c": "portal_editor_actor",
+     "clcommon__Release_Checksum__c": "62d2e5a748ab1211214234a2b8cca34d12685b103fdfb3c94de9aa742dc83773"
+}

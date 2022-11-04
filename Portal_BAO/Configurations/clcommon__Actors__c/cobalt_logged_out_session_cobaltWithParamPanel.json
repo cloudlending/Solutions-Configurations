@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "actions": [
+                         {
+                              "name": "subProductBackBtn",
+                              "actorName": "cobaltSessionStorage"
+                         },
+                         {
+                              "name": "noProductFound",
+                              "actorName": "cobaltWithParamPanel",
+                              "condition": "$this.attr(validProduct); == \"Product Details Not Found\""
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editableFields": {
+                    "validProduct": false
+               },
+               "renderFields": {
+                    "validProduct": false
+               },
+               "render": true,
+               "fieldColumns": 1
+          },
+          "property": {
+               "queryName": "query1",
+               "structureName": "cobalt_with_url_parameter"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltWithParamPanel",
+     "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltWithParamPanel",
+     "clcommon__Release_Checksum__c": "0d684a87f21efeb97b98faf0fee870628a53eb909fd94c42740205d991e87137"
+}

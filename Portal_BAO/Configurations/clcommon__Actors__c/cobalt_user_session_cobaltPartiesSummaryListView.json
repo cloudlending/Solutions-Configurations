@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "fieldChange": {
+                    "oao__Percentage_Ownership__c": {
+                         "assignments": [
+                              {
+                                   "value": "$state(cobaltPartiesSummaryListView).sum(oao__Percentage_Ownership__c);",
+                                   "field": "$global.attr(percentageBO);"
+                              }
+                         ]
+                    }
+               },
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$this.sum(oao__Percentage_Ownership__c);",
+                              "field": "$global.attr(percentageBO);"
+                         },
+                         {
+                              "value": "$this.count();",
+                              "field": "$global.attr(BOCount);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "$global.attr(pageName); == \"partiessummary\"",
+               "renderFields": {
+                    "Id": false
+               },
+               "renderText": {
+                    "textAfter": "$global.attr(percentageBO);<25 or $global.attr(percentageBO);>100"
+               },
+               "editable": true,
+               "textAfter": "*The sum of Percentage Ownership must be between 25% and 100%",
+               "title": "<span tabIndex = \"0\" role = \"header\" >Beneficial owners are: <br>(1) Each individual, if any, who owns, directly or indirectly, 25 percent or more of the equity interests of the legal entity customer (e.g., each natural person that owns 25 percent or more of the shares of a corporation; and <br>(2) An individual with significant responsibility for managing the legal entity customer (e.g., a Chief Executive Officer, Chief Financial Officer, Chief Operating Officer, Managing Member, General Partner, President, Vice President, or Treasurer).<br><br>Below is a summary of all of the Beneficial Owners associated with your business. Please certify all of the information below is correct:</span>"
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);"
+               },
+               "structureName": "cobalt_party_summary_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltPartiesSummaryListView",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltPartiesSummaryListView",
+     "clcommon__Release_Checksum__c": "15e6c0cb6f2fbe8cfe5b3c2aa21d2de19d7180378b0386e882799dfb7725f7c0"
+}

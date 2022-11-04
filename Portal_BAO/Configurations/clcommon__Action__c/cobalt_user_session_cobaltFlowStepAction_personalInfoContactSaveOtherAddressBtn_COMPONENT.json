@@ -1,0 +1,75 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "personalInfoContactSaveOtherAddressBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "personalInfoContactSaveOtherAddressBtn",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "Next",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "oao__Portal_Stage__c": "PersonalInformationContactInfo",
+                    "Id": "$global.attr(appId);"
+               },
+               "contact": {
+                    "id": "$state(cobaltPersonalInformationContactUsNamePanel).attr(Id);",
+                    "Account.Phone": "$state(cobaltPersonalInformationContactUsNamePanel).attr(MobilePhone);",
+                    "Account.clcommon__Email__c": "$state(cobaltPersonalInformationContactUsNamePanel).attr(Email);",
+                    "lastName": "$state(cobaltPersonalInformationContactUsNamePanel).attr(LastName);",
+                    "firstName": "$state(cobaltPersonalInformationContactUsNamePanel).attr(FirstName);",
+                    "MiddleName": "$state(cobaltPersonalInformationContactUsNamePanel).attr(MiddleName);",
+                    "OtherStreet": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStreet);",
+                    "oao__Other_Address_Second_Line__c": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(oao__Other_Address_Second_Line__c);",
+                    "OtherCity": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCity);",
+                    "OtherStateCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStateCode);",
+                    "OtherPostalCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherPostalCode);",
+                    "MailingStreet": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStreet);",
+                    "MailingCountryCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCountryCode);",
+                    "OtherCountryCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCountryCode);",
+                    "oao__Mailing_Address_Second_Line__c": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(oao__Other_Address_Second_Line__c);",
+                    "MailingCity": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCity);",
+                    "MailingStateCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStateCode);",
+                    "MailingPostalCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherPostalCode);"
+               }
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "condition": true,
+                         "actorName": "cobaltPersonalAccountDetailsPanel",
+                         "name": "accountNameConcatDecisionBtn"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          }
+     },
+     "clcommon__Action_Order__c": 25,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.PortalSavePersonalInfoApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+personalInfoContactSaveOtherAddressBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_personalInfoContactSaveOtherAddressBtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "caebbd8b9ee86d95450f611bc81da019e7cd59c47d91b53f0498dbd260f28157"
+}

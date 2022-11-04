@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_add_ons_view",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "cobalt_add_ons_view",
+     "clcommon__data__c": {
+          "structureName": "cobalt_add_ons_view",
+          "tableName": "oao__addons_list__c",
+          "whereClause": {
+               "freeForm": "id != null and oao__Active__c != false"
+          },
+          "orderBy": "Name",
+          "sections": [
+               {
+                    "id": "41b37725-4663-45ce-96f9-ac4870cc5393",
+                    "name": "AddonsSection",
+                    "fields": [
+                         {
+                              "id": "28aa6200-5d32-48ff-aab6-3b3911693a0d",
+                              "fieldName": "oao__Selected__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "$this.attr(Name);",
+                                   "defaultValue": false,
+                                   "ariaLabel": "$this.attr(Name);"
+                              }
+                         },
+                         {
+                              "id": "53be3dbb-4e56-4799-8e88-72497b3c7f85",
+                              "fieldName": "Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Name",
+                                   "ariaLabel": "Name"
+                              }
+                         },
+                         {
+                              "id": "2d0ba8bd-2401-46c7-9236-984eb031cafc",
+                              "fieldName": "oao__CLProduct__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_add_ons_view",
+     "clcommon__Release_Checksum__c": "0c294b5d80b13990755942a1172e750ccfd9b1137224546bad1a8b23eac0014c"
+}

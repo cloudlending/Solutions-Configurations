@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "accessibility": {
+                    "ariaLabel": "This section contains three field namely Sector Description, Sub Sector Description, Industry Code Description which are of picklist type."
+               },
+               "render": "$state(cobaltIKnowIndustryCodePanel).attr(industrycodecheckbox);==false",
+               "renderFields": {
+                    "industryCodeNumber": false,
+                    "industry_code": "$this.attr(industry_code_checkbox);==false",
+                    "industry_subsector_description": "$this.attr(industry_code_checkbox);==false",
+                    "industrySectorDescription": "$this.attr(industry_code_checkbox);==false",
+                    "industry_code_checkbox": false
+               },
+               "editable": true,
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1
+          },
+          "property": {
+               "referenceWhereClause": {
+                    "oao__Industry_Codes__c": {
+                         "subsector": "$this.attr(industry_subsector_description);"
+                    },
+                    "oao__Sub_Sector__c": {
+                         "sector": "$this.attr(industrySectorDescription);"
+                    }
+               },
+               "structureName": "cobalt_business_info_industry_code"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltBusinessIndustryPanel",
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltBusinessIndustryPanel",
+     "clcommon__Release_Checksum__c": "170f21a2110f1f18cb438a1ed0bc3d08338b03d6437f74ae7b33c9b519945823"
+}

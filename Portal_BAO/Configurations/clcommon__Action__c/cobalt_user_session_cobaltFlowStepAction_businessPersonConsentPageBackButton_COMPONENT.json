@@ -1,0 +1,88 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessPersonConsentPageBackButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessPersonConsentPageBackButton",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "Back",
+               "variant": "outlined",
+               "render": "$global.attr(pageName);==\"businesspersonconsent\""
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltBusinessOwnerCertificationPanel).appearance(render);",
+                         "value": false
+                    },
+                    {
+                         "field": "$nav(cobaltPersonalContactInformationPanel).appearance(render);",
+                         "value": true
+                    },
+                    {
+                         "field": "$nav(cobaltPartyDetailsPanel).appearance(render);",
+                         "value": true
+                    },
+                    {
+                         "field": "$nav(cobaltPersonalIdenitityDetailsPanel).appearance(render);",
+                         "value": true
+                    },
+                    {
+                         "field": "$nav(cobaltPersonalInformationIdentificationPanel).appearance(render);",
+                         "value": true
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Personal Information: Identification"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "personalinfoidentity"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltPersonalContactInformationPanel",
+                              "cobaltPersonalIdenitityDetailsPanel",
+                              "cobaltPersonalInformationIdentificationPanel",
+                              "cobaltPersonalInformationIdentificationPortalFieldPanel",
+                              "cobaltBusinessOwnerCertificationPanel",
+                              "cobaltPartyDetailsPanel"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": "Clicking here to go Back to Personal Information Identification page"
+     },
+     "clcommon__Action_Order__c": 14,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+businessPersonConsentPageBackButton",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_businessPersonConsentPageBackButton_COMPONENT",
+     "clcommon__Release_Checksum__c": "1a3faf1735a8079167641447f683bb7b1f97aaed995de1ab733647b407b1f647"
+}

@@ -1,0 +1,87 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessInfodetailsSaveDecisionNextBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessInfodetailsSaveDecisionNextBtn",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-business-info-next\">Next</span>",
+               "render": "$global.attr(pageName); == \"businessinfodetails\""
+          },
+          "remoteActionProcess": {
+               "post": "$ext.dynamicStepper"
+          },
+          "validation": [
+               "cobaltBusinessInformationNameOfBusinessPanel",
+               "cobaltBusinessInformationDBAPanel",
+               "cobaltBusinessInformationStreetAddressPanel",
+               "cobaltBusinessInformationMailingAddressPanel"
+          ],
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "default"
+                         ]
+                    }
+               ],
+               "actions": [
+                    {
+                         "actorName": "cobaltBusinessInformationDBAPanel",
+                         "name": "SaveBOForPrimary"
+                    },
+                    {
+                         "condition": "$global.attr(showMailingAddress);==true and $global.attr(dbaName);!=\"\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "businessInfodetailsSaveBillingAndShippingAddress"
+                    },
+                    {
+                         "condition": "$global.attr(showMailingAddress);==false and $global.attr(dbaName);!=\"\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "businessInfodetailsSaveBillingAddress"
+                    },
+                    {
+                         "condition": "$global.attr(showMailingAddress);==true and $global.attr(dbaName);==\"\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "businessInfodetailsSaveBillingAndShippingAddressDBAEmpty"
+                    },
+                    {
+                         "condition": "$global.attr(showMailingAddress);==false and $global.attr(dbaName);==\"\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "businessInfodetailsSaveBillingAddressDBAEmpty"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": "Click here to save Business Information and go to Industry Code Page"
+     },
+     "clcommon__Action_Order__c": 26,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+businessInfodetailsSaveDecisionNextBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_businessInfodetailsSaveDecisionNextBtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "cc8a6a4151d2ac16a5f7ed94311712d60e59a3a9751e378dbcb2c2f50dde6837"
+}

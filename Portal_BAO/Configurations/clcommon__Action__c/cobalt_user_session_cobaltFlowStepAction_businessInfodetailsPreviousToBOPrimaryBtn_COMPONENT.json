@@ -1,0 +1,97 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessInfodetailsPreviousToBOPrimaryBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessInfodetailsPreviousToBOPrimaryBtn",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-business-info-back-to-BO\">Back</span>",
+               "variant": "outlined",
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "personalInfo"
+                    },
+                    {
+                         "field": "$nav(cobaltPersonalInfoSteps).appearance(current);",
+                         "value": "identity"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Beneficial Owner Certification"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "businesspersonconsent"
+                    },
+                    {
+                         "field": "$nav(cobaltBusinessOwnerCertificationPanel).appearance(render);",
+                         "value": true
+                    },
+                    {
+                         "field": "$nav(cobaltPartyDetailsPanel).appearance(render);",
+                         "value": false
+                    },
+                    {
+                         "field": "$nav(cobaltPersonalContactInformationPanel).appearance(render);",
+                         "value": false
+                    },
+                    {
+                         "field": "$nav(cobaltPersonalIdenitityDetailsPanel).appearance(render);",
+                         "value": false
+                    },
+                    {
+                         "field": "$nav(cobaltPersonalInformationIdentificationPanel).appearance(render);",
+                         "value": false
+                    },
+                    {
+                         "field": "$nav(cobaltPersonalInformationIdentificationPortalFieldPanel).appearance(render);",
+                         "value": false
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltBusinessOwnerCertificationPanel"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go back to the Beneficial Owner Certification page"
+     },
+     "clcommon__Action_Order__c": 7,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+businessInfodetailsPreviousToBOPrimaryBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_businessInfodetailsPreviousToBOPrimaryBtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "7240405b084d0c6ddc28d2fb374fe9eb2066541989d376770b229afbc98ae9d4"
+}

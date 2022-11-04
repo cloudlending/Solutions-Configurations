@@ -1,0 +1,37 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_guest_custom_settings_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "cobalt_guest_custom_settings_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_guest_custom_settings_query",
+          "tableName": "oao__cobalt_custom_settings__c",
+          "whereClause": {
+               "freeForm": "id != null"
+          },
+          "sections": [
+               {
+                    "id": "da775c22-b00b-490d-b08b-101c43a4517e",
+                    "fields": [
+                         {
+                              "id": "c882a5f9-daaa-4b2a-85c5-b8dd2d0f8f97",
+                              "fieldName": "oao__Enable_Redirect_To_Open_Account__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Enable Redirect To Open Account",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Enable Redirect To Open Account"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_guest_custom_settings_query",
+     "clcommon__Release_Checksum__c": "73bec98c58dc925e14bb982dad9f608f11cbfeabae26ff04e6518fa220f408e5"
+}

@@ -1,0 +1,45 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "dummybtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "dummybtn",
+          "property": {},
+          "appearance": {
+               "label": "Generate",
+               "style": "primary",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "executions": [
+                    {
+                         "name": "$ext.iovationHandler"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "iovation_test_iovation_script"
+     },
+     "clcommon__Component_Structure_Name__c": "key_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "iovation_script+dummybtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "iovation_test_iovation_script_dummybtn_COMPONENT",
+     "clcommon__Release_Checksum__c": "c7d20a7b6286de0b574950d5fe7ec574b90668b4d65d02d70c761720ebdd8da4"
+}

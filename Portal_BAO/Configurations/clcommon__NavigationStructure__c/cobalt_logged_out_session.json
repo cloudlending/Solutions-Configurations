@@ -1,0 +1,473 @@
+{
+     "attributes": {
+          "type": "clcommon__NavigationStructure__c"
+     },
+     "Name": "cobalt_logged_out_session",
+     "clcommon__Allow_Guest_User_Access__c": true,
+     "clcommon__Description__c": null,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Is_Template__c": false,
+     "clcommon__Related_Configuration_Mapping__c": null,
+     "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
+     "clcommon__Unique_Name__c": "cobalt_logged_out_session",
+     "clcommon__data__c": {
+          "messages": {
+               "submitFailureText": "Failed to submit",
+               "loadingFailureText": "Failed to load",
+               "saveFailureText": "Failed to save",
+               "submitAnimationText": "Sending...",
+               "submitSuccessText": "Succeed",
+               "savingAnimationText": "Saving...",
+               "uploadFailureText": "Failed to upload",
+               "loadingAnimationText": "Loading...",
+               "submitExpirationText": "Failed to submit",
+               "saveSuccessText": "Succeed",
+               "uploadFileTooLargeError": "File too large"
+          },
+          "global": {
+               "skipcart": "$url(skipCart);",
+               "branchId": "$url(branchID);",
+               "offCode": "$url(offCode);",
+               "redirect": true,
+               "promoCode": "$url(promoCode);",
+               "sellerId": "$url(sellerID);",
+               "productName": "null",
+               "skipcrit": "$url(skipCrit);",
+               "fixproducts": "$url(fixProducts);",
+               "renderCookies": true,
+               "existingUser": "",
+               "test": "",
+               "openAccountTab": "ProductType",
+               "userEmail": "",
+               "sessionId": "",
+               "executed": false,
+               "productId": "$url(productID);",
+               "loadProducts": false,
+               "pageTitle": "What type of product are you looking for?",
+               "productType": "null",
+               "currentStep": "",
+               "dummyShow": "false",
+               "retainProductType": "",
+               "eligibleContent": false
+          },
+          "settings": {
+               "treeIcons": {
+                    "toExpand": "chevron_right",
+                    "toCollapse": "expand_more",
+                    "end": "lens"
+               },
+               "pagination": {
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "numberOfRecordsPerPage": 10,
+                    "numberOfPageLinks": 5,
+                    "firstLinkText": "first_page",
+                    "previousLinkText": "chevron_left",
+                    "nextLinkText": "chevron_right",
+                    "lastLinkText": "last_page"
+               },
+               "locale": "en-us",
+               "minimumFractionDigits": 2,
+               "collapsibleIcons": {
+                    "expanded": "expand_more",
+                    "collapsed": "expand_less"
+               },
+               "uploadText": {
+                    "completed": "Completed",
+                    "cancelInProgress": "Cancel",
+                    "removeError": "close"
+               },
+               "skeleton": {
+                    "listView": {
+                         "withAction": {
+                              "height": "72px",
+                              "padding": "24px 12px"
+                         },
+                         "noAction": {
+                              "height": "48px",
+                              "padding": "12px"
+                         }
+                    },
+                    "queueView": {
+                         "height": "150px",
+                         "padding": "16px"
+                    },
+                    "cardView": {
+                         "height": "300px",
+                         "padding": "16px"
+                    },
+                    "detailView": {
+                         "large": {
+                              "height": "108.75px",
+                              "padding": "28px 12px 20px 12px"
+                         },
+                         "medium": {
+                              "height": "104px",
+                              "padding": "28px 12px 20px 12px"
+                         },
+                         "small": {
+                              "height": "101.625px",
+                              "padding": "28px 12px 20px 12px"
+                         }
+                    }
+               },
+               "sortText": {
+                    "sortBy": "Sort By",
+                    "aToZ": "(A to Z)",
+                    "zToA": "(Z to A)",
+                    "lowToHigh": "(Low to High)",
+                    "highToLow": "(High to Low)",
+                    "mostRecentFirst": "(Most Recent First)",
+                    "mostRecentLast": "(Most Recent Last)"
+               },
+               "currencySymbol": "$",
+               "maximumFractionDigits": 2,
+               "variant": {
+                    "TextField": "outlined"
+               }
+          },
+          "actors": {},
+          "stages": {
+               "Home": {
+                    "overlay": [
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltEmailAndIdentityDisclosureContent",
+                                        "layoutId": "232b5691-edeb-4922-9101-ada397b4dc04"
+                                   }
+                              ],
+                              "name": "cobaltEmailAndIdentityDisclosurePopup",
+                              "layoutId": "8975fc5d-776d-4398-b26c-a961be51d2d1"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltCartView",
+                                        "layoutId": "27c4b0a8-3644-4407-956d-2b0d2e93aa90"
+                                   }
+                              ],
+                              "name": "cobaltCartViewPopup",
+                              "layoutId": "d791249c-92fc-4cfd-a189-57c9558c7ac7"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltConfirmationPopupPanel",
+                                        "layoutId": "e662015c-2570-4206-af5a-4ffc6e1508be"
+                                   }
+                              ],
+                              "name": "cobaltConfirmationPopup",
+                              "layoutId": "08cc5609-037c-4801-8489-f455106d74ff"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltOverdraftOptionPopupContent",
+                                        "layoutId": "232b5691-edeb-4922-9dsgsfg101-ada3sdfas97b4dc04"
+                                   }
+                              ],
+                              "name": "cobaltOverdraftOptionPopup",
+                              "layoutId": "8975fc5d-776d-439etwr8-b26c-a961be51d2d1"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltProductNotAllowedPopupContent",
+                                        "layoutId": "232b5691-edeb-4922-9dsgsfasdfasdfg101-ada3sdfas97b4dc04"
+                                   }
+                              ],
+                              "name": "cobaltProductNotAllowedPopupContainer",
+                              "layoutId": "8975fc5d-776d-439etwrrdafa8-b26c-a961be51d2d1"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltSetPasswordEmailSentPopupContent",
+                                        "layoutId": "232b5691-edeb-4922-9dsgsfasdfasdfasdfasdfg101-ada3asdsdfas97b4dc04"
+                                   }
+                              ],
+                              "name": "cobaltSetPasswordEmailSentPopupContainer",
+                              "layoutId": "8975fc5d-776adfdsfd-439etwrrdafa8-b26sdfdfc-a961be51d2d1"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltIdentificationTypePopup",
+                                        "layoutId": "232b5691-edeb-4922-9dssdfadfgsfasdfasdfasasdfasdfdfasdfg101-ada3asdsdfas97b4dc04"
+                                   }
+                              ],
+                              "name": "cobaltIdentificationTypeContainer",
+                              "layoutId": "8975fc5d-776adfdsfd-439etwrrwqerqwerdafa8-b26sdfdfc-a961be51d2d1"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltMyInformationPopupContent",
+                                        "layoutId": "232b5691-edeb-4922-9dsgsfg101-ada3sdfas97b4dc04"
+                                   }
+                              ],
+                              "name": "cobaltMyInformationPopup",
+                              "layoutId": "8975fc5d-776d-439etwr8-b26c-a961be51d2d1"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltIneligiblePopupContent",
+                                        "layoutId": "232b5asfasdfasdf691-edeb-4922-9dsgsfg101-ada3sdfas97b4dc04"
+                                   }
+                              ],
+                              "name": "cobaltIneligiblePopupContainer",
+                              "layoutId": "8975fc5sadfasdfasd-776d-439etwr8-b26c-a961be51d2d1"
+                         }
+                    ],
+                    "layout": {
+                         "children": [
+                              {
+                                   "children": [
+                                        {
+                                             "children": [
+                                                  {
+                                                       "name": "cobaltSessionStorage",
+                                                       "layoutId": "8b22965b-ff3e-48ac-8824-ee80c459e126"
+                                                  },
+                                                  {
+                                                       "name": "cobaltWithParamPanel",
+                                                       "layoutId": "7e3d0028-03e5-4a87-8f3f-24ecd0e8af9c"
+                                                  },
+                                                  {
+                                                       "name": "cobaltSaveProductInCart",
+                                                       "layoutId": "b1782eff-204c-4d93-9777-a10b5c39509d"
+                                                  },
+                                                  {
+                                                       "name": "cobaltGuestCustomSettingsPanel",
+                                                       "layoutId": "04410889-484e-4d6d-a8b4-98aff6472f66"
+                                                  }
+                                             ],
+                                             "name": "cobaltDescisionContainer",
+                                             "layoutId": "b059dbb0-fafe-463a-8627-6510f20b48b5"
+                                        },
+                                        {
+                                             "children": [
+                                                  {
+                                                       "children": [
+                                                            {
+                                                                 "name": "cobaltHeaderPanel",
+                                                                 "layoutId": "ff9e2991-45b8-4f18-8984-a3d184fc426a"
+                                                            },
+                                                            {
+                                                                 "name": "cobaltHeaderStaticContent",
+                                                                 "layoutId": "466deeb9-78df-4766-9814-5c51ee6c1ce1"
+                                                            },
+                                                            {
+                                                                 "name": "cobaltCompliancesPanel",
+                                                                 "layoutId": "153fa151-cb81-40fasdASDadsASD4-aff9-359b3c809219"
+                                                            },
+                                                            {
+                                                                 "name": "cobaltGuestCustomSettingsPanel",
+                                                                 "layoutId": "04410889-484e-4d6d-a8b4-98aff6472f66"
+                                                            }
+                                                       ],
+                                                       "name": "cobaltHeaderContainer",
+                                                       "layoutId": "85472edf-6bee-4eb1-8e98-d658cfadeffd"
+                                                  },
+                                                  {
+                                                       "children": [
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "children": [
+                                                                                {
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "children": [
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "name": "cobaltStepperTitlePanel",
+                                                                                                                   "layoutId": "511c6629-3093-43bc-859a-7762b4f3a1ad"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltCartListView",
+                                                                                                                   "layoutId": "21e970f5-8d45-400d-bbb7-8d9a66808c8b"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltProductTypeListCardView",
+                                                                                                                   "layoutId": "9c02d4b9-7fe3-4c20-81c5-048b4fe0d24e"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltCookiesPanel",
+                                                                                                                   "layoutId": "29e75fc6-c89c-4107-b082-d73ddb362af5"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltProductTypeListPageContainer",
+                                                                                                         "layoutId": "f5e800f8-46c8-4c24-ac18-6481d80adadf"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "name": "cobaltStepperTitlePanel",
+                                                                                                                   "layoutId": "511c6629-3093-43bc-859a-7762b4f3a1ad"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltCartView",
+                                                                                                                   "layoutId": "5112ef07-ae0b-44e1-aec0-5147456ace77"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltProductListCardView",
+                                                                                                                   "layoutId": "76d61cf3-353e-446b-986b-01c1b91e4ac2"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFlowStepAction",
+                                                                                                                   "layoutId": "e5ce417e-8baf-4055-838e-207a46a23566"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltProductListPageContainer",
+                                                                                                         "layoutId": "fef618a3-2e0c-406d-846a-97d4957a3b6c"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "name": "cobaltStepperTitlePanel",
+                                                                                                                   "layoutId": "511c6629-3093-43bc-859a-7762b4f3a1ad"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltCartView",
+                                                                                                                   "layoutId": "4fb9f5ea-795c-4cf3-a316-85f80423344d"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltSelectedAccountView",
+                                                                                                                   "layoutId": "a07d1a2c-c560-45e3-9886-08f93bc82181"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltEligibilityContent",
+                                                                                                                   "layoutId": "fd0d07bb-bf42-4df1-8a42-85e0b5758a30"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFlowStepAction",
+                                                                                                                   "layoutId": "6d12106a-8915-40fe-8d41-00f6816a850d"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltAccountSelectionPageContainer",
+                                                                                                         "layoutId": "13e1bf44-58e1-4388-8fd1-7d92589c8312"
+                                                                                                    }
+                                                                                               ],
+                                                                                               "name": "cobaltOpenAccountsSteps",
+                                                                                               "layoutId": "6597ba94-34f7-44d5-97f9-bc61baf91270"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "cobaltOpenAccountsContainer",
+                                                                                     "layoutId": "815b74bb-ecbf-49bc-99e7-2da0a818eba0"
+                                                                                },
+                                                                                {
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "name": "cobaltStepperTitlePanel",
+                                                                                               "layoutId": "511c6629-3093-43bc-859a-7762b4f3a1ad"
+                                                                                          },
+                                                                                          {
+                                                                                               "name": "cobaltCartView",
+                                                                                               "layoutId": "5112ef07-ae0b-44e1-aec0-5147456ace77"
+                                                                                          },
+                                                                                          {
+                                                                                               "name": "cobaltEmailAndIdentityLOFormPanel",
+                                                                                               "layoutId": "5f58e124-cd9e-4deb-8729-80ad3a05c432"
+                                                                                          },
+                                                                                          {
+                                                                                               "name": "cobaltEmailIdentitySuccessPanel",
+                                                                                               "layoutId": "4c8ba45e-dacc-4bb1-a0c2-e9a93a1ecea2"
+                                                                                          },
+                                                                                          {
+                                                                                               "name": "cobaltEmailIdentityExistingPanel",
+                                                                                               "layoutId": "153fa151-cb81-40f4-aff9-359b3c809219"
+                                                                                          },
+                                                                                          {
+                                                                                               "name": "cobaltFlowStepAction",
+                                                                                               "layoutId": "6d12106a-8915-40fe-8d41-00f6816a850d"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "cobaltEmailAndIdentityContainer",
+                                                                                     "layoutId": "bc9c8370-ac4b-4584-a21b-04b7cb0370be"
+                                                                                },
+                                                                                {
+                                                                                     "name": "cobaltPersonalInformationContainer",
+                                                                                     "layoutId": "3a9a6f39-ebea-42b1-8a7e-a7df54256cac"
+                                                                                },
+                                                                                {
+                                                                                     "name": "cobaltBusinessInformationContainer",
+                                                                                     "layoutId": "c9b9744c-e21f-41a1-8682-b61e8c61f793"
+                                                                                },
+                                                                                {
+                                                                                     "name": "cobaltAuthorizedSignersContainer",
+                                                                                     "layoutId": "1fd43d0b-8cde-4ef1-b80b-7165d6d2e4ae"
+                                                                                },
+                                                                                {
+                                                                                     "name": "cobaltBeneficialOwnersContainer",
+                                                                                     "layoutId": "894b4660-c50f-4bbd-a5b7-9ce76827b7d9"
+                                                                                },
+                                                                                {
+                                                                                     "name": "cobaltControlPersonContainer",
+                                                                                     "layoutId": "8278282e-f8af-422c-a114-d76092bd7614"
+                                                                                },
+                                                                                {
+                                                                                     "name": "cobaltAdministrationContainer",
+                                                                                     "layoutId": "4dc571ef-6685-4f17-92ed-af88336aa142"
+                                                                                },
+                                                                                {
+                                                                                     "name": "cobaltAddOnsContainer",
+                                                                                     "layoutId": "6aef0b11-0852-47e3-b7f6-22277cb7eb5d"
+                                                                                },
+                                                                                {
+                                                                                     "name": "cobaltFundingContainer",
+                                                                                     "layoutId": "4bd844b6-bcdd-4fab-9fd5-84d46d939733"
+                                                                                },
+                                                                                {
+                                                                                     "name": "cobaltReviewContainer",
+                                                                                     "layoutId": "b2a828aa-b163-46e8-a1dd-5526d85973d8"
+                                                                                }
+                                                                           ],
+                                                                           "name": "cobaltMainSteps",
+                                                                           "layoutId": "060c9068-59cc-4057-84a7-6fa9a6e60669"
+                                                                      }
+                                                                 ],
+                                                                 "name": "cobaltMainStepsContainer",
+                                                                 "layoutId": "7d8d6cd6-6a6f-4148-a3a7-7c29c41e5104"
+                                                            }
+                                                       ],
+                                                       "name": "cobaltBodyContainer",
+                                                       "layoutId": "5c86c280-a183-49af-81ff-b4da17d65911"
+                                                  },
+                                                  {
+                                                       "children": [
+                                                            {
+                                                                 "name": "cobaltFooterPanel",
+                                                                 "layoutId": "3e0766e6-71e1-41da-b73a-27dff3d38a51"
+                                                            }
+                                                       ],
+                                                       "name": "cobaltFooterContainer",
+                                                       "layoutId": "c415db09-420e-448c-97ad-b2cc9b67550f"
+                                                  }
+                                             ],
+                                             "name": "cobaltMainContainer",
+                                             "layoutId": "9af2ac88-da6d-4bf2-ba3d-abc9bef681a4"
+                                        }
+                                   ],
+                                   "name": "cobaltDescisionStep",
+                                   "layoutId": "84d546b8-8612-4968-aa1a-631be71da9fc"
+                              }
+                         ],
+                         "name": "cobaltPrimaryContainer",
+                         "layoutId": "f747b833-3976-40ec-8a32-5f116f18d892"
+                    },
+                    "prerequisite": [
+                         {
+                              "productType": "",
+                              "data": "hello"
+                         }
+                    ]
+               }
+          },
+          "start": "Home"
+     },
+     "clcommon__External_ID__c": "cobalt_logged_out_session",
+     "clcommon__Release_Checksum__c": "c85b0301f76c891b9d629b75bd172d18271917879efb60febb411449965a2cde"
+}

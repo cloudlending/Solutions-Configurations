@@ -1,0 +1,41 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "query1",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "query1",
+          "property": {},
+          "appearance": {
+               "label": "FetchCartDetailsApi",
+               "style": "normal",
+               "position": "top-right"
+          },
+          "remoteActionArguments": {
+               "sessionId": "$global.attr(sessionid);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "query",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltCartView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_cart_details_existing",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.FetchCartDetailsApi",
+     "clcommon__Unique_Action_Name__c": "cobaltCartView+query1",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session_cobaltCartView_query1_COMPONENT",
+     "clcommon__Release_Checksum__c": "144ebfdee10cdd47f56288e20bab8b951c9800a292f8083cf109da74386ab830"
+}
