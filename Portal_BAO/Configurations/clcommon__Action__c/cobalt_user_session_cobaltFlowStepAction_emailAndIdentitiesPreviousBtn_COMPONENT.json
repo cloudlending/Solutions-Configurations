@@ -8,11 +8,11 @@
           "name": "emailAndIdentitiesPreviousBtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "<span class=\"li-email-identity-next\">Back</span>",
+               "render": "$global.attr(pageName); == \"emailIdentity\"",
                "variant": "outlined",
-               "render": "$global.attr(pageName); == \"emailIdentity\""
+               "label": "<span class=\"li-email-identity-next\">Back</span>",
+               "style": "primary",
+               "position": "top-right"
           },
           "uploadActionArguments": {},
           "successHandler": {},

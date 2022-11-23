@@ -8,11 +8,11 @@
           "name": "subProductBackButtton",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "Back",
+               "render": "$global.attr(pageName); == \"productDetails\"",
                "variant": "outlined",
-               "render": "$global.attr(pageName); == \"productDetails\""
+               "label": "Back",
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

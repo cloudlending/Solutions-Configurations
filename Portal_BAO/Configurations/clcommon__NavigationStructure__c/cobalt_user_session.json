@@ -25,17 +25,24 @@
                "uploadFileTooLargeError": "File too large"
           },
           "global": {
+               "controlPersonText": "<div class=\"info-content\"><h3 class=\"title\">What is a Control Person?</h3><p class=\"desc\">A Control Person is an individual that has authority to enter into agreements, open bank accounts, and more on behalf of the business.</p></div>",
                "typeOfApplication": "first",
                "fundable": false,
                "showBusinessMailingSecondLineAddress": false,
+               "ineligibleConsent": false,
+               "businessPartiesCPText": "",
+               "businessPartiesBOText": "",
                "referredText": "It seems some of your information could not be verified!</p><p>A Thrive Financial representative will reach out to you shortly to discuss your application. In the interim, please feel free reach out to us via email or phone if you have any questions!",
                "businessCategory": "",
                "showStreetAddress2": false,
+               "stateAndZipTitle": "",
                "showMiddleName": false,
+               "redirect": true,
                "appId": "",
                "accountActivity": false,
                "marijuanaContent": false,
                "backupWithholding": false,
+               "isOverdraftEligible": true,
                "pageName": "neworexistingapp",
                "productName": "null",
                "docCatId": "null",
@@ -50,37 +57,49 @@
                "gamblingContent": false,
                "businessAddress": "",
                "defaultDeclinedReason": "",
+               "authorizeSigner": false,
+               "controlPerson": false,
                "declinedReason": "Declined Reason: ",
                "openAccountTab": "ProductType",
                "fundingValidationMessage": "",
                "sessionid": "null",
-               "businessPartiesText": "If you would like to add any additional Authorized Signers, Beneficial Owners, and Control Persons, please click the <span class=\"text-bold\">Add Business Parties</span> button below.",
                "referred": false,
+               "citizenship_employment_subtitle": "",
                "docCatStatus": "null",
+               "beneficalOwnerText": "<div class=\"info-content\"><h3 class=\"title\">What is a Beneficial Owner?</h3><p class=\"desc\">A Beneficial Owner is an individual who ultimately owns or controls more than 25% of a company’s shares or voting rights, or otherwise exercises control over the company or its management.</p></div>",
                "fundingDeclinedReason": "",
                "dbaName": "",
+               "BillingStateAndZipCode": "",
                "stepTitle": "New or Existing application",
                "businessName": "null",
                "productId": "null",
                "appNumber": "null",
+               "benefecialOwner": false,
                "parentDocId": "",
                "productType": "null",
+               "isDebitCardEligible": true,
                "dummy": false,
                "businessAccountId": "null",
                "percentageBO": 0,
                "showdba": false,
                "showMailingAddress": false,
                "enableSubmitApp": true,
+               "parentId": "",
                "allowDocumentUpload": true,
                "executeAPI": false,
                "userType": "",
-               "businessPersonInfo": "<div class=\"info-content\"><h3 class=\"title\">What is a Beneficial Owner?</h3><p class=\"desc\">A Beneficial Owner is an individual who ultimately owns or controls more than 25% of a company’s shares or voting rights, or otherwise exercises control over the company or its management.</p></div><div class=\"info-content\"><h3 class=\"title\">What is a Control Person?</h3><p class=\"desc\">A Control Person is an individual that has authority to enter into agreements, open bank accounts, and more on behalf of the business.</p></div>",
+               "selectedProductPartyAssoc": [
+                    ""
+               ],
+               "businessPersonInfo": "",
                "eligibleContent": false,
                "BOCount": 0,
                "showCartView": "old",
                "partyId": "null",
+               "loadSteps": true,
                "PositionAtCompany": "",
-               "partyType": "null"
+               "partyType": "null",
+               "Citizenship_Employment_title": ""
           },
           "settings": {
                "treeIcons": {
@@ -108,6 +127,7 @@
                     "cancelInProgress": "Cancel",
                     "removeError": "close"
                },
+               "enableNestedExpParsing": true,
                "skeleton": {
                     "listView": {
                          "withAction": {
@@ -162,6 +182,30 @@
           "stages": {
                "Home": {
                     "overlay": [
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltCartProducts",
+                                        "layoutId": "2b6833c7-4fa5-4c9a-b023-fcee0f153511"
+                                   },
+                                   {
+                                        "name": "cobaltAddOverdraft",
+                                        "layoutId": "7bea5376-9d3a-4846-a339-1a28634ea93a"
+                                   }
+                              ],
+                              "name": "cobaltAddOverdraftOverlay",
+                              "layoutId": "915e69e3-e2ad-4c5e-893f-a21d1526adf4"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltAddDebitCard",
+                                        "layoutId": "96e6a059-2bc1-454d-a947-f7abd317b82c"
+                                   }
+                              ],
+                              "name": "cobaltAddDebitCardOverlay",
+                              "layoutId": "26ec0835-5e99-4b87-8e2b-f5b113889918"
+                         },
                          {
                               "children": [
                                    {
@@ -305,6 +349,10 @@
                               ],
                               "name": "cobaltReUploadDocumentContainer",
                               "layoutId": "440324c9-d6db-4asfasc86-9db4-206ffaf18ba7"
+                         },
+                         {
+                              "name": "cobaltZipAndStateInfo",
+                              "layoutId": "ea3b2c60-b3e7-4bf4-9de1-3604a88b9772"
                          }
                     ],
                     "layout": {
@@ -742,8 +790,8 @@
                                                                                                                    "layoutId": "6d12106a-8915-40fe-8d41-00f6816a850d"
                                                                                                               }
                                                                                                          ],
-                                                                                                         "name": "cobaltAddOnsContainer",
-                                                                                                         "layoutId": "6aef0b11-0852-47e3-b7f6-22277cb7eb5d"
+                                                                                                         "name": "cobaltAddOnsStepperContainer",
+                                                                                                         "layoutId": "f5e800f8-46c8-ad12s-ac18-6481d80adadf"
                                                                                                     },
                                                                                                     {
                                                                                                          "children": [
@@ -905,5 +953,5 @@
           "start": "Home"
      },
      "clcommon__External_ID__c": "cobalt_user_session",
-     "clcommon__Release_Checksum__c": "043bc2a9ce69092577ccd2d42c8fbb8e254e7c1d3455ff3462a0cbfc2d61ac27"
+     "clcommon__Release_Checksum__c": "cd91bd4c0736643d76b318cf498a7855b61172384d3d93d3ebf0edc8a0c77124"
 }

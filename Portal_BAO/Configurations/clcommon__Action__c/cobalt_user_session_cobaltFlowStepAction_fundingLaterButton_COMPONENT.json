@@ -8,11 +8,11 @@
           "name": "fundingLaterButton",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "variant": "outlined",
-               "label": "<span class=\"li-funding-next-button\">Fund Later</span>",
+               "render": "$global.attr(pageName); == \"fundingAccount\"",
                "style": "primary",
-               "render": "$global.attr(pageName); == \"fundingAccount\""
+               "label": "<span class=\"li-funding-next-button\">Fund Later</span>",
+               "variant": "outlined",
+               "position": "top-right"
           },
           "remoteActionArguments": {
                "appId": "$global.attr(appId);"
@@ -35,7 +35,7 @@
           "messages": {},
           "ariaLabel": "Click here to Fund Later"
      },
-     "clcommon__Action_Order__c": 66,
+     "clcommon__Action_Order__c": 70,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -49,5 +49,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+fundingLaterButton",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_fundingLaterButton_COMPONENT",
-     "clcommon__Release_Checksum__c": "875400b4a821fd9725d87af8fc800b9a23c42da86a1f5b7db2d85f816d92a331"
+     "clcommon__Release_Checksum__c": "28d027ac38b6c6bdb083dac1bcd8ee644aa649f4b793ea77207fa28c1d8fb505"
 }

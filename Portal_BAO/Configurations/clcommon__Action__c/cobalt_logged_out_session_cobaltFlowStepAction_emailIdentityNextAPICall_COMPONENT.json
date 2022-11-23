@@ -8,21 +8,21 @@
           "name": "emailIdentityNextAPICall",
           "property": {},
           "appearance": {
-               "label": "Next",
-               "style": "primary",
-               "position": "top-right",
+               "enable": "$state(cobaltEmailAndIdentityLOFormPanel).attr(signerConsent); == true and $state(cobaltEmailAndIdentityLOFormPanel).attr(electronicConsent); == true and $state(cobaltStepperTitlePanel).count();>0",
                "render": false,
-               "enable": "$state(cobaltEmailAndIdentityLOFormPanel).attr(signerConsent); == true and $state(cobaltEmailAndIdentityLOFormPanel).attr(electronicConsent); == true and $state(cobaltStepperTitlePanel).count();>0"
+               "position": "top-right",
+               "style": "primary",
+               "label": "Next"
           },
           "remoteActionArguments": {
-               "overdraftOption": false,
-               "officeCode": "$global.attr(offCode);",
-               "phone": "$state(cobaltEmailAndIdentityLOFormPanel).attr(mobilePhone);",
-               "fName": "$state(cobaltEmailAndIdentityLOFormPanel).attr(firstName);",
-               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);",
-               "lName": "$state(cobaltEmailAndIdentityLOFormPanel).attr(lastName);",
+               "email": "$state(cobaltEmailAndIdentityLOFormPanel).attr(emailAddress);",
                "businessAccountName": "$state(cobaltEmailAndIdentityLOFormPanel).attr(businessAccountName);",
-               "email": "$state(cobaltEmailAndIdentityLOFormPanel).attr(emailAddress);"
+               "lName": "$state(cobaltEmailAndIdentityLOFormPanel).attr(lastName);",
+               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);",
+               "fName": "$state(cobaltEmailAndIdentityLOFormPanel).attr(firstName);",
+               "phone": "$state(cobaltEmailAndIdentityLOFormPanel).attr(mobilePhone);",
+               "officeCode": "$global.attr(offCode);",
+               "overdraftOption": false
           },
           "uploadActionArguments": {},
           "successHandler": {

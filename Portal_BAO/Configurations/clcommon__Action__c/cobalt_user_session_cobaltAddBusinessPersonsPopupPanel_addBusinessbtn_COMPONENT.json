@@ -8,10 +8,10 @@
           "name": "addBusinessbtn",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "position": "bottom-right",
+               "enable": "$this.attr(authorized_signer);==true or $this.attr(control_person);==true or $this.attr(benefecial_owner);==true",
                "label": "Add",
-               "enable": "$this.attr(authorized_signer);==true or $this.attr(control_person);==true or $this.attr(benefecial_owner);==true"
+               "position": "bottom-right",
+               "style": "primary"
           },
           "remoteActionArguments": {
                "PositionAtCompany": "$this.attr(positionAtCompany);",

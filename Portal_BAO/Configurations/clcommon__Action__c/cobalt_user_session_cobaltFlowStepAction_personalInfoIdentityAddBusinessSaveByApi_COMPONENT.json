@@ -8,38 +8,38 @@
           "name": "personalInfoIdentityAddBusinessSaveByApi",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
+               "render": false,
                "label": "TestAPI",
-               "render": false
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {
-               "Iovation_Blackbox_Token": "$global.attr(Iovation_Blackbox_Token);",
-               "appId": "$global.attr(appId);",
-               "businessStage": "Identification",
-               "genesis__Identification_Information__c": {
-                    "identificationType": "$state(cobaltPersonalIdenitityDetailsPanel).attr(identificationType);",
-                    "stateOfIssuance": "$state(cobaltPersonalIdenitityDetailsPanel).attr(state);",
-                    "dateOfIssuance": "$state(cobaltPersonalInformationIdentificationPanel).attr(genesis__Date_of_Issuance__c);",
-                    "expirationDate": "$state(cobaltPersonalInformationIdentificationPanel).attr(genesis__Expiration_Date__c);",
-                    "issuingCountry": "$state(cobaltPersonalIdenitityDetailsPanel).attr(country);",
-                    "identificationNumber": "$state(cobaltPersonalInformationIdentificationPanel).attr(genesis__Identification_Number__c);"
-               },
                "contact": {
                     "id": "$state(cobaltPersonalInformationContactUsNamePanel).attr(Id);"
-               }
+               },
+               "genesis__Identification_Information__c": {
+                    "identificationNumber": "$state(cobaltPersonalInformationIdentificationPanel).attr(genesis__Identification_Number__c);",
+                    "issuingCountry": "$state(cobaltPersonalIdenitityDetailsPanel).attr(country);",
+                    "expirationDate": "$state(cobaltPersonalInformationIdentificationPanel).attr(genesis__Expiration_Date__c);",
+                    "dateOfIssuance": "$state(cobaltPersonalInformationIdentificationPanel).attr(genesis__Date_of_Issuance__c);",
+                    "stateOfIssuance": "$state(cobaltPersonalIdenitityDetailsPanel).attr(state);",
+                    "identificationType": "$state(cobaltPersonalIdenitityDetailsPanel).attr(identificationType);"
+               },
+               "businessStage": "Identification",
+               "appId": "$global.attr(appId);",
+               "Iovation_Blackbox_Token": "$global.attr(Iovation_Blackbox_Token);"
           },
           "uploadActionArguments": {},
           "successHandler": {
                "assignments": [],
                "actions": [
                     {
-                         "condition": "not $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);",
+                         "condition": "not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and not $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
                          "actorName": "cobaltFlowStepAction",
                          "name": "updateGuarantorStage"
                     },
                     {
-                         "condition": "$state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);",
+                         "condition": "$state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); or $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
                          "actorName": "cobaltFlowStepAction",
                          "name": "goToEmplymentInfo"
                     }
@@ -68,7 +68,7 @@
                "showSubmitAnimation": false
           }
      },
-     "clcommon__Action_Order__c": 51,
+     "clcommon__Action_Order__c": 53,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -82,5 +82,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+personalInfoIdentityAddBusinessSaveByApi",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_personalInfoIdentityAddBusinessSaveByApi_COMPONENT",
-     "clcommon__Release_Checksum__c": "373ad78a86e4a707095e751cc5590b32e9c31afa9374be85b0f5de01138c1c70"
+     "clcommon__Release_Checksum__c": "c8372b4276968e3cdbd782bc4583b32a5db2c32de59db3063d32e277fadd6bbf"
 }

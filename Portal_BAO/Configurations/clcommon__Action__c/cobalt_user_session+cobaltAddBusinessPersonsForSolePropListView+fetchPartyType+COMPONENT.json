@@ -1,0 +1,72 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "fetchPartyType",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "fetchPartyType",
+          "property": {},
+          "appearance": {
+               "label": "submit",
+               "position": "bottom-right",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "appId": "$global.attr(appId);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(controlPerson);",
+                         "value": "$result.attr(control_person);"
+                    },
+                    {
+                         "field": "$global.attr(authorizeSigner);",
+                         "value": "$result.attr(authorized_signer);"
+                    },
+                    {
+                         "field": "$global.attr(benefecialOwner);",
+                         "value": "$result.attr(benefecial_owner);"
+                    },
+                    {
+                         "field": "$global.attr(businessPartiesText);",
+                         "value": "$result.attr(pageTitle);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$result.attr(benefecial_owner);==true",
+                         "actorName": "cobaltAddBusinessPersonsForSolePropListView",
+                         "name": "addBeneficalText"
+                    },
+                    {
+                         "condition": "$result.attr(control_person);==true",
+                         "actorName": "cobaltAddBusinessPersonsForSolePropListView",
+                         "name": "addControlText"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltAddBusinessPersonsForSolePropListView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_list_of_guarantors_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.GetPartyTypeAgainstBusinessApi",
+     "clcommon__Unique_Action_Name__c": "cobaltAddBusinessPersonsForSolePropListView+fetchPartyType",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltAddBusinessPersonsForSolePropListView+fetchPartyType+COMPONENT",
+     "clcommon__Release_Checksum__c": "5cb0db5f6de99179d24a3bf47cef6d1eb19e38627a16cd1794f2f5a4516cd41d"
+}

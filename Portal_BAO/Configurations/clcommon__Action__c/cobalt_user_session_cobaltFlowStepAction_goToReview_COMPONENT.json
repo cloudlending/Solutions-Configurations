@@ -8,10 +8,10 @@
           "name": "goToReview",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
+               "render": "$global.attr(pageName); == \"documentupload\" and false",
                "label": "Review",
-               "render": "$global.attr(pageName); == \"documentupload\" and false"
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

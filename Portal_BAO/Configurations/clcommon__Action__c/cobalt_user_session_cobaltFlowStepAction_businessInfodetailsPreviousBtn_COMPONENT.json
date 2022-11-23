@@ -8,11 +8,11 @@
           "name": "businessInfodetailsPreviousBtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "<span class=\"li-business-info-back-to-personal-identity\">Back</span>",
+               "render": "$global.attr(pageName); == \"businessinfodetails\" and (not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);) and (not $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);)",
                "variant": "outlined",
-               "render": "$global.attr(pageName); == \"businessinfodetails\" and not $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);"
+               "label": "<span class=\"li-business-info-back-to-personal-identity\">Back</span>",
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "remoteActionProcess": {
@@ -71,5 +71,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+businessInfodetailsPreviousBtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_businessInfodetailsPreviousBtn_COMPONENT",
-     "clcommon__Release_Checksum__c": "f1a4475197ed32cbf844a9101dd7b2e05735ac8aff2bc29f3ccc5a0f44eb9f3e"
+     "clcommon__Release_Checksum__c": "e3237427c4dae39aeba33e091e9254a4ef33102f1edea87731f7b8b1e9c1e356"
 }

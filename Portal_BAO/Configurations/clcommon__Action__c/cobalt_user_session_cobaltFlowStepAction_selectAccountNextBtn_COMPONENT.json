@@ -8,11 +8,11 @@
           "name": "selectAccountNextBtn",
           "property": {},
           "appearance": {
-               "render": "$global.attr(pageName);==\"openAccount\"",
-               "position": "top-right",
-               "style": "primary",
+               "enable": "$state(cobaltNewAppStepperTitlePanel).count();>0 ",
                "label": "<span class=\"li-open-accounts-next\">Next</span>",
-               "enable": "$state(cobaltNewAppStepperTitlePanel).count();>0 "
+               "style": "primary",
+               "position": "top-right",
+               "render": "$global.attr(pageName);==\"openAccount\""
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -70,7 +70,7 @@
           "messages": {},
           "ariaLabel": "Click here to go to Email and Identity Page"
      },
-     "clcommon__Action_Order__c": 31,
+     "clcommon__Action_Order__c": 33,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -84,5 +84,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+selectAccountNextBtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_selectAccountNextBtn_COMPONENT",
-     "clcommon__Release_Checksum__c": "a4ffeb3ebae69ab303c9417ac388cc5f2b5c6171c63f41d971f262c2a4a59e8f"
+     "clcommon__Release_Checksum__c": "f7bda9e3eba72c702c5b34c25b25fa5d4c3284f9a80aac6d1ede2a6a13253fff"
 }

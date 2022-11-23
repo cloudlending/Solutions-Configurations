@@ -8,7 +8,7 @@
           "name": "submitCitizenshiphipEmplymentInfo",
           "property": {},
           "appearance": {
-               "render": "$global.attr(pageName); == \"citizenshipEmployment\"",
+               "render": "$global.attr(pageName); == \"citizenshipEmployment\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
                "style": "primary",
                "label": "<span class=\"li-citizen-employment-next\">Next</span>",
                "position": "top-right"
@@ -66,7 +66,7 @@
                "submitFailureText": "$serverMessage;"
           }
      },
-     "clcommon__Action_Order__c": 62,
+     "clcommon__Action_Order__c": 64,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -80,5 +80,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+submitCitizenshiphipEmplymentInfo",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_submitCitizenshiphipEmplymentInfo_COMPONENT",
-     "clcommon__Release_Checksum__c": "8073be521a58a661bc13c3d6f547e7c37530e0fc4df32ecd8fae853a7f8c3986"
+     "clcommon__Release_Checksum__c": "a2c3fa9731e886ff07d94c10557d44a3cbcf24750196a95abcbc6af46effefb8"
 }

@@ -8,9 +8,9 @@
           "name": "addMoreProductBtn",
           "property": {},
           "appearance": {
-               "label": "<span class=\"lo-add-additional-product\">Add Additional Products</span>",
+               "render": "$global.attr(fixproducts); != \"true\"",
                "style": "primary",
-               "render": "$global.attr(fixproducts); != \"true\""
+               "label": "<span class=\"lo-add-additional-product\">Add Additional Products</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

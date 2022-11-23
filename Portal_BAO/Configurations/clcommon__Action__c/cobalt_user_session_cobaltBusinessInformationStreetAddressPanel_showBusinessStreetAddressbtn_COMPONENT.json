@@ -8,11 +8,11 @@
           "name": "showBusinessStreetAddressbtn",
           "property": {},
           "appearance": {
-               "style": "secondary",
-               "render": "$global.attr(showBusinessStreetAddress); == false",
-               "position": "top-right",
+               "enable": "$global.attr(lockBusinessDetails);==false",
                "label": "Show second address line",
-               "enable": "$global.attr(lockBusinessDetails);==false"
+               "position": "top-right",
+               "render": "$global.attr(showBusinessStreetAddress); == false",
+               "style": "secondary"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

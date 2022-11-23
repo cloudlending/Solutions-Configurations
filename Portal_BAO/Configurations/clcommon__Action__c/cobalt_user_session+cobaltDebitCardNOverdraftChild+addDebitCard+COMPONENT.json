@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addDebitCard",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addDebitCard",
+          "property": {},
+          "appearance": {
+               "label": "<span>Add</span>",
+               "style": "primary",
+               "position": "top-right"
+          },
+          "remoteActionArguments": {},
+          "validation": [],
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(productId);",
+                         "value": "$parent.attr(oao__Product_Name__c);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "cobaltAddDebitCard"
+                    },
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "cobaltAddDebitCardOverlay"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": ""
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": null,
+     "clcommon__Component_Structure_Name__c": "cobalt_additional_service_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltDebitCardNOverdraftChild+addDebitCard",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltDebitCardNOverdraftChild+addDebitCard+COMPONENT",
+     "clcommon__Release_Checksum__c": "7871a561f7544305669b5f712a3f6c84756b21287feae766c2349a0c5f0a8887"
+}

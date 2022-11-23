@@ -1,0 +1,44 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addControlText",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addControlText",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(businessPersonCPInfo);",
+                         "value": "$global.attr(controlPersonText);"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltPartiesSummaryListView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_party_summary_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltPartiesSummaryListView+addControlText",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPartiesSummaryListView+addControlText+COMPONENT",
+     "clcommon__Release_Checksum__c": "4bd8c1fbf5bae4e00496fe9d0014f0765d84b7287b0df26a28185b54560267fc"
+}

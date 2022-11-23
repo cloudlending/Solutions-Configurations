@@ -8,9 +8,9 @@
           "name": "applicationcontinuebusinessindcodebtn",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-addons\">Continue</span>",
+               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"AddBusinessPersons\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\"",
                "style": "primary",
-               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"AddBusinessPersons\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\""
+               "label": "<span class=\"li-continue-addons\">Continue</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -116,5 +116,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardPanel+applicationcontinuebusinessindcodebtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardPanel_applicationcontinuebusinessindcodebtn_RECORD",
-     "clcommon__Release_Checksum__c": "78d83c45624b38f2904ca6c73f6bfef10702b7ac5b2a9ea412852725b37e1df5"
+     "clcommon__Release_Checksum__c": "a2a25f91179c3e7f7ef23ec8f4afa0a4844a6f88676cd4f598537866f38ff1f4"
 }

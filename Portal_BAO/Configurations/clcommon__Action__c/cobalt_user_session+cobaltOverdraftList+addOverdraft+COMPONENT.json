@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addOverdraft",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addOverdraft",
+          "property": {},
+          "appearance": {
+               "label": "<span>Add</span>",
+               "style": "primary",
+               "position": "top-right"
+          },
+          "remoteActionArguments": {},
+          "validation": [],
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "cobaltAddOverdraft"
+                    },
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "cobaltAddOverdraftOverlay"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": ""
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": null,
+     "clcommon__Component_Structure_Name__c": "cobalt_overdraft_list_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltOverdraftList+addOverdraft",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltOverdraftList+addOverdraft+COMPONENT",
+     "clcommon__Release_Checksum__c": "22c32a7c751ff685c724c711f6a18c98014721c5388a73c3ca76a1cfc93c9bbd"
+}

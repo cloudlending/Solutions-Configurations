@@ -8,11 +8,11 @@
           "name": "personalInfoIdentityPreviousBtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "<span class=\"li-personal-identity-back\">Back</span>",
+               "render": "$global.attr(pageName); == \"personalinfoidentity\"",
                "variant": "outlined",
-               "render": "$global.attr(pageName); == \"personalinfoidentity\""
+               "label": "<span class=\"li-personal-identity-back\">Back</span>",
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "remoteActionProcess": {

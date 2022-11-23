@@ -8,10 +8,10 @@
           "name": "dummyNext",
           "property": {},
           "appearance": {
-               "label": "Dummy Next",
-               "style": "primary",
+               "render": "$global.attr(dummyShow); == \"true\" $global.attr(currentStep); == \"openAccounts\"",
                "position": "top-right",
-               "render": "$global.attr(dummyShow); == \"true\" $global.attr(currentStep); == \"openAccounts\""
+               "style": "primary",
+               "label": "Dummy Next"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

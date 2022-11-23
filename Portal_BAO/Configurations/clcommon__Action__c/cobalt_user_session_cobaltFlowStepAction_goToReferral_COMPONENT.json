@@ -8,10 +8,10 @@
           "name": "goToReferral",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
+               "render": "$global.attr(pageName); == \"documentupload\" and false",
                "label": "Referral",
-               "render": "$global.attr(pageName); == \"documentupload\" and false"
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -49,7 +49,7 @@
           "disclosureNames": [],
           "messages": {}
      },
-     "clcommon__Action_Order__c": 33,
+     "clcommon__Action_Order__c": 35,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -63,5 +63,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+goToReferral",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_goToReferral_COMPONENT",
-     "clcommon__Release_Checksum__c": "d1685ee478074ce34fb802760d9617c8673f89830771ee5eddb72f29b262d976"
+     "clcommon__Release_Checksum__c": "88e658af8e7a5ab3fa0fa253e5eddd376c76b18e5ebe5477f45c9001d8b87ed2"
 }

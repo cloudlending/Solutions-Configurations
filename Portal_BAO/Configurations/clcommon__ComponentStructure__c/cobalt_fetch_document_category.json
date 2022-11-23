@@ -14,6 +14,7 @@
           "whereClause": {
                "freeForm": "genesis__application__c = ':appId' and clcommon__Parent_Document_Category__r.clcommon__Category_Name__c IN ('Identification Documents','Business Documents') and clcommon__Active__c = true"
           },
+          "orderBy": "clcommon__Category_Name__c DESC",
           "sections": [
                {
                     "id": "d0c696aa-247d-4123-b3fa-566b0b75a628",
@@ -149,5 +150,5 @@
           ]
      },
      "clcommon__External_ID__c": "cobalt_fetch_document_category",
-     "clcommon__Release_Checksum__c": "c56e817035abecd091bd740d96f489c57df8d9f27d894f793ab7656419c6a648"
+     "clcommon__Release_Checksum__c": "4ae7b2e41141c2c5451756d67b382f793ff1f3bc25524901fee34465b81dc340"
 }

@@ -74,6 +74,14 @@
                                                             "fieldType": "string",
                                                             "label": "Name"
                                                        }
+                                                  },
+                                                  {
+                                                       "id": "39469dc0-e2d1-4107-823c-eccc6203bc48",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Country Name"
+                                                       }
                                                   }
                                              ]
                                         }
@@ -86,6 +94,11 @@
                                    "prompt": "Select One",
                                    "messages": {
                                         "requiredErrorText": "Issued Country is required."
+                                   },
+                                   "optionText": {
+                                        "fieldNames": [
+                                             "oao__Full_Form__c"
+                                        ]
                                    }
                               }
                          },
@@ -111,6 +124,14 @@
                                                             "fieldType": "string",
                                                             "label": "State Code"
                                                        }
+                                                  },
+                                                  {
+                                                       "id": "39469dc0-e2d0-4187-823c-eccc6203bc48",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Country Name"
+                                                       }
                                                   }
                                              ]
                                         }
@@ -123,6 +144,11 @@
                                    "prompt": "Select One",
                                    "messages": {
                                         "requiredErrorText": "Issued State is required."
+                                   },
+                                   "optionText": {
+                                        "fieldNames": [
+                                             "oao__Short_form__c"
+                                        ]
                                    }
                               }
                          }
@@ -131,5 +157,5 @@
           ]
      },
      "clcommon__External_ID__c": "cobalt_personal_identity_details_query",
-     "clcommon__Release_Checksum__c": "8c9b096602e25e92b9f0a74c9f3275e8b557d46562856e3b13386dfdef847197"
+     "clcommon__Release_Checksum__c": "d5c93dba3ccde64eb707a48fd9fee9216fa951fb27ee6ddc69007c67db5cc369"
 }

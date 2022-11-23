@@ -8,10 +8,10 @@
           "name": "decisiondummybtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "normal",
+               "render": "$global.attr(dummy); == true",
                "label": "Dummy next",
-               "render": "$global.attr(dummy); == true"
+               "style": "normal",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

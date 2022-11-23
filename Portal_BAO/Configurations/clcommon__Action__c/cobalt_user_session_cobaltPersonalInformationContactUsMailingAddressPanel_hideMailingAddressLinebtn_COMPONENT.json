@@ -8,10 +8,10 @@
           "name": "hideMailingAddressLinebtn",
           "property": {},
           "appearance": {
-               "render": "$global.attr(showmailingAddressLine2); == true and $global.attr(showPersonalInfoMailingAddress); == true",
-               "label": "Hide second address line",
+               "position": "top-right",
                "style": "secondary",
-               "position": "top-right"
+               "label": "Hide second address line",
+               "render": "$global.attr(showmailingAddressLine2); == true and $global.attr(showPersonalInfoMailingAddress); == true"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

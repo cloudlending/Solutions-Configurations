@@ -8,9 +8,9 @@
           "name": "applicationcontinuebusinessdetailsbtn",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-business-industry-info\">Continue</span>",
+               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"BusinessInformationDetails\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\"",
                "style": "primary",
-               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"BusinessInformationDetails\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\""
+               "label": "<span class=\"li-continue-business-industry-info\">Continue</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -127,5 +127,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardCardView+applicationcontinuebusinessdetailsbtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardCardView_applicationcontinuebusinessdetailsbtn_RECORD",
-     "clcommon__Release_Checksum__c": "89e9a9ece1dca872f63093d849f7b52e11f2f2a79465782c613e82e4a5416183"
+     "clcommon__Release_Checksum__c": "7a17de3de5ffd250a2c1a0bbcaee3bd3c3151aa618dffb8b5b4d1cf82182954d"
 }

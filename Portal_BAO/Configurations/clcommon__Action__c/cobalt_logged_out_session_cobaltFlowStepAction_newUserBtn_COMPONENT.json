@@ -18,10 +18,6 @@
           "handler": {
                "assignments": [
                     {
-                         "field": "$global.attr(existingUser);",
-                         "value": "$result.attr(32z8rw6j7a);"
-                    },
-                    {
                          "field": "$nav(cobaltEmailAndIdentityLOFormPanel).appearance(render);",
                          "value": false
                     },
@@ -32,6 +28,10 @@
                     {
                          "field": "$nav(cobaltEmailIdentitySuccessPanel).appearance(render);",
                          "value": true
+                    },
+                    {
+                         "field": "$nav(cobaltEmailIdentityExistingPanel).appearance(render);",
+                         "value": false
                     },
                     {
                          "field": "$global.attr(pageTitle);",
@@ -68,5 +68,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+newUserBtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltFlowStepAction_newUserBtn_COMPONENT",
-     "clcommon__Release_Checksum__c": "c60a75c424eaae6d2a6c24ae37f63a11253c6e9759d872cd598fa4c64e7e6dcc"
+     "clcommon__Release_Checksum__c": "7555cb92fcb9d62339156822e70c5182103bb2b255e24a96f6beab393ff0b1c0"
 }

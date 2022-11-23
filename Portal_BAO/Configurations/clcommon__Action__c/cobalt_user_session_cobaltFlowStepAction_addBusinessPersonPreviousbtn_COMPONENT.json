@@ -8,11 +8,11 @@
           "name": "addBusinessPersonPreviousbtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "<span class=\"li-additional-parties-to-activity-back\">Back</span>",
+               "render": "$global.attr(pageName); == \"addbusinessperson\" and $global.attr(accountActivity);==false",
                "variant": "outlined",
-               "render": "$global.attr(pageName); == \"addbusinessperson\" and $global.attr(accountActivity);==false"
+               "label": "<span class=\"li-additional-parties-to-activity-back\">Back</span>",
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "remoteActionProcess": {

@@ -8,9 +8,9 @@
           "name": "partyEmploymentInfoContinue",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-party-employment-info\">Continue</span>",
+               "render": "$this.attr(clcommon__Type__r.Name); != \"PRIMARY\" and $this.attr(oao__Guarantor_Stage__c); == \"PersonalInformationIdentification\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\" and ($state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); or $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);)",
                "style": "primary",
-               "render": "$this.attr(clcommon__Type__r.Name); != \"PRIMARY\" and $this.attr(oao__Guarantor_Stage__c); == \"PersonalInformationIdentification\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);"
+               "label": "<span class=\"li-continue-party-employment-info\">Continue</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -54,10 +54,6 @@
                     {
                          "field": "$global.attr(showCartView);",
                          "value": "old"
-                    },
-                    {
-                         "field": "$global.attr(stepTitle);",
-                         "value": "Citizenship & Employment"
                     },
                     {
                          "field": "$global.attr(pageName);",
@@ -116,5 +112,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardCardView+partyEmploymentInfoContinue",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardCardView_partyEmploymentInfoContinue_RECORD",
-     "clcommon__Release_Checksum__c": "bcc0e9bc0e53b76a1792e5ea6647b0e43b549c5e36c88bbe5952a144a6e3bbd3"
+     "clcommon__Release_Checksum__c": "7797b1db6b007d2c4e9e78816241f0cc118217fa431cab4e87b3eefceb122ae6"
 }

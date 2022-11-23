@@ -8,9 +8,9 @@
           "name": "applicationContinueBOPrimaryCertification",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-bo-primary-certification\">Continue</span>",
+               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"PersonalInformationIdentification\" and $this.attr(oao__Beneficial_Owner_Certification__c);==true and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\"",
                "style": "primary",
-               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"PersonalInformationIdentification\" and $this.attr(oao__Beneficial_Owner_Certification__c);==true and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\""
+               "label": "<span class=\"li-continue-bo-primary-certification\">Continue</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -148,5 +148,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardCardView+applicationContinueBOPrimaryCertification",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardCardView_applicationContinueBOPrimaryCertification_RECORD",
-     "clcommon__Release_Checksum__c": "d54c8c591d61f05e626cc71fbea88747550e51d292d783014c82dcda2b46b16b"
+     "clcommon__Release_Checksum__c": "181402e6084885681354b4aeb98fec3c4a0166c957b75a706f28a1fa20e8c306"
 }

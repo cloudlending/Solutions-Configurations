@@ -35,6 +35,18 @@
                          {
                               "value": "$this.attr(oao__Referred_When_Compliance_Violated__c);",
                               "field": "$global.attr(referredWhenComplianceViolated);"
+                         },
+                         {
+                              "value": "@mathjs{ $this.attr(oao__Employment_Question__c); and not $this.attr(oao__Citizenship_Question__c); ? \"Employment Information\" : not $this.attr(oao__Employment_Question__c); and $this.attr(oao__Citizenship_Question__c); ? \"Citizenship Status\" : $this.attr(oao__Employment_Question__c); and $this.attr(oao__Citizenship_Question__c); ? \"Employment & Citizenship\" : \"\" };",
+                              "field": "$global.attr(Citizenship_Employment_title);"
+                         },
+                         {
+                              "value": "@mathjs{ $this.attr(oao__Employment_Question__c); and not $this.attr(oao__Citizenship_Question__c); ? \"Please enter your Employment Information below:\" : not $this.attr(oao__Employment_Question__c); and $this.attr(oao__Citizenship_Question__c); ? \"Please enter your Citizenship Status below:\" : $this.attr(oao__Employment_Question__c); and $this.attr(oao__Citizenship_Question__c); ? \"Please enter your Citizenship Status and Employment Information below:\" : \"\" };",
+                              "field": "$global.attr(citizenship_employment_subtitle);"
+                         },
+                         {
+                              "value": true,
+                              "field": "$global.attr(loadSteps);"
                          }
                     ]
                }
@@ -53,5 +65,5 @@
      },
      "clcommon__Actor_Name__c": "cobaltCompliancesPanel",
      "clcommon__External_ID__c": "cobalt_user_session_cobaltCompliancesPanel",
-     "clcommon__Release_Checksum__c": "7c9d5bfbbac23c6600110b4ad889a5e6f2fa52e13f6fc90dc6b1f7578ec77670"
+     "clcommon__Release_Checksum__c": "60c4ae898d08b2118c0b5c6de8119696c4b3d74b6792b643a6a83f41b9ad17bd"
 }

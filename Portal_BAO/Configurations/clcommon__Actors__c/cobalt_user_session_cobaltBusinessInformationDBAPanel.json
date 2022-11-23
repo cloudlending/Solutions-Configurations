@@ -23,11 +23,13 @@
                          ]
                     },
                     "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c": {
-                         "assignments": [
+                         "actions": [
                               {
-                                   "value": "@mathjs{$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);!=\"Corporation\"?$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);:\"\"};",
-                                   "field": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Business_Sub_Category__c);"
-                              },
+                                   "name": "assignBusinessSubType",
+                                   "actorName": "cobaltBusinessInformationDBAPanel"
+                              }
+                         ],
+                         "assignments": [
                               {
                                    "value": "@mathjs{$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"Sole Proprietorship\"?false:$this.attr(oao__Beneficial_Owner_Certification__c);};",
                                    "field": "$this.attr(oao__Beneficial_Owner_Certification__c);"
@@ -152,5 +154,5 @@
      },
      "clcommon__Actor_Name__c": "cobaltBusinessInformationDBAPanel",
      "clcommon__External_ID__c": "cobalt_user_session_cobaltBusinessInformationDBAPanel",
-     "clcommon__Release_Checksum__c": "9e3c479b94379bd88386804e0c9bdbbf740d75fb84dabc5da148af38cfb59190"
+     "clcommon__Release_Checksum__c": "b4aaeb2a434528d1fb27735bd0ae8f792ba23d87e64bfcd09ef3173a5db060ed"
 }

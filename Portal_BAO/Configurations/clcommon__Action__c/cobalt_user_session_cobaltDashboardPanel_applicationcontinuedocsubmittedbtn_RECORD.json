@@ -8,9 +8,9 @@
           "name": "applicationcontinuedocsubmittedbtn",
           "property": {},
           "appearance": {
-               "render": "($this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"ApplicationReferredToView\" and $this.attr(genesis__Application__r.oao__Fundable__c);==false) or ($this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == true and $this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"DocumentUpload\" and $this.attr(genesis__Application__r.oao__Fundable__c);==false) or ($this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(genesis__Application__r.genesis__Status__c); == \"DECLINED\" and  $this.attr(genesis__Application__r.oao__Fundable__c);==false) or ($this.attr(clcommon__Type__r.Name); != \"PRIMARY\" and $this.attr(oao__Guarantor_Stage__c); == \"DocumentUpload\" and $this.attr(genesis__Application__r.oao__Fundable__c);==false) or ($this.attr(clcommon__Type__r.Name); != \"PRIMARY\" and $this.attr(genesis__Application__r.genesis__Status__c); == \"DECLINED\" and $this.attr(genesis__Application__r.oao__Fundable__c);==false)",
+               "label": "<span class=\"li-view-submitted-application\">View</span>",
                "style": "primary",
-               "label": "<span class=\"li-view-submitted-application\">View</span>"
+               "render": "($this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"ApplicationReferredToView\" and $this.attr(genesis__Application__r.oao__Fundable__c);==false) or ($this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == true and $this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"DocumentUpload\" and $this.attr(genesis__Application__r.oao__Fundable__c);==false) or ($this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(genesis__Application__r.genesis__Status__c); == \"DECLINED\" and  $this.attr(genesis__Application__r.oao__Fundable__c);==false) or ($this.attr(clcommon__Type__r.Name); != \"PRIMARY\" and $this.attr(oao__Guarantor_Stage__c); == \"DocumentUpload\" and $this.attr(genesis__Application__r.oao__Fundable__c);==false) or ($this.attr(clcommon__Type__r.Name); != \"PRIMARY\" and $this.attr(genesis__Application__r.genesis__Status__c); == \"DECLINED\" and $this.attr(genesis__Application__r.oao__Fundable__c);==false) or ($this.attr(genesis__Application__r.genesis__Status__c); == \"AUTO - CLOSED\" and  $this.attr(genesis__Application__r.oao__Fundable__c);==false) "
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -125,5 +125,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardPanel+applicationcontinuedocsubmittedbtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardPanel_applicationcontinuedocsubmittedbtn_RECORD",
-     "clcommon__Release_Checksum__c": "12f7e70713f89478a3c2739eb669d1651da8406019e79fa7896c87c518832fea"
+     "clcommon__Release_Checksum__c": "5adcc4046c0fb46a0560d364d2a91cd87a41e9bc254cd3f3c33c6bcde341ed45"
 }

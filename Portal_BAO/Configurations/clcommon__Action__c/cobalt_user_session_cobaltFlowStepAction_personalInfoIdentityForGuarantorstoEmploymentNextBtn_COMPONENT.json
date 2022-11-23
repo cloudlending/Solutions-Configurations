@@ -8,20 +8,20 @@
           "name": "personalInfoIdentityForGuarantorstoEmploymentNextBtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
+               "render": "$global.attr(pageName); == \"personalinfoidentity\" and $global.attr(partyType);!=\"PRIMARY\" and ($state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); or $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);)",
                "label": "<span class=\"li-personal-identity-next\">Next</span>",
-               "render": "$global.attr(pageName); == \"personalinfoidentity\" and $global.attr(partyType);!=\"PRIMARY\" and $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);"
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "Id": "$global.attr(appId);",
-                    "oao__Portal_Stage__c": "PersonalInformationIdentification"
-               },
                "contact": {
-                    "Birthdate": "$state(cobaltPersonalContactInformationPanel).attr(Birthdate);",
+                    "oao__Mother_Maiden_Name__c": "$state(cobaltPersonalContactInformationPanel).attr(oao__Mother_Maiden_Name__c);",
                     "ints__Social_Security_Number__c": "$state(cobaltPersonalContactInformationPanel).attr(ints__Social_Security_Number__c);",
-                    "oao__Mother_Maiden_Name__c": "$state(cobaltPersonalContactInformationPanel).attr(oao__Mother_Maiden_Name__c);"
+                    "Birthdate": "$state(cobaltPersonalContactInformationPanel).attr(Birthdate);"
+               },
+               "genesis__Applications__c": {
+                    "oao__Portal_Stage__c": "PersonalInformationIdentification",
+                    "Id": "$global.attr(appId);"
                }
           },
           "validation": [
@@ -64,12 +64,12 @@
           "handler": {},
           "disclosureNames": [],
           "messages": {
-               "submitFailureText": "$serverMessage;",
-               "showSubmitAnimation": true
+               "showSubmitAnimation": true,
+               "submitFailureText": "$serverMessage;"
           },
           "ariaLabel": "Click here to save data and go to the next step."
      },
-     "clcommon__Action_Order__c": 63,
+     "clcommon__Action_Order__c": 67,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -83,5 +83,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+personalInfoIdentityForGuarantorstoEmploymentNextBtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_personalInfoIdentityForGuarantorstoEmploymentNextBtn_COMPONENT",
-     "clcommon__Release_Checksum__c": "00b68796d3cddea0213e1ab12ab54b42b0ac912fd1fe6ee33ed9644eaf6973cf"
+     "clcommon__Release_Checksum__c": "1fe9697cbcb5702f4a4f2823cc4fdfaa1e663aba5d17f670a7c463ab03052d44"
 }

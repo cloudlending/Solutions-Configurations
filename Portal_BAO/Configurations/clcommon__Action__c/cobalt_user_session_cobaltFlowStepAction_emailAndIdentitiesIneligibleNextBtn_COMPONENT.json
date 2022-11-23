@@ -8,11 +8,11 @@
           "name": "emailAndIdentitiesIneligibleNextBtn",
           "property": {},
           "appearance": {
-               "enable": "$state(cobaltEmailAndIdentityFormPanel).attr(signerConsent); == true and $state(cobaltEmailAndIdentityFormPanel).attr(electronicConsent); == true and $state(cobaltNewAppStepperTitlePanel).count(); > 0 and $state(cobaltEmailAndIdentityFormPanel).attr(myInformationConcent); == true and $state(cobaltEmailAndIdentityFormPanel).attr(ineligibleConsent); == true",
-               "render": "$global.attr(pageName); == \"emailIdentity\" and $global.attr(eligibleContent);==true",
-               "label": "<span class=\"li-email-identity-next\">Next</span>",
+               "position": "top-right",
                "style": "primary",
-               "position": "top-right"
+               "label": "<span class=\"li-email-identity-next\">Next</span>",
+               "render": "$global.attr(pageName); == \"emailIdentity\" and $global.attr(eligibleContent);==true",
+               "enable": "$state(cobaltEmailAndIdentityFormPanel).attr(signerConsent); == true and $state(cobaltEmailAndIdentityFormPanel).attr(electronicConsent); == true and $state(cobaltNewAppStepperTitlePanel).count(); > 0 and $state(cobaltEmailAndIdentityFormPanel).attr(myInformationConcent); == true and $state(cobaltEmailAndIdentityFormPanel).attr(ineligibleConsent); == true"
           },
           "remoteActionArguments": {
                "useMyInfo": "$state(cobaltEmailAndIdentityFormPanel).attr(myInformationConcent);",
@@ -86,7 +86,7 @@
           },
           "ariaLabel": "Click here to create application with above given details."
      },
-     "clcommon__Action_Order__c": 47,
+     "clcommon__Action_Order__c": 49,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -100,5 +100,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+emailAndIdentitiesIneligibleNextBtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_emailAndIdentitiesIneligibleNextBtn_COMPONENT",
-     "clcommon__Release_Checksum__c": "fbac310d87f575db087df9a4f88e69aac393f2bcc25856246f2a25f7c3b73ea1"
+     "clcommon__Release_Checksum__c": "50d56b3358f073feceba9675b6c194acc62aa9f316cc3467f990b1a548e2ef89"
 }

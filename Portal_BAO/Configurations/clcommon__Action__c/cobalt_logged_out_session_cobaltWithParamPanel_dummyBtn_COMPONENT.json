@@ -8,10 +8,10 @@
           "name": "dummyBtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "normal",
+               "render": "$global.attr(dummyShow); == \"true\"",
                "label": "Dummy",
-               "render": "$global.attr(dummyShow); == \"true\""
+               "style": "normal",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

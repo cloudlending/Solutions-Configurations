@@ -8,11 +8,11 @@
           "name": "subProductNextButton",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "enable": "$state(cobaltNewAppStepperTitlePanel).count();>0",
-               "style": "primary",
+               "render": "$global.attr(pageName); == \"productDetails\"",
                "label": "<span class=\"li-product-details-next\">Next</span>",
-               "render": "$global.attr(pageName); == \"productDetails\""
+               "style": "primary",
+               "enable": "$state(cobaltNewAppStepperTitlePanel).count();>0",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -45,7 +45,7 @@
           "messages": {},
           "ariaLabel": "Click here to go bact to Open Accounts Page"
      },
-     "clcommon__Action_Order__c": 53,
+     "clcommon__Action_Order__c": 55,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -59,5 +59,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+subProductNextButton",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_subProductNextButton_COMPONENT",
-     "clcommon__Release_Checksum__c": "1e8891f22196f57c66778d3096682c1457ba04ccafe9c256bdbf89473cde014a"
+     "clcommon__Release_Checksum__c": "b4469bb788cbe05e4d44a33fb2bc2e0450fa919b9ace4ec265313d388ce4c5ca"
 }

@@ -8,11 +8,11 @@
           "name": "subProductNextButton",
           "property": {},
           "appearance": {
-               "render": "$global.attr(currentStep);==\"productDetails\"",
-               "enable": "$state(cobaltCartView).count();>0",
-               "style": "primary",
+               "position": "top-right",
                "label": "<span class=\"lo-product-details-next\">Next</span>",
-               "position": "top-right"
+               "style": "primary",
+               "enable": "$state(cobaltCartView).count();>0",
+               "render": "$global.attr(currentStep);==\"productDetails\""
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

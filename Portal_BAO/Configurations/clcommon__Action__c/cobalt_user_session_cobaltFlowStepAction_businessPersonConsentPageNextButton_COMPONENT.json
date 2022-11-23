@@ -8,11 +8,11 @@
           "name": "businessPersonConsentPageNextButton",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "enable": "$state(cobaltBusinessOwnerCertificationPanel).attr(oao__Beneficial_Owner_Certification__c);==true",
-               "style": "primary",
+               "render": "$global.attr(pageName);==\"businesspersonconsent\" and $global.attr(partyType);!=\"PRIMARY\"",
                "label": "<span class=\"li-business-parties-bo-next\">Next</span>",
-               "render": "$global.attr(pageName);==\"businesspersonconsent\" and $global.attr(partyType);!=\"PRIMARY\""
+               "style": "primary",
+               "enable": "$state(cobaltBusinessOwnerCertificationPanel).attr(oao__Beneficial_Owner_Certification__c);==true",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -47,7 +47,7 @@
           },
           "ariaLabel": "Clicking here will execute KYC check on your details and after successful execution of KYC you will go to the document upload page."
      },
-     "clcommon__Action_Order__c": 54,
+     "clcommon__Action_Order__c": 56,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -61,5 +61,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+businessPersonConsentPageNextButton",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_businessPersonConsentPageNextButton_COMPONENT",
-     "clcommon__Release_Checksum__c": "c9e4804494c698ff080f30229a38591880a4cde490fb16c02ed8701e8762598f"
+     "clcommon__Release_Checksum__c": "3e90078ba88f61e4c08434ca4531886f1c3ae793954327b5094ee1640699eb72"
 }

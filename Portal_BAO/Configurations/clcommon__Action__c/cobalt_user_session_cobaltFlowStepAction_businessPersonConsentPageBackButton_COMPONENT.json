@@ -8,11 +8,11 @@
           "name": "businessPersonConsentPageBackButton",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "Back",
+               "render": "$global.attr(pageName);==\"businesspersonconsent\"",
                "variant": "outlined",
-               "render": "$global.attr(pageName);==\"businesspersonconsent\""
+               "label": "Back",
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

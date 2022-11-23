@@ -8,20 +8,24 @@
           "name": "productAddToCartBtn",
           "property": {},
           "appearance": {
-               "render": "$this.attr(oao__IsSelected__c);==false",
-               "variant": "outlined",
+               "style": "primary",
                "label": "<span class=\"li-add-to-cart\">Add to cart</span>",
-               "style": "primary"
+               "variant": "outlined",
+               "render": "$this.attr(oao__IsSelected__c);==false"
           },
           "remoteActionArguments": {
-               "term": "$this.attr(oao__Product_Term__c);",
-               "productName": "$this.attr(oao__Title__c);",
+               "sessionId": "$global.attr(sessionid);",
                "productId": "$this.attr(oao__Product_Id__c);",
-               "sessionId": "$global.attr(sessionid);"
+               "productName": "$this.attr(oao__Title__c);",
+               "term": "$this.attr(oao__Product_Term__c);"
           },
           "uploadActionArguments": {},
           "successHandler": {
                "assignments": [
+                    {
+                         "field": "$global.attr(redirect);",
+                         "value": false
+                    },
                     {
                          "field": "$this.attr(oao__IsSelected__c);",
                          "value": "$result.attr(isSelected);"
@@ -71,5 +75,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltProductListCardView+productAddToCartBtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltProductListCardView_productAddToCartBtn_RECORD",
-     "clcommon__Release_Checksum__c": "72dcd4f59b8e26bb43c31f36119486692b78a657ee8cfaf2b7817ae4b9d31b75"
+     "clcommon__Release_Checksum__c": "7e51e563bf12f1c80d96335397ddfcc1e1c168dc2fd2c13586a0a5bea07fb39b"
 }

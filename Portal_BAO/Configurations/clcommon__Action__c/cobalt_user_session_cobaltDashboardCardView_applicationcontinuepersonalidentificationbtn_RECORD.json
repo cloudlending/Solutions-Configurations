@@ -8,9 +8,9 @@
           "name": "applicationcontinuepersonalidentificationbtn",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-business-info\">Continue</span>",
+               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"BOCertificationPrimary\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\"",
                "style": "primary",
-               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"BOCertificationPrimary\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\""
+               "label": "<span class=\"li-continue-business-info\">Continue</span>"
           },
           "remoteActionArguments": {},
           "remoteActionProcess": {

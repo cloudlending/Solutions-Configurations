@@ -8,9 +8,9 @@
           "name": "applicationcontinuedocapprovebtn",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-view-approved-application\">Continue</span>",
+               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"DocumentUpload\" and $this.attr(genesis__Application__r.genesis__Status__c); == \"APPROVED\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == true and $this.attr(oao__Submit_Application_Check__c); == true and $this.attr(genesis__Application__r.oao__Fundable__c);==true",
                "style": "primary",
-               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"DocumentUpload\" and $this.attr(genesis__Application__r.genesis__Status__c); == \"APPROVED\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == true and $this.attr(oao__Submit_Application_Check__c); == true and $this.attr(genesis__Application__r.oao__Fundable__c);==true"
+               "label": "<span class=\"li-view-approved-application\">Continue</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

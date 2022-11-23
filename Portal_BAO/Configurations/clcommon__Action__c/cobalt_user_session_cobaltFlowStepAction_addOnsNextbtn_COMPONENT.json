@@ -8,15 +8,15 @@
           "name": "addOnsNextbtn",
           "property": {},
           "appearance": {
-               "render": false,
-               "label": "Next",
+               "position": "top-right",
                "style": "primary",
-               "position": "top-right"
+               "label": "Next",
+               "render": false
           },
           "remoteActionArguments": {
-               "Iovation_Blackbox_Token": "$global.attr(Iovation_Blackbox_Token);",
+               "appId": "$global.attr(appId);",
                "addons": "$state(cobaltAddOnsListView);",
-               "appId": "$global.attr(appId);"
+               "Iovation_Blackbox_Token": "$global.attr(Iovation_Blackbox_Token);"
           },
           "uploadActionArguments": {},
           "successHandler": {
