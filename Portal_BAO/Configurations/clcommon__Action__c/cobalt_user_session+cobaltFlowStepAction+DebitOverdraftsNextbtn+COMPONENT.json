@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "DebitOverdraftsNextbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "DebitOverdraftsNextbtn",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(pageName); == \"debitcardsOverdrafts\"",
+               "label": "<span class=\"li-debit-card-overdraft-next\">Next</span>",
+               "style": "primary",
+               "position": "top-right"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "addons"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Additional Services"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "addons"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": ""
+     },
+     "clcommon__Action_Order__c": 32,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+DebitOverdraftsNextbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+DebitOverdraftsNextbtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "43da19e077592c2843cc35a0f9652d50ddb80fd2ee48eb852d7bee49b4426fe0"
+}

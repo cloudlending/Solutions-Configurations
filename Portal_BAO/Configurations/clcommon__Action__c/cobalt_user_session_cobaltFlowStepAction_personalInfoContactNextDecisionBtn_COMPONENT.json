@@ -8,10 +8,10 @@
           "name": "personalInfoContactNextDecisionBtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
+               "render": "$global.attr(pageName); == \"personalinfocontactUs\"",
                "label": "<span class=\"li-personal-contact-next\">Next</span>",
-               "render": "$global.attr(pageName); == \"personalinfocontactUs\""
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionProcess": {
                "post": "$ext.dynamicStepper"

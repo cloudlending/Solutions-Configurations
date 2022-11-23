@@ -8,11 +8,11 @@
           "name": "accountActivityPageBackButton",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "<span class=\"li-business-activity-back-to-industry-code\">Back</span>",
+               "render": "$global.attr(pageName); == \"accountActivity\"",
                "variant": "outlined",
-               "render": "$global.attr(pageName); == \"accountActivity\""
+               "label": "<span class=\"li-business-activity-back-to-industry-code\">Back</span>",
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

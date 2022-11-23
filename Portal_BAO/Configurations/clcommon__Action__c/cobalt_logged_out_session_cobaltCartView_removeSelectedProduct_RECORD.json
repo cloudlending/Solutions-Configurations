@@ -8,9 +8,9 @@
           "name": "removeSelectedProduct",
           "property": {},
           "appearance": {
-               "render": "$this.attr(oao__Required__c);==false and ($global.attr(fixproducts);==\"false\" or $global.attr(fixproducts);==false or $global.attr(fixproducts);==\"\")",
+               "label": "delete",
                "style": "iconic",
-               "label": "delete"
+               "render": "$this.attr(oao__Required__c);==false and ($global.attr(fixproducts);==\"false\" or $global.attr(fixproducts);==false or $global.attr(fixproducts);==\"\")"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

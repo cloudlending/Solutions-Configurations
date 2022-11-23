@@ -8,9 +8,9 @@
           "name": "applicationcontinuedocumentbusinesspersonbtn",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-party-document-upload\">Continue</span>",
+               "render": "$this.attr(clcommon__Type__r.Name); != \"PRIMARY\" and $this.attr(oao__Guarantor_Stage__c); == \"BOcertification\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\"",
                "style": "primary",
-               "render": "$this.attr(clcommon__Type__r.Name); != \"PRIMARY\" and $this.attr(oao__Guarantor_Stage__c); == \"BOcertification\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\""
+               "label": "<span class=\"li-continue-party-document-upload\">Continue</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -116,5 +116,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardPanel+applicationcontinuedocumentbusinesspersonbtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardPanel_applicationcontinuedocumentbusinesspersonbtn_RECORD",
-     "clcommon__Release_Checksum__c": "67c181a3c16fe6afbe05693506ebcf5bcb804f8db36e93bf0fd525adfda2df98"
+     "clcommon__Release_Checksum__c": "13f6c7b383813ea1adaca6fa20a6b10ecbd85959dadbcad63c2df75a2eb977b4"
 }

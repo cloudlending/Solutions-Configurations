@@ -8,9 +8,9 @@
           "name": "applicationcontinuepersonalcontactbtn",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-personal-info-contact\">Continue</span>",
+               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"EmailAndIdentity\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\"",
                "style": "primary",
-               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"EmailAndIdentity\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\""
+               "label": "<span class=\"li-continue-personal-info-contact\">Continue</span>"
           },
           "remoteActionArguments": {},
           "remoteActionProcess": {
@@ -130,5 +130,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardCardView+applicationcontinuepersonalcontactbtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardCardView_applicationcontinuepersonalcontactbtn_RECORD",
-     "clcommon__Release_Checksum__c": "2ab797e39b341f116154cf180ff846350da365773f78e6ee039b45f9cdbd886c"
+     "clcommon__Release_Checksum__c": "f24cbd6bbff21586c25d43aeef7d3cce3a734e8bad8e4177cd6117dacf073f3d"
 }

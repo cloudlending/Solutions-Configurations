@@ -8,14 +8,14 @@
           "name": "removeYesbtn",
           "property": {},
           "appearance": {
-               "label": "Ok",
+               "position": "bottom-right",
                "style": "primary",
-               "position": "bottom-right"
+               "label": "Ok"
           },
           "remoteActionArguments": {
-               "sessionId": "$global.attr(sessionid);",
+               "productName": "$global.attr(productName);",
                "productId": "$global.attr(productId);",
-               "productName": "$global.attr(productName);"
+               "sessionId": "$global.attr(sessionid);"
           },
           "uploadActionArguments": {},
           "successHandler": {

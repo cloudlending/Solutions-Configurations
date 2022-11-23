@@ -8,9 +8,9 @@
           "name": "applicationcontinuepersonalbusinesspersonbtn",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-party-personal-info\">Continue</span>",
+               "render": "$this.attr(clcommon__Type__r.Name); != \"PRIMARY\" and ($this.attr(oao__Guarantor_Stage__c); == \"EmailAndIdentity\" or $this.attr(oao__Guarantor_Stage__c); == \"\" or $this.attr(oao__Guarantor_Stage__c); == null or $this.attr(oao__Guarantor_Stage__c); == undefined) and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\"",
                "style": "primary",
-               "render": "$this.attr(clcommon__Type__r.Name); != \"PRIMARY\" and ($this.attr(oao__Guarantor_Stage__c); == \"EmailAndIdentity\" or $this.attr(oao__Guarantor_Stage__c); == \"\" or $this.attr(oao__Guarantor_Stage__c); == null or $this.attr(oao__Guarantor_Stage__c); == undefined) and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\""
+               "label": "<span class=\"li-continue-party-personal-info\">Continue</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -111,5 +111,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardCardView+applicationcontinuepersonalbusinesspersonbtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardCardView_applicationcontinuepersonalbusinesspersonbtn_RECORD",
-     "clcommon__Release_Checksum__c": "75539a9b98ceb923e4294797906f13ecb098676af43077904298755e230b4f6e"
+     "clcommon__Release_Checksum__c": "efa0afd1543211624cc44f8a20bfa6524f891da15c22de3edc5eef4c45cba096"
 }

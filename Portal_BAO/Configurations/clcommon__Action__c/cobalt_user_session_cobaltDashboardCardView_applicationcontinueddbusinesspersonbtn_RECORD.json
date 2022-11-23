@@ -8,9 +8,9 @@
           "name": "applicationcontinueddbusinesspersonbtn",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-add-parties\">Continue</span>",
+               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"AccountActivity\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\"",
                "style": "primary",
-               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"AccountActivity\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\""
+               "label": "<span class=\"li-continue-add-parties\">Continue</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -120,5 +120,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardCardView+applicationcontinueddbusinesspersonbtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardCardView_applicationcontinueddbusinesspersonbtn_RECORD",
-     "clcommon__Release_Checksum__c": "1d88c5d1ab0e489b6362041ba8b9df6e2406dedf0c679cd9b30f1db57cbcb045"
+     "clcommon__Release_Checksum__c": "b662934ea10d2cfc8cd10fdc260eb781178aa865f039403804ab5d69c1d8ae0d"
 }

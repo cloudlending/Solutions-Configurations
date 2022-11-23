@@ -14,11 +14,32 @@
           },
           "generalHandlers": {
                "fieldChange": {
+                    "ineligibleConsent": {
+                         "assignments": [
+                              {
+                                   "value": "$this.attr(ineligibleConsent);",
+                                   "field": "$global.attr(ineligibleConsent);"
+                              }
+                         ]
+                    },
+                    "electronicConsent": {
+                         "actions": [
+                              {
+                                   "name": "openPopup",
+                                   "actorName": "cobaltEmailAndIdentityFormPanel",
+                                   "condition": "$this.attr(electronicConsent); and $this.attr(newBusinessCheck); and ($state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c); or $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c);)"
+                              }
+                         ]
+                    },
                     "newBusinessCheck": {
                          "assignments": [
                               {
                                    "value": "@mathjs{($this.attr(newBusinessCheck);==true)?\"\":$global.attr(businessName);};",
                                    "field": "$this.attr(businessAccountName);"
+                              },
+                              {
+                                   "value": false,
+                                   "field": "$state(cobaltEmailAndIdentityFormPanel).attr(electronicConsent);"
                               }
                          ]
                     }
@@ -62,6 +83,7 @@
           "componentActions": [],
           "appearance": {
                "editableFields": {
+                    "electronicConsent": "($this.attr(businessAccountName);!=\"\" and $this.attr(businessAccountName);!=undefined and $this.attr(newBusinessCheck); and $this.attr(firstName);!=\"\" and $this.attr(firstName);!=undefined and $this.attr(lastName);!=\"\" and $this.attr(lastName);!=undefined and $this.attr(emailAddress);!=\"\" and $this.attr(emailAddress);!=undefined and $this.attr(mobilePhone);!=\"\" and $this.attr(mobilePhone);!=undefined and $this.attr(signerConsent); and $this.attr(myInformationConcent); and not $global.attr(eligibleContent); and $global.attr(ineligibleConsent); != true) or ($this.attr(businessAccountName);!=\"\" and $this.attr(businessAccountName);!=undefined and not $this.attr(newBusinessCheck); and $this.attr(firstName);!=\"\" and $this.attr(firstName);!=undefined and $this.attr(lastName);!=\"\" and $this.attr(lastName);!=undefined and $this.attr(emailAddress);!=\"\" and $this.attr(emailAddress);!=undefined and $this.attr(mobilePhone);!=\"\" and $this.attr(mobilePhone);!=undefined and $this.attr(signerConsent); and $this.attr(myInformationConcent); and not $global.attr(eligibleContent); and $global.attr(ineligibleConsent); != true ) or ($this.attr(businessAccountName);!=\"\" and $this.attr(businessAccountName);!=undefined and $this.attr(newBusinessCheck); and $this.attr(firstName);!=\"\" and $this.attr(firstName);!=undefined and $this.attr(lastName);!=\"\" and $this.attr(lastName);!=undefined and $this.attr(emailAddress);!=\"\" and $this.attr(emailAddress);!=undefined and $this.attr(mobilePhone);!=\"\" and $this.attr(mobilePhone);!=undefined and $this.attr(signerConsent); and $this.attr(myInformationConcent); and ($global.attr(eligibleContent); and $global.attr(ineligibleConsent);)) or ($this.attr(businessAccountName);!=\"\" and $this.attr(businessAccountName);!=undefined and not $this.attr(newBusinessCheck); and $this.attr(firstName);!=\"\" and $this.attr(firstName);!=undefined and $this.attr(lastName);!=\"\" and $this.attr(lastName);!=undefined and $this.attr(emailAddress);!=\"\" and $this.attr(emailAddress);!=undefined and $this.attr(mobilePhone);!=\"\" and $this.attr(mobilePhone);!=undefined and $this.attr(signerConsent); and $this.attr(myInformationConcent); and ($global.attr(eligibleContent); and $global.attr(ineligibleConsent);))",
                     "businessAccountName": "$this.attr(newBusinessCheck);==true",
                     "lastName": false,
                     "emailAddress": false,
@@ -93,5 +115,5 @@
      },
      "clcommon__Actor_Name__c": "cobaltEmailAndIdentityFormPanel",
      "clcommon__External_ID__c": "cobalt_user_session_cobaltEmailAndIdentityFormPanel",
-     "clcommon__Release_Checksum__c": "5263151f15e88cfefff45c80e818f697aa1d53ffa022b48e80867560cfc149ea"
+     "clcommon__Release_Checksum__c": "d2030f0348026f98131acb4c2ef460d65cac9e16b9b5f627322308a77cf588a3"
 }

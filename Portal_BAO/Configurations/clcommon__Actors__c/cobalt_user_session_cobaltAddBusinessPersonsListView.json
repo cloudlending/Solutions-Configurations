@@ -13,6 +13,14 @@
                "showLoadingAnimation": true
           },
           "generalHandlers": {
+               "loaded": {
+                    "actions": [
+                         {
+                              "name": "fetchPartyType",
+                              "actorName": "cobaltAddBusinessPersonsListView"
+                         }
+                    ]
+               },
                "navigate": {
                     "guarantor-info": {
                          "updates": [
@@ -55,5 +63,5 @@
      },
      "clcommon__Actor_Name__c": "cobaltAddBusinessPersonsListView",
      "clcommon__External_ID__c": "cobalt_user_session_cobaltAddBusinessPersonsListView",
-     "clcommon__Release_Checksum__c": "cbe2a904504717c240aef12fe960439825f302b2604301dfd1e455db5222912e"
+     "clcommon__Release_Checksum__c": "74b42223f8f4014e297b7e250b1013d056708292616c90356cf2a0875c775dd7"
 }

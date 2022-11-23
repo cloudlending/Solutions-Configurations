@@ -8,10 +8,10 @@
           "name": "documentResubmit",
           "property": {},
           "appearance": {
-               "label": "cloud_upload",
-               "render": "$this.attr(clcommon__Status__c); == \"SUBMITTED\"",
+               "variant": "outlined",
                "style": "iconic",
-               "variant": "outlined"
+               "render": "$this.attr(clcommon__Status__c); == \"SUBMITTED\"",
+               "label": "cloud_upload"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

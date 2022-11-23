@@ -8,11 +8,11 @@
           "name": "businessPartiesSummaryPreviousbtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "<span class=\"li-parties-summary-back\">Back</span>",
+               "render": "$global.attr(pageName); == \"partiessummary\"",
                "variant": "outlined",
-               "render": "$global.attr(pageName); == \"partiessummary\""
+               "label": "<span class=\"li-parties-summary-back\">Back</span>",
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "remoteActionProcess": {

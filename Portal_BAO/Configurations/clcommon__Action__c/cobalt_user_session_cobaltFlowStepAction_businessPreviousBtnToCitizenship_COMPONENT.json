@@ -8,11 +8,11 @@
           "name": "businessPreviousBtnToCitizenship",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "<span class=\"li-business-info-back-to-citizenship-employment\">Back</span>",
+               "render": "$global.attr(pageName); == \"businessinfodetails\" and ($state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); or $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);)",
                "variant": "outlined",
-               "render": "$global.attr(pageName); == \"businessinfodetails\" and $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);"
+               "label": "<span class=\"li-business-info-back-to-citizenship-employment\">Back</span>",
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "remoteActionProcess": {
@@ -30,7 +30,7 @@
                     },
                     {
                          "field": "$global.attr(stepTitle);",
-                         "value": "Citizenship & Employment"
+                         "value": "$global.attr(Citizenship_Employment_title);"
                     },
                     {
                          "field": "$global.attr(pageName);",
@@ -67,5 +67,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+businessPreviousBtnToCitizenship",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_businessPreviousBtnToCitizenship_COMPONENT",
-     "clcommon__Release_Checksum__c": "a2bbdb5d6d9609edab601876ddf11a42b7a10ae7c8e23b5a2fca62a17238a8aa"
+     "clcommon__Release_Checksum__c": "6b28bc6b94e4fd7ece270bd857eeeeefa35f6cbe83dc993db7cfb0879f8d1a1e"
 }

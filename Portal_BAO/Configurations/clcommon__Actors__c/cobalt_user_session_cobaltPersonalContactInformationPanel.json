@@ -16,7 +16,7 @@
                "loaded": {
                     "assignments": [
                          {
-                              "value": "@mathjs{ $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c); ? \"CitizenshipAndEmployment\" : \"BOCertificationPrimary\" };",
+                              "value": "@mathjs{ $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c); ? \"CitizenshipAndEmployment\" : \"BOCertificationPrimary\" };",
                               "field": "$global.attr(updatePortalStage);"
                          }
                     ]
@@ -51,5 +51,5 @@
      },
      "clcommon__Actor_Name__c": "cobaltPersonalContactInformationPanel",
      "clcommon__External_ID__c": "cobalt_user_session_cobaltPersonalContactInformationPanel",
-     "clcommon__Release_Checksum__c": "22ec09583570db65680bcbb0a013a265d951b3935e84ffa5ee3f707bbb5ba859"
+     "clcommon__Release_Checksum__c": "059693e21a85c5bd5c00347997154204c1b15eba9fb7622a9552c9d990a3a335"
 }

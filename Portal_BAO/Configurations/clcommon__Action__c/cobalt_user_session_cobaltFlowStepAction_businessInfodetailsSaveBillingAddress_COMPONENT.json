@@ -8,49 +8,49 @@
           "name": "businessInfodetailsSaveBillingAddress",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
+               "render": false,
                "label": "Next",
-               "render": false
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {
-               "genesis__Business_Information__c": {
-                    "oao__Unified_Business_Identifier__c": "$global.attr(UBI);",
-                    "Id": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.Id);",
-                    "genesis__DBA_Name__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);",
-                    "genesis__Business_Category__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);",
-                    "genesis__Tax_ID__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
-                    "genesis__Tax_Identification_Number__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
-                    "oao__Business_Sub_Category__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Business_Sub_Category__c);"
-               },
-               "account": {
-                    "oao__Business_DBA_Name__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);",
-                    "Id": "$global.attr(businessAccountId);",
-                    "oao__Business_Category__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);",
-                    "Name": "$state(cobaltBusinessInformationNameOfBusinessPanel).attr(genesis__Application__r.genesis__Account__r.Name);",
-                    "BillingCountryCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingCountryCode);",
-                    "ShippingCountryCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingCountryCode);",
-                    "ShippingStreet": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingStreet);",
-                    "ShippingCity": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingCity);",
-                    "ShippingStateCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingStateCode);",
-                    "ShippingPostalCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingPostalCode);",
-                    "BillingStreet": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingStreet);",
-                    "oao__Billing_Address_Second_Line__c": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.oao__Billing_Address_Second_Line__c);",
-                    "oao__Shipping_Address_Second_Line__c": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.oao__Billing_Address_Second_Line__c);",
-                    "BillingCity": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingCity);",
-                    "BillingStateCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingStateCode);",
-                    "BillingPostalCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingPostalCode);",
-                    "Phone": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.Phone);",
-                    "oao__Same_Address_As_Personal__c": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.oao__Same_Address_As_Personal__c);",
-                    "oao__Same_Phone_As_Personal__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.oao__Same_Phone_As_Personal__c);",
-                    "oao__Business_Sub_Category_Type__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Business_Sub_Category__c);"
-               },
-               "genesis__Applications__c": {
-                    "Id": "$global.attr(appId);",
-                    "oao__Portal_Stage__c": "BusinessInformationDetails"
-               },
                "clcommon__Legal_Entity__c": {
                     "Name": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);"
+               },
+               "genesis__Applications__c": {
+                    "oao__Portal_Stage__c": "BusinessInformationDetails",
+                    "Id": "$global.attr(appId);"
+               },
+               "account": {
+                    "oao__Business_Sub_Category_Type__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Business_Sub_Category__c);",
+                    "oao__Same_Phone_As_Personal__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.oao__Same_Phone_As_Personal__c);",
+                    "oao__Same_Address_As_Personal__c": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.oao__Same_Address_As_Personal__c);",
+                    "Phone": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.Phone);",
+                    "BillingPostalCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingPostalCode);",
+                    "BillingStateCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingStateCode);",
+                    "BillingCity": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingCity);",
+                    "oao__Shipping_Address_Second_Line__c": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.oao__Billing_Address_Second_Line__c);",
+                    "oao__Billing_Address_Second_Line__c": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.oao__Billing_Address_Second_Line__c);",
+                    "BillingStreet": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingStreet);",
+                    "ShippingPostalCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingPostalCode);",
+                    "ShippingStateCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingStateCode);",
+                    "ShippingCity": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingCity);",
+                    "ShippingStreet": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingStreet);",
+                    "ShippingCountryCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingCountryCode);",
+                    "BillingCountryCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingCountryCode);",
+                    "Name": "$state(cobaltBusinessInformationNameOfBusinessPanel).attr(genesis__Application__r.genesis__Account__r.Name);",
+                    "oao__Business_Category__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);",
+                    "Id": "$global.attr(businessAccountId);",
+                    "oao__Business_DBA_Name__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);"
+               },
+               "genesis__Business_Information__c": {
+                    "oao__Business_Sub_Category__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Business_Sub_Category__c);",
+                    "genesis__Tax_Identification_Number__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
+                    "genesis__Tax_ID__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
+                    "genesis__Business_Category__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);",
+                    "genesis__DBA_Name__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);",
+                    "Id": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.Id);",
+                    "oao__Unified_Business_Identifier__c": "$global.attr(UBI);"
                }
           },
           "uploadActionArguments": {},

@@ -8,11 +8,11 @@
           "name": "emailAndIdentitiesNextBtn",
           "property": {},
           "appearance": {
-               "enable": "$state(cobaltEmailAndIdentityFormPanel).attr(signerConsent); == true and $state(cobaltEmailAndIdentityFormPanel).attr(electronicConsent); == true and $state(cobaltNewAppStepperTitlePanel).count(); > 0 and $state(cobaltEmailAndIdentityFormPanel).attr(myInformationConcent); == true",
-               "render": "$global.attr(pageName); == \"emailIdentity\" and $global.attr(eligibleContent);==false",
-               "label": "<span class=\"li-email-identity-next\">Next</span>",
+               "position": "top-right",
                "style": "primary",
-               "position": "top-right"
+               "label": "<span class=\"li-email-identity-next\">Next</span>",
+               "render": "$global.attr(pageName); == \"emailIdentity\" and $global.attr(eligibleContent);==false",
+               "enable": "$state(cobaltEmailAndIdentityFormPanel).attr(signerConsent); == true and $state(cobaltEmailAndIdentityFormPanel).attr(electronicConsent); == true and $state(cobaltNewAppStepperTitlePanel).count(); > 0 and $state(cobaltEmailAndIdentityFormPanel).attr(myInformationConcent); == true"
           },
           "remoteActionArguments": {
                "useMyInfo": "$state(cobaltEmailAndIdentityFormPanel).attr(myInformationConcent);",
@@ -86,7 +86,7 @@
           },
           "ariaLabel": "Click here to create application with above given details."
      },
-     "clcommon__Action_Order__c": 32,
+     "clcommon__Action_Order__c": 34,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -100,5 +100,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+emailAndIdentitiesNextBtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_emailAndIdentitiesNextBtn_COMPONENT",
-     "clcommon__Release_Checksum__c": "e0f7b254d7c2c3da7d4f876f1b89a7d7d1c007728514639ed6c069354859fcec"
+     "clcommon__Release_Checksum__c": "b2acb7b595eaa64388c6c2a756590b3f03d4b2b7deb0e9dc2ad3ccf871c443c4"
 }

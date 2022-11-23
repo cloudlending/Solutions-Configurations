@@ -13,6 +13,7 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
+               "render": "$global.attr(loadSteps);",
                "titles": [
                     {
                          "name": "openAccounts",
@@ -30,8 +31,8 @@
                     },
                     {
                          "name": "citizenshipEmployment",
-                         "render": "$state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);",
-                         "subTitle": "Citizenship & Employment",
+                         "render": "$state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); or $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
+                         "subTitle": "$global.attr(Citizenship_Employment_title);",
                          "title": "Information"
                     },
                     {
@@ -62,8 +63,8 @@
                          "title": "Review"
                     },
                     {
-                         "render": "$global.attr(fundable);==true",
                          "name": "funding",
+                         "render": "$global.attr(fundable);==true",
                          "title": "Funding"
                     }
                ],
@@ -75,5 +76,5 @@
      },
      "clcommon__Actor_Name__c": "cobaltMainSteps",
      "clcommon__External_ID__c": "cobalt_user_session_cobaltMainSteps",
-     "clcommon__Release_Checksum__c": "1b6c924c28a6de68346a3a77ece7fcf924a83e78202628c79ff0799619cade92"
+     "clcommon__Release_Checksum__c": "155b7a92ecc35e5fe131e32231aedf78853517b2318f79597ea7494736233957"
 }

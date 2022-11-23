@@ -35,6 +35,10 @@
                          ]
                     },
                     {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "$global.attr(Citizenship_Employment_title);"
+                    },
+                    {
                          "field": "$nav(cobaltDashboardSteps).appearance(current);",
                          "value": "next"
                     },
@@ -88,7 +92,7 @@
                "submitFailureText": "$serverMessage;"
           }
      },
-     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -102,5 +106,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardCardView+startanewapplicationwithsessionbtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardCardView_startanewapplicationwithsessionbtn_COMPONENT",
-     "clcommon__Release_Checksum__c": "9a00a156a0095276b37a02471ba4476e0b8432235d3c90922ec553150c3f315a"
+     "clcommon__Release_Checksum__c": "b22291b60a235a7de9cbb2016eca5890e98b1f289ea871c0b1f4455e896d6abb"
 }

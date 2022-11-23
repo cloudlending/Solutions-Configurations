@@ -8,11 +8,11 @@
           "name": "selectAccountNextBtn",
           "property": {},
           "appearance": {
-               "enable": "$state(cobaltCartView).count();>0 ",
-               "label": "<span class=\"lo-open-accounts-next\">Next</span>",
-               "style": "primary",
+               "render": "$global.attr(currentStep);==\"openAccount\"",
                "position": "top-right",
-               "render": "$global.attr(currentStep);==\"openAccount\""
+               "style": "primary",
+               "label": "<span class=\"lo-open-accounts-next\">Next</span>",
+               "enable": "$state(cobaltCartView).count();>0 "
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

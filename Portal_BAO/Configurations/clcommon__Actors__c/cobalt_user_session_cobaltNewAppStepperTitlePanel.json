@@ -17,7 +17,7 @@
                     "actions": [
                          {
                               "name": "redirectToOpenAccount",
-                              "condition": "$state(cobaltNewAppStepperTitlePanel).count(); > 0 and $global.attr(openAccountTab); == \"ProductType\" and $state(cobaltCustomSettingsPanel).attr(oao__Enable_Redirect_To_Open_Account__c);"
+                              "condition": "$state(cobaltNewAppStepperTitlePanel).count(); > 0 and $global.attr(openAccountTab); == \"ProductType\" and $state(cobaltCustomSettingsPanel).attr(oao__Enable_Redirect_To_Open_Account__c); and $global.attr(redirect);"
                          }
                     ]
                }
@@ -46,5 +46,5 @@
      },
      "clcommon__Actor_Name__c": "cobaltNewAppStepperTitlePanel",
      "clcommon__External_ID__c": "cobalt_user_session_cobaltNewAppStepperTitlePanel",
-     "clcommon__Release_Checksum__c": "45fa0cf781a8cdf2325cc8cd65795602207282d283b42337f6bc5e7f8a6e858c"
+     "clcommon__Release_Checksum__c": "4498b2cc4f4165008331bd279c98311b0e00267b9f3ac9af907d5ff75dbd3c40"
 }

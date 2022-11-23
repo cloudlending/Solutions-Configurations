@@ -8,9 +8,9 @@
           "name": "applicationcontinueaccountactivity",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-add-parties\">Continue</span>",
+               "render": "$global.attr(accountActivity);==true and $this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"BusinessInformationIndustryCode\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\"",
                "style": "primary",
-               "render": "$global.attr(accountActivity);==true and $this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"BusinessInformationIndustryCode\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\""
+               "label": "<span class=\"li-continue-add-parties\">Continue</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -116,5 +116,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardPanel+applicationcontinueaccountactivity",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardPanel_applicationcontinueaccountactivity_RECORD",
-     "clcommon__Release_Checksum__c": "6f116c004f85780cf1400e49054d9a353a34ddf8f6ee27044aad12290b2c24aa"
+     "clcommon__Release_Checksum__c": "35894d6df227e6d3ad7365101ca5a96dffccf38358cb8d1dc82659710daeec40"
 }

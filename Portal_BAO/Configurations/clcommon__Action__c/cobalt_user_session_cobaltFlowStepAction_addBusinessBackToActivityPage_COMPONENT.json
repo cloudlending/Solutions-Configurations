@@ -8,11 +8,11 @@
           "name": "addBusinessBackToActivityPage",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "<span class=\"li-additional-parties-back\">Back</span>",
+               "render": "$global.attr(pageName); == \"addbusinessperson\" and $global.attr(accountActivity);== true",
                "variant": "outlined",
-               "render": "$global.attr(pageName); == \"addbusinessperson\" and $global.attr(accountActivity);== true"
+               "label": "<span class=\"li-additional-parties-back\">Back</span>",
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "remoteActionProcess": {

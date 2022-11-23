@@ -8,9 +8,9 @@
           "name": "partyNoEmploymentInfoContinue",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-party-contact-info\">Continue</span>",
+               "render": "$this.attr(clcommon__Type__r.Name); != \"PRIMARY\" and $this.attr(oao__Guarantor_Stage__c); == \"PersonalInformationIdentification\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\" and not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and not $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);)",
                "style": "primary",
-               "render": "$this.attr(clcommon__Type__r.Name); != \"PRIMARY\" and $this.attr(oao__Guarantor_Stage__c); == \"PersonalInformationIdentification\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and not $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);"
+               "label": "<span class=\"li-continue-party-contact-info\">Continue</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -120,5 +120,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardPanel+partyNoEmploymentInfoContinue",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardPanel_partyNoEmploymentInfoContinue_RECORD",
-     "clcommon__Release_Checksum__c": "ce3a33aabab569aa8fd2478ffec0e1ed2452a83f1221dad0a9448a728585cad6"
+     "clcommon__Release_Checksum__c": "db89d7a71d28b439e992801ac179a3a2612786bbd21d228c5caaa7478e98b5ce"
 }

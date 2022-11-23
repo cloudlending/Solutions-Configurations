@@ -8,11 +8,11 @@
           "name": "emailAndIdentityPreviousBtn",
           "property": {},
           "appearance": {
-               "render": "$global.attr(currentStep); == \"emailIdentity\"",
-               "variant": "outlined",
-               "label": "<span class=\"lo-email-identity-back\">Back</span>",
+               "position": "top-right",
                "style": "primary",
-               "position": "top-right"
+               "label": "<span class=\"lo-email-identity-back\">Back</span>",
+               "variant": "outlined",
+               "render": "$global.attr(currentStep); == \"emailIdentity\""
           },
           "uploadActionArguments": {},
           "successHandler": {},

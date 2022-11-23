@@ -8,11 +8,11 @@
           "name": "emailIdentityNextBtn",
           "property": {},
           "appearance": {
-               "label": "<span class=\"lo-email-identity-next\">Next</span>",
-               "style": "primary",
-               "position": "top-right",
+               "enable": "$state(cobaltEmailAndIdentityLOFormPanel).attr(signerConsent); == true and $state(cobaltEmailAndIdentityLOFormPanel).attr(electronicConsent); == true and $state(cobaltEmailAndIdentityLOFormPanel).attr(myInformationConcent); == true and $state(cobaltStepperTitlePanel).count();>0",
                "render": "$global.attr(currentStep);==\"emailIdentity\" and $global.attr(eligibleContent);==false",
-               "enable": "$state(cobaltEmailAndIdentityLOFormPanel).attr(signerConsent); == true and $state(cobaltEmailAndIdentityLOFormPanel).attr(electronicConsent); == true and $state(cobaltEmailAndIdentityLOFormPanel).attr(myInformationConcent); == true and $state(cobaltStepperTitlePanel).count();>0"
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"lo-email-identity-next\">Next</span>"
           },
           "remoteActionArguments": {
                "useMyInfo": "$state(cobaltEmailAndIdentityLOFormPanel).attr(myInformationConcent);",

@@ -8,11 +8,11 @@
           "name": "hideBusinessMailingSecondAddressbtn",
           "property": {},
           "appearance": {
-               "enable": "$global.attr(lockBusinessDetails);==false",
-               "position": "top-right",
-               "style": "secondary",
+               "render": "$global.attr(showBusinessMailingSecondLineAddress);==true and  $global.attr(showMailingAddress); == true",
                "label": "Hide second address line",
-               "render": "$global.attr(showBusinessMailingSecondLineAddress);==true and  $global.attr(showMailingAddress); == true"
+               "style": "secondary",
+               "position": "top-right",
+               "enable": "$global.attr(lockBusinessDetails);==false"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

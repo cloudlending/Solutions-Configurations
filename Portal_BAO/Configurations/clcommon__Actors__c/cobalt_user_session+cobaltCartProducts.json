@@ -1,0 +1,44 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "multipleSelectionOptions": {
+                    "enableSelectAll": false,
+                    "renderRecord": true,
+                    "renderSelectAll": false
+               },
+               "multipleSelections": true,
+               "title": "For which account(s) would you like to opt into optional Overdraft Protection?"
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "a778a0000010xBk"
+               },
+               "structureName": "cobalt_cart_products_list"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltCartProducts",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltCartProducts",
+     "clcommon__Release_Checksum__c": "d3a32a9db7a8aa56498282af738b8da10fab8bca7aa2fd5353b40b41929eb4ea"
+}

@@ -8,9 +8,9 @@
           "name": "dummyPopupbtn",
           "property": {},
           "appearance": {
-               "style": "primary",
+               "render": "$global.attr(dummyShow); == \"true\"",
                "label": "Dummy Popup",
-               "render": "$global.attr(dummyShow); == \"true\""
+               "style": "primary"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

@@ -8,11 +8,11 @@
           "name": "hidedbabtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "secondary",
-               "label": "Hide DBA name",
+               "enable": "$global.attr(lockBusinessDetails);==false",
                "render": "$global.attr(showdba); == true",
-               "enable": "$global.attr(lockBusinessDetails);==false"
+               "label": "Hide DBA name",
+               "style": "secondary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -24,10 +24,6 @@
                     {
                          "field": "$global.attr(showdba);",
                          "value": false
-                    },
-                    {
-                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);",
-                         "value": ""
                     }
                ]
           },
@@ -48,5 +44,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltBusinessInformationDBAPanel+hidedbabtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltBusinessInformationDBAPanel_hidedbabtn_COMPONENT",
-     "clcommon__Release_Checksum__c": "a09fc7cd86d7017dc4fc0e352c4343f16d19d5a32fd2bd0dc8499536e806f3ce"
+     "clcommon__Release_Checksum__c": "d428daba442620dcab23df8b3602c9e080f7b81288e9e1ecb45b801cb14872fc"
 }

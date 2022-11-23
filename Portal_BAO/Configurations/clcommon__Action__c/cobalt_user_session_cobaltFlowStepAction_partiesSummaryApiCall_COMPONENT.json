@@ -8,11 +8,11 @@
           "name": "partiesSummaryApiCall",
           "property": {},
           "appearance": {
-               "enable": "$global.attr(percentageBO);<=100.00 and $state(cobaltPartiesConsentPanel).attr(partyConsent);==true",
-               "label": "<span class=\"li-business-parties-summary-next\">Next</span>",
-               "style": "primary",
+               "render": "$global.attr(pageName); == \"partiessummary\"",
                "position": "top-right",
-               "render": "$global.attr(pageName); == \"partiessummary\""
+               "style": "primary",
+               "label": "<span class=\"li-business-parties-summary-next\">Next</span>",
+               "enable": "$global.attr(percentageBO);<=100.00 and $state(cobaltPartiesConsentPanel).attr(partyConsent);==true"
           },
           "remoteActionArguments": {
                "appId": "$global.attr(appId);"
@@ -36,7 +36,7 @@
           "messages": {},
           "ariaLabel": "Click here to go to Additional Services page"
      },
-     "clcommon__Action_Order__c": 45,
+     "clcommon__Action_Order__c": 47,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -50,5 +50,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+partiesSummaryApiCall",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_partiesSummaryApiCall_COMPONENT",
-     "clcommon__Release_Checksum__c": "286d03bdf45e43e2540d49143d95a00f84c2572ba0af72ed314e697a9aa010ec"
+     "clcommon__Release_Checksum__c": "6894c186daf63a774ec646b7f11f815074b5d126011b93af5e315879ddc581c0"
 }

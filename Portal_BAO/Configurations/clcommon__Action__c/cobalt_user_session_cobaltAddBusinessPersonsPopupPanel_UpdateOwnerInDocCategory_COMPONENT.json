@@ -17,8 +17,14 @@
           "successHandler": {
                "actions": [
                     {
+                         "condition": "not $global.attr(isExisting);",
                          "actorName": "cobaltAddBusinessPersonsPopupPanel",
                          "name": "sendSetPasswordEmailAfterRegistration"
+                    },
+                    {
+                         "condition": "$global.attr(isExisting);",
+                         "actorName": "cobaltAddBusinessPersonsPopupPanel",
+                         "name": "closePopUpForExistingUser"
                     }
                ]
           },
@@ -42,5 +48,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltAddBusinessPersonsPopupPanel+UpdateOwnerInDocCategory",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltAddBusinessPersonsPopupPanel_UpdateOwnerInDocCategory_COMPONENT",
-     "clcommon__Release_Checksum__c": "da8c1d955e11ae27ad5edc8a5380e3f55c345a8c791d07fd9410b6c8ca81aad8"
+     "clcommon__Release_Checksum__c": "df3599c18047f57d622d5ceaaa4b6eacd156af191996810261bba60632cddb97"
 }

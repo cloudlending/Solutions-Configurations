@@ -29,9 +29,10 @@
           "appearance": {
                "title": "Add Business Party",
                "renderFields": {
-                    "benefecial_owner": "$global.attr(businessCategory);!=\"Sole Proprietorship\"",
-                    "control_person": "$global.attr(businessCategory);!=\"Sole Proprietorship\"",
-                    "percentageOwnership": "$this.attr(benefecial_owner);==true"
+                    "percentageOwnership": "$this.attr(benefecial_owner);==true",
+                    "control_person": "$global.attr(controlPerson);==true",
+                    "benefecial_owner": "$global.attr(benefecialOwner);==true",
+                    "authorized_signer": "$global.attr(authorizeSigner);==true"
                },
                "messagePositions": {
                     "saveSubmitError": "top",
@@ -52,5 +53,5 @@
      },
      "clcommon__Actor_Name__c": "cobaltAddBusinessPersonsPopupPanel",
      "clcommon__External_ID__c": "cobalt_user_session_cobaltAddBusinessPersonsPopupPanel",
-     "clcommon__Release_Checksum__c": "0383737521f1ea4f837d07c716a1dab4badaa6e856b23921ee0010186699b7f7"
+     "clcommon__Release_Checksum__c": "ac73994a9bd1f9da92a66387e31d433fc43247788c20b525f71da0938e13eca0"
 }
