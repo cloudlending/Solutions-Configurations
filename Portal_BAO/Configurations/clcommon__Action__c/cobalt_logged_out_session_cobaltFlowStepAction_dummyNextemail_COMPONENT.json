@@ -8,10 +8,10 @@
           "name": "dummyNextemail",
           "property": {},
           "appearance": {
-               "label": "Dummy Next email identity",
-               "style": "primary",
+               "render": "$global.attr(dummyShow); == \"true\" and $global.attr(currentStep); == \"emailIdentity\"",
                "position": "top-right",
-               "render": "$global.attr(dummyShow); == \"true\" and $global.attr(currentStep); == \"emailIdentity\""
+               "style": "primary",
+               "label": "Dummy Next email identity"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

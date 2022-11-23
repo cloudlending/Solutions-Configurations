@@ -8,11 +8,11 @@
           "name": "BOPrimaryConsentPageNextButton",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "enable": "$state(cobaltBusinessOwnerCertificationPanel).attr(oao__Beneficial_Owner_Certification__c);==true",
-               "style": "primary",
+               "render": "$global.attr(pageName);==\"businesspersonconsent\" and $global.attr(partyType);==\"PRIMARY\"",
                "label": "<span class=\"li-bo-consent-next\">Next</span>",
-               "render": "$global.attr(pageName);==\"businesspersonconsent\" and $global.attr(partyType);==\"PRIMARY\""
+               "style": "primary",
+               "enable": "$state(cobaltBusinessOwnerCertificationPanel).attr(oao__Beneficial_Owner_Certification__c);==true",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -33,7 +33,7 @@
           },
           "ariaLabel": "Click here to go to the next step"
      },
-     "clcommon__Action_Order__c": 39,
+     "clcommon__Action_Order__c": 41,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -47,5 +47,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+BOPrimaryConsentPageNextButton",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_BOPrimaryConsentPageNextButton_COMPONENT",
-     "clcommon__Release_Checksum__c": "ae005a1f969d7ff7771e0f150941301700419bb4be2e757e784ab0cdf47226c7"
+     "clcommon__Release_Checksum__c": "77b2d764d6d4ad3355abf94fa7b65e09188f949932132619ba7b13548a30bb3f"
 }

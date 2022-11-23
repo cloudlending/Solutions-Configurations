@@ -8,13 +8,13 @@
           "name": "query1",
           "property": {},
           "appearance": {
-               "label": "GetProductDetailsApi",
+               "position": "top-right",
                "style": "normal",
-               "position": "top-right"
+               "label": "GetProductDetailsApi"
           },
           "remoteActionArguments": {
-               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);",
-               "productType": "$global.attr(productType);"
+               "productType": "$global.attr(productType);",
+               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);"
           },
           "successHandler": {},
           "failureHandler": {},

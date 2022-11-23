@@ -8,16 +8,16 @@
           "name": "fundingAccountNextButton",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "variant": "primary",
-               "label": "<span class=\"li-funding-next-button\">Next</span>",
+               "render": "$global.attr(pageName); == \"fundingAccount\"",
                "style": "primary",
-               "render": "$global.attr(pageName); == \"fundingAccount\""
+               "label": "<span class=\"li-funding-next-button\">Next</span>",
+               "variant": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {
-               "appId": "$global.attr(appId);",
+               "products": "$state(cobaltFundingListView);",
                "paymentType": "$state(cobaltFundingMethods).attr(oao__Payment_Type__r).attr(Name);",
-               "products": "$state(cobaltFundingListView);"
+               "appId": "$global.attr(appId);"
           },
           "validation": [
                "cobaltFundingListView",
@@ -53,7 +53,7 @@
           "messages": {},
           "ariaLabel": "Click here to Fund your account"
      },
-     "clcommon__Action_Order__c": 67,
+     "clcommon__Action_Order__c": 71,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -67,5 +67,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+fundingAccountNextButton",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_fundingAccountNextButton_COMPONENT",
-     "clcommon__Release_Checksum__c": "c37e6e6d6b6fe87e5cfceb84bed457691572247e0b0e122af18e90c55c0c0c39"
+     "clcommon__Release_Checksum__c": "e29f96a04d83bd2fb671c420360f26f454a61c1c0d09e69d0b1f64f9bd026d05"
 }

@@ -8,10 +8,10 @@
           "name": "showMailingAddressbtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "secondary",
+               "render": "$global.attr(showMailingAddress); == false",
                "label": "Business mailing address is different",
-               "render": "$global.attr(showMailingAddress); == false"
+               "style": "secondary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

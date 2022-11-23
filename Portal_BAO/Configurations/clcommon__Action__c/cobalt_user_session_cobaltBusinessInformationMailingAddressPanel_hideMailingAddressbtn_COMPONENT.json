@@ -8,11 +8,11 @@
           "name": "hideMailingAddressbtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "secondary",
-               "label": "Business mailing address is same",
+               "enable": "$global.attr(lockBusinessDetails);==false",
                "render": "$global.attr(showMailingAddress); == true",
-               "enable": "$global.attr(lockBusinessDetails);==false"
+               "label": "Business mailing address is same",
+               "style": "secondary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

@@ -8,13 +8,13 @@
           "name": "addOnsNextBtnApplicationSave",
           "property": {},
           "appearance": {
-               "render": false,
+               "style": "primary",
                "label": "Next",
-               "style": "primary"
+               "render": false
           },
           "remoteActionArguments": {
-               "oao__Selected__c": "$this.attr(oao__Selected__c);",
-               "Name": "$this.attr(Name);"
+               "Name": "$this.attr(Name);",
+               "oao__Selected__c": "$this.attr(oao__Selected__c);"
           },
           "successHandler": {
                "assignments": [

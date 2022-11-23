@@ -42,7 +42,7 @@
                               "id": "40bbf5aa-1ab2-4f0f-8270-902b47ad3ab0",
                               "fieldName": "genesis__Application__r.oao__Application_Timestamp__c",
                               "fieldUi": {
-                                   "fieldType": "datetime",
+                                   "fieldType": "string",
                                    "label": "Timestamp",
                                    "ariaLabel": "Timestamp"
                               }
@@ -194,6 +194,13 @@
                                              "defaultOption": false,
                                              "optionText": "REJECTED",
                                              "optionValue": "REJECTED"
+                                        },
+                                        {
+                                             "id": "AUTO - CLOSED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AUTO - CLOSED",
+                                             "optionValue": "AUTO - CLOSED"
                                         }
                                    ],
                                    "ariaLabel": "Status"
@@ -490,5 +497,5 @@
           ]
      },
      "clcommon__External_ID__c": "cobalt_application_fetch_query",
-     "clcommon__Release_Checksum__c": "0dc39fd23b9e9ee5ecd062cdb9a932f25ecb2cdb8a8a268d6ddd616bdcddebb0"
+     "clcommon__Release_Checksum__c": "71f242fe26e63010e7eba2c944bcbbd31b90f9d30171b70c92849e6b6d557349"
 }

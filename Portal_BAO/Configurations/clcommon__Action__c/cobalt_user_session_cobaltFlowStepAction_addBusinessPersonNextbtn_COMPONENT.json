@@ -8,10 +8,10 @@
           "name": "addBusinessPersonNextbtn",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-business-parties-next\">Next</span>",
-               "style": "primary",
+               "render": "$global.attr(pageName); == \"addbusinessperson\" and $global.attr(BOCount);>0",
                "position": "top-right",
-               "render": "$global.attr(pageName); == \"addbusinessperson\" and $global.attr(BOCount);>0"
+               "style": "primary",
+               "label": "<span class=\"li-business-parties-next\">Next</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -71,7 +71,7 @@
           "messages": {},
           "ariaLabel": "Click here to go to Parties Summary Page"
      },
-     "clcommon__Action_Order__c": 50,
+     "clcommon__Action_Order__c": 52,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -85,5 +85,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+addBusinessPersonNextbtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_addBusinessPersonNextbtn_COMPONENT",
-     "clcommon__Release_Checksum__c": "8930e6f30cde4b62e63f23637734d69288a7eb2637f8026c47b753df9f5079f8"
+     "clcommon__Release_Checksum__c": "e807ec03addd6957236347e63d6999b8366834c974ee6f713ed389cc04a06dbe"
 }

@@ -8,11 +8,11 @@
           "name": "showdbabtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "secondary",
-               "label": "Enter DBA name (if applicable)",
+               "enable": "$global.attr(lockBusinessDetails);==false",
                "render": "$global.attr(showdba); == false",
-               "enable": "$global.attr(lockBusinessDetails);==false"
+               "label": "Enter DBA name (if applicable)",
+               "style": "secondary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

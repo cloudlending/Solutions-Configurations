@@ -8,15 +8,15 @@
           "name": "submitApplicationbtn",
           "property": {},
           "appearance": {
-               "render": "$global.attr(pageName); == \"documentupload\"",
-               "label": "<span class=\"li-document-submit-app\">Submit Application</span>",
-               "style": "primary",
+               "enable": "$state(cobaltDocUploadTitlePanel).attr(isStatusCheck); == true and $state(cobaltDocUploadTitlePanel).attr(isRequired); == true",
                "position": "top-right",
-               "enable": "$state(cobaltDocUploadTitlePanel).attr(isStatusCheck); == true and $state(cobaltDocUploadTitlePanel).attr(isRequired); == true"
+               "style": "primary",
+               "label": "<span class=\"li-document-submit-app\">Submit Application</span>",
+               "render": "$global.attr(pageName); == \"documentupload\""
           },
           "remoteActionArguments": {
-               "appId": "$global.attr(appId);",
-               "partyId": "$global.attr(partyId);"
+               "partyId": "$global.attr(partyId);",
+               "appId": "$global.attr(appId);"
           },
           "uploadActionArguments": {},
           "successHandler": {
@@ -58,7 +58,7 @@
           },
           "ariaLabel": "Click here to submit the application"
      },
-     "clcommon__Action_Order__c": 34,
+     "clcommon__Action_Order__c": 36,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -72,5 +72,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+submitApplicationbtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_submitApplicationbtn_COMPONENT",
-     "clcommon__Release_Checksum__c": "f7dfaad39ff68c321abdfeceb2d88e6804de13fdffbf90390b5ecd7f2b27c56a"
+     "clcommon__Release_Checksum__c": "47cd69a3a2a3534c7d93080a627de319271ea65cbf31ba5ae40ad63fbb6acad2"
 }

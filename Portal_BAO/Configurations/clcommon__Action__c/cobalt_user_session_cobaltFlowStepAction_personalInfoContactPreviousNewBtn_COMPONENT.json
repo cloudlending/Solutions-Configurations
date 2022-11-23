@@ -8,11 +8,11 @@
           "name": "personalInfoContactPreviousNewBtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "Back",
+               "render": "$global.attr(pageName); == \"personalinfocontactUs\" and $global.attr(typeOfApplication); == \"new\" and false",
                "variant": "outlined",
-               "render": "$global.attr(pageName); == \"personalinfocontactUs\" and $global.attr(typeOfApplication); == \"new\" and false"
+               "label": "Back",
+               "style": "primary",
+               "position": "top-right"
           },
           "uploadActionArguments": {},
           "successHandler": {},

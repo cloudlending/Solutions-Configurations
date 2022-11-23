@@ -29,22 +29,22 @@
                          "name": "personalInfoIdentityPortalFieldSaveByApi"
                     },
                     {
-                         "condition": "$state(cobaltPersonalInformationIdentificationPanel).count(); > 0 and $global.attr(partyType); != \"PRIMARY\" and not $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);",
+                         "condition": "$state(cobaltPersonalInformationIdentificationPanel).count(); > 0 and $global.attr(partyType); != \"PRIMARY\" and not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and not $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
                          "actorName": "cobaltFlowStepAction",
                          "name": "personalInfoIdentityAddBusinessSaveByApi"
                     },
                     {
-                         "condition": "$state(cobaltPersonalInformationIdentificationPanel).count(); < 1 and $global.attr(partyType); != \"PRIMARY\" and not $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);",
+                         "condition": "$state(cobaltPersonalInformationIdentificationPanel).count(); < 1 and $global.attr(partyType); != \"PRIMARY\" and not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and not $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
                          "actorName": "cobaltFlowStepAction",
                          "name": "personalInfoIdentityPortalFieldAddBusinessSaveByApi"
                     },
                     {
-                         "condition": "$state(cobaltPersonalInformationIdentificationPanel).count(); > 0 and $global.attr(partyType); != \"PRIMARY\" and $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);",
+                         "condition": "$state(cobaltPersonalInformationIdentificationPanel).count(); > 0 and $global.attr(partyType); != \"PRIMARY\" and ($state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); or $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);)",
                          "actorName": "cobaltFlowStepAction",
                          "name": "personalInfoIdentityEmploymentAddBusinessSaveByApi"
                     },
                     {
-                         "condition": "$state(cobaltPersonalInformationIdentificationPanel).count(); < 1 and $global.attr(partyType); != \"PRIMARY\"and $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c);",
+                         "condition": "$state(cobaltPersonalInformationIdentificationPanel).count(); < 1 and $global.attr(partyType); != \"PRIMARY\"and ($state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); or $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);)",
                          "actorName": "cobaltFlowStepAction",
                          "name": "personalInfoIdentityEmploymentPortalFieldAddBusinessSaveByApi"
                     }
@@ -55,7 +55,7 @@
                "submitFailureText": "$serverMessage;"
           }
      },
-     "clcommon__Action_Order__c": 40,
+     "clcommon__Action_Order__c": 42,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -69,5 +69,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+personalIdentityDetailsSaveDecision",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltFlowStepAction_personalIdentityDetailsSaveDecision_COMPONENT",
-     "clcommon__Release_Checksum__c": "bf1c662ab629fbe865eab827b0d4b4f4c7c91b7ad8ae393d993fec433e7f1e35"
+     "clcommon__Release_Checksum__c": "4351d35bd12bf2b8de6cb75517ff207e28d7fde5dd7b6f2980d6e0a627c595a8"
 }

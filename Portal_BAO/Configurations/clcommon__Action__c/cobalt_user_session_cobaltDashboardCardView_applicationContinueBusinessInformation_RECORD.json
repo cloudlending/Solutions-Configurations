@@ -8,9 +8,9 @@
           "name": "applicationContinueBusinessInformation",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-business-info\">Continue</span>",
+               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"PersonalInformationIdentification\" and not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and not $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);) and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\"",
                "style": "primary",
-               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"PersonalInformationIdentification\" and not $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c); and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\""
+               "label": "<span class=\"li-continue-business-info\">Continue</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -112,5 +112,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardCardView+applicationContinueBusinessInformation",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardCardView_applicationContinueBusinessInformation_RECORD",
-     "clcommon__Release_Checksum__c": "67c4f5ecf0b017180417aef0d1bf596ee57a1aa4d6b080bd47748bb824df5347"
+     "clcommon__Release_Checksum__c": "fcdc9d35f98016c7f17b2fc58abc608930bfa563c146d39cacea69c12cd42851"
 }

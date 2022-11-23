@@ -8,26 +8,26 @@
           "name": "businessInfoSendPicklistCode",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "<span class=\"li-business-industry-next-with-picklist\">Next</span>",
+               "enable": "($state(cobaltGamblingPanel).attr(genesis__Application__r.oao__Not_Internet_Gambling_Related_Business__c); and $global.attr(gamblingContent);) or not $global.attr(gamblingContent);",
                "render": "$global.attr(pageName); == \"businessinfoindustrycode\" and $state(cobaltIKnowIndustryCodePanel).attr(industrycodecheckbox);==false",
-               "enable": "($state(cobaltGamblingPanel).attr(genesis__Application__r.oao__Not_Internet_Gambling_Related_Business__c); and $global.attr(gamblingContent);) or not $global.attr(gamblingContent);"
+               "label": "<span class=\"li-business-industry-next-with-picklist\">Next</span>",
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "Id": "$global.attr(appId);",
-                    "oao__Marijuana_Related_Business__c": "$state(cobaltMarijuanaAndGamblingPanel).attr(genesis__Application__r.oao__Marijuana_Related_Business__c);",
-                    "oao__CBD_Related_Business__c": "$state(cobaltMarijuanaAndGamblingPanel).attr(genesis__Application__r.oao__CBD_Related_Business__c);",
-                    "oao__Not_Internet_Gambling_Related_Business__c": "$state(cobaltGamblingPanel).attr(genesis__Application__r.oao__Not_Internet_Gambling_Related_Business__c);",
-                    "oao__Hemp_Related_Business__c": "$state(cobaltMarijuanaAndGamblingPanel).attr(genesis__Application__r.oao__Hemp_Related_Business__c);",
-                    "oao__Backup_Withholding__c": "$state(cobaltWithholdingPanel).attr(genesis__Application__r.oao__Backup_Withholding__c);"
+               "clcommon__Industry_Classification_Code__c": {
+                    "industryCode": "$state(cobaltBusinessIndustryPanel).attr(industry_code);"
                },
                "account": {
                     "id": "$global.attr(businessAccountId);"
                },
-               "clcommon__Industry_Classification_Code__c": {
-                    "industryCode": "$state(cobaltBusinessIndustryPanel).attr(industry_code);"
+               "genesis__Applications__c": {
+                    "oao__Backup_Withholding__c": "$state(cobaltWithholdingPanel).attr(genesis__Application__r.oao__Backup_Withholding__c);",
+                    "oao__Hemp_Related_Business__c": "$state(cobaltMarijuanaAndGamblingPanel).attr(genesis__Application__r.oao__Hemp_Related_Business__c);",
+                    "oao__Not_Internet_Gambling_Related_Business__c": "$state(cobaltGamblingPanel).attr(genesis__Application__r.oao__Not_Internet_Gambling_Related_Business__c);",
+                    "oao__CBD_Related_Business__c": "$state(cobaltMarijuanaAndGamblingPanel).attr(genesis__Application__r.oao__CBD_Related_Business__c);",
+                    "oao__Marijuana_Related_Business__c": "$state(cobaltMarijuanaAndGamblingPanel).attr(genesis__Application__r.oao__Marijuana_Related_Business__c);",
+                    "Id": "$global.attr(appId);"
                }
           },
           "validation": [

@@ -8,11 +8,11 @@
           "name": "goToViewButton",
           "property": {},
           "appearance": {
-               "variant": "outlined",
-               "label": "View",
-               "style": "primary",
+               "render": "$global.attr(dummy);==true",
                "position": "bottom-left",
-               "render": "$global.attr(dummy);==true"
+               "style": "primary",
+               "label": "View",
+               "variant": "outlined"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

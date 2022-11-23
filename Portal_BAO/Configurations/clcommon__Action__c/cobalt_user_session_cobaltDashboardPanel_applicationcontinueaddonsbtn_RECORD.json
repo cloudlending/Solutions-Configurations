@@ -8,9 +8,9 @@
           "name": "applicationcontinueaddonsbtn",
           "property": {},
           "appearance": {
-               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"Addons\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\"",
+               "label": "<span class=\"li-continue-document-upload\">Continue</span>",
                "style": "primary",
-               "label": "<span class=\"li-continue-document-upload\">Continue</span>"
+               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"Addons\" and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\""
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -116,5 +116,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardPanel+applicationcontinueaddonsbtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardPanel_applicationcontinueaddonsbtn_RECORD",
-     "clcommon__Release_Checksum__c": "9d5e779828649ef3de7f65cc2144daba01cce863ee68411530b6bee39c39abbd"
+     "clcommon__Release_Checksum__c": "e90e1c3ca68bc0f90e9935a19c060f2c3fcbc3d17914f9893f47c1d637b2737d"
 }

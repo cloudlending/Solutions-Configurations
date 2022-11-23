@@ -32,8 +32,16 @@
                               "field": "$this.attr(genesis__Position__c);"
                          },
                          {
-                              "value": "@mathjs{($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType);==\"PRIMARY\") ? \"ApplicationReferredToView\" : ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType); != \"PRIMARY\") ? \"DocumentUpload\" : (($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated);) or ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and not $global.attr(referredWhenComplianceViolated);) or ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" and not $global.attr(referredWhenComplianceViolated);)) and $global.attr(partyType); == \"PRIMARY\" ? \"BOCertificationPrimary\" : \"BOCertification\" };",
+                              "value": "@mathjs{($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType);==\"PRIMARY\") ? \"ApplicationReferredToView\" : (($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\") and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType); != \"PRIMARY\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);) ? \"DocumentUpload\" : ((($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated);) or ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and not $global.attr(referredWhenComplianceViolated);) or ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" and not $global.attr(referredWhenComplianceViolated);)) and $global.attr(partyType); == \"PRIMARY\") or ($global.attr(partyType); == \"PRIMARY\" and not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);) ? \"BOCertificationPrimary\" : \"BOCertification\" };",
                               "field": "$global.attr(nextPortalStage);"
+                         },
+                         {
+                              "value": "@mathjs{ not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); ? \"\" : $this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c);};",
+                              "field": "$this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c);"
+                         },
+                         {
+                              "value": "@mathjs{ not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); ? \"\" : $this.attr(genesis__Contact__r.clcommon__Country_of_Citizenship__c);};",
+                              "field": "$this.attr(genesis__Contact__r.clcommon__Country_of_Citizenship__c);"
                          }
                     ]
                },
@@ -45,7 +53,7 @@
                                    "field": "$global.attr(enableCitizenContent);"
                               },
                               {
-                                   "value": "@mathjs{($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType);==\"PRIMARY\") ? \"ApplicationReferredToView\" : ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType); != \"PRIMARY\") ? \"DocumentUpload\" : (($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated);) or ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and not $global.attr(referredWhenComplianceViolated);) or ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" and not $global.attr(referredWhenComplianceViolated);)) and $global.attr(partyType); == \"PRIMARY\" ? \"BOCertificationPrimary\" : \"BOCertification\" };",
+                                   "value": "@mathjs{($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType);==\"PRIMARY\") ? \"ApplicationReferredToView\" : (($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\") and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType); != \"PRIMARY\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);) ? \"DocumentUpload\" : ((($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated);) or ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and not $global.attr(referredWhenComplianceViolated);) or ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" and not $global.attr(referredWhenComplianceViolated);)) and $global.attr(partyType); == \"PRIMARY\") or ($global.attr(partyType); == \"PRIMARY\" and not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);) ? \"BOCertificationPrimary\" : \"BOCertification\" };",
                                    "field": "$global.attr(nextPortalStage);"
                               },
                               {
@@ -72,7 +80,12 @@
           "componentActions": [],
           "appearance": {
                "renderFields": {
-                    "genesis__Contact__r.clcommon__Country_of_Citizenship__c": "$this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"Resident Alien\" or $this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"Non-Resident Alien\"",
+                    "genesis__Phone__c": "$state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
+                    "genesis__Position__c": "$state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
+                    "genesis__Name_of_employer__c": "$state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
+                    "oao__Employer_is_different__c": "$state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
+                    "genesis__Contact__r.clcommon__Country_of_Citizenship__c": "$this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"Resident Alien\" or $this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"Non-Resident Alien\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);",
+                    "genesis__Contact__r.clcommon__Citizenship_Status__c": "$state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);",
                     "genesis__Contact__r.Id": false,
                     "Id": false
                },
@@ -85,7 +98,7 @@
                     "genesis__Position__c": "$this.attr(oao__Employer_is_different__c);",
                     "genesis__Name_of_employer__c": "$this.attr(oao__Employer_is_different__c);"
                },
-               "title": "<span tabIndex = \"0\" role = \"header\" >Please enter your Citizenship Status and Employment information below:</span>",
+               "title": "<span tabIndex = \"0\" role = \"header\" >$global.attr(citizenship_employment_subtitle);</span>",
                "editable": true,
                "fieldColumns": 1
           },
@@ -98,5 +111,5 @@
      },
      "clcommon__Actor_Name__c": "cobaltEmploymentInformation",
      "clcommon__External_ID__c": "cobalt_user_session_cobaltEmploymentInformation",
-     "clcommon__Release_Checksum__c": "7129caebff8e9f1020998651bf74e6c7f9cc7c56801507023f67e83440d5a4f5"
+     "clcommon__Release_Checksum__c": "f26675be35df9a5ddde0bb077fd968d8ab4e60de1e04fe803e0537fd19f15e90"
 }

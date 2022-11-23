@@ -8,11 +8,11 @@
           "name": "citizenEmploymentPreviousBtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "<span class=\"li-citizen-employment-info-back-to-personal-identity\">Back</span>",
+               "render": "$global.attr(pageName); == \"citizenshipEmployment\"",
                "variant": "outlined",
-               "render": "$global.attr(pageName); == \"citizenshipEmployment\""
+               "label": "<span class=\"li-citizen-employment-info-back-to-personal-identity\">Back</span>",
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "remoteActionProcess": {

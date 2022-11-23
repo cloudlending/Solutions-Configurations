@@ -8,9 +8,9 @@
           "name": "applicationContinuePersonalInformation",
           "property": {},
           "appearance": {
-               "label": "<span class=\"li-continue-employment-info\">Continue</span>",
+               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"PersonalInformationIdentification\" and ($state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); or $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);) and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\" and $this.attr(genesis__Application__r.genesis__Status__c); != \"AUTO - CLOSED\"",
                "style": "primary",
-               "render": "$this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"PersonalInformationIdentification\" and $state(cobaltCustomSettingsPanel).attr(oao__Citizenship_Employment_Information__c); and $this.attr(clcommon__Type__r.Name); == \"PRIMARY\" and $this.attr(oao__Submit_Application_Check__c); == false and $this.attr(genesis__Application__r.genesis__Status__c); != \"DECLINED\""
+               "label": "<span class=\"li-continue-employment-info\">Continue</span>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -36,6 +36,10 @@
                          "value": "next"
                     },
                     {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "$global.attr(Citizenship_Employment_title);"
+                    },
+                    {
                          "field": "$nav(cobaltMainSteps).appearance(current);",
                          "value": "citizenshipEmployment"
                     },
@@ -46,10 +50,6 @@
                     {
                          "field": "$global.attr(businessAccountId);",
                          "value": "$this.attr(genesis__Application__r.genesis__Account__r.Id);"
-                    },
-                    {
-                         "field": "$global.attr(stepTitle);",
-                         "value": "Citizenship & Employment"
                     },
                     {
                          "field": "$global.attr(pageName);",
@@ -112,5 +112,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltDashboardPanel+applicationContinuePersonalInformation",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session_cobaltDashboardPanel_applicationContinuePersonalInformation_RECORD",
-     "clcommon__Release_Checksum__c": "8197de7ace06f8fa87819eb120932b46127e0d2cec7da1f8e3d24e5446fdf62e"
+     "clcommon__Release_Checksum__c": "c7a7523fc4f75a11764734fd58448e5f358354fbdfe8586f955032aa86f28049"
 }

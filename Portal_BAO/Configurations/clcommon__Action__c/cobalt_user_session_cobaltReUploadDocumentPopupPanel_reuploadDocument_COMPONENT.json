@@ -7,21 +7,21 @@
      "clcommon__Action_Definition__c": {
           "name": "reuploadDocument",
           "property": {
-               "accept": "image/*,.pdf,.doc,.docx",
-               "maxSize": 5000000,
+               "uploadType": "document",
                "multiple": false,
-               "uploadType": "document"
+               "maxSize": 5000000,
+               "accept": "image/*,.pdf,.doc,.docx"
           },
           "appearance": {
-               "label": "Yes",
+               "style": "primary",
                "position": "bottom-right",
-               "style": "primary"
+               "label": "Yes"
           },
           "remoteActionArguments": {
-               "actionType": "linkAttachment",
-               "attachmentIds": "$uploadedAttachmentId;",
+               "isDeleted": false,
                "documentCategoryId": "$global.attr(docCatId);",
-               "isDeleted": false
+               "attachmentIds": "$uploadedAttachmentId;",
+               "actionType": "linkAttachment"
           },
           "uploadActionArguments": {
                "attachmentParentId": "$global.attr(docCatId);"
@@ -39,9 +39,9 @@
           "handler": {},
           "disclosureNames": [],
           "messages": {
-               "uploadFailureText": "Fail to upload, please login and try again",
+               "uploadInvalidFileType": "The supported file type are image/*,.pdf,.doc,.docx",
                "uploadFileTooLargeError": "Upload failed, cannot upload file size greater than 5mb",
-               "uploadInvalidFileType": "The supported file type are image/*,.pdf,.doc,.docx"
+               "uploadFailureText": "Fail to upload, please login and try again"
           }
      },
      "clcommon__Action_Order__c": 1,

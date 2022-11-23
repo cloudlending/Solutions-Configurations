@@ -8,35 +8,35 @@
           "name": "personalInfoContactSaveOtherAddressBtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
+               "render": false,
                "label": "Next",
-               "render": false
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "oao__Portal_Stage__c": "PersonalInformationContactInfo",
-                    "Id": "$global.attr(appId);"
-               },
                "contact": {
-                    "id": "$state(cobaltPersonalInformationContactUsNamePanel).attr(Id);",
-                    "Account.Phone": "$state(cobaltPersonalInformationContactUsNamePanel).attr(MobilePhone);",
-                    "Account.clcommon__Email__c": "$state(cobaltPersonalInformationContactUsNamePanel).attr(Email);",
-                    "lastName": "$state(cobaltPersonalInformationContactUsNamePanel).attr(LastName);",
-                    "firstName": "$state(cobaltPersonalInformationContactUsNamePanel).attr(FirstName);",
-                    "MiddleName": "$state(cobaltPersonalInformationContactUsNamePanel).attr(MiddleName);",
-                    "OtherStreet": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStreet);",
-                    "oao__Other_Address_Second_Line__c": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(oao__Other_Address_Second_Line__c);",
-                    "OtherCity": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCity);",
-                    "OtherStateCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStateCode);",
-                    "OtherPostalCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherPostalCode);",
-                    "MailingStreet": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStreet);",
-                    "MailingCountryCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCountryCode);",
-                    "OtherCountryCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCountryCode);",
-                    "oao__Mailing_Address_Second_Line__c": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(oao__Other_Address_Second_Line__c);",
-                    "MailingCity": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCity);",
+                    "MailingPostalCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherPostalCode);",
                     "MailingStateCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStateCode);",
-                    "MailingPostalCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherPostalCode);"
+                    "MailingCity": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCity);",
+                    "oao__Mailing_Address_Second_Line__c": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(oao__Other_Address_Second_Line__c);",
+                    "OtherCountryCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCountryCode);",
+                    "MailingCountryCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCountryCode);",
+                    "MailingStreet": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStreet);",
+                    "OtherPostalCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherPostalCode);",
+                    "OtherStateCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStateCode);",
+                    "OtherCity": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCity);",
+                    "oao__Other_Address_Second_Line__c": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(oao__Other_Address_Second_Line__c);",
+                    "OtherStreet": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStreet);",
+                    "MiddleName": "$state(cobaltPersonalInformationContactUsNamePanel).attr(MiddleName);",
+                    "firstName": "$state(cobaltPersonalInformationContactUsNamePanel).attr(FirstName);",
+                    "lastName": "$state(cobaltPersonalInformationContactUsNamePanel).attr(LastName);",
+                    "Account.clcommon__Email__c": "$state(cobaltPersonalInformationContactUsNamePanel).attr(Email);",
+                    "Account.Phone": "$state(cobaltPersonalInformationContactUsNamePanel).attr(MobilePhone);",
+                    "id": "$state(cobaltPersonalInformationContactUsNamePanel).attr(Id);"
+               },
+               "genesis__Applications__c": {
+                    "Id": "$global.attr(appId);",
+                    "oao__Portal_Stage__c": "PersonalInformationContactInfo"
                }
           },
           "uploadActionArguments": {},

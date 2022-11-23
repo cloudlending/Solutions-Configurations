@@ -8,10 +8,10 @@
           "name": "businessInfodetailsSaveDecisionNextBtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
+               "render": "$global.attr(pageName); == \"businessinfodetails\"",
                "label": "<span class=\"li-business-info-next\">Next</span>",
-               "render": "$global.attr(pageName); == \"businessinfodetails\""
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionProcess": {
                "post": "$ext.dynamicStepper"

@@ -7,22 +7,22 @@
      "clcommon__Action_Definition__c": {
           "name": "documentsUploadbtn",
           "property": {
-               "accept": "image/*,.pdf,.doc,.docx",
-               "maxSize": 5000000,
+               "uploadType": "document",
                "multiple": false,
-               "uploadType": "document"
+               "maxSize": 5000000,
+               "accept": "image/*,.pdf,.doc,.docx"
           },
           "appearance": {
-               "label": "cloud_upload",
-               "render": "$this.attr(clcommon__Status__c); == \"OPEN\" or $this.attr(clcommon__Status__c); == \"REJECTED\"",
+               "variant": "outlined",
                "style": "iconic",
-               "variant": "outlined"
+               "render": "$this.attr(clcommon__Status__c); == \"OPEN\" or $this.attr(clcommon__Status__c); == \"REJECTED\"",
+               "label": "cloud_upload"
           },
           "remoteActionArguments": {
-               "actionType": "linkAttachment",
-               "attachmentIds": "$uploadedAttachmentId;",
+               "isDeleted": false,
                "documentCategoryId": "$this.attr(id);",
-               "isDeleted": false
+               "attachmentIds": "$uploadedAttachmentId;",
+               "actionType": "linkAttachment"
           },
           "uploadActionArguments": {
                "attachmentParentId": "$this.attr(id);"
@@ -61,9 +61,9 @@
           },
           "disclosureNames": [],
           "messages": {
-               "uploadFailureText": "Fail to upload, please login and try again",
+               "uploadInvalidFileType": "The supported file type are image/*,.pdf,.doc,.docx",
                "uploadFileTooLargeError": "Upload failed, cannot upload file size greater than 5mb",
-               "uploadInvalidFileType": "The supported file type are image/*,.pdf,.doc,.docx"
+               "uploadFailureText": "Fail to upload, please login and try again"
           },
           "ariaLabel": "Click here to upload the document"
      },

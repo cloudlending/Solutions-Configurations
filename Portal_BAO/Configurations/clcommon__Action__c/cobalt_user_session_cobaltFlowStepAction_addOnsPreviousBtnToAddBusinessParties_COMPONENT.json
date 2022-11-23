@@ -8,11 +8,11 @@
           "name": "addOnsPreviousBtnToAddBusinessParties",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "<span class=\"li-addons-back-to-add-parties\">Back</span>",
+               "render": "$global.attr(pageName); == \"addons\" and $global.attr(BOCount);==0",
                "variant": "outlined",
-               "render": "$global.attr(pageName); == \"addons\" and $global.attr(BOCount);==0"
+               "label": "<span class=\"li-addons-back-to-add-parties\">Back</span>",
+               "style": "primary",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "remoteActionProcess": {

@@ -8,9 +8,9 @@
           "name": "dummyProductNotAllowed",
           "property": {},
           "appearance": {
-               "style": "primary",
+               "render": "$global.attr(dummyShow); == \"true\"",
                "label": "Product Popup",
-               "render": "$global.attr(dummyShow); == \"true\""
+               "style": "primary"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

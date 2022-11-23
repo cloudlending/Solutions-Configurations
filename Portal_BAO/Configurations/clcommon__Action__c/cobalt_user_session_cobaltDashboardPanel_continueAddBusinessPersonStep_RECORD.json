@@ -8,14 +8,14 @@
           "name": "continueAddBusinessPersonStep",
           "property": {},
           "appearance": {
-               "render": "$global.attr(accountActivity);==false and $this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"BusinessInformationIndustryCode\"",
+               "style": "primary",
                "label": "<span class=\"li-continue-business-person-page-btn\">Continue</span>",
-               "style": "primary"
+               "render": "$global.attr(accountActivity);==false and $this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"BusinessInformationIndustryCode\""
           },
           "remoteActionArguments": {
                "genesis__Applications__c": {
-                    "Id": "$this.attr(genesis__Application__r.Id);",
-                    "oao__Portal_Stage__c": "AccountActivity"
+                    "oao__Portal_Stage__c": "AccountActivity",
+                    "Id": "$this.attr(genesis__Application__r.Id);"
                }
           },
           "validation": [],
