@@ -14,6 +14,14 @@
           },
           "generalHandlers": {
                "fieldChange": {
+                    "ineligibleConsent": {
+                         "assignments": [
+                              {
+                                   "value": "$this.attr(ineligibleConsent);",
+                                   "field": "$global.attr(ineligibleConsent);"
+                              }
+                         ]
+                    },
                     "electronicConsent": {
                          "actions": [
                               {
@@ -63,7 +71,7 @@
           "componentActions": [],
           "appearance": {
                "editableFields": {
-                    "electronicConsent": "$this.attr(businessAccountName);!=\"\" and $this.attr(businessAccountName);!=undefined and $this.attr(firstName);!=\"\" and $this.attr(firstName);!=undefined and $this.attr(lastName);!=\"\" and $this.attr(lastName);!=undefined and $this.attr(emailAddress);!=\"\" and $this.attr(emailAddress);!=undefined and $this.attr(mobilePhone);!=\"\" and $this.attr(mobilePhone);!=undefined and $this.attr(signerConsent);==true and $this.attr(ineligibleConsent);==true and $this.attr(myInformationConcent);==true"
+                    "electronicConsent": "($this.attr(businessAccountName);!=\"\" and $this.attr(businessAccountName);!=undefined and $this.attr(firstName);!=\"\" and $this.attr(firstName);!=undefined and $this.attr(lastName);!=\"\" and $this.attr(lastName);!=undefined and $this.attr(emailAddress);!=\"\" and $this.attr(emailAddress);!=undefined and $this.attr(mobilePhone);!=\"\" and $this.attr(mobilePhone);!=undefined and $this.attr(signerConsent);==true and $global.attr(ineligibleConsent);==true and $this.attr(myInformationConcent);==true) or ($this.attr(businessAccountName);!=\"\" and $this.attr(businessAccountName);!=undefined and $this.attr(firstName);!=\"\" and $this.attr(firstName);!=undefined and $this.attr(lastName);!=\"\" and $this.attr(lastName);!=undefined and $this.attr(emailAddress);!=\"\" and $this.attr(emailAddress);!=undefined and $this.attr(mobilePhone);!=\"\" and $this.attr(mobilePhone);!=undefined and $this.attr(signerConsent);==true and $global.attr(ineligibleConsent);!=true and $this.attr(myInformationConcent);==true)"
                },
                "renderFields": {
                     "ineligibleConsent": "$global.attr(eligibleContent);==true"
@@ -90,5 +98,5 @@
      },
      "clcommon__Actor_Name__c": "cobaltEmailAndIdentityLOFormPanel",
      "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltEmailAndIdentityLOFormPanel",
-     "clcommon__Release_Checksum__c": "88273ad68ecc6464aaa89ae2c0d4469055fa19585a76e04f99a71ee0cb98cb95"
+     "clcommon__Release_Checksum__c": "1fe3e038203a6c261f8455981c0a9eaaf62b2f61fc18a8bc935be940bacce801"
 }

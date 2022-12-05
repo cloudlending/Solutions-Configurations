@@ -39,7 +39,15 @@
                                    "messages": {
                                         "requiredErrorText": "Percentage Ownership is required",
                                         "regexErrorText": "Enter value between 25 and 100 and must be of format XX.XX or XX.X or 100"
-                                   }
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        }
+                                   },
+                                   "ariaLabel": "Current Value"
                               }
                          }
                     ]
@@ -47,5 +55,5 @@
           ]
      },
      "clcommon__External_ID__c": "cobalt_party_summary_query",
-     "clcommon__Release_Checksum__c": "f760f63c39207fc64cb58f5455ddfc3684d7ae9d7d94fa2b9b2e826aa9697f22"
+     "clcommon__Release_Checksum__c": "1a34263249e2b0a896eb2dab07105a70e1df003bfeef12b3b65486169cc0064e"
 }

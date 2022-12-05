@@ -8,11 +8,11 @@
           "name": "subProductBackBtn",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "variant": "outlined",
-               "label": "<span class=\"lo-product-details-back\">Back</span>",
+               "render": "$global.attr(currentStep);==\"productDetails\"",
                "style": "primary",
-               "render": "$global.attr(currentStep);==\"productDetails\""
+               "label": "<span class=\"lo-product-details-back\">Back</span>",
+               "variant": "outlined",
+               "position": "top-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

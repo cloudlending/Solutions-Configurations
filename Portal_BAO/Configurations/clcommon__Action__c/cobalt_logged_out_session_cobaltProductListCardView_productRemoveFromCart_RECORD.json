@@ -8,14 +8,14 @@
           "name": "productRemoveFromCart",
           "property": {},
           "appearance": {
-               "style": "primary",
+               "render": "$this.attr(oao__IsSelected__c);==true and $this.attr(oao__Required__c);==false",
                "label": "<span class=\"lo-remove-from-cart\">Remove from cart</span>",
-               "render": "$this.attr(oao__IsSelected__c);==true and $this.attr(oao__Required__c);==false"
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);",
+               "productName": "$this.attr(oao__Product_Name__c);",
                "productId": "$this.attr(oao__Product_Id__c);",
-               "productName": "$this.attr(oao__Product_Name__c);"
+               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);"
           },
           "uploadActionArguments": {},
           "successHandler": {

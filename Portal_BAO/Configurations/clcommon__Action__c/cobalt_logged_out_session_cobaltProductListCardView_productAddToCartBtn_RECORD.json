@@ -8,16 +8,16 @@
           "name": "productAddToCartBtn",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "<span class=\"lo-add-to-cart\">Add to cart</span>",
+               "render": "$this.attr(oao__IsSelected__c);==false",
                "variant": "outlined",
-               "render": "$this.attr(oao__IsSelected__c);==false"
+               "label": "<span class=\"lo-add-to-cart\">Add to cart</span>",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "term": "$this.attr(oao__Product_Term__c);",
-               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);",
+               "productName": "$this.attr(oao__Title__c);",
                "productId": "$this.attr(oao__Product_Id__c);",
-               "productName": "$this.attr(oao__Title__c);"
+               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);",
+               "term": "$this.attr(oao__Product_Term__c);"
           },
           "uploadActionArguments": {},
           "successHandler": {

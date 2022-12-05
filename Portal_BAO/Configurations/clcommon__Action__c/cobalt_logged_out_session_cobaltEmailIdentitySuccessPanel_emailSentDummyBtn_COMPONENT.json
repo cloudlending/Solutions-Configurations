@@ -8,11 +8,11 @@
           "name": "emailSentDummyBtn",
           "property": {},
           "appearance": {
-               "position": "bottom-right",
-               "variant": "outlined",
-               "label": "Dummy Sent",
+               "render": "$global.attr(dummyShow);==\"true\"",
                "style": "primary",
-               "render": "$global.attr(dummyShow);==\"true\""
+               "label": "Dummy Sent",
+               "variant": "outlined",
+               "position": "bottom-right"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

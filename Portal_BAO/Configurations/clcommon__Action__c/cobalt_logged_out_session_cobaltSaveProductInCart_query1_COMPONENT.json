@@ -8,14 +8,14 @@
           "name": "query1",
           "property": {},
           "appearance": {
-               "label": "SaveProductInCartApi",
+               "position": "top-right",
                "style": "normal",
-               "position": "top-right"
+               "label": "SaveProductInCartApi"
           },
           "remoteActionArguments": {
-               "productName": "Secure Checking",
+               "productId": "$global.attr(productId);",
                "sessionId": "$state(cobaltSessionStorage).attr(sessionid);",
-               "productId": "$global.attr(productId);"
+               "productName": "Secure Checking"
           },
           "uploadActionArguments": {},
           "successHandler": {},

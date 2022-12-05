@@ -9,6 +9,9 @@
           "clcommon__External_ID__c": "cobalt_user_session"
      },
      "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
           "generalHandlers": {
                "fieldChange": {
                     "oao__Percentage_Ownership__c": {
@@ -42,6 +45,11 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
                "render": "$global.attr(pageName); == \"partiessummary\"",
                "renderFields": {
                     "Id": false
@@ -64,5 +72,5 @@
      },
      "clcommon__Actor_Name__c": "cobaltPartiesSummaryListView",
      "clcommon__External_ID__c": "cobalt_user_session_cobaltPartiesSummaryListView",
-     "clcommon__Release_Checksum__c": "6f400235b9e08b959e4055e35c5eb0ac461cd45850962ef9d9b254481dde3208"
+     "clcommon__Release_Checksum__c": "a4485f6b160e89c81a1f09a399521c488e321faf6cd5cd624b076005aa7d93dc"
 }
