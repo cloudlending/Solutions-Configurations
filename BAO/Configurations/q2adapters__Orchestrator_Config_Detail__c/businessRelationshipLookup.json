@@ -1,0 +1,32 @@
+{
+     "attributes": {
+          "type": "q2adapters__Orchestrator_Config_Detail__c"
+     },
+     "Name": "businessRelationshipLookup",
+     "q2adapters__Continue_on_failure__c": false,
+     "q2adapters__Execution_Priority__c": 1,
+     "q2adapters__Integration_API_Type__r": {
+          "attributes": {
+               "type": "intframework__Integration_API_Type__c"
+          },
+          "intframework__External_Id__c": "Relationship_Lookup_Request"
+     },
+     "q2adapters__Integration_Family__r": {
+          "attributes": {
+               "type": "intframework__Integration_Family__c"
+          },
+          "intframework__External_Id__c": "Coresmen"
+     },
+     "q2adapters__Is_Self_Config__c": true,
+     "q2adapters__Object_API_Name__c": "clcommon__Party__c",
+     "q2adapters__Orchestrator__r": {
+          "attributes": {
+               "type": "q2adapters__Orchestrator__c"
+          },
+          "q2adapters__External_Id__c": "BAO_CUFX_Workflow"
+     },
+     "q2adapters__Rule_Names__c": "Does Relationship Exists",
+     "q2adapters__Runner_Class_Name__c": "oao.PartyRelationshipAdapterRunner",
+     "q2adapters__External_Id__c": "businessRelationshipLookup",
+     "q2adapters__Release_Checksum__c": "2eb33a4389bfc1de06d0c6f20c99ae54d99c1b141670154be62ae5e38f08ba35"
+}
