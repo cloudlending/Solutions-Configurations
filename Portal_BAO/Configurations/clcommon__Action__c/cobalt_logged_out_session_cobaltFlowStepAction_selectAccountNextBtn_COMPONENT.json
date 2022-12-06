@@ -8,11 +8,11 @@
           "name": "selectAccountNextBtn",
           "property": {},
           "appearance": {
-               "render": "$global.attr(currentStep);==\"openAccount\"",
-               "position": "top-right",
-               "style": "primary",
+               "enable": "$state(cobaltCartView).count();>0 ",
                "label": "<span class=\"lo-open-accounts-next\">Next</span>",
-               "enable": "$state(cobaltCartView).count();>0 "
+               "style": "primary",
+               "position": "top-right",
+               "render": "$global.attr(currentStep);==\"openAccount\""
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
@@ -50,7 +50,7 @@
           "messages": {},
           "ariaLabel": "Click here to go to the Email and Identity page"
      },
-     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Order__c": 5,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -64,5 +64,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+selectAccountNextBtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_logged_out_session_cobaltFlowStepAction_selectAccountNextBtn_COMPONENT",
-     "clcommon__Release_Checksum__c": "a51859ce7d643528abf760aa980f1574270ddf8a9df82abe2dc4b82626b3b757"
+     "clcommon__Release_Checksum__c": "74275616eecd58c4533ef9d7d5ac79e75ffb2b9ce9a7d1f1e4fa007b396de85e"
 }

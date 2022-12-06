@@ -17,13 +17,18 @@
           "remoteActionArguments": {
                "useMyInfo": "$state(cobaltEmailAndIdentityFormPanel).attr(myInformationConcent);",
                "overdraftOption": true,
+               "billingStateCode": "$this.attr(BillingStateCode);",
+               "billingCity": "$this.attr(BillingCity);",
+               "billingCountryCode": "$this.attr(BillingCountryCode);",
                "newBusinessCheck": "$state(cobaltEmailAndIdentityFormPanel).attr(newBusinessCheck);",
                "disclosureConsent": "$state(cobaltEmailAndIdentityFormPanel).attr(electronicConsent);",
                "signerConsent": "$state(cobaltEmailAndIdentityFormPanel).attr(signerConsent);",
                "sessionId": "$global.attr(sessionid);",
+               "billingPostalCode": "$this.attr(BillingPostalCode);",
                "businessAccountName": "$state(cobaltEmailAndIdentityFormPanel).attr(businessAccountName);",
                "isBeneficialOwner": "$state(cobaltEmailAndIdentityFormPanel).attr(beneficialOwner);",
-               "inEligible": false
+               "inEligible": false,
+               "billingStreet": "$this.attr(BillingStreet);"
           },
           "validation": [
                "cobaltEmailAndIdentityFormPanel"
@@ -75,6 +80,12 @@
                          "field": "$global.attr(partyId);",
                          "value": "$result.attr(principalParty);"
                     }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "cobaltZipAndStateInfo"
+                    }
                ]
           },
           "failureHandler": {},
@@ -100,5 +111,5 @@
      "clcommon__Unique_Action_Name__c": "cobaltZipAndStateInfo+emailAndIdentitiesNextBtn",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "cobalt_user_session+cobaltZipAndStateInfo+emailAndIdentitiesNextBtn+COMPONENT",
-     "clcommon__Release_Checksum__c": "6021fa471cf8774d113c6971332863fd2701fc05c4824ca90669b377c0993cb2"
+     "clcommon__Release_Checksum__c": "1e4c29946ee62f582cad68f96649f8148f05cc0a57fbed1a083aacd6c37d3295"
 }
