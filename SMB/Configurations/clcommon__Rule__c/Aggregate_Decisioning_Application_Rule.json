@@ -9,6 +9,7 @@
      "clcommon__Object_Type__c": "genesis__Applications__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
+     "clcommon__Release_Checksum__c": "a52228646900733139c72d352f27784d00c186b6dbce5c3ecf626e6c8b7963db",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
           "successMessage": "Rule Evaluation Passed for rule : Aggregate Decisioning Application Rule",
@@ -23,7 +24,7 @@
           "failureMessage": "Rule Evaluation Failed for rule : Aggregate Decisioning Application Rule",
           "failureActions": [],
           "executeActions": null,
-          "evaluationExpression": "$1&&$2&&$3&&($4||($5&&$6))",
+          "evaluationExpression": "$1&&$2&&$3&&($4||($5&&$6))&&$7",
           "enabled": null,
           "criteria": [
                {
@@ -115,6 +116,21 @@
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$7",
+                    "relatedObject": "genesis__Applications__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "APPROVED",
+                    "matchingType": "==",
+                    "fieldType": "PICKLIST",
+                    "fieldName": "Manual Approval Status",
+                    "fieldAPIName": "solcommon__manual_approval_status__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
                }
           ],
           "category": "Aggregate Decisioning Rules",
@@ -127,8 +143,8 @@
           },
           "clcommon__External_ID__c": "Aggregate_Decisioning_Rules"
      },
+     "genesis__Department_Members__r": null,
      "solcommon__CL_Product__r": null,
      "solcommon__Release_Checksum__c": null,
-     "solcommon__Type__c": null,
-     "clcommon__Release_Checksum__c": "1fb03e3d1ff4b4abb678ff4d08e771f15a3470958b6c7a6bf093f5da5bc51b3d"
+     "solcommon__Type__c": null
 }

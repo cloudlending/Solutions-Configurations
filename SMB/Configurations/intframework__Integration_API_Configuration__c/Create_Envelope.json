@@ -1,0 +1,226 @@
+{
+     "attributes": {
+          "type": "intframework__Integration_API_Configuration__c"
+     },
+     "Name": "Create Envelope",
+     "intframework__API_Endpoint__c": "restapi/v2.1/accounts/f274f57f-6aa9-469a-9adf-dae1e378f09c/envelopes",
+     "intframework__API_Named_Credential__c": "Docusign",
+     "intframework__Adapter_Class_Name__c": "intadapter.DocusignEnvelopeAdapter",
+     "intframework__Additional_Header_Parameters__c": {
+          "X-DocuSign-Authentication": "{\"Username\":\"{!$Credential.UserName}\",\"Password\":\"{!$Credential.Password}\",\"IntegratorKey\":\"54fd08af-c4d6-4ff8-9db2-a1d0b7ec7ed2\"}"
+     },
+     "intframework__Data_Format_Config_Set__r": null,
+     "intframework__Execution_Priority__c": 1,
+     "intframework__External_Id__c": "Create_Envelope",
+     "intframework__File_Extension__c": null,
+     "intframework__File_Name_Prefix__c": null,
+     "intframework__Generate_File__c": false,
+     "intframework__HTTP_Content_Type__c": "application/json",
+     "intframework__HTTP_Method__c": "POST",
+     "intframework__Integration_API_Type__r": {
+          "attributes": {
+               "type": "intframework__Integration_API_Type__c"
+          },
+          "intframework__External_Id__c": "Create_Envelope"
+     },
+     "intframework__Integration_Configuration__r": {
+          "attributes": {
+               "type": "intframework__Integration_Configuration__c"
+          },
+          "intframework__External_Id__c": "Docusign"
+     },
+     "intframework__Integration_Family__r": {
+          "attributes": {
+               "type": "intframework__Integration_Family__c"
+          },
+          "intframework__External_Id__c": "E_Sign"
+     },
+     "intframework__Integration_Provider__r": {
+          "attributes": {
+               "type": "intframework__Integration_Provider__c"
+          },
+          "intframework__External_Id__c": "E_Sign_Docusign"
+     },
+     "intframework__Log_Filter__c": null,
+     "intframework__Log_Request_Response__c": false,
+     "intframework__Long_Running_Operation__c": true,
+     "intframework__Number_Of_Retries__c": 1,
+     "intframework__Release_Checksum__c": "df03b2b63a6034a47c98f2be202f2fae1c92bba56a0a17bc860f1f67ed0387fd",
+     "intframework__Request_Mapping__c": {
+          "thirdPartySystem": {
+               "name": "E sign Docusign Integration",
+               "dynamicDataParameters": [
+                    {
+                         "externalField": "DSFSSourceObjectId"
+                    }
+               ],
+               "filters": [
+                    {
+                         "objectAPI": "intdm__Template_Informations__c",
+                         "objectAlias": "TemplateInformations",
+                         "fields": [
+                              {
+                                   "externalField": "Body",
+                                   "fieldAPI": "intdm__Email_Body__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "Subject",
+                                   "fieldAPI": "intdm__Email_Subject__c",
+                                   "isUrlParameter": "false"
+                              }
+                         ],
+                         "whereClause": "intdm__Type__c = 'Closing'"
+                    },
+                    {
+                         "objectAPI": "intdm__Recipient_Information__c",
+                         "objectAlias": "Recipient_Informations",
+                         "fields": [
+                              {
+                                   "externalField": "Email",
+                                   "fieldAPI": "intdm__Email__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "Name",
+                                   "fieldAPI": "Name",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "SignerId",
+                                   "fieldAPI": "intdm__Signer_Id__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "Id",
+                                   "fieldAPI": "Id",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "Role_Name",
+                                   "fieldAPI": "intdm__Role_Name__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "Routing_Order",
+                                   "fieldAPI": "intdm__Routing_Order__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "Require_Id_Lookup",
+                                   "fieldAPI": "intdm__Require_ID_Lookup__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "SourceObjectId",
+                                   "fieldAPI": "intdm__Source_Object_Id__c",
+                                   "isUrlParameter": "false"
+                              }
+                         ],
+                         "whereClause": "intdm__Source_Object_Id__c = :applicationId AND intdm__Archived__c = false"
+                    },
+                    {
+                         "objectAPI": "intdm__Tab_Information__c",
+                         "objectAlias": "Tab_Informations",
+                         "fields": [
+                              {
+                                   "externalField": "Type",
+                                   "fieldAPI": "intdm__Type__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "TabOrder",
+                                   "fieldAPI": "intdm__Order__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "PageNumber",
+                                   "fieldAPI": "intdm__Page_Number__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "yPosition",
+                                   "fieldAPI": "intdm__yPosition__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "xPosition",
+                                   "fieldAPI": "intdm__xPosition__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "AnchorString",
+                                   "fieldAPI": "intdm__Anchor_String__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "DocumentId",
+                                   "fieldAPI": "intdm__DocumentId__c",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "Id",
+                                   "fieldAPI": "Id",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "Recipient_Id",
+                                   "fieldAPI": "intdm__Recipient_Information__r.Id",
+                                   "isUrlParameter": "false"
+                              },
+                              {
+                                   "externalField": "AttachmentId",
+                                   "fieldAPI": "intdm__AttachmentId__c",
+                                   "isUrlParameter": "false"
+                              }
+                         ],
+                         "whereClause": "intdm__Source_Object_Id__c = :applicationId AND intdm__Archived__c = false"
+                    }
+               ],
+               "staticParameters": [
+                    {
+                         "externalField": "EmailSubject",
+                         "value": "DocuSign API - Signature Request on Document Call"
+                    },
+                    {
+                         "externalField": "Status",
+                         "value": "sent"
+                    },
+                    {
+                         "externalField": "anchorYOffset",
+                         "value": 0
+                    },
+                    {
+                         "externalField": "anchorXOffset",
+                         "value": 1
+                    },
+                    {
+                         "externalField": "anchorIgnoreIfNotPresent",
+                         "value": false
+                    },
+                    {
+                         "externalField": "anchorUnits",
+                         "value": "inches"
+                    },
+                    {
+                         "externalField": "EmailBlurb",
+                         "value": "<span style=font - size: 11 pt;><span><span style=font - family: Calibri,sans - serif;><span style=font - size: 10.0 pt;><span><span>Please click the link above to view document and complete the eSignature.<br><br><br>Sincerely, <br>Q2 CLS<span><span><span><span><span><span>"
+                    }
+               ]
+          }
+     },
+     "intframework__Request_Timeout__c": 20000,
+     "intframework__Response_Mapping__c": {
+          "StorageConfiguration": {
+               "StoreInDB": "True",
+               "PublishAsJSON": "True"
+          }
+     },
+     "intframework__Retry_On_Failure__c": false,
+     "intframework__Send_File__c": false,
+     "intframework__UI_Page_Name__c": "ESignHome",
+     "intframework__UI_Page_Type__c": "SKUID",
+     "intframework__Use_New_Logging_Mechanism__c": false,
+     "intframework__Use_Response_Mocker__c": false,
+     "solcommon__Release_Checksum__c": null
+}

@@ -1,0 +1,96 @@
+{
+     "attributes": {
+          "type": "intframework__Integration_API_Configuration__c"
+     },
+     "Name": "CSI Compliance Select Documents Config",
+     "intframework__API_Endpoint__c": null,
+     "intframework__API_Named_Credential__c": "CSI_Compliance",
+     "intframework__Adapter_Class_Name__c": "q2adapters.CSISelectDocumentsAdapter",
+     "intframework__Additional_Header_Parameters__c": {
+          "content-type": "text/xml"
+     },
+     "intframework__Data_Format_Config_Set__r": null,
+     "intframework__Execution_Priority__c": 1,
+     "intframework__External_Id__c": "CSI_Compliance_Select_Documents_Config",
+     "intframework__File_Extension__c": null,
+     "intframework__File_Name_Prefix__c": null,
+     "intframework__Generate_File__c": false,
+     "intframework__HTTP_Content_Type__c": "text/xml",
+     "intframework__HTTP_Method__c": "POST",
+     "intframework__Integration_API_Type__r": {
+          "attributes": {
+               "type": "intframework__Integration_API_Type__c"
+          },
+          "intframework__External_Id__c": "CSI_Compliance_Select_Documents"
+     },
+     "intframework__Integration_Configuration__r": {
+          "attributes": {
+               "type": "intframework__Integration_Configuration__c"
+          },
+          "intframework__External_Id__c": "CSI_Config"
+     },
+     "intframework__Integration_Family__r": {
+          "attributes": {
+               "type": "intframework__Integration_Family__c"
+          },
+          "intframework__External_Id__c": "Documents_And_Disclosures"
+     },
+     "intframework__Integration_Provider__r": {
+          "attributes": {
+               "type": "intframework__Integration_Provider__c"
+          },
+          "intframework__External_Id__c": "Documents_And_Disclosures_CSI_Documents_And_Disclosures"
+     },
+     "intframework__Log_Filter__c": null,
+     "intframework__Log_Request_Response__c": false,
+     "intframework__Long_Running_Operation__c": false,
+     "intframework__Number_Of_Retries__c": 1,
+     "intframework__Release_Checksum__c": "e07a9607e753e1ff8c82a9a6d448db65b63ab210b0161c3b6ac29f89c7d3ee66",
+     "intframework__Request_Mapping__c": {
+          "thirdPartySystem": {
+               "name": "CSI",
+               "dynamicDataParameters": [
+                    {
+                         "externalField": "fileData"
+                    }
+               ],
+               "staticParameters": [
+                    {
+                         "externalField": "documentSelectionLogic",
+                         "value": "Lending.fxl"
+                    },
+                    {
+                         "externalField": "documentLibraryVersion",
+                         "value": "2021.21"
+                    },
+                    {
+                         "externalField": "op",
+                         "value": "SelectDocuments",
+                         "isUrlParameter": "true"
+                    },
+                    {
+                         "externalField": "licenseKey",
+                         "value": "03dDBA8rkb33S+rJTOoxGZ894qLgBgGwdgzDTy9wJMFVStGgNCjzbpdtqz3XOXTK3D8cNlY+4yaCFn8m0uxXEMxZ1l7X1Hi7LPrPHAk7CwuLeboy3VqValhhBIS6TVuEBSxhX3EbvKyCdusODv5EIC6a3Y3DhabjYpsYbdt8wn78IxRrcg86XDxMFtSsVAW/YDMUa3IPOlw8TBbUrFQFv2A68MJuiw385ZMmW7kZrALg5Cz8wwAHeviT5uE3NyuXLg4gAn3Cvdyd7pGGB4uPTscw=="
+                    },
+                    {
+                         "externalField": "serviceNS",
+                         "value": "http://www.compliancesystems.com/services/complianceservice/"
+                    }
+               ]
+          }
+     },
+     "intframework__Request_Timeout__c": 120000,
+     "intframework__Response_Mapping__c": {
+          "StorageConfiguration": {
+               "storeInDB": "False",
+               "publishAsJson": "False"
+          }
+     },
+     "intframework__Retry_On_Failure__c": false,
+     "intframework__Send_File__c": false,
+     "intframework__UI_Page_Name__c": "CSIInteractionsPages",
+     "intframework__UI_Page_Type__c": "SKUID",
+     "intframework__Use_New_Logging_Mechanism__c": false,
+     "intframework__Use_Response_Mocker__c": false,
+     "solcommon__Release_Checksum__c": null
+}

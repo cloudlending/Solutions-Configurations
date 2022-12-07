@@ -1,0 +1,81 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "SMB Secured Principal Criteria 10",
+     "clcommon__Document_Definition__r": null,
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "SMB_Secured_Principal_Criteria_10",
+     "clcommon__Object_Type__c": "clcommon__Party__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": {
+          "attributes": {
+               "type": "clcommon__Rule__c"
+          },
+          "clcommon__External_ID__c": "SMB_Secured_Principal"
+     },
+     "clcommon__Release_Checksum__c": "ec6b2419f66750d3e939d8ef8084a7c73c019ff94ae84487fa9b4e79f2a56cb7",
+     "clcommon__Rule_Json__c": {
+          "validationClassName": "genesis.ScorecardRulesValidator",
+          "successMessage": "Rule Evaluation Passed for rule : SMB Secured Principal Criteria 10",
+          "successActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.ScorecardResultGenerator",
+                    "additionalParams": "{\"Action type\":\"Success\",\"Score\":\"-35\",\"Weight\":\"1\"}",
+                    "actionName": "Action1"
+               }
+          ],
+          "sObjectName": "",
+          "saveRuleClass": null,
+          "ruleName": "SMB Secured Principal Criteria 10",
+          "priority": 41,
+          "parentRuleID": "a3I5e0000009JSLEA2",
+          "parentRecordId": null,
+          "objectType": "clcommon__Party__c",
+          "failureMessage": "Rule Evaluation Failed for rule : SMB Secured Principal Criteria 10",
+          "failureActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.ScorecardResultGenerator",
+                    "additionalParams": "{\"Adverse Action Name\":\"Excessive Obligations In Relation To Income\",\"Action type\":\"Failure\"}",
+                    "actionName": "Action2"
+               }
+          ],
+          "executeActions": null,
+          "evaluationExpression": "$1",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "0.40",
+                    "matchingType": ">=",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Back End Debt To Income Ratio",
+                    "fieldAPIName": "genesis__back_end_debt_to_income_ratio__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               }
+          ],
+          "category": "Small Business Secured Scorecards",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 41,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Small_Business_Secured_Scorecards"
+     },
+     "genesis__Department_Members__r": null,
+     "solcommon__CL_Product__r": null,
+     "solcommon__Release_Checksum__c": null,
+     "solcommon__Type__c": null
+}
