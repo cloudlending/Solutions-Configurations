@@ -9,10 +9,10 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "16460183858fb6f9100f4a1895af315b8986fdf0bdbaa3844c3957471c84f903",
+     "clcommon__Release_Checksum__c": "56ea409058ecc40d5f4d4e1604d2411bc8a1413ba33d84dcba5a202344ad8225",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
-          "successMessage": "Rule Evaluation Passed for rule : Employment Verification (VOE) – Employment Rule",
+          "successMessage": "Rule Evaluation Passed for rule : Employment Verification (VOE) - Employment Rule",
           "successActions": [
                {
                     "type": "Apex",
@@ -23,13 +23,13 @@
                }
           ],
           "sObjectName": "",
-          "saveRuleClass": null,
-          "ruleName": "Employment Verification (VOE) – Employment Rule",
+          "saveRuleClass": "genesis.PolicyConditionGenerationRuleManagement",
+          "ruleName": "Employment Verification (VOE) - Employment Rule",
           "priority": 20,
           "parentRuleID": null,
           "parentRecordId": null,
           "objectType": "clcommon__Party__c",
-          "failureMessage": "Rule Evaluation Failed for rule : Employment Verification (VOE) – Employment Rule",
+          "failureMessage": "Rule Evaluation Failed for rule : Employment Verification (VOE) - Employment Rule",
           "failureActions": [
                {
                     "type": "Apex",
@@ -40,7 +40,7 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1&&$2",
+          "evaluationExpression": "$1",
           "enabled": null,
           "criteria": [
                {
@@ -49,26 +49,11 @@
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "INDIVIDUAL",
+                    "matchingValue": "true",
                     "matchingType": "==",
-                    "fieldType": "STRING",
-                    "fieldName": "Legal Class Name",
-                    "fieldAPIName": "clcommon__account__r.clcommon__legal_entity_type__r.name",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$2",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "MANUAL",
-                    "matchingType": "==",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "VOE Verification Method",
-                    "fieldAPIName": "solcommon__voe_verification_method__c",
+                    "fieldType": "BOOLEAN",
+                    "fieldName": "Individual",
+                    "fieldAPIName": "clcommon__account__r.clcommon__legal_entity_type__r.clcommon__individual__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -77,7 +62,7 @@
           "category": "PolicyConditionGenerationConfig",
           "abortQueueExecutionOnFailure": null
      },
-     "clcommon__Rule_Priority__c": 20,
+     "clcommon__Rule_Priority__c": 10,
      "clcommon__Rule_Set__r": {
           "attributes": {
                "type": "clcommon__Rule_Set__c"

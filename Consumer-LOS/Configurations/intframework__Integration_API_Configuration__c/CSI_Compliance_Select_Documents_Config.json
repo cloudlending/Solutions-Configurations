@@ -1,0 +1,97 @@
+{
+     "attributes": {
+          "type": "intframework__Integration_API_Configuration__c"
+     },
+     "Name": "CSI Compliance Select Documents Config",
+     "intframework__API_Endpoint__c": null,
+     "intframework__API_Named_Credential__c": "CSI_Compliance",
+     "intframework__Adapter_Class_Name__c": "intadapter.CSIComplianceSelectDocumentsAdapter",
+     "intframework__Additional_Header_Parameters__c": {
+          "content-type": "text/xml"
+     },
+     "intframework__Data_Format_Config_Set__r": null,
+     "intframework__Execution_Priority__c": 1,
+     "intframework__External_Id__c": "CSI_Compliance_Select_Documents_Config",
+     "intframework__File_Extension__c": null,
+     "intframework__File_Name_Prefix__c": null,
+     "intframework__Generate_File__c": false,
+     "intframework__HTTP_Content_Type__c": "text/xml",
+     "intframework__HTTP_Method__c": "POST",
+     "intframework__Integration_API_Type__r": {
+          "attributes": {
+               "type": "intframework__Integration_API_Type__c"
+          },
+          "intframework__External_Id__c": "CSI_Compliance_Select_Documents"
+     },
+     "intframework__Integration_Configuration__r": {
+          "attributes": {
+               "type": "intframework__Integration_Configuration__c"
+          },
+          "intframework__External_Id__c": "CSI_Config"
+     },
+     "intframework__Integration_Family__r": {
+          "attributes": {
+               "type": "intframework__Integration_Family__c"
+          },
+          "intframework__External_Id__c": "Documents_And_Disclosures"
+     },
+     "intframework__Integration_Provider__r": {
+          "attributes": {
+               "type": "intframework__Integration_Provider__c"
+          },
+          "intframework__External_Id__c": "CSI_Documents_And_Disclosures"
+     },
+     "intframework__Log_Filter__c": null,
+     "intframework__Log_Request_Response__c": true,
+     "intframework__Long_Running_Operation__c": false,
+     "intframework__Number_Of_Retries__c": 1,
+     "intframework__Request_Mapping__c": {
+          "thirdPartySystem": {
+               "name": "CSI",
+               "dynamicDataParameters": [
+                    {
+                         "externalField": "fileData"
+                    }
+               ],
+               "staticParameters": [
+                    {
+                         "externalField": "documentSelectionLogic",
+                         "value": "Lending.fxl"
+                    },
+                    {
+                         "externalField": "documentLibraryVersion",
+                         "value": "2021.231"
+                    },
+                    {
+                         "externalField": "op",
+                         "value": "SelectDocuments",
+                         "isUrlParameter": "true"
+                    },
+                    {
+                         "externalField": "licenseKey",
+                         "value": "037ILI8hf3laOIDR26M6D5YAeDafijasUXNJGlaW+VwSv8WFbOSp1It8hCRop/a6jn8cNlY+4yaCFn8m0uxXEMxZ1l7X1Hi7LPrPHAk7CwuLeboy3VqValhhBIS6TVuEBSbwsMk0oOCj4LiNx/2rO6loEEvlQ7kH49M8EVbyTZjK4xRrcg86XDxMFtSsVAW/YDMUa3IPOlw8TBbUrFQFv2A+tEOaenR1qLSZhEUQSrV8YYj+PDlC9F7xEfNKV2SmDZ773WAS4c4j5koNYWZPzBpw=="
+                    },
+                    {
+                         "externalField": "serviceNS",
+                         "value": "http://www.compliancesystems.com/services/complianceservice/"
+                    }
+               ]
+          }
+     },
+     "intframework__Request_Timeout__c": 120000,
+     "intframework__Response_Mapping__c": {
+          "StorageConfiguration": {
+               "storeInDB": "False",
+               "publishAsJson": "False"
+          }
+     },
+     "intframework__Retry_On_Failure__c": false,
+     "intframework__Send_File__c": false,
+     "intframework__UI_Page_Name__c": "CSIInteractionsPages",
+     "intframework__UI_Page_Type__c": "SKUID",
+     "intframework__Use_New_Logging_Mechanism__c": false,
+     "intframework__Use_Response_Mocker__c": true,
+     "intframework__Disable_Integration_Logs__c": false,
+     "intframework__Release_Checksum__c": "7d8677f6fdeb4db990e7b0743ba8fa2e78cc96ddba068ddb327acc7a33271ff6",
+     "solcommon__Release_Checksum__c": null
+}

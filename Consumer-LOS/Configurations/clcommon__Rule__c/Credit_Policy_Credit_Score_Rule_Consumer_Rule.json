@@ -9,10 +9,10 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "03a4e01d7435aea736fd3bd1c9667d25a362c23f4e6d190062a654378a8e375b",
+     "clcommon__Release_Checksum__c": "0d14bfe3d688774167a5b74be168ab3f05c3829df992a4aafb245b5a4b9b68fc",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
-          "successMessage": "Rule Evaluation Passed for rule : Credit Policy – Credit Score Rule",
+          "successMessage": "Rule Evaluation Passed for rule : Credit Policy - Credit Score Rule",
           "successActions": [
                {
                     "type": "Apex",
@@ -24,12 +24,12 @@
           ],
           "sObjectName": "",
           "saveRuleClass": "genesis.PolicyConditionGenerationRuleManagement",
-          "ruleName": "Credit Policy – Credit Score Rule",
-          "priority": 17,
+          "ruleName": "Credit Policy - Credit Score Rule",
+          "priority": 7,
           "parentRuleID": null,
           "parentRecordId": null,
           "objectType": "clcommon__Party__c",
-          "failureMessage": "Rule Evaluation Failed for rule : Credit Policy – Credit Score Rule",
+          "failureMessage": "Rule Evaluation Failed for rule : Credit Policy - Credit Score Rule",
           "failureActions": [
                {
                     "type": "Apex",
@@ -49,11 +49,11 @@
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "Credit Card",
+                    "matchingValue": "Consumer Secured",
                     "matchingType": "==",
                     "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__application__r.genesis__cl_product__r.clcommon__product_name__c",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -64,11 +64,11 @@
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "Personal Loan",
+                    "matchingValue": "Consumer Unsecured",
                     "matchingType": "==",
                     "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__application__r.genesis__cl_product__r.clcommon__product_name__c",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -79,11 +79,11 @@
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "Auto Loan",
+                    "matchingValue": "Consumer Real Estate",
                     "matchingType": "==",
                     "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__application__r.genesis__cl_product__r.clcommon__product_name__c",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -92,7 +92,7 @@
           "category": "PolicyConditionGenerationConfig",
           "abortQueueExecutionOnFailure": null
      },
-     "clcommon__Rule_Priority__c": 17,
+     "clcommon__Rule_Priority__c": 7,
      "clcommon__Rule_Set__r": {
           "attributes": {
                "type": "clcommon__Rule_Set__c"
