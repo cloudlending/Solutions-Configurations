@@ -14,6 +14,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
+     "clcommon__Release_Checksum__c": "387ea1f7688a689a63e32aa47266717a2a5c9241c06f611c280bcb957587cd82",
      "clcommon__Rule_Json__c": {
           "validationClassName": "DocumentDefinitionPreSaveValidation",
           "successMessage": "Rule Evaluation Passed for rule : Primary Identification Document - Foreign Issued Driver's License",
@@ -29,9 +30,9 @@
           "sObjectName": "clcommon__Document_Definition__c",
           "saveRuleClass": null,
           "ruleName": "Primary Identification Document - Foreign Issued Driver's License",
-          "priority": 5,
+          "priority": 6,
           "parentRuleID": null,
-          "parentRecordId": "a1N5Y000007I0ZlUAK",
+          "parentRecordId": "a1S8c000003i7rwEAA",
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : Primary Identification Document - Foreign Issued Driver's License",
           "failureActions": [
@@ -44,7 +45,7 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "($1||$2)&&($3||$4)",
+          "evaluationExpression": "(($1||$2)&&($3||$4))||($5||$6)",
           "enabled": null,
           "criteria": [
                {
@@ -106,6 +107,36 @@
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$5",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "MANUAL",
+                    "matchingType": "==",
+                    "fieldType": "PICKLIST",
+                    "fieldName": "Fraud Check Verification Method",
+                    "fieldAPIName": "solcommon__fraud_check_verification_method__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$6",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "MANUAL",
+                    "matchingType": "==",
+                    "fieldType": "PICKLIST",
+                    "fieldName": "Fraud Check Verification Status",
+                    "fieldAPIName": "solcommon__fraud_check_verification_status__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
                }
           ],
           "category": "DocumentDefinition",
@@ -118,8 +149,8 @@
           },
           "clcommon__External_ID__c": "Document_Definition"
      },
+     "genesis__Department_Members__r": null,
      "solcommon__CL_Product__r": null,
      "solcommon__Release_Checksum__c": null,
-     "solcommon__Type__c": null,
-     "clcommon__Release_Checksum__c": "af1f8cf2a2b1250079181a0b82e9868d04c0880d7888493fd00bbd2f519a5c2d"
+     "solcommon__Type__c": null
 }

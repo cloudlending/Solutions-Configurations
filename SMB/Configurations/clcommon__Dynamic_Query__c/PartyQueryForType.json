@@ -9,25 +9,25 @@
      "clcommon__Order_By__c": null,
      "clcommon__Parent_Query__r": null,
      "clcommon__Query_Json__c": {
-          "whereClauseId": "a1a5Y000018XYnSQAW",
+          "whereClauseId": "a1e8b0000014WE5AAM",
           "whereClause": null,
           "subQueryParams": {},
           "startWithClauseId": null,
           "runtimeParams": {
-               "a1b5Y00000FAw1KQAT": {
+               "a1f8b000005mvc4AAA": {
                     "subQueryId": null,
                     "pType": "CONTEXT_VALUE",
                     "paramValue": "ID",
-                    "id": "a1b5Y00000FAw1KQAT"
+                    "id": "a1f8b000005mvc4AAA"
                }
           },
           "queryName": "PartyQueryForType",
           "projectionsAsString": null,
           "projections": {
-               "a1a5Y000018XYnPQAW": {
+               "a1e8b0000014WE0AAM": {
                     "queryToken": "clcommon__contact__c",
                     "isAggregation": false,
-                    "id": "a1a5Y000018XYnPQAW",
+                    "id": "a1e8b0000014WE0AAM",
                     "fieldType": "REFERENCE",
                     "fieldName": "clcommon__contact__c",
                     "alias": "Contact"
@@ -39,37 +39,53 @@
           "fnParams": {},
           "executeQueryParams": {},
           "constants": {
-               "a1b5Y00000FAw1LQAT": {
+               "a1f8b000005mvc5AAA": {
                     "subQueryId": null,
                     "pType": "CONSTANT",
                     "paramValue": "('BORROWER' , 'CO-BORROWER', 'COSIGNER', 'PRINCIPAL')",
-                    "id": "a1b5Y00000FAw1LQAT"
+                    "id": "a1f8b000005mvc5AAA"
                }
           },
           "connectByClauseId": null,
           "clauses": {
-               "a1a5Y000018XYnSQAW": {
-                    "rhsSelectionId": "a1a5Y000018XYnRQAW",
+               "a1e8b0000014WE5AAM": {
+                    "rhsSelectionId": "a1e8b0000014WE4AAM",
                     "paramId": null,
                     "operator": "AND",
-                    "lhsSelectionId": "a1a5Y000018XYnQQAW",
-                    "id": "a1a5Y000018XYnSQAW",
+                    "lhsSelectionId": "a1e8b0000014WE1AAM",
+                    "id": "a1e8b0000014WE5AAM",
                     "fieldName": null
                },
-               "a1a5Y000018XYnRQAW": {
+               "a1e8b0000014WE4AAM": {
+                    "rhsSelectionId": "a1e8b0000014WE3AAM",
+                    "paramId": null,
+                    "operator": "OR",
+                    "lhsSelectionId": "a1e8b0000014WE2AAM",
+                    "id": "a1e8b0000014WE4AAM",
+                    "fieldName": null
+               },
+               "a1e8b0000014WE3AAM": {
                     "rhsSelectionId": null,
-                    "paramId": "a1b5Y00000FAw1LQAT",
+                    "paramId": "a1f8b000005mvc5AAA",
+                    "operator": "INCLUDES",
+                    "lhsSelectionId": null,
+                    "id": "a1e8b0000014WE3AAM",
+                    "fieldName": "clcommon__Party_Types__c"
+               },
+               "a1e8b0000014WE2AAM": {
+                    "rhsSelectionId": null,
+                    "paramId": "a1f8b000005mvc5AAA",
                     "operator": "IN",
                     "lhsSelectionId": null,
-                    "id": "a1a5Y000018XYnRQAW",
+                    "id": "a1e8b0000014WE2AAM",
                     "fieldName": "clcommon__Type__r.Name"
                },
-               "a1a5Y000018XYnQQAW": {
+               "a1e8b0000014WE1AAM": {
                     "rhsSelectionId": null,
-                    "paramId": "a1b5Y00000FAw1KQAT",
+                    "paramId": "a1f8b000005mvc4AAA",
                     "operator": "=",
                     "lhsSelectionId": null,
-                    "id": "a1a5Y000018XYnQQAW",
+                    "id": "a1e8b0000014WE1AAM",
                     "fieldName": "ID"
                }
           },
@@ -77,5 +93,5 @@
      },
      "clcommon__Query_Name__c": "PartyQueryForType",
      "clcommon__Record_Limit__c": null,
-     "clcommon__Release_Checksum__c": "a71bc386330b0cdb7de0947086ee7a3d985f5f34a6218ba42e274551143b94f6"
+     "clcommon__Release_Checksum__c": "304662a336c1fa90c95f3ef5be8e98a20a234286215606a5d8eed155b37903df"
 }

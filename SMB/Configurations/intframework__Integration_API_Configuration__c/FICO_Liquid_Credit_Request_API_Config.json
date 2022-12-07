@@ -7,6 +7,7 @@
      "intframework__API_Named_Credential__c": "FICO_Consumer_Credit",
      "intframework__Adapter_Class_Name__c": "solcommon.ExtendedFicoConsumerAdapter",
      "intframework__Additional_Header_Parameters__c": null,
+     "intframework__Data_Format_Config_Set__r": null,
      "intframework__Execution_Priority__c": 1,
      "intframework__External_Id__c": "FICO_Liquid_Credit_Request_API_Config",
      "intframework__File_Extension__c": null,
@@ -36,12 +37,13 @@
           "attributes": {
                "type": "intframework__Integration_Provider__c"
           },
-          "intframework__External_Id__c": "Fico_Consumer_Credit"
+          "intframework__External_Id__c": "Consumer_Credit_Fico_Consumer_Credit"
      },
      "intframework__Log_Filter__c": null,
      "intframework__Log_Request_Response__c": true,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 1,
+     "intframework__Release_Checksum__c": "f974fbe394fb9cd216a59657e84b0750c4caac58d330b3475b96fc244a7bf6a7",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "Fico",
@@ -89,7 +91,7 @@
                                    "fieldAPI": "genesis__Down_Payment__c"
                               }
                          ],
-                         "whereClause": "Id = :appId "
+                         "whereClause": "Id = :applicationId "
                     },
                     {
                          "objectAPI": "clcommon__Party__c",
@@ -191,6 +193,10 @@
                                    "fieldAPI": "clcommon__Contact__r.clcommon__Personal_Information__r.intadapter__Fico_Score_Date__c"
                               },
                               {
+                                   "externalField": "FicoScoreDateTime",
+                                   "fieldAPI": "clcommon__Contact__r.clcommon__Personal_Information__r.intadapter__Fico_Score_Date_Time__c"
+                              },
+                              {
                                    "externalField": "FicoTransactionId",
                                    "fieldAPI": "clcommon__Contact__r.clcommon__Personal_Information__r.intadapter__Fico_Transaction_Id__c"
                               },
@@ -199,7 +205,7 @@
                                    "fieldAPI": "clcommon__Contact__r.clcommon__Personal_Information__c"
                               }
                          ],
-                         "whereClause": "clcommon__Contact__c IN :contactIds AND clcommon__Mailing_Address__c = true"
+                         "whereClause": "clcommon__Contact__c IN :contactIds AND clcommon__Current_Address__c = true"
                     },
                     {
                          "objectAPI": "clcommon__Address__c",
@@ -291,6 +297,10 @@
                               {
                                    "externalField": "FicoScoreDate",
                                    "fieldAPI": "genesis__Business_Information__r.intadapter__Fico_Score_Date__c"
+                              },
+                              {
+                                   "externalField": "FicoScoreDateTime",
+                                   "fieldAPI": "genesis__Business_Information__r.intadapter__Fico_Score_Date_Time__c"
                               },
                               {
                                    "externalField": "ResubmissionId",
@@ -395,7 +405,7 @@
                ]
           }
      },
-     "intframework__Request_Timeout__c": 20000,
+     "intframework__Request_Timeout__c": 120000,
      "intframework__Response_Mapping__c": {
           "StorageConfiguration": {
                "storeInDB": "True",
@@ -407,7 +417,6 @@
      "intframework__UI_Page_Name__c": "FicoLiquidCreditMainPage",
      "intframework__UI_Page_Type__c": "Skuid",
      "intframework__Use_New_Logging_Mechanism__c": false,
-     "intframework__Use_Response_Mocker__c": false,
-     "solcommon__Release_Checksum__c": null,
-     "intframework__Release_Checksum__c": "3995e73e14a7af8d03dd0d1e2652447bb72c58ec33c1371a7e2c3fb427ef7dab"
+     "intframework__Use_Response_Mocker__c": true,
+     "solcommon__Release_Checksum__c": null
 }

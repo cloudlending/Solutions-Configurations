@@ -14,6 +14,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
+     "clcommon__Release_Checksum__c": "c07fba9d5ddf669dcae4eb05cdc8550c1ad15303378a541e90011b599370177b",
      "clcommon__Rule_Json__c": {
           "validationClassName": "DocumentDefinitionPreSaveValidation",
           "successMessage": "Rule Evaluation Passed for rule : Secondary Identification Document - Bank Statement",
@@ -29,9 +30,9 @@
           "sObjectName": "clcommon__Document_Definition__c",
           "saveRuleClass": null,
           "ruleName": "Secondary Identification Document - Bank Statement",
-          "priority": 14,
+          "priority": 15,
           "parentRuleID": null,
-          "parentRecordId": "a1N5Y000007I0ZUUA0",
+          "parentRecordId": "a1S8c000003i7rfEAA",
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : Secondary Identification Document - Bank Statement",
           "failureActions": [
@@ -44,7 +45,7 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "($1||$2)&&($3||$4)",
+          "evaluationExpression": "($1||$2)&&($3||$4)||($5||$6)",
           "enabled": null,
           "criteria": [
                {
@@ -106,6 +107,36 @@
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$5",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "MANUAL",
+                    "matchingType": "==",
+                    "fieldType": "PICKLIST",
+                    "fieldName": "Fraud Check Verification Method",
+                    "fieldAPIName": "solcommon__fraud_check_verification_method__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$6",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "MANUAL",
+                    "matchingType": "==",
+                    "fieldType": "PICKLIST",
+                    "fieldName": "Fraud Check Verification Status",
+                    "fieldAPIName": "solcommon__fraud_check_verification_status__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
                }
           ],
           "category": "DocumentDefinition",
@@ -118,8 +149,8 @@
           },
           "clcommon__External_ID__c": "Document_Definition"
      },
+     "genesis__Department_Members__r": null,
      "solcommon__CL_Product__r": null,
      "solcommon__Release_Checksum__c": null,
-     "solcommon__Type__c": null,
-     "clcommon__Release_Checksum__c": "cffee54c30652a9ba9b90b9aad8739f4d6d0b40f7a744bacd3799575e5c2e50b"
+     "solcommon__Type__c": null
 }

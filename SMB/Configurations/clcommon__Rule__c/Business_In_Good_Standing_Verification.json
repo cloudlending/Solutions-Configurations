@@ -9,6 +9,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
+     "clcommon__Release_Checksum__c": "845b5d85c9d4221d214329852fc648f58262e32076a643066ab884b29ee47d93",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
           "successMessage": "Rule Evaluation Passed for rule : Business In Good Standing Verification",
@@ -39,7 +40,7 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "($1||$6)&&$2&&($3&&$4)&&$5",
+          "evaluationExpression": "($1||$5)&&$2&&$3&&$4",
           "enabled": null,
           "criteria": [
                {
@@ -78,11 +79,11 @@
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "Individual",
+                    "matchingValue": "true",
                     "matchingType": "!=",
-                    "fieldType": "STRING",
-                    "fieldName": "Legal Entity Type Code",
-                    "fieldAPIName": "clcommon__account__r.clcommon__legal_entity_type__r.clcommon__legal_entity_type_code__c",
+                    "fieldType": "BOOLEAN",
+                    "fieldName": "Individual",
+                    "fieldAPIName": "clcommon__account__r.clcommon__legal_entity_type__r.clcommon__individual__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -90,21 +91,6 @@
                {
                     "type": "Expression",
                     "sequence": "$4",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "Sole Proprietorship",
-                    "matchingType": "!=",
-                    "fieldType": "STRING",
-                    "fieldName": "Legal Entity Type Code",
-                    "fieldAPIName": "clcommon__account__r.clcommon__legal_entity_type__r.clcommon__legal_entity_type_code__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$5",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -119,7 +105,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$6",
+                    "sequence": "$5",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -143,8 +129,8 @@
           },
           "clcommon__External_ID__c": "Policy_Condition_Generation_Config"
      },
+     "genesis__Department_Members__r": null,
      "solcommon__CL_Product__r": null,
      "solcommon__Release_Checksum__c": null,
-     "solcommon__Type__c": null,
-     "clcommon__Release_Checksum__c": "231196a466efa128b6ca91c03ff07cbf98875d425d65d70123a9956616ac7777"
+     "solcommon__Type__c": null
 }

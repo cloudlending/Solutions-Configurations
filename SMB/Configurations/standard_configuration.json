@@ -1,42 +1,54 @@
 [
      {
           "Sequence": 1,
+          "Object API Name": "solcommon__Credit_Score_Rating__c",
+          "External Id Field": "solcommon__External_Id__c",
+          "label": "Credit Score Rating"
+     },
+     {
+          "Sequence": 2,
           "Object API Name": "clcommon__Asset_Class__c",
           "External Id Field": "clcommon__External_ID__c",
           "label": "Asset Class"
      },
      {
-          "Sequence": 2,
+          "Sequence": 3,
           "Object API Name": "clcommon__Legal_Entity__c",
           "External Id Field": "genesis__External_Id__c",
           "label": "Legal Entity"
      },
      {
-          "Sequence": 3,
+          "Sequence": 4,
           "Object API Name": "clcommon__CL_Purpose__c",
           "External Id Field": "clcommon__External_ID__c",
           "label": "CL Purpose"
      },
-	 {
-          "Sequence": 4,
+     {
+          "Sequence": 5,
           "Object API Name": "clcommon__Document_Definition__c",
           "External Id Field": "genesis__External_ID__c",
           "label": "Document Definition"
      },
      {
-          "Sequence": 5,
+          "Sequence": 6,
           "Object API Name": "clcommon__Rule_Set__c",
           "External Id Field": "clcommon__External_ID__c",
           "label": "Rule Set"
      },
      {
-          "Sequence": 6,
+          "Sequence": 7,
+          "Object API Name": "clcommon__Approval_Configuration__c",
+          "External Id Field": "solcommon__External_Id__c",
+          "label" : "Approval Configuration"
+     },
+     {
+          "Sequence": 8,
           "Object API Name": "clcommon__Reason_Code__c",
           "External Id Field": "clcommon__External_ID__c",
           "label": "Reason Code"
      },
      {
-          "Sequence": 7,
+          "Sequence": 9,
           "Object API Name": "clcommon__Reciprocal_Role__c",
           "External Id Field": "clcommon__External_ID__c",
           "label": "Reciprocal Role"
@@ -66,6 +78,12 @@
           "label": "Rule"
      },
      {
+          "Sequence": 19,
+          "Object API Name": "clcommon__Product_Purpose_Association__c",
+          "External Id Field": "clcommon__External_ID__c",
+          "label": "Product Purpose Association"
+     },
+     {
           "Sequence": 30,
           "Object API Name": "genesis__Credit_Rating_Matrix__c",
           "External Id Field": "genesis__External_ID__c",
@@ -89,42 +107,42 @@
           "External Id Field": "genesis__External_ID__c",
           "label": "Product Rate Card Association"
      },
-     {
+          {
           "Sequence": 40,
+          "Object API Name": "genesis__Policy_Exception_Definition__c",
+          "External Id Field": "genesis__External_ID__c",
+          "label": "Policy Condition Definition"
+     },
+     {
+          "Sequence": 41,
           "Object API Name": "genesis__Department__c",
           "External Id Field": "genesis__External_ID__c",
           "label": "Department"
      },
      {
-          "Sequence": 41,
+          "Sequence": 42,
           "Object API Name": "genesis__Departments_Members__c",
           "External Id Field": "genesis__External_ID__c",
           "label": "Department Members"
      },
      {
-          "Sequence": 42,
+          "Sequence": 43,
           "Object API Name": "genesis__Task_Setup__c",
           "External Id Field": "genesis__External_ID__c",
           "label": "Task Setup"
      },
      {
-          "Sequence": 43,
+          "Sequence": 44,
           "Object API Name": "genesis__Product_Department_Junction__c",
           "External Id Field": "genesis__External_ID__c",
           "label": "Product Department Association"
      },
      {
-          "Sequence": 44,
+          "Sequence": 45,
           "Object API Name": "genesis__ProductDepartment_Task_Junction__c",
           "External Id Field": "genesis__External_ID__c",
           "label": "Product Department Task Association"
      },
-	 {
-          "Sequence": 45,
-          "Object API Name": "genesis__Policy_Exception_Definition__c",
-          "External Id Field": "genesis__External_ID__c",
-          "label": "Policy Condition Definition"
-     },	 
      {
           "Sequence": 46,
           "Object API Name": "genesis__Policy_Condition_Category_Association__c",
@@ -150,45 +168,85 @@
           "label": "Dynamic Query Parameter"
      },
      {
-          "Sequence": 60,
-          "Object API Name": "intframework__Integration_Family__c",
-          "External Id Field": "intframework__External_Id__c",
+          "Sequence":60,
+          "Object API Name":"intframework__Data_Format_Config_Set__c",
+          "External Id Field":"intframework__External_Id__c",
+          "label": "Data Format Config Set"
+     },
+  
+     {
+          "Sequence":61,
+          "Object API Name":"intframework__Data_Mapper_Config__c",
+          "External Id Field":"intframework__External_Id__c",
+          "label": "Data Mapper Config"
+     },
+  
+     {
+          "Sequence":62,
+          "Object API Name":"intframework__Data_Mapper_Config_Junction__c",
+          "External Id Field":"intframework__External_Id__c",
+          "label": "Data Mapper Config Junction"
+     },
+  
+     {
+          "Sequence":63,
+          "Object API Name":"intframework__Integration_Family__c",
+          "External Id Field":"intframework__External_Id__c",
           "label": "Integration Family"
      },
+  
      {
-          "Sequence": 61,
-          "Object API Name": "intframework__Integration_Provider__c",
-          "External Id Field": "intframework__External_Id__c",
+          "Sequence":64,
+          "Object API Name":"intframework__Integration_Provider__c",
+          "External Id Field":"intframework__External_Id__c",
           "label": "Integration Provider"
      },
+  
      {
-          "Sequence": 62,
-          "Object API Name": "intframework__Integration_API_Type__c",
-          "External Id Field": "intframework__External_Id__c",
+          "Sequence":65,
+          "Object API Name":"intframework__Integration_API_Type__c",
+          "External Id Field":"intframework__External_Id__c",
           "label": "Integration API Type"
      },
+  
      {
-          "Sequence": 63,
-          "Object API Name": "intframework__Integration_Configuration__c",
-          "External Id Field": "intframework__External_Id__c",
+          "Sequence":66,
+          "Object API Name":"intframework__Integration_Configuration__c",
+          "External Id Field":"intframework__External_Id__c",
           "label": "Integration Configuration"
      },
+  
      {
-          "Sequence": 64,
-          "Object API Name": "intframework__Integration_API_Configuration__c",
-          "External Id Field": "intframework__External_Id__c",
+          "Sequence":67,
+          "Object API Name":"intframework__Integration_API_Configuration__c",
+          "External Id Field":"intframework__External_Id__c",
           "label": "Integration API Configuration"
      },
+  
      {
-          "Sequence": 70,
-          "Object API Name": "ints__Integration_Configuration__c",
-          "External Id Field": "ints__External_ID__c",
-          "label": "Integration Configuration"
+          "Sequence":68,
+          "Object API Name":"intframework__Orchestrator__c",
+          "External Id Field":"intframework__External_Id__c",
+          "label": "Orchestrator"
      },
-	 {
+  
+     {
+          "Sequence":69,
+          "Object API Name":"intframework__Orchestrator_Config_Detail__c",
+          "External Id Field":"intframework__External_Id__c",
+          "label": "Orchestrator Config Detail"
+     },
+  
+     {
+          "Sequence":70,
+          "Object API Name":"intframework__Config_Detail_Connector__c",
+          "External Id Field":"intframework__External_Id__c",
+          "label": "Config Detail Connector"
+     },
+     {
           "Sequence": 71,
-          "Object API Name": "ints__Credit_Loan_Type_Configuration__c",
-          "External Id Field": "ints__External_ID__c",
+          "Object API Name": "solcommon__Credit_Loan_Type_Configuration__c",
+          "External Id Field": "solcommon__External_Id__c",
           "label": "Credit Loan Type Configuration"
      },
      {
@@ -244,5 +302,31 @@
           "Object API Name": "solcommon__Workflow_Details__c",
           "External Id Field": "solcommon__External_Id__c",
           "label": "Workflow Details"
+     },
+     {
+          "Sequence": 89,
+          "Object API Name": "solcommon__Credit_Score_Rating_Definition__c",
+          "External Id Field": "solcommon__External_Id__c",
+          "label": "Credit Score Rating Definition"
+          
+     },
+     {
+          "Sequence": 95,
+          "Object API Name": "solcommon__Industry_Sector__c",
+          "External Id Field": "solcommon__External_Id__c",
+          "label": "Industry Sector"
+     },
+     {
+          "Sequence": 96,
+          "Object API Name": "solcommon__Industry_Sub_Sector__c",
+          "External Id Field": "solcommon__External_Id__c",
+          "label": "Industry Sub Sector"
+     },
+     {
+          "Sequence": 97,
+          "Object API Name": "solcommon__Industry_Code__c",
+          "External Id Field": "solcommon__External_Id__c",
+          "label": "Industry Code"
      }
-]
+
+ ]

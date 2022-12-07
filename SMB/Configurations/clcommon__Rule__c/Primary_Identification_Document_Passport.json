@@ -1,0 +1,96 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "Primary Identification Document - Passport",
+     "clcommon__Document_Definition__r": {
+          "attributes": {
+               "type": "clcommon__Document_Definition__c"
+          },
+          "genesis__External_ID__c": "Primary_Identification_Document_Passport"
+     },
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "Primary_Identification_Document_Passport",
+     "clcommon__Object_Type__c": "clcommon__Party__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": null,
+     "clcommon__Release_Checksum__c": "ba763495226e8afba6e6fb2a6c0311ce214588752160cb4fabf5c86c55d2e6f4",
+     "clcommon__Rule_Json__c": {
+          "validationClassName": "DocumentDefinitionPreSaveValidation",
+          "successMessage": "Rule Evaluation Passed for rule : Primary Identification Document - Passport",
+          "successActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.DocumentCategoryGenerateAction",
+                    "additionalParams": "{\"Action type\":\"Success\"}",
+                    "actionName": "Action1"
+               }
+          ],
+          "sObjectName": "clcommon__Document_Definition__c",
+          "saveRuleClass": null,
+          "ruleName": "Primary Identification Document - Passport",
+          "priority": 29,
+          "parentRuleID": null,
+          "parentRecordId": "a1S8c000003idrhEAA",
+          "objectType": "clcommon__Party__c",
+          "failureMessage": "Rule Evaluation Failed for rule : Primary Identification Document - Passport",
+          "failureActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.DocumentCategoryGenerateAction",
+                    "additionalParams": "{\"Action type\":\"Failure\"}",
+                    "actionName": "Action2"
+               }
+          ],
+          "executeActions": null,
+          "evaluationExpression": "$1||$2",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "MANUAL",
+                    "matchingType": "==",
+                    "fieldType": "PICKLIST",
+                    "fieldName": "Fraud Check Verification Method",
+                    "fieldAPIName": "solcommon__fraud_check_verification_method__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "MANUAL",
+                    "matchingType": "==",
+                    "fieldType": "PICKLIST",
+                    "fieldName": "Fraud Check Verification Status",
+                    "fieldAPIName": "solcommon__fraud_check_verification_status__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               }
+          ],
+          "category": "DocumentDefinition",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 29,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Document_Definition"
+     },
+     "genesis__Department_Members__r": null,
+     "solcommon__CL_Product__r": null,
+     "solcommon__Release_Checksum__c": null,
+     "solcommon__Type__c": null
+}

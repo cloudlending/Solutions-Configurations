@@ -9,6 +9,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
+     "clcommon__Release_Checksum__c": "02687a0eba50f3d1e9847e8ddb8eec513c3fd29b9fed56b610fe855e018e5698",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
           "successMessage": "Rule Evaluation Passed for rule : Eligibility (Party)",
@@ -39,7 +40,7 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1&&$2&&$3&&$4&&$5&&$6&&$7",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {
@@ -48,11 +49,11 @@
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "Gambling",
+                    "matchingValue": "Amusement, Gambling and Recreation Industries",
                     "matchingType": "!=",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "Type Of Business",
-                    "fieldAPIName": "clcommon__account__r.genesis__business_information__r.solcommon__type_of_business__c",
+                    "fieldType": "STRING",
+                    "fieldName": "Industry Sub Sector",
+                    "fieldAPIName": "clcommon__account__r.genesis__business_information__r.solcommon__industry_sub_sector__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -60,81 +61,6 @@
                {
                     "type": "Expression",
                     "sequence": "$2",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "Adult Entertainment ",
-                    "matchingType": "!=",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "Type Of Business",
-                    "fieldAPIName": "clcommon__account__r.genesis__business_information__r.solcommon__type_of_business__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$3",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "Pawn Shop",
-                    "matchingType": "!=",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "Type Of Business",
-                    "fieldAPIName": "clcommon__account__r.genesis__business_information__r.solcommon__type_of_business__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$4",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "Money Order Business",
-                    "matchingType": "!=",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "Type Of Business",
-                    "fieldAPIName": "clcommon__account__r.genesis__business_information__r.solcommon__type_of_business__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$5",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "Check Cashing Business",
-                    "matchingType": "!=",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "Type Of Business",
-                    "fieldAPIName": "clcommon__account__r.genesis__business_information__r.solcommon__type_of_business__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$6",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "Marijuana Dispensary ",
-                    "matchingType": "!=",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "Type Of Business",
-                    "fieldAPIName": "clcommon__account__r.genesis__business_information__r.solcommon__type_of_business__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$7",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -158,8 +84,8 @@
           },
           "clcommon__External_ID__c": "Knockout_Rules_For_SMB"
      },
+     "genesis__Department_Members__r": null,
      "solcommon__CL_Product__r": null,
      "solcommon__Release_Checksum__c": null,
-     "solcommon__Type__c": null,
-     "clcommon__Release_Checksum__c": "5acb32b922bee88fd28635470ce8b905c495a0a691ca6beb87b0fde97847d8d2"
+     "solcommon__Type__c": null
 }
