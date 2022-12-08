@@ -1,0 +1,113 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessInfodetailsSaveBillingAndShippingAddressDBAEmpty",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessInfodetailsSaveBillingAndShippingAddressDBAEmpty",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "Next",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "Id": "$global.attr(appId);",
+                    "oao__Portal_Stage__c": "BusinessInformationDetails"
+               },
+               "genesis__Business_Information__c": {
+                    "oao__Unified_Business_Identifier__c": "$global.attr(UBI);",
+                    "Id": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.Id);",
+                    "genesis__DBA_Name__c": "",
+                    "genesis__Business_Category__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);",
+                    "genesis__Tax_ID__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
+                    "genesis__Tax_Identification_Number__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
+                    "oao__Business_Sub_Category__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Business_Sub_Category__c);"
+               },
+               "account": {
+                    "oao__Business_DBA_Name__c": "",
+                    "oao__Business_Category__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);",
+                    "Name": "$state(cobaltBusinessInformationNameOfBusinessPanel).attr(genesis__Application__r.genesis__Account__r.Name);",
+                    "BillingStreet": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingStreet);",
+                    "oao__Billing_Address_Second_Line__c": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.oao__Billing_Address_Second_Line__c);",
+                    "BillingCity": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingCity);",
+                    "BillingStateCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingStateCode);",
+                    "BillingPostalCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingPostalCode);",
+                    "ShippingCountryCode": "$state(cobaltBusinessInformationMailingAddressPanel).attr(genesis__Application__r.genesis__Account__r.ShippingCountryCode);",
+                    "BillingCountryCode": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.BillingCountryCode);",
+                    "ShippingStreet": "$state(cobaltBusinessInformationMailingAddressPanel).attr(genesis__Application__r.genesis__Account__r.ShippingStreet);",
+                    "ShippingCity": "$state(cobaltBusinessInformationMailingAddressPanel).attr(genesis__Application__r.genesis__Account__r.ShippingCity);",
+                    "oao__Shipping_Address_Second_Line__c": "$state(cobaltBusinessInformationMailingAddressPanel).attr(genesis__Application__r.genesis__Account__r.oao__Shipping_Address_Second_Line__c);",
+                    "ShippingStateCode": "$state(cobaltBusinessInformationMailingAddressPanel).attr(genesis__Application__r.genesis__Account__r.ShippingStateCode);",
+                    "ShippingPostalCode": "$state(cobaltBusinessInformationMailingAddressPanel).attr(genesis__Application__r.genesis__Account__r.ShippingPostalCode);",
+                    "Phone": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.Phone);",
+                    "oao__Same_Address_As_Personal__c": "$state(cobaltBusinessInformationStreetAddressPanel).attr(genesis__Application__r.genesis__Account__r.oao__Same_Address_As_Personal__c);",
+                    "oao__Same_Phone_As_Personal__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.oao__Same_Phone_As_Personal__c);",
+                    "oao__Business_Sub_Category_Type__c": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Business_Sub_Category__c);"
+               },
+               "clcommon__Legal_Entity__c": {
+                    "Name": "$state(cobaltBusinessInformationDBAPanel).attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);"
+               }
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltBusinessInfoSteps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Select the industry code that best describes your business"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "businessinfoindustrycode"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltIKnowIndustryCodePanel",
+                              "cobaltIndustryCodePanel",
+                              "cobaltBusinessIndustryPanel",
+                              "cobaltMarijuanaAndGamblingPanel",
+                              "cobaltStatusStagePanel",
+                              "cobaltWithholdingPanel",
+                              "cobaltGamblingPanel"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          }
+     },
+     "clcommon__Action_Order__c": 58,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.PortalSaveBusinessInfoApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+businessInfodetailsSaveBillingAndShippingAddressDBAEmpty",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+businessInfodetailsSaveBillingAndShippingAddressDBAEmpty+COMPONENT",
+     "clcommon__Release_Checksum__c": "4a176a16273d1c19c85aed4418a39da54ff77055e5d479234c5771b352235aa0"
+}

@@ -1,0 +1,71 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessPreviousBtnToCitizenship",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessPreviousBtnToCitizenship",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-business-info-back-to-citizenship-employment\">Back</span>",
+               "variant": "outlined",
+               "render": "$global.attr(pageName); == \"businessinfodetails\" and ($state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); or $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);)"
+          },
+          "remoteActionArguments": {},
+          "remoteActionProcess": {
+               "post": "$ext.dynamicStepper"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "citizenshipEmployment"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "$global.attr(Citizenship_Employment_title);"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "citizenshipEmployment"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "default"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go back to the Citizenship and Employment"
+     },
+     "clcommon__Action_Order__c": 16,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+businessPreviousBtnToCitizenship",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+businessPreviousBtnToCitizenship+COMPONENT",
+     "clcommon__Release_Checksum__c": "1f8698c37c37fa68574ef525cf1b59a1a91d62c4fd19c1445409a7976dfebc1b"
+}

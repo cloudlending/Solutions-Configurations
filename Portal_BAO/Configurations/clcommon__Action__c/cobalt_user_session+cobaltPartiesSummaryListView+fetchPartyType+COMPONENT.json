@@ -1,0 +1,72 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "fetchPartyType",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "fetchPartyType",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "position": "bottom-right",
+               "label": "submit"
+          },
+          "remoteActionArguments": {
+               "appId": "$global.attr(appId);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(controlPerson);",
+                         "value": "$result.attr(control_person);"
+                    },
+                    {
+                         "field": "$global.attr(authorizeSigner);",
+                         "value": "$result.attr(authorized_signer);"
+                    },
+                    {
+                         "field": "$global.attr(benefecialOwner);",
+                         "value": "$result.attr(benefecial_owner);"
+                    },
+                    {
+                         "field": "$global.attr(businessPartiesText);",
+                         "value": "$result.attr(pageTitle);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$result.attr(benefecial_owner);==true",
+                         "actorName": "cobaltPartiesSummaryListView",
+                         "name": "addBeneficalText"
+                    },
+                    {
+                         "condition": "$result.attr(control_person);==true",
+                         "actorName": "cobaltPartiesSummaryListView",
+                         "name": "addControlText"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltPartiesSummaryListView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_party_summary_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.GetPartyTypeAgainstBusinessApi",
+     "clcommon__Unique_Action_Name__c": "cobaltPartiesSummaryListView+fetchPartyType",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPartiesSummaryListView+fetchPartyType+COMPONENT",
+     "clcommon__Release_Checksum__c": "abb369f13ac1270fbc1ea197d74ec36be04689faaf8e328752f71664b8b283e0"
+}

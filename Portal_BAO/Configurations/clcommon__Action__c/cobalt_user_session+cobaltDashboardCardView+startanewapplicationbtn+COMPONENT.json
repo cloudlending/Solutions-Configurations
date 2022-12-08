@@ -1,0 +1,81 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "startanewapplicationbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "startanewapplicationbtn",
+          "property": {},
+          "appearance": {
+               "render": "($this.attr(clcommon__Account__r.oao__Origin_Session_ID__c); == \"\" or $this.attr(clcommon__Account__r.oao__Origin_Session_ID__c); == null or $this.attr(clcommon__Account__r.oao__Origin_Session_ID__c); == undefined) and ($state(cobaltPrimaryPartyCountPanel).count();>0 or ($state(cobaltPrimaryPartyCountPanel).count();==0 and $state(cobaltCustomSettingsPanel).attr(oao__Allow_Guarantor_To_Create_Application__c);==true))",
+               "label": "<span class=\"li-start-new-application\">Start new application</span>",
+               "style": "primary",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {},
+          "remoteActionProcess": {
+               "post": "$ext.dynamicStepper"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltDashboardSteps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "$global.attr(Citizenship_Employment_title);"
+                    },
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "openAccounts"
+                    },
+                    {
+                         "field": "$global.attr(showCartView);",
+                         "value": "new"
+                    },
+                    {
+                         "field": "$global.attr(typeOfApplication);",
+                         "value": "new"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "what type of product are you looking for?"
+                    },
+                    {
+                         "field": "$global.attr(sessionid);",
+                         "value": "@mathjs{round(random() * 1000000000000)};"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "default"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltDashboardCardView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_application_fetch_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltDashboardCardView+startanewapplicationbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltDashboardCardView+startanewapplicationbtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "d39f794ecee41bf6eb1cdce10da28a0e61c193a9c1e90357fbe0684f565638f3"
+}

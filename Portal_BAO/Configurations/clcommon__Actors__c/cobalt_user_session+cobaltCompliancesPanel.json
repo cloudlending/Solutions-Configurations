@@ -1,0 +1,69 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(oao__Ineligible_Business_Compliance__c);",
+                              "field": "$global.attr(eligibleContent);"
+                         },
+                         {
+                              "value": "$this.attr(oao__Marijuana_Compliance__c);",
+                              "field": "$global.attr(marijuanaContent);"
+                         },
+                         {
+                              "value": "$this.attr(oao__Gambling_Compliance__c);",
+                              "field": "$global.attr(gamblingContent);"
+                         },
+                         {
+                              "value": "@mathjs{$this.attr(oao__Account_Activity_Page__c);==true?true:$this.attr(oao__Cash_Questions__c);==true?true:$this.attr(oao__Wire_Questions__c);==true?true:$this.attr(oao__Check_Questions__c);==true?true:$this.attr(oao__ATM_Questions__c);==true?true:$this.attr(oao__ACH_Questions__c);==true?true:false};",
+                              "field": "$global.attr(accountActivity);"
+                         },
+                         {
+                              "value": "$this.attr(oao__Backup_Withholding_Compliance__c);",
+                              "field": "$global.attr(backupWithholding);"
+                         },
+                         {
+                              "value": "$this.attr(oao__Referred_When_Compliance_Violated__c);",
+                              "field": "$global.attr(referredWhenComplianceViolated);"
+                         },
+                         {
+                              "value": "@mathjs{ $this.attr(oao__Employment_Question__c); and not $this.attr(oao__Citizenship_Question__c); ? \"Employment Information\" : not $this.attr(oao__Employment_Question__c); and $this.attr(oao__Citizenship_Question__c); ? \"Citizenship Status\" : $this.attr(oao__Employment_Question__c); and $this.attr(oao__Citizenship_Question__c); ? \"Employment & Citizenship\" : \"\" };",
+                              "field": "$global.attr(Citizenship_Employment_title);"
+                         },
+                         {
+                              "value": "@mathjs{ $this.attr(oao__Employment_Question__c); and not $this.attr(oao__Citizenship_Question__c); ? \"Please enter your Employment Information below:\" : not $this.attr(oao__Employment_Question__c); and $this.attr(oao__Citizenship_Question__c); ? \"Please enter your Citizenship Status below:\" : $this.attr(oao__Employment_Question__c); and $this.attr(oao__Citizenship_Question__c); ? \"Please enter your Citizenship Status and Employment Information below:\" : \"\" };",
+                              "field": "$global.attr(citizenship_employment_subtitle);"
+                         },
+                         {
+                              "value": true,
+                              "field": "$global.attr(loadSteps);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": false,
+               "fieldColumns": 1
+          },
+          "property": {
+               "structureName": "cobalt_compliances_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltCompliancesPanel",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltCompliancesPanel",
+     "clcommon__Release_Checksum__c": "6a2e901aea1628c2fec87b52d58d4cc17dac5fc5dcfaeb867fa7f4075ce4ae4c"
+}

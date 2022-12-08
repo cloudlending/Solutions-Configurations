@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "shopping_cart",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "shopping_cart",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "label": "shopping_cart",
+               "style": "iconic"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "cobaltCartViewPopup"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Shopping Cart"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltStepperTitlePanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_cart_details_existing",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltStepperTitlePanel+shopping_cart",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltStepperTitlePanel+shopping_cart+COMPONENT",
+     "clcommon__Release_Checksum__c": "d8229af6603f5312b6e569c0d0ee2077a45b2af32db11218dde68b0c80cb985d"
+}

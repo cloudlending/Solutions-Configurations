@@ -1,0 +1,54 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "editExistingApplication",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "editExistingApplication",
+          "property": {},
+          "appearance": {
+               "label": "Edit existing application",
+               "variant": "outlined",
+               "style": "primary"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "personalInfo"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Personal information: Contact info"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "personalinfocontactUs"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltNewExistingApplicationPanel"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltNewExistingApplicationPanel+editExistingApplication",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltNewExistingApplicationPanel+editExistingApplication+COMPONENT",
+     "clcommon__Release_Checksum__c": "295e8c4f3635ccf0b49f86af9ea2233687150616c577612994be5e6f75d568dc"
+}

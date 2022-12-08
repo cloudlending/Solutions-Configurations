@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "mailingaddressdiffebtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "mailingaddressdiffebtn",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(showPersonalInfoMailingAddress); == false",
+               "label": "My mailing address is different",
+               "style": "secondary",
+               "position": "top-left"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(showPersonalInfoMailingAddress);",
+                         "value": true
+                    },
+                    {
+                         "field": "$this.attr(MailingStreet);",
+                         "value": null
+                    },
+                    {
+                         "field": "$this.attr(MailingCity);",
+                         "value": null
+                    },
+                    {
+                         "field": "$this.attr(MailingStateCode);",
+                         "value": null
+                    },
+                    {
+                         "field": "$this.attr(MailingPostalCode);",
+                         "value": null
+                    }
+               ],
+               "actions": []
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalInformationContactUsMailingAddressPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_mailing_address_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltPersonalInformationContactUsMailingAddressPanel+mailingaddressdiffebtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalInformationContactUsMailingAddressPanel+mailingaddressdiffebtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "e4b78ca0d93a02a413e017a4a64572326d30b2e336cc89f43c8306e54c1d3447"
+}

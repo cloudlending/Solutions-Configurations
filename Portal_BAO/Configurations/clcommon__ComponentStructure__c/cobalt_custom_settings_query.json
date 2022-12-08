@@ -1,0 +1,77 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_custom_settings_query",
+     "clcommon__Allow_Guest_User_Access__c": true,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "cobalt_custom_settings_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_custom_settings_query",
+          "tableName": "oao__cobalt_custom_settings__c",
+          "whereClause": {
+               "freeForm": "id!=null"
+          },
+          "sections": [
+               {
+                    "id": "92c53f11-7467-434a-9130-27abebe8a2ea",
+                    "name": "BAO Custom Settings",
+                    "fields": [
+                         {
+                              "id": "b14980be-53d0-41e2-9c8c-9ade7475a6d4",
+                              "fieldName": "oao__Company_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Company Name",
+                                   "ariaLabel": "Company Name"
+                              }
+                         },
+                         {
+                              "id": "04c56d83-0032-4520-ba63-91e5ba076ff4",
+                              "fieldName": "oao__Allow_Guarantor_To_Create_Application__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Allow Guarantor To Create Application",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Allow Guarantor To Create Application"
+                              }
+                         },
+                         {
+                              "id": "e551687c-a418-4dbb-8f05-8985511ae14b",
+                              "fieldName": "oao__Enable_Redirect_To_Open_Account__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Enable Redirect To Open Account",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Enable Redirect To Open Account"
+                              }
+                         },
+                         {
+                              "id": "ff1112af-0403-4c9b-8736-b04454ae4eea",
+                              "fieldName": "oao__Enable_ZipCode_Disclosure__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Enable ZipCode Disclosure",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Enable ZipCode Disclosure"
+                              }
+                         },
+                         {
+                              "id": "02b7f9da-b2dc-4243-a3a0-fa575076da19",
+                              "fieldName": "oao__Enable_State_Disclosure__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Enable State Disclosure",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Enable State Disclosure"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_custom_settings_query",
+     "clcommon__Release_Checksum__c": "aea3f0d6439b118b011d3b5d490556955654cad21a1da6fece4b2e9b3044ef6f"
+}

@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToDocUpload",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "goToDocUpload",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [],
+               "actions": []
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "documentupload"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Document Upload"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "documentupload"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessOwnerCertificationPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_benificial_consent_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltBusinessOwnerCertificationPanel+goToDocUpload",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessOwnerCertificationPanel+goToDocUpload+COMPONENT",
+     "clcommon__Release_Checksum__c": "7ece5f49906e5869715e4be57aef04c59870cd8ee09c86991dc8536cf8788da0"
+}

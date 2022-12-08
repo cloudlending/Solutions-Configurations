@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "subProductBackButtton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "subProductBackButtton",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "Back",
+               "variant": "outlined",
+               "render": "$global.attr(pageName); == \"productDetails\""
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltOpenAccountsSteps).appearance(current);",
+                         "value": "previous"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "What type of product are you looking for?"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go bact to Product Type page"
+     },
+     "clcommon__Action_Order__c": 13,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+subProductBackButtton",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+subProductBackButtton+COMPONENT",
+     "clcommon__Release_Checksum__c": "51231e96091b0dfb02242123a2d64fae91d4d9e2d2c1aca7cbd7c517a45e04fb"
+}

@@ -1,0 +1,60 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addressDifferentForBusiness",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addressDifferentForBusiness",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.BillingStreet);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.BillingCity);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.BillingStateCode);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.BillingPostalCode);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Billing_Address_Second_Line__c);",
+                         "value": ""
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 7,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessInformationStreetAddressPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_business_account_billing_address_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltBusinessInformationStreetAddressPanel+addressDifferentForBusiness",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessInformationStreetAddressPanel+addressDifferentForBusiness+COMPONENT",
+     "clcommon__Release_Checksum__c": "ca845466addb0ee4883d6758037f1fcef3d7cc1d8f171ec804cae11350d5ccfc"
+}

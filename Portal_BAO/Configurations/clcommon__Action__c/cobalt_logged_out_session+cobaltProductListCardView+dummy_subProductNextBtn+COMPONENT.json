@@ -1,0 +1,54 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "dummy_subProductNextBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "dummy_subProductNextBtn",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(dummyShow); == \"true\"",
+               "label": "Dummy Next",
+               "style": "primary"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltOpenAccountsSteps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(pageTitle);",
+                         "value": "Open Accounts"
+                    },
+                    {
+                         "field": "$global.attr(currentStep);",
+                         "value": "openAccount"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltProductListCardView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_product_detail_qry",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltProductListCardView+dummy_subProductNextBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltProductListCardView+dummy_subProductNextBtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "d6dd2b5e99b5c1f4c0b8ac4835a352c7d290a580ea3ddc896d4eb2a51fdad99f"
+}

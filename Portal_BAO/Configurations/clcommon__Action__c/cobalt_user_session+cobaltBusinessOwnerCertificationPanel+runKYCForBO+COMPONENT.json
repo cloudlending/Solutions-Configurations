@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "runKYCForBO",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "runKYCForBO",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {
+               "partyId": "$global.attr(partyId);"
+          },
+          "validation": [],
+          "uploadActionArguments": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "validatePolicies"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "showSubmitAnimation": false
+          }
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessOwnerCertificationPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_benificial_consent_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.UpdateGuarantorStageApi",
+     "clcommon__Unique_Action_Name__c": "cobaltBusinessOwnerCertificationPanel+runKYCForBO",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessOwnerCertificationPanel+runKYCForBO+COMPONENT",
+     "clcommon__Release_Checksum__c": "023dfe0de92a2f788eebdd90956d93680c7acd98464963e2999826ed901e06f0"
+}

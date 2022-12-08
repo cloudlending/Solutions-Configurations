@@ -1,0 +1,84 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "submitCitizenshiphipEmplymentInfo",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "submitCitizenshiphipEmplymentInfo",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "label": "<span class=\"li-citizen-employment-next\">Next</span>",
+               "style": "primary",
+               "render": "$global.attr(pageName); == \"citizenshipEmployment\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);"
+          },
+          "remoteActionArguments": {
+               "genesis__employment_information__c": {
+                    "genesis__Phone__c": "$state(cobaltEmploymentInformation).attr(genesis__Phone__c);",
+                    "genesis__Position__c": "$state(cobaltEmploymentInformation).attr(genesis__Position__c);",
+                    "genesis__Name_of_employer__c": "$state(cobaltEmploymentInformation).attr(genesis__Name_of_employer__c);",
+                    "oao__Employer_is_different__c": "$state(cobaltEmploymentInformation).attr(oao__Employer_is_different__c);",
+                    "Id": "$global.attr(employmentId);"
+               },
+               "genesis__Applications__c": {
+                    "oao__Portal_Stage__c": "$global.attr(nextPortalStage);",
+                    "Id": "$global.attr(appId);"
+               },
+               "contact": {
+                    "genesis__Contact__r.clcommon__Country_of_Citizenship__c": "$state(cobaltEmploymentInformation).attr(genesis__Contact__r.clcommon__Country_of_Citizenship__c);",
+                    "genesis__Contact__r.clcommon__Citizenship_Status__c": "$state(cobaltEmploymentInformation).attr(genesis__Contact__r.clcommon__Citizenship_Status__c);",
+                    "Id": "$global.attr(contactId);"
+               }
+          },
+          "validation": [
+               "cobaltEmploymentInformation"
+          ],
+          "successHandler": {
+               "actions": [
+                    {
+                         "condition": "$state(cobaltEmploymentInformation).attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType); == \"PRIMARY\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "goToReferral"
+                    },
+                    {
+                         "condition": "$state(cobaltEmploymentInformation).attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType); != \"PRIMARY\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "goToReferral"
+                    },
+                    {
+                         "condition": "($state(cobaltEmploymentInformation).attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" or not $global.attr(referredWhenComplianceViolated);) and $global.attr(partyType); == \"PRIMARY\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "goToBusinessInfo"
+                    },
+                    {
+                         "condition": "($state(cobaltEmploymentInformation).attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" or not $global.attr(referredWhenComplianceViolated);) and $global.attr(partyType); != \"PRIMARY\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "updateGuarantorStage"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          }
+     },
+     "clcommon__Action_Order__c": 64,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.SaveEmploymentDetailsApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+submitCitizenshiphipEmplymentInfo",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+submitCitizenshiphipEmplymentInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "ee3d52f1aebdb79f202a90f7c9df439221d015531d0b0c52d280b81759244f17"
+}

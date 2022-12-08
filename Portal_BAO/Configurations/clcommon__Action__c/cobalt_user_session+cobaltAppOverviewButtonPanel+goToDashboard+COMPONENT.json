@@ -1,0 +1,63 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToDashboard",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "goToDashboard",
+          "property": {},
+          "appearance": {
+               "label": "GO TO DASHBOARD",
+               "style": "primary",
+               "position": "bottom-left"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltDashboardSteps).appearance(current);",
+                         "value": "dashboard"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "addons"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltDashboardPanel",
+                              "cobaltDashboardCardView"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltAppOverviewButtonPanel"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltAppOverviewButtonPanel+goToDashboard",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltAppOverviewButtonPanel+goToDashboard+COMPONENT",
+     "clcommon__Release_Checksum__c": "5dfeafb02063658ca4384ed4c847b5cf666612ee461115171dcfe153cf0e5abb"
+}

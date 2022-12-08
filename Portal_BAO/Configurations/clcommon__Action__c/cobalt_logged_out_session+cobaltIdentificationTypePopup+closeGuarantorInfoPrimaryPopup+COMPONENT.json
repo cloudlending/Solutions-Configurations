@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "closeGuarantorInfoPrimaryPopup",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "closeGuarantorInfoPrimaryPopup",
+          "property": {},
+          "appearance": {
+               "label": "Close",
+               "style": "primary",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "cobaltEmailAndIdentityDisclosurePopup"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltIdentificationTypePopup"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltIdentificationTypePopup+closeGuarantorInfoPrimaryPopup",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltIdentificationTypePopup+closeGuarantorInfoPrimaryPopup+COMPONENT",
+     "clcommon__Release_Checksum__c": "f7cacb0c6537eece6c063cfec2900668c6e0afc1130cdc8796e6a2d4d2c9308c"
+}

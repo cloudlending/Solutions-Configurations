@@ -1,0 +1,33 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderSections": {
+                    "Details": false
+               },
+               "sectionStyle": "layout",
+               "title": "<div tabIndex=\"0\" class=\"head\">Hello $global.attr(userInfo).attr(firstName);!</div><div  tabIndex=\"0\" class=\"body\">This business account portal is your connection to your business account(s). Check back daily for updates regarding the status of your application. We may also require additional information to verify your business, so please check below for any required documentation.</div>",
+               "fieldColumns": 1
+          },
+          "property": {
+               "queryName": "query1",
+               "structureName": "cobalt_document_status_check"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltDocUploadTitlePanel",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltDocUploadTitlePanel",
+     "clcommon__Release_Checksum__c": "6702afda87e35167170585cf665e468900e567921ceab36bd502cd14578bd0b8"
+}

@@ -1,0 +1,52 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "closeGuarantorInfoPrimaryPopup",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "closeGuarantorInfoPrimaryPopup",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "style": "primary",
+               "label": "Close"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(businessPersonInfo);",
+                         "value": "<div class=\"info-content\"><h3 class=\"title\">What is a Beneficial Owner?</h3><p class=\"desc\">A Beneficial Owner is an individual who ultimately owns or controls more than 25% of a company’s shares or voting rights, or otherwise exercises control over the company or its management.</p></div><div class=\"info-content\"><h3 class=\"title\">What is a Control Person?</h3><p class=\"desc\">A Control Person is an individual that has authority to enter into agreements, open bank accounts, and more on behalf of the business.</p></div>"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "cobaltEmailAndIdentityDisclosurePopup"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessPartiesInfoPopup"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltBusinessPartiesInfoPopup+closeGuarantorInfoPrimaryPopup",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessPartiesInfoPopup+closeGuarantorInfoPrimaryPopup+COMPONENT",
+     "clcommon__Release_Checksum__c": "350ae4399130ed3f44a9c63f56efcd5b4b86d807871b44f5b6e590dd5dd0f317"
+}

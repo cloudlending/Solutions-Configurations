@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessPersonConsentPageNextButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessPersonConsentPageNextButton",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "enable": "$state(cobaltBusinessOwnerCertificationPanel).attr(oao__Beneficial_Owner_Certification__c);==true",
+               "style": "primary",
+               "label": "<span class=\"li-business-parties-bo-next\">Next</span>",
+               "render": "$global.attr(pageName);==\"businesspersonconsent\" and $global.attr(partyType);!=\"PRIMARY\""
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "cobaltShortLoaderContainer"
+                    }
+               ],
+               "actions": [
+                    {
+                         "actorName": "cobaltBusinessOwnerCertificationPanel",
+                         "name": "checkboxSave"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.changeLoaderText",
+                         "value": [
+                              "Verifying your identity"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": "Clicking here will execute KYC check on your details and after successful execution of KYC you will go to the document upload page."
+     },
+     "clcommon__Action_Order__c": 56,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+businessPersonConsentPageNextButton",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+businessPersonConsentPageNextButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "38bd34c93719fe865946dc257d675fb8403a4fdc81e43d83872ba094c25c4a2b"
+}

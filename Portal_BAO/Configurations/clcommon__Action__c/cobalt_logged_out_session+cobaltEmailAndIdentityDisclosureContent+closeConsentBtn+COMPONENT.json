@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "closeConsentBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "closeConsentBtn",
+          "property": {},
+          "appearance": {
+               "label": "Close",
+               "style": "primary",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "cobaltEmailAndIdentityDisclosurePopup"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltEmailAndIdentityDisclosureContent"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltEmailAndIdentityDisclosureContent+closeConsentBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltEmailAndIdentityDisclosureContent+closeConsentBtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "d41c145d01274cdfe689b27f248a1468c620b56fd7dfab90d64f3c19f3a5abb2"
+}

@@ -1,0 +1,58 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "documentResubmit",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "documentResubmit",
+          "property": {},
+          "appearance": {
+               "label": "cloud_upload",
+               "render": "$this.attr(clcommon__Status__c); == \"SUBMITTED\"",
+               "style": "iconic",
+               "variant": "outlined"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(docCatId);",
+                         "value": "$this.attr(id);"
+                    },
+                    {
+                         "field": "$global.attr(parentDocId);",
+                         "value": "$this.attr(clcommon__Parent_Document_Category__r.Id);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "cobaltReUploadDocumentContainer"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to re-pload the document"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltDocUploadPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_fetch_document_category",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltDocUploadPanel+documentResubmit",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltDocUploadPanel+documentResubmit+RECORD",
+     "clcommon__Release_Checksum__c": "36ae6f2ced86b75d56289ee87a8672a20b8b4bf62389821747dce228ea4138aa"
+}

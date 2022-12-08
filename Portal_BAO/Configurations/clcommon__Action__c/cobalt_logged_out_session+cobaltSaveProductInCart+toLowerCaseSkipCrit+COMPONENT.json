@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "toLowerCaseSkipCrit",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "toLowerCaseSkipCrit",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "label": "addMoreProducts",
+               "style": "normal",
+               "position": "top-right"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(skipcrit);",
+                         "value": "true"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltSaveProductInCart"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_save_product",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltSaveProductInCart+toLowerCaseSkipCrit",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltSaveProductInCart+toLowerCaseSkipCrit+COMPONENT",
+     "clcommon__Release_Checksum__c": "af78b58b97417987c1528adf33d1817c0b24125318de70b6f09d0cba5e1bf987"
+}

@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "fundingLaterButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "fundingLaterButton",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "variant": "outlined",
+               "label": "<span class=\"li-funding-next-button\">Fund Later</span>",
+               "style": "primary",
+               "render": "$global.attr(pageName); == \"fundingAccount\""
+          },
+          "remoteActionArguments": {
+               "appId": "$global.attr(appId);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "fundingLater"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": []
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to Fund Later"
+     },
+     "clcommon__Action_Order__c": 70,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.FundLaterApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+fundingLaterButton",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+fundingLaterButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "9257446de2e817693b632987e9245242fb497a69a0524b215897395a6a440a29"
+}

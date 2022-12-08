@@ -1,0 +1,31 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": false,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "idenId": "$state(cobaltPersonalIdenitityDetailsPanel).attr(identificationType);"
+               },
+               "structureName": "cobalt_identification_type_map_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltPersonalInformationIdPanel",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalInformationIdPanel",
+     "clcommon__Release_Checksum__c": "78cd9d36ec31e62d462918a4780f3ba3d01111cd77b620eb36a6a5c49e661b1f"
+}

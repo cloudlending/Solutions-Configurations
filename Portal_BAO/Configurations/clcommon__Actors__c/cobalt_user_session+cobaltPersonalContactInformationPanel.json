@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{ $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c); ? \"CitizenshipAndEmployment\" : \"BOCertificationPrimary\" };",
+                              "field": "$global.attr(updatePortalStage);"
+                         }
+                    ]
+               },
+               "fieldChange": {
+                    "ints__Social_Security_Number__c": {
+                         "assignments": [
+                              {
+                                   "value": "$this.attr(ints__Social_Security_Number__c, masked, 'x|*|***-**-xxxx');",
+                                   "field": "$this.attr(ints__Social_Security_Number__c);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "structureName": "cobalt_contact_ssn_birthdate_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltPersonalContactInformationPanel",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalContactInformationPanel",
+     "clcommon__Release_Checksum__c": "fa8cfa4d42e1701b67e15a369f55414e373762a3db0cb41a685e05f02b8ffbb9"
+}

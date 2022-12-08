@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "showBusinessStreetAddressbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "showBusinessStreetAddressbtn",
+          "property": {},
+          "appearance": {
+               "style": "secondary",
+               "render": "$global.attr(showBusinessStreetAddress); == false",
+               "position": "top-right",
+               "label": "Show second address line",
+               "enable": "$global.attr(lockBusinessDetails);==false"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(showBusinessStreetAddress);",
+                         "value": true
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessInformationStreetAddressPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_business_account_billing_address_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltBusinessInformationStreetAddressPanel+showBusinessStreetAddressbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessInformationStreetAddressPanel+showBusinessStreetAddressbtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "ad03fb2227e44c454a06ff25ecdc8a6736c5b2eee58e829d24d2dca7d8abdd07"
+}

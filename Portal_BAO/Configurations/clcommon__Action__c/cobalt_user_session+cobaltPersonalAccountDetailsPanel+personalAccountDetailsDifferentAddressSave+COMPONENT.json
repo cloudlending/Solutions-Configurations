@@ -1,0 +1,75 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "personalAccountDetailsDifferentAddressSave",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "personalAccountDetailsDifferentAddressSave",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "label": "Account Save Next"
+          },
+          "remoteActionArguments": {
+               "BillingStateCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStateCode);",
+               "ShippingPostalCode": "$state(cobaltPersonalInformationContactUsMailingAddressPanel).attr(MailingPostalCode);",
+               "BillingCity": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCity);",
+               "BillingCountryCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherCountryCode);",
+               "Name": "$this.attr(Name);",
+               "Phone": "$state(cobaltPersonalInformationContactUsNamePanel).attr(MobilePhone);",
+               "ShippingStateCode": "$state(cobaltPersonalInformationContactUsMailingAddressPanel).attr(MailingStateCode);",
+               "ShippingStreet": "$state(cobaltPersonalInformationContactUsMailingAddressPanel).attr(MailingStreet);",
+               "BillingPostalCode": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherPostalCode);",
+               "ShippingCountryCode": "$state(cobaltPersonalInformationContactUsMailingAddressPanel).attr(MailingCountryCode);",
+               "oao__Billing_Address_Second_Line__c": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(oao__Other_Address_Second_Line__c);",
+               "ShippingCity": "$state(cobaltPersonalInformationContactUsMailingAddressPanel).attr(MailingCity);",
+               "clcommon__Email__c": "$state(cobaltPersonalInformationContactUsNamePanel).attr(Email);",
+               "oao__Shipping_Address_Second_Line__c": "$state(cobaltPersonalInformationContactUsMailingAddressPanel).attr(oao__Mailing_Address_Second_Line__c);",
+               "BillingStreet": "$state(cobaltPersonalInformationContactUsStreetAddressPanel).attr(OtherStreet);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltPersonalInfoSteps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Personal information: Identification"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "personalinfoidentity"
+                    },
+                    {
+                         "field": "$global.attr(accId);",
+                         "value": "$state(cobaltPersonalInformationContactUsNamePanel).attr(Account.Id);"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "save",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalAccountDetailsPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_account_details_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltPersonalAccountDetailsPanel+personalAccountDetailsDifferentAddressSave",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalAccountDetailsPanel+personalAccountDetailsDifferentAddressSave+COMPONENT",
+     "clcommon__Release_Checksum__c": "e57cae93eaa579fe808e16ef759a12770b61545fa738f9e5e882611a8dc0d99b"
+}

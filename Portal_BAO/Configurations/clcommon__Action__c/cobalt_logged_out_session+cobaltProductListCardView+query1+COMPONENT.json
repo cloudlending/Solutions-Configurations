@@ -1,0 +1,41 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "query1",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "query1",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "normal",
+               "label": "GetProductDetailsApi"
+          },
+          "remoteActionArguments": {
+               "productType": "$global.attr(productType);",
+               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "query",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltProductListCardView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_product_detail_qry",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.GetProductDetailsApi",
+     "clcommon__Unique_Action_Name__c": "cobaltProductListCardView+query1",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltProductListCardView+query1+COMPONENT",
+     "clcommon__Release_Checksum__c": "2b950022bb077d4539700077bc6860334b92cad79b4cf03fb643d4bf9d7fc516"
+}

@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": true,
+                              "field": "$global.attr(loadProducts);"
+                         },
+                         {
+                              "value": "State",
+                              "field": "$global.attr(stateAndZipTitle);"
+                         },
+                         {
+                              "value": "Zip Code",
+                              "field": "$global.attr(stateAndZipTitle);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderSections": {
+                    "BAO Custom Settings": false
+               },
+               "sectionStyle": "layout",
+               "fieldColumns": 1
+          },
+          "property": {
+               "structureName": "cobalt_custom_settings_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltGuestCustomSettingsPanel",
+     "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltGuestCustomSettingsPanel",
+     "clcommon__Release_Checksum__c": "b9309fded49dcc2c833f53690f44e74138270f4fdee498251a94b8cc9de617c6"
+}

@@ -1,0 +1,66 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_personal_info_portal_field2",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "cobalt_personal_info_portal_field2",
+     "clcommon__data__c": {
+          "structureName": "cobalt_personal_info_portal_field2",
+          "sections": [
+               {
+                    "id": "46342934-fdc9-418f-afba-fd7p8be5139f",
+                    "name": "Details",
+                    "fields": [
+                         {
+                              "id": "c4e9aa7c-60fasdfasdfasdf0sd65-4f63-8169-1cec8f094329",
+                              "fieldName": "Birthdate",
+                              "fieldUi": {
+                                   "fieldType": "date",
+                                   "label": "Birthdate",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$age",
+                                             "age": {
+                                                  "minAge": 18,
+                                                  "maxAge": 100
+                                             },
+                                             "message": "Your age must be between 18 to 100 years to apply"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Birthdate is required"
+                                   },
+                                   "ariaLabel": "Birthdate"
+                              }
+                         },
+                         {
+                              "id": "c7bf070c-5253-48aa-basdfasdfcpc-cd3eab77d1cc",
+                              "fieldName": "genesis__Date_of_Issuance__c",
+                              "fieldUi": {
+                                   "fieldType": "date",
+                                   "label": "Date of Issuance",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Date_of_Issuance__c);>=$state(cobaltPersonalInformationIdentificationPortalFieldPanel).attr(Birthdate);",
+                                             "message": "Date of Issuance cannot be prior to your Birthdate"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Date of Issuance is invalid"
+                                   },
+                                   "ariaLabel": "Date of Issuance"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_personal_info_portal_field2",
+     "clcommon__Release_Checksum__c": "f0df1bc85e8b133d661b6af8980fa1fb7ee24cb2111ade72af01487026cd0f3f"
+}

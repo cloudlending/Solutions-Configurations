@@ -1,0 +1,79 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "productAddToCartBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "productAddToCartBtn",
+          "property": {},
+          "appearance": {
+               "render": "$this.attr(oao__IsSelected__c);==false",
+               "variant": "outlined",
+               "label": "<span class=\"li-add-to-cart\">Add to cart</span>",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "term": "$this.attr(oao__Product_Term__c);",
+               "productName": "$this.attr(oao__Title__c);",
+               "productId": "$this.attr(oao__Product_Id__c);",
+               "sessionId": "$global.attr(sessionid);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(redirect);",
+                         "value": false
+                    },
+                    {
+                         "field": "$this.attr(oao__IsSelected__c);",
+                         "value": "$result.attr(isSelected);"
+                    },
+                    {
+                         "field": "$global.attr(productName);",
+                         "value": "$this.attr(oao__Title__c);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltCartViewNewApp",
+                              "cobaltNewAppStepperTitlePanel"
+                         ]
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$result.attr(saveProduct);==\"Multi Select is not allowed for this product\"",
+                         "actorName": "cobaltProductListCardView",
+                         "name": "dummyProductNotAllowed"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": []
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to add this product to cart"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltProductListCardView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_product_detail_qry",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": "oao.SaveProductInCartApi",
+     "clcommon__Unique_Action_Name__c": "cobaltProductListCardView+productAddToCartBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltProductListCardView+productAddToCartBtn+RECORD",
+     "clcommon__Release_Checksum__c": "03f922d6c1cc7e5cd01dd489d6fd73d15810219c58947f1d89c79c346058059a"
+}

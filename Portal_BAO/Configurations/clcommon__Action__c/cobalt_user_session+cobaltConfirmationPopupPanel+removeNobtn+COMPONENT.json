@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "removeNobtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "removeNobtn",
+          "property": {},
+          "appearance": {
+               "label": "Cancel",
+               "style": "primary",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "cobaltConfirmationPopup"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltConfirmationPopupPanel"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltConfirmationPopupPanel+removeNobtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltConfirmationPopupPanel+removeNobtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "1aa1f6855f8003b145caa416925e871b8f5342e864b7aa07fb335897ac17927f"
+}

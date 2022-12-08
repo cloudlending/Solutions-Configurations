@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "updates": [
+                         {
+                              "value": [
+                                   "cobaltPartiesSummaryListView"
+                              ],
+                              "name": "$nav.reloads.add;"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderFields": {
+                    "oao__CLProduct__r.Id": false
+               },
+               "render": "$state(cobaltAddonsFromApplictionListView).count();==0",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editableFields": {
+                    "Name": false
+               },
+               "editable": true,
+               "summary": {
+                    "prefixSpan": "1"
+               },
+               "title": "<span tabIndex=\"0\">Select additional business solutions you'd like to learn more about:</span>"
+          },
+          "property": {
+               "structureName": "cobalt_add_ons_view"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltAddOnsListView",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltAddOnsListView",
+     "clcommon__Release_Checksum__c": "0ad5be6c1f1aa1443fc96a7f72085698717bc12923558ce9a2a1f6a0313aa857"
+}

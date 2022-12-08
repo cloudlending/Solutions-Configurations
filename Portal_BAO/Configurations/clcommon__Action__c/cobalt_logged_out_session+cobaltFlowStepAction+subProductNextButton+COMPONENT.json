@@ -1,0 +1,63 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "subProductNextButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "subProductNextButton",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "label": "<span class=\"lo-product-details-next\">Next</span>",
+               "style": "primary",
+               "enable": "$state(cobaltCartView).count();>0",
+               "render": "$global.attr(currentStep);==\"productDetails\""
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltOpenAccountsSteps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(pageTitle);",
+                         "value": "Open Accounts"
+                    },
+                    {
+                         "field": "$global.attr(currentStep);",
+                         "value": "openAccount"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "cobaltSelectedAccountView"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go to the Open Accounts page"
+     },
+     "clcommon__Action_Order__c": 9,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+subProductNextButton",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltFlowStepAction+subProductNextButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "fe4491f44219291697ecd15bfa579ce1dea91e4c3bad499f4851e0d404d42213"
+}

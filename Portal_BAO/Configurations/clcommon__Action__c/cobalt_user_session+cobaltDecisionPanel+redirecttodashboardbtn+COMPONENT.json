@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "redirecttodashboardbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "redirecttodashboardbtn",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "position": "top-right",
+               "style": "normal",
+               "label": "Redirect to dashboard"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltDescisionStep).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(appId);",
+                         "value": "$this.attr(genesis__Application__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(businessAccountId);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Account__r.Id);"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltDecisionPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_application_fetch_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltDecisionPanel+redirecttodashboardbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltDecisionPanel+redirecttodashboardbtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "d45cfc489c07dab691c40e0889dcdd9957e3daf92cbb66fa992b10e469cd0216"
+}

@@ -1,0 +1,77 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "submitCitizenship",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "submitCitizenship",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "label": "<span class=\"li-citizen-employment-next\">Next</span>",
+               "style": "primary",
+               "render": "$global.attr(pageName); == \"citizenshipEmployment\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and not $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "oao__Portal_Stage__c": "$global.attr(nextPortalStage);",
+                    "Id": "$global.attr(appId);"
+               },
+               "contact": {
+                    "genesis__Contact__r.clcommon__Country_of_Citizenship__c": "$state(cobaltEmploymentInformation).attr(genesis__Contact__r.clcommon__Country_of_Citizenship__c);",
+                    "genesis__Contact__r.clcommon__Citizenship_Status__c": "$state(cobaltEmploymentInformation).attr(genesis__Contact__r.clcommon__Citizenship_Status__c);",
+                    "Id": "$global.attr(contactId);"
+               }
+          },
+          "validation": [
+               "cobaltEmploymentInformation"
+          ],
+          "successHandler": {
+               "actions": [
+                    {
+                         "condition": "$state(cobaltEmploymentInformation).attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType); == \"PRIMARY\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "goToReferral"
+                    },
+                    {
+                         "condition": "$state(cobaltEmploymentInformation).attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType); != \"PRIMARY\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "goToReferral"
+                    },
+                    {
+                         "condition": "($state(cobaltEmploymentInformation).attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" or not $global.attr(referredWhenComplianceViolated);) and $global.attr(partyType); == \"PRIMARY\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "goToBusinessInfo"
+                    },
+                    {
+                         "condition": "($state(cobaltEmploymentInformation).attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" or not $global.attr(referredWhenComplianceViolated);) and $global.attr(partyType); != \"PRIMARY\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "updateGuarantorStage"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          }
+     },
+     "clcommon__Action_Order__c": 65,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.SaveEmploymentDetailsApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+submitCitizenship",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+submitCitizenship+COMPONENT",
+     "clcommon__Release_Checksum__c": "0f9c54dd8e6d026a3689be7b5d1a205ee59c4bbbe262da25856564900e1ad9a9"
+}

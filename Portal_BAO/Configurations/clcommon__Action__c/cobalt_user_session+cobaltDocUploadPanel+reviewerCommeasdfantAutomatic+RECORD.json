@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "reviewerCommeasdfantAutomatic",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "reviewerCommeasdfantAutomatic",
+          "property": {},
+          "appearance": {
+               "label": "Blank",
+               "render": "$this.attr(oao__Reviewer_Comments__c);!=\"\" and $this.attr(oao__Reviewer_Comments__c);!=null and $this.attr(oao__Reviewer_Comments__c);!=undefined",
+               "style": "primary"
+          },
+          "automatic": true,
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$this.attr(oao__Reviewer_Comments__c);",
+                         "value": "Declined reason: $this.attr(oao__Reviewer_Comments__c);"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltDocUploadPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_fetch_document_category",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltDocUploadPanel+reviewerCommeasdfantAutomatic",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltDocUploadPanel+reviewerCommeasdfantAutomatic+RECORD",
+     "clcommon__Release_Checksum__c": "d27df838b5c813d3b9baaf62f2416c9a88392c139de9f09471b93c8691e89e19"
+}

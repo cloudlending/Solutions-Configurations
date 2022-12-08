@@ -1,0 +1,79 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "productTypeViewAction",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "productTypeViewAction",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "<span class=\"li-product-type\">View $this.attr(Name);</span>"
+          },
+          "remoteActionArguments": {},
+          "remoteActionProcess": {
+               "post": "$ext.dynamicStepper"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(productType);",
+                         "value": "$this.attr(Name);"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "$this.attr(Name);"
+                    },
+                    {
+                         "field": "$nav(cobaltOpenAccountsSteps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(retainProductType);",
+                         "value": "$this.attr(Name);"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "productDetails"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "default"
+                         ]
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltProductListCardView"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltProductTypeListCardView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_product_type_list",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltProductTypeListCardView+productTypeViewAction",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltProductTypeListCardView+productTypeViewAction+RECORD",
+     "clcommon__Release_Checksum__c": "278c17e3be0ecec4b9c38678af99e0cdc4013866ab5a711042db5e1c7eab661f"
+}

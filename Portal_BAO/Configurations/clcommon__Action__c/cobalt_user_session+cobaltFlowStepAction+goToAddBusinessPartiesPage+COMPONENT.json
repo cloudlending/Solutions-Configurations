@@ -1,0 +1,90 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToAddBusinessPartiesPage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "goToAddBusinessPartiesPage",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(executeAPI);",
+                         "value": false
+                    },
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "addbusinessperson"
+                    },
+                    {
+                         "field": "$nav(cobaltAddBusinessPersonsListView).appearance(render);",
+                         "value": "@mathjs{$global.attr(businessCategory);==\"Sole Proprietorship\"?false:true};"
+                    },
+                    {
+                         "field": "$nav(cobaltAddBusinessPersonsForSolePropListView).appearance(render);",
+                         "value": "@mathjs{$global.attr(businessCategory);==\"Sole Proprietorship\"?true:false};"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "@mathjs{$global.attr(businessCategory);==\"Sole Proprietorship\"?\"Add Authorized Signers\":\"Add Business Parties\"};"
+                    },
+                    {
+                         "field": "$global.attr(businessPartiesText);",
+                         "value": "@mathjs{$global.attr(businessCategory);==\"Sole Proprietorship\"?\"If you would like to add any additional Authorized Signers, please click the <strong>Add Authorized Signers</strong> button below.\":\"If you would like to add any additional Authorized Signers, Beneficial Owners, and Control Persons, please click the <strong>Add Business Parties</strong> button below.\"};"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "addbusinessperson"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "businessInfoComplete"
+                         ]
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltAddBusinessPersonsListView",
+                              "cobaltPartiesSummaryListView"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          }
+     },
+     "clcommon__Action_Order__c": 38,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+goToAddBusinessPartiesPage",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+goToAddBusinessPartiesPage+COMPONENT",
+     "clcommon__Release_Checksum__c": "081e8e1281e2759161ecdbdc1b827ec15467c0a239b5baf659cb2030965ebd45"
+}

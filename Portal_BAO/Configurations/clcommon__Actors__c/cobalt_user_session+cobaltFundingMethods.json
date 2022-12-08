@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "textAfter": "$global.attr(fundingValidationMessage);",
+               "renderText": {
+                    "textAfter": "$global.attr(fundingValidationMessage);!=\"\""
+               },
+               "render": "$global.attr(pageName);==\"fundingAccount\"",
+               "grid": {
+                    "field": {
+                         "oao__Payment_Type__c": {
+                              "selectButton": {
+                                   "xs": 12,
+                                   "sm": 6
+                              }
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "structureName": "cobalt_payment_type_query",
+               "referenceWhereClause": {
+                    "oao__Payment_Type__r": {
+                         "userType": "$global.attr(userType);"
+                    }
+               }
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltFundingMethods",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFundingMethods",
+     "clcommon__Release_Checksum__c": "0b86b5badca3c124fd032bd6b60bee07d3b9312098feab68eb72764a5f166e6e"
+}

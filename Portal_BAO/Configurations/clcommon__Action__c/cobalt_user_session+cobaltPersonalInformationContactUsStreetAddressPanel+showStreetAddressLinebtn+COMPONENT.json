@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "showStreetAddressLinebtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "showStreetAddressLinebtn",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(showStreetAddress2); == false",
+               "label": "Show second address line",
+               "style": "secondary",
+               "position": "top-right"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(showStreetAddress2);",
+                         "value": true
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalInformationContactUsStreetAddressPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_address_details_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltPersonalInformationContactUsStreetAddressPanel+showStreetAddressLinebtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalInformationContactUsStreetAddressPanel+showStreetAddressLinebtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "0dbaa71f0e0c69d041d5bb7eb827ff36b43b609d10da9cbf135a77b98d130922"
+}

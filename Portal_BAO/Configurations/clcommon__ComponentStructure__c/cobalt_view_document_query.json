@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_view_document_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "clcommon__Document_Category__r.Owner.Id",
+     "clcommon__Unique_Name__c": "cobalt_view_document_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_view_document_query",
+          "tableName": "clcommon__category_attachment_association__c",
+          "whereClause": {
+               "freeForm": "clcommon__Document_Category__r.Id= ':docCatid'"
+          },
+          "orderBy": "CreatedDate DESC limit 1",
+          "sections": [
+               {
+                    "id": "033ed649-7939-40fd-bb1f-4474171644bc",
+                    "name": "Name",
+                    "fields": [
+                         {
+                              "id": "8f5834d8-4023-4a68-9b59-8c1149ee8d2c",
+                              "fieldName": "clcommon__Document_Category__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "8d117735-3bc2-4fbb-8afa-c0ff48329bab",
+                              "fieldName": "Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Category Attachment Name",
+                                   "ariaLabel": "Category Attachment Name"
+                              }
+                         },
+                         {
+                              "id": "aca84052-b8b0-4539-95f9-55c57812b3d8",
+                              "fieldName": "CreatedDate",
+                              "fieldUi": {
+                                   "fieldType": "datetime",
+                                   "label": "Created Date",
+                                   "ariaLabel": "Created Date"
+                              }
+                         },
+                         {
+                              "id": "3c8f1f6b-c02b-4f61-8931-a61388ad45e5",
+                              "fieldName": "clcommon__Document_Category__r.Owner.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Group ID",
+                                   "ariaLabel": "Group ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_view_document_query",
+     "clcommon__Release_Checksum__c": "8cf8bd538d23e050be1db94876d919223152ca503daaa985bb20037dee7c84dd"
+}

@@ -1,0 +1,71 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "arguments": [
+                                   "default"
+                              ],
+                              "value": "$ext.dynamicStepper",
+                              "field": ""
+                         },
+                         {
+                              "value": "$this.attr(Id);",
+                              "field": "$global.attr(contactId);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "accessibility": {
+                    "ariaLabel": "This section will collect the personal information such as Name, Middle Name, and Last Name where Middle Name field is only shown in the UI when you click Show Middle Name button."
+               },
+               "editableFields": {
+                    "MobilePhone": false,
+                    "LastName": false,
+                    "FirstName": false
+               },
+               "stylingClassNames": {
+                    "tertiary": {
+                         "showMiddleNamebtn": "tertiary"
+                    }
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editable": true,
+               "renderFields": {
+                    "MobilePhone": "$global.attr(partyType);!='PRIMARY'",
+                    "Email": false,
+                    "MiddleName": "$global.attr(showMiddleName); == true",
+                    "Id": false
+               },
+               "fieldColumns": 1
+          },
+          "property": {
+               "structureName": "cobalt_personal_info_details_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltPersonalInformationContactUsNamePanel",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalInformationContactUsNamePanel",
+     "clcommon__Release_Checksum__c": "20a3b4a06c7548eda7c64a6772651f06f036f503da1d6ace37552ee52f0017b3"
+}

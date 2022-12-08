@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addBusinessBackToActivityPage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addBusinessBackToActivityPage",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-additional-parties-back\">Back</span>",
+               "variant": "outlined",
+               "render": "$global.attr(pageName); == \"addbusinessperson\" and $global.attr(accountActivity);== true"
+          },
+          "remoteActionArguments": {},
+          "remoteActionProcess": {
+               "post": "$ext.dynamicStepper"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [],
+               "actions": [
+                    {
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "goToActivityPage"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go back to the Industry Code page"
+     },
+     "clcommon__Action_Order__c": 11,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+addBusinessBackToActivityPage",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+addBusinessBackToActivityPage+COMPONENT",
+     "clcommon__Release_Checksum__c": "28f5e5bc9595b6a5168fd1cc78fe47d125d2beeff49acf052fd306f8f9dc6645"
+}

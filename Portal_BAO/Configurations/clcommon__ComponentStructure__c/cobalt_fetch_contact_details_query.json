@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_fetch_contact_details_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "contactId",
+     "clcommon__Record_Access_Filter__c": "id",
+     "clcommon__Unique_Name__c": "cobalt_fetch_contact_details_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_fetch_contact_details_query",
+          "tableName": "contact",
+          "whereClause": {
+               "freeForm": "id = '$User.contactId'"
+          },
+          "sections": [
+               {
+                    "id": "91488ac5-127e-4581-a7ab-3134e72fc433",
+                    "name": "contactDetailsSection",
+                    "fields": [
+                         {
+                              "id": "a5becf7d-eafd-4215-ae50-d6332b4242d8",
+                              "fieldName": "FirstName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "First Name",
+                                   "ariaLabel": "First Name"
+                              }
+                         },
+                         {
+                              "id": "04279591-c0b1-4cdd-b3f6-a4008053718b",
+                              "fieldName": "LastName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Last Name",
+                                   "ariaLabel": "Last Name"
+                              }
+                         },
+                         {
+                              "id": "10a3cf4b-c9d5-481b-9f9d-73b531f01155",
+                              "fieldName": "Email",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Email",
+                                   "ariaLabel": "Email"
+                              }
+                         },
+                         {
+                              "id": "b6013fb5-f85a-416c-a8df-a086e219e26a",
+                              "fieldName": "MobilePhone",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Mobile Phone",
+                                   "ariaLabel": "Mobile Phone"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_fetch_contact_details_query",
+     "clcommon__Release_Checksum__c": "ac2d25019979058a3a7826c4610e7c76595c797fc88f869cd3b91f5299dc95e6"
+}

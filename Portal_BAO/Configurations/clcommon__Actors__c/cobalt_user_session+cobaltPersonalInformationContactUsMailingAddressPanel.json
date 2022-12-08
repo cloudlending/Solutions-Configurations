@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": true,
+                              "field": "$global.attr(showPersonalInfoMailingAddress);",
+                              "condition": "$this.attr(MailingStreet);!=null and $this.attr(MailingStreet);!=\"\" and $this.attr(MailingStreet);!=undefined"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "MailingCountryCode": false
+               },
+               "accessibility": {
+                    "ariaLabel": "This section will collect your mailing address."
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderSections": {
+                    "PersonalDetails": "$global.attr(showPersonalInfoMailingAddress); == true"
+               },
+               "renderFields": {
+                    "MailingCountryCode": "$global.attr(showPersonalInfoMailingAddress); == true",
+                    "MailingPostalCode": "$global.attr(showPersonalInfoMailingAddress); == true",
+                    "MailingStateCode": "$global.attr(showPersonalInfoMailingAddress); == true",
+                    "MailingCity": "$global.attr(showPersonalInfoMailingAddress); == true",
+                    "oao__Mailing_Address_Second_Line__c": "$global.attr(showmailingAddressLine2); == true and $global.attr(showPersonalInfoMailingAddress); == true",
+                    "MailingStreet": "$global.attr(showPersonalInfoMailingAddress); == true",
+                    "Account.Id": false
+               },
+               "editable": true,
+               "fieldColumns": 1
+          },
+          "property": {
+               "structureName": "cobalt_mailing_address_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltPersonalInformationContactUsMailingAddressPanel",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalInformationContactUsMailingAddressPanel",
+     "clcommon__Release_Checksum__c": "a4e2ec4fc5f4b772b26b78c661a1f0c8483e115ba8e5eebf9b68b210264c45c0"
+}

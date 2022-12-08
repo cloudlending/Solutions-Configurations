@@ -1,0 +1,127 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "continueAddBusinessPersonStep",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "continueAddBusinessPersonStep",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(accountActivity);==false and $this.attr(genesis__Application__r.oao__Portal_Stage__c);==\"BusinessInformationIndustryCode\"",
+               "label": "<span class=\"li-continue-business-person-page-btn\">Continue</span>",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "Id": "$this.attr(genesis__Application__r.Id);",
+                    "oao__Portal_Stage__c": "AccountActivity"
+               }
+          },
+          "validation": [],
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(businessAddress);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Account__r.BillingStreet);, $this.attr(genesis__Application__r.genesis__Account__r.BillingCity);, $this.attr(genesis__Application__r.genesis__Account__r.BillingState);, $this.attr(genesis__Application__r.genesis__Account__r.BillingPostalCode);, $this.attr(genesis__Application__r.genesis__Account__r.BillingCountry);"
+                    },
+                    {
+                         "field": "$global.attr(contactId);",
+                         "value": "$this.attr(clcommon__Contact__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(PositionAtCompany);",
+                         "value": "$this.attr(oao__Position_At_Company__c);"
+                    },
+                    {
+                         "field": "$global.attr(appId);",
+                         "value": "$this.attr(genesis__Application__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(appNumber);",
+                         "value": "$this.attr(genesis__Application__r.Name);"
+                    },
+                    {
+                         "field": "$global.attr(businessAccountId);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Account__r.Id);"
+                    },
+                    {
+                         "field": "$nav(cobaltDashboardSteps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "addbusinessperson"
+                    },
+                    {
+                         "field": "$global.attr(showCartView);",
+                         "value": "old"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Add Business Parties"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "addbusinessperson"
+                    },
+                    {
+                         "field": "$global.attr(typeOfApplication);",
+                         "value": "existing"
+                    },
+                    {
+                         "field": "$global.attr(partyType);",
+                         "value": "$this.attr(clcommon__Type__r.Name);"
+                    },
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": "$this.attr(id);"
+                    },
+                    {
+                         "field": "$global.attr(businessCategory);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);"
+                    },
+                    {
+                         "field": "$global.attr(isBO);",
+                         "value": "$this.attr(oao__Beneficial_Owner_Certification__c);"
+                    },
+                    {
+                         "field": "$global.attr(lockBusinessDetails);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Lock_Business_Details__c);"
+                    },
+                    {
+                         "field": "$global.attr(fundable);",
+                         "value": "$this.attr(genesis__Application__r.oao__Fundable__c);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "cobaltStepperTitlePanel"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go Add Business Person Page"
+     },
+     "clcommon__Action_Order__c": 9,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltDashboardPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_application_fetch_query",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": "oao.PortalSaveBusinessInfoApi",
+     "clcommon__Unique_Action_Name__c": "cobaltDashboardPanel+continueAddBusinessPersonStep",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltDashboardPanel+continueAddBusinessPersonStep+RECORD",
+     "clcommon__Release_Checksum__c": "0e2eafe6de7534b17ee13b86740460ef105a0507b4b108b7bc010148b225ea13"
+}

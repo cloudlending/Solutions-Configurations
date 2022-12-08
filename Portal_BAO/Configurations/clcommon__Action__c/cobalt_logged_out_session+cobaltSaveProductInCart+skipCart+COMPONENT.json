@@ -1,0 +1,63 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "skipCart",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "skipCart",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "label": "Go To Email And Identity Page",
+               "style": "normal",
+               "position": "top-right"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltDescisionStep).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "Email & Identity"
+                    },
+                    {
+                         "field": "$global.attr(pageTitle);",
+                         "value": "Email & Identity"
+                    },
+                    {
+                         "field": "$global.attr(currentStep);",
+                         "value": "emailIdentity"
+                    },
+                    {
+                         "field": "$global.attr(executed);",
+                         "value": true
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltSaveProductInCart"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_save_product",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltSaveProductInCart+skipCart",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltSaveProductInCart+skipCart+COMPONENT",
+     "clcommon__Release_Checksum__c": "6863439684db2545e35c9d99d58f1dba792e85cb95a3378d5058385ce4fe21f8"
+}

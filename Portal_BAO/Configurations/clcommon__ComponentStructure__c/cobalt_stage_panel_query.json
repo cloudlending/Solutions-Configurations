@@ -1,0 +1,303 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_stage_panel_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "accountId",
+     "clcommon__Record_Access_Filter__c": "clcommon__Account__r.Id",
+     "clcommon__Unique_Name__c": "cobalt_stage_panel_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_stage_panel_query",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "clcommon__Account__r.Id='$User.accountId' and genesis__Application__r.oao__Parent_Application__c=true and genesis__Application__r.Id=':appId'"
+          },
+          "sections": [
+               {
+                    "id": "2236af25-e91d-4716-a304-7c4db3c79dd8",
+                    "name": "Stage",
+                    "fields": [
+                         {
+                              "id": "1bd7d27b-83af-4f40-bafe-5b9e731e86bb",
+                              "fieldName": "genesis__Application__r.oao__Portal_Stage__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Portal Stage",
+                                   "selectOptions": [
+                                        {
+                                             "id": "EmailAndIdentity",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "EmailAndIdentity",
+                                             "optionValue": "EmailAndIdentity"
+                                        },
+                                        {
+                                             "id": "Addons",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Addons",
+                                             "optionValue": "Addons"
+                                        },
+                                        {
+                                             "id": "DocumentUpload",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "DocumentUpload",
+                                             "optionValue": "DocumentUpload"
+                                        },
+                                        {
+                                             "id": "PersonalInformationContactInfo",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PersonalInformationContactInfo",
+                                             "optionValue": "PersonalInformationContactInfo"
+                                        },
+                                        {
+                                             "id": "PersonalInformationIdentification",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PersonalInformationIdentification",
+                                             "optionValue": "PersonalInformationIdentification"
+                                        },
+                                        {
+                                             "id": "BusinessInformationDetails",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BusinessInformationDetails",
+                                             "optionValue": "BusinessInformationDetails"
+                                        },
+                                        {
+                                             "id": "BusinessInformationIndustryCode",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BusinessInformationIndustryCode",
+                                             "optionValue": "BusinessInformationIndustryCode"
+                                        },
+                                        {
+                                             "id": "AddBusinessPersons",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AddBusinessPersons",
+                                             "optionValue": "AddBusinessPersons"
+                                        },
+                                        {
+                                             "id": "BOCertificationPrimary",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BOCertificationPrimary",
+                                             "optionValue": "BOCertificationPrimary"
+                                        },
+                                        {
+                                             "id": "ApplicationReferred",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ApplicationReferred",
+                                             "optionValue": "ApplicationReferred"
+                                        },
+                                        {
+                                             "id": "AccountActivity",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AccountActivity",
+                                             "optionValue": "AccountActivity"
+                                        },
+                                        {
+                                             "id": "ApplicationReferredToView",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ApplicationReferredToView",
+                                             "optionValue": "ApplicationReferredToView"
+                                        }
+                                   ],
+                                   "ariaLabel": "Portal Stage"
+                              }
+                         },
+                         {
+                              "id": "c5333d81-e157-4aee-b098-c1060770e2be",
+                              "fieldName": "genesis__Application__r.genesis__Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Status",
+                                   "defaultValue": "NEW - ENTERED",
+                                   "selectOptions": [
+                                        {
+                                             "id": "APPROVED - APPROVED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - APPROVED",
+                                             "optionValue": "APPROVED - APPROVED"
+                                        },
+                                        {
+                                             "id": "APPROVED - CONVERTED TO CONTRACT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - CONVERTED TO CONTRACT",
+                                             "optionValue": "APPROVED - CONVERTED TO CONTRACT"
+                                        },
+                                        {
+                                             "id": "APPROVED - DOCUMENT CHECK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - DOCUMENT CHECK",
+                                             "optionValue": "APPROVED - DOCUMENT CHECK"
+                                        },
+                                        {
+                                             "id": "NEW - CREDIT PULLED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - CREDIT PULLED",
+                                             "optionValue": "NEW - CREDIT PULLED"
+                                        },
+                                        {
+                                             "id": "NEW - ENTERED",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "NEW - ENTERED",
+                                             "optionValue": "NEW - ENTERED"
+                                        },
+                                        {
+                                             "id": "NEW - IN CREDIT CHECK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - IN CREDIT CHECK",
+                                             "optionValue": "NEW - IN CREDIT CHECK"
+                                        },
+                                        {
+                                             "id": "NEW - IN REVIEW",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - IN REVIEW",
+                                             "optionValue": "NEW - IN REVIEW"
+                                        },
+                                        {
+                                             "id": "NEW - PRICING GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - PRICING GENERATED",
+                                             "optionValue": "NEW - PRICING GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW - SCORECARD GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - SCORECARD GENERATED",
+                                             "optionValue": "NEW - SCORECARD GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW - CHECKLIST GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - CHECKLIST GENERATED",
+                                             "optionValue": "NEW - CHECKLIST GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW-SUBMITTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW-SUBMITTED",
+                                             "optionValue": "NEW-SUBMITTED"
+                                        },
+                                        {
+                                             "id": "NEW - VEHICLE VALUATION REQUIRED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - VEHICLE VALUATION REQUIRED",
+                                             "optionValue": "NEW - VEHICLE VALUATION REQUIRED"
+                                        },
+                                        {
+                                             "id": "PULL CREDIT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PULL CREDIT",
+                                             "optionValue": "PULL CREDIT"
+                                        },
+                                        {
+                                             "id": "CLOSING DOCUMENTS GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CLOSING DOCUMENTS GENERATED",
+                                             "optionValue": "CLOSING DOCUMENTS GENERATED"
+                                        },
+                                        {
+                                             "id": "IN - PROGRESS",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "IN - PROGRESS",
+                                             "optionValue": "IN - PROGRESS"
+                                        },
+                                        {
+                                             "id": "INCOMPLETE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "INCOMPLETE",
+                                             "optionValue": "INCOMPLETE"
+                                        },
+                                        {
+                                             "id": "REFERRED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "REFERRED",
+                                             "optionValue": "REFERRED"
+                                        },
+                                        {
+                                             "id": "AWAITING SIGNERS",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AWAITING SIGNERS",
+                                             "optionValue": "AWAITING SIGNERS"
+                                        },
+                                        {
+                                             "id": "DECLINED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "DECLINED",
+                                             "optionValue": "DECLINED"
+                                        },
+                                        {
+                                             "id": "NOT STARTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NOT STARTED",
+                                             "optionValue": "NOT STARTED"
+                                        },
+                                        {
+                                             "id": "ENTERED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ENTERED",
+                                             "optionValue": "ENTERED"
+                                        },
+                                        {
+                                             "id": "APPROVED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED",
+                                             "optionValue": "APPROVED"
+                                        },
+                                        {
+                                             "id": "DOCUMENTS SUBMITTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "DOCUMENTS SUBMITTED",
+                                             "optionValue": "DOCUMENTS SUBMITTED"
+                                        },
+                                        {
+                                             "id": "REJECTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "REJECTED",
+                                             "optionValue": "REJECTED"
+                                        }
+                                   ],
+                                   "ariaLabel": "Status"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_stage_panel_query",
+     "clcommon__Release_Checksum__c": "853708fcf8e1769fd534f588bd00e3d5765692d3c3f768d6cc26e651c82d635d"
+}

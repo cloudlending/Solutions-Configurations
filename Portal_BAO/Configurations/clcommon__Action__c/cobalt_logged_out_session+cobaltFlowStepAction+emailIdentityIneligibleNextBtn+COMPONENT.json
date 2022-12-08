@@ -1,0 +1,80 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "emailIdentityIneligibleNextBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "emailIdentityIneligibleNextBtn",
+          "property": {},
+          "appearance": {
+               "enable": "$state(cobaltEmailAndIdentityLOFormPanel).attr(signerConsent); == true and $state(cobaltEmailAndIdentityLOFormPanel).attr(electronicConsent); == true and $state(cobaltEmailAndIdentityLOFormPanel).attr(myInformationConcent); == true and $state(cobaltStepperTitlePanel).count();>0 and $state(cobaltEmailAndIdentityLOFormPanel).attr(ineligibleConsent); == true",
+               "render": "$global.attr(currentStep);==\"emailIdentity\" and $global.attr(eligibleContent);==true",
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"lo-email-identity-next\">Next</span>"
+          },
+          "remoteActionArguments": {
+               "useMyInfo": "$state(cobaltEmailAndIdentityLOFormPanel).attr(myInformationConcent);",
+               "overdraftOption": false,
+               "officeCode": "$global.attr(offCode);",
+               "disclosureConsent": "$state(cobaltEmailAndIdentityLOFormPanel).attr(electronicConsent);",
+               "phone": "$state(cobaltEmailAndIdentityLOFormPanel).attr(mobilePhone);",
+               "signerConsent": "$state(cobaltEmailAndIdentityLOFormPanel).attr(signerConsent);",
+               "fName": "$state(cobaltEmailAndIdentityLOFormPanel).attr(firstName);",
+               "sessionId": "$state(cobaltSessionStorage).attr(sessionid);",
+               "timestamp": "$date('MM-DD-YYYY hh:mm:ss| ');",
+               "lName": "$state(cobaltEmailAndIdentityLOFormPanel).attr(lastName);",
+               "businessAccountName": "$state(cobaltEmailAndIdentityLOFormPanel).attr(businessAccountName);",
+               "sellerId": "$global.attr(sellerId);",
+               "isBeneficialOwner": false,
+               "inEligible": "$state(cobaltEmailAndIdentityLOFormPanel).attr(ineligibleConsent);",
+               "email": "$state(cobaltEmailAndIdentityLOFormPanel).attr(emailAddress);",
+               "promoCode": "$global.attr(promoCode);",
+               "branchId": "$global.attr(branchId);"
+          },
+          "validation": [
+               "cobaltEmailAndIdentityLOFormPanel"
+          ],
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(existingUser);",
+                         "value": "$result.attr(32z8rw6j7a);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "existingUserDecision"
+                    },
+                    {
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "sendSetPasswordEmailAfterRegistration"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to create application with above values"
+     },
+     "clcommon__Action_Order__c": 7,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.RegistrationAPI",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+emailIdentityIneligibleNextBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltFlowStepAction+emailIdentityIneligibleNextBtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "84cb02e068c068cb624cdabd17d80dfa1f628c1fd043e22e06891f45dc55e10b"
+}

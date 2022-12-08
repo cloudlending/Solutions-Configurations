@@ -1,0 +1,79 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "accountActivityPageBackButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "accountActivityPageBackButton",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-business-activity-back-to-industry-code\">Back</span>",
+               "variant": "outlined",
+               "render": "$global.attr(pageName); == \"accountActivity\""
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "businessInfo"
+                    },
+                    {
+                         "field": "$nav(cobaltBusinessInfoSteps).appearance(current);",
+                         "value": "businessinfoindustrycode"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Select the industry code that best describes your business"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "businessinfoindustrycode"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltIKnowIndustryCodePanel",
+                              "cobaltIndustryCodePanel",
+                              "cobaltBusinessIndustryPanel",
+                              "cobaltMarijuanaAndGamblingPanel",
+                              "cobaltStatusStagePanel",
+                              "cobaltWithholdingPanel",
+                              "cobaltGamblingPanel"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go back to the Industry Code Page"
+     },
+     "clcommon__Action_Order__c": 10,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+accountActivityPageBackButton",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+accountActivityPageBackButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "2673a98d30cedae7914c73b19fa393169d6e9348485a12d4115bfb70185df481"
+}

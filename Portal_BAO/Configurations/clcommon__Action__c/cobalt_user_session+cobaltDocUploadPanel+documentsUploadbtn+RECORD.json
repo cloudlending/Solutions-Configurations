@@ -1,0 +1,85 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "documentsUploadbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "documentsUploadbtn",
+          "property": {
+               "accept": "image/*,.pdf,.doc,.docx",
+               "maxSize": 5000000,
+               "multiple": false,
+               "uploadType": "document"
+          },
+          "appearance": {
+               "label": "cloud_upload",
+               "render": "$this.attr(clcommon__Status__c); == \"OPEN\" or $this.attr(clcommon__Status__c); == \"REJECTED\"",
+               "style": "iconic",
+               "variant": "outlined"
+          },
+          "remoteActionArguments": {
+               "actionType": "linkAttachment",
+               "attachmentIds": "$uploadedAttachmentId;",
+               "documentCategoryId": "$this.attr(id);",
+               "isDeleted": false
+          },
+          "uploadActionArguments": {
+               "attachmentParentId": "$this.attr(id);"
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(docCatId);",
+                         "value": "$this.attr(id);"
+                    },
+                    {
+                         "field": "$global.attr(parentDocId);",
+                         "value": "$this.attr(clcommon__Parent_Document_Category__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(docCatStatus);",
+                         "value": "$this.attr(clcommon__Status__c);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "actorName": "cobaltDocUploadPanel",
+                         "name": "documentPollingbtn"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(docCatId);",
+                         "value": "$this.attr(id);"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {
+               "uploadFailureText": "Fail to upload, please login and try again",
+               "uploadFileTooLargeError": "Upload failed, cannot upload file size greater than 5mb",
+               "uploadInvalidFileType": "The supported file type are image/*,.pdf,.doc,.docx"
+          },
+          "ariaLabel": "Click here to upload the document"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "upload",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltDocUploadPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_fetch_document_category",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": "genesis.PortalApplicationDocumentManagement",
+     "clcommon__Unique_Action_Name__c": "cobaltDocUploadPanel+documentsUploadbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltDocUploadPanel+documentsUploadbtn+RECORD",
+     "clcommon__Release_Checksum__c": "194ae072f01e3970ff17c19238f5ee7bcaf84ec9a14432e89a418a14c2663ab7"
+}

@@ -1,0 +1,40 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderFields": {
+                    "state": "$state(cobaltPersonalInformationIdPanel).attr(Name);==\"Driver's License\" or $state(cobaltPersonalInformationIdPanel).attr(Name);==\"State ID\"",
+                    "country": "$state(cobaltPersonalInformationIdPanel).attr(Name);==\"Passport\""
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "structureName": "cobalt_personal_identity_details_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltPersonalIdenitityDetailsPanel",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalIdenitityDetailsPanel",
+     "clcommon__Release_Checksum__c": "fce85c538a13ab2a69727b0843644ddc8b8acb4e79b406cc6d0d2d9e31a82864"
+}

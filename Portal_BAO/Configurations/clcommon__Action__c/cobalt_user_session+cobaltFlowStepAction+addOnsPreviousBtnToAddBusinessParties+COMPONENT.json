@@ -1,0 +1,86 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addOnsPreviousBtnToAddBusinessParties",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addOnsPreviousBtnToAddBusinessParties",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-addons-back-to-add-parties\">Back</span>",
+               "variant": "outlined",
+               "render": "$global.attr(pageName); == \"addons\" and $global.attr(BOCount);==0"
+          },
+          "remoteActionArguments": {},
+          "remoteActionProcess": {
+               "post": "$ext.dynamicStepper"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "businessInfoComplete"
+                         ]
+                    },
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "addbusinessperson"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "@mathjs{$global.attr(businessCategory);==\"Sole Proprietorship\"?\"Add Authorized Signers\":\"Add Business Parties\"};"
+                    },
+                    {
+                         "field": "$global.attr(businessPartiesText);",
+                         "value": "@mathjs{$global.attr(businessCategory);==\"Sole Proprietorship\"?\"If you would like to add any additional Authorized Signers, please click the <strong>Add Authorized Signers</strong> button below.\":\"If you would like to add any additional Authorized Signers, Beneficial Owners, and Control Persons, please click the <strong>Add Business Parties</strong> button below.\"};"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "addbusinessperson"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltAddBusinessPersonsContent",
+                              "cobaltAddBusinessPersonsListView",
+                              "cobaltPartiesSummaryListView",
+                              "cobaltPartiesConsentPanel"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go back to Add business parties page"
+     },
+     "clcommon__Action_Order__c": 9,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+addOnsPreviousBtnToAddBusinessParties",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+addOnsPreviousBtnToAddBusinessParties+COMPONENT",
+     "clcommon__Release_Checksum__c": "054e8236ad01ce8b3f6c843d7983cc3850c4b90831de8a500c4b7a78d8ab6592"
+}

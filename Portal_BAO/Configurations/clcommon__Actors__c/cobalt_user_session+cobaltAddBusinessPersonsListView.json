@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "actions": [
+                         {
+                              "name": "fetchPartyType",
+                              "actorName": "cobaltAddBusinessPersonsListView"
+                         }
+                    ]
+               },
+               "navigate": {
+                    "guarantor-info": {
+                         "updates": [
+                              {
+                                   "value": "cobaltBusinessPartiesInfoContainer",
+                                   "name": "$nav.overlay.add;"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "$global.attr(pageName); == \"addbusinessperson\" and $global.attr(businessCategory);!=\"Sole Proprietorship\"",
+               "editableFields": {
+                    "clcommon__Type__r.Name": false,
+                    "clcommon__Contact__r.Name": false
+               },
+               "renderFields": {
+                    "clcommon__Contact__r.Name": true,
+                    "clcommon__Type__r.Name": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "textBefore": "<span class=\"guarantor-person\" navigate=\"guarantor-info\">What are these business parties?</span>"
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);",
+                    "businessAccountId": "$global.attr(businessAccountId);"
+               },
+               "structureName": "cobalt_list_of_guarantors_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltAddBusinessPersonsListView",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltAddBusinessPersonsListView",
+     "clcommon__Release_Checksum__c": "98f643721d8e1c67b662e2ef4606f3292bee762ed9951df51d25a0481e5d4efa"
+}

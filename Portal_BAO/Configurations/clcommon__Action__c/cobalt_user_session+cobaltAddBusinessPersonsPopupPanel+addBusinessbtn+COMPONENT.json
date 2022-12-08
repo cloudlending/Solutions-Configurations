@@ -1,0 +1,66 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addBusinessbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addBusinessbtn",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "position": "bottom-right",
+               "label": "Add",
+               "enable": "$this.attr(authorized_signer);==true or $this.attr(control_person);==true or $this.attr(benefecial_owner);==true"
+          },
+          "remoteActionArguments": {
+               "PositionAtCompany": "$this.attr(positionAtCompany);",
+               "LastName": "$this.attr(lastName);",
+               "authorized_signer": "$this.attr(authorized_signer);",
+               "PercentageOwnership": "$this.attr(percentageOwnership);",
+               "control_person": "$this.attr(control_person);",
+               "PhoneNumber": "$this.attr(Phone_number);",
+               "EmailAddress": "$this.attr(emailAddress);",
+               "FirstName": "$this.attr(firstName);",
+               "appId": "$global.attr(appId);",
+               "benefecial_owner": "$this.attr(benefecial_owner);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(isExisting);",
+                         "value": "$result.attr(32z8rw6j7a);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "actorName": "cobaltAddBusinessPersonsPopupPanel",
+                         "name": "UpdateOwnerInDocCategory"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          }
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltAddBusinessPersonsPopupPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_add_new_guarantors",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.AddGuarantorApi",
+     "clcommon__Unique_Action_Name__c": "cobaltAddBusinessPersonsPopupPanel+addBusinessbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltAddBusinessPersonsPopupPanel+addBusinessbtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "406d8d506eff7a6455e4f727693670ca530159f7365577cf658e4214764ca56e"
+}

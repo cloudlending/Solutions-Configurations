@@ -1,0 +1,72 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "submitEmplymentInfo",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "submitEmplymentInfo",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "label": "<span class=\"li-citizen-employment-next\">Next</span>",
+               "style": "primary",
+               "render": "$global.attr(pageName); == \"citizenshipEmployment\" and not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);"
+          },
+          "remoteActionArguments": {
+               "genesis__employment_information__c": {
+                    "genesis__Phone__c": "$state(cobaltEmploymentInformation).attr(genesis__Phone__c);",
+                    "genesis__Position__c": "$state(cobaltEmploymentInformation).attr(genesis__Position__c);",
+                    "genesis__Name_of_employer__c": "$state(cobaltEmploymentInformation).attr(genesis__Name_of_employer__c);",
+                    "oao__Employer_is_different__c": "$state(cobaltEmploymentInformation).attr(oao__Employer_is_different__c);",
+                    "Id": "$global.attr(employmentId);"
+               },
+               "genesis__Applications__c": {
+                    "oao__Portal_Stage__c": "$global.attr(nextPortalStage);",
+                    "Id": "$global.attr(appId);"
+               },
+               "contact": {
+                    "Id": "$global.attr(contactId);"
+               }
+          },
+          "validation": [
+               "cobaltEmploymentInformation"
+          ],
+          "successHandler": {
+               "actions": [
+                    {
+                         "condition": "$global.attr(partyType); == \"PRIMARY\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "goToBusinessInfo"
+                    },
+                    {
+                         "condition": "$global.attr(partyType); != \"PRIMARY\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "updateGuarantorStage"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          }
+     },
+     "clcommon__Action_Order__c": 66,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.SaveEmploymentDetailsApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+submitEmplymentInfo",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+submitEmplymentInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "7822532a9e329ce73ec60a2154cf23cfee6f57ed9ea7ebc0a0555a5c0851bf27"
+}

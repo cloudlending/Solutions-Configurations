@@ -1,0 +1,63 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "redirectToOpenAccount",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "redirectToOpenAccount",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "normal",
+               "label": "redirectToOpenAccount",
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltOpenAccountsSteps).appearance(current);",
+                         "value": "openAccount"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Open Accounts"
+                    },
+                    {
+                         "field": "$global.attr(currentStep);",
+                         "value": "openAccount"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "openAccount"
+                    },
+                    {
+                         "field": "$global.attr(openAccountTab);",
+                         "value": ""
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltNewAppStepperTitlePanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_cart_content",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltNewAppStepperTitlePanel+redirectToOpenAccount",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltNewAppStepperTitlePanel+redirectToOpenAccount+COMPONENT",
+     "clcommon__Release_Checksum__c": "6c4ca9dfe5ce5cb21586791bdad15d5698608112e57b3f366d80fbcc96c99f0a"
+}

@@ -1,0 +1,71 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "fundingAccountNextButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "fundingAccountNextButton",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "variant": "primary",
+               "label": "<span class=\"li-funding-next-button\">Next</span>",
+               "style": "primary",
+               "render": "$global.attr(pageName); == \"fundingAccount\""
+          },
+          "remoteActionArguments": {
+               "appId": "$global.attr(appId);",
+               "paymentType": "$state(cobaltFundingMethods).attr(oao__Payment_Type__r).attr(Name);",
+               "products": "$state(cobaltFundingListView);"
+          },
+          "validation": [
+               "cobaltFundingListView",
+               "cobaltFundingMethods"
+          ],
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "@mathjs{$result.attr(status);==\"Funded\"?\"fundingSuccess\":$result.attr(status);==\"Failed\"?\"fundingFailure\":\"fundingAccount\"};"
+                    },
+                    {
+                         "field": "$global.attr(fundingValidationMessage);",
+                         "value": "@mathjs{$result.attr(status);==\"Validatin Failed\"?$result.attr(validation);:\"\"};"
+                    },
+                    {
+                         "field": "$global.attr(fundingTotalAmount);",
+                         "value": "$result.attr(totalAmount);"
+                    },
+                    {
+                         "field": "$global.attr(fundingDeclinedReason);",
+                         "value": "$result.attr(reason);"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": []
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to Fund your account"
+     },
+     "clcommon__Action_Order__c": 71,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.SaveFundingDetailsApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+fundingAccountNextButton",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+fundingAccountNextButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "7406a92680c39141eaa4f7eb0e928cc3a8ef1f49bd27be5dd80b63d2a33d2da9"
+}
