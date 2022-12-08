@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderFields": {
+                    "genesis__Application__r.oao__Not_Internet_Gambling_Related_Business__c": "$state(cobaltCompliancesPanel).attr(oao__Gambling_Compliance__c);==true"
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);"
+               },
+               "structureName": "cobalt_gambling_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltGamblingPanel",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltGamblingPanel",
+     "clcommon__Release_Checksum__c": "f0c7d945e6b499496187cbe2b21f92d4ac88d3e7a2a481eeaa06f69b7200217f"
+}

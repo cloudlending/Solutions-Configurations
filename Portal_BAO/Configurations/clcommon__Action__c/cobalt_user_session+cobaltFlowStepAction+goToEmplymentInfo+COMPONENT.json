@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToEmplymentInfo",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "goToEmplymentInfo",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "citizenshipEmployment"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "$global.attr(Citizenship_Employment_title);"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "citizenshipEmployment"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltEmploymentInformation"
+                         ]
+                    },
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "cobaltShortLoaderContainer"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          }
+     },
+     "clcommon__Action_Order__c": 63,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+goToEmplymentInfo",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+goToEmplymentInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "5519f9a2b36754057e8edc39b875b44a88a1fd7f4d8af02e9c651cd37fe6844f"
+}

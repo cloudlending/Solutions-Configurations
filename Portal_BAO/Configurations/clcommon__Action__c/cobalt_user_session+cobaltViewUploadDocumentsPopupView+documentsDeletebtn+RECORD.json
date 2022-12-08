@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "documentsDeletebtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "documentsDeletebtn",
+          "property": {},
+          "appearance": {
+               "style": "iconic",
+               "label": "delete",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "documentCateAssocId": "$this.attr(id);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "cobaltViewUploadDocumentsPopupView"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltViewUploadDocumentsPopupView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_view_document_query",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": "oao.DeleteDocumentAttachmentApi",
+     "clcommon__Unique_Action_Name__c": "cobaltViewUploadDocumentsPopupView+documentsDeletebtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltViewUploadDocumentsPopupView+documentsDeletebtn+RECORD",
+     "clcommon__Release_Checksum__c": "7a352b60c427988348f01c4f0df21a907686aa823b632af7f554374e5ebbac14"
+}

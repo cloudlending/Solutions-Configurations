@@ -1,0 +1,54 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "query1",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "query1",
+          "property": {},
+          "appearance": {
+               "label": "GetProductDetailsApi",
+               "style": "normal",
+               "position": "top-right"
+          },
+          "remoteActionArguments": {
+               "sessionId": "$global.attr(sessionid);",
+               "productType": "$global.attr(productType);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltCartViewNewApp",
+                              "cobaltProductListCardView",
+                              "cobaltNewAppStepperTitlePanel"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "query",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltProductListCardView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_product_detail_qry",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.GetProductDetailsApi",
+     "clcommon__Unique_Action_Name__c": "cobaltProductListCardView+query1",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltProductListCardView+query1+COMPONENT",
+     "clcommon__Release_Checksum__c": "f720d1c7cce9b8212e6320ddb5fa3fd99a9f321909fba5d92d335002a8090c83"
+}

@@ -1,0 +1,54 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_product_type_list",
+     "clcommon__Allow_Guest_User_Access__c": true,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "cobalt_product_type_list",
+     "clcommon__data__c": {
+          "structureName": "cobalt_product_type_list",
+          "sections": [
+               {
+                    "id": "861b7253-96db-4f07-8ec9-d7a174e7e837",
+                    "name": "Details",
+                    "fields": [
+                         {
+                              "id": "c1701aed-a965-47a1-bdb8-0450405dfa1e",
+                              "fieldName": "Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Product type",
+                                   "ariaLabel": "Product type name"
+                              }
+                         },
+                         {
+                              "id": "d550a0ec-f68e-4a11-be4a-1eecce90366f",
+                              "fieldName": "oao__Product_Image__c",
+                              "fieldUi": {
+                                   "fieldType": "image",
+                                   "label": "Product Type Image",
+                                   "defaultValue": "https://cobaltdev-developer-edition.na156.force.com/resource/oao__ProducttypeImage",
+                                   "imageAltText": "Product Type Image",
+                                   "ariaLabel": "Product Type Image"
+                              }
+                         },
+                         {
+                              "id": "53e7bae0-11d1-49cd-8d35-ad5c210fec8d",
+                              "fieldName": "Description",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account Description",
+                                   "defaultValue": "Click below to view all $this.attr(Name);s",
+                                   "ariaLabel": "Product type description"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_product_type_list",
+     "clcommon__Release_Checksum__c": "853d9853795f785f742cd99a2356bef753c23022af6027e2976c1396469395cf"
+}

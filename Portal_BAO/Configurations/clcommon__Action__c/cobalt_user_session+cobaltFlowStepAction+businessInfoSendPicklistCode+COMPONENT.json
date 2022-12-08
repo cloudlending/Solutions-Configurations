@@ -1,0 +1,77 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessInfoSendPicklistCode",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessInfoSendPicklistCode",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-business-industry-next-with-picklist\">Next</span>",
+               "render": "$global.attr(pageName); == \"businessinfoindustrycode\" and $state(cobaltIKnowIndustryCodePanel).attr(industrycodecheckbox);==false",
+               "enable": "($state(cobaltGamblingPanel).attr(genesis__Application__r.oao__Not_Internet_Gambling_Related_Business__c); and $global.attr(gamblingContent);) or not $global.attr(gamblingContent);"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "Id": "$global.attr(appId);",
+                    "oao__Marijuana_Related_Business__c": "$state(cobaltMarijuanaAndGamblingPanel).attr(genesis__Application__r.oao__Marijuana_Related_Business__c);",
+                    "oao__CBD_Related_Business__c": "$state(cobaltMarijuanaAndGamblingPanel).attr(genesis__Application__r.oao__CBD_Related_Business__c);",
+                    "oao__Not_Internet_Gambling_Related_Business__c": "$state(cobaltGamblingPanel).attr(genesis__Application__r.oao__Not_Internet_Gambling_Related_Business__c);",
+                    "oao__Hemp_Related_Business__c": "$state(cobaltMarijuanaAndGamblingPanel).attr(genesis__Application__r.oao__Hemp_Related_Business__c);",
+                    "oao__Backup_Withholding__c": "$state(cobaltWithholdingPanel).attr(genesis__Application__r.oao__Backup_Withholding__c);"
+               },
+               "account": {
+                    "id": "$global.attr(businessAccountId);"
+               },
+               "clcommon__Industry_Classification_Code__c": {
+                    "industryCode": "$state(cobaltBusinessIndustryPanel).attr(industry_code);"
+               }
+          },
+          "validation": [
+               "cobaltBusinessIndustryPanel",
+               "cobaltWithholdingPanel",
+               "cobaltMarijuanaAndGamblingPanel"
+          ],
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(executeAPI);",
+                         "value": true
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "cobaltStatusStagePanel"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": "Click here to save the Industry Code details and move to next step"
+     },
+     "clcommon__Action_Order__c": 22,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.BusinessInformationApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+businessInfoSendPicklistCode",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+businessInfoSendPicklistCode+COMPONENT",
+     "clcommon__Release_Checksum__c": "175780e2db77b8cf634ae450cc7baf884fef0e21e4166019555f391851318a6c"
+}

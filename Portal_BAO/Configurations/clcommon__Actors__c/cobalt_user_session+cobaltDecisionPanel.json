@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "actions": [
+                         {
+                              "name": "redirecttocontactinfobtn",
+                              "actorName": "cobaltDecisionPanel",
+                              "condition": "$this.count(); == 1 and ($this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"EmailAndIdentity\" or $this.attr(genesis__Application__r.oao__Portal_Stage__c); == \"PersonalInformationContactInfo\") and $global.attr(dummy); == false"
+                         },
+                         {
+                              "name": "redirecttodashboardbtn",
+                              "actorName": "cobaltDecisionPanel",
+                              "condition": "$this.count(); > 1 or ($this.attr(genesis__Application__r.oao__Portal_Stage__c); != \"EmailAndIdentity\" and $this.attr(genesis__Application__r.oao__Portal_Stage__c); != \"PersonalInformationContactInfo\") and $global.attr(dummy); == false"
+                         }
+                    ],
+                    "assignments": [
+                         {
+                              "value": "$this.attr(genesis__Application__r.genesis__Account__r.Name);",
+                              "field": "$global.attr(businessName);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderSections": {
+                    "ApplicationSection": false
+               },
+               "editableFields": {
+                    "genesis__Application__r.genesis__Account__r.Name": false,
+                    "genesis__Application__r.genesis__Account__r.Id": false,
+                    "genesis__Application__r.Id": false,
+                    "genesis__Application__r.Application_Timestamp__c": false,
+                    "genesis__Application__r.Name": false
+               },
+               "sectionStyle": "layout",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1
+          },
+          "property": {
+               "structureName": "cobalt_application_fetch_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltDecisionPanel",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltDecisionPanel",
+     "clcommon__Release_Checksum__c": "f00bf2235287819a1a91d5d26c161acf365d75608f84e92a297671c377426913"
+}

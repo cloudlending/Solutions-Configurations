@@ -1,0 +1,115 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{ $this.attr(Id); == \"new_record_id\" ? \"\"; : \"$this.attr(Id);\"};",
+                              "field": "$global.attr(employmentId);"
+                         },
+                         {
+                              "value": "@mathjs{ $this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated); ? true : false };",
+                              "field": "$global.attr(enableCitizenContent);"
+                         },
+                         {
+                              "value": "@mathjs{ not $this.attr(oao__Employer_is_different__c); ? $global.attr(businessName); : $this.attr(genesis__Name_of_employer__c);};",
+                              "field": "$this.attr(genesis__Name_of_employer__c);"
+                         },
+                         {
+                              "value": "@mathjs{ not $this.attr(oao__Employer_is_different__c); ? $global.attr(PositionAtCompany); : $this.attr(genesis__Position__c);};",
+                              "field": "$this.attr(genesis__Position__c);"
+                         },
+                         {
+                              "value": "@mathjs{($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType);==\"PRIMARY\") ? \"ApplicationReferredToView\" : (($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\") and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType); != \"PRIMARY\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);) ? \"DocumentUpload\" : ((($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated);) or ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and not $global.attr(referredWhenComplianceViolated);) or ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" and not $global.attr(referredWhenComplianceViolated);)) and $global.attr(partyType); == \"PRIMARY\") or ($global.attr(partyType); == \"PRIMARY\" and not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);) ? \"BOCertificationPrimary\" : \"BOCertification\" };",
+                              "field": "$global.attr(nextPortalStage);"
+                         },
+                         {
+                              "value": "@mathjs{ not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); ? \"\" : $this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c);};",
+                              "field": "$this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c);"
+                         },
+                         {
+                              "value": "@mathjs{ not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); ? \"\" : $this.attr(genesis__Contact__r.clcommon__Country_of_Citizenship__c);};",
+                              "field": "$this.attr(genesis__Contact__r.clcommon__Country_of_Citizenship__c);"
+                         }
+                    ]
+               },
+               "fieldChange": {
+                    "genesis__Contact__r.clcommon__Citizenship_Status__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{ $this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated); ? true : false };",
+                                   "field": "$global.attr(enableCitizenContent);"
+                              },
+                              {
+                                   "value": "@mathjs{($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType);==\"PRIMARY\") ? \"ApplicationReferredToView\" : (($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\") and $global.attr(referredWhenComplianceViolated); and $global.attr(partyType); != \"PRIMARY\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);) ? \"DocumentUpload\" : ((($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" and $global.attr(referredWhenComplianceViolated);) or ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); != \"U.S. Citizen\" and not $global.attr(referredWhenComplianceViolated);) or ($this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" and not $global.attr(referredWhenComplianceViolated);)) and $global.attr(partyType); == \"PRIMARY\") or ($global.attr(partyType); == \"PRIMARY\" and not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);) ? \"BOCertificationPrimary\" : \"BOCertification\" };",
+                                   "field": "$global.attr(nextPortalStage);"
+                              },
+                              {
+                                   "value": "@mathjs{ $this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"U.S. Citizen\" ? \"\" : $this.attr(genesis__Contact__r.clcommon__Country_of_Citizenship__c); };",
+                                   "field": "$this.attr(genesis__Contact__r.clcommon__Country_of_Citizenship__c);"
+                              }
+                         ]
+                    },
+                    "oao__Employer_is_different__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{ not $this.attr(oao__Employer_is_different__c); ? $global.attr(businessName); : \"\"};",
+                                   "field": "$this.attr(genesis__Name_of_employer__c);"
+                              },
+                              {
+                                   "value": "@mathjs{ not $this.attr(oao__Employer_is_different__c); ? $global.attr(PositionAtCompany); : \"\"};",
+                                   "field": "$this.attr(genesis__Position__c);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderFields": {
+                    "genesis__Phone__c": "$state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
+                    "genesis__Position__c": "$state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
+                    "genesis__Name_of_employer__c": "$state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
+                    "oao__Employer_is_different__c": "$state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
+                    "genesis__Contact__r.clcommon__Country_of_Citizenship__c": "$this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"Resident Alien\" or $this.attr(genesis__Contact__r.clcommon__Citizenship_Status__c); == \"Non-Resident Alien\" and $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);",
+                    "genesis__Contact__r.clcommon__Citizenship_Status__c": "$state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);",
+                    "genesis__Contact__r.Id": false,
+                    "Id": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editableFields": {
+                    "genesis__Position__c": "$this.attr(oao__Employer_is_different__c);",
+                    "genesis__Name_of_employer__c": "$this.attr(oao__Employer_is_different__c);"
+               },
+               "title": "<span tabIndex = \"0\" role = \"header\" >$global.attr(citizenship_employment_subtitle);</span>",
+               "editable": true,
+               "fieldColumns": 1
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "structureName": "cobalt_employment_info_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltEmploymentInformation",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltEmploymentInformation",
+     "clcommon__Release_Checksum__c": "a55f0120d0e0565f0d1de2c689e9d09f6981d20c698b84367bb04356b7512b84"
+}

@@ -1,0 +1,75 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessInfodetailsPreviousBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessInfodetailsPreviousBtn",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-business-info-back-to-personal-identity\">Back</span>",
+               "variant": "outlined",
+               "render": "$global.attr(pageName); == \"businessinfodetails\" and (not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c);) and (not $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);)"
+          },
+          "remoteActionArguments": {},
+          "remoteActionProcess": {
+               "post": "$ext.dynamicStepper"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "personalInfo"
+                    },
+                    {
+                         "field": "$nav(cobaltPersonalInfoSteps).appearance(current);",
+                         "value": "identity"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Personal information: Identification"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "personalinfoidentity"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.secondaryStepper"
+                    },
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "default"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Click here to go back to the Personal information Identification page"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+businessInfodetailsPreviousBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+businessInfodetailsPreviousBtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "3a351e798411b88c1e79328cf4f57c8272a9bacad7ed73b3656f79d21f8c29c9"
+}

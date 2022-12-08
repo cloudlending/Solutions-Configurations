@@ -1,0 +1,91 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "redirecttocontactinfobtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "redirecttocontactinfobtn",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "position": "top-right",
+               "style": "normal",
+               "label": "Redirect to contact info"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltDescisionStep).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$nav(cobaltMainSteps).appearance(current);",
+                         "value": "personalInfo"
+                    },
+                    {
+                         "field": "$nav(cobaltDashboardSteps).appearance(current);",
+                         "value": "main"
+                    },
+                    {
+                         "field": "$global.attr(appId);",
+                         "value": "$this.attr(genesis__Application__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(businessAccountId);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Account__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(stepTitle);",
+                         "value": "Personal information: Contact info"
+                    },
+                    {
+                         "field": "$global.attr(pageName);",
+                         "value": "personalinfocontactUs"
+                    },
+                    {
+                         "field": "$global.attr(partyType);",
+                         "value": "$this.attr(clcommon__Type__r.Name);"
+                    },
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": "$this.attr(id);"
+                    },
+                    {
+                         "field": "$global.attr(isBO);",
+                         "value": "$this.attr(oao__Beneficial_Owner_Certification__c);"
+                    },
+                    {
+                         "field": "$global.attr(lockBusinessDetails);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Lock_Business_Details__c);"
+                    },
+                    {
+                         "field": "$global.attr(fundable);",
+                         "value": "$this.attr(genesis__Application__r.oao__Fundable__c);"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltDecisionPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_application_fetch_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltDecisionPanel+redirecttocontactinfobtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltDecisionPanel+redirecttocontactinfobtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "99a81d2b01028b5453a76d59a2199c57fbed2b2585770f7d5eb1055b972de2f9"
+}

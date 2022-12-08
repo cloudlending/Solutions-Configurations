@@ -1,0 +1,44 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "partiesDetailsSave",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "partiesDetailsSave",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "goToAddonsPageBtn"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "save",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltPartiesSummaryListView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_party_summary_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltPartiesSummaryListView+partiesDetailsSave",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPartiesSummaryListView+partiesDetailsSave+COMPONENT",
+     "clcommon__Release_Checksum__c": "cbee7239377e35f556b7fae1d5b18e824a8b3d497ae60477c48768555ec34f29"
+}

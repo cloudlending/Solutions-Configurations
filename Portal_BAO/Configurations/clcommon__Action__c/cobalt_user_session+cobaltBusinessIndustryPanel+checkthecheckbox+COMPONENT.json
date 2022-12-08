@@ -1,0 +1,45 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "checkthecheckbox",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "checkthecheckbox",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "validation": [],
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$state(cobaltIKnowIndustryCodePanel).attr(industrycodecheckbox);",
+                         "value": true
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessIndustryPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_business_info_industry_code",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltBusinessIndustryPanel+checkthecheckbox",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessIndustryPanel+checkthecheckbox+COMPONENT",
+     "clcommon__Release_Checksum__c": "a49bd06058965bfa754304ff81ac95091cd7f5d54c5635bda2a9e4675b53c462"
+}

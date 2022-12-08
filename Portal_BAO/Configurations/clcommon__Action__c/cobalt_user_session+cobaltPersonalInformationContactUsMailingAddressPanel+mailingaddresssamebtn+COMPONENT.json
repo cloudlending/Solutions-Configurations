@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "mailingaddresssamebtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "mailingaddresssamebtn",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(showPersonalInfoMailingAddress); == true",
+               "label": "My mailing address is the same",
+               "style": "secondary",
+               "position": "top-left"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(showPersonalInfoMailingAddress);",
+                         "value": false
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalInformationContactUsMailingAddressPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_mailing_address_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltPersonalInformationContactUsMailingAddressPanel+mailingaddresssamebtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalInformationContactUsMailingAddressPanel+mailingaddresssamebtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "804200db38304e1caa39ac472ac4763f1a4c9a9dddc25492a323c88d13bd5827"
+}

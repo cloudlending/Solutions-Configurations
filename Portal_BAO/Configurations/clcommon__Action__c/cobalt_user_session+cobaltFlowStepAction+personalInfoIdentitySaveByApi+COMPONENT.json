@@ -1,0 +1,69 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "personalInfoIdentitySaveByApi",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "personalInfoIdentitySaveByApi",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "TestAPI",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "Iovation_Blackbox_Token": "$global.attr(Iovation_Blackbox_Token);",
+               "appId": "$global.attr(appId);",
+               "genesis__Identification_Information__c": {
+                    "identificationType": "$state(cobaltPersonalIdenitityDetailsPanel).attr(identificationType);",
+                    "stateOfIssuance": "$state(cobaltPersonalIdenitityDetailsPanel).attr(state);",
+                    "dateOfIssuance": "$state(cobaltPersonalInformationIdentificationPanel).attr(genesis__Date_of_Issuance__c);",
+                    "expirationDate": "$state(cobaltPersonalInformationIdentificationPanel).attr(genesis__Expiration_Date__c);",
+                    "issuingCountry": "$state(cobaltPersonalIdenitityDetailsPanel).attr(country);",
+                    "identificationNumber": "$state(cobaltPersonalInformationIdentificationPanel).attr(genesis__Identification_Number__c);"
+               },
+               "contact": {
+                    "id": "$state(cobaltPersonalInformationContactUsNamePanel).attr(Id);"
+               }
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "condition": "$global.attr(partyType);==\"PRIMARY\" and ($state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); or $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);)",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "goToEmplymentInfo"
+                    },
+                    {
+                         "condition": "$global.attr(partyType);==\"PRIMARY\" and not $state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); and not $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "updatePortalStageToBOP"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          }
+     },
+     "clcommon__Action_Order__c": 19,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.PersonalInformationApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+personalInfoIdentitySaveByApi",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+personalInfoIdentitySaveByApi+COMPONENT",
+     "clcommon__Release_Checksum__c": "d15e1abd275f62766f874410af4d8e17564c6205686ff0d177c2a91791be8658"
+}

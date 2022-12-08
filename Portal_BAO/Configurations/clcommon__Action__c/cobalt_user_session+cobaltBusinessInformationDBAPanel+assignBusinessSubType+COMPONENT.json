@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "assignBusinessSubType",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "assignBusinessSubType",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "secondary",
+               "label": "Enter DBA name (if applicable)",
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Business_Sub_Category__c);",
+                         "value": "@mathjs{$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);!=\"Corporation\"?$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);:\"\"};"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessInformationDBAPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_business_info_dba_businesscat_taxid_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltBusinessInformationDBAPanel+assignBusinessSubType",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessInformationDBAPanel+assignBusinessSubType+COMPONENT",
+     "clcommon__Release_Checksum__c": "0a2bd852bc6e8795453ccf13cd2765150cf358447214475abf5f201089de6896"
+}

@@ -1,0 +1,44 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "applicationReferred",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "applicationReferred",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "oao__Portal_Stage__c": "ApplicationReferred",
+                    "Id": "$global.attr(appId);"
+               }
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "showSubmitAnimation": false
+          }
+     },
+     "clcommon__Action_Order__c": 48,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.PortalSaveBusinessInfoApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+applicationReferred",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+applicationReferred+COMPONENT",
+     "clcommon__Release_Checksum__c": "4f6b1a6d8670ece3aacac25a648b195f595b5f157f587a66dfea5eb7d4442eb9"
+}

@@ -1,0 +1,154 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_fetch_document_category",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerid",
+     "clcommon__Unique_Name__c": "cobalt_fetch_document_category",
+     "clcommon__data__c": {
+          "structureName": "cobalt_fetch_document_category",
+          "tableName": "clcommon__document_category__c",
+          "whereClause": {
+               "freeForm": "genesis__application__c = ':appId' and clcommon__Parent_Document_Category__r.clcommon__Category_Name__c IN ('Identification Documents','Business Documents') and clcommon__Active__c = true"
+          },
+          "orderBy": "clcommon__Category_Name__c DESC",
+          "sections": [
+               {
+                    "id": "d0c696aa-247d-4123-b3fa-566b0b75a628",
+                    "name": "ApplicationDocumentCategory",
+                    "fields": [
+                         {
+                              "id": "006b5a05-c1fd-4f08-aeff-bfca7be32729",
+                              "fieldName": "clcommon__Category_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Category Name",
+                                   "ariaLabel": "Category Name"
+                              }
+                         },
+                         {
+                              "id": "5235a05-c123fd-4f0218-ae31ff-bfc2729",
+                              "fieldName": "oao__Document_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Document Name",
+                                   "ariaLabel": "Document Name"
+                              }
+                         },
+                         {
+                              "id": "07cbe7a7-c522-4daf-b550-ecbf881c7ca0",
+                              "fieldName": "clcommon__Parent_Document_Category__r.clcommon__Category_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Document Category Name",
+                                   "ariaLabel": "Document Category Name"
+                              }
+                         },
+                         {
+                              "id": "72672326-b3df-4e05-8f4e-163216e39c08",
+                              "fieldName": "clcommon__Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Status",
+                                   "defaultValue": "OPEN",
+                                   "selectOptions": [
+                                        {
+                                             "id": "OPEN",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "OPEN",
+                                             "optionValue": "OPEN"
+                                        },
+                                        {
+                                             "id": "SUBMITTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SUBMITTED",
+                                             "optionValue": "SUBMITTED"
+                                        },
+                                        {
+                                             "id": "APPROVED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED",
+                                             "optionValue": "APPROVED"
+                                        },
+                                        {
+                                             "id": "REJECTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "REJECTED",
+                                             "optionValue": "REJECTED"
+                                        }
+                                   ],
+                                   "ariaLabel": "Status"
+                              }
+                         },
+                         {
+                              "id": "2a9ab12e-e0cf-4b79-8373-d84c14279b61",
+                              "fieldName": "clcommon__Parent_Document_Category__r.clcommon__Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Status",
+                                   "defaultValue": "OPEN",
+                                   "selectOptions": [
+                                        {
+                                             "id": "OPEN",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "OPEN",
+                                             "optionValue": "OPEN"
+                                        },
+                                        {
+                                             "id": "SUBMITTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SUBMITTED",
+                                             "optionValue": "SUBMITTED"
+                                        },
+                                        {
+                                             "id": "APPROVED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED",
+                                             "optionValue": "APPROVED"
+                                        },
+                                        {
+                                             "id": "REJECTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "REJECTED",
+                                             "optionValue": "REJECTED"
+                                        }
+                                   ],
+                                   "ariaLabel": "Status"
+                              }
+                         },
+                         {
+                              "id": "60509199-194a-475d-babe-8e8ed106fcee",
+                              "fieldName": "clcommon__Parent_Document_Category__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "62b97a9d-e45d-4383-ad28-18109640dc43",
+                              "fieldName": "oao__Reviewer_Comments__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Reviewer Comments",
+                                   "ariaLabel": "Reviewer Comments"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_fetch_document_category",
+     "clcommon__Release_Checksum__c": "4ae7b2e41141c2c5451756d67b382f793ff1f3bc25524901fee34465b81dc340"
+}

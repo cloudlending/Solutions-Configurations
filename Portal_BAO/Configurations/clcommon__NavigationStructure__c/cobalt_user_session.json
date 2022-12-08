@@ -1,0 +1,957 @@
+{
+     "attributes": {
+          "type": "clcommon__NavigationStructure__c"
+     },
+     "Name": "cobalt_user_session",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Description__c": null,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Is_Template__c": false,
+     "clcommon__Related_Configuration_Mapping__c": null,
+     "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
+     "clcommon__Unique_Name__c": "cobalt_user_session",
+     "clcommon__data__c": {
+          "messages": {
+               "submitFailureText": "Failed to submit",
+               "loadingFailureText": "Failed to load",
+               "saveFailureText": "Failed to save",
+               "submitAnimationText": "Sending...",
+               "submitSuccessText": "Succeed",
+               "savingAnimationText": "Saving...",
+               "uploadFailureText": "Failed to upload",
+               "loadingAnimationText": "Loading...",
+               "submitExpirationText": "Failed to submit",
+               "saveSuccessText": "Succeed",
+               "uploadFileTooLargeError": "File too large"
+          },
+          "global": {
+               "controlPersonText": "<div class=\"info-content\"><h3 class=\"title\">What is a Control Person?</h3><p class=\"desc\">A Control Person is an individual that has authority to enter into agreements, open bank accounts, and more on behalf of the business.</p></div>",
+               "typeOfApplication": "first",
+               "fundable": false,
+               "showBusinessMailingSecondLineAddress": false,
+               "ineligibleConsent": false,
+               "businessPartiesCPText": "",
+               "businessPartiesBOText": "",
+               "referredText": "It seems some of your information could not be verified!</p><p>A Thrive Financial representative will reach out to you shortly to discuss your application. In the interim, please feel free reach out to us via email or phone if you have any questions!",
+               "businessCategory": "",
+               "showStreetAddress2": false,
+               "stateAndZipTitle": "",
+               "showMiddleName": false,
+               "redirect": true,
+               "appId": "",
+               "accountActivity": false,
+               "marijuanaContent": false,
+               "backupWithholding": false,
+               "isOverdraftEligible": true,
+               "pageName": "neworexistingapp",
+               "productName": "null",
+               "docCatId": "null",
+               "showmailingAddressLine2": false,
+               "accountName": "",
+               "isBO": false,
+               "lockBusinessDetails": false,
+               "isExisting": false,
+               "showBusinessStreetAddress": false,
+               "showPersonalInfoMailingAddress": false,
+               "enableCitizenContent": false,
+               "gamblingContent": false,
+               "businessAddress": "",
+               "defaultDeclinedReason": "",
+               "authorizeSigner": false,
+               "controlPerson": false,
+               "declinedReason": "Declined Reason: ",
+               "openAccountTab": "ProductType",
+               "fundingValidationMessage": "",
+               "sessionid": "null",
+               "referred": false,
+               "citizenship_employment_subtitle": "",
+               "docCatStatus": "null",
+               "beneficalOwnerText": "<div class=\"info-content\"><h3 class=\"title\">What is a Beneficial Owner?</h3><p class=\"desc\">A Beneficial Owner is an individual who ultimately owns or controls more than 25% of a company’s shares or voting rights, or otherwise exercises control over the company or its management.</p></div>",
+               "fundingDeclinedReason": "",
+               "dbaName": "",
+               "BillingStateAndZipCode": "",
+               "stepTitle": "New or Existing application",
+               "businessName": "null",
+               "productId": "null",
+               "appNumber": "null",
+               "benefecialOwner": false,
+               "parentDocId": "",
+               "productType": "null",
+               "isDebitCardEligible": true,
+               "dummy": false,
+               "businessAccountId": "null",
+               "percentageBO": 0,
+               "showdba": false,
+               "showMailingAddress": false,
+               "enableSubmitApp": true,
+               "parentId": "",
+               "allowDocumentUpload": true,
+               "executeAPI": false,
+               "userType": "",
+               "selectedProductPartyAssoc": [
+                    ""
+               ],
+               "businessPersonInfo": "",
+               "eligibleContent": false,
+               "BOCount": 0,
+               "showCartView": "old",
+               "partyId": "null",
+               "loadSteps": true,
+               "PositionAtCompany": "",
+               "partyType": "null",
+               "Citizenship_Employment_title": ""
+          },
+          "settings": {
+               "treeIcons": {
+                    "toExpand": "chevron_right",
+                    "toCollapse": "expand_more",
+                    "end": "lens"
+               },
+               "pagination": {
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "numberOfRecordsPerPage": 10,
+                    "numberOfPageLinks": 5,
+                    "firstLinkText": "first_page",
+                    "previousLinkText": "chevron_left",
+                    "nextLinkText": "chevron_right",
+                    "lastLinkText": "last_page"
+               },
+               "locale": "en-us",
+               "minimumFractionDigits": 2,
+               "collapsibleIcons": {
+                    "expanded": "expand_more",
+                    "collapsed": "expand_less"
+               },
+               "uploadText": {
+                    "completed": "Completed",
+                    "cancelInProgress": "Cancel",
+                    "removeError": "close"
+               },
+               "enableNestedExpParsing": true,
+               "skeleton": {
+                    "listView": {
+                         "withAction": {
+                              "height": "72px",
+                              "padding": "24px 12px"
+                         },
+                         "noAction": {
+                              "height": "48px",
+                              "padding": "12px"
+                         }
+                    },
+                    "queueView": {
+                         "height": "150px",
+                         "padding": "16px"
+                    },
+                    "cardView": {
+                         "height": "300px",
+                         "padding": "16px"
+                    },
+                    "detailView": {
+                         "large": {
+                              "height": "108.75px",
+                              "padding": "28px 12px 20px 12px"
+                         },
+                         "medium": {
+                              "height": "104px",
+                              "padding": "28px 12px 20px 12px"
+                         },
+                         "small": {
+                              "height": "101.625px",
+                              "padding": "28px 12px 20px 12px"
+                         }
+                    }
+               },
+               "sortText": {
+                    "sortBy": "Sort By",
+                    "aToZ": "(A to Z)",
+                    "zToA": "(Z to A)",
+                    "lowToHigh": "(Low to High)",
+                    "highToLow": "(High to Low)",
+                    "mostRecentFirst": "(Most Recent First)",
+                    "mostRecentLast": "(Most Recent Last)"
+               },
+               "currencySymbol": "$",
+               "maximumFractionDigits": 2,
+               "dateLocale": "en-US",
+               "variant": {
+                    "TextField": "outlined"
+               }
+          },
+          "actors": {},
+          "stages": {
+               "Home": {
+                    "overlay": [
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltCartProducts",
+                                        "layoutId": "2b6833c7-4fa5-4c9a-b023-fcee0f153511"
+                                   },
+                                   {
+                                        "name": "cobaltAddOverdraft",
+                                        "layoutId": "7bea5376-9d3a-4846-a339-1a28634ea93a"
+                                   }
+                              ],
+                              "name": "cobaltAddOverdraftOverlay",
+                              "layoutId": "915e69e3-e2ad-4c5e-893f-a21d1526adf4"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltAddDebitCard",
+                                        "layoutId": "96e6a059-2bc1-454d-a947-f7abd317b82c"
+                                   }
+                              ],
+                              "name": "cobaltAddDebitCardOverlay",
+                              "layoutId": "26ec0835-5e99-4b87-8e2b-f5b113889918"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltCartView",
+                                        "layoutId": "27ca8-3644-4407-956d-2b0d2e93aa90"
+                                   },
+                                   {
+                                        "name": "cobaltCartViewNewApp",
+                                        "layoutId": "a3f89670-a43c-4c73-ae47-496a00dc41e1"
+                                   }
+                              ],
+                              "name": "cobaltCartViewPopup",
+                              "layoutId": "d791249c-92fc-4cfd-a189-57c97"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltConfirmationPopupPanel",
+                                        "layoutId": "53f14155-f970-4358-b213-9206b465cfc3"
+                                   }
+                              ],
+                              "name": "cobaltConfirmationPopup",
+                              "layoutId": "448c5610-bceb-4992-a17f-d66ae8d10786"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltProductNotAllowedPopupContent",
+                                        "layoutId": "232b5691-edeb-49fff22-9dsgsfasdfasdfg101-ada3sdfas97b4dc04"
+                                   }
+                              ],
+                              "name": "cobaltProductNotAllowedPopupContainer",
+                              "layoutId": "8975fc5d-776d-439etwffrrdafa8-b26c-a961be51d2d1"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltEmailAndIdentityDisclosureContent",
+                                        "layoutId": "ad83b6a2-610f-4798-aa0c-47726035f34b"
+                                   }
+                              ],
+                              "name": "cobaltEmailAndIdentityDisclosurePopup",
+                              "layoutId": "29e2ae19-056a-4256-b3ca-1c9e4fee56f6"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltOverdraftOptionPopupContent",
+                                        "layoutId": "0133a78e-a054-41d9-b5f8-bece112c6e43"
+                                   }
+                              ],
+                              "name": "cobaltOverdraftOptionPopup",
+                              "layoutId": "dcc95275-29ff-4eac-bfd5-2810edd3d359"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltViewUploadDocumentsPopupView",
+                                        "layoutId": "e6e4f537-efff-4911-9a03-188bbfee9482"
+                                   }
+                              ],
+                              "name": "cobaltViewUploadDocumentsPopup",
+                              "layoutId": "88d06dd4-0709-4090-afe7-abdbdf98f950"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltSubmitApplicationPopupPanel",
+                                        "layoutId": "404d1034-32c1-40af-937d-77a068050aaf"
+                                   }
+                              ],
+                              "name": "cobaltSubmitApplicationPopup",
+                              "layoutId": "440324c9-d6db-4c86-9db4-206ffaf18ba7"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltAddBusinessPersonsPopupPanel",
+                                        "layoutId": "028c7983-479c-48e1-952d-9766e5023996"
+                                   }
+                              ],
+                              "name": "cobaltAddBusinessPersonsPopup",
+                              "layoutId": "6e8002ff-0f5a-4643-acad-6bae838d7492"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltBusinessPartiesInfoPopup",
+                                        "layoutId": "097556e1-6b4c-4464-86f1-3e1c87e21049"
+                                   }
+                              ],
+                              "name": "cobaltBusinessPartiesInfoContainer",
+                              "layoutId": "6e8002ff-0f5aasdfasdfa-4643-acad-6bae838d7492"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltShortLoaderPopup",
+                                        "layoutId": "097556e1-6asdfasdfb4c-4464-86f1-3e1c87e21049"
+                                   }
+                              ],
+                              "name": "cobaltShortLoaderContainer",
+                              "layoutId": "6e8002ff-0f5aasasdfadfasdfa-4643-acad-6bae838d7492"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltIdentificationTypePopup",
+                                        "layoutId": "232b5691-edeb-4922-9dssdfadfgsfasdfasdfasasdfasdfdfasdfg101-ada3asdsdfas97b4dc04"
+                                   }
+                              ],
+                              "name": "cobaltIdentificationTypeContainer",
+                              "layoutId": "8975fc5d-776adfdsfd-439etwrrwqerqwerdafa8-b26sdfdfc-a961be51d2d1"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltMyInformationPopupContent",
+                                        "layoutId": "232b5691-edeb-4922-9dsgsfg101-ada3sdsdfgsdfgfas97b4dc04"
+                                   }
+                              ],
+                              "name": "cobaltMyInformationPopup",
+                              "layoutId": "8975fc5d-776d-439etwr8-b26c-a961be5adfgsd1d2d1"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltIneligiblePopupContent",
+                                        "layoutId": "232b5asfasdfasdf691-edeb-4922-9dsgsfg101-ada3sdfas97b4dc04"
+                                   }
+                              ],
+                              "name": "cobaltIneligiblePopupContainer",
+                              "layoutId": "8975fc5sadfasdfasd-776d-439etwr8-b26c-a961be51d2d1"
+                         },
+                         {
+                              "children": [
+                                   {
+                                        "name": "cobaltReUploadDocumentPopupPanel",
+                                        "layoutId": "404d1034-32c1-40af-937d-77aasfasdf068050aaf"
+                                   }
+                              ],
+                              "name": "cobaltReUploadDocumentContainer",
+                              "layoutId": "440324c9-d6db-4asfasc86-9db4-206ffaf18ba7"
+                         },
+                         {
+                              "name": "cobaltZipAndStateInfo",
+                              "layoutId": "ea3b2c60-b3e7-4bf4-9de1-3604a88b9772"
+                         }
+                    ],
+                    "layout": {
+                         "children": [
+                              {
+                                   "children": [
+                                        {
+                                             "children": [
+                                                  {
+                                                       "name": "cobaltDecisionPanel",
+                                                       "layoutId": "20228eb6-466a-4301-8390-d5c533ccdbbf"
+                                                  }
+                                             ],
+                                             "name": "cobaltDescisionContainer",
+                                             "layoutId": "b059dbb0-fafe-463a-8627-6510f20b48b5"
+                                        },
+                                        {
+                                             "children": [
+                                                  {
+                                                       "children": [
+                                                            {
+                                                                 "name": "cobaltHeaderPanel",
+                                                                 "layoutId": "e518f216-acc9-4ac1-ad3d-f6f76bd096b1"
+                                                            },
+                                                            {
+                                                                 "name": "cobaltHeaderStaticContent",
+                                                                 "layoutId": "466deeb9-78df-4766-9814-5c51ee6c1ce1"
+                                                            },
+                                                            {
+                                                                 "name": "cobaltCompliancesPanel",
+                                                                 "layoutId": "153fa151-cb81-40fasdASDadsASD4-aff9-359b3c809219"
+                                                            },
+                                                            {
+                                                                 "name": "cobaltCustomSettingsPanel",
+                                                                 "layoutId": "153fa151-cb81-40fasdASDadsasdfasdfasdASD4-aff9-359b3c809219"
+                                                            }
+                                                       ],
+                                                       "name": "cobaltHeaderContainer",
+                                                       "layoutId": "71d5ad3b-e00e-4124-8f20-8e38b6f80c1a"
+                                                  },
+                                                  {
+                                                       "children": [
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "children": [
+                                                                                {
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "name": "cobaltPrimaryPartyCountPanel",
+                                                                                               "layoutId": "d7518a23-0ADSasdADS0c3-4ff0-8625-bbda2f7b571d"
+                                                                                          },
+                                                                                          {
+                                                                                               "name": "cobaltDashboardPanel",
+                                                                                               "layoutId": "d7518a23-00c3-4ff0-8625-bbda2f7b571d"
+                                                                                          },
+                                                                                          {
+                                                                                               "name": "cobaltDashboardCardView",
+                                                                                               "layoutId": "97ad254b-0eaf-44cd-a6bfffasdfa-36b75c16ae3b"
+                                                                                          },
+                                                                                          {
+                                                                                               "name": "cobaltFetchContactDetailsModel",
+                                                                                               "layoutId": "97ad254b-0eaf-44cd-a6bf-36b75c16ae3b"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "cobaltDashboardContainer",
+                                                                                     "layoutId": "76b3d448-c9d4-4c0b-9553-54d91d032386"
+                                                                                },
+                                                                                {
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "children": [
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "children": [
+                                                                                                                        {
+                                                                                                                             "children": [
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltNewAppStepperTitlePanel",
+                                                                                                                                       "layoutId": "909de2ed-bb13-4b9a-85e6-4a21119325bc"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltCartListView",
+                                                                                                                                       "layoutId": "21e970f5-8d45-400d-bbb7-8d9a66808c8b"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltProductTypeListCardView",
+                                                                                                                                       "layoutId": "9c02d4b9-7fe3-4c20-81c5-048b4fe0d24e"
+                                                                                                                                  }
+                                                                                                                             ],
+                                                                                                                             "name": "cobaltProductTypeListPageContainer",
+                                                                                                                             "layoutId": "f5e800f8-46c8-4c24-ac18-6481d80adadf"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                             "children": [
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltNewAppStepperTitlePanel",
+                                                                                                                                       "layoutId": "909de2ed-bb13-4b9a-85e6-4a21119325bc"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltCartView",
+                                                                                                                                       "layoutId": "5112ef07-ae0b-44e1-aec0-5147456ace77"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltProductListCardView",
+                                                                                                                                       "layoutId": "76d61cf3-353e-446b-986b-01c1b91e4ac2"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltFlowStepAction",
+                                                                                                                                       "layoutId": "8ce4eeed-642e-4295-999d-b9c1d2a1dff5"
+                                                                                                                                  }
+                                                                                                                             ],
+                                                                                                                             "name": "cobaltProductListPageContainer",
+                                                                                                                             "layoutId": "fef618a3-2e0c-406d-846a-97d4957a3b6c"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                             "children": [
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltNewAppStepperTitlePanel",
+                                                                                                                                       "layoutId": "909de2ed-bb13-4b9a-85e6-4a21119325bc"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltCartView",
+                                                                                                                                       "layoutId": "4fb9f5ea-795c-4cf3-a316-85f80423344d"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltSelectedAccountView",
+                                                                                                                                       "layoutId": "a07d1a2c-c560-45e3-9886-08f93bc82181"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltEligibilityContent",
+                                                                                                                                       "layoutId": "fd0d07bb-bf42-4df1-8a42-85e0b5758a30"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltFetchContactDetailsModel",
+                                                                                                                                       "layoutId": "d380bfae-b923-4aaa-9c1e-17ae8a4698c8"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltFlowStepAction",
+                                                                                                                                       "layoutId": "6d12106a-8915-40fe-8d41-00f6816a850d"
+                                                                                                                                  }
+                                                                                                                             ],
+                                                                                                                             "name": "cobaltAccountSelectionPageContainer",
+                                                                                                                             "layoutId": "13e1bf44-58e1-4388-8fd1-7d92589c8312"
+                                                                                                                        }
+                                                                                                                   ],
+                                                                                                                   "name": "cobaltOpenAccountsSteps",
+                                                                                                                   "layoutId": "6597ba94-34f7-44d5-97f9-bc61baf91270"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltOpenAccountsContainer",
+                                                                                                         "layoutId": "815b74bb-ecbf-49bc-99e7-2da0a818eba0"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "name": "cobaltNewAppStepperTitlePanel",
+                                                                                                                   "layoutId": "7b9095a2-8aa2-4d35-ab54-afce81aaf55e"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltCartView",
+                                                                                                                   "layoutId": "f001cf1e-3a50-4689-93a5-1d78769c985d"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltEmailAndIdentityFormPanel",
+                                                                                                                   "layoutId": "7aa1edd3-701e-4dd5-9af5-c55e5844d195"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFlowStepAction",
+                                                                                                                   "layoutId": "6d12106a-8915-40fe-8d41-00f6816a850d"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltEmail&IdentityContainer",
+                                                                                                         "layoutId": "bc9c8370-ac4b-4584-a21b-04b7cb0370be"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "children": [
+                                                                                                                        {
+                                                                                                                             "children": [
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltStepperTitlePanel",
+                                                                                                                                       "layoutId": "0590e59a-950b-4a26-9245-9d2c63640ebc"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltPersonalInformationContactUsNamePanel",
+                                                                                                                                       "layoutId": "d258ff10-225c-4d5d-8065-4b8e3eeb60c5"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltPersonalInformationContactUsStreetAddressPanel",
+                                                                                                                                       "layoutId": "115bd4ff-5ff6-4e86-8fb5-f6de69efcfcf"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltPersonalInformationContactUsMailingAddressPanel",
+                                                                                                                                       "layoutId": "0f673088-c72a-4660-8303-3f07ad9c9e60"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltFlowStepAction",
+                                                                                                                                       "layoutId": "8ce4eeed-642e-4295-999d-b9c1d2a1dff5"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltPersonalAccountDetailsPanel",
+                                                                                                                                       "layoutId": "4ea4c997-72ad-4c92-a84e-5b8863031248"
+                                                                                                                                  }
+                                                                                                                             ],
+                                                                                                                             "name": "cobaltPersonalInformationContainer",
+                                                                                                                             "layoutId": "3a9a6f39-ebea-42b1-8a7e-a7df54256cac"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                             "children": [
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltStepperTitlePanel",
+                                                                                                                                       "layoutId": "0590e59a-950b-4a26-9245-9d2c63640ebc"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltPersonalContactInformationPanel",
+                                                                                                                                       "layoutId": "ed44ac37-e634-400c-9e67-5642a7a7fce3"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltPartyDetailsPanel",
+                                                                                                                                       "layoutId": "0233f58c-22cb-4e35-abdf-41faba31bdd0"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltPersonalIdenitityDetailsPanel",
+                                                                                                                                       "layoutId": "3ca69ee3-331e-4be8-835a-2733241fcae7"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltPersonalInformationIdPanel",
+                                                                                                                                       "layoutId": "bfbe7ded-92adfasdfasdfasdf32-4ddf-9d59-7a3f073ca717"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltPersonalInformationIdentificationPanel",
+                                                                                                                                       "layoutId": "bfbe7ded-9232-4ddf-9d59-7a3f073ca717"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltPersonalInformationIdentificationPortalFieldPanel",
+                                                                                                                                       "layoutId": "bfbe7ded-9232-4ddf-9d59-7a3f073sdfgsca717"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltBusinessOwnerCertificationPanel",
+                                                                                                                                       "layoutId": "b6e4c277-dd87-424b-808e-7db10ed21c59"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltFlowStepAction",
+                                                                                                                                       "layoutId": "8ce4eeed-642e-4295-999d-b9c1d2a1dff5"
+                                                                                                                                  }
+                                                                                                                             ],
+                                                                                                                             "name": "cobaltPersonalInformationContactInfoContainer",
+                                                                                                                             "layoutId": "a1a44211-f987-40cc-9561-d1ef21556ffe"
+                                                                                                                        }
+                                                                                                                   ],
+                                                                                                                   "name": "cobaltPersonalInfoSteps",
+                                                                                                                   "layoutId": "90f15850-fccf-4e06-bb1d-d37954895e2d"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltPersonalInfoStepsContainer",
+                                                                                                         "layoutId": "be7a577e-4ed5-4aed-88a8-38474259b375"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "name": "cobaltStepperTitlePanel",
+                                                                                                                   "layoutId": "0590e59a-950b-4a26-9245-9d2c63640ebc"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltEmploymentInformation",
+                                                                                                                   "layoutId": "6c0e4dad-f257-4224-8848-41c6bb43eb11"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFlowStepAction",
+                                                                                                                   "layoutId": "8ce4eeed-642e-4295-999d-b9c1d2a1dff5"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltCitizenshipEmploymentInfoContainer",
+                                                                                                         "layoutId": "3329fa4f-75a6-12321-b6aa-67a4b8282ed0"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "children": [
+                                                                                                                        {
+                                                                                                                             "children": [
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltStepperTitlePanel",
+                                                                                                                                       "layoutId": "9fdb3b7b-e06b-452f-838b-f669f9a8dc00"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltBusinessInformationNameOfBusinessPanel",
+                                                                                                                                       "layoutId": "2d61dc90-05e9-4a53-9cf6-9e4a0ddf3ec8"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltBusinessInformationDBAPanel",
+                                                                                                                                       "layoutId": "709304be-818a-439c-ac88-284257346220"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltBusinessInformationStreetAddressPanel",
+                                                                                                                                       "layoutId": "0c5f21fb-633b-4a50-9887-9bb7e3234e83"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltBusinessInformationMailingAddressPanel",
+                                                                                                                                       "layoutId": "77106503-41cd-4792-9394-89015443430c"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltFlowStepAction",
+                                                                                                                                       "layoutId": "8ff354cb-1ad4-4949-9923-351917337255"
+                                                                                                                                  }
+                                                                                                                             ],
+                                                                                                                             "name": "cobaltBusinessInformationContainer",
+                                                                                                                             "layoutId": "c9b9744c-e21f-41a1-8682-b61e8c61f793"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                             "children": [
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltStepperTitlePanel",
+                                                                                                                                       "layoutId": "0590e59a-950b-4a26-9245-9d2c63640ebc"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltIKnowIndustryCodePanel",
+                                                                                                                                       "layoutId": "700a1db1-42e4-43a5-a90f-81e6b4ad7dba"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltIndustryCodePanel",
+                                                                                                                                       "layoutId": "0605ac3b-dea3-4932-a3fe-3cca2024ad9e"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltBusinessIndustryPanel",
+                                                                                                                                       "layoutId": "2f9ed4ac-4b4d-422b-b090-d2120fcf2f6a"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltMarijuanaAndGamblingPanel",
+                                                                                                                                       "layoutId": "2f9ed4ac-4fasdfasd4d-422b-b090-d2120fcf2f6a"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltWithholdingPanel",
+                                                                                                                                       "layoutId": "c28d5c92-0278-4a5d-8d0b-03668fe253e0"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltGamblingPanel",
+                                                                                                                                       "layoutId": "90578686-59f1-4f7a-bbb7-a6860863fb13"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltStatusStagePanel",
+                                                                                                                                       "layoutId": "f3978b3b-367a-4f45-868d-ea75a16b616a"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltFlowStepAction",
+                                                                                                                                       "layoutId": "8ce4eeed-642e-4295-999d-b9c1d2a1dff5"
+                                                                                                                                  }
+                                                                                                                             ],
+                                                                                                                             "name": "cobaltBusinessIndustryContainer",
+                                                                                                                             "layoutId": "2abda9e3-1d16-47a3-b2f4-d29d0cd73be2"
+                                                                                                                        }
+                                                                                                                   ],
+                                                                                                                   "name": "cobaltBusinessInfoSteps",
+                                                                                                                   "layoutId": "18abedc2-4cbe-493a-928a-eb532b9411a1"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltBusinessInfoStepsContainer",
+                                                                                                         "layoutId": "3329fa4f-75a6-45e3-b6aa-67a4b8282ed0"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "name": "cobaltStepperTitlePanel",
+                                                                                                                   "layoutId": "0590e59a-950b-4a26-9245-9d2c63640ebc"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltAccountActivityDetailsPanel",
+                                                                                                                   "layoutId": "621e1a5f-8399-45a2-9cb8-69b633659be1"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFlowStepAction",
+                                                                                                                   "layoutId": "8ce4eeed-642e-4295-999d-b9c1d2a1dff5"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltAccountActivityContainer",
+                                                                                                         "layoutId": "0057455c-a2ac-4aa9-8631-a620e5ebd2f0"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "name": "cobaltStepperTitlePanel",
+                                                                                                                   "layoutId": "0590e59a-950b-4a26-9245-9d2c63640ebc"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltAddBusinessPersonsContent",
+                                                                                                                   "layoutId": "2222fe40-fc7b-4287-99fe-35c4833a5c5f"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltAddBusinessPersonsListView",
+                                                                                                                   "layoutId": "0100c76e-291e-4874-a071-10c500ed8ea6"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltAddBusinessPersonsForSolePropListView",
+                                                                                                                   "layoutId": "dda5b138-264b-45bf-b4f6-906c87a22ec2"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltPartiesSummaryListView",
+                                                                                                                   "layoutId": "d962badb-3eb4-4a6c-b231-4940272efd4d"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltPartiesConsentPanel",
+                                                                                                                   "layoutId": "d962badb-3eb4-4a6c-b231-4940272efd4d"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFlowStepAction",
+                                                                                                                   "layoutId": "8ce4eeed-642e-4295-999d-b9c1d2a1dff5"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltAddBusinessPersonsContainer",
+                                                                                                         "layoutId": "1fd43d0b-8cde-4ef1-b80b-7165d6d2e4ae"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "name": "cobaltStepperTitlePanel",
+                                                                                                                   "layoutId": "0590e59a-950b-4a26-9245-9d2c63640ebc"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltAddOnsListView",
+                                                                                                                   "layoutId": "ee329086-e0b9-493f-88b8-de34129f7542"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltAddonsFromApplictionListView",
+                                                                                                                   "layoutId": "9cf9201e-f3aa-4176-9a89-3ab974e4cb6c"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltBOCountListView",
+                                                                                                                   "layoutId": "9cf9201e-f3aa-4176-9a89-3ab974e4cb6c"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFlowStepAction",
+                                                                                                                   "layoutId": "6d12106a-8915-40fe-8d41-00f6816a850d"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltAddOnsStepperContainer",
+                                                                                                         "layoutId": "f5e800f8-46c8-ad12s-ac18-6481d80adadf"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "name": "cobaltStepperTitlePanel",
+                                                                                                                   "layoutId": "0590e59a-950b-4a26-9245-9d2c63640ebc"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltDocUploadTitlePanel",
+                                                                                                                   "layoutId": "fa4bc4d0-49ee-4856-aa5f-7a010051d7ad"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltDocUploadPanel",
+                                                                                                                   "layoutId": "81a08164-e462-4e18-8349-b586290e4cd6"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFlowStepAction",
+                                                                                                                   "layoutId": "8ce4eeed-642e-4295-999d-b9c1d2a1dff5"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltDocumentUploadContainer",
+                                                                                                         "layoutId": "4bd844b6-bcdd-4fab-9fd5-84d46d939733"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "children": [
+                                                                                                                        {
+                                                                                                                             "children": [
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltReviewPanel",
+                                                                                                                                       "layoutId": "74653f15-6581-4a0b-9ec1-d4beb87da39c"
+                                                                                                                                  }
+                                                                                                                             ],
+                                                                                                                             "name": "cobaltReviewPageContainer",
+                                                                                                                             "layoutId": "06e5bae6-1a5a-480e-b54f-a924a872f8d8"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                             "children": [
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltReferralPageContent",
+                                                                                                                                       "layoutId": "5b1e8ce1-b70d-4fd6-b85c-6ffabeef7a0b"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltReferredCitizenshipContent",
+                                                                                                                                       "layoutId": "d728e632-6e17-447f-af24-bc1d1c8f23d9"
+                                                                                                                                  }
+                                                                                                                             ],
+                                                                                                                             "name": "cobaltReferralPageContainer",
+                                                                                                                             "layoutId": "1be1450d-312f-4ded-819e-38a804a0c332"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                             "children": [
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltProductsQueueView",
+                                                                                                                                       "layoutId": "c0d5a7ad-aa45-4e42-8489-b971b311b05d"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltBusinessDetailsCardView",
+                                                                                                                                       "layoutId": "378408b1-a68e-48cf-aa89-081a42b5a794"
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                       "name": "cobaltAppOverviewButtonPanel",
+                                                                                                                                       "layoutId": "ccf53a2a-8f4f-4506-ba37-db6c6174c9d3"
+                                                                                                                                  }
+                                                                                                                             ],
+                                                                                                                             "name": "cobaltAppViewPageContainer",
+                                                                                                                             "layoutId": "b7150b8a-2afb-4448-a8b9-96f9ecc4f02c"
+                                                                                                                        }
+                                                                                                                   ],
+                                                                                                                   "name": "cobaltReviewSteps",
+                                                                                                                   "layoutId": "1aea2b3b-ca43-4476-81f2-b87bb428af7d"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltReviewContainer",
+                                                                                                         "layoutId": "0245a3a1-bce9-44a0-ad5e-75d958887fe1"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "children": [
+                                                                                                              {
+                                                                                                                   "name": "cobaltStepperTitlePanel",
+                                                                                                                   "layoutId": "0590e59a-950b-4a26-9245-9d2c63640ebc"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFundingLaterContent",
+                                                                                                                   "layoutId": "ee3decc4-dd3a-491b-bc40-f7b57425fc9d"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFundingFailureContent",
+                                                                                                                   "layoutId": "7bc4a46a-0db2-4c0c-99bf-9834d409cc6e"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFundingSuccessPanel",
+                                                                                                                   "layoutId": "1c388a8e-4dab-473c-bb20-337d7545fe64"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFundingListView",
+                                                                                                                   "layoutId": "86490a1c-d0aa-48dd-bdb9-5190d27a38b5"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFundingMethods",
+                                                                                                                   "layoutId": "c205c480-04c2-4901-acf6-a7ec20037638"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltProductsQueueView",
+                                                                                                                   "layoutId": "cc912212-08d4-4e69-85fc-17afa9b9e93d"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltBusinessDetailsCardView",
+                                                                                                                   "layoutId": "2a9f36e5-a64f-46de-bdda-25d6182bb63d"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltAppOverviewButtonPanel",
+                                                                                                                   "layoutId": "89d16c11-c881-4bf8-9bee-ce6f47acae8d"
+                                                                                                              },
+                                                                                                              {
+                                                                                                                   "name": "cobaltFlowStepAction",
+                                                                                                                   "layoutId": "8ce4eeed-642e-4295-999d-b9c1d2a1dff5"
+                                                                                                              }
+                                                                                                         ],
+                                                                                                         "name": "cobaltFundingContainer",
+                                                                                                         "layoutId": "07022070-6a69-4a09-bf38-170d57138a40"
+                                                                                                    }
+                                                                                               ],
+                                                                                               "name": "cobaltMainSteps",
+                                                                                               "layoutId": "060c9068-59cc-4057-84a7-6fa9a6e60669"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "cobaltMainStepsContainer",
+                                                                                     "layoutId": "7d8d6cd6-6a6f-4148-a3a7-7c29c41e5104"
+                                                                                }
+                                                                           ],
+                                                                           "name": "cobaltDashboardSteps",
+                                                                           "layoutId": "fcae05c0-4cc2-4259-866c-f13fbce87243"
+                                                                      }
+                                                                 ],
+                                                                 "name": "cobaltDashboardStepsContainer",
+                                                                 "layoutId": "9e44fd9f-6af6-4dec-9b67-f028808cfecb"
+                                                            }
+                                                       ],
+                                                       "name": "cobaltBodyContainer",
+                                                       "layoutId": "5c86c280-a183-49af-81ff-b4da17d65911"
+                                                  }
+                                             ],
+                                             "name": "cobaltMainContainer",
+                                             "layoutId": "d639ab85-3482-4cfa-b14b-3b8295e9710a"
+                                        }
+                                   ],
+                                   "name": "cobaltDescisionStep",
+                                   "layoutId": "84d546b8-8612-4968-aa1a-631be71da9fc"
+                              }
+                         ],
+                         "name": "cobaltUserPrimaryContainer",
+                         "layoutId": "7f0e4a6e-37b5-4228-b9a0-7ba88ef9c6d8"
+                    },
+                    "prerequisite": []
+               }
+          },
+          "start": "Home"
+     },
+     "clcommon__External_ID__c": "cobalt_user_session",
+     "clcommon__Release_Checksum__c": "cd91bd4c0736643d76b318cf498a7855b61172384d3d93d3ebf0edc8a0c77124"
+}

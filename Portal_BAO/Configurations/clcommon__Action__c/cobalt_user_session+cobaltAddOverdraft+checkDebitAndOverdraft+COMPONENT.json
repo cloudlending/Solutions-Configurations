@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "checkDebitAndOverdraft",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "checkDebitAndOverdraft",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "style": "primary",
+               "label": "<span class=\"li-personal-identity-next\">Submit</span>"
+          },
+          "remoteActionArguments": {
+               "selectedParties": "$interaction.attr(selectedIds);",
+               "product": "$global.attr(parentValue);"
+          },
+          "validation": [],
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": ""
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltAddOverdraft"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_overdraft_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.CalculateOverdraftApi",
+     "clcommon__Unique_Action_Name__c": "cobaltAddOverdraft+checkDebitAndOverdraft",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltAddOverdraft+checkDebitAndOverdraft+COMPONENT",
+     "clcommon__Release_Checksum__c": "7ed8ca07f58296f6cc7a85971c0ed2e0f3a95c27e6e38b8eb8f6fef9fbfb282e"
+}

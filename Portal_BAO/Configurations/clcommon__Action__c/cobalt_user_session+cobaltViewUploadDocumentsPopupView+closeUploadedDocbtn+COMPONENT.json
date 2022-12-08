@@ -1,0 +1,45 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "closeUploadedDocbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "closeUploadedDocbtn",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "secondary",
+               "label": "<i class=\"fa fa-times\" aria-hidden=\"true\"></i>"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "cobaltViewUploadDocumentsPopup"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltViewUploadDocumentsPopupView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_view_document_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltViewUploadDocumentsPopupView+closeUploadedDocbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltViewUploadDocumentsPopupView+closeUploadedDocbtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "5ed36d0a131e368b5f36c046978499692cafc15964bef9bd13112e097aef2964"
+}

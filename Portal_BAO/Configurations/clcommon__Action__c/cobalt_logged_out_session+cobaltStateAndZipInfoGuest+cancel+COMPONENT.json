@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "cancel",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "cancel",
+          "property": {},
+          "appearance": {
+               "label": "<span class=\"material-icons MuiIcon-root\" aria-hidden=\"true\">close</span>",
+               "style": "primary",
+               "position": "top-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$state(cobaltEmailAndIdentityLOFormPanel).attr(electronicConsent);",
+                         "value": false
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "cobaltStateInfo"
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltStateAndZipInfoGuest"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_state_zip_info",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltStateAndZipInfoGuest+cancel",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltStateAndZipInfoGuest+cancel+COMPONENT",
+     "clcommon__Release_Checksum__c": "5547b14f0cfe38842f942fd0c6f661449c45c055d3aeadf3706d02351c19b813"
+}

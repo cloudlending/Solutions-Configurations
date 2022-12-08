@@ -1,0 +1,45 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addBusinessPersonsbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addBusinessPersonsbtn",
+          "property": {},
+          "appearance": {
+               "label": "Add Authorized Signers",
+               "style": "primary",
+               "position": "bottom-left"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "cobaltAddBusinessPersonsPopup"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "cobaltAddBusinessPersonsPopupPanel"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": null,
+     "clcommon__Component_Structure_Name__c": "cobalt_list_of_guarantors_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltAddBusinessPersonsSolePropListView+addBusinessPersonsbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltAddBusinessPersonsSolePropListView+addBusinessPersonsbtn",
+     "clcommon__Release_Checksum__c": "28a5c3ab2727813bf00a578845011a752a524b259134ba352f4d32f4b5c97f4e"
+}

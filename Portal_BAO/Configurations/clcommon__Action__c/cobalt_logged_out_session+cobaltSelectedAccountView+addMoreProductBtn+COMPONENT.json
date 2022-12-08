@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addMoreProductBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addMoreProductBtn",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(fixproducts); != \"true\"",
+               "style": "primary",
+               "label": "<span class=\"lo-add-additional-product\">Add Additional Products</span>"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(cobaltOpenAccountsSteps).appearance(current);",
+                         "value": 0
+                    },
+                    {
+                         "field": "$global.attr(pageTitle);",
+                         "value": "What type of product are you looking for?"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltSelectedAccountView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_selected_product_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltSelectedAccountView+addMoreProductBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltSelectedAccountView+addMoreProductBtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "7b81d135621e2858872f6501414d45239c109990c5cb79cc8a84fc218d9123df"
+}

@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "concatFirstMiddleAndLastName",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "concatFirstMiddleAndLastName",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "label": "Next",
+               "style": "primary",
+               "position": "top-right"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$this.attr(Name);",
+                         "value": "$state(cobaltPersonalInformationContactUsNamePanel).attr(FirstName); $state(cobaltPersonalInformationContactUsNamePanel).attr(MiddleName); $state(cobaltPersonalInformationContactUsNamePanel).attr(LastName);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": true,
+                         "actorName": "cobaltPersonalAccountDetailsPanel",
+                         "name": "accountDetailsSaveDecisionBtn"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          }
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalAccountDetailsPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_account_details_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltPersonalAccountDetailsPanel+concatFirstMiddleAndLastName",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltPersonalAccountDetailsPanel+concatFirstMiddleAndLastName+COMPONENT",
+     "clcommon__Release_Checksum__c": "fc4284b90e7cfe360ba4a1968d511c85fc346f3550123e5d230d23feaa4b1019"
+}

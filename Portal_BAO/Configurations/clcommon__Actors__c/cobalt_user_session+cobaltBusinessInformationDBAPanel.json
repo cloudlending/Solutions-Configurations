@@ -1,0 +1,158 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Unified_Business_Identifier__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{ $state(cobaltCompliancesPanel).attr(oao__Allow_UBI__c); ? $this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Unified_Business_Identifier__c); : \"\" };",
+                                   "field": "$global.attr(UBI);"
+                              }
+                         ]
+                    },
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c": {
+                         "actions": [
+                              {
+                                   "name": "assignBusinessSubType",
+                                   "actorName": "cobaltBusinessInformationDBAPanel"
+                              }
+                         ],
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"Sole Proprietorship\"?false:$this.attr(oao__Beneficial_Owner_Certification__c);};",
+                                   "field": "$this.attr(oao__Beneficial_Owner_Certification__c);"
+                              },
+                              {
+                                   "value": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);",
+                                   "field": "$global.attr(businessCategory);"
+                              },
+                              {
+                                   "value": "@mathjs{$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"Sole Proprietorship\"?0:$this.attr(oao__Percentage_Ownership__c);};",
+                                   "field": "$this.attr(oao__Percentage_Ownership__c);"
+                              }
+                         ]
+                    },
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{($this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);==\"\" or $this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);==null or $this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);==undefined)?\"\":$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);};",
+                                   "field": "$global.attr(dbaName);"
+                              }
+                         ]
+                    },
+                    "genesis__Application__r.genesis__Account__r.oao__Same_Phone_As_Personal__c": {
+                         "actions": [
+                              {
+                                   "name": "samePhoneForBusiness",
+                                   "actorName": "cobaltBusinessInformationDBAPanel",
+                                   "condition": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Same_Phone_As_Personal__c);==true"
+                              },
+                              {
+                                   "name": "differentPhoneForBusiness",
+                                   "actorName": "cobaltBusinessInformationDBAPanel",
+                                   "condition": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Same_Phone_As_Personal__c);==false"
+                              }
+                         ],
+                         "assignments": [
+                              {
+                                   "arguments": "[\"default\"]",
+                                   "value": "$ext.dynamicStepper",
+                                   "field": ""
+                              }
+                         ]
+                    }
+               },
+               "loaded": {
+                    "actions": [
+                         {
+                              "name": "showdbabtn",
+                              "actorName": "cobaltBusinessInformationDBAPanel",
+                              "condition": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);!=\"\" and $this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);!=undefined and $this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);!=null "
+                         }
+                    ],
+                    "assignments": [
+                         {
+                              "arguments": "[\"default\"]",
+                              "value": "$ext.dynamicStepper",
+                              "field": ""
+                         },
+                         {
+                              "value": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);",
+                              "field": "$global.attr(businessCategory);"
+                         },
+                         {
+                              "value": "@mathjs{ $state(cobaltCompliancesPanel).attr(oao__Allow_UBI__c); ? $this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Unified_Business_Identifier__c); : \"\" };",
+                              "field": "$global.attr(UBI);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "grid": {
+                    "field": {
+                         "fieldName": {
+                              "oao__Beneficial_Owner_Certification__c": {
+                                   "sm": 6
+                              }
+                         }
+                    }
+               },
+               "accessibility": {
+                    "ariaLabel": "This section is responsible for collecting business related information"
+               },
+               "editableFields": {
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c": "$global.attr(lockBusinessDetails);==false",
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c": "$global.attr(lockBusinessDetails);==false",
+                    "genesis__Application__r.genesis__Account__r.oao__Same_Phone_As_Personal__c": "$global.attr(lockBusinessDetails);==false",
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Business_Sub_Category__c": "$global.attr(lockBusinessDetails);==false",
+                    "genesis__Application__r.genesis__Account__r.Phone": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Same_Phone_As_Personal__c);==false and $global.attr(lockBusinessDetails);==false",
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Tax_Identification_Number__c": "$global.attr(lockBusinessDetails);==false"
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderFields": {
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Unified_Business_Identifier__c": "$state(cobaltCompliancesPanel).attr(oao__Allow_UBI__c);",
+                    "genesis__Application__r.oao__Parent_Application__c": false,
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c": "$global.attr(showdba);==true",
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.oao__Business_Sub_Category__c": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"Corporation\"",
+                    "clcommon__Account__r.Id": false,
+                    "genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.Id": false,
+                    "oao__Percentage_Ownership__c": "$this.attr(oao__Beneficial_Owner_Certification__c);==true",
+                    "clcommon__Account__r.Phone": false,
+                    "oao__Beneficial_Owner_Certification__c": "$this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"LLC\" or $this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"Corporation\" or $this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"Partnership\"or $this.attr(genesis__Application__r.genesis__Account__r.genesis__Business_Information__r.genesis__Business_Category__c);==\"Non-Profit\"",
+                    "genesis__Application__r.genesis__Account__r.Id": false
+               },
+               "editable": true,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);",
+                    "businessAccountId": "$global.attr(businessAccountId);"
+               },
+               "structureName": "cobalt_business_info_dba_businesscat_taxid_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltBusinessInformationDBAPanel",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessInformationDBAPanel",
+     "clcommon__Release_Checksum__c": "875f09085af225eb66cad5994316cc2b37e04efa0dac1c1f4d32278954b239fe"
+}

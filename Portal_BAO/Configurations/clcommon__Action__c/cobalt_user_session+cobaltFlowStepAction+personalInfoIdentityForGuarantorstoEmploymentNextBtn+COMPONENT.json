@@ -1,0 +1,87 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "personalInfoIdentityForGuarantorstoEmploymentNextBtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "personalInfoIdentityForGuarantorstoEmploymentNextBtn",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<span class=\"li-personal-identity-next\">Next</span>",
+               "render": "$global.attr(pageName); == \"personalinfoidentity\" and $global.attr(partyType);!=\"PRIMARY\" and ($state(cobaltCompliancesPanel).attr(oao__Citizenship_Question__c); or $state(cobaltCompliancesPanel).attr(oao__Employment_Question__c);)"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "Id": "$global.attr(appId);",
+                    "oao__Portal_Stage__c": "PersonalInformationIdentification"
+               },
+               "contact": {
+                    "Birthdate": "$state(cobaltPersonalContactInformationPanel).attr(Birthdate);",
+                    "ints__Social_Security_Number__c": "$state(cobaltPersonalContactInformationPanel).attr(ints__Social_Security_Number__c);",
+                    "oao__Mother_Maiden_Name__c": "$state(cobaltPersonalContactInformationPanel).attr(oao__Mother_Maiden_Name__c);"
+               }
+          },
+          "validation": [
+               "cobaltPersonalContactInformationPanel",
+               "cobaltPersonalInformationIdentificationPanel",
+               "cobaltPersonalInformationIdentificationPortalFieldPanel",
+               "cobaltPersonalIdenitityDetailsPanel",
+               "cobaltPartyDetailsPanel"
+          ],
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "default"
+                         ]
+                    },
+                    {
+                         "field": "$global.attr(PositionAtCompany);",
+                         "value": "$state(cobaltPartyDetailsPanel).attr(oao__Position_At_Company__c);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$global.attr(partyType);!=\"AUTHORIZED SIGNER\"",
+                         "actorName": "cobaltPartyDetailsPanel",
+                         "name": "savePartyDetailsWithoutLoaderEmployment"
+                    },
+                    {
+                         "condition": "$global.attr(partyType);==\"AUTHORIZED SIGNER\"",
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "personalIdentityDetailsSaveDecision"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {
+               "submitFailureText": "$serverMessage;",
+               "showSubmitAnimation": true
+          },
+          "ariaLabel": "Click here to save data and go to the next step."
+     },
+     "clcommon__Action_Order__c": 67,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.PortalSavePersonalInfoApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+personalInfoIdentityForGuarantorstoEmploymentNextBtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+personalInfoIdentityForGuarantorstoEmploymentNextBtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "96151da99955aab00fa8089134cedb67bd33fbdbcb4a5bae6b938b482f6ce688"
+}

@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "stepperStyleAddonsbtn",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "stepperStyleAddonsbtn",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "normal",
+               "label": "Stepper style",
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "",
+                         "value": "$ext.dynamicStepper",
+                         "arguments": [
+                              "addBusinessPerson"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltStepperTitlePanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_cart_details_existing",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltStepperTitlePanel+stepperStyleAddonsbtn",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltStepperTitlePanel+stepperStyleAddonsbtn+COMPONENT",
+     "clcommon__Release_Checksum__c": "9a1dbd5840d31b7828ffd53267de265f1cb07b96c7df8c81cc20b5a1845a5ca0"
+}

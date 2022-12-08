@@ -1,0 +1,36 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "navigate": {
+                    "valid-identification": {
+                         "updates": [
+                              {
+                                   "value": "cobaltIdentificationTypeContainer",
+                                   "name": "$nav.overlay.add;"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {},
+          "property": {
+               "contentName": "eligibilityContentNewApp"
+          },
+          "type": "static-content",
+          "category": "content"
+     },
+     "clcommon__Actor_Name__c": "cobaltEligibilityContent",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltEligibilityContent",
+     "clcommon__Release_Checksum__c": "4580b5c25bbda4ee3ccb8661c68780da2b88371feac19a5a6d75a794156b0609"
+}

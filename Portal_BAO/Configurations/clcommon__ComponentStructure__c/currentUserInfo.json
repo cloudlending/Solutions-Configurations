@@ -1,0 +1,36 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "$currentUserInfo",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "accountId",
+     "clcommon__Record_Access_Filter__c": "clcommon__Account__c",
+     "clcommon__Unique_Name__c": "$currentUserInfo",
+     "clcommon__data__c": {
+          "structureName": "$currentUserInfo",
+          "tableName": "clcommon__Party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId'"
+          },
+          "orderBy": "createddate desc limit 1",
+          "sections": [
+               {
+                    "id": "3df9794a-df84-4990-ae17-4de7e17e3ede",
+                    "fields": [
+                         {
+                              "id": "e99ecf8e-3efc-451e-a11d-191570120459",
+                              "fieldName": "genesis__Application__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Application Name"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "currentUserInfo",
+     "clcommon__Release_Checksum__c": "d3988c5ceec036c511c4555878015d115f96cb462adca67ea63ed1dc6b7721f7"
+}

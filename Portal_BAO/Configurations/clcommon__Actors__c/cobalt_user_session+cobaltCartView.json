@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "$global.attr(showCartView); == \"old\"",
+               "blankMessage": "No products added",
+               "editableFields": {
+                    "oao__Application__r.Name": false,
+                    "oao__Application__r.genesis__Status__c": false,
+                    "oao__Product_Name__c": false,
+                    "oao__Product_Id__c": false
+               },
+               "renderFields": {
+                    "oao__Application__r.Name": false,
+                    "oao__Application__r.genesis__Status__c": false,
+                    "oao__Product_Id__c": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);"
+               },
+               "structureName": "cobalt_cart_details_existing"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltCartView",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltCartView",
+     "clcommon__Release_Checksum__c": "2fc9c859173d2343b2ab644c32ad91f353df2812504700320b9a3d17abb2ac70"
+}

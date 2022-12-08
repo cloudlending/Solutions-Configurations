@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "benefecial_owner": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(benefecial_owner);==true?$this.attr(percentageOwnership);:\"\"};",
+                                   "field": "$this.attr(percentageOwnership);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "title": "Add Business Party",
+               "renderFields": {
+                    "percentageOwnership": "$this.attr(benefecial_owner);==true",
+                    "control_person": "$global.attr(controlPerson);==true",
+                    "benefecial_owner": "$global.attr(benefecialOwner);==true",
+                    "authorized_signer": "$global.attr(authorizeSigner);==true"
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "expansionTop": "normal",
+               "editable": true,
+               "accessibility": {
+                    "ariaLabel": "This section allows you to add Business Person related to your business"
+               }
+          },
+          "property": {
+               "structureName": "cobalt_add_new_guarantors"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltAddBusinessPersonsPopupPanel",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltAddBusinessPersonsPopupPanel",
+     "clcommon__Release_Checksum__c": "8fec0526f2bf1727246ad6677da55854834eaebb98c68273594c5b3161ca06a7"
+}

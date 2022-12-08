@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "actions": [
+                         {
+                              "name": "checkthecheckbox",
+                              "actorName": "cobaltBusinessIndustryPanel",
+                              "condition": "$this.attr(genesis__Application__r.genesis__Account__r.clcommon__Industry_Classification_Code__r.clcommon__Code__c); !=null and $this.attr(genesis__Application__r.genesis__Account__r.clcommon__Industry_Classification_Code__r.clcommon__Code__c); !=\"\" and $this.attr(genesis__Application__r.genesis__Account__r.clcommon__Industry_Classification_Code__r.clcommon__Code__c); !=undefined"
+                         }
+                    ],
+                    "assignments": [
+                         {
+                              "arguments": [
+                                   "default"
+                              ],
+                              "value": "$ext.dynamicStepper",
+                              "field": ""
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "genesis__Application__r.genesis__Account__r.clcommon__Industry_Classification_Code__r.clcommon__Code__c": "$global.attr(lockBusinessDetails);==false"
+               },
+               "accessibility": {
+                    "ariaLabel": "This section contains a text field where you have to enter your industry code manually."
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderFields": {
+                    "genesis__Application__r.genesis__Account__r.clcommon__Industry_Classification_Code__r.clcommon__Code__c": "$state(cobaltIKnowIndustryCodePanel).attr(industrycodecheckbox);==true"
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "businessAccountId": "$global.attr(businessAccountId);"
+               },
+               "structureName": "cobalt_business_industry_code_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltIndustryCodePanel",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltIndustryCodePanel",
+     "clcommon__Release_Checksum__c": "422ce134410f3850af943549b5fd56131a6eaaa0daad13527aa2be2c68cb9834"
+}

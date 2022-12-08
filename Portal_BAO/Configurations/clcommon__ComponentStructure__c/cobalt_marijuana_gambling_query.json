@@ -1,0 +1,118 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_marijuana_gambling_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "accountId",
+     "clcommon__Record_Access_Filter__c": "clcommon__Account__r.Id",
+     "clcommon__Unique_Name__c": "cobalt_marijuana_gambling_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_marijuana_gambling_query",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "clcommon__Account__r.Id='$User.accountId' and genesis__Application__r.oao__Parent_Application__c=true and genesis__Application__r.Id=':appId'"
+          },
+          "sections": [
+               {
+                    "id": "d73be27e-68b6-462f-b05f-f4ca0e93297f",
+                    "name": "Marijuana",
+                    "fields": [
+                         {
+                              "id": "61d530ab-cdb8-4b91-8b66-db3133ab67de",
+                              "fieldName": "genesis__Application__r.oao__Marijuana_Related_Business__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Is your business a marijuana-related business?",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "selectOptions": [
+                                        {
+                                             "id": "asdfasdfYes",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Yes",
+                                             "optionValue": "Yes"
+                                        },
+                                        {
+                                             "id": "Partnerasdfship",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "No",
+                                             "optionValue": "No"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Marijuana-related business quesiton is required"
+                                   },
+                                   "ariaLabel": "Is your business a marijuana-related business?"
+                              }
+                         },
+                         {
+                              "id": "9aed6719-7b0b-40ad-8e4a-fc3f524fc415",
+                              "fieldName": "genesis__Application__r.oao__Hemp_Related_Business__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Is your business a hemp-related business?",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "selectOptions": [
+                                        {
+                                             "id": "asdfasasdfasdfYes",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Yes",
+                                             "optionValue": "Yes"
+                                        },
+                                        {
+                                             "id": "Partnerasdfasdfship",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "No",
+                                             "optionValue": "No"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Hemp-related business quesiton is required"
+                                   },
+                                   "ariaLabel": "Is your business a hemp-related business?"
+                              }
+                         },
+                         {
+                              "id": "64df44ff-970d-409c-bb6c-eb5a2a1d9dbd",
+                              "fieldName": "genesis__Application__r.oao__CBD_Related_Business__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Is your business a CBD-related business?",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "selectOptions": [
+                                        {
+                                             "id": "asdfasasdfasasfdasdfYes",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Yes",
+                                             "optionValue": "Yes"
+                                        },
+                                        {
+                                             "id": "Partnerasdfasdfship",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "No",
+                                             "optionValue": "No"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "CBD-related business quesiton is required"
+                                   },
+                                   "ariaLabel": "Is your business a CBD-related business?"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_marijuana_gambling_query",
+     "clcommon__Release_Checksum__c": "69d67bdf34931c13212779357333f0be6a2fbf2e20ba1d9251af455555fc9010"
+}

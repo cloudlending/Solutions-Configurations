@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "$this.count();>0",
+               "renderFields": {
+                    "oao__CLProduct__r.Id": false,
+                    "oao__Application__r.Id": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editableFields": {
+                    "oao__Application__r.Id": false,
+                    "Name": false
+               },
+               "editable": true,
+               "summary": {
+                    "prefixSpan": "1"
+               },
+               "title": "Select additional business solutions you'd like to learn more about:"
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(appId);"
+               },
+               "structureName": "cobalt_addons_application_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "cobaltAddonsFromApplictionListView",
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltAddonsFromApplictionListView",
+     "clcommon__Release_Checksum__c": "30663fe5e5995bd4e4cef9762c899de45ebaac1247c7a134b76131744c093294"
+}

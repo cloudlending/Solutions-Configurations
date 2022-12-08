@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "updateParentDocumentCategory",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "updateParentDocumentCategory",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {
+               "docCatId": "$global.attr(parentDocId);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "cobaltDocUploadPanel",
+                              "cobaltDocUploadTitlePanel"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltViewUploadDocumentsPopupView"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_view_document_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.UpdateParentDocumentCategoryApi",
+     "clcommon__Unique_Action_Name__c": "cobaltViewUploadDocumentsPopupView+updateParentDocumentCategory",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltViewUploadDocumentsPopupView+updateParentDocumentCategory+COMPONENT",
+     "clcommon__Release_Checksum__c": "610865f9ef60c616d6e6fc48ea453617495edd364ebe210b167ae2c5e28a53d4"
+}

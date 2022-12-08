@@ -1,0 +1,45 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "dummyPopup",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "dummyPopup",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Popup"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "cobaltEmailAndIdentityDisclosureContainer"
+                    }
+               ]
+          },
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "save",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltEmailAndIdentityDisclosure"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltEmailAndIdentityDisclosure+dummyPopup",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_logged_out_session+cobaltEmailAndIdentityDisclosure+dummyPopup+COMPONENT",
+     "clcommon__Release_Checksum__c": "acec84f5711a4285dad28eed7283b9723b7c78ff5f9fa9796b5ba7a7692c47a6"
+}

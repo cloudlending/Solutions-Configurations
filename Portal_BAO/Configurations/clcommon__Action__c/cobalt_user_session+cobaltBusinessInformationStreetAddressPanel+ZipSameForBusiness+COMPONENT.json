@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "ZipSameForBusiness",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "ZipSameForBusiness",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.BillingStreet);",
+                         "value": "@mathjs{$global.attr(lockBusinessDetails);==false?$this.attr(clcommon__Account__r.BillingStreet);:$this.attr(genesis__Application__r.genesis__Account__r.BillingStreet);};"
+                    },
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.BillingCity);",
+                         "value": "@mathjs{$global.attr(lockBusinessDetails);==false?$this.attr(clcommon__Account__r.BillingCity);:$this.attr(genesis__Application__r.genesis__Account__r.BillingCity);};"
+                    },
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.BillingStateCode);",
+                         "value": "@mathjs{$global.attr(lockBusinessDetails);==false?$this.attr(clcommon__Account__r.BillingStateCode);:$this.attr(genesis__Application__r.genesis__Account__r.BillingStateCode);};"
+                    },
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.BillingPostalCode);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Account__r.BillingPostalCode);"
+                    },
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.BillingCountryCode);",
+                         "value": "@mathjs{$global.attr(lockBusinessDetails);==false?$this.attr(clcommon__Account__r.BillingCountryCode);:$this.attr(genesis__Application__r.genesis__Account__r.BillingCountryCode);};"
+                    },
+                    {
+                         "field": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Billing_Address_Second_Line__c);",
+                         "value": "@mathjs{$global.attr(lockBusinessDetails);==false?$this.attr(clcommon__Account__r.oao__Billing_Address_Second_Line__c);:$this.attr(genesis__Application__r.genesis__Account__r.oao__Billing_Address_Second_Line__c);};"
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessInformationStreetAddressPanel"
+     },
+     "clcommon__Component_Structure_Name__c": "cobalt_business_account_billing_address_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "cobaltBusinessInformationStreetAddressPanel+ZipSameForBusiness",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessInformationStreetAddressPanel+ZipSameForBusiness+COMPONENT",
+     "clcommon__Release_Checksum__c": "d1104acad03eb13c98af0dcb112be63b01cfa08d95a49d973b2da8e7bd3e1d34"
+}

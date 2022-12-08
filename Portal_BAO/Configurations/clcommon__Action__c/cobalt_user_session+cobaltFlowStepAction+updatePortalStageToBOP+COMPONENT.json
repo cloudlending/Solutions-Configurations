@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "updatePortalStageToBOP",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "updatePortalStageToBOP",
+          "property": {},
+          "appearance": {
+               "render": false
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "oao__Portal_Stage__c": "BOCertificationPrimary",
+                    "Id": "$global.attr(appId);"
+               }
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "cobaltShortLoaderContainer"
+                    }
+               ],
+               "actions": [
+                    {
+                         "actorName": "cobaltFlowStepAction",
+                         "name": "goToBusinessInfo"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 40,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "oao.PortalSaveBusinessInfoApi",
+     "clcommon__Unique_Action_Name__c": "cobaltFlowStepAction+updatePortalStageToBOP",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "cobalt_user_session+cobaltFlowStepAction+updatePortalStageToBOP+COMPONENT",
+     "clcommon__Release_Checksum__c": "e0b5333c92594e0794d430d6a22f0b0e8dbb30c55737d5a9471bc38306cdfec2"
+}

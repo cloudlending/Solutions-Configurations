@@ -1,0 +1,63 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "cobalt_personal_contact_details_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "contactId",
+     "clcommon__Record_Access_Filter__c": "id",
+     "clcommon__Unique_Name__c": "cobalt_personal_contact_details_query",
+     "clcommon__data__c": {
+          "structureName": "cobalt_personal_contact_details_query",
+          "tableName": "contact",
+          "whereClause": {
+               "freeForm": "id='$User.contactId'"
+          },
+          "sections": [
+               {
+                    "id": "a8687802-b20e-4f78-9ac8-60478f1d9e62",
+                    "name": "Details",
+                    "fields": [
+                         {
+                              "id": "6a0eeb1c-ae18-439f-9016-7b4668feec6e",
+                              "fieldName": "ints__SSN__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Social Security Number",
+                                   "required": true,
+                                   "regex": "^[0-9]{9}",
+                                   "messages": {
+                                        "requiredErrorText": "Social Security Number is required",
+                                        "regexErrorText": "Social Security Number must be of 9 digits"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "delimiter": "-",
+                                             "numericOnly": true,
+                                             "blocks": [
+                                                  3,
+                                                  2,
+                                                  4
+                                             ]
+                                        }
+                                   },
+                                   "ariaLabel": "Social Security Number"
+                              }
+                         },
+                         {
+                              "id": "eeede3c7-b3a5-4a32-ac41-3c14253e65b3",
+                              "fieldName": "Birthdate",
+                              "fieldUi": {
+                                   "fieldType": "date",
+                                   "label": "Birthdate",
+                                   "ariaLabel": "Birthdate"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "cobalt_personal_contact_details_query",
+     "clcommon__Release_Checksum__c": "564ab86f1d8432be71560b415b27bf5c006327dca52217fddeb2b707d802e2a7"
+}
