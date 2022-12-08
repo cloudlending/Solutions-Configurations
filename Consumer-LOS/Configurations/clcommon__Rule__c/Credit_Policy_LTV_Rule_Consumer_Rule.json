@@ -9,10 +9,10 @@
      "clcommon__Object_Type__c": "genesis__Applications__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "d3cee620ec9404fe9ceef33da2309d94ab1cd892d8b91261540a5ca2087d557f",
+     "clcommon__Release_Checksum__c": "9890655310e8081e4d4951fa965497bb33ad1166d2c89c254bb3dd486728dfc4",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
-          "successMessage": "Rule Evaluation Passed for rule : Credit Policy – LTV Rule",
+          "successMessage": "Rule Evaluation Passed for rule : Credit Policy - LTV Rule",
           "successActions": [
                {
                     "type": "Apex",
@@ -24,12 +24,12 @@
           ],
           "sObjectName": "",
           "saveRuleClass": "genesis.PolicyConditionGenerationRuleManagement",
-          "ruleName": "Credit Policy – LTV Rule",
-          "priority": 16,
+          "ruleName": "Credit Policy - LTV Rule",
+          "priority": 6,
           "parentRuleID": null,
           "parentRecordId": null,
           "objectType": "genesis__Applications__c",
-          "failureMessage": "Rule Evaluation Failed for rule : Credit Policy – LTV Rule",
+          "failureMessage": "Rule Evaluation Failed for rule : Credit Policy - LTV Rule",
           "failureActions": [
                {
                     "type": "Apex",
@@ -49,11 +49,11 @@
                     "relatedObject": "genesis__Applications__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "Auto Loan",
+                    "matchingValue": "Consumer Secured",
                     "matchingType": "==",
                     "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__cl_product__r.clcommon__product_name__c",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__asset_class__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -64,11 +64,11 @@
                     "relatedObject": "genesis__Applications__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "Home Equity Loan",
+                    "matchingValue": "Consumer Real Estate",
                     "matchingType": "==",
                     "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__cl_product__r.clcommon__product_name__c",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__asset_class__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -77,7 +77,7 @@
           "category": "PolicyConditionGenerationConfig",
           "abortQueueExecutionOnFailure": null
      },
-     "clcommon__Rule_Priority__c": 16,
+     "clcommon__Rule_Priority__c": 6,
      "clcommon__Rule_Set__r": {
           "attributes": {
                "type": "clcommon__Rule_Set__c"

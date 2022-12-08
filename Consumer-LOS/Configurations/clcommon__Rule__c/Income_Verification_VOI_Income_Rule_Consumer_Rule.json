@@ -9,10 +9,10 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "9ea94aff173c2318f0d9fffff2b14a2a3f78f4a92b9102f9ee89fd1ee7afae3f",
+     "clcommon__Release_Checksum__c": "081c73e8e833f4c294a1ca02a2ee046e4429f2075a00e2eb5ddc78d0d1c7df6e",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
-          "successMessage": "Rule Evaluation Passed for rule : Income Verification (VOI) – Income Rule",
+          "successMessage": "Rule Evaluation Passed for rule : Income Verification (VOI) - Income Rule",
           "successActions": [
                {
                     "type": "Apex",
@@ -23,13 +23,13 @@
                }
           ],
           "sObjectName": "",
-          "saveRuleClass": null,
-          "ruleName": "Income Verification (VOI) – Income Rule",
+          "saveRuleClass": "genesis.PolicyConditionGenerationRuleManagement",
+          "ruleName": "Income Verification (VOI) - Income Rule",
           "priority": 19,
           "parentRuleID": null,
           "parentRecordId": null,
           "objectType": "clcommon__Party__c",
-          "failureMessage": "Rule Evaluation Failed for rule : Income Verification (VOI) – Income Rule",
+          "failureMessage": "Rule Evaluation Failed for rule : Income Verification (VOI) - Income Rule",
           "failureActions": [
                {
                     "type": "Apex",
@@ -40,7 +40,7 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1&&$2",
+          "evaluationExpression": "$1",
           "enabled": null,
           "criteria": [
                {
@@ -57,27 +57,12 @@
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$2",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "MANUAL",
-                    "matchingType": "==",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "VOI Verification Method",
-                    "fieldAPIName": "solcommon__voi_verification_method__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
                }
           ],
           "category": "PolicyConditionGenerationConfig",
           "abortQueueExecutionOnFailure": null
      },
-     "clcommon__Rule_Priority__c": 19,
+     "clcommon__Rule_Priority__c": 9,
      "clcommon__Rule_Set__r": {
           "attributes": {
                "type": "clcommon__Rule_Set__c"

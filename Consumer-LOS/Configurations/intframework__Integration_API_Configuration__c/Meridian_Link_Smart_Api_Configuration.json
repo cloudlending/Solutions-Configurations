@@ -1,0 +1,215 @@
+{
+     "attributes": {
+          "type": "intframework__Integration_API_Configuration__c"
+     },
+     "Name": "Meridian Link Smart Api Configuration",
+     "intframework__API_Endpoint__c": "inetapi/request_products.aspx",
+     "intframework__API_Named_Credential__c": null,
+     "intframework__Adapter_Class_Name__c": "solcommon.ExtendedMeridianLinkConsumerAdapter",
+     "intframework__Additional_Header_Parameters__c": {
+          "MCL-Interface": "SmartAPITestingIdentifier"
+     },
+     "intframework__Data_Format_Config_Set__r": {
+          "attributes": {
+               "type": "intframework__Data_Format_Config_Set__c"
+          },
+          "intframework__External_Id__c": "MeridianLinkDataFormatConfigSet"
+     },
+     "intframework__Execution_Priority__c": 1,
+     "intframework__External_Id__c": "Meridian_Link_Smart_Api_Configuration",
+     "intframework__File_Extension__c": null,
+     "intframework__File_Name_Prefix__c": null,
+     "intframework__Generate_File__c": false,
+     "intframework__HTTP_Content_Type__c": "application/xml",
+     "intframework__HTTP_Method__c": "POST",
+     "intframework__Integration_API_Type__r": {
+          "attributes": {
+               "type": "intframework__Integration_API_Type__c"
+          },
+          "intframework__External_Id__c": "Smart_API"
+     },
+     "intframework__Integration_Configuration__r": {
+          "attributes": {
+               "type": "intframework__Integration_Configuration__c"
+          },
+          "intframework__External_Id__c": "Meridian_Link_Credit_Report"
+     },
+     "intframework__Integration_Family__r": {
+          "attributes": {
+               "type": "intframework__Integration_Family__c"
+          },
+          "intframework__External_Id__c": "Consumer_Credit"
+     },
+     "intframework__Integration_Provider__r": {
+          "attributes": {
+               "type": "intframework__Integration_Provider__c"
+          },
+          "intframework__External_Id__c": "Consumer_Credit_Meridian_Link"
+     },
+     "intframework__Log_Filter__c": null,
+     "intframework__Log_Request_Response__c": false,
+     "intframework__Long_Running_Operation__c": false,
+     "intframework__Number_Of_Retries__c": 0,
+     "intframework__Release_Checksum__c": "763f812615a094ab3aa71be9e73cddfcdf5cfb1146fb364440e4dd5a610bba2d",
+     "intframework__Request_Mapping__c": {
+          "thirdPartySystem": {
+               "name": "Meridian Link Smart API",
+               "filters": [
+                    {
+                         "objectAPI": "clcommon__Party__c",
+                         "objectAlias": "PartyDetails",
+                         "fields": [
+                              {
+                                   "externalField": "PartyRoleType",
+                                   "fieldAPI": "clcommon__Type__r.Name",
+                                   "isMandatory": true
+                              }
+                         ],
+                         "whereClause": "Id = :partyId"
+                    },
+                    {
+                         "objectAPI": "intdm__Credit_Check__c",
+                         "objectAlias": "CreditCheck",
+                         "fields": [
+                              {
+                                   "externalField": "VendorOrderIdentifier",
+                                   "fieldAPI": "intdm__Transaction_Id__c"
+                              }
+                         ],
+                         "whereClause": "Id = :creditCheckId"
+                    },
+                    {
+                         "objectAPI": "clcommon__Address__c",
+                         "objectAlias": "AddressDetails",
+                         "fields": [
+                              {
+                                   "externalField": "StreetAddress",
+                                   "fieldAPI": "clcommon__Street_Address__c",
+                                   "isMandatory": true
+                              },
+                              {
+                                   "externalField": "City",
+                                   "fieldAPI": "clcommon__City__c",
+                                   "isMandatory": true
+                              },
+                              {
+                                   "externalField": "StateProvince",
+                                   "fieldAPI": "clcommon__State_Province__c",
+                                   "isMandatory": true
+                              },
+                              {
+                                   "externalField": "PostalCode",
+                                   "fieldAPI": "clcommon__Zip_Code__c",
+                                   "isMandatory": true
+                              },
+                              {
+                                   "externalField": "Country_Code",
+                                   "fieldAPI": "clcommon__Country_Code__c"
+                              }
+                         ],
+                         "whereClause": "clcommon__Contact__c = :contactId AND (clcommon__Current_Address__c = true)"
+                    },
+                    {
+                         "objectAPI": "Contact",
+                         "objectAlias": "ContactDetails",
+                         "fields": [
+                              {
+                                   "externalField": "Last_Name",
+                                   "fieldAPI": "LastName",
+                                   "isMandatory": true
+                              },
+                              {
+                                   "externalField": "First_Name",
+                                   "fieldAPI": "FirstName",
+                                   "isMandatory": true
+                              },
+                              {
+                                   "externalField": "Middle_Name",
+                                   "fieldAPI": "ints__Middle_Name__c"
+                              },
+                              {
+                                   "externalField": "Social_Security_Number",
+                                   "fieldAPI": "ints__Social_Security_Number__c",
+                                   "isMandatory": true
+                              }
+                         ],
+                         "whereClause": "Id = :contactId"
+                    }
+               ],
+               "staticParameters": [
+                    {
+                         "externalField": "TaxPayerIdentificationType",
+                         "value": "SocialSecurityNumber"
+                    },
+                    {
+                         "externalField": "BorrowerResidencyType",
+                         "value": "Current"
+                    },
+                    {
+                         "externalField": "IsEquifaxIndicatorEnabled",
+                         "value": true
+                    },
+                    {
+                         "externalField": "IsEquifaxScoreEnabled",
+                         "value": true
+                    },
+                    {
+                         "externalField": "IsTransUnionIndicatorEnabled",
+                         "value": true
+                    },
+                    {
+                         "externalField": "IsTransUnionScoreEnabled",
+                         "value": true
+                    },
+                    {
+                         "externalField": "IsTransUnionFraudEnabled",
+                         "value": true
+                    },
+                    {
+                         "externalField": "IsExperianIndicatorEnabled",
+                         "value": true
+                    },
+                    {
+                         "externalField": "IsExperianScoreEnabled",
+                         "value": true
+                    },
+                    {
+                         "externalField": "IsExperianFraudEnabled",
+                         "value": true
+                    },
+                    {
+                         "externalField": "PreferredResponseFormatType",
+                         "value": "Xml"
+                    },
+                    {
+                         "externalField": "PreferredCreditReportPdfFormatType",
+                         "value": "Pdf"
+                    },
+                    {
+                         "externalField": "CreditReportRequestActionType",
+                         "value": "Submit"
+                    },
+                    {
+                         "externalField": "DataVersionIdentifier",
+                         "value": "201703"
+                    }
+               ],
+               "dynamicDataParameters": []
+          }
+     },
+     "intframework__Request_Timeout__c": 120000,
+     "intframework__Response_Mapping__c": {
+          "StorageConfiguration": {
+               "StoreInDB": "True",
+               "PublishAsJSON": "False"
+          },
+          "DMLOperations": []
+     },
+     "intframework__Retry_On_Failure__c": false,
+     "intframework__Send_File__c": false,
+     "intframework__UI_Page_Name__c": null,
+     "intframework__UI_Page_Type__c": null,
+     "intframework__Use_New_Logging_Mechanism__c": false,
+     "intframework__Use_Response_Mocker__c": false,
+     "solcommon__Release_Checksum__c": null
+}

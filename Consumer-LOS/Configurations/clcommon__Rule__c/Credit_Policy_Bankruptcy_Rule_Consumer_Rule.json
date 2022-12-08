@@ -9,10 +9,10 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "6c73fe5c4b6739e3ca53e2eed907becc795686bb177899506fe99eb1f8337228",
+     "clcommon__Release_Checksum__c": "a764f328fadf38e6dc31aa84c5b9f602ae4b4d2e30a4809f6f16feec4df1ffc3",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
-          "successMessage": "Rule Evaluation Passed for rule : Credit Policy – Bankruptcy Rule",
+          "successMessage": "Rule Evaluation Passed for rule : Credit Policy - Bankruptcy Rule",
           "successActions": [
                {
                     "type": "Apex",
@@ -24,12 +24,12 @@
           ],
           "sObjectName": "",
           "saveRuleClass": "genesis.PolicyConditionGenerationRuleManagement",
-          "ruleName": "Credit Policy – Bankruptcy Rule",
-          "priority": 18,
+          "ruleName": "Credit Policy - Bankruptcy Rule",
+          "priority": 8,
           "parentRuleID": null,
           "parentRecordId": null,
           "objectType": "clcommon__Party__c",
-          "failureMessage": "Rule Evaluation Failed for rule : Credit Policy – Bankruptcy Rule",
+          "failureMessage": "Rule Evaluation Failed for rule : Credit Policy - Bankruptcy Rule",
           "failureActions": [
                {
                     "type": "Apex",
@@ -40,7 +40,7 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1||$2||$3||$4",
+          "evaluationExpression": "$1||$2||$3",
           "enabled": null,
           "criteria": [
                {
@@ -49,11 +49,11 @@
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "Credit Card",
+                    "matchingValue": "Consumer Secured",
                     "matchingType": "==",
                     "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__application__r.genesis__cl_product__r.clcommon__product_name__c",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -64,11 +64,11 @@
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "Personal Loan",
+                    "matchingValue": "Consumer Unsecured",
                     "matchingType": "==",
                     "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__application__r.genesis__cl_product__r.clcommon__product_name__c",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -79,26 +79,11 @@
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "Auto Loan",
+                    "matchingValue": "Consumer Real Estate",
                     "matchingType": "==",
                     "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__application__r.genesis__cl_product__r.clcommon__product_name__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$4",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "Home Equity Loan",
-                    "matchingType": "==",
-                    "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__application__r.genesis__cl_product__r.clcommon__product_name__c",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -107,7 +92,7 @@
           "category": "PolicyConditionGenerationConfig",
           "abortQueueExecutionOnFailure": null
      },
-     "clcommon__Rule_Priority__c": 18,
+     "clcommon__Rule_Priority__c": 8,
      "clcommon__Rule_Set__r": {
           "attributes": {
                "type": "clcommon__Rule_Set__c"
