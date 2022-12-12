@@ -32,7 +32,8 @@
                                    "default"
                               ],
                               "value": "$ext.dynamicStepper",
-                              "field": ""
+                              "field": "",
+                              "condition": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Same_Address_As_Personal__c); or $state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c); or $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c);"
                          },
                          {
                               "value": "$this.attr(genesis__Application__r.genesis__Account__r.BillingStreet);",
@@ -93,6 +94,16 @@
                                    "actorName": "cobaltBusinessInformationStreetAddressPanel",
                                    "condition": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Same_Address_As_Personal__c);==true and ($state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c); and $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c);)"
                               }
+                         ],
+                         "assignments": [
+                              {
+                                   "arguments": [
+                                        "default"
+                                   ],
+                                   "value": "$ext.dynamicStepper",
+                                   "field": "",
+                                   "condition": "$this.attr(genesis__Application__r.genesis__Account__r.oao__Same_Address_As_Personal__c); or $state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c); or $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c);"
+                              }
                          ]
                     }
                }
@@ -125,15 +136,15 @@
                     "clcommon__Account__r.BillingStateCode": "$global.attr(lockBusinessDetails);==false",
                     "clcommon__Account__r.BillingPostalCode": "$global.attr(lockBusinessDetails);==false",
                     "genesis__Application__r.genesis__Account__r.oao__Same_Address_As_Personal__c": "$global.attr(lockBusinessDetails);==false",
-                    "genesis__Application__r.genesis__Account__r.BillingStateCode": "not $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c); and not $state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c);",
-                    "genesis__Application__r.genesis__Account__r.BillingCountryCode": "not $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c); and not $state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c);",
-                    "genesis__Application__r.genesis__Account__r.BillingStreet": "not $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c); and not $state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c);",
+                    "genesis__Application__r.genesis__Account__r.BillingStateCode": "(not $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c); and not $state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c); and not $this.attr(genesis__Application__r.genesis__Account__r.oao__Same_Address_As_Personal__c);)",
+                    "genesis__Application__r.genesis__Account__r.BillingCountryCode": "(not $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c); and not $state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c); and not $this.attr(genesis__Application__r.genesis__Account__r.oao__Same_Address_As_Personal__c);)",
+                    "genesis__Application__r.genesis__Account__r.BillingStreet": "(not $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c); and not $state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c); and not $this.attr(genesis__Application__r.genesis__Account__r.oao__Same_Address_As_Personal__c);)",
                     "genesis__Application__r.oao__Parent_Application__c": "$global.attr(lockBusinessDetails);==false",
-                    "genesis__Application__r.genesis__Account__r.BillingCity": "not $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c); and not $state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c);",
+                    "genesis__Application__r.genesis__Account__r.BillingCity": "(not $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c); and not $state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c); and not $this.attr(genesis__Application__r.genesis__Account__r.oao__Same_Address_As_Personal__c);)",
                     "clcommon__Account__r.BillingCountryCode": "$global.attr(lockBusinessDetails);==false",
                     "clcommon__Account__r.BillingCity": "$global.attr(lockBusinessDetails);==false",
                     "clcommon__Account__r.BillingStreet": "$global.attr(lockBusinessDetails);==false",
-                    "genesis__Application__r.genesis__Account__r.BillingPostalCode": "not $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c); and not $state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c);"
+                    "genesis__Application__r.genesis__Account__r.BillingPostalCode": "(not $state(cobaltCustomSettingsPanel).attr(oao__Enable_State_Disclosure__c); and not $state(cobaltCustomSettingsPanel).attr(oao__Enable_ZipCode_Disclosure__c); and not $this.attr(genesis__Application__r.genesis__Account__r.oao__Same_Address_As_Personal__c);)"
                },
                "editable": true,
                "accessibility": {
@@ -152,5 +163,5 @@
      },
      "clcommon__Actor_Name__c": "cobaltBusinessInformationStreetAddressPanel",
      "clcommon__External_ID__c": "cobalt_user_session+cobaltBusinessInformationStreetAddressPanel",
-     "clcommon__Release_Checksum__c": "0ade9a7471051dfc68bc65e919b279414639d30aa7a7bd8da236d924f18aa136"
+     "clcommon__Release_Checksum__c": "f02f194020ff5e1ef297f6273d8f6803323254d5e856f0a93278aec979285122"
 }
