@@ -9,7 +9,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "8c0b7b5952981af85ef83cdfbed0bfde925f602aac3d0383ba82757926e38041",
+     "clcommon__Release_Checksum__c": "1571f5e2de5741b56a8497f9c17d09604a0e1274f0fd647ef465d5633b916a80",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
           "successMessage": "Rule Evaluation Passed for rule : Individual Borrower",
@@ -23,8 +23,9 @@
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : Individual Borrower",
           "failureActions": [],
+          "externalId": "Individual_Borrower_Consumer_Rule",
           "executeActions": null,
-          "evaluationExpression": "($1||$2||$3||$4)&&$5&&$6",
+          "evaluationExpression": "$1&&$2&&$3",
           "enabled": null,
           "criteria": [
                {
@@ -33,11 +34,11 @@
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "Credit Card",
-                    "matchingType": "==",
+                    "matchingValue": "Consumer Secured,Consumer Unsecured,Consumer Real Estate",
+                    "matchingType": "IN",
                     "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__application__r.genesis__cl_product__r.clcommon__product_name__c",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -45,51 +46,6 @@
                {
                     "type": "Expression",
                     "sequence": "$2",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "Personal Loan",
-                    "matchingType": "==",
-                    "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__application__r.genesis__cl_product__r.clcommon__product_name__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$3",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "Auto Loan",
-                    "matchingType": "==",
-                    "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__application__r.genesis__cl_product__r.clcommon__product_name__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$4",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "Home Equity Loan",
-                    "matchingType": "==",
-                    "fieldType": "STRING",
-                    "fieldName": "Product Name",
-                    "fieldAPIName": "genesis__application__r.genesis__cl_product__r.clcommon__product_name__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$5",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -104,7 +60,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$6",
+                    "sequence": "$3",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -118,7 +74,7 @@
                     "additionalParams": null
                }
           ],
-          "category": "score card",
+          "category": "LOS Scorecard",
           "abortQueueExecutionOnFailure": null
      },
      "clcommon__Rule_Priority__c": 1,
@@ -126,7 +82,7 @@
           "attributes": {
                "type": "clcommon__Rule_Set__c"
           },
-          "clcommon__External_ID__c": "Consumer_Scorecard"
+          "clcommon__External_ID__c": "LOS_Scorecard"
      },
      "solcommon__CL_Product__r": null,
      "solcommon__Release_Checksum__c": null,

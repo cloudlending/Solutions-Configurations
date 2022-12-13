@@ -9,7 +9,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "78304b9019a5d3ee34938a5e1abb7f52937fc55db7672a82fd38859c44ae3567",
+     "clcommon__Release_Checksum__c": "314c7231f3ac1e80f85e81cb8964692ec725bfea1fb3b51f33175393d1f1841c",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
           "successMessage": "Rule Evaluation Passed for rule : Customer Identification Program (CIP) – Secondary Identification Rule",
@@ -40,12 +40,27 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1&&$2&&$3",
+          "evaluationExpression": "$1&&$2&&$3&&$4",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Consumer Real Estate,Consumer Secured,Consumer Unsecured",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
