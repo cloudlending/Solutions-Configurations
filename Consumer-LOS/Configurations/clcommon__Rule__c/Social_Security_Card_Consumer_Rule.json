@@ -14,7 +14,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "1b69706940a4dee28501f2d80848b17a97453290ac5e18d63a0a2e7c45df7233",
+     "clcommon__Release_Checksum__c": "d20f12e0a826481ddef9decb886eb2e96681ef484cf7472e01df7928d4377368",
      "clcommon__Rule_Json__c": {
           "validationClassName": "DocumentDefinitionPreSaveValidation",
           "successMessage": "Rule Evaluation Passed for rule : Social Security Card",
@@ -45,12 +45,27 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Consumer Secured,Consumer Unsecured,Consumer Real Estate",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",

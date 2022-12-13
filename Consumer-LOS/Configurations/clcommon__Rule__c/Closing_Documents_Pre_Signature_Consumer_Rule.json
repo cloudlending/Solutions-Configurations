@@ -14,7 +14,7 @@
      "clcommon__Object_Type__c": "genesis__Applications__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "9cef15bfa999ef96e4e66ed36881f7300b40e5028a4b6431621806a4e751d823",
+     "clcommon__Release_Checksum__c": "36cee2c9ab8df8c44486bd1ec006099ee36606c5d9340e53b541aae73beea858",
      "clcommon__Rule_Json__c": {
           "validationClassName": "DocumentDefinitionPreSaveValidation",
           "successMessage": "Rule Evaluation Passed for rule : Closing Documents (Pre-Signature)",
@@ -45,12 +45,27 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1||$2||$3||$4",
+          "evaluationExpression": "$1&&($2||$3||$4||$5)",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "genesis__Applications__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Consumer Secured,Consumer Unsecured,Consumer Real Estate",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "genesis__Applications__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -65,7 +80,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$2",
+                    "sequence": "$3",
                     "relatedObject": "genesis__Applications__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -80,7 +95,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$3",
+                    "sequence": "$4",
                     "relatedObject": "genesis__Applications__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -95,7 +110,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$4",
+                    "sequence": "$5",
                     "relatedObject": "genesis__Applications__c",
                     "minimumValue": "",
                     "maximumValue": "",

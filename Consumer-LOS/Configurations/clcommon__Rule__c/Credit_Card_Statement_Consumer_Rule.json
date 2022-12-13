@@ -14,7 +14,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "bc23388d30228f3b8c56252d8cc2aaba660bf5f0dd28ead964653d1ff1296695",
+     "clcommon__Release_Checksum__c": "09b3145172a0841b92fa8fbeeaa3ab4ad93615ccc26b870fbbd9146454e4322b",
      "clcommon__Rule_Json__c": {
           "validationClassName": "DocumentDefinitionPreSaveValidation",
           "successMessage": "Rule Evaluation Passed for rule : Credit Card Statement",
@@ -45,12 +45,27 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Consumer Secured,Consumer Unsecured,Consumer Real Estate",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",

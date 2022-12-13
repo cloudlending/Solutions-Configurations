@@ -9,7 +9,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "081c73e8e833f4c294a1ca02a2ee046e4429f2075a00e2eb5ddc78d0d1c7df6e",
+     "clcommon__Release_Checksum__c": "c053591ff43eeddf268d8f1565813aa24566c878f59d0c7c98fc82210bef39b9",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
           "successMessage": "Rule Evaluation Passed for rule : Income Verification (VOI) - Income Rule",
@@ -40,12 +40,27 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Consumer Real Estate,Consumer Secured,Consumer Unsecured",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",

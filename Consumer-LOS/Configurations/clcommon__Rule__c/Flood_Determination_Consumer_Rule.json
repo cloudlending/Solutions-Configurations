@@ -14,7 +14,7 @@
      "clcommon__Object_Type__c": "genesis__Application_Collateral__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "fbe71b0691b8a25d49938c9a42868572a1ec1efe0e2feacfa765433ba7300c6d",
+     "clcommon__Release_Checksum__c": "933babb49ea8b8984def80027b2d81047dfd86fec9988e8ca7f2d1b0df277443",
      "clcommon__Rule_Json__c": {
           "validationClassName": "DocumentDefinitionPreSaveValidation",
           "successMessage": "Rule Evaluation Passed for rule : Flood Determination",
@@ -45,12 +45,27 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "genesis__Application_Collateral__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Consumer Secured,Consumer Unsecured,Consumer Real Estate",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "genesis__Application_Collateral__c",
                     "minimumValue": "",
                     "maximumValue": "",

@@ -14,7 +14,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "41130183f1a947cc815d15ce0a9c6cc9fe9c7d6c99d565691550f939984ae175",
+     "clcommon__Release_Checksum__c": "2514200b99486561ec0b6c9411803e0a9e835a05da56736038f0a203407a3105",
      "clcommon__Rule_Json__c": {
           "validationClassName": "DocumentDefinitionPreSaveValidation",
           "successMessage": "Rule Evaluation Passed for rule : Mortgage Statement",
@@ -45,12 +45,27 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Consumer Secured,Consumer Unsecured,Consumer Real Estate",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",

@@ -14,7 +14,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "87fd0dc8e7ccee13d0bf3dbaebee5697036d0a1f2a8e0b29b630446a7efc44e5",
+     "clcommon__Release_Checksum__c": "a1e5e4beed12c8087116438cf96349de2aa34681fd494cc040077801524a99b5",
      "clcommon__Rule_Json__c": {
           "validationClassName": "DocumentDefinitionPreSaveValidation",
           "successMessage": "Rule Evaluation Passed for rule : Prior Month 2 Bank Statement",
@@ -45,7 +45,7 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {

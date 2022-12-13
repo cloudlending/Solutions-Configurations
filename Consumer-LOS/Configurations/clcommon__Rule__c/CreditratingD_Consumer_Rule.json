@@ -9,7 +9,7 @@
      "clcommon__Object_Type__c": "genesis__Applications__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "ae2889ae6dd9b50d6b9f2ef95e4a19cdcb484101b976190ed7fb6b1fd9734850",
+     "clcommon__Release_Checksum__c": "c08baee8ef276f0a86f0df548d2f124a84861035f65ea15c67fee19b9ba9c553",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
           "successMessage": "Rule Evaluation Passed for rule : CreditratingD",
@@ -18,7 +18,7 @@
                     "type": "Apex",
                     "priority": null,
                     "apexClassName": "solcommon.CreditRatingMatrixResultGenerator",
-                    "additionalParams": "{\"Credit Approval Status\":\"MANUAL REVIEW\",\"Action type\":\"Success\"}",
+                    "additionalParams": "{\"Action type\":\"Success\",\"Credit Approval Status\":\"MANUAL REVIEW\"}",
                     "actionName": "Action1"
                }
           ],
@@ -32,12 +32,27 @@
           "failureMessage": "Rule Evaluation Failed for rule : CreditratingD",
           "failureActions": [],
           "executeActions": null,
-          "evaluationExpression": "$1",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "genesis__Applications__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Consumer Secured,Consumer Unsecured,Consumer Real Estate",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "genesis__Applications__c",
                     "minimumValue": "50",
                     "maximumValue": "99",
