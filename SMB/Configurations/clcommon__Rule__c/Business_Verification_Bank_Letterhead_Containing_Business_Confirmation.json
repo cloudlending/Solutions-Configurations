@@ -14,7 +14,6 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "fb673ff867cae2d7acd712d4d077dbb0f5ca4f50b8405dde8cd2fed9463d86d5",
      "clcommon__Rule_Json__c": {
           "validationClassName": "DocumentDefinitionPreSaveValidation",
           "successMessage": "Rule Evaluation Passed for rule : Business Verification - Bank Letterhead (Containing Business Confirmation)",
@@ -44,13 +43,29 @@
                     "actionName": "Action2"
                }
           ],
+          "externalId": "Business_Verification_Bank_Letterhead_Containing_Business_Confirmation",
           "executeActions": null,
-          "evaluationExpression": "$1&&($2||$5)&&$3&&$4",
+          "evaluationExpression": "$1&&$2&&$3&&$4&&($5||$6)",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Small Business,Small Business Real Estate,Small Business Unsecured",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -65,30 +80,15 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$2",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "MANUAL",
-                    "matchingType": "==",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "KYB Verification Status",
-                    "fieldAPIName": "solcommon__kyb_verification_status__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
                     "sequence": "$3",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
                     "matchingValue": "Individual",
                     "matchingType": "!=",
-                    "fieldType": "STRING",
-                    "fieldName": "Legal Entity Type Code",
-                    "fieldAPIName": "clcommon__account__r.clcommon__legal_entity_type__r.clcommon__legal_entity_type_code__c",
+                    "fieldType": "BOOLEAN",
+                    "fieldName": "Individual",
+                    "fieldAPIName": "clcommon__account__r.clcommon__legal_entity_type__r.clcommon__individual__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -117,6 +117,21 @@
                     "matchingValue": "MANUAL",
                     "matchingType": "==",
                     "fieldType": "PICKLIST",
+                    "fieldName": "KYB Verification Status",
+                    "fieldAPIName": "solcommon__kyb_verification_status__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$6",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "MANUAL",
+                    "matchingType": "==",
+                    "fieldType": "PICKLIST",
                     "fieldName": "KYB Verification Method",
                     "fieldAPIName": "solcommon__kyb_verification_method__c",
                     "criterionName": null,
@@ -137,5 +152,6 @@
      "genesis__Department_Members__r": null,
      "solcommon__CL_Product__r": null,
      "solcommon__Release_Checksum__c": null,
+     "clcommon__Release_Checksum__c": "acc85fc80a95fb5541496763fb6b1c2912b269d4ce349f43655e63e13ca58f09",
      "solcommon__Type__c": null
 }

@@ -1,0 +1,77 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "Annual Review Completion Rule",
+     "clcommon__Document_Definition__r": null,
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "Annual_Review_Completion_Rule",
+     "clcommon__Object_Type__c": "genesis__Applications__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": null,
+     "clcommon__Release_Checksum__c": "9a5fded2140abdca3afe91fa785ccab44bc0232a9c29dc970d1204a052814f86",
+     "clcommon__Rule_Json__c": {
+          "validationClassName": null,
+          "successMessage": "Rule Evaluation Passed for rule : Annual Review Completion Rule",
+          "successActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.TaskCompletionAction",
+                    "additionalParams": "{\"Action type\":\"Success\"}",
+                    "actionName": "Action1"
+               }
+          ],
+          "sObjectName": "genesis__Task_Setup__c",
+          "saveRuleClass": "genesis.TaskCompletionRuleManagement",
+          "ruleName": "Annual Review Completion Rule",
+          "priority": 16,
+          "parentRuleID": null,
+          "parentRecordId": "aAm8Z000000Jeoi",
+          "objectType": "genesis__Applications__c",
+          "failureMessage": "Rule Evaluation Failed for rule : Annual Review Completion Rule",
+          "failureActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.TaskCompletionAction",
+                    "additionalParams": "{\"Action type\":\"Failure\"}",
+                    "actionName": "Action2"
+               }
+          ],
+          "externalId": "Annual_Review_Completion_Rule",
+          "executeActions": null,
+          "evaluationExpression": "$1",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "genesis__Applications__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "true",
+                    "matchingType": "==",
+                    "fieldType": "BOOLEAN",
+                    "fieldName": "Is Loan Review Completed",
+                    "fieldAPIName": "genesis__is_loan_review_completed__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               }
+          ],
+          "category": "TaskCompletionConfig",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 16,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Task_Completion_Config"
+     },
+     "genesis__Department_Members__r": null,
+     "solcommon__CL_Product__r": null,
+     "solcommon__Release_Checksum__c": null,
+     "solcommon__Type__c": null
+}

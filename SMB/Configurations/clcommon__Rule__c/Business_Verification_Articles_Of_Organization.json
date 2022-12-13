@@ -14,7 +14,6 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "f8aa87ac66cb273059987eff27222511a6d2dc0b00b0258ac344f0d16f34ae4e",
      "clcommon__Rule_Json__c": {
           "validationClassName": "DocumentDefinitionPreSaveValidation",
           "successMessage": "Rule Evaluation Passed for rule : Business Verification - Articles of Organization",
@@ -44,13 +43,29 @@
                     "actionName": "Action2"
                }
           ],
+          "externalId": "Business_Verification_Articles_Of_Organization",
           "executeActions": null,
-          "evaluationExpression": "$1&&($2||$5)&&$3&&$4",
+          "evaluationExpression": "$1&&$2&&$3&&$4",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Small Business,Small Business Real Estate,Small Business Unsecured",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -65,30 +80,15 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$2",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "MANUAL",
-                    "matchingType": "==",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "KYB Verification Status",
-                    "fieldAPIName": "solcommon__kyb_verification_status__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
                     "sequence": "$3",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "Individual",
+                    "matchingValue": "true",
                     "matchingType": "!=",
-                    "fieldType": "STRING",
-                    "fieldName": "Legal Entity Type Code",
-                    "fieldAPIName": "clcommon__account__r.clcommon__legal_entity_type__r.clcommon__legal_entity_type_code__c",
+                    "fieldType": "BOOLEAN",
+                    "fieldName": "Individual",
+                    "fieldAPIName": "clcommon__account__r.clcommon__legal_entity_type__r.clcommon__individual__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -107,21 +107,6 @@
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
-               },
-               {
-                    "type": "Expression",
-                    "sequence": "$5",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "MANUAL",
-                    "matchingType": "==",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "KYB Verification Method",
-                    "fieldAPIName": "solcommon__kyb_verification_method__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
                }
           ],
           "category": "DocumentDefinition",
@@ -137,5 +122,6 @@
      "genesis__Department_Members__r": null,
      "solcommon__CL_Product__r": null,
      "solcommon__Release_Checksum__c": null,
+     "clcommon__Release_Checksum__c": "1a053b62ddbd8b3c9df39ceef7b259f0d6d0c088f75c8c219f63281a0f184add",
      "solcommon__Type__c": null
 }

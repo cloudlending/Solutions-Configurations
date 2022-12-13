@@ -9,7 +9,7 @@
      "clcommon__Object_Type__c": "genesis__Applications__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "f83d532c1c7d3e2c9a9cd04fbff782f309bc3e700c58db78a420b39939c37874",
+     "clcommon__Release_Checksum__c": "45f4e37e567b2c97b51fc9928fae538136dd49f9006471db3748ceee3a4861b4",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
           "successMessage": "Rule Evaluation Passed for rule : LTV Evaluation",
@@ -39,13 +39,29 @@
                     "actionName": "Action2"
                }
           ],
+          "externalId": "LTV_Evaluation",
           "executeActions": null,
-          "evaluationExpression": "$1",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "genesis__Applications__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Small Business,Small Business Real Estate",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "genesis__Applications__c",
                     "minimumValue": "",
                     "maximumValue": "",
