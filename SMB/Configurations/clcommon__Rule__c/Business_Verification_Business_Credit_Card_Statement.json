@@ -14,7 +14,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "f133256a174aeb11cc416079264cbc2151aa7849ffc5c67cdaf9bd5fe9cc2e48",
+     "clcommon__Release_Checksum__c": "9ee003ac3d4d6e751f266bffaeeb3a3ca9c37cbf758707940347167ecbf9ec6a",
      "clcommon__Rule_Json__c": {
           "validationClassName": "DocumentDefinitionPreSaveValidation",
           "successMessage": "Rule Evaluation Passed for rule : Business Verification - Business Credit Card Statement",
@@ -45,12 +45,27 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1&&($2||$5)&&$3&&$4",
+          "evaluationExpression": "$1&&$2&&($3||$6)&&$4&&$5",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Small Business,Small Business Real Estate,Small Business Unsecured",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -65,7 +80,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$2",
+                    "sequence": "$3",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -80,7 +95,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$3",
+                    "sequence": "$4",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -95,7 +110,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$4",
+                    "sequence": "$5",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -110,7 +125,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$5",
+                    "sequence": "$6",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",

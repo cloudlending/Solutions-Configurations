@@ -39,13 +39,13 @@
           "attributes": {
                "type": "intframework__Integration_Provider__c"
           },
-          "intframework__External_Id__c": "KYC_Socure"
+          "intframework__External_Id__c": "Socure"
      },
      "intframework__Log_Filter__c": null,
      "intframework__Log_Request_Response__c": true,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 1,
-     "intframework__Release_Checksum__c": "c4d0eb48f6408b2d32a1f48c92da7651c85f085abd3ac618e0245b84b918948e",
+     "intframework__Release_Checksum__c": "6181328c8afd9e53f6a09174e28a83a1c7ce55ab1742dd35ff97ded84fd01b73",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "Socure",
@@ -135,7 +135,7 @@
      "intframework__Response_Mapping__c": {
           "StorageConfiguration": {
                "StoreInDB": "True",
-               "PublishAsJSON": "False"
+               "PublishAsJSON": "True"
           },
           "DMLOperations": [
                {
@@ -649,7 +649,8 @@
      "intframework__Send_File__c": false,
      "intframework__UI_Page_Name__c": "KnowYourCustomer",
      "intframework__UI_Page_Type__c": "SKUID",
-     "intframework__Use_New_Logging_Mechanism__c": false,
+     "intframework__Use_New_Logging_Mechanism__c": true,
      "intframework__Use_Response_Mocker__c": true,
-     "solcommon__Release_Checksum__c": null
+     "solcommon__Release_Checksum__c": null,
+     "intframework__Disable_Integration_Logs__c": false
 }

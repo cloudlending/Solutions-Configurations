@@ -9,7 +9,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "2063fe032d1bef2a4465e13f92465afe310cee87414a3177805a032f1a441750",
+     "clcommon__Release_Checksum__c": "10c879ab8bd24dd73c291c3bfb1f529aef164056738a94f60e80c7bb89b546af",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
           "successMessage": "Rule Evaluation Passed for rule : Individual Credit Score Below 600",
@@ -40,12 +40,27 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "$1&&$2",
+          "evaluationExpression": "$1&&$2&&$3",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Small Business,Small Business Real Estate,Small Business Unsecured",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -60,7 +75,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$2",
+                    "sequence": "$3",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",

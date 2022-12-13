@@ -1,0 +1,82 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "Collateral Insurance Policy Evaluation",
+     "clcommon__Document_Definition__r": {
+          "attributes": {
+               "type": "clcommon__Document_Definition__c"
+          },
+          "genesis__External_ID__c": "Collateral_Insurance_Policy"
+     },
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "Collateral_Insurance_Policy_Evaluation",
+     "clcommon__Object_Type__c": "genesis__Application_Collateral__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": null,
+     "clcommon__Release_Checksum__c": "1c2037285e8035fe7f1ab27d7fc25617935fb889fb7bba9d9cd76f4a4cc13f1b",
+     "clcommon__Rule_Json__c": {
+          "validationClassName": "DocumentDefinitionPreSaveValidation",
+          "successMessage": "Rule Evaluation Passed for rule : Collateral Insurance Policy Evaluation",
+          "successActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.DocumentCategoryGenerateAction",
+                    "additionalParams": "{\"Action type\":\"Success\"}",
+                    "actionName": "Action1"
+               }
+          ],
+          "sObjectName": "clcommon__Document_Definition__c",
+          "saveRuleClass": null,
+          "ruleName": "Collateral Insurance Policy Evaluation",
+          "priority": 34,
+          "parentRuleID": null,
+          "parentRecordId": "a1S8Z000007AK9CUAW",
+          "objectType": "genesis__Application_Collateral__c",
+          "failureMessage": "Rule Evaluation Failed for rule : Collateral Insurance Policy Evaluation",
+          "failureActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.DocumentCategoryGenerateAction",
+                    "additionalParams": "{\"Action type\":\"Failure\"}",
+                    "actionName": "Action2"
+               }
+          ],
+          "externalId": "Collateral_Insurance_Policy_Evaluation",
+          "executeActions": null,
+          "evaluationExpression": "$1",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "genesis__Application_Collateral__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Small Business, Small Business Real Estate",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               }
+          ],
+          "category": "DocumentDefinition",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 34,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Document_Definition"
+     },
+     "genesis__Department_Members__r": null,
+     "solcommon__CL_Product__r": null,
+     "solcommon__Release_Checksum__c": null,
+     "solcommon__Type__c": null
+}

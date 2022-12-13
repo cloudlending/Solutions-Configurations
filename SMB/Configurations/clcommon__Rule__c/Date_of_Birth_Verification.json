@@ -9,7 +9,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "94b82b189d42630be24da97fe9a00adf3df7f577282e2f48daf0a60bd4b3232d",
+     "clcommon__Release_Checksum__c": "16c891239ff8536e4c2523e6cb8dc50664c28bb283263e006ef4387abda126f8",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
           "successMessage": "Rule Evaluation Passed for rule : Date of Birth Verification",
@@ -40,12 +40,27 @@
                }
           ],
           "executeActions": null,
-          "evaluationExpression": "($1||$2)&&$3&&($4||$5||$6||$7||$8||$910||$11)",
+          "evaluationExpression": "$1&&($2||$3)&&$4&&($5||$6||$7||$8||$9||$10||$11||$12)",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Small Business,Small Business Real Estate,Small Business Unsecured",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -60,7 +75,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$2",
+                    "sequence": "$3",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -75,7 +90,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$3",
+                    "sequence": "$4",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -90,7 +105,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$4",
+                    "sequence": "$5",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -105,7 +120,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$5",
+                    "sequence": "$6",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -120,7 +135,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$6",
+                    "sequence": "$7",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -135,7 +150,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$7",
+                    "sequence": "$8",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -150,7 +165,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$8",
+                    "sequence": "$9",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -165,7 +180,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$9",
+                    "sequence": "$10",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -180,7 +195,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$10",
+                    "sequence": "$11",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -195,7 +210,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$11",
+                    "sequence": "$12",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",

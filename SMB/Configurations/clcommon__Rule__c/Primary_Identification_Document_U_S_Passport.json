@@ -14,7 +14,6 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "a0c932cad65dd08c72ea4b3c11983ee7b5a4fd87b6b0224cf3deb690c3ed33ba",
      "clcommon__Rule_Json__c": {
           "validationClassName": "DocumentDefinitionPreSaveValidation",
           "successMessage": "Rule Evaluation Passed for rule : Primary Identification Document - U.S. Passport",
@@ -44,13 +43,29 @@
                     "actionName": "Action2"
                }
           ],
+          "externalId": "Primary_Identification_Document_U_S_Passport",
           "executeActions": null,
-          "evaluationExpression": "($1||$2)&&($3||$4)",
+          "evaluationExpression": "$1&&($2||$3)&&$4",
           "enabled": null,
           "criteria": [
                {
                     "type": "Expression",
                     "sequence": "$1",
+                    "relatedObject": "clcommon__Party__c",
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "Small Business,Small Business Real Estate,Small Business Unsecured",
+                    "matchingType": "IN",
+                    "fieldType": "STRING",
+                    "fieldName": "Asset Class",
+                    "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -65,7 +80,7 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$2",
+                    "sequence": "$3",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
@@ -80,30 +95,15 @@
                },
                {
                     "type": "Expression",
-                    "sequence": "$3",
-                    "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "",
-                    "maximumValue": "",
-                    "matchingValue": "MANUAL",
-                    "matchingType": "==",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "KYC Verification Status",
-                    "fieldAPIName": "solcommon__kyc_verification_status__c",
-                    "criterionName": null,
-                    "apexClassName": null,
-                    "additionalParams": null
-               },
-               {
-                    "type": "Expression",
                     "sequence": "$4",
                     "relatedObject": "clcommon__Party__c",
                     "minimumValue": "",
                     "maximumValue": "",
-                    "matchingValue": "MANUAL",
+                    "matchingValue": "true",
                     "matchingType": "==",
-                    "fieldType": "PICKLIST",
-                    "fieldName": "KYC Verification Method",
-                    "fieldAPIName": "solcommon__kyc_verification_method__c",
+                    "fieldType": "BOOLEAN",
+                    "fieldName": "Individual",
+                    "fieldAPIName": "clcommon__account__r.clcommon__legal_entity_type__r.clcommon__individual__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -122,5 +122,6 @@
      "genesis__Department_Members__r": null,
      "solcommon__CL_Product__r": null,
      "solcommon__Release_Checksum__c": null,
+     "clcommon__Release_Checksum__c": "63564d27e6298adbd640ab1f76a43e56bb9f4aa847ae06b083074874428ec4ed",
      "solcommon__Type__c": null
 }
