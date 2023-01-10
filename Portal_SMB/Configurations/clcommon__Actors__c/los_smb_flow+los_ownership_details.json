@@ -1,0 +1,54 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "$global.attr(isBeneficialPartyType);==true",
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "renderFields": {
+                    "clcommon__Signer_Capacity__c": false,
+                    "clcommon__Party_Types__c": false
+               },
+               "fieldColumns": 1,
+               "editable": true,
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);",
+                    "partyId": "$global.attr(borrowerPartyId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "los_ownership_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_ownership_details",
+     "clcommon__External_ID__c": "los_smb_flow+los_ownership_details",
+     "clcommon__Release_Checksum__c": "213da9ecf0bb4e026700d53195c9871a82f7fe6c39eaac03f8c22474d3f1ac2b"
+}

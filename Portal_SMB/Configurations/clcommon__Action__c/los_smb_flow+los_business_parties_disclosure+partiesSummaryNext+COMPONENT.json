@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "partiesSummaryNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "updates": [
+                    {
+                         "value": [
+                              "los_document_upload_list",
+                              "los_collateral_doc_list_before_submit"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(los_application_steps).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "validation": [
+               "los_business_parties_disclosure"
+          ],
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "$global.attr(portalStage);"
+          },
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Next",
+               "style": "primary",
+               "enable": "$this.attr(certify_beneficial_owner);==true"
+          },
+          "property": {},
+          "name": "partiesSummaryNext"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_business_parties_disclosure"
+     },
+     "clcommon__Component_Structure_Name__c": "los_business_parties_summary_disclosure",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "los_business_parties_disclosure+partiesSummaryNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_disclosure+partiesSummaryNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "d2f5f15cc0460da8d3db009a36b31022b524626e9cc7d62d018add86352f7f15"
+}

@@ -1,0 +1,39 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "download",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "download",
+          "handler": {
+               "redirect": {
+                    "url": "/sfc/servlet.shepherd/version/download/$this.attr(clcommon__Content_Version_Id__c);"
+               }
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "label": "cloud_download",
+               "style": "iconic"
+          },
+          "property": {},
+          "name": "download"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_document_list"
+     },
+     "clcommon__Component_Structure_Name__c": "document_management_preview_queue_view_platinum",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_document_list+download",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_document_list+download+RECORD",
+     "clcommon__Release_Checksum__c": "c25470b938a6bb2528974ba6b05374d9ab8bb923de226aafb05d1b19a9f20379"
+}

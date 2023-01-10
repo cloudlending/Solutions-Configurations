@@ -1,0 +1,63 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "pagination": {
+                    "lastLinkText": "last_page",
+                    "nextLinkText": "chevron_right",
+                    "previousLinkText": "chevron_left",
+                    "firstLinkText": "first_page",
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "numberOfPageLinks": 5,
+                    "numberOfRecordsPerPage": 8
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editableFields": {
+                    "clcommon__Valuation_Date__c": false,
+                    "clcommon__Collateral__c": false,
+                    "Id": false,
+                    "clcommon__Collateral_Type__c": true,
+                    "clcommon__Collateral_Type__r.Name": false
+               },
+               "renderFields": {
+                    "clcommon__Valuation_Date__c": false,
+                    "clcommon__Collateral__c": false,
+                    "clcommon__Collateral_Type__c": "$this.attr(Id);==$global.attr(editAsset); or $this.attr(Id);==undefined",
+                    "clcommon__Collateral_Type__r.Name": "$this.attr(Id);!=$global.attr(editAsset); and $this.attr(Id);!=undefined",
+                    "Id": false
+               },
+               "title": "Add Business Asset Details",
+               "blankMessage": "No business assets available!",
+               "editable": "$this.attr(Id);==$global.attr(editAsset); or $this.attr(Id);==undefined"
+          },
+          "property": {
+               "whereClause": {
+                    "collateralId": "$global.attr(collateralId);"
+               },
+               "structureName": "los_add_collateral_type_details_list"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_collateral_type_details",
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_type_details",
+     "clcommon__Release_Checksum__c": "3931bba3620daf5b845cbf47ea5c40fe3f77d2e2f34cd7449e219a2f50798202"
+}

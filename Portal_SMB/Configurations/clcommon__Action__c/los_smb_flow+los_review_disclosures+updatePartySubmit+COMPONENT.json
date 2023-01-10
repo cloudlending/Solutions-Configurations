@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "updatePartySubmit",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "disclosureEnable": "$disclosure(los_loan_disclosure);",
+          "disclosureNames": [
+               "los_loan_disclosure"
+          ],
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "submit"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "clcommon__Party__c": {
+                    "solcommon__Submission_Status__c": "SUBMITTED",
+                    "id": "$global.attr(borrowerPartyId);"
+               },
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "style": "primary",
+               "label": "Submit",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "updatePartySubmit"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_review_disclosures"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalUpdateParty",
+     "clcommon__Unique_Action_Name__c": "los_review_disclosures+updatePartySubmit",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_review_disclosures+updatePartySubmit+COMPONENT",
+     "clcommon__Release_Checksum__c": "1a8b4ec445982d155f75a7f30341ad3317dd108b4887a426facc39eccbdce552"
+}

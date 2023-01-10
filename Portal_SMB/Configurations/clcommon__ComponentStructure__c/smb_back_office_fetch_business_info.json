@@ -1,0 +1,129 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_fetch_business_info",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "smb_back_office_fetch_business_info",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_fetch_business_info",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "clcommon__Account__c=':accId'"
+          },
+          "sections": [
+               {
+                    "id": "bda3af21-37b3-4d96-bf39-bc9720fee21a",
+                    "fields": [
+                         {
+                              "id": "f102185f-8732-4875-8df3-672ea10f2005",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "ac6e4b43-c0ae-4f8d-b7f5-8744e955b7c3",
+                              "fieldName": "clcommon__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account ID",
+                                   "ariaLabel": "Account ID"
+                              }
+                         },
+                         {
+                              "id": "c4ddc6fb-a5fc-4a56-ad78-f3d86416f693",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "c6d5ff7f-2d9a-4c92-b48c-c8dc1c1ed56a",
+                              "fieldName": "clcommon__Account__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account Name",
+                                   "ariaLabel": "Account Name"
+                              }
+                         },
+                         {
+                              "id": "49f78959-747b-456f-bc2c-596bf2d6d572",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Business Information Name",
+                                   "ariaLabel": "Business Information Name"
+                              }
+                         },
+                         {
+                              "id": "d8375c3d-5e30-4ea8-984b-e6501e941718",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Doing Business as (DBA) Name",
+                                   "ariaLabel": "Doing Business as (DBA) Name"
+                              }
+                         },
+                         {
+                              "id": "085e3085-685e-4ac9-95db-eede20464fb6",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__NAICS_Code__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Industry Code",
+                                   "ariaLabel": "Industry Code"
+                              }
+                         },
+                         {
+                              "id": "23399465-94f9-418d-abb6-044a448cc0b5",
+                              "relationType": "reference",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.solcommon__Industry_Code__c",
+                              "relationName": "solcommon__Industry_Code__r",
+                              "relationJson": {
+                                   "tableName": "solcommon__Industry_Code__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "f5df97b7-dacc-43a9-a618-8dfa2821538d",
+                                             "fields": [
+                                                  {
+                                                       "id": "3c86a2cd-efcf-4971-bee3-10d88a76e252",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "97441413-5fde-4a60-8c0a-f4b2d7bfd8b9",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Industry Code"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Industry Code"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "smb_back_office_fetch_business_info",
+     "clcommon__Release_Checksum__c": "dd331318845baade46635d2f879b0b16e32910ce1c92abb169edd62d46fde3be"
+}

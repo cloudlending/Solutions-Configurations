@@ -1,0 +1,45 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "ExistingCustomerNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "messages": {},
+          "handler": {
+               "redirect": {
+                    "url": "/s/login"
+               }
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "validation": [
+               "los_check_customer"
+          ],
+          "appearance": {
+               "style": "primary",
+               "render": "$this.attr(existingCustomer);==\"Yes\"",
+               "label": "Next",
+               "disableWhenLoading": true
+          },
+          "property": {},
+          "name": "ExistingCustomerNext"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_signup+los_check_customer"
+     },
+     "clcommon__Component_Structure_Name__c": "los_existing_customer",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_check_customer+ExistingCustomerNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_signup+los_check_customer+ExistingCustomerNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "6411f148b1b899895779700b54898636eee70590980c4729771445f8899455dc"
+}

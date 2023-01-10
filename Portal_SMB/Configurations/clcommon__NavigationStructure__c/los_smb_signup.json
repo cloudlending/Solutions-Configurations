@@ -1,0 +1,236 @@
+{
+     "attributes": {
+          "type": "clcommon__NavigationStructure__c"
+     },
+     "Name": "los_smb_signup",
+     "clcommon__Allow_Guest_User_Access__c": true,
+     "clcommon__Description__c": null,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Is_Template__c": false,
+     "clcommon__Related_Configuration_Mapping__c": null,
+     "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
+     "clcommon__Unique_Name__c": "los_smb_signup",
+     "clcommon__data__c": {
+          "messages": {
+               "submitFailureText": "Failed to submit",
+               "loadingFailureText": "Failed to load",
+               "saveFailureText": "Failed to save",
+               "submitAnimationText": "Sending...",
+               "submitSuccessText": "Succeed",
+               "savingAnimationText": "Saving...",
+               "uploadFailureText": "Failed to upload",
+               "loadingAnimationText": "Loading...",
+               "submitExpirationText": "Failed to submit",
+               "saveSuccessText": "Succeed",
+               "uploadFileTooLargeError": "File too large"
+          },
+          "global": {
+               "startStep": "$url(startStep);"
+          },
+          "settings": {
+               "treeIcons": {
+                    "toExpand": "chevron_right",
+                    "toCollapse": "expand_more",
+                    "end": "lens"
+               },
+               "pagination": {
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "previousLinkText": "chevron_left",
+                    "numberOfRecordsPerPage": 10,
+                    "numberOfPageLinks": 5,
+                    "nextLinkText": "chevron_right",
+                    "lastLinkText": "last_page",
+                    "firstLinkText": "first_page"
+               },
+               "locale": "en-us",
+               "minimumFractionDigits": 2,
+               "collapsibleIcons": {
+                    "expanded": "expand_more",
+                    "collapsed": "expand_less"
+               },
+               "uploadText": {
+                    "removeError": "close",
+                    "completed": "Completed",
+                    "cancelInProgress": "Cancel"
+               },
+               "skeleton": {
+                    "queueView": {
+                         "padding": "16px",
+                         "height": "150px"
+                    },
+                    "listView": {
+                         "withAction": {
+                              "padding": "24px 12px",
+                              "height": "72px"
+                         },
+                         "noAction": {
+                              "padding": "12px",
+                              "height": "48px"
+                         }
+                    },
+                    "detailView": {
+                         "small": {
+                              "padding": "28px 12px 20px 12px",
+                              "height": "101.625px"
+                         },
+                         "medium": {
+                              "padding": "28px 12px 20px 12px",
+                              "height": "104px"
+                         },
+                         "large": {
+                              "padding": "28px 12px 20px 12px",
+                              "height": "108.75px"
+                         }
+                    },
+                    "cardView": {
+                         "padding": "16px",
+                         "height": "300px"
+                    }
+               },
+               "sortText": {
+                    "zToA": "(Z to A)",
+                    "sortBy": "Sort By",
+                    "mostRecentLast": "(Most Recent Last)",
+                    "mostRecentFirst": "(Most Recent First)",
+                    "lowToHigh": "(Low to High)",
+                    "highToLow": "(High to Low)",
+                    "aToZ": "(A to Z)"
+               },
+               "currencySymbol": "$",
+               "maximumFractionDigits": 2,
+               "variant": {
+                    "TextField": "outlined"
+               }
+          },
+          "actors": {},
+          "stages": {
+               "Home": {
+                    "overlay": [],
+                    "layout": {
+                         "children": [
+                              {
+                                   "children": [
+                                        {
+                                             "width": "100%",
+                                             "name": "los_header",
+                                             "layoutId": "60c98459-8a29-4a19-84c9-9eefa889147e"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "name": "Header",
+                                   "layoutId": "209c2a5a-b74d-4fbd-97ae-c31f6b25891c"
+                              },
+                              {
+                                   "direction": "horizontal",
+                                   "children": [
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar1",
+                                             "layoutId": "78b72a12-16ef-4e22-adce-b7e2b595f409"
+                                        },
+                                        {
+                                             "children": [
+                                                  {
+                                                       "width": "100%",
+                                                       "children": [
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "direction": "horizontal",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "los_check_customer",
+                                                                                               "layoutId": "285975a2-f4cd-446e-8308-aa17b45216da"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "los_register",
+                                                                                               "layoutId": "05e2fce7-c1ab-4381-a3a6-fd8956ece5aa"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "los_check_customer_div",
+                                                                                     "layoutId": "fd792a6e-5aa6-4c73-9e28-c6f4246d2f93"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "name": "los_check_customer_helper",
+                                                                                               "layoutId": "5166557e-2f0b-4855-b938-f4e02dc6bfde"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "los_check_customer_helper_div",
+                                                                                     "layoutId": "949eb468-1c79-4114-9b00-2eba47b02a86"
+                                                                                }
+                                                                           ],
+                                                                           "name": "los_register_container_div",
+                                                                           "layoutId": "e23a919f-4361-4417-9e7c-949be5f3d927"
+                                                                      },
+                                                                      {
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "los_existing_customer",
+                                                                                     "layoutId": "e99d803a-a54b-4587-9244-79a76c63cb67"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "los_existing_customer_helper",
+                                                                                     "layoutId": "9ee65d57-ae44-44d2-ba4c-1bdc8e3bfb60"
+                                                                                }
+                                                                           ],
+                                                                           "name": "los_existing_customer_container",
+                                                                           "layoutId": "302425fb-ca06-447f-b026-711c3eb6dd4f"
+                                                                      },
+                                                                      {
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "los_check_inbox",
+                                                                                     "layoutId": "cbcfca32-9ff1-47eb-94b0-5a15dc1c1b0f"
+                                                                                }
+                                                                           ],
+                                                                           "name": "los_check_your_inbox_container",
+                                                                           "layoutId": "7f8c07a0-6362-4b0a-8f4a-b2c9be89700b"
+                                                                      }
+                                                                 ],
+                                                                 "name": "los_getting_started_container",
+                                                                 "layoutId": "de4b8f6f-abce-4be2-9d1f-cdf8cdbb29ff"
+                                                            }
+                                                       ],
+                                                       "name": "ApplicationSteps",
+                                                       "layoutId": "4ab9af31-417f-4e0d-a996-879288698dca"
+                                                  }
+                                             ],
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Content",
+                                             "layoutId": "f73efa61-0b9f-4f04-a6e4-e9ed2ece328f"
+                                        },
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar2",
+                                             "layoutId": "0aaba370-28e6-4baf-9bfc-85d77ece7e3d"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "final": true,
+                                   "name": "Main",
+                                   "layoutId": "20299bf5-0007-4212-82d7-6deb4e0cbc08"
+                              }
+                         ],
+                         "final": true,
+                         "name": "ClsAppLayoutOne",
+                         "layoutId": "87a75270-fd56-4e30-8bad-3f5c21289431"
+                    },
+                    "prerequisite": []
+               }
+          },
+          "start": "Home"
+     },
+     "clcommon__External_ID__c": "los_smb_signup",
+     "clcommon__Release_Checksum__c": "dffb8968be0a6bba98416204ff1ce73c2388d10efa46383e6b3ac5cb463bc44c"
+}

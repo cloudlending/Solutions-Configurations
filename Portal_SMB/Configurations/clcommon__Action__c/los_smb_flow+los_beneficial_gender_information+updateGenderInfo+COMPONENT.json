@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "updateGenderInfo",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "beneficialSaveStageNext"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "clcommon__Personal_Information__c": {
+                    "clcommon__Gender__c": "$this.attr(clcommon__Personal_Information__r.clcommon__Gender__c);",
+                    "Id": "$this.attr(clcommon__Personal_Information__r.Id);"
+               },
+               "applicationId": "$global.attr(applicationId);",
+               "contact": {
+                    "Id": "$global.attr(borrowerContactId);",
+                    "clcommon__Personal_Information__c": "$this.attr(clcommon__Personal_Information__r.Id);"
+               }
+          },
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Next",
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
+          },
+          "property": {},
+          "name": "updateGenderInfo"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_beneficial_gender_information"
+     },
+     "clcommon__Component_Structure_Name__c": "los_demographic_information_gender",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSavePersonalInfo",
+     "clcommon__Unique_Action_Name__c": "los_beneficial_gender_information+updateGenderInfo",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_gender_information+updateGenderInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "6e149434e9c8f1f4e809e0317ec75caa2ae0f17bea9f6745f743845b5ef7bdd4"
+}

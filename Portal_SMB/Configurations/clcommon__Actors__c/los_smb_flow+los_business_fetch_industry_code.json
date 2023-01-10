@@ -1,0 +1,39 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "fieldColumns": 1,
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "industrycode": "$state(los_business_industry_code).attr(solcommon__Industry_Code__c);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "los_business_fetch_industry_code"
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_business_fetch_industry_code",
+     "clcommon__External_ID__c": "los_smb_flow+los_business_fetch_industry_code",
+     "clcommon__Release_Checksum__c": "e90b845e2d8c249c9c670606ca50afc6bb7fa9ff31c8fbc22368ee92d71b5984"
+}

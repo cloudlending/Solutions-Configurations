@@ -1,0 +1,78 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "genesis__Unit_Type__c": {
+                         "assignments": [
+                              {
+                                   "value": "",
+                                   "field": "$this.attr(genesis__Number_of_bedrooms__c);"
+                              },
+                              {
+                                   "value": "",
+                                   "field": "$this.attr(genesis__Number_of_bathrooms__c);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderSections": {
+                    "residentialRentRoll": "$this.attr(genesis__Unit_Type__c);==\"Residential\""
+               },
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "editableFields": {
+                    "Id": false,
+                    "genesis__Collateral__r.Id": false,
+                    "IsDeleted": false,
+                    "genesis__Application__r.Id": false
+               },
+               "renderFields": {
+                    "Id": false,
+                    "genesis__Collateral__r.Id": false,
+                    "genesis__Application__r.Id": false
+               },
+               "fieldColumns": 1,
+               "editable": true,
+               "title": "Add Rent Roll Details"
+          },
+          "property": {
+               "whereClause": {
+                    "rentRollId": "$global.attr(rentRollId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "los_add_collateral_rent_roll_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_add_rent_roll_details",
+     "clcommon__External_ID__c": "los_smb_flow+los_add_rent_roll_details",
+     "clcommon__Release_Checksum__c": "2f33f9b4a03041827661ba904cc3d42c27f1cef2314748508d28f122745533c6"
+}

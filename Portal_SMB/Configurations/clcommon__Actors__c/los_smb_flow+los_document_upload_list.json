@@ -1,0 +1,75 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": false,
+               "render": "$global.attr(isPrincipal);==true",
+               "queueSecondaryText": "<p>$this.attr(clcommon__Description__c);</p><p class=\"declineReason\"></p>",
+               "queuePrimaryText": "<span class=\"$this.attr(clcommon__Status__c, className); document-status\">$this.attr(clcommon__Status__c);</span><span class=\"docCategoryTitle\"> $this.attr(clcommon__Category_Name__c);</span> ",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "$global.attr(recordCount);",
+               "droppableRecord": {
+                    "uploadActionName": "upload",
+                    "type": "FILE"
+               },
+               "editableFields": {
+                    "Id": false,
+                    "Name": false,
+                    "clcommon__Description__c": false,
+                    "clcommon__Status__c": false,
+                    "clcommon__Category_Name__c": false,
+                    "clcommon__Parent_Document_Category__r.Id": false,
+                    "clcommon__Account__r.Name": false,
+                    "clcommon__Account__c": false
+               },
+               "renderFields": {
+                    "Id": false,
+                    "Name": false
+               },
+               "fieldColumns": 1,
+               "title": "Required Documents",
+               "groupBy": {
+                    "titles": [
+                         {
+                              "render": "$this.attr(clcommon__Account__c);!=null",
+                              "title": "Documents for $this.attr(clcommon__Account__r.Name);"
+                         }
+                    ],
+                    "ascending": true,
+                    "field": "clcommon__Account__c"
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "accId": "$global.attr(borrowerAccountId);",
+                    "businessAccountId": "$global.attr(businessAccountId);",
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "los_fetch_required_documents",
+               "module": "document"
+          },
+          "type": "queue-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_document_upload_list",
+     "clcommon__External_ID__c": "los_smb_flow+los_document_upload_list",
+     "clcommon__Release_Checksum__c": "f98d713b48072d2c3a706bd47e47e898fb27e606920bc79de6841368636da537"
+}

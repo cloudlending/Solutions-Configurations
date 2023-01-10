@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "partiesSummaryNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "updates": [
+                    {
+                         "value": "los_review_loan_summary",
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(los_application_steps).appearance(current);"
+                    },
+                    {
+                         "value": "",
+                         "field": "$global.attr(collateralValidation);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "remoteActionArguments": {
+               "portalStage": "$global.attr(portalStage);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "render": "$global.attr(isHMDALoan);!=true",
+               "enable": "$state(los_collaterals_list).count();>=1",
+               "style": "primary",
+               "label": "Next",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "partiesSummaryNext"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_collaterals_list"
+     },
+     "clcommon__Component_Structure_Name__c": "get_collateral_list",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "los_collaterals_list+partiesSummaryNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_collaterals_list+partiesSummaryNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "f0f4ba245bbdb065235ed35b21d8fc04513dc53d9d267fbf7aa5c60fe3b905eb"
+}

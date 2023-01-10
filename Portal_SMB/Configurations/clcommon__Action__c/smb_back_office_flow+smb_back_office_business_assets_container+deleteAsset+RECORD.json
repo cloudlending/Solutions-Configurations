@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "deleteAsset",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "deleteAsset",
+          "property": {},
+          "appearance": {
+               "render": "$this.attr(Id); != undefined and $global.attr(existingCollateral);!=\"Yes\"",
+               "style": "secondary",
+               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "collateralTypeDetail": "$this;"
+          },
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "smb_back_office_business_assets_container"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_assets_container"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_business_assets_container",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalDeleteCollateralTypeDetail",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_business_assets_container+deleteAsset",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_assets_container+deleteAsset+RECORD",
+     "clcommon__Release_Checksum__c": "cd3f3b5824ef16e6c89a158f0d2606bb7b56952aaab36ff1558786d717d60475"
+}

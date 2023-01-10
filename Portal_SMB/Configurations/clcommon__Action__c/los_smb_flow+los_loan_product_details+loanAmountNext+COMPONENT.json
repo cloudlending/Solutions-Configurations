@@ -1,0 +1,66 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "loanAmountNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "updates": [
+                    {
+                         "value": "los_loan_purpose_details",
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$this.attr(genesis__CL_Product__c);",
+                         "field": "$global.attr(loanProduct);"
+                    },
+                    {
+                         "value": "$state(los_loan_amount_details).attr(genesis__Application__r.genesis__Loan_Amount__c);",
+                         "field": "$global.attr(loanAmount);"
+                    },
+                    {
+                         "value": "next",
+                         "field": "$nav(los_application_steps).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "validation": [
+               "los_loan_amount_details",
+               "los_loan_product_details"
+          ],
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Next"
+          },
+          "property": {},
+          "name": "loanAmountNext"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_loan_product_details"
+     },
+     "clcommon__Component_Structure_Name__c": "los_loan_product_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_loan_product_details+loanAmountNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_loan_product_details+loanAmountNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "a7364bc9c6117011f7e10e6d1d1efd3198ebd0931f084a2c09363e66c661d887"
+}

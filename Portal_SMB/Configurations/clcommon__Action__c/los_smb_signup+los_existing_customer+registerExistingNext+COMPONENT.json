@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "registerExistingNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "registerWithPartialMatchNext",
+                         "condition": "$result.attr(apiResponse);==3"
+                    },
+                    {
+                         "name": "sendResgitrationEmail",
+                         "condition": "$result.attr(apiResponse);==0 or $result.attr(apiResponse);==2"
+                    },
+                    {
+                         "name": "sendResetEmail",
+                         "condition": "$result.attr(apiResponse);==1"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$result.attr(apiResponse);",
+                         "field": "$global.attr(statusCode);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "isExistingUser": true,
+               "permissionSetName": "SMB_Secured_Borrower",
+               "contact": "$state(los_existing_customer);"
+          },
+          "appearance": {
+               "style": "primary",
+               "label": "Next"
+          },
+          "property": {},
+          "name": "registerExistingNext"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_signup+los_existing_customer"
+     },
+     "clcommon__Component_Structure_Name__c": "los_register_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveUserData",
+     "clcommon__Unique_Action_Name__c": "los_existing_customer+registerExistingNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_signup+los_existing_customer+registerExistingNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "ef18f8c8f7fcab61c6833855f50fc104d1502429fcef155989dd7b1705d749f1"
+}

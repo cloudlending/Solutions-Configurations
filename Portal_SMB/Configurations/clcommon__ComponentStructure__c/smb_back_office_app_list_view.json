@@ -1,0 +1,76 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_app_list_view",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "smb_back_office_app_list_view",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_app_list_view",
+          "tableName": "genesis__applications__c",
+          "whereClause": {
+               "freeForm": "id !=null"
+          },
+          "sections": [
+               {
+                    "id": "14292542-8115-44d8-9077-7c19b5f5014c",
+                    "fields": [
+                         {
+                              "id": "38bff6fb-6b68-46ef-b122-d1a7f6e6b940",
+                              "fieldName": "genesis__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account ID",
+                                   "ariaLabel": "Account ID"
+                              }
+                         },
+                         {
+                              "id": "ab5c01b2-bc08-4e6e-a7af-7b498d8722db",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "94667e40-f9d4-4b79-8668-1d92ffd77ff4",
+                              "relationType": "childrenRelation",
+                              "fieldName": null,
+                              "relationName": "genesis__Parties__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__Party__c",
+                                   "whereClause": {
+                                        "freeForm": "id !=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "a328c849-549a-49b3-a621-1b13ba63270b",
+                                             "fields": [
+                                                  {
+                                                       "id": "061dde7d-ea43-466e-94fc-28b021afa00f",
+                                                       "fieldName": "clcommon__Party_Types__c",
+                                                       "fieldUi": {
+                                                            "fieldType": "multipicklist",
+                                                            "label": "Party Types"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": null,
+                                   "label": ""
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "smb_back_office_app_list_view",
+     "clcommon__Release_Checksum__c": "4721b452dfeb775bb341e13a4946b4132eef2d4fe4767b8dcfc57d24168af076"
+}

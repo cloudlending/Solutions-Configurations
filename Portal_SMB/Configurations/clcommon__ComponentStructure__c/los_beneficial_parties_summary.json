@@ -1,0 +1,153 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_beneficial_parties_summary",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_beneficial_parties_summary",
+     "clcommon__data__c": {
+          "structureName": "los_beneficial_parties_summary",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId' and (clcommon__Party_Types__c  includes('BENEFICIAL OWNER'))"
+          },
+          "sections": [
+               {
+                    "id": "93019f55-61a3-4c54-8f5c-9222dd7e050b",
+                    "fields": [
+                         {
+                              "id": "ad6c2c2c-469a-4ae5-806f-5c5518e09341",
+                              "fieldName": "clcommon__Account__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Beneficial Owner Name",
+                                   "ariaLabel": "Account Name"
+                              }
+                         },
+                         {
+                              "id": "a65ded44-232e-47da-adea-b0f036d4c535",
+                              "fieldName": "clcommon__Contact__r.FirstName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "First Name",
+                                   "ariaLabel": "First Name"
+                              }
+                         },
+                         {
+                              "id": "41797d58-b271-4d08-8a55-08630c95c789",
+                              "fieldName": "clcommon__Contact__r.LastName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Last Name",
+                                   "ariaLabel": "Last Name"
+                              }
+                         },
+                         {
+                              "id": "16dbab87-7890-4d1d-a29e-58fec8872197",
+                              "fieldName": "clcommon__Party_Types__c",
+                              "fieldUi": {
+                                   "fieldType": "multipicklist",
+                                   "label": "Party Types",
+                                   "selectOptions": [
+                                        {
+                                             "id": "BENEFICIAL OWNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BENEFICIAL OWNER",
+                                             "optionValue": "BENEFICIAL OWNER"
+                                        },
+                                        {
+                                             "id": "SIGNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SIGNER",
+                                             "optionValue": "SIGNER"
+                                        },
+                                        {
+                                             "id": "GUARANTOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "GUARANTOR",
+                                             "optionValue": "GUARANTOR"
+                                        }
+                                   ],
+                                   "ariaLabel": "Party Types"
+                              }
+                         },
+                         {
+                              "id": "1cd58f28-09ad-4866-8f4a-60fa282cb48a",
+                              "fieldName": "clcommon__Percent_Ownership__c",
+                              "fieldUi": {
+                                   "fieldType": "percent",
+                                   "label": "Ownership (%)",
+                                   "settingsOptions": {
+                                        "minimumFractionDigits": 1
+                                   },
+                                   "messages": {
+                                        "requiredErrorText": "Ownership percentage is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralDecimalScale": 1
+                                        },
+                                        "suffix": "%"
+                                   },
+                                   "ariaLabel": "Ownership percentage"
+                              }
+                         },
+                         {
+                              "id": "51806afa-bb5a-4cca-b115-18372c57f038",
+                              "fieldName": "clcommon__Contact__r.Phone",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Business Phone",
+                                   "ariaLabel": "Business Phone"
+                              }
+                         },
+                         {
+                              "id": "7770c729-6a8b-48cd-8df2-881fe378cc34",
+                              "fieldName": "clcommon__Contact__r.Email",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Email",
+                                   "ariaLabel": "Email"
+                              }
+                         },
+                         {
+                              "id": "51c3da7c-5ef9-450e-867e-a58a4290999c",
+                              "fieldName": "clcommon__Contact__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Contact ID",
+                                   "ariaLabel": "Contact ID"
+                              }
+                         },
+                         {
+                              "id": "df4a249c-6558-4c2f-9f55-bff753ffd736",
+                              "fieldName": "clcommon__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account ID",
+                                   "ariaLabel": "Account ID"
+                              }
+                         },
+                         {
+                              "id": "0e9f1c0c-1c3f-4ee1-aa65-79bc21dda8f0",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_beneficial_parties_summary",
+     "clcommon__Release_Checksum__c": "f615b54b4c9f57e30c285ef0ba4e1faac21323372827cc02767050d134b4d8f6"
+}

@@ -1,0 +1,552 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_review_loan_summary",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_review_loan_summary",
+     "clcommon__data__c": {
+          "structureName": "los_review_loan_summary",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId' and clcommon__Type__r.Name = 'BORROWER'"
+          },
+          "sections": [
+               {
+                    "id": "6268fd63-b652-4108-9e33-63cd5740b7d1",
+                    "fields": [
+                         {
+                              "id": "2caedc5c-7ab2-429b-8354-eae782fdf75c",
+                              "fieldName": "genesis__Application__r.genesis__Loan_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Loan Amount",
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         },
+                         {
+                              "id": "002394ed-3dc9-4d18-b248-c95c5cce84b1",
+                              "fieldName": "genesis__Application__r.genesis__CL_Purpose__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Loan Purpose",
+                                   "ariaLabel": "CL Purpose"
+                              }
+                         },
+                         {
+                              "id": "010asd21a1a-bcd9-4f09-9bf5-6bb3332e40fc",
+                              "fieldName": "clcommon__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account Id",
+                                   "ariaLabel": "Account Id"
+                              }
+                         },
+                         {
+                              "id": "c018a1adsabc-b807-4c9e-8213-e715db293007",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Business Id",
+                                   "ariaLabel": "Business Id"
+                              }
+                         },
+                         {
+                              "id": "01021a1a-bcd9-4f09-9bf5-6bb3332e40fc",
+                              "fieldName": "clcommon__Account__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account Name",
+                                   "ariaLabel": "Account Name"
+                              }
+                         },
+                         {
+                              "id": "c018a1bc-b807-4c9e-8213-e715db293007",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Doing Business as (DBA) Name",
+                                   "ariaLabel": "Doing Business as (DBA) Name"
+                              }
+                         },
+                         {
+                              "id": "87d3eab9-9977-4eb1-8462-20c004f2bdd0",
+                              "relationType": "reference",
+                              "fieldName": "clcommon__Account__r.clcommon__Legal_Entity_Type__c",
+                              "relationName": "clcommon__Legal_Entity_Type__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__Legal_Entity__c",
+                                   "whereClause": {
+                                        "freeForm": "id !=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "e0f5e5a8-05fe-4efe-a8b0-6512aeabdac9",
+                                             "fields": [
+                                                  {
+                                                       "id": "ad6988e1-4a41-4725-8b66-0e9f080e76be",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "5f40a2eb-5b4e-4c50-b4f3-b40c0be11591",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Legal Class Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Business Legal Classification"
+                              }
+                         },
+                         {
+                              "id": "409a0c4d-955c-49ad-a677-9325964e569a",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Total Sales",
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c); >= 0",
+                                             "message": "<span style=\"color:red\"> Total Sales should be greater than zero </span>"
+                                        }
+                                   ],
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Total Sales"
+                              }
+                         },
+                         {
+                              "id": "a0ad83cb-7506-4f91-bcbb-45ab6e913181",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Total Debt",
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c); >= 0",
+                                             "message": "<span style=\"color:red\"> Total Debt should be greater than zero </span>"
+                                        }
+                                   ],
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Total Liabilities"
+                              }
+                         },
+                         {
+                              "id": "87c06c8e-ba52-44ec-a6c8-3d3c9e6a725a",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Annual Revenue",
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c); > 0",
+                                             "message": "<span style=\"color:red\"> Annual Revenue should be greater than zero </span>"
+                                        }
+                                   ],
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Annual Revenue"
+                              }
+                         },
+                         {
+                              "id": "70ed1255-809e-4cbb-8e5e-f6c2b54bbdde",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__Business_Registration_State__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Business Registration State",
+                                   "required": true,
+                                   "prompt": "Select a state...",
+                                   "selectOptions": [
+                                        {
+                                             "id": "AL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AL",
+                                             "optionValue": "AL"
+                                        },
+                                        {
+                                             "id": "AK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AK",
+                                             "optionValue": "AK"
+                                        },
+                                        {
+                                             "id": "AZ",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AZ",
+                                             "optionValue": "AZ"
+                                        },
+                                        {
+                                             "id": "AR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AR",
+                                             "optionValue": "AR"
+                                        },
+                                        {
+                                             "id": "CA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CA",
+                                             "optionValue": "CA"
+                                        },
+                                        {
+                                             "id": "CO",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CO",
+                                             "optionValue": "CO"
+                                        },
+                                        {
+                                             "id": "CT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CT",
+                                             "optionValue": "CT"
+                                        },
+                                        {
+                                             "id": "DE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "DE",
+                                             "optionValue": "DE"
+                                        },
+                                        {
+                                             "id": "FL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "FL",
+                                             "optionValue": "FL"
+                                        },
+                                        {
+                                             "id": "GA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "GA",
+                                             "optionValue": "GA"
+                                        },
+                                        {
+                                             "id": "HI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "HI",
+                                             "optionValue": "HI"
+                                        },
+                                        {
+                                             "id": "ID",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ID",
+                                             "optionValue": "ID"
+                                        },
+                                        {
+                                             "id": "IL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "IL",
+                                             "optionValue": "IL"
+                                        },
+                                        {
+                                             "id": "IN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "IN",
+                                             "optionValue": "IN"
+                                        },
+                                        {
+                                             "id": "IA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "IA",
+                                             "optionValue": "IA"
+                                        },
+                                        {
+                                             "id": "KS",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "KS",
+                                             "optionValue": "KS"
+                                        },
+                                        {
+                                             "id": "KY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "KY",
+                                             "optionValue": "KY"
+                                        },
+                                        {
+                                             "id": "LA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LA",
+                                             "optionValue": "LA"
+                                        },
+                                        {
+                                             "id": "ME",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ME",
+                                             "optionValue": "ME"
+                                        },
+                                        {
+                                             "id": "MD",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MD",
+                                             "optionValue": "MD"
+                                        },
+                                        {
+                                             "id": "MA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MA",
+                                             "optionValue": "MA"
+                                        },
+                                        {
+                                             "id": "MI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MI",
+                                             "optionValue": "MI"
+                                        },
+                                        {
+                                             "id": "MN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MN",
+                                             "optionValue": "MN"
+                                        },
+                                        {
+                                             "id": "MS",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MS",
+                                             "optionValue": "MS"
+                                        },
+                                        {
+                                             "id": "MO",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MO",
+                                             "optionValue": "MO"
+                                        },
+                                        {
+                                             "id": "MT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MT",
+                                             "optionValue": "MT"
+                                        },
+                                        {
+                                             "id": "NE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NE",
+                                             "optionValue": "NE"
+                                        },
+                                        {
+                                             "id": "NV",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NV",
+                                             "optionValue": "NV"
+                                        },
+                                        {
+                                             "id": "NH",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NH",
+                                             "optionValue": "NH"
+                                        },
+                                        {
+                                             "id": "NJ",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NJ",
+                                             "optionValue": "NJ"
+                                        },
+                                        {
+                                             "id": "NM",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NM",
+                                             "optionValue": "NM"
+                                        },
+                                        {
+                                             "id": "NY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NY",
+                                             "optionValue": "NY"
+                                        },
+                                        {
+                                             "id": "NC",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NC",
+                                             "optionValue": "NC"
+                                        },
+                                        {
+                                             "id": "ND",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ND",
+                                             "optionValue": "ND"
+                                        },
+                                        {
+                                             "id": "OH",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "OH",
+                                             "optionValue": "OH"
+                                        },
+                                        {
+                                             "id": "OK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "OK",
+                                             "optionValue": "OK"
+                                        },
+                                        {
+                                             "id": "OR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "OR",
+                                             "optionValue": "OR"
+                                        },
+                                        {
+                                             "id": "PA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PA",
+                                             "optionValue": "PA"
+                                        },
+                                        {
+                                             "id": "RI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "RI",
+                                             "optionValue": "RI"
+                                        },
+                                        {
+                                             "id": "SC",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SC",
+                                             "optionValue": "SC"
+                                        },
+                                        {
+                                             "id": "SD",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SD",
+                                             "optionValue": "SD"
+                                        },
+                                        {
+                                             "id": "TN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "TN",
+                                             "optionValue": "TN"
+                                        },
+                                        {
+                                             "id": "TX",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "TX",
+                                             "optionValue": "TX"
+                                        },
+                                        {
+                                             "id": "UT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "UT",
+                                             "optionValue": "UT"
+                                        },
+                                        {
+                                             "id": "VT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "VT",
+                                             "optionValue": "VT"
+                                        },
+                                        {
+                                             "id": "VA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "VA",
+                                             "optionValue": "VA"
+                                        },
+                                        {
+                                             "id": "WA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "WA",
+                                             "optionValue": "WA"
+                                        },
+                                        {
+                                             "id": "WV",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "WV",
+                                             "optionValue": "WV"
+                                        },
+                                        {
+                                             "id": "WI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "WI",
+                                             "optionValue": "WI"
+                                        },
+                                        {
+                                             "id": "WY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "WY",
+                                             "optionValue": "WY"
+                                        }
+                                   ],
+                                   "ariaLabel": "Business Registration State"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_review_loan_summary",
+     "clcommon__Release_Checksum__c": "bd2854684b476aad8912b42fe5d7251c3d411ed32ac1f6294fb5e14e058edaf6"
+}

@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "updateExistngContactDetails",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "personalInformationExistingNext"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "contact": {
+                    "FirstName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.FirstName);",
+                    "LastName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.LastName);",
+                    "Email": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Email);",
+                    "Phone": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Phone);",
+                    "Id": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Id);"
+               }
+          },
+          "appearance": {
+               "render": false,
+               "style": "primary",
+               "label": "Save",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "updateExistngContactDetails"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_party_ownership_details"
+     },
+     "clcommon__Component_Structure_Name__c": "los_beneifical_party_types",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSavePersonalInfo",
+     "clcommon__Unique_Action_Name__c": "los_party_ownership_details+updateExistngContactDetails",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_party_ownership_details+updateExistngContactDetails+COMPONENT",
+     "clcommon__Release_Checksum__c": "626c4b63a92143c6e24d52a153fc34371bdcf83bac670a7e8527fcc6c9f4deab"
+}

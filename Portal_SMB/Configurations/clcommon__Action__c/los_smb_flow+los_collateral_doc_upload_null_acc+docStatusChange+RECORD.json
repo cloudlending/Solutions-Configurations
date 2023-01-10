@@ -1,0 +1,51 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "docStatusChange",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "value": [
+                              "los_party_doc_upload_list_after_submit",
+                              "los_collateral_doc_upload_null_acc",
+                              "los_preapproval_record_count"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "documentCategoryId": "$global.attr(SubmittedDoc);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "style": "primary",
+               "render": false,
+               "label": "View"
+          },
+          "property": {},
+          "name": "docStatusChange"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_collateral_doc_upload_null_acc"
+     },
+     "clcommon__Component_Structure_Name__c": "los_post_approval_documents_list_null_acc",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalChangeDocmentCategoryStatus",
+     "clcommon__Unique_Action_Name__c": "los_collateral_doc_upload_null_acc+docStatusChange",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_doc_upload_null_acc+docStatusChange+RECORD",
+     "clcommon__Release_Checksum__c": "d7fa24af32dc869a64c4d8345de32333b8a779c9ac0a84408ee8d4a2a2b07296"
+}

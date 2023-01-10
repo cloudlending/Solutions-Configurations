@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editable": true,
+               "fieldColumns": 1,
+               "title": "Business Information ",
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(backofficerAccountId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "smb_back_office_business_Legal_entity_picklist_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_business_Legal_entity_picklist_details",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_Legal_entity_picklist_details",
+     "clcommon__Release_Checksum__c": "6535f069b55f8993dd7e07b82d81158ce5086968a2c6f6b3ee68786f9397cd61"
+}

@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "AddCollateral",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "AddCollateral",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Collateral</span>",
+               "render": false,
+               "position": "top-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(collateralId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(collateralValidation);",
+                         "value": ""
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "smb_back_office_add_collateral_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_collateral_details"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_add_collateral_container"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_collateral_details"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_collateral_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_collateral_details+AddCollateral",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_collateral_details+AddCollateral+COMPONENT",
+     "clcommon__Release_Checksum__c": "25737afa08a59d7f9ddda513dec29a39627774640d2086f45acb4e647e4a9627"
+}

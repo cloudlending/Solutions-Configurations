@@ -1,0 +1,130 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_account_search_results_list_view",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "smb_back_office_account_search_results_list_view",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_account_search_results_list_view",
+          "tableName": "contact",
+          "whereClause": {
+               "freeForm": "Account.Name LIKE '%:AccName%' and Account.clcommon__Legal_Entity_Type__r.clcommon__Individual__c = true"
+          },
+          "sections": [
+               {
+                    "id": "dee7f555-19bd-4947-ba41-f15222a74777",
+                    "fields": [
+                         {
+                              "id": "b4b9638b-ac2a-4b55-8241-ab07cbf2c07d",
+                              "fieldName": "Account.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Name",
+                                   "ariaLabel": "Name"
+                              }
+                         },
+                         {
+                              "id": "629364e5-b9bd-4b58-bef3-26b9ac86ed19",
+                              "fieldName": "Email",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Email",
+                                   "ariaLabel": "Email"
+                              }
+                         },
+                         {
+                              "id": "a760ccbf-4235-41f6-aaee-5a872a06a0bf",
+                              "fieldName": "Account.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account ID",
+                                   "ariaLabel": "Account ID"
+                              }
+                         },
+                         {
+                              "id": "4965236a-e8bb-4144-951c-6eaba658a361",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Contact ID",
+                                   "ariaLabel": "Contact ID"
+                              }
+                         },
+                         {
+                              "id": "9eb7e6a4-840b-4ed8-87e3-6dc032d58e9a",
+                              "relationType": "reference",
+                              "fieldName": "Account.clcommon__Legal_Entity_Type__c",
+                              "relationName": "clcommon__Legal_Entity_Type__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__Legal_Entity__c",
+                                   "whereClause": {
+                                        "freeForm": "clcommon__Individual__c = true"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "d6d610fe-bcfc-4db0-a695-288f482fd15f",
+                                             "fields": [
+                                                  {
+                                                       "id": "45a4fe5f-bd30-406e-b95a-7883967d709e",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "45320905-a3ad-4777-9837-9266590b3eaa",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Legal Class Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Legal Entity Type"
+                              }
+                         },
+                         {
+                              "id": "d50084f0-acce-4a77-bd59-9534409ecc52",
+                              "fieldName": "Account.clcommon__Legal_Entity_Type__r.clcommon__Individual__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Individual",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Individual"
+                              }
+                         },
+                         {
+                              "id": "623668e4-7f8c-4d16-9fdf-9120291c0116",
+                              "fieldName": "Account.clcommon__Legal_Entity_Type__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "0b7971c0-b653-4f41-8a7e-64651701ba22",
+                              "fieldName": "Account.clcommon__Legal_Entity_Type__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Legal Class Name",
+                                   "ariaLabel": "Legal Class Name"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "smb_back_office_account_search_results_list_view",
+     "clcommon__Release_Checksum__c": "86571835090d2eebdfabf9b5dfd32272b40c6b44da9d4ea20db5041549b47cb1"
+}

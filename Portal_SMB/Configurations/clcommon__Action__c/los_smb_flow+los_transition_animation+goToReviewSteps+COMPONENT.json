@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToReviewSteps",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "assignments": [
+                    {
+                         "value": "$global.attr(portalStage);",
+                         "field": "$nav(los_review_steps).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "label": "GetPortaStage",
+               "style": "primary",
+               "render": false
+          },
+          "property": {},
+          "name": "goToReviewSteps"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_transition_animation"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_transition_animation+goToReviewSteps",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_transition_animation+goToReviewSteps+COMPONENT",
+     "clcommon__Release_Checksum__c": "066c7c709d4143e212b6c83e1c023b98edd91f1550e3c8fc52e93ab19bd7d223"
+}

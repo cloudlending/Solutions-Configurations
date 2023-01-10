@@ -1,0 +1,29 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {},
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);",
+                    "collateralId": "$global.attr(collateralId);"
+               },
+               "structureName": "los_find_collateral_relationship"
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_find_collateral_relationship",
+     "clcommon__External_ID__c": "los_smb_flow+los_find_collateral_relationship",
+     "clcommon__Release_Checksum__c": "2bc8fb2b8ac71212085920d324db81ed2f5cdd8e540261fdb804f7acfed38eef"
+}

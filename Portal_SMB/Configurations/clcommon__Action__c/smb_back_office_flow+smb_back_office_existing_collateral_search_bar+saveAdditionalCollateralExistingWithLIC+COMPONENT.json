@@ -1,0 +1,71 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveAdditionalCollateralExistingWithLIC",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "saveAdditionalCollateralExistingWithLIC",
+          "property": {},
+          "appearance": {
+               "label": "Save",
+               "style": "primary",
+               "render": "($this.attr(genesis__Collateral__r.Id); != \"\" and $this.attr(genesis__Collateral__r.Id); != undefined and $this.attr(genesis__Collateral__r.Id); != \"new_record_id\") and $this.attr(solcommon__Collateral_Type_Name__c); == \"Life Insurance\""
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "Id": "$global.attr(applicationId);",
+                    "solcommon__Portal_Stage__c": "CollateralDetails"
+               },
+               "collateral": {
+                    "clcommon__Is_Insured_Party_Not_Policy_Owner__c": "$this.attr(genesis__Collateral__r.clcommon__Is_Insured_Party_Not_Policy_Owner__c);",
+                    "clcommon__Insurance_Company_Name__c": "$this.attr(genesis__Collateral__r.clcommon__Insurance_Company_Name__c);",
+                    "clcommon__Insured_Party_Of_Insurance_Policy__c": "$this.attr(genesis__Collateral__r.clcommon__Insured_Party_Of_Insurance_Policy__c);",
+                    "clcommon__Life_Insurance_Beneficiary__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Beneficiary__c);",
+                    "id": "$this.attr(genesis__Collateral__r.Id);",
+                    "clcommon__Issuer_Name__c": "$this.attr(genesis__Collateral__r.clcommon__Issuer_Name__c);",
+                    "clcommon__Life_Insurance_Verification_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Verification_Date__c);",
+                    "clcommon__Life_Insurance_Effective_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Effective_Date__c);",
+                    "clcommon__Policy_Number__c": "$this.attr(genesis__Collateral__r.clcommon__Policy_Number__c);",
+                    "clcommon__Insurance_Amount__c": "$this.attr(genesis__Collateral__r.clcommon__Insurance_Amount__c);",
+                    "clcommon__Description__c": "$this.attr(genesis__Collateral__r.clcommon__Description__c);",
+                    "clcommon__Postal_Code__c": "$this.attr(genesis__Collateral__r.clcommon__Postal_Code__c);",
+                    "clcommon__State__c": "$this.attr(genesis__Collateral__r.clcommon__State__c);",
+                    "clcommon__City__c": "$this.attr(genesis__Collateral__r.clcommon__City__c);",
+                    "clcommon__Address__c": "$this.attr(genesis__Collateral__r.clcommon__Address__c);",
+                    "clcommon__Collateral_Type__c": "$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__c);",
+                    "clcommon__Collateral_Name__c": "$this.attr(genesis__Collateral__r.clcommon__Collateral_Name__c);"
+               }
+          },
+          "successHandler": {
+               "actions": [
+                    {
+                         "condition": "$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.clcommon__Itemized_Collateral_Values__c);==true",
+                         "name": "navigateToBusinessAssetsPage"
+                    },
+                    {
+                         "condition": "$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.clcommon__Itemized_Collateral_Values__c);!=true",
+                         "name": "closeSelectCollateral"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_collateral_search_bar"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_select_existing_collateral_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveCollateral",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_existing_collateral_search_bar+saveAdditionalCollateralExistingWithLIC",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_collateral_search_bar+saveAdditionalCollateralExistingWithLIC+COMPONENT",
+     "clcommon__Release_Checksum__c": "5b7797bdb781aefcc3b6e5a95c5eef63808856b66b37aee05ab8de1f71c86c23"
+}

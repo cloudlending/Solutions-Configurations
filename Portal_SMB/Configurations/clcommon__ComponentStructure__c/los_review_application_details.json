@@ -1,0 +1,168 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_review_application_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_review_application_details",
+     "clcommon__data__c": {
+          "structureName": "los_review_application_details",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId' and clcommon__Type__r.Name = 'BORROWER'"
+          },
+          "orderBy": "createddate LIMIT 1",
+          "sections": [
+               {
+                    "id": "6268fd63-b652-4108-9e33-63cd5740b7d1",
+                    "fields": [
+                         {
+                              "id": "2caedc5c-7ab2-429b-8354-eae782fdf75c",
+                              "fieldName": "genesis__Application__r.genesis__Loan_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Loan Amount",
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         },
+                         {
+                              "id": "002394ed-3dc9-4d18-b248-c95c5cce84b1",
+                              "fieldName": "genesis__Application__r.genesis__CL_Purpose__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Loan Purpose",
+                                   "ariaLabel": "CL Purpose"
+                              }
+                         },
+                         {
+                              "id": "010asd21a1a-bcd9-4f09-9bf5-6bb3332e40fc",
+                              "fieldName": "clcommon__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account Id",
+                                   "ariaLabel": "Account Id"
+                              }
+                         },
+                         {
+                              "id": "c018a1adsabc-b807-4c9e-8213-e715db293007",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Business Id",
+                                   "ariaLabel": "Business Id"
+                              }
+                         },
+                         {
+                              "id": "01021a1a-bcd9-4f09-9bf5-6bb3332e40fc",
+                              "fieldName": "clcommon__Account__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Business Name(Legal Name)",
+                                   "ariaLabel": "Business Name"
+                              }
+                         },
+                         {
+                              "id": "c018a1bc-b807-4c9e-8213-e715db293007",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Doing Business as (DBA) Name",
+                                   "ariaLabel": "Doing Business as (DBA) Name"
+                              }
+                         },
+                         {
+                              "id": "87d3eab9-9977-4eb1-8462-20c004f2bdd0",
+                              "fieldName": "clcommon__Account__r.clcommon__Legal_Entity_Type__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "String",
+                                   "label": "Business Legal Classification"
+                              }
+                         },
+                         {
+                              "id": "409a0c4d-955c-49ad-a677-9325964e569a",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Total Sales",
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c); >= 0",
+                                             "message": "<span style=\"color:red\"> Total Sales should be greater than or equal to zero </span>"
+                                        }
+                                   ],
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Total Sales"
+                              }
+                         },
+                         {
+                              "id": "a0ad83cb-7506-4f91-bcbb-45ab6e913181",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Total Debt",
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c); >= 0",
+                                             "message": "<span style=\"color:red\"> Total Debt should be greater than or equal to zero </span>"
+                                        }
+                                   ],
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Total Liabilities"
+                              }
+                         },
+                         {
+                              "id": "87c06c8e-ba52-44ec-a6c8-3d3c9e6a725a",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Annual Revenue",
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c); > 0",
+                                             "message": "<span style=\"color:red\"> Annual Revenue should be greater than zero </span>"
+                                        }
+                                   ],
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Annual Revenue"
+                              }
+                         },
+                         {
+                              "id": "70ed1255-809e-4cbb-8e5e-f6c2b54bbdde",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__Business_Registration_State__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Business Registration State",
+                                   "ariaLabel": "Business Registration State"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_review_application_details",
+     "clcommon__Release_Checksum__c": "449b4835cb7618fbef8aa8ba287b7e058a30e3ef7205ad6391df66c652366469"
+}

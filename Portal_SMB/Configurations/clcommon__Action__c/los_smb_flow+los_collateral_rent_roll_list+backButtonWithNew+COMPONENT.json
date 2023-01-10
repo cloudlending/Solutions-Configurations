@@ -1,0 +1,44 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "backButtonWithNew",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "assignments": [
+                    {
+                         "value": 2,
+                         "field": "$nav(los_add_collateral_overlay).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "style": "secondary",
+               "render": "$global.attr(existingCollateral);!=\"Yes\"",
+               "label": "Back",
+               "variant": "text",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "backButtonWithNew"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_collateral_rent_roll_list"
+     },
+     "clcommon__Component_Structure_Name__c": "los_collateral_rent_roll_list",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_collateral_rent_roll_list+backButtonWithNew",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_rent_roll_list+backButtonWithNew+COMPONENT",
+     "clcommon__Release_Checksum__c": "185c7a3d2dc84a6263b3c085dcd919d15667ccd597bc18cee3b3fb6e96eb2590"
+}

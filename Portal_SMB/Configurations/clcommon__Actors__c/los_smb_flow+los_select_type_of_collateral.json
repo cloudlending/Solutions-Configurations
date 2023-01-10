@@ -1,0 +1,61 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "existingCollateral": {
+                         "assignments": [
+                              {
+                                   "value": "$this.attr(existingCollateral);",
+                                   "field": "$global.attr(existingCollateral);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editable": true,
+               "fieldColumns": 1,
+               "noLabelFields": [
+                    "existingCollateral"
+               ],
+               "title": "Do you want to select an existing collateral?",
+               "grid": {
+                    "field": {
+                         "existingCollateral": {
+                              "selectButton": {
+                                   "xs": 12,
+                                   "sm": 6
+                              }
+                         }
+                    }
+               }
+          },
+          "property": {
+               "structureName": "los_select_type_of_collateral"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_select_type_of_collateral",
+     "clcommon__External_ID__c": "los_smb_flow+los_select_type_of_collateral",
+     "clcommon__Release_Checksum__c": "477c97032a2b5aacc05f58018a5c9eb8ec94d1233e94cd38209403740c9b7f0a"
+}

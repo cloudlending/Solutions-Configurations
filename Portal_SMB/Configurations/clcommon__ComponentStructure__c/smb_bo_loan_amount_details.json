@@ -1,0 +1,54 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_bo_loan_amount_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Unique_Name__c": "smb_bo_loan_amount_details",
+     "clcommon__data__c": {
+          "structureName": "smb_bo_loan_amount_details",
+          "sections": [
+               {
+                    "id": "5b25333ccad-f477-414d-aba0-0asdc15ea02b475",
+                    "name": "Loan Amount",
+                    "title": "How much money do you want to borrow?",
+                    "fields": [
+                         {
+                              "id": "cdae5204-4b7c-49fe-b6f5-f7a65ab568c2",
+                              "fieldName": "loan_amount",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Loan Amount",
+                                   "defaultValue": 0,
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(loan_amount); > 0",
+                                             "message": "<span style=\"color:red\">Loan Amount should be greater than zero </span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Loan amount is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "initValue": "0",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "smb_bo_loan_amount_details",
+     "clcommon__Release_Checksum__c": "83faf7423f81c1670a96bf63a50d25c975e7f3a1e6ee14879bd8c511bae9a1f4"
+}

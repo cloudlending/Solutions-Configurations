@@ -1,0 +1,122 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "selectApplicaiton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "goToFlow",
+                         "condition": "($result.attr(portalStage); == \"BusinessDetails\" or $result.attr(portalStage); == \"IndustryCode\" or $result.attr(portalStage); == \"BusinessFinancials\" or $result.attr(portalStage); == \"PersonalInformation\" or $result.attr(portalStage); == \"DemographicInformation\" or $result.attr(portalStage); == \"CollateralDetails\" or $result.attr(portalStage); == \"Documents\" or $result.attr(portalStage); == \"ReviewAndSubmit\" or $result.attr(portalStage); == \"BusinessParties\" or $result.attr(portalStage); == \"BeneficialSummary\") and $result.attr(isPrimaryParty);==true and $this.attr(genesis__Applications__c.genesis__Is_Review_Application__c);==false"
+                    },
+                    {
+                         "name": "startBeneficialFlow",
+                         "condition": "$result.attr(portalStage); != \"IdentificationInformation\" and $result.attr(portalStage); != \"BeneficialDemographicInfo\" and $result.attr(portalStage); != \"Documents\" and $result.attr(portalStage); != \"ReviewAndSubmit\" and $result.attr(isPrimaryParty);!=true and $result.attr(portalStage); != \"PreApprovalDocument\" and $result.attr(portalStage); != \"DocumentReview\" and $result.attr(portalStage);!=\"BeneficialConfirmation\" and $result.attr(portalStage); != \"autoDecline\" and $result.attr(portalStage); != \"PostApprovalDocument\""
+                    },
+                    {
+                         "name": "goToBeneficialFlow",
+                         "condition": "($result.attr(portalStage); == \"IdentificationInformation\" or $result.attr(portalStage); == \"BeneficialDemographicInfo\" or $result.attr(portalStage); == \"Documents\" or $result.attr(portalStage); == \"ReviewAndSubmit\") and $result.attr(isPrimaryParty);!=true"
+                    },
+                    {
+                         "name": "goToDocWidget",
+                         "condition": "($result.attr(portalStage); == \"PreApprovalDocument\" or $result.attr(portalStage); == \"DocumentReview\") and $this.attr(genesis__Applications__c.genesis__Is_Review_Application__c);==false"
+                    },
+                    {
+                         "name": "goToReview",
+                         "condition": "($result.attr(portalStage); == \"autoDecline\" or $result.attr(portalStage); == \"autoApprove\" or $result.attr(portalStage); == \"manualReview\" or $result.attr(portalStage); == \"ClosingDocument\" or $result.attr(portalStage); == \"FundingInformation\" or $result.attr(portalStage); == \"ManualOffer\" or $result.attr(portalStage); == \"PostApprovalDocument\") and $result.attr(isPrimaryParty);==true and $this.attr(genesis__Applications__c.genesis__Is_Review_Application__c);==false"
+                    },
+                    {
+                         "name": "goToConfirmationPage",
+                         "condition": "$result.attr(isPrimaryParty);!=true and ($result.attr(portalStage);==\"BeneficialConfirmation\" or $result.attr(portalStage); == \"autoDecline\" or $result.attr(portalStage); == \"PostApprovalDocument\")"
+                    },
+                    {
+                         "name": "goToReviewApplication",
+                         "condition": "$this.attr(genesis__Applications__c.genesis__Is_Review_Application__c);==true"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$this.attr(genesis__Applications__c.Id);",
+                         "field": "$global.attr(applicationId);"
+                    },
+                    {
+                         "value": 0,
+                         "field": "$nav(los_application_steps).appearance(lastEnabled);"
+                    },
+                    {
+                         "value": "$result.attr(businessAccount);",
+                         "field": "$global.attr(businessAccountId);"
+                    },
+                    {
+                         "value": "$result.attr(portalStage);",
+                         "field": "$global.attr(portalStage);"
+                    },
+                    {
+                         "value": "$this.attr(genesis__Applications__c.genesis__Asset_Class__c);",
+                         "field": "$global.attr(assetClassName);"
+                    },
+                    {
+                         "value": "$this.attr(genesis__Applications__c.genesis__CL_Product__c);",
+                         "field": "$global.attr(loanProduct);"
+                    },
+                    {
+                         "value": "$this.attr(genesis__Applications__c.genesis__CL_Purpose__c);",
+                         "field": "$global.attr(loanPurpose);"
+                    },
+                    {
+                         "value": "$this.attr(genesis__Applications__c.genesis__Loan_Amount__c);",
+                         "field": "$global.attr(loanAmount);"
+                    },
+                    {
+                         "value": "$this.attr(genesis__Applications__c.genesis__Other_Purpose__c);",
+                         "field": "$global.attr(otherPurposeName);"
+                    },
+                    {
+                         "value": "$this.attr(genesis__Applications__c.genesis__CL_Product__r.solcommon__Pre_Approval_Document_Collection__c);",
+                         "field": "$global.attr(preApprovalDocumentCollection);"
+                    },
+                    {
+                         "value": "$this.attr(genesis__Applications__c.genesis__CL_Product__r.solcommon__Collect_Documents_Post_Approval__c);",
+                         "field": "$global.attr(postApprovalDocumentCollection);"
+                    },
+                    {
+                         "value": "$this.attr(genesis__Applications__c.genesis__Is_Review_Application__c);",
+                         "field": "$global.attr(isReviewApplication);"
+                    },
+                    {
+                         "value": "$result.attr(isPrimaryParty);",
+                         "field": "$global.attr(isPrincipal);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "applicationId": "$this.attr(genesis__Applications__c.Id);"
+          },
+          "appearance": {
+               "label": "<span>Continue</span> <i class=\"fa fa-chevron-right\" aria-hidden=\"true\"></i>",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "selectApplicaiton"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list"
+     },
+     "clcommon__Component_Structure_Name__c": "los_fetch_applications",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalGetCurrentStage",
+     "clcommon__Unique_Action_Name__c": "los_applicatiion_list+selectApplicaiton",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list+selectApplicaiton+RECORD",
+     "clcommon__Release_Checksum__c": "4f30496dbb26634f4d90357e15a196f50223984310bf041884d5e0fcbe4c9ef9"
+}

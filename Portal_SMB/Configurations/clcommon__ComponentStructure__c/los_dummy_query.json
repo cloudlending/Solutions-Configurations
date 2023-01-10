@@ -1,0 +1,37 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_dummy_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_dummy_query",
+     "clcommon__data__c": {
+          "structureName": "los_dummy_query",
+          "tableName": "genesis__application_collateral__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId'"
+          },
+          "sections": [
+               {
+                    "id": "62227826-5f93-48f6-8f74-017f2aaed393",
+                    "fields": [
+                         {
+                              "id": "646b49d0-cacb-4c49-9675-7d6caf68a977",
+                              "fieldName": "genesis__Collateral__r.clcommon__Collateral_Type__r.clcommon__Itemized_Collateral_Values__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Itemized Collateral Values",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Itemized Collateral Values"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_dummy_query",
+     "clcommon__Release_Checksum__c": "f45bd9ae741796284af34b2743bb093ac69225778b701d1a82713f195d537ed2"
+}

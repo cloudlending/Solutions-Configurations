@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "NullifyDynamicFieldsOnPartyTypes",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Back",
+          "handler": {
+               "actions": [
+                    {
+                         "name": "personalInformationExistingNext",
+                         "condition": "$global.attr(partyId);!=\"\" and $global.attr(partyId);!=null and $global.attr(partyId);!= undefined and $global.attr(partyId);!= \"new_record_id\""
+                    },
+                    {
+                         "name": "personalInformationDetailsNext",
+                         "condition": "$global.attr(partyId);==\"\" or $global.attr(partyId);==null or $global.attr(partyId);== undefined or $global.attr(partyId);== \"new_record_id\""
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "@mathjs{$global.attr(isSignerPartyTypeTwo);==true ? $state(los_party_beneficial_details).attr(clcommon__Signer_Capacity__c); : null};",
+                         "field": "$state(los_party_beneficial_details).attr(clcommon__Signer_Capacity__c);"
+                    },
+                    {
+                         "value": "@mathjs{$global.attr(isBeneficialPartyTypeTwo);==true ? $state(los_party_beneficial_details).attr(solcommon__Position_In_Company__c); : null};",
+                         "field": "$state(los_party_beneficial_details).attr(solcommon__Position_In_Company__c);"
+                    },
+                    {
+                         "value": "@mathjs{$global.attr(isBeneficialPartyTypeTwo);==true ? $state(los_party_beneficial_details).attr(clcommon__Percent_Ownership__c); : null};",
+                         "field": "$state(los_party_beneficial_details).attr(clcommon__Percent_Ownership__c);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "validation": [
+               "los_party_ownership_details",
+               "los_party_personalinfo_details",
+               "los_party_beneficial_details"
+          ],
+          "appearance": {
+               "label": "Save",
+               "style": "primary",
+               "position": "bottom-left",
+               "render": true
+          },
+          "property": {},
+          "name": "NullifyDynamicFieldsOnPartyTypes"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_party_ownership_details"
+     },
+     "clcommon__Component_Structure_Name__c": "los_beneifical_party_types",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_party_ownership_details+NullifyDynamicFieldsOnPartyTypes",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_party_ownership_details+NullifyDynamicFieldsOnPartyTypes+COMPONENT",
+     "clcommon__Release_Checksum__c": "4126ebc51da886b2599a5022ad0f0b475b5170de45f8007df2d7ae04b6e2f816"
+}

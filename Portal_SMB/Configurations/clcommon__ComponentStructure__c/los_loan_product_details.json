@@ -1,0 +1,73 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_loan_product_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_loan_product_details",
+     "clcommon__data__c": {
+          "structureName": "los_loan_product_details",
+          "tableName": "genesis__applications__c",
+          "whereClause": {
+               "freeForm": "id = ':appId'"
+          },
+          "sections": [
+               {
+                    "id": "5b25ccad-f477-414d-aba0-0asdc15ea02b475",
+                    "name": "Loan Product",
+                    "title": "What type of loan are you looking for?",
+                    "fields": [
+                         {
+                              "id": "9fa1e1e6-1401-4b8f-9759-cfdfb0b22520",
+                              "relationType": "reference",
+                              "fieldName": "genesis__CL_Product__c",
+                              "relationName": "genesis__CL_Product__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__CL_Product__c",
+                                   "whereClause": {
+                                        "freeForm": "id != null and solcommon__Show_On_Portal__c = true and clcommon__Asset_Class__r.Name in ('Small Business','Small Business Unsecured','Small Business Real Estate')"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "7609ae87-3dc2-468b-8304-1e6fe534dc4b",
+                                             "fields": [
+                                                  {
+                                                       "id": "d244f11d-1bdc-42a0-ae09-35dfbf773fc3",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "a308465a-a642-48b3-9208-cc2da459ff42",
+                                                       "fieldName": "solcommon__Portal_Label__c",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Portal Label"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "CL Product",
+                                   "defaultValue": null,
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Product is required"
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_loan_product_details",
+     "clcommon__Release_Checksum__c": "d0015a1da825bc9447c1fc4c9df89b04f6fc60cab4f6bf018ab66fb1f2dc52bc"
+}

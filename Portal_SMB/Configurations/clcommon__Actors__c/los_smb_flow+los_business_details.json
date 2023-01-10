@@ -1,0 +1,76 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{ $this.attr(clcommon__Account__r.Name); == \"Borrower Account\" ? \"\" : $this.attr(clcommon__Account__r.Name); };",
+                              "field": "$this.attr(clcommon__Account__r.Name);"
+                         },
+                         {
+                              "value": "@mathjs{ $this.attr(clcommon__Account__r.clcommon__Legal_Entity_Type__r.clcommon__Individual__c); == true ? \"Social Security Number\" : \"Federal Tax ID\" };",
+                              "field": "$global.attr(federalLabel);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "genesis__Business_Information__r.genesis__Beneficial_Owner_Exempt__c": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderFields": {
+                    "clcommon__Legal_Entity_Type__c": false,
+                    "Id": false,
+                    "genesis__Business_Information__r.genesis__Beneficial_Owner_Exempt__c": false,
+                    "clcommon__Legal_Entity_Type__r.Name": false,
+                    "clcommon__Legal_Entity_Type__r.clcommon__Individual__c": false,
+                    "genesis__Business_Information__r.Id": false,
+                    "clcommon__Legal_Entity_Type__r.Id": false
+               },
+               "editable": true,
+               "fieldColumns": 1,
+               "grid": {
+                    "field": {
+                         "BillingState": {
+                              "sm": 6
+                         },
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "accId": "$global.attr(businessAccountId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "los_basic_business_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_business_details",
+     "clcommon__External_ID__c": "los_smb_flow+los_business_details",
+     "clcommon__Release_Checksum__c": "70fa44cc6a0f398005f9a056ce3b067835f851b40b6cf1b90b6a5fdb23d88062"
+}

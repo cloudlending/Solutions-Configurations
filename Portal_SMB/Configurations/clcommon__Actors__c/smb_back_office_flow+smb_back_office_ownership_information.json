@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderFields": {
+                    "clcommon__Percent_Ownership__c": "$global.attr(isBeneficialPartyType);==true",
+                    "solcommon__Position_In_Company__c": "$global.attr(isBeneficialPartyType);==true",
+                    "clcommon__Signer_Capacity__c": "$global.attr(isSignerPartyType);==true",
+                    "clcommon__Party_Types__c": false,
+                    "clcommon__Type__c": false,
+                    "Id": false
+               },
+               "render": "$global.attr(isSignerPartyType);==true or $global.attr(isBeneficialPartyType);==true",
+               "grid": {
+                    "messagePositions": {
+                         "saveSubmitError": "top",
+                         "loadingError": "top",
+                         "loadingAnimation": "global"
+                    },
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "partyId": "$global.attr(partyId);"
+               },
+               "structureName": "smb_back_office_ownership_information"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_ownership_information",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_ownership_information",
+     "clcommon__Release_Checksum__c": "20db35dce0327fc5d1fea803f934ba6b4f500e4279905dfc8b4ffab5292f6be9"
+}

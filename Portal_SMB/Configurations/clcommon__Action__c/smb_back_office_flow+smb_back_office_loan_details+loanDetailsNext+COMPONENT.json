@@ -1,0 +1,68 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "loanDetailsNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "loanDetailsNext",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "genesis__Business_Information__c": {
+                    "id": "$global.attr(businessInfoId);"
+               },
+               "account": {
+                    "id": "$global.attr(backofficerAccountId);"
+               },
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);",
+                    "genesis__Requested_Loan_Amount__c": "$this.attr(genesis__Loan_Amount__c);",
+                    "genesis__Loan_Amount__c": "$this.attr(genesis__Loan_Amount__c);",
+                    "genesis__CL_Product__c": "$this.attr(genesis__CL_Product__c);"
+               }
+          },
+          "validation": [
+               "smb_back_office_loan_details"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(applicationId);",
+                         "value": "$result.attr(applicationId);"
+                    },
+                    {
+                         "field": "$global.attr(loanProduct);",
+                         "value": "$this.attr(genesis__CL_Product__c);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_loan_details"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_loan_product_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveApplication",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_loan_details+loanDetailsNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_loan_details+loanDetailsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "41bc2c60a9f89b4562381f0e2943717934232021ba2ae1dcf5e621633f463f34"
+}

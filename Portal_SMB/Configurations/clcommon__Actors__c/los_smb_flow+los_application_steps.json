@@ -1,0 +1,112 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "titleOrientation": "vertical",
+               "titles": [
+                    {
+                         "render": "$global.attr(isPrincipal);==true",
+                         "subTitle": "Basic Details",
+                         "title": "Getting Started"
+                    },
+                    {
+                         "render": "$global.attr(isPrincipal);==true",
+                         "subTitle": "Loan  Details",
+                         "title": "Getting Started"
+                    },
+                    {
+                         "render": "$global.attr(isPrincipal);==true",
+                         "subTitle": "Loan Purpose",
+                         "title": "Getting Started"
+                    },
+                    {
+                         "render": "$global.attr(isPrincipal);==true ",
+                         "subTitle": "Business Details",
+                         "title": "Business Information"
+                    },
+                    {
+                         "name": "IndustryCode",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "subTitle": "Industry Code",
+                         "title": "Business Information"
+                    },
+                    {
+                         "name": "BusinessFinancials",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "subTitle": "Business Financials",
+                         "title": "Business Information"
+                    },
+                    {
+                         "name": "PersonalInformation",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "subTitle": "More Info",
+                         "title": "Personal Info"
+                    },
+                    {
+                         "name": "DemographicInformation",
+                         "render": "$global.attr(isPrincipal);==true and $global.attr(isHMDALoan);==true",
+                         "subTitle": "Demographic Information",
+                         "title": "Personal Info"
+                    },
+                    {
+                         "name": "BusinessParties",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "subTitle": "Party Summary",
+                         "title": "Business Parties"
+                    },
+                    {
+                         "name": "BeneficialSummary",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "subTitle": "Beneficial Summary",
+                         "title": "Business Parties"
+                    },
+                    {
+                         "name": "CollateralDetails",
+                         "render": "($global.attr(assetClassName); == \"Small Business\" or $global.attr(assetClassName); == \"Small Business Real Estate\") and $global.attr(isPrincipal);==true",
+                         "title": "Collateral"
+                    },
+                    {
+                         "name": "BeneficialPersonalInfo",
+                         "render": "$global.attr(isPrincipal);!=true",
+                         "title": "Personal Info"
+                    },
+                    {
+                         "name": "IdentificationInformation",
+                         "render": "$global.attr(isPrincipal);!=true",
+                         "title": "Identification Info"
+                    },
+                    {
+                         "name": "BeneficialDemographicInfo",
+                         "render": "$global.attr(isHMDALoan);==true and $global.attr(isPrincipal);!=true",
+                         "title": "Demographic Info"
+                    },
+                    {
+                         "name": "Documents",
+                         "render": "$global.attr(isCollectDocumentRequired);==true",
+                         "title": "Document"
+                    },
+                    {
+                         "name": "ReviewAndSubmit",
+                         "title": "Review"
+                    }
+               ]
+          },
+          "property": {},
+          "type": "steps",
+          "category": "container"
+     },
+     "clcommon__Actor_Name__c": "los_application_steps",
+     "clcommon__External_ID__c": "los_smb_flow+los_application_steps",
+     "clcommon__Release_Checksum__c": "bec5a507f7ddc92ed23addb6bf1953ed6f37be04d03778baf5f29515db191e5b"
+}

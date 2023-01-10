@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "showSectionTitle": true,
+               "sectionStyle": "layout",
+               "renderFields": {
+                    "genesis__Accounts__r": false,
+                    "Id": false
+               },
+               "title": "Business Financials",
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "sm": 7,
+                              "xs": 12
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "businessId": "$global.attr(businessInfoId);",
+                    "accountId": "$global.attr(backofficerAccountId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "smb_back_office_business_financials_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_business_financials",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_financials",
+     "clcommon__Release_Checksum__c": "174f0dd519bb975b39672e04ea473a981ab27b0d24fe816b067ce9ea9c89d95c"
+}

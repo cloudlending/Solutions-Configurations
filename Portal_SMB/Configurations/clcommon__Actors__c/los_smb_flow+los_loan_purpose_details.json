@@ -1,0 +1,85 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "clickRecord": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(clcommon__CL_Purpose__r.Id);",
+                              "field": "$global.attr(loanPurpose);"
+                         },
+                         {
+                              "value": "$this.attr(clcommon__CL_Purpose__r.Name);",
+                              "field": "$global.attr(loanPurposeName);"
+                         },
+                         {
+                              "value": "",
+                              "field": "$global.attr(purposeValidation);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "sortedField": {
+                    "ascending": true,
+                    "name": "clcommon__CL_Purpose__r.Name"
+               },
+               "sortableFields": [
+                    "clcommon__CL_Purpose__r.Name"
+               ],
+               "editableFields": {
+                    "clcommon__CL_Purpose__r.Name": false
+               },
+               "highlight": true,
+               "noLabelField": "clcommon__CL_Purpose__r.Name",
+               "textAfter": "$global.attr(purposeValidation);",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editable": "$global.attr(partyType);== \"PRINCIPAL\"",
+               "renderFields": {
+                    "clcommon__CL_Purpose__r.Id": false
+               },
+               "autoHighlight": {
+                    "clcommon__CL_Purpose__r.Id": "$state(los_loan_existing_purpose).attr(genesis__Application__r.genesis__CL_Purpose__r.Id);"
+               },
+               "grid": {
+                    "field": {
+                         "genesis__Application__r.genesis__CL_Purpose__c": {
+                              "selectButton": {
+                                   "sm": 6,
+                                   "xs": 12
+                              }
+                         }
+                    }
+               },
+               "title": "What is the purpose of this loan?"
+          },
+          "property": {
+               "whereClause": {
+                    "loanProduct": "$global.attr(loanProduct);"
+               },
+               "structureName": "los_loan_purpose_details"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_loan_purpose_details",
+     "clcommon__External_ID__c": "los_smb_flow+los_loan_purpose_details",
+     "clcommon__Release_Checksum__c": "ba119a2019296e454bbeb244505a9381b3dfa5f9cf06350e9d06e212d836926f"
+}

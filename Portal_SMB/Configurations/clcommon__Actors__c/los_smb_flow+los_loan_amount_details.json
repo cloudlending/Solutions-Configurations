@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": true,
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "showSectionTitle": true,
+               "sectionStyle": "layout",
+               "fieldColumns": 1,
+               "title": "Loan Details",
+               "grid": {
+                    "field": {
+                         "genesis__Application__r.genesis__Loan_Amount__c": {
+                              "sm": 6
+                         }
+                    }
+               },
+               "noLabelFields": [
+                    "genesis__Application__r.genesis__Loan_Amount__c"
+               ]
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "los_loan_amount_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_loan_amount_details",
+     "clcommon__External_ID__c": "los_smb_flow+los_loan_amount_details",
+     "clcommon__Release_Checksum__c": "5b51e359fe9a9436eca5a8e27b383d7ac621eb852beed2de157d495cf580d9ee"
+}

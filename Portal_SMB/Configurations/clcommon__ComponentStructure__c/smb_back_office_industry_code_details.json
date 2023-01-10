@@ -1,0 +1,219 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_industry_code_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "smb_back_office_industry_code_details",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_industry_code_details",
+          "tableName": "genesis__business_information__c",
+          "whereClause": {
+               "freeForm": "id=':businessId' and solcommon__Industry_Code__c=':industryId'"
+          },
+          "sections": [
+               {
+                    "id": "4a4c32b3-4c26-40a8-a50c-5a7fa7193eb6",
+                    "fields": [
+                         {
+                              "id": "c2629c2f-450b-4fcb-84d9-dafe52121ddc",
+                              "relationType": "reference",
+                              "fieldName": "solcommon__Industry_Code__r.solcommon__Industry_Sub_Sector__r.solcommon__Industry_Sector__c",
+                              "relationName": "solcommon__Industry_Sector__r",
+                              "relationJson": {
+                                   "tableName": "solcommon__Industry_Sector__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "orderBy": "Name ASC",
+                                   "sections": [
+                                        {
+                                             "id": "1db111c6-e8c1-4ff2-8016-548b9f1c4ddc",
+                                             "fields": [
+                                                  {
+                                                       "id": "7d74c77b-fc93-408a-ba99-bf8fc74e968a",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Industry Sector Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Industry Sector",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "messages": {
+                                        "requiredErrorText": "Industry Sector is required."
+                                   }
+                              }
+                         },
+                         {
+                              "id": "b1c2fa3d-6490-4ea7-a04a-8557186424d3",
+                              "relationType": "reference",
+                              "fieldName": "solcommon__Industry_Code__r.solcommon__Industry_Sub_Sector__c",
+                              "relationName": "solcommon__Industry_Sub_Sector__r",
+                              "relationJson": {
+                                   "tableName": "solcommon__Industry_Sub_Sector__c",
+                                   "whereClause": {
+                                        "freeForm": "solcommon__Industry_Sector__c=':sector'"
+                                   },
+                                   "orderBy": "Name ASC",
+                                   "sections": [
+                                        {
+                                             "id": "ffe6cef5-1f26-488b-8473-8d8b8e1e6e72",
+                                             "fields": [
+                                                  {
+                                                       "id": "a1aabe80-5cb1-4123-9b6d-8ad24e4fcb3c",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Industry Sub Sector Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Industry Sub Sector",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "messages": {
+                                        "requiredErrorText": "Industry Sub Sector is required."
+                                   }
+                              }
+                         },
+                         {
+                              "id": "9a37475e-5f53-44b7-bc07-6bc94665a888",
+                              "relationType": "reference",
+                              "fieldName": "solcommon__Industry_Code__c",
+                              "relationName": "solcommon__Industry_Code__r",
+                              "relationJson": {
+                                   "tableName": "solcommon__Industry_Code__c",
+                                   "whereClause": {
+                                        "freeForm": "solcommon__Industry_Sub_Sector__c=':subsector'"
+                                   },
+                                   "orderBy": "Name ASC",
+                                   "sections": [
+                                        {
+                                             "id": "b42dd274-d83d-490b-8ff2-4a104ae0cee0",
+                                             "fields": [
+                                                  {
+                                                       "id": "ccagsdf8a8-7-40b7-9753-c6673ad06aa8",
+                                                       "fieldName": "solcommon__Industry_Code_Name__c",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Name"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "58792a30-3eee-40e1-9e12-55cb224065dd",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Code",
+                                                            "ariaLabel": "Code"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Industry Code",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "messages": {
+                                        "requiredErrorText": "Industry Code is required."
+                                   },
+                                   "optionText": {
+                                        "fieldNames": [
+                                             "solcommon__Industry_Code_Name__c"
+                                        ]
+                                   }
+                              }
+                         },
+                         {
+                              "id": "af6213aa-b054-4f80-9e5a-08a5709c03e3",
+                              "fieldName": "solcommon__Industry_Code__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Industry Code",
+                                   "ariaLabel": "Industry Code"
+                              }
+                         },
+                         {
+                              "id": "5d51e5fc-0450-4bac-b1a4-a34a444339cb",
+                              "fieldName": "genesis__NAICS_Code__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "NAICS Code",
+                                   "ariaLabel": "NAICS Code"
+                              }
+                         },
+                         {
+                              "id": "15fbc03a-92ee-4e79-90e7-228877531724",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "c240402c-668a-436e-8adf-56e8e6c5074d",
+                              "fieldName": "solcommon__Industry_Code__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "18d3fa7c-8ca3-4773-805a-c35791ee09be",
+                              "relationType": "childrenRelation",
+                              "fieldName": "genesis__Accounts__r",
+                              "relationName": "genesis__Accounts__r",
+                              "relationJson": {
+                                   "tableName": "Account",
+                                   "whereClause": {
+                                        "freeForm": "id !=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "f9cc906f-7e40-45f1-98fd-2b60fd8962e6",
+                                             "fields": [
+                                                  {
+                                                       "id": "e4d8363a-7b0d-46d5-87eb-775bdfe5a6d4",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Account ID"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": null,
+                                   "label": ""
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "smb_back_office_industry_code_details",
+     "clcommon__Release_Checksum__c": "911b180b10476fbf59b2106971fc5cf58107c55439daeaadbd107e9e5c3b8874"
+}

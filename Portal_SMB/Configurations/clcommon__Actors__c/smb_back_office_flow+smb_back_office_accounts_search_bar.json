@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "Name": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{($this.attr(Name); == \"\" or $this.attr(Name); == undefined) ? \"Acc123444\": $this.attr(Name);};",
+                                   "field": "$global.attr(AccName);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "render": "$state(smb_back_office_existing_business_parties_details).attr(existingCustomer); != \"No\" and $state(smb_back_office_existing_business_parties_details).attr(existingCustomer); != \"\" and $state(smb_back_office_existing_business_parties_details).attr(existingCustomer); != undefined and $state(smb_back_office_existing_business_parties_details).attr(existingCustomer); != null",
+               "editable": true,
+               "filters": {},
+               "title": " Account Search",
+               "blankMessage": "No Applications Found."
+          },
+          "property": {
+               "structureName": "smb_back_office_accounts_search"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_accounts_search_bar",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_accounts_search_bar",
+     "clcommon__Release_Checksum__c": "1ce7ad6336d3fc7b049b2dc352f569ca11f28038a9c12b178e2582fca037a5f8"
+}

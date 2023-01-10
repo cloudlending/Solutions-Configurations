@@ -1,0 +1,63 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "partiesSummaryNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "updates": [
+                    {
+                         "value": [
+                              "los_review_loan_summary",
+                              "los_document_upload_list",
+                              "los_document_upload_list2"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(los_application_steps).appearance(current);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "ReviewAndSubmit"
+          },
+          "appearance": {
+               "position": "bottom-left",
+               "render": true,
+               "label": "Next",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "partiesSummaryNext"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_document_upload_list2"
+     },
+     "clcommon__Component_Structure_Name__c": "los_fetch_required_documentsforNullAcc",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "los_document_upload_list2+partiesSummaryNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_document_upload_list2+partiesSummaryNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "2a4d1250ecafbc9ab546e8019c5c26e5b5dec97dd55b62d58d6f7a49c1684216"
+}

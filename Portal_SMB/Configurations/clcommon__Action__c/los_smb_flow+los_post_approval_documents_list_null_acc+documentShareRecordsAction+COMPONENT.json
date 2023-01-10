@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "documentShareRecordsAction",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "value": [
+                              "los_post_approval_record_count",
+                              "los_post_approval_documents_list",
+                              "los_post_approval_documents_list_null_acc"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "automatic": true,
+          "appearance": {
+               "style": "primary",
+               "render": true
+          },
+          "property": {},
+          "name": "documentShareRecordsAction"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_post_approval_documents_list_null_acc"
+     },
+     "clcommon__Component_Structure_Name__c": "los_post_approval_documents_list_null_acc",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalCreateDocumentShareRecords",
+     "clcommon__Unique_Action_Name__c": "los_post_approval_documents_list_null_acc+documentShareRecordsAction",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_post_approval_documents_list_null_acc+documentShareRecordsAction+COMPONENT",
+     "clcommon__Release_Checksum__c": "32f27c86fab23934270afceaea902a33fa2278cc3d205c746b409e74e8b23a6d"
+}

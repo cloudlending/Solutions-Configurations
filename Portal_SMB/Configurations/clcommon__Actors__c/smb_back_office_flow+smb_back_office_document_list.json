@@ -1,0 +1,28 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "queuePrimaryText": "<p class=\"attachmentName\">$this.attr(Name);</p><p class=\"uploadedDate\">Updated on: $this.attr(CreatedDate, date, 'MM/dd/yyyy');</p>",
+               "fieldColumns": 1
+          },
+          "property": {
+               "structureName": "smb_back_office_document_preview"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_document_list",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_document_list",
+     "clcommon__Release_Checksum__c": "dba355d6d3ed4dfc3ee6a64f5c1e9eaa39980fcdd0b7860929e66c0742f7ed7c"
+}

@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_loan_amount_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_loan_amount_details",
+     "clcommon__data__c": {
+          "structureName": "los_loan_amount_details",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c=':appId'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "90b1e462-2a35-4155-b419-b9cee68dc8f0",
+                    "title": "How much money do you need to borrow?",
+                    "fields": [
+                         {
+                              "id": "cdae5204-4b7c-49fe-b6f5-f7a65ab568c2",
+                              "fieldName": "genesis__Application__r.genesis__Loan_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "",
+                                   "placeholderText": "Enter Details",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Application__r.genesis__Loan_Amount__c); >0",
+                                             "message": "<span style=\"color:red\">Loan Amount should be greater than zero</span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Loan amount is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_loan_amount_details",
+     "clcommon__Release_Checksum__c": "cad0cd2df42573c45278bbf865d54703d92947fce0817ff0c40e2c76da15ace4"
+}

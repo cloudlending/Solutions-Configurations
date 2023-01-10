@@ -1,0 +1,58 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "loanPurposeNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(los_application_steps).appearance(current);"
+                    },
+                    {
+                         "value": "@mathjs{$global.attr(loanPurposeName);==\"Other\" ? $this.attr(genesis__Application__r.genesis__Other_Purpose__c); :null};",
+                         "field": "$global.attr(otherPurposeName);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "validation": [
+               "los_loan_purpose_details",
+               "los_loan_existing_purpose"
+          ],
+          "remoteActionArguments": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Next",
+               "position": "bottom-left",
+               "render": "$global.attr(loanPurpose);!=null and $global.attr(loanPurpose);!=\"\" and $global.attr(loanPurpose);!=undefined and $global.attr(loanPurpose);!=\"new_record_id\""
+          },
+          "property": {},
+          "name": "loanPurposeNext"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_loan_existing_purpose"
+     },
+     "clcommon__Component_Structure_Name__c": "los_loan_existing_purpose",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_loan_existing_purpose+loanPurposeNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_loan_existing_purpose+loanPurposeNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "1f6ffcd53ae74636529f07c019629672953ffebcd251e6f38d45a428037f50f1"
+}

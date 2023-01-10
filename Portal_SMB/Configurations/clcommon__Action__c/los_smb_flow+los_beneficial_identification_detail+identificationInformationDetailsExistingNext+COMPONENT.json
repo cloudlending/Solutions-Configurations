@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "identificationInformationDetailsExistingNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "partyId": "$global.attr(borrowerPartyId);",
+               "applicationId": "$global.attr(applicationId);",
+               "accountId": "$global.attr(borrowerAccountId);",
+               "genesis__Identification_Information__c": {
+                    "Id": "$this.attr(Id);",
+                    "genesis__Expiration_Date__c": "$this.attr(genesis__Expiration_Date__c);",
+                    "genesis__Date_of_Issuance__c": "$this.attr(genesis__Date_of_Issuance__c);",
+                    "genesis__Identification_Number__c": "$this.attr(genesis__Identification_Number__c);",
+                    "genesis__Identification_Type__c": "$this.attr(genesis__Identification_Type__c);"
+               }
+          },
+          "appearance": {
+               "render": "$this.attr(Id); != \"\" and $this.attr(Id); != undefined and $this.attr(Id); != \"new_record_id\"",
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Next"
+          },
+          "property": {},
+          "name": "identificationInformationDetailsExistingNext"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail"
+     },
+     "clcommon__Component_Structure_Name__c": "los_identification_info",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIdentificationInformation",
+     "clcommon__Unique_Action_Name__c": "los_beneficial_identification_detail+identificationInformationDetailsExistingNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail+identificationInformationDetailsExistingNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "e10e276026e16fa43d7f456cdb23bcdea54bf59b835f5badafb98eab3dcb2eaa"
+}

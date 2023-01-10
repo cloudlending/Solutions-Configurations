@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_personal_income_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_personal_income_details",
+     "clcommon__data__c": {
+          "structureName": "los_personal_income_details",
+          "tableName": "genesis__income__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c=':appId' and genesis__Contact__c =':contactId'"
+          },
+          "orderBy": "CreatedDate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "eba28a3b-d987-455f-b0bd-ff15919fa968",
+                    "fields": [
+                         {
+                              "id": "317ac5ed-20f8-410e-9105-f9eb18172e25",
+                              "fieldName": "genesis__Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": " Annual Personal Income",
+                                   "placeholderText": "Enter Details",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Amount__c); >0",
+                                             "message": "<span style=\"color:red\">Annual Personal Income should be greater than zero</span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Annual Personal Income is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Amount"
+                              }
+                         },
+                         {
+                              "id": "e14ecc5c-96b8-4494-8d57-03decae84688",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_personal_income_details",
+     "clcommon__Release_Checksum__c": "4075bff6827f5818e3cae9493200cc5f06bfc4c7e48219435ae0a625c8da5dca"
+}

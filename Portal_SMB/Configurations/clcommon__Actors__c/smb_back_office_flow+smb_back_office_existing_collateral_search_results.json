@@ -1,0 +1,98 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "clickRecord": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(clcommon__Collateral__r.Id);",
+                              "field": "$global.attr(collateralId);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "$state(smb_back_office_collateral_list_all).count();==0",
+               "title": "Select Existing Collateral",
+               "renderFields": {
+                    "clcommon__Account__r.Id": false,
+                    "clcommon__Collateral__c": false,
+                    "clcommon__Collateral__r.Id": false,
+                    "clcommon__Account__c": false,
+                    "Id": false,
+                    "Name": false,
+                    "clcommon__Collateral__r.clcommon__Collateral_Type__c": false
+               },
+               "variant": {
+                    "TextField": "default"
+               },
+               "blankMessage": "No records found!",
+               "filters": {
+                    "keyword": {
+                         "filterLabel": "Search Collateral",
+                         "fieldNames": [
+                              "clcommon__Collateral__r.clcommon__Collateral_Type__r.Name",
+                              "clcommon__Collateral__r.clcommon__Description__c",
+                              "clcommon__Collateral__r.clcommon__Address__c",
+                              "clcommon__Collateral__r.clcommon__City__c",
+                              "clcommon__Collateral__r.clcommon__State__c"
+                         ]
+                    }
+               },
+               "editableFields": {
+                    "clcommon__Account__r.Id": false,
+                    "clcommon__Collateral__r.clcommon__Postal_Code__c": false,
+                    "clcommon__Collateral__c": false,
+                    "clcommon__Collateral__r.Id": false,
+                    "clcommon__Collateral__r.clcommon__State__c": false,
+                    "clcommon__Account__c": false,
+                    "clcommon__Collateral__r.clcommon__Collateral_Type__r.Name": false,
+                    "clcommon__Collateral__r.clcommon__Description__c": false,
+                    "Id": false,
+                    "clcommon__Collateral__r.clcommon__City__c": false,
+                    "Name": false,
+                    "clcommon__Collateral__r.clcommon__Collateral_Type__c": false
+               },
+               "pagination": {
+                    "numberOfRecordsPerPage": 10,
+                    "numberOfPageLinks": 5,
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "firstLinkText": "first_page",
+                    "previousLinkText": "chevron_left",
+                    "nextLinkText": "chevron_right",
+                    "lastLinkText": "last_page"
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(backofficerAccountId);",
+                    "appId": "$global.attr(applicationId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "smb_back_office_existing_collateral_list_view"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_existing_collateral_search_results",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_collateral_search_results",
+     "clcommon__Release_Checksum__c": "c8f918ff8b0441e869e033b380ab351f4a3605877045b8dcaec938a57915fd21"
+}

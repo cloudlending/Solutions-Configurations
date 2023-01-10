@@ -1,0 +1,51 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(clcommon__Itemized_Collateral_Values__c);",
+                              "field": "$global.attr(itemizedCollateral);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "Name": false,
+                    "clcommon__Itemized_Collateral_Values__c": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1
+          },
+          "property": {
+               "structureName": "smb_back_office_fetch_itemised_collateral",
+               "whereClause": {
+                    "collateralType": "$state(smb_back_office_add_collateral_type).attr(genesis__Collateral__r.clcommon__Collateral_Type__c);"
+               }
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_fetch_itemised_collateral",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_fetch_itemised_collateral",
+     "clcommon__Release_Checksum__c": "f8b4b8299d8b5606695c09f3ea823f08eedb1f3713582d161239aa182786292a"
+}
