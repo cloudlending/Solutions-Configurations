@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "closeButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "assignments": [
+                    {
+                         "value": "previous",
+                         "field": "$nav(los_edit_collateral_rent_roll_container).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Cancel",
+               "style": "secondary"
+          },
+          "property": {},
+          "name": "closeButton"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_edit_rent_roll_details"
+     },
+     "clcommon__Component_Structure_Name__c": "los_add_collateral_rent_roll_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_edit_rent_roll_details+closeButton",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_edit_rent_roll_details+closeButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "3b58e6c0eabcad7d1837d9f3bde3bc32a05398146177a6231999be557bf04c00"
+}

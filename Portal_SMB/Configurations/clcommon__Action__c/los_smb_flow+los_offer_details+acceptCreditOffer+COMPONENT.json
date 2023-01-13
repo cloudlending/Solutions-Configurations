@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "acceptCreditOffer",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "disclosureEnable": "$disclosure(Accept Offers);",
+          "disclosureNames": [
+               "Accept Offers"
+          ],
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "checkCrossSellConfiguration"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "offerId": "$currentStage.attr(selectedOffer);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "label": "Accept Credit Offer",
+               "style": "primary",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "acceptCreditOffer"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_offer_details"
+     },
+     "clcommon__Component_Structure_Name__c": "get_offer_details_new",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSelectOffer",
+     "clcommon__Unique_Action_Name__c": "los_offer_details+acceptCreditOffer",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_offer_details+acceptCreditOffer+COMPONENT",
+     "clcommon__Release_Checksum__c": "0e48bcb3b4c51184be3208c7d15de51d3f3f99595fb031f395dbaa8d5328ae5c"
+}

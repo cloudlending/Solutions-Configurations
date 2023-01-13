@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "demographicDetailsNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "updateGenderInfo"
+                    }
+               ]
+          },
+          "validation": [
+               "los_demographic_information",
+               "los_demographic_gender"
+          ],
+          "remoteActionArguments": {
+               "intdm__personal_demographic_information__c": {
+                    "intdm__Contact__c": "$global.attr(borrowerContactId);",
+                    "intdm__Hispanic_or_Latino_Ethnicity__c": "$state(los_demographic_information).attr(intdm__Hispanic_or_Latino_Ethnicity__c);",
+                    "intdm__Ethnicity_Opt_Out__c": "$state(los_demographic_information).attr(intdm__Ethnicity_Opt_Out__c);",
+                    "intdm__Ethnic_Sub_Category__c": "$state(los_demographic_information).attr(intdm__Ethnic_Sub_Category__c);",
+                    "intdm__Race__c": "$state(los_demographic_information).attr(intdm__Race__c);",
+                    "intdm__Race_Sub_Category__c": "$state(los_demographic_information).attr(intdm__Race_Sub_Category__c);",
+                    "intdm__Race_Opt_Out__c": "$state(los_demographic_information).attr(intdm__Race_Opt_Out__c);",
+                    "intdm__Gender_Opt_Out__c": "$state(los_demographic_information).attr(intdm__Gender_Opt_Out__c);",
+                    "intdm__Tribe__c": "$state(los_demographic_information).attr(intdm__Tribe__c);",
+                    "intdm__Other_Asian__c": "$state(los_demographic_information).attr(intdm__Other_Asian__c);",
+                    "intdm__Other_Pacific_Islander__c": "$state(los_demographic_information).attr(intdm__Other_Pacific_Islander__c);",
+                    "intdm__Other_Hispanic_or_Latino__c": "$state(los_demographic_information).attr(intdm__Other_Hispanic_or_Latino__c);"
+               },
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "style": "primary",
+               "label": "Next",
+               "render": "$state(los_demographic_information).attr(Id);==\"new_record_id\" or $state(los_demographic_information).attr(Id);==\"\" or $state(los_demographic_information).attr(Id);==undefined",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "demographicDetailsNext"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_demographic_gender"
+     },
+     "clcommon__Component_Structure_Name__c": "los_demographic_information_gender",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveDemographicInformation",
+     "clcommon__Unique_Action_Name__c": "los_demographic_gender+demographicDetailsNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_demographic_gender+demographicDetailsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "f19d9feda3080da2860045f799efa2bdf882176f7f7cd8aa12467b2e9c9a4f35"
+}

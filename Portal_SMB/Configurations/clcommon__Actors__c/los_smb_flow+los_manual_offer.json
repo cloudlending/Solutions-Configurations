@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "disclosures": [
+               {
+                    "name": "Accept Offers"
+               }
+          ],
+          "appearance": {
+               "fieldColumns": 1,
+               "columns": 1,
+               "renderFields": {
+                    "genesis__Product_Type__c": false,
+                    "genesis__Payment_Amount_Derived__c": "$this.attr(genesis__Product_Type__c); != \"LINE OF CREDIT\" "
+               },
+               "editableFields": {
+                    "genesis__Interest_Rate__c": false,
+                    "genesis__Term__c": false,
+                    "genesis__Payment_Amount__c": false,
+                    "genesis__Product_Type__c": false,
+                    "genesis__Loan_Amount__c": false
+               },
+               "subTitle": "Your loan application for $this.attr(genesis__Loan_Amount__c,currency); has been approved. Please review the credit offered",
+               "title": "Congratulations!",
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               },
+               "grid": {
+                    "card": {
+                         "sm": 6
+                    }
+               }
+          },
+          "property": {
+               "structureName": "get_manual_offer_selected_details",
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               }
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_manual_offer",
+     "clcommon__External_ID__c": "los_smb_flow+los_manual_offer",
+     "clcommon__Release_Checksum__c": "d3ae22818acd0882008b90653bb09b46b44d18f2c6828831b522b93f9010ae56"
+}

@@ -1,0 +1,141 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_business_financial_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_business_financial_details",
+     "clcommon__data__c": {
+          "structureName": "los_business_financial_details",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId' and clcommon__Account__c=':accId'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "5d44a65d-da2a-4430-9338-d331c3a20ff1",
+                    "name": "Financials",
+                    "fields": [
+                         {
+                              "id": "ffdda2cd-1069-4567-a62b-7722b3194195",
+                              "fieldName": "id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Id",
+                                   "ariaLabel": "Id"
+                              }
+                         },
+                         {
+                              "id": "b72a5ac6-c806-41ef-853f-652b80298ed0",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Annual Revenue",
+                                   "placeholderText": "Enter Details",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c); >0",
+                                             "message": "<span style=\"color:red\">Annual Revenue should be greater than zero</span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Annual Revenue is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Annual Revenue"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "23314534641623",
+                    "fields": [
+                         {
+                              "id": "4a0a6783-dc20-480f-bb62-b7334264f954",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Total Sales",
+                                   "placeholderText": "Enter Details",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c); >0",
+                                             "message": "<span style=\"color:red\">Total Sales should be greater than zero</span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Total Sales is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Total Sales"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "1123255653",
+                    "fields": [
+                         {
+                              "id": "335e2607-76c5-4a78-945d-d28cdacde191",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Total Debt",
+                                   "placeholderText": "Enter Details",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c); >0",
+                                             "message": "<span style=\"color:red\">Total Debt should be greater than zero</span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Total Debt is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Total Debt"
+                              }
+                         },
+                         {
+                              "id": "e18eae0f-2e48-4d83-8a22-851a00df57cb",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_business_financial_details",
+     "clcommon__Release_Checksum__c": "d7ba29705cd68e5791e012156fbba12d4449f9804a3d884e14b91f4e1b0d3b8d"
+}

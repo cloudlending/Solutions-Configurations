@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "navigateToRentRollPage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "updates": [
+                    {
+                         "value": [
+                              "los_collateral_rent_roll_list",
+                              "los_collaterals_list",
+                              "los_collaterals_list_validation"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(los_add_collateral_overlay).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "style": "secondary",
+               "render": false,
+               "label": "Cancel",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "navigateToRentRollPage"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_add_collateral_details"
+     },
+     "clcommon__Component_Structure_Name__c": "los_add_collateral_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_add_collateral_details+navigateToRentRollPage",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_add_collateral_details+navigateToRentRollPage+COMPONENT",
+     "clcommon__Release_Checksum__c": "6037871e390d7b3c5af936f7e6e157bb8d665adbb3e295e679a5bc74733cee41"
+}

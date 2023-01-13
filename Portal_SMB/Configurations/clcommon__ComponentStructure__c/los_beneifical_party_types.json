@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_beneifical_party_types",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_beneifical_party_types",
+     "clcommon__data__c": {
+          "structureName": "los_beneifical_party_types",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "id=':partyId'"
+          },
+          "orderBy": "createdDate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "2145arqwret",
+                    "fields": [
+                         {
+                              "id": "16dbab87-7890-4d1d-a29e-58fec8872197",
+                              "fieldName": "clcommon__Party_Types__c",
+                              "fieldUi": {
+                                   "fieldType": "multiselectbuttons",
+                                   "label": "Party Types",
+                                   "required": true,
+                                   "selectedSuffix": "done",
+                                   "selectOptions": [
+                                        {
+                                             "id": "BENEFICIAL OWNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BENEFICIAL OWNER",
+                                             "optionValue": "BENEFICIAL OWNER"
+                                        },
+                                        {
+                                             "id": "AUTHORIZED SIGNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AUTHORIZED SIGNER",
+                                             "optionValue": "AUTHORIZED SIGNER"
+                                        },
+                                        {
+                                             "id": "GUARANTOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "GUARANTOR",
+                                             "optionValue": "GUARANTOR"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Party Types is required"
+                                   },
+                                   "ariaLabel": "Party Types"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_beneifical_party_types",
+     "clcommon__Release_Checksum__c": "45ce0c63ad81b91e1534b66f399cf273f58f9237034215a37fd8a1724525d1a9"
+}

@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "cancelBusinessparties",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "cancelBusinessparties",
+          "property": {},
+          "appearance": {
+               "style": "secondary",
+               "label": "Cancel",
+               "position": "bottom-left"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "smb_back_office_business_parties_overlay"
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_parties_overlay"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_business_parties_overlay",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_business_parties_overlay+cancelBusinessparties",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_parties_overlay+cancelBusinessparties+COMPONENT",
+     "clcommon__Release_Checksum__c": "2782d7d976695846bcd580550a08aefa0b9ff57bb74151b5e03f491f1156a056"
+}

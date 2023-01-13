@@ -1,0 +1,29 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {},
+          "property": {
+               "structureName": "smb_back_office_find_collateral_relationship",
+               "whereClause": {
+                    "collateralId": "$global.attr(collateralId);",
+                    "appId": "$global.attr(applicationId);"
+               }
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_find_collateral_relationship",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_find_collateral_relationship",
+     "clcommon__Release_Checksum__c": "a76747ea8deb4d0a2b615957aa23d8ba023f8b15a4e05fd331037f2ec15a64c6"
+}

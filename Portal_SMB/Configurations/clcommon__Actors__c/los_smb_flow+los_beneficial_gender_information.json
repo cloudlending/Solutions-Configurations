@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{$global.attr(isCollectDocumentRequired);==true ? \"Documents\" : \"ReviewAndSubmit\"};",
+                              "field": "$global.attr(portalStage);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editableFields": {
+                    "clcommon__Personal_Information__r.Id": false
+               },
+               "noLabelFields": [
+                    "clcommon__Personal_Information__r.clcommon__Gender__c"
+               ],
+               "renderFields": {
+                    "clcommon__Personal_Information__r.clcommon__Gender__c": "$state(los_beneficial_demographic_information).attr(intdm__Gender_Opt_Out__c); == false",
+                    "clcommon__Personal_Information__r.Id": false
+               },
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "contactId": "$global.attr(borrowerContactId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "los_demographic_information_gender"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_beneficial_gender_information",
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_gender_information",
+     "clcommon__Release_Checksum__c": "811ada412bf10b81c75c6551c8a152ac21eb76ffafdbe5995852b98dc794dec3"
+}

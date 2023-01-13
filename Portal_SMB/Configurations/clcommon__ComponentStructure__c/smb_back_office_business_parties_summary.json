@@ -1,0 +1,372 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_business_parties_summary",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "smb_back_office_business_parties_summary",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_business_parties_summary",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId' and genesis__Is_Internal_User__c = false and clcommon__Active__c = true "
+          },
+          "sections": [
+               {
+                    "id": "cb3527b8-db28-4648-a7da-d2657994521f",
+                    "fields": [
+                         {
+                              "id": "ac6f1ee3-2434-4907-b20a-def4f0bccaf6",
+                              "fieldName": "id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "",
+                                   "ariaLabel": "id"
+                              }
+                         },
+                         {
+                              "id": "b5feb062-2546-4ba6-b2bf-c9d2dee07e9c",
+                              "fieldName": "clcommon__Party_Types__c",
+                              "fieldUi": {
+                                   "fieldType": "multipicklist",
+                                   "label": "",
+                                   "selectOptions": [
+                                        {
+                                             "id": "APPRAISAL ADMINISTRATOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPRAISAL ADMINISTRATOR",
+                                             "optionValue": "APPRAISAL ADMINISTRATOR"
+                                        },
+                                        {
+                                             "id": "LESSOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LESSOR",
+                                             "optionValue": "LESSOR"
+                                        },
+                                        {
+                                             "id": "LESSEE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LESSEE",
+                                             "optionValue": "LESSEE"
+                                        },
+                                        {
+                                             "id": "DEALER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "DEALER",
+                                             "optionValue": "DEALER"
+                                        },
+                                        {
+                                             "id": "BORROWER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BORROWER",
+                                             "optionValue": "BORROWER"
+                                        },
+                                        {
+                                             "id": "BENEFICIAL OWNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BENEFICIAL OWNER",
+                                             "optionValue": "BENEFICIAL OWNER"
+                                        },
+                                        {
+                                             "id": "BENEFICIAL OWNER MANAGER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BENEFICIAL OWNER MANAGER",
+                                             "optionValue": "BENEFICIAL OWNER MANAGER"
+                                        },
+                                        {
+                                             "id": "BENEFICIAL OWNER CERTIFIER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BENEFICIAL OWNER CERTIFIER",
+                                             "optionValue": "BENEFICIAL OWNER CERTIFIER"
+                                        },
+                                        {
+                                             "id": "CO-BORROWER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CO-BORROWER",
+                                             "optionValue": "CO-BORROWER"
+                                        },
+                                        {
+                                             "id": "GUARANTOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "GUARANTOR",
+                                             "optionValue": "GUARANTOR"
+                                        },
+                                        {
+                                             "id": "ENTITY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ENTITY",
+                                             "optionValue": "ENTITY"
+                                        },
+                                        {
+                                             "id": "LOAN OFFICER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LOAN OFFICER",
+                                             "optionValue": "LOAN OFFICER"
+                                        },
+                                        {
+                                             "id": "REVIEWER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "REVIEWER",
+                                             "optionValue": "REVIEWER"
+                                        },
+                                        {
+                                             "id": "VENDOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "VENDOR",
+                                             "optionValue": "VENDOR"
+                                        },
+                                        {
+                                             "id": "COSIGNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "COSIGNER",
+                                             "optionValue": "COSIGNER"
+                                        },
+                                        {
+                                             "id": "PARENT COMPANY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PARENT COMPANY",
+                                             "optionValue": "PARENT COMPANY"
+                                        },
+                                        {
+                                             "id": "SUBSIDIARY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SUBSIDIARY",
+                                             "optionValue": "SUBSIDIARY"
+                                        },
+                                        {
+                                             "id": "RELATED ENTITY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "RELATED ENTITY",
+                                             "optionValue": "RELATED ENTITY"
+                                        },
+                                        {
+                                             "id": "DIRECT CONTACT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "DIRECT CONTACT",
+                                             "optionValue": "DIRECT CONTACT"
+                                        },
+                                        {
+                                             "id": "TRUSTEE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "TRUSTEE",
+                                             "optionValue": "TRUSTEE"
+                                        },
+                                        {
+                                             "id": "NOTARY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NOTARY",
+                                             "optionValue": "NOTARY"
+                                        },
+                                        {
+                                             "id": "BUILDER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BUILDER",
+                                             "optionValue": "BUILDER"
+                                        },
+                                        {
+                                             "id": "SIGNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SIGNER",
+                                             "optionValue": "SIGNER"
+                                        },
+                                        {
+                                             "id": "ATTORNEY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ATTORNEY",
+                                             "optionValue": "ATTORNEY"
+                                        },
+                                        {
+                                             "id": "POWER OF ATTORNEY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "POWER OF ATTORNEY",
+                                             "optionValue": "POWER OF ATTORNEY"
+                                        },
+                                        {
+                                             "id": "GROUND LEASE LESSOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "GROUND LEASE LESSOR",
+                                             "optionValue": "GROUND LEASE LESSOR"
+                                        }
+                                   ],
+                                   "ariaLabel": "Name"
+                              }
+                         },
+                         {
+                              "id": "2eee2a36-56c5-4d1d-bf7c-1230d0b75188",
+                              "fieldName": "clcommon__Account__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account Name",
+                                   "ariaLabel": "Account Name"
+                              }
+                         },
+                         {
+                              "id": "402a9877-c8c1-4a37-86b5-0dfd841f720a",
+                              "fieldName": "clcommon__Contact__r.FirstName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "First Name",
+                                   "messages": {
+                                        "requiredErrorText": "First name is required."
+                                   },
+                                   "ariaLabel": "First Name"
+                              }
+                         },
+                         {
+                              "id": "f167e753-992f-40a2-8d39-b7617d3f4205",
+                              "fieldName": "clcommon__Contact__r.LastName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Last Name",
+                                   "messages": {
+                                        "requiredErrorText": "Last name is required."
+                                   },
+                                   "ariaLabel": "Last Name"
+                              }
+                         },
+                         {
+                              "id": "509e3f3b-50eb-40fd-aa76-1c3b50f95ab4",
+                              "fieldName": "clcommon__Type__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "",
+                                   "ariaLabel": "Name"
+                              }
+                         },
+                         {
+                              "id": "f9cc3b36-4299-47bf-93cb-a02573809c30",
+                              "fieldName": "solcommon__Is_Principal_Party__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "",
+                                   "defaultValue": false,
+                                   "ariaLabel": "principal party"
+                              }
+                         },
+                         {
+                              "id": "72a89ab4-4f6e-4779-b245-0143f5cbc6ef",
+                              "fieldName": "clcommon__Percent_Ownership__c",
+                              "fieldUi": {
+                                   "fieldType": "percent",
+                                   "label": "Ownership Percentage",
+                                   "defaultValue": 0,
+                                   "messages": {
+                                        "requiredErrorText": "Ownership percentage is required."
+                                   },
+                                   "ariaLabel": "Ownership percentage"
+                              }
+                         },
+                         {
+                              "id": "8aeeca1f-4750-4833-be20-54b60aac09e6",
+                              "relationType": "reference",
+                              "fieldName": "clcommon__Contact__c",
+                              "relationName": "clcommon__Contact__r",
+                              "relationJson": {
+                                   "tableName": "Contact",
+                                   "whereClause": {
+                                        "freeForm": "id!=nul"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "c6760772-0496-4073-8132-2efdbbc5e52f",
+                                             "fields": [
+                                                  {
+                                                       "id": "fd216ec5-20cb-4c63-b8bf-113fbe290b9e",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Contact ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "547351a4-a644-4327-a023-6d11d05570f6",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Full Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Contact"
+                              }
+                         },
+                         {
+                              "id": "252495da-314a-46fc-8797-341c97a7fc7e",
+                              "relationType": "reference",
+                              "fieldName": "clcommon__Account__c",
+                              "relationName": "clcommon__Account__r",
+                              "relationJson": {
+                                   "tableName": "Account",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "f6a9a8f0-04be-41ee-947f-3196ad0d2f7c",
+                                             "fields": [
+                                                  {
+                                                       "id": "a4e6606e-c820-4184-b43b-5afbc4d56534",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Account ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "4795e03a-142b-4004-96cd-b971b165d7ad",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Account Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Account"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "smb_back_office_business_parties_summary",
+     "clcommon__Release_Checksum__c": "b3e759fde17785a48b1360309c47293df76f51a892e2be861c3ede37ff55d99e"
+}

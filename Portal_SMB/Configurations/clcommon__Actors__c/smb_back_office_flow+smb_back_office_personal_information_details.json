@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderFields": {
+                    "AccountId": false,
+                    "Id": false
+               },
+               "editableFields": {
+                    "LastName": "(($global.attr(borrowerAccountIdExisting); == null or $global.attr(borrowerAccountIdExisting); == \"\" or $global.attr(borrowerAccountIdExisting); == undefined) and ($global.attr(partyId);==\"\" or  $global.attr(partyId);==null or $global.attr(partyId);==undefined)) or ($global.attr(borrowerAccountIdExisting); != null and $global.attr(borrowerAccountIdExisting); != \"\" and $global.attr(borrowerAccountIdExisting); != undefined and $global.attr(partyId);!=\"\" and $global.attr(partyId);!=null and $global.attr(partyId);!=undefined)",
+                    "FirstName": "(($global.attr(borrowerAccountIdExisting); == null or $global.attr(borrowerAccountIdExisting); == \"\" or $global.attr(borrowerAccountIdExisting); == undefined) and ($global.attr(partyId);==\"\" or  $global.attr(partyId);==null or $global.attr(partyId);==undefined)) or ($global.attr(borrowerAccountIdExisting); != null and $global.attr(borrowerAccountIdExisting); != \"\" and $global.attr(borrowerAccountIdExisting); != undefined and $global.attr(partyId);!=\"\" and $global.attr(partyId);!=null and $global.attr(partyId);!=undefined)",
+                    "Email": "$global.attr(borrowerAccountIdExisting); == null or $global.attr(borrowerAccountIdExisting); == \"\" or $global.attr(borrowerAccountIdExisting); == undefined"
+               },
+               "grid": {
+                    "messagePositions": {
+                         "saveSubmitError": "top",
+                         "loadingError": "top",
+                         "loadingAnimation": "global"
+                    },
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         },
+                         "clcommon__Current_Street__c": {
+                              "sm": 12
+                         },
+                         "clcommon__Current_Zip_Code__c": {
+                              "sm": 4
+                         },
+                         "clcommon__Current_State__c": {
+                              "sm": 4
+                         },
+                         "clcommon__Current_City__c": {
+                              "sm": 4
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true,
+               "title": "Personal Information"
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(borrowerAccountIdExisting);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "smb_back_office_business_parties_personal_information"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_personal_information_details",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_details",
+     "clcommon__Release_Checksum__c": "c1967fa87251e2db41f5e4e09d125bfd2b8e954090acb555b66eeaf886797ddd"
+}

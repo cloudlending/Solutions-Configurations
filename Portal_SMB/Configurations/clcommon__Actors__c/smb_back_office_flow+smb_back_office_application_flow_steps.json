@@ -1,0 +1,68 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "titleOrientation": "vertical",
+               "titles": [
+                    {
+                         "title": "Getting Started"
+                    },
+                    {
+                         "name": "BusinessDetails",
+                         "subTitle": "Business Details",
+                         "title": "Business Information"
+                    },
+                    {
+                         "name": "IndustryCode",
+                         "subTitle": "Industry Code",
+                         "title": "Business Information"
+                    },
+                    {
+                         "name": "BusinessFinancials",
+                         "subTitle": "Business Financials",
+                         "title": "Business Information"
+                    },
+                    {
+                         "name": "LoanDetails",
+                         "subTitle": "Loan Details",
+                         "title": "Loan Information"
+                    },
+                    {
+                         "name": "LoanPurpose",
+                         "subTitle": "Loan Purpose",
+                         "title": "Loan Information"
+                    },
+                    {
+                         "name": "BusinessParties",
+                         "title": "Business Parties "
+                    },
+                    {
+                         "name": "CollateralDetails",
+                         "render": "($global.attr(assetClassName); == \"Small Business\" or $global.attr(assetClassName); == \"Small Business Real Estate\")",
+                         "title": "Collateral"
+                    },
+                    {
+                         "name": "ReviewAndSubmit",
+                         "title": "Review"
+                    }
+               ]
+          },
+          "property": {},
+          "type": "steps",
+          "category": "container"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_application_flow_steps",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_application_flow_steps",
+     "clcommon__Release_Checksum__c": "1e4f66c4535fa29e87b3ca820193be4bf3bb2f8004d5d2e275213486d1fac3b9"
+}

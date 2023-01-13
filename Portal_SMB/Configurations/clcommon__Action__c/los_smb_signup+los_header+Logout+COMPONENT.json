@@ -1,0 +1,41 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "Logout",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "redirect": "$result.attr(link);"
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "redirect": "$result.attr(link);"
+          },
+          "remoteActionAPIname": "logout",
+          "appearance": {
+               "position": "top-right",
+               "render": "$global.attr(userInfo).attr(userType); != \"Guest\"",
+               "style": "link",
+               "label": "Logout"
+          },
+          "property": {},
+          "name": "Logout"
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_signup+los_header"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_header+Logout",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_signup+los_header+Logout+COMPONENT",
+     "clcommon__Release_Checksum__c": "d03aa0d81dad115da8f010d6fe527e8b284381a115f61b59efa3e2eba0d0e354"
+}

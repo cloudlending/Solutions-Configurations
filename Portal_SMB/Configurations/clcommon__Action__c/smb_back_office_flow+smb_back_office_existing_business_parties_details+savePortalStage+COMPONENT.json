@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "savePortalStage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "savePortalStage",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "BusinessParties"
+          },
+          "validation": [
+               "smb_back_office_existing _business_parties_details"
+          ],
+          "successHandler": {
+               "assignments": []
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_business_parties_details"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_existing_business_parties",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_existing_business_parties_details+savePortalStage",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_business_parties_details+savePortalStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "77d19f01cbc58645d82d1799a3797ec91fc1d04dd8e286b96a3d57b3cc0df2cf"
+}

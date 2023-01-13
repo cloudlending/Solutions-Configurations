@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToDocWidget",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Back",
+          "handler": {
+               "next": "PreApprovalDocument",
+               "assignments": [
+                    {
+                         "value": "YES",
+                         "field": "$global.attr(showHome);"
+                    },
+                    {
+                         "value": "$global.attr(portalStage);",
+                         "field": "$nav(document_widget_steps).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "position": "bottom-left",
+               "render": false
+          },
+          "property": {},
+          "name": "goToDocWidget"
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list"
+     },
+     "clcommon__Component_Structure_Name__c": "los_fetch_applications",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_applicatiion_list+goToDocWidget",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list+goToDocWidget+COMPONENT",
+     "clcommon__Release_Checksum__c": "e1c2bf21a56d9990277489be18e24bac253f99cdbb3d9071099113431d3331d3"
+}

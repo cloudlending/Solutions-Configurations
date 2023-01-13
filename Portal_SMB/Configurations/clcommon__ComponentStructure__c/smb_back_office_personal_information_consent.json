@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_personal_information_consent",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "smb_back_office_personal_information_consent",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_personal_information_consent",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "Id = ':partyId'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "b9466bf1-8d6b-4ecb-a286-2c9f2051def6",
+                    "fields": [
+                         {
+                              "id": "68b7702c-01f2-4ce1-9887-ab019a91a507",
+                              "fieldName": "genesis__Credit_Check_Consent__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Credit Check Consent",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Credit Check Consent"
+                              }
+                         },
+                         {
+                              "id": "165ccd99-eb8f-4bda-a02d-3490f2dd84bb",
+                              "fieldName": "clcommon__Electronic_Consent__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Electronic Consent",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Electronic Consent"
+                              }
+                         },
+                         {
+                              "id": "c1f0f250-2093-4cbd-9d76-79f7c0a2c5c2",
+                              "fieldName": "solcommon__Consent_To_Disclosure_And_Document__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Consent to receive Documents and Disclosures electronically",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Consent to Disclosure and Document"
+                              }
+                         },
+                         {
+                              "id": "cbd90b12-ca80-4157-83dd-7cf01edf1927",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "smb_back_office_personal_information_consent",
+     "clcommon__Release_Checksum__c": "033fafb2924005be9b60be29554e69bfc47ee1691b277b7aeeea63bb6d3c6d1a"
+}

@@ -1,0 +1,78 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessBasicsNextRecordId",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "businessBasicsNextRecordId",
+          "property": {},
+          "appearance": {
+               "render": "($global.attr(businessInfoId); != \"\" and $global.attr(businessInfoId); != undefined and $global.attr(businessInfoId); != \"new_record_id\") and ($global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined and $global.attr(applicationId); != \"new_record_id\")",
+               "style": "primary",
+               "label": "Next"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               },
+               "genesis__Business_Information__c": {
+                    "id": "$global.attr(businessInfoId);",
+                    "genesis__Date_Business_Established__c": "$this.attr(genesis__Business_Information__r.genesis__Date_Business_Established__c);",
+                    "genesis__Tax_Identification_Number__c": "$this.attr(genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
+                    "genesis__DBA_Name__c": "$this.attr(genesis__Business_Information__r.genesis__DBA_Name__c);",
+                    "genesis__Business_Registration_State__c": "$this.attr(genesis__Business_Information__r.genesis__Business_Registration_State__c);"
+               },
+               "account": {
+                    "id": "$this.attr(id);",
+                    "clcommon__Legal_Entity_Type__c": "$state(smb_back_office_business_Legal_entity_picklist_details).attr(clcommon__Legal_Entity_Type__c);",
+                    "Phone": "$this.attr(Phone);",
+                    "BillingPostalCode": "$this.attr(BillingPostalCode);",
+                    "BillingState": "$this.attr(BillingState);",
+                    "BillingCity": "$this.attr(BillingCity);",
+                    "BillingStreet": "$this.attr(BillingStreet);",
+                    "BillingCountry": "US",
+                    "name": "$this.attr(Name);"
+               }
+          },
+          "validation": [
+               "smb_back_office_business_details"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$state(smb_back_office_loan_details).attr(genesis__Loan_Amount__c);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(applicationId);",
+                         "value": "$result.attr(applicationId);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_details_optional_form"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_business_details_optional_form",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveApplication",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_business_details_optional_form+businessBasicsNextRecordId",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_details_optional_form+businessBasicsNextRecordId+COMPONENT",
+     "clcommon__Release_Checksum__c": "0b7c1c5ddb1b29711e6ad0eb95cf8a6580d7deb9213ad3f8666750a23f5ecd83"
+}

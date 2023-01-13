@@ -1,0 +1,117 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "AddbusinessParties",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "AddbusinessParties",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "<span>Add Busniess Parties</span> <i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> ",
+               "position": "bottom-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(smb_back_office_add_business_parties_container).appearance(current);",
+                         "value": 0
+                    },
+                    {
+                         "field": "$nav(smb_back_office_add_business_parties_container).appearance(lastEnabled);",
+                         "value": 0
+                    },
+                    {
+                         "field": "$global.attr(openBusinessParties);",
+                         "value": true
+                    },
+                    {
+                         "field": "$global.attr(editParty);",
+                         "value": false
+                    },
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$state(smb_back_office_legal_entity_details).attr(genesis__CL_Product__r.clcommon__HMDA_Loan__c);",
+                         "value": "$global.attr(HMDALoan);"
+                    },
+                    {
+                         "field": "$state(smb_back_office_legal_entity_details).attr(genesis__CL_Product__r.solcommon__Document_Collection_Required__c);",
+                         "value": "$global.attr(DocCollection);"
+                    },
+                    {
+                         "field": "$state(smb_back_office_legal_entity_details).attr(genesis__Account__r.clcommon__Legal_Entity_Type__r.Name);",
+                         "value": "$global.attr(HMDALegalClassName);"
+                    },
+                    {
+                         "field": "$state(smb_back_office_existing_business_parties_details).attr(existingCustomer);",
+                         "value": ""
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "smb_back_office_add_business_parties_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_business_parties_details"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_add_business_parties_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_accounts_search_bar"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_account_search_results"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "smb_back_office_personal_information_details",
+                              "smb_back_office_ownership_information",
+                              "smb_back_office_income_information",
+                              "smb_back_office_personal_information_disclosures",
+                              "smb_back_office_personal_information_consent_section",
+                              "smb_back_office_identification_information",
+                              "smb_back_office_accounts_search_bar",
+                              "smb_back_office_demographic_information_questionaire",
+                              "smb_back_office_demographic_information_summary",
+                              "smb_back_office_demographic_information_gender",
+                              "smb_back_office_hawaiian_pacific_islander",
+                              "smb_back_office_document_doc_panel",
+                              "smb_back_office_document_doc_View",
+                              "smb_back_office_existing_collateral_search_results",
+                              "smb_back_office_existing_collateral_search_bar"
+                         ]
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_parties_details"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_business_parties_details+AddbusinessParties",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_parties_details+AddbusinessParties+COMPONENT",
+     "clcommon__Release_Checksum__c": "935248e1dbbca682be7b46517832c811e10994d3f99fb04462e1d79e03e57d3a"
+}

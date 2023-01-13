@@ -1,0 +1,105 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_find_collateral_relationship",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_find_collateral_relationship",
+     "clcommon__data__c": {
+          "structureName": "los_find_collateral_relationship",
+          "tableName": "genesis__application_collateral__c",
+          "whereClause": {
+               "freeForm": "genesis__Collateral__c=':collateralId' and genesis__Application__c !=':appId'"
+          },
+          "sections": [
+               {
+                    "id": "49e7f973-0e48-4559-99aa-61c4ca49f33c",
+                    "fields": [
+                         {
+                              "id": "269950d9-e41b-44e0-9aa5-cf144749da37",
+                              "relationType": "reference",
+                              "fieldName": "genesis__Application__c",
+                              "relationName": "genesis__Application__r",
+                              "relationJson": {
+                                   "tableName": "genesis__Applications__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "0cc9727c-848e-40e4-ab7e-b291761dfd08",
+                                             "fields": [
+                                                  {
+                                                       "id": "e4b610ad-7106-4e23-ad47-252a3f3a7a6c",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "109f9bfb-3688-4d14-a57a-5919b9c9c414",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Application ID"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Application"
+                              }
+                         },
+                         {
+                              "id": "57443ba6-cb11-41d5-855e-081bd63b5f48",
+                              "relationType": "reference",
+                              "fieldName": "genesis__Collateral__c",
+                              "relationName": "genesis__Collateral__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__Collateral__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "3c04efbd-7112-4984-a3e9-857e67331393",
+                                             "fields": [
+                                                  {
+                                                       "id": "30df5cd5-5c91-48b0-9ec9-76cc285c0186",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "b30e19a9-6309-442d-b768-a867692bc564",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Collateral ID"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Collateral"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_find_collateral_relationship",
+     "clcommon__Release_Checksum__c": "f736e399485e96541c72a9c8c7f85fc2d30dce07c001f9547fe3c9e3c0aa40ff"
+}

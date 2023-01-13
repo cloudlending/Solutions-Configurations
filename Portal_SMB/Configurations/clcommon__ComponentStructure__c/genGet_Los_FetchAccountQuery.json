@@ -1,0 +1,75 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "$genGet_Los_FetchAccountQuery",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "$genGet_Los_FetchAccountQuery",
+     "clcommon__data__c": {
+          "structureName": "$genGet_Los_FetchAccountQuery",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c=':appId' and clcommon__Party_Types__c includes ('BORROWER','GUARANTOR')"
+          },
+          "sections": [
+               {
+                    "id": "a642d7e7-0ad0-46d0-beab-1a72ccca5ecc",
+                    "fields": [
+                         {
+                              "id": "7fd5df29-052b-49d5-aaae-60d3cdb3a80c",
+                              "fieldName": "genesis__Application__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "9e062671-3476-4221-975a-70815962765b",
+                              "relationType": "reference",
+                              "fieldName": "clcommon__Account__c",
+                              "relationName": "clcommon__Account__r",
+                              "relationJson": {
+                                   "tableName": "Account",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "e914e3d7-ad8b-46ca-aa41-b738d02fe82d",
+                                             "fields": [
+                                                  {
+                                                       "id": "551877ef-1486-42c1-99d8-32f93fe66a96",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Account ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "20034733-28f1-4ff7-a44c-e5074278f2b8",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Account Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Account"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "genGet_Los_FetchAccountQuery",
+     "clcommon__Release_Checksum__c": "5bca0153408c5bebad15da77134c457923272bd7865d30342d5b68dbe85b9a96"
+}

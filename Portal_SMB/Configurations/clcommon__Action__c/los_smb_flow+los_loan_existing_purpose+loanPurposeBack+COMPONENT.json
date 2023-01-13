@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "loanPurposeBack",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Back",
+          "handler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "previous",
+                         "field": "$nav(los_application_steps).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "secondary",
+               "variant": "text",
+               "label": "Back"
+          },
+          "property": {},
+          "name": "loanPurposeBack"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_loan_existing_purpose"
+     },
+     "clcommon__Component_Structure_Name__c": "los_loan_existing_purpose",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_loan_existing_purpose+loanPurposeBack",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_loan_existing_purpose+loanPurposeBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "7e5056ef0d91defef3279a14ea190a7f33288beea7ab958b9e21fe5ea9537e41"
+}

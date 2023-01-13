@@ -1,0 +1,74 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "NullifyDynamicFieldsOnPartyTypes",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "NullifyDynamicFieldsOnPartyTypes",
+          "property": {},
+          "appearance": {
+               "enable": "$this.attr(genesis__Credit_Check_Consent__c); == true and $this.attr(solcommon__Consent_To_Disclosure_And_Document__c); == true",
+               "label": "Next",
+               "style": "primary",
+               "position": "bottom-right",
+               "render": true
+          },
+          "validation": [
+               "smb_back_office_personal_information_disclosures",
+               "smb_back_office_personal_information_details",
+               " smb_back_office_personal_information_consent_section",
+               "smb_back_office_ownership_information",
+               "smb_back_office_income_information"
+          ],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$state(smb_back_office_ownership_information).attr(clcommon__Signer_Capacity__c);",
+                         "value": "@mathjs{$global.attr(isSignerPartyType);==true ? $state(smb_back_office_ownership_information).attr(clcommon__Signer_Capacity__c); : null};"
+                    },
+                    {
+                         "field": "$state(smb_back_office_ownership_information).attr(clcommon__Percent_Ownership__c);",
+                         "value": "@mathjs{$global.attr(isBeneficialPartyType);==true ? $state(smb_back_office_ownership_information).attr(clcommon__Percent_Ownership__c); : null};"
+                    },
+                    {
+                         "field": "$state(smb_back_office_ownership_information).attr(solcommon__Position_In_Company__c);",
+                         "value": "@mathjs{$global.attr(isBeneficialPartyType);==true ? $state(smb_back_office_ownership_information).attr(solcommon__Position_In_Company__c); : null};"
+                    },
+                    {
+                         "field": "$state(smb_back_office_income_information).attr(genesis__Amount__c);",
+                         "value": "@mathjs{ ($global.attr(isGuarantorPartyType);==true or $global.attr(isPrincipalPartyType); ==true) ? $state(smb_back_office_income_information).attr(genesis__Amount__c); : \"\"};"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$global.attr(partyId); != \"new_record_id\" and $global.attr(partyId); != \"\" and $global.attr(partyId); != undefined",
+                         "name": "personalInformationDetailsContactUpdateNext"
+                    },
+                    {
+                         "condition": "$global.attr(partyId); == \"\" or $global.attr(partyId); == undefined or $global.attr(partyId); == \"new_record_id\"",
+                         "name": "personalInformationDetailsNext"
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 6,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_personal_information_consent",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_personal_information_consent_section+NullifyDynamicFieldsOnPartyTypes",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section+NullifyDynamicFieldsOnPartyTypes+COMPONENT",
+     "clcommon__Release_Checksum__c": "d6129cdaec0da9ea8558eff7db991c86539d8834356efa70192c77245308750f"
+}

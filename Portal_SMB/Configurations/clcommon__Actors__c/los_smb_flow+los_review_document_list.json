@@ -1,0 +1,73 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "$global.attr(isPrincipal);==true",
+               "queueSecondaryText": "<p>$this.attr(clcommon__Description__c);</p><p class=\"declineReason\"></p>",
+               "queuePrimaryText": "<span class=\"$this.attr(clcommon__Status__c, className); document-status\">$this.attr(clcommon__Status__c);</span><span class=\"docCategoryTitle\"> $this.attr(clcommon__Category_Name__c);</span> ",
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               },
+               "droppableRecord": {
+                    "uploadActionName": "upload",
+                    "type": "FILE"
+               },
+               "textBefore": "We need additional documents to process the Loan Application.",
+               "blankMessage": "No Documents Required!",
+               "editableFields": {
+                    "Id": false,
+                    "Name": false,
+                    "clcommon__Description__c": false,
+                    "clcommon__Status__c": false,
+                    "clcommon__Category_Name__c": false,
+                    "clcommon__Parent_Document_Category__r.Id": false,
+                    "clcommon__Account__r.Name": false,
+                    "clcommon__Account__c": false
+               },
+               "renderFields": {
+                    "Id": false,
+                    "Name": false
+               },
+               "fieldColumns": 1,
+               "title": "Required Documents",
+               "groupBy": {
+                    "field": "clcommon__Account__c",
+                    "ascending": true,
+                    "titles": [
+                         {
+                              "title": "$this.attr(clcommon__Account__r.Name);"
+                         }
+                    ]
+               },
+               "editable": false
+          },
+          "property": {
+               "structureName": "los_review_documents_list",
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "module": "document"
+          },
+          "type": "queue-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_review_document_list",
+     "clcommon__External_ID__c": "los_smb_flow+los_review_document_list",
+     "clcommon__Release_Checksum__c": "e85839f2dba72ffeaaad53ffc7975b942fdacbc4b22cb609cedd1d721b66e706"
+}

@@ -1,0 +1,423 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_collateral_list_validation",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_collateral_list_validation",
+     "clcommon__data__c": {
+          "structureName": "los_collateral_list_validation",
+          "tableName": "genesis__application_collateral__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId' and solcommon__Collateral_Type_Name__c in ('1-4 Family','Multi-Family')"
+          },
+          "sections": [
+               {
+                    "id": "70b5b546-4826-4b15-9091-6f467c42dd6b",
+                    "fields": [
+                         {
+                              "id": "a4097418-8189-4e21-97f4-00a5f410f494",
+                              "fieldName": "genesis__Collateral__r.clcommon__Collateral_Type__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "038c515d-f244-4123-bdb1-bcc586ad3af0",
+                              "fieldName": "genesis__Collateral__r.clcommon__Collateral_Type__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Collateral Type"
+                              }
+                         },
+                         {
+                              "id": "61b322f0-c446-4964-8e57-e833bd745753",
+                              "fieldName": "genesis__Collateral__r.clcommon__Address__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Street Address",
+                                   "ariaLabel": "Address"
+                              }
+                         },
+                         {
+                              "id": "0b2325f3-97bb-415a-a72d-1454c1c4dd29",
+                              "fieldName": "genesis__Collateral__r.clcommon__City__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "City",
+                                   "ariaLabel": "City"
+                              }
+                         },
+                         {
+                              "id": "a8ce2158-4126-4a3a-97c3-023fe1942271",
+                              "fieldName": "genesis__Collateral__r.clcommon__State__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "State",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Alabama,AL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Alabama,AL",
+                                             "optionValue": "Alabama,AL"
+                                        },
+                                        {
+                                             "id": "Alaska,AK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Alaska,AK",
+                                             "optionValue": "Alaska,AK"
+                                        },
+                                        {
+                                             "id": "Arizona,AZ",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Arizona,AZ",
+                                             "optionValue": "Arizona,AZ"
+                                        },
+                                        {
+                                             "id": "Arkansas,AR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Arkansas,AR",
+                                             "optionValue": "Arkansas,AR"
+                                        },
+                                        {
+                                             "id": "California,CA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "California,CA",
+                                             "optionValue": "California,CA"
+                                        },
+                                        {
+                                             "id": "Colorado,CO",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Colorado,CO",
+                                             "optionValue": "Colorado,CO"
+                                        },
+                                        {
+                                             "id": "Connecticut,CT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Connecticut,CT",
+                                             "optionValue": "Connecticut,CT"
+                                        },
+                                        {
+                                             "id": "Delaware,DE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Delaware,DE",
+                                             "optionValue": "Delaware,DE"
+                                        },
+                                        {
+                                             "id": "Florida,FL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Florida,FL",
+                                             "optionValue": "Florida,FL"
+                                        },
+                                        {
+                                             "id": "Georgia,GA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Georgia,GA",
+                                             "optionValue": "Georgia,GA"
+                                        },
+                                        {
+                                             "id": "Hawaii,HI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Hawaii,HI",
+                                             "optionValue": "Hawaii,HI"
+                                        },
+                                        {
+                                             "id": "Idaho,ID",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Idaho,ID",
+                                             "optionValue": "Idaho,ID"
+                                        },
+                                        {
+                                             "id": "Illinois,IL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Illinois,IL",
+                                             "optionValue": "Illinois,IL"
+                                        },
+                                        {
+                                             "id": "Indiana,IN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Indiana,IN",
+                                             "optionValue": "Indiana,IN"
+                                        },
+                                        {
+                                             "id": "Iowa,IA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Iowa,IA",
+                                             "optionValue": "Iowa,IA"
+                                        },
+                                        {
+                                             "id": "Kansas,KS",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Kansas,KS",
+                                             "optionValue": "Kansas,KS"
+                                        },
+                                        {
+                                             "id": "Kentucky,KY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Kentucky,KY",
+                                             "optionValue": "Kentucky,KY"
+                                        },
+                                        {
+                                             "id": "Louisiana,LA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Louisiana,LA",
+                                             "optionValue": "Louisiana,LA"
+                                        },
+                                        {
+                                             "id": "Maine,ME",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Maine,ME",
+                                             "optionValue": "Maine,ME"
+                                        },
+                                        {
+                                             "id": "Maryland,MD",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Maryland,MD",
+                                             "optionValue": "Maryland,MD"
+                                        },
+                                        {
+                                             "id": "Massachusetts,MA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Massachusetts,MA",
+                                             "optionValue": "Massachusetts,MA"
+                                        },
+                                        {
+                                             "id": "Michigan,MI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Michigan,MI",
+                                             "optionValue": "Michigan,MI"
+                                        },
+                                        {
+                                             "id": "Minnesota,MN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Minnesota,MN",
+                                             "optionValue": "Minnesota,MN"
+                                        },
+                                        {
+                                             "id": "Mississippi,MS",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Mississippi,MS",
+                                             "optionValue": "Mississippi,MS"
+                                        },
+                                        {
+                                             "id": "Missouri,MO",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Missouri,MO",
+                                             "optionValue": "Missouri,MO"
+                                        },
+                                        {
+                                             "id": "Montana,MT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Montana,MT",
+                                             "optionValue": "Montana,MT"
+                                        },
+                                        {
+                                             "id": "Nebraska,NE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Nebraska,NE",
+                                             "optionValue": "Nebraska,NE"
+                                        },
+                                        {
+                                             "id": "Nevada,NV",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Nevada,NV",
+                                             "optionValue": "Nevada,NV"
+                                        },
+                                        {
+                                             "id": "New Hampshire,NH",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "New Hampshire,NH",
+                                             "optionValue": "New Hampshire,NH"
+                                        },
+                                        {
+                                             "id": "New Jersey,NJ",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "New Jersey,NJ",
+                                             "optionValue": "New Jersey,NJ"
+                                        },
+                                        {
+                                             "id": "New Mexico,NM",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "New Mexico,NM",
+                                             "optionValue": "New Mexico,NM"
+                                        },
+                                        {
+                                             "id": "New York,NY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "New York,NY",
+                                             "optionValue": "New York,NY"
+                                        },
+                                        {
+                                             "id": "North Carolina,NC",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "North Carolina,NC",
+                                             "optionValue": "North Carolina,NC"
+                                        },
+                                        {
+                                             "id": "North Dakota,ND",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "North Dakota,ND",
+                                             "optionValue": "North Dakota,ND"
+                                        },
+                                        {
+                                             "id": "Ohio,OH",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Ohio,OH",
+                                             "optionValue": "Ohio,OH"
+                                        },
+                                        {
+                                             "id": "Oklahoma,OK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Oklahoma,OK",
+                                             "optionValue": "Oklahoma,OK"
+                                        },
+                                        {
+                                             "id": "Oregon,OR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Oregon,OR",
+                                             "optionValue": "Oregon,OR"
+                                        },
+                                        {
+                                             "id": "Pennsylvania,PA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Pennsylvania,PA",
+                                             "optionValue": "Pennsylvania,PA"
+                                        },
+                                        {
+                                             "id": "Rhode Island,RI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Rhode Island,RI",
+                                             "optionValue": "Rhode Island,RI"
+                                        },
+                                        {
+                                             "id": "South Carolina,SC",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "South Carolina,SC",
+                                             "optionValue": "South Carolina,SC"
+                                        },
+                                        {
+                                             "id": "South Dakota,SD",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "South Dakota,SD",
+                                             "optionValue": "South Dakota,SD"
+                                        },
+                                        {
+                                             "id": "Tennessee,TN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Tennessee,TN",
+                                             "optionValue": "Tennessee,TN"
+                                        },
+                                        {
+                                             "id": "Texas,TX",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Texas,TX",
+                                             "optionValue": "Texas,TX"
+                                        },
+                                        {
+                                             "id": "Utah,UT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Utah,UT",
+                                             "optionValue": "Utah,UT"
+                                        },
+                                        {
+                                             "id": "Vermont,VT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Vermont,VT",
+                                             "optionValue": "Vermont,VT"
+                                        },
+                                        {
+                                             "id": "Virginia,VA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Virginia,VA",
+                                             "optionValue": "Virginia,VA"
+                                        },
+                                        {
+                                             "id": "Washington,WA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Washington,WA",
+                                             "optionValue": "Washington,WA"
+                                        },
+                                        {
+                                             "id": "West Virginia,WV",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "West Virginia,WV",
+                                             "optionValue": "West Virginia,WV"
+                                        },
+                                        {
+                                             "id": "Wisconsin,WI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Wisconsin,WI",
+                                             "optionValue": "Wisconsin,WI"
+                                        },
+                                        {
+                                             "id": "Wyoming,WY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Wyoming,WY",
+                                             "optionValue": "Wyoming,WY"
+                                        }
+                                   ],
+                                   "ariaLabel": "State"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_collateral_list_validation",
+     "clcommon__Release_Checksum__c": "901f8d45738e86e11f371601e3a0a727f0eb90eb0ce9c6bc987b784abb69fe4c"
+}

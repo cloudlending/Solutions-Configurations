@@ -1,0 +1,51 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "queryPolicyConditionDocumentCategory",
+     "clcommon__API_Configurations__c": {
+          "postProcessMapping": {
+               "clcommon__Document_Category__c.clcommon__Required__c": "15",
+               "clcommon__Category_Attachment_Association__c.Id": "10",
+               "clcommon__Category_Attachment_Association__c.Name": "11",
+               "clcommon__Category_Attachment_Association__c.clcommon__Attachment_Id__c": "12",
+               "clcommon__Category_Attachment_Association__c.clcommon__Content_Version_Id__c": "13",
+               "clcommon__Document_Category__c.clcommon__Description__c": "14",
+               "clcommon__Document_Category__c.Id": "1",
+               "clcommon__Document_Category__c.Name": "2",
+               "clcommon__Document_Category__c.clcommon__Category_Name__c": "3",
+               "clcommon__Document_Category__c.clcommon__Status__c": "4",
+               "clcommon__Document_Category__c.genesis__Application__c": "5",
+               "genesis__Policy_Exception__c.Id": "6",
+               "genesis__Policy_Exception__c.genesis__Policy_Exception_Definition__r.genesis__Portal_Description__c": "8",
+               "genesis__Policy_Exception__c.genesis__Policy_Exception_Definition__r.genesis__Portal_Title__c": "7",
+               "genesis__Policy_Exception__c.genesis__Status__c": "9"
+          }
+     },
+     "clcommon__Action_Definition__c": {
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "property": {},
+          "name": "queryPolicyConditionDocumentCategory"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "query",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+DocumentManagementQueueView"
+     },
+     "clcommon__Component_Structure_Name__c": "document_management_queue_view",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalPolicyCondition",
+     "clcommon__Unique_Action_Name__c": "DocumentManagementQueueView+queryPolicyConditionDocumentCategory",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+DocumentManagementQueueView+queryPolicyConditionDocumentCategory+COMPONENT",
+     "clcommon__Release_Checksum__c": "b8d68a4df048840a94e4ebffe8db623c15de3295c69a43e032e31e5bb8597219"
+}

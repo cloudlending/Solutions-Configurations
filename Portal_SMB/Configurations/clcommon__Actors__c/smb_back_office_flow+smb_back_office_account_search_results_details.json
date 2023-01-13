@@ -1,0 +1,85 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "clickRecord": {
+                    "assignments": [
+                         {
+                              "value": "$args[0].attr(Id);",
+                              "field": "$global.attr(backofficerAccountId);"
+                         },
+                         {
+                              "value": "$this.attr(Account.Name);",
+                              "field": "$global.attr(selectedAccName);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "highlight": true,
+               "blankMessage": "No Accounts Found.",
+               "pagination": {
+                    "lastLinkText": "last_page",
+                    "nextLinkText": "chevron_right",
+                    "previousLinkText": "chevron_left",
+                    "firstLinkText": "first_page",
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "numberOfPageLinks": 5,
+                    "numberOfRecordsPerPage": 10
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editableFields": {
+                    "clcommon__Email__c": false,
+                    "clcommon__Legal_Entity_Type__r.clcommon__Individual__c": false,
+                    "Name": false,
+                    "Id": false,
+                    "clcommon__Legal_Entity_Type__r.Id": false,
+                    "genesis__Business_Information__r.Id": false,
+                    "clcommon__Legal_Entity_Type__r.Name": false,
+                    "clcommon__Legal_Entity_Type__c": false,
+                    "genesis__Business_Information__r.genesis__Tax_Identification_Number__c": false,
+                    "genesis__Business_Information__r.genesis__Tax_ID__c": false,
+                    "genesis__Business_Information__c": false
+               },
+               "render": "$state(smb_back_office_existing_customer).attr(ExistingCustomer); != \"No\" and $state(smb_back_office_existing_customer).attr(ExistingCustomer); != \"\" and $state(smb_back_office_existing_customer).attr(ExistingCustomer); != undefined and $state(smb_back_office_existing_customer).attr(ExistingCustomer); != null",
+               "renderFields": {
+                    "clcommon__Legal_Entity_Type__r.clcommon__Individual__c": false,
+                    "Id": false,
+                    "clcommon__Legal_Entity_Type__r.Id": false,
+                    "genesis__Business_Information__r.Id": false,
+                    "clcommon__Legal_Entity_Type__c": false,
+                    "genesis__Business_Information__r.genesis__Tax_Identification_Number__c": false,
+                    "genesis__Business_Information__r.genesis__Tax_ID__c": false,
+                    "genesis__Business_Information__c": false
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "Name": "$global.attr(AccName);"
+               },
+               "structureName": "smb_back_office_account_search_results_details"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_account_search_results_details",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_account_search_results_details",
+     "clcommon__Release_Checksum__c": "4b5c53446f502bdc125b4ad5e536c3c2be3038f22b5298843be00a082113b1e2"
+}

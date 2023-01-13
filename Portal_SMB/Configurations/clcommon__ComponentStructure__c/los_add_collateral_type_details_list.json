@@ -1,0 +1,171 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_add_collateral_type_details_list",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_add_collateral_type_details_list",
+     "clcommon__data__c": {
+          "structureName": "los_add_collateral_type_details_list",
+          "tableName": "clcommon__collateral_type_detail__c",
+          "whereClause": {
+               "freeForm": "clcommon__Collateral__r.Id=':collateralId'"
+          },
+          "sections": [
+               {
+                    "id": "9dcb2380-9b25-48d3-a7dc-67fa70d694e4",
+                    "fields": [
+                         {
+                              "id": "d6e87db0-19c4-443d-8482-f7475bbd4aa5",
+                              "fieldName": "clcommon__Collateral_Description__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Collateral Description",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "required"
+                                   },
+                                   "ariaLabel": "Collateral Description"
+                              }
+                         },
+                         {
+                              "id": "02200490-722f-4a47-b7fa-c292be3dd38f",
+                              "relationType": "reference",
+                              "fieldName": "clcommon__Collateral_Type__c",
+                              "relationName": "clcommon__Collateral_Type__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__Collateral_Type__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "orderBy": "Name ASC",
+                                   "sections": [
+                                        {
+                                             "id": "9af4bcb7-4adb-4add-9239-313ac6530792",
+                                             "fields": [
+                                                  {
+                                                       "id": "5c0ef9cb-7de5-4c36-8210-e6ab3f819f35",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "75c6a9d2-c69f-4c52-9da2-46b8fc6924dc",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Collateral Type Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Collateral Type",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "messages": {
+                                        "requiredErrorText": "required"
+                                   }
+                              }
+                         },
+                         {
+                              "id": "038c515d-f244-4123-bdb1-bcc586ad3af0",
+                              "fieldName": "clcommon__Collateral_Type__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Collateral Type",
+                                   "ariaLabel": "Collateral Type"
+                              }
+                         },
+                         {
+                              "id": "85d9c7ca-eb95-49a2-8892-588b236dc8de",
+                              "fieldName": "clcommon__Valuation_Date__c",
+                              "fieldUi": {
+                                   "fieldType": "date",
+                                   "label": "Valuation Date",
+                                   "ariaLabel": "Valuation Date"
+                              }
+                         },
+                         {
+                              "id": "c75203f2-f6a0-4c32-851e-d6f98bed5d81",
+                              "fieldName": "clcommon__Value__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Value",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "required"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        }
+                                   },
+                                   "ariaLabel": "Value"
+                              }
+                         },
+                         {
+                              "id": "34fc2c09-6306-4da1-a8de-500e42270273",
+                              "relationType": "reference",
+                              "fieldName": "clcommon__Collateral__c",
+                              "relationName": "clcommon__Collateral__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__Collateral__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "fc32434f-b359-472f-9674-7de197a88eb1",
+                                             "fields": [
+                                                  {
+                                                       "id": "ade418fc-f417-4429-aaf7-fd241d3f941c",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "2ed9ab11-39f7-4d6e-9df3-fbd7637ed179",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Collateral ID"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Collateral"
+                              }
+                         },
+                         {
+                              "id": "78bc7aad-7f4d-4fa2-8c8a-1a1e62ddc184",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_add_collateral_type_details_list",
+     "clcommon__Release_Checksum__c": "8bd3c88544452f53c7630d9c315f6a58093808dd979acb5d99a72127240e862b"
+}

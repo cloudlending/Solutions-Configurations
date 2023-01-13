@@ -1,0 +1,1003 @@
+{
+     "attributes": {
+          "type": "clcommon__Css_Configuration__c"
+     },
+     "Name": "los_smb_flow",
+     "clcommon__Branding__c": {
+          "globalTextColor": [
+               {
+                    "categoryName": "Text",
+                    "attributeId": "label",
+                    "attributeName": "Label",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#767676"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "content",
+                    "attributeName": "Content",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#37444e",
+                         "backgroundColor": "#ffffff",
+                         "borderColor": "#ebeef0"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "labelHighlighted",
+                    "attributeName": "Label (Highlighted)",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#767676"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "contentHighlighted",
+                    "attributeName": "Content (Highlighted)",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#2d5074",
+                         "borderColor": "#2d5074"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "labelSelected",
+                    "attributeName": "Label (Selected)",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#767676"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "contentSelected",
+                    "attributeName": "Content (Selected)",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#2d5074",
+                         "borderColor": "#2d5074"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "listHeader",
+                    "attributeName": "List Header",
+                    "cssRules": {
+                         "fontFamily": "Helvetica Neue",
+                         "fontSize": "14px",
+                         "fontWeight": "bold",
+                         "color": "#767676",
+                         "backgroundColor": "#f5f5f5"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "title",
+                    "attributeName": "Title",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "20px",
+                         "color": "#37444e"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "subTitle",
+                    "attributeName": "Sub-Title",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#37444e"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "textBefore",
+                    "attributeName": "Text Above Main Content",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#37444e"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "textAfter",
+                    "attributeName": "Text Below Main Content",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#37444e"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "blankMessage",
+                    "attributeName": "Blank Message",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#37444e"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "loadingMessage",
+                    "attributeName": "Loading Message",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#1cbdd4"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "successMessage",
+                    "attributeName": "Success Message",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#48ce94"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "errorMessage",
+                    "attributeName": "Error Message",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#e63c00"
+                    }
+               },
+               {
+                    "categoryName": "Text",
+                    "attributeId": "staticContent",
+                    "attributeName": "Static Content",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#37444e"
+                    }
+               },
+               {
+                    "categoryName": "Buttons",
+                    "attributeId": "primaryButton",
+                    "attributeName": "Primary Button",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#48ce94"
+                    }
+               },
+               {
+                    "categoryName": "Buttons",
+                    "attributeId": "secondaryButton",
+                    "attributeName": "Secondary Button",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#ffa21d"
+                    }
+               },
+               {
+                    "categoryName": "Buttons",
+                    "attributeId": "normalButton",
+                    "attributeName": "Normal Button",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#1cbdd4"
+                    }
+               },
+               {
+                    "categoryName": "Buttons",
+                    "attributeId": "warningButton",
+                    "attributeName": "Warning Button",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#e63c00"
+                    }
+               },
+               {
+                    "categoryName": "Buttons",
+                    "attributeId": "dialogConfirmationButton",
+                    "attributeName": "Dialog Confirmation Button",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#48ce94"
+                    }
+               },
+               {
+                    "categoryName": "Buttons",
+                    "attributeId": "dialogCancelButton",
+                    "attributeName": "Dialog Cancel Button",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#ffa21d"
+                    }
+               },
+               {
+                    "categoryName": "Buttons",
+                    "attributeId": "dialogCloseButton",
+                    "attributeName": "Dialog Close Button",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#1cbdd4"
+                    }
+               },
+               {
+                    "categoryName": "Tabs and Steps",
+                    "attributeId": "tabPrimaryHorizontal",
+                    "attributeName": "Horizontal Primary Tab Title",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#1cbdd4",
+                         "borderPosition": "bottom",
+                         "borderColor": "#1cbdd4"
+                    }
+               },
+               {
+                    "categoryName": "Tabs and Steps",
+                    "attributeId": "tabPrimaryHorizontalCurrent",
+                    "attributeName": "Horizontal Primary Tab Title (Current)",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#1cbdd4",
+                         "borderPosition": "bottom",
+                         "borderColor": "#a1f2fe"
+                    }
+               },
+               {
+                    "categoryName": "Tabs and Steps",
+                    "attributeId": "tabPrimaryHorizontalDisabled",
+                    "attributeName": "Horizontal Primary Tab Title (Disabled)",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#cccccc",
+                         "backgroundColor": "#ffffff",
+                         "borderPosition": "bottom",
+                         "borderColor": "#ebeef0"
+                    }
+               },
+               {
+                    "categoryName": "Tabs and Steps",
+                    "attributeId": "tabPrimaryVertical",
+                    "attributeName": "Vertical Primary Tab Title",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#1cbdd4",
+                         "borderPosition": "left",
+                         "borderColor": "#1cbdd4"
+                    }
+               },
+               {
+                    "categoryName": "Tabs and Steps",
+                    "attributeId": "tabPrimaryVerticalCurrent",
+                    "attributeName": "Vertical Primary Tab Title (Current)",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#1cbdd4",
+                         "borderPosition": "left",
+                         "borderColor": "#a1f2fe"
+                    }
+               },
+               {
+                    "categoryName": "Tabs and Steps",
+                    "attributeId": "tabPrimaryVerticalDisabled",
+                    "attributeName": "Vertical Primary Tab Title (Disabled)",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#cccccc",
+                         "backgroundColor": "#ffffff",
+                         "borderPosition": "left",
+                         "borderColor": "#ebeef0"
+                    }
+               },
+               {
+                    "categoryName": "Tabs and Steps",
+                    "attributeId": "tabSecondary",
+                    "attributeName": "Secondary Tab Title",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#767676",
+                         "backgroundColor": "#f5f5f5",
+                         "borderColor": "#ebeef0"
+                    }
+               },
+               {
+                    "categoryName": "Tabs and Steps",
+                    "attributeId": "tabSecondaryCurrent",
+                    "attributeName": "Secondary Tab Title (Current)",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#767676",
+                         "backgroundColor": "#ffffff"
+                    }
+               },
+               {
+                    "categoryName": "Tabs and Steps",
+                    "attributeId": "tabSecondaryDisabled",
+                    "attributeName": "Secondary Tab Title (Disabled)",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#cccccc",
+                         "backgroundColor": "#fcfcfc"
+                    }
+               },
+               {
+                    "categoryName": "Tabs and Steps",
+                    "attributeId": "step",
+                    "attributeName": "Step Title",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#767676",
+                         "backgroundColor": "#ebeef0"
+                    }
+               },
+               {
+                    "categoryName": "Tabs and Steps",
+                    "attributeId": "stepCurrent",
+                    "attributeName": "Step Title (Current)",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#0098ec"
+                    }
+               },
+               {
+                    "categoryName": "Pagination",
+                    "attributeId": "paginationRecordLine",
+                    "attributeName": "Record Line",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#37444e"
+                    }
+               },
+               {
+                    "categoryName": "Pagination",
+                    "attributeId": "paginationLinks",
+                    "attributeName": "Pagination Links",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#37444e",
+                         "backgroundColor": "#ffffff"
+                    }
+               },
+               {
+                    "categoryName": "Pagination",
+                    "attributeId": "paginationLinkHighlighted",
+                    "attributeName": "Highlighted Page Link",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#ffffff",
+                         "backgroundColor": "#2d5074"
+                    }
+               },
+               {
+                    "categoryName": "Sorting and Grouping",
+                    "attributeId": "sortLabel",
+                    "attributeName": "Sort Label",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#37444e"
+                    }
+               },
+               {
+                    "categoryName": "Sorting and Grouping",
+                    "attributeId": "sortDropdown",
+                    "attributeName": "Sort Dropdown",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#37444e",
+                         "backgroundColor": "#ffffff"
+                    }
+               },
+               {
+                    "categoryName": "Sorting and Grouping",
+                    "attributeId": "sortIndicator",
+                    "attributeName": "Sort Indicator",
+                    "cssRules": {
+                         "color": "#bfbfbf"
+                    }
+               },
+               {
+                    "categoryName": "Sorting and Grouping",
+                    "attributeId": "sortIndicatorHovered",
+                    "attributeName": "Hovered Sort Indicator",
+                    "cssRules": {
+                         "color": "#767676"
+                    }
+               },
+               {
+                    "categoryName": "Sorting and Grouping",
+                    "attributeId": "sortIndicatorHighlighted",
+                    "attributeName": "Highlighted Sort Indicator",
+                    "cssRules": {
+                         "color": "#37444e"
+                    }
+               },
+               {
+                    "categoryName": "Sorting and Grouping",
+                    "attributeId": "groupTitle",
+                    "attributeName": "Group Title",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "17px",
+                         "color": "#37444e"
+                    }
+               },
+               {
+                    "categoryName": "Disclosure",
+                    "attributeId": "disclosureDescription",
+                    "attributeName": "Disclosure Description",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#37444e",
+                         "backgroundColor": "#ffffff"
+                    }
+               },
+               {
+                    "categoryName": "Disclosure",
+                    "attributeId": "disclosureConfirmation",
+                    "attributeName": "Disclosure Confirmation",
+                    "cssRules": {
+                         "fontFamily": "Roboto",
+                         "fontSize": "14px",
+                         "color": "#37444e"
+                    }
+               },
+               {
+                    "categoryName": "Division and Actor",
+                    "attributeId": "divisionBackgroundBorders",
+                    "attributeName": "Division Background and Borders",
+                    "cssRules": {
+                         "backgroundColor": "transparent /*#ffffff*/"
+                    }
+               },
+               {
+                    "categoryName": "Division and Actor",
+                    "attributeId": "componentBackgroundBorders",
+                    "attributeName": "Component Background and Borders",
+                    "cssRules": {
+                         "backgroundColor": "transparent /*#ffffff*/",
+                         "borderColor": "#f5f5f5",
+                         "borderTopWidth": "1px",
+                         "borderRightWidth": "1px",
+                         "borderBottomWidth": "1px",
+                         "borderLeftWidth": "1px",
+                         "borderRadius": "4px",
+                         "shadow": true
+                    }
+               },
+               {
+                    "categoryName": "Division and Actor",
+                    "attributeId": "contentBackgroundBorders",
+                    "attributeName": "Content Background and Borders",
+                    "cssRules": {
+                         "backgroundColor": "transparent /*#ffffff*/",
+                         "borderColor": "transparent /*#ffffff*/",
+                         "borderTopWidth": "0px",
+                         "borderRightWidth": "0px",
+                         "borderBottomWidth": "0px",
+                         "borderLeftWidth": "0px",
+                         "borderRadius": "0px",
+                         "shadow": false
+                    }
+               },
+               {
+                    "categoryName": "Division and Actor",
+                    "attributeId": "containerBackgroundBorders",
+                    "attributeName": "Container Background and Borders",
+                    "cssRules": {
+                         "backgroundColor": "transparent /*#ffffff*/",
+                         "borderColor": "#f5f5f5",
+                         "borderTopWidth": "1px",
+                         "borderRightWidth": "1px",
+                         "borderBottomWidth": "1px",
+                         "borderLeftWidth": "1px",
+                         "borderRadius": "4px",
+                         "shadow": true
+                    }
+               }
+          ],
+          "theme": {
+               "palette": {
+                    "primary": {
+                         "color": "#006eb2",
+                         "contrastText": "#ffffff"
+                    },
+                    "secondary": {
+                         "color": "#006eb2",
+                         "contrastText": "#ffffff"
+                    },
+                    "error": {
+                         "color": "#f44336",
+                         "contrastText": "#ffffff"
+                    },
+                    "text": {
+                         "primary": "#37444e",
+                         "secondary": "#767676",
+                         "disabled": "#e6e6e6",
+                         "hint": "#e6e6e6"
+                    },
+                    "highlighted": {
+                         "color": "#37444e",
+                         "contrastText": "#ffffff"
+                    },
+                    "selected": {
+                         "color": "#e0e0e0",
+                         "contrastText": "#37444e"
+                    }
+               },
+               "typography": {
+                    "fontFamily": "Roboto",
+                    "fontSize": "small",
+                    "fontSizeSmall": {
+                         "body": 14,
+                         "bodySmall": 12.25,
+                         "h1": 20,
+                         "h2": 16,
+                         "h3": 15,
+                         "button": 14
+                    },
+                    "fontSizeMedium": {
+                         "body": 16,
+                         "bodySmall": 14,
+                         "h1": 24,
+                         "h2": 20,
+                         "h3": 18,
+                         "button": 16
+                    },
+                    "fontSizeLarge": {
+                         "body": 20,
+                         "bodySmall": 17.5,
+                         "h1": 28,
+                         "h2": 24,
+                         "h3": 22,
+                         "button": 20
+                    },
+                    "fontWeight": "regular",
+                    "fontWeightRegular": {
+                         "light": 300,
+                         "regular": 400,
+                         "medium": 500
+                    },
+                    "fontWeightLight": {
+                         "light": 100,
+                         "regular": 200,
+                         "medium": 300
+                    },
+                    "fontWeightBold": {
+                         "light": 500,
+                         "regular": 600,
+                         "medium": 700
+                    },
+                    "htmlFontSize": "small"
+               },
+               "backgroundBorder": {
+                    "borderRadius": 4,
+                    "division": {
+                         "backgroundColor": "transparent /*#7ed321*/",
+                         "borderColor": "transparent /*#ffffff*/"
+                    },
+                    "component": {
+                         "backgroundColor": "#ffffff",
+                         "borderColor": "#ffffff",
+                         "withBorderRadius": true
+                    },
+                    "content": {
+                         "backgroundColor": "transparent /*#ffffff*/",
+                         "borderColor": "transparent /*#ffffff*/"
+                    },
+                    "container": {
+                         "backgroundColor": "#ffffff",
+                         "borderColor": "transparent /*#f1f1f1*/"
+                    }
+               }
+          },
+          "fontFamilies": {
+               "Google Fonts": [
+                    "Roboto",
+                    "Lato"
+               ],
+               "Sans-serif": [
+                    "Arial, \"Helvetica Neue\", Helvetica, sans-serif",
+                    "\"Arial Black\", \"Arial Bold\", Gadget, sans-serif",
+                    "\"Arial Narrow\", Arial, sans-serif",
+                    "\"Arial Rounded MT Bold\", \"Helvetica Rounded\", Arial, sans-serif",
+                    "\"Avant Garde\", Avantgarde, \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif",
+                    "Calibri, Candara, Segoe, \"Segoe UI\", Optima, Arial, sans-serif",
+                    "Candara, Calibri, Segoe, \"Segoe UI\", Optima, Arial, sans-serif",
+                    "\"Century Gothic\", CenturyGothic, AppleGothic, sans-serif",
+                    "\"Franklin Gothic Medium\", \"Franklin Gothic\", \"ITC Franklin Gothic\", Arial, sans-serif",
+                    "Futura, \"Trebuchet MS\", Arial, sans-serif",
+                    "Geneva, Tahoma, Verdana, sans-serif",
+                    "\"Gill Sans\", \"Gill Sans MT\", Calibri, sans-serif",
+                    "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+                    "Impact, Haettenschweiler, \"Franklin Gothic Bold\", Charcoal, \"Helvetica Inserat\", \"Bitstream Vera Sans Bold\", \"Arial Black\", sans-serif",
+                    "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Geneva, Verdana, sans-serif",
+                    "Optima, Segoe, \"Segoe UI\", Candara, Calibri, Arial, sans-serif",
+                    "\"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+                    "Tahoma, Verdana, Segoe, sans-serif",
+                    "\"Trebuchet MS\", \"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Tahoma, sans-serif",
+                    "Verdana, Geneva, sans-serif"
+               ],
+               "Serif": [
+                    "Baskerville, \"Baskerville Old Face\", \"Hoefler Text\", Garamond, \"Times New Roman\", serif",
+                    "\"Big Caslon\", \"Book Antiqua\", \"Palatino Linotype\", Georgia, serif",
+                    "\"Bodoni MT\", Didot, \"Didot LT STD\", \"Hoefler Text\", Garamond, \"Times New Roman\", serif",
+                    "\"Book Antiqua\", Palatino, \"Palatino Linotype\", \"Palatino LT STD\", Georgia, serif",
+                    "\"Calisto MT\", \"Bookman Old Style\", Bookman, \"Goudy Old Style\", Garamond, \"Hoefler Text\", \"Bitstream Charter\", Georgia, serif",
+                    "Cambria, Georgia, serif",
+                    "Didot, \"Didot LT STD\", \"Hoefler Text\", Garamond, \"Times New Roman\", serif",
+                    "Garamond, Baskerville, \"Baskerville Old Face\", \"Hoefler Text\", \"Times New Roman\", serif",
+                    "Georgia, Times, \"Times New Roman\", serif",
+                    "\"Goudy Old Style\", Garamond, \"Big Caslon\", \"Times New Roman\", serif",
+                    "\"Hoefler Text\", \"Baskerville Old Face\", Garamond, \"Times New Roman\", serif",
+                    "\"Lucida Bright\", Georgia, serif",
+                    "Palatino, \"Palatino Linotype\", \"Palatino LT STD\", \"Book Antiqua\", Georgia, serif",
+                    "Perpetua, Baskerville, \"Big Caslon\", \"Palatino Linotype\", Palatino, \"URW Palladio L\", \"Nimbus Roman No9 L\", serif",
+                    "Rockwell, \"Courier Bold\", Courier, Georgia, Times, \"Times New Roman\", serif",
+                    "\"Rockwell Extra Bold\", \"Rockwell Bold\", monospace",
+                    "TimesNewRoman, \"Times New Roman\", Times, Baskerville, Georgia, serif"
+               ],
+               "Monospaced": [
+                    "Consolas, monaco, monospace",
+                    "\"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace",
+                    "\"Lucida Console\", \"Lucida Sans Typewriter\", monaco, \"Bitstream Vera Sans Mono\", monospace",
+                    "\"Lucida Sans Typewriter\", \"Lucida Console\", monaco, \"Bitstream Vera Sans Mono\", monospace",
+                    "monaco, Consolas, \"Lucida Console\", monospace",
+                    "\"Andale Mono\", AndaleMono, monospace"
+               ],
+               "Fantasy": [
+                    "Copperplate, \"Copperplate Gothic Light\", fantasy",
+                    "Papyrus, fantasy"
+               ],
+               "Script": [
+                    "\"Brush Script MT\", cursive"
+               ]
+          },
+          "actorTextColor": {}
+     },
+     "clcommon__Content__c": {
+          "id": "a198c00000AH6CCAA1",
+          "name": "los_smb_flow",
+          "stageMapping": {
+               "Home": "Application Layout One",
+               "ApplicationDashboard": "Application Layout One",
+               "PreApprovalDocument": "Application Layout One"
+          },
+          "layoutTitleMapping": {
+               "Application Layout One": {
+                    "layoutName": "ClsAppLayoutOne",
+                    "layoutVariables": {
+                         "sidebar1BackgroundColor": "#f1f1f1",
+                         "backgroundImageUrlForMain": "",
+                         "sidebar2TextColor": "#37444e",
+                         "sidebar1TextColor": "#37444e",
+                         "navigationBackgroundColor": "#e6e6e6",
+                         "gutterHeight": "0",
+                         "navigationTextColor": "#37444e",
+                         "appMaxWidth": "100%",
+                         "contentText": "Content",
+                         "headerBackgroundColor": "#006eb2",
+                         "backgroundRepeat": "repeat",
+                         "headerTextColor": "#ffffff",
+                         "showHeader": true,
+                         "gutterWidth": "0",
+                         "sidebar2Width": "0",
+                         "showNavigation": true,
+                         "sidebar1Width": "0",
+                         "navigationWidth": "100px",
+                         "showReset": true,
+                         "backgroundImageUrlForContent": "",
+                         "showSidebar1": true,
+                         "showSidebar2": true,
+                         "headerHeight": "80px",
+                         "backgroundColor": "#ffffff",
+                         "textColor": "#37444e",
+                         "backgroundImageName": "",
+                         "backgroundTypeApp": "Content",
+                         "backgroundImageUrlForApp": "",
+                         "navigationHeight": "50px",
+                         "contentBackgroundColor": "#f1f1f1",
+                         "sidebar1Height": "50px",
+                         "showContent": true,
+                         "sidebar2Height": "50px",
+                         "contentTextColor": "#37444e",
+                         "sidebar2BackgroundColor": "#f1f1f1"
+                    }
+               }
+          },
+          "layoutMapping": {
+               "ClsAppLayoutOne": {
+                    "styleSpecification": [
+                         {
+                              "category": "ClsAppLayoutOne",
+                              "style": {
+                                   "backgroundColor": "$backgroundColor;",
+                                   "color": "$textColor;",
+                                   "backgroundImage": "$backgroundImageUrlForApp;",
+                                   "backgroundSize": "$backgroundSize;",
+                                   "backgroundRepeat": "$backgroundRepeat;"
+                              }
+                         },
+                         {
+                              "category": "ClsAppLayoutOne-division",
+                              "style": {
+                                   "maxWidth": "$appMaxWidth;"
+                              }
+                         },
+                         {
+                              "category": "ClsAppLayoutOneHeader",
+                              "style": {
+                                   "backgroundColor": "$headerBackgroundColor;",
+                                   "color": "$headerTextColor;",
+                                   "height": "$headerHeight;"
+                              }
+                         },
+                         {
+                              "category": "ClsAppLayoutOneNavigation",
+                              "style": {
+                                   "backgroundColor": "$navigationBackgroundColor;",
+                                   "color": "$navigationTextColor;",
+                                   "top": "$headerHeight;",
+                                   "height": "$navigationHeight;"
+                              }
+                         },
+                         {
+                              "category": "ClsAppLayoutOneMain",
+                              "style": {
+                                   "top": "calc($headerHeight; + $navigationHeight;)",
+                                   "backgroundImage": "$backgroundImageUrlForMain;",
+                                   "backgroundSize": "$backgroundSize;",
+                                   "backgroundRepeat": "$backgroundRepeat;"
+                              }
+                         },
+                         {
+                              "category": "ClsAppLayoutOneSidebar1",
+                              "style": {
+                                   "backgroundColor": "$sidebar1BackgroundColor;",
+                                   "color": "$sidebar1TextColor;",
+                                   "width": "$sidebar1Width;"
+                              }
+                         },
+                         {
+                              "category": "ClsAppLayoutOneSidebar2",
+                              "style": {
+                                   "backgroundColor": "$sidebar2BackgroundColor;",
+                                   "color": "$sidebar2TextColor;",
+                                   "width": "$sidebar2Width;"
+                              }
+                         },
+                         {
+                              "category": "ClsAppLayoutOneContent",
+                              "style": {
+                                   "backgroundColor": "$contentBackgroundColor;",
+                                   "color": "$contentTextColor;",
+                                   "left": "$sidebar1Width;",
+                                   "right": "$sidebar2Width;",
+                                   "backgroundImage": "$backgroundImageUrlForContent;",
+                                   "backgroundSize": "$backgroundSize;",
+                                   "backgroundRepeat": "$backgroundRepeat;"
+                              }
+                         },
+                         {
+                              "category": "division",
+                              "style": {
+                                   "marginTop": "calc($gutterHeight;px/2)",
+                                   "marginRight": "calc($gutterWidth;px/2)",
+                                   "marginBottom": "calc($gutterHeight;px/2)",
+                                   "marginLeft": "calc($gutterWidth;px/2)",
+                                   "width": "calc(100% - $gutterWidth;px)",
+                                   "height": "calc(100% - $gutterHeight;px)"
+                              }
+                         },
+                         {
+                              "category": "component",
+                              "style": {
+                                   "marginTop": "calc($gutterHeight;px/2)",
+                                   "marginRight": "calc($gutterWidth;px/2)",
+                                   "marginBottom": "calc($gutterHeight;px/2)",
+                                   "marginLeft": "calc($gutterWidth;px/2)"
+                              }
+                         },
+                         {
+                              "category": "content",
+                              "style": {
+                                   "marginTop": "calc($gutterHeight;px/2)",
+                                   "marginRight": "calc($gutterWidth;px/2)",
+                                   "marginBottom": "calc($gutterHeight;px/2)",
+                                   "marginLeft": "calc($gutterWidth;px/2)"
+                              }
+                         },
+                         {
+                              "category": "container",
+                              "style": {
+                                   "marginTop": "calc($gutterHeight;px/2)",
+                                   "marginRight": "calc($gutterWidth;px/2)",
+                                   "marginBottom": "calc($gutterHeight;px/2)",
+                                   "marginLeft": "calc($gutterWidth;px/2)"
+                              }
+                         },
+                         {
+                              "category": "componentWithHeight",
+                              "style": {
+                                   "height": "calc(100% - $gutterHeight;px)"
+                              }
+                         },
+                         {
+                              "category": "contentWithHeight",
+                              "style": {
+                                   "height": "calc(100% - $gutterHeight;px)"
+                              }
+                         },
+                         {
+                              "category": "containerWithHeight",
+                              "style": {
+                                   "height": "calc(100% - $gutterHeight;px)"
+                              }
+                         }
+                    ],
+                    "layoutTemplate": {
+                         "name": "ClsAppLayoutOne",
+                         "final": true,
+                         "children": [
+                              {
+                                   "name": "Header",
+                                   "layoutPrefix": "ClsAppLayoutOne"
+                              },
+                              {
+                                   "name": "Navigation",
+                                   "layoutPrefix": "ClsAppLayoutOne"
+                              },
+                              {
+                                   "name": "Main",
+                                   "final": true,
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "direction": "horizontal",
+                                   "children": [
+                                        {
+                                             "name": "Sidebar1",
+                                             "layoutPrefix": "ClsAppLayoutOne"
+                                        },
+                                        {
+                                             "name": "Content",
+                                             "layoutPrefix": "ClsAppLayoutOne"
+                                        },
+                                        {
+                                             "name": "Sidebar2",
+                                             "layoutPrefix": "ClsAppLayoutOne"
+                                        }
+                                   ]
+                              }
+                         ]
+                    },
+                    "svgNames": {
+                         "headerText": "Header",
+                         "footerText": "Footer",
+                         "navigationText": "Navigation",
+                         "advertisementText": "Advertisement",
+                         "sidebar1Text": "Sidebar 1",
+                         "sidebar2Text": "Sidebar 2",
+                         "primaryText": "Primary Content",
+                         "secondaryText": "Secondary Content"
+                    }
+               }
+          },
+          "serverSideFontFamilies": {
+               "Google Fonts": [
+                    "Roboto",
+                    "Lato"
+               ],
+               "Sans-serif": [
+                    "Arial, \"Helvetica Neue\", Helvetica, sans-serif",
+                    "\"Arial Black\", \"Arial Bold\", Gadget, sans-serif",
+                    "\"Arial Narrow\", Arial, sans-serif",
+                    "\"Arial Rounded MT Bold\", \"Helvetica Rounded\", Arial, sans-serif",
+                    "\"Avant Garde\", Avantgarde, \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif",
+                    "Calibri, Candara, Segoe, \"Segoe UI\", Optima, Arial, sans-serif",
+                    "Candara, Calibri, Segoe, \"Segoe UI\", Optima, Arial, sans-serif",
+                    "\"Century Gothic\", CenturyGothic, AppleGothic, sans-serif",
+                    "\"Franklin Gothic Medium\", \"Franklin Gothic\", \"ITC Franklin Gothic\", Arial, sans-serif",
+                    "Futura, \"Trebuchet MS\", Arial, sans-serif",
+                    "Geneva, Tahoma, Verdana, sans-serif",
+                    "\"Gill Sans\", \"Gill Sans MT\", Calibri, sans-serif",
+                    "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+                    "Impact, Haettenschweiler, \"Franklin Gothic Bold\", Charcoal, \"Helvetica Inserat\", \"Bitstream Vera Sans Bold\", \"Arial Black\", sans-serif",
+                    "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Geneva, Verdana, sans-serif",
+                    "Optima, Segoe, \"Segoe UI\", Candara, Calibri, Arial, sans-serif",
+                    "\"Segoe UI\", Frutiger, \"Frutiger Linotype\", \"Dejavu Sans\", \"Helvetica Neue\", Arial, sans-serif",
+                    "Tahoma, Verdana, Segoe, sans-serif",
+                    "\"Trebuchet MS\", \"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Tahoma, sans-serif",
+                    "Verdana, Geneva, sans-serif"
+               ],
+               "Serif": [
+                    "Baskerville, \"Baskerville Old Face\", \"Hoefler Text\", Garamond, \"Times New Roman\", serif",
+                    "\"Big Caslon\", \"Book Antiqua\", \"Palatino Linotype\", Georgia, serif",
+                    "\"Bodoni MT\", Didot, \"Didot LT STD\", \"Hoefler Text\", Garamond, \"Times New Roman\", serif",
+                    "\"Book Antiqua\", Palatino, \"Palatino Linotype\", \"Palatino LT STD\", Georgia, serif",
+                    "\"Calisto MT\", \"Bookman Old Style\", Bookman, \"Goudy Old Style\", Garamond, \"Hoefler Text\", \"Bitstream Charter\", Georgia, serif",
+                    "Cambria, Georgia, serif",
+                    "Didot, \"Didot LT STD\", \"Hoefler Text\", Garamond, \"Times New Roman\", serif",
+                    "Garamond, Baskerville, \"Baskerville Old Face\", \"Hoefler Text\", \"Times New Roman\", serif",
+                    "Georgia, Times, \"Times New Roman\", serif",
+                    "\"Goudy Old Style\", Garamond, \"Big Caslon\", \"Times New Roman\", serif",
+                    "\"Hoefler Text\", \"Baskerville Old Face\", Garamond, \"Times New Roman\", serif",
+                    "\"Lucida Bright\", Georgia, serif",
+                    "Palatino, \"Palatino Linotype\", \"Palatino LT STD\", \"Book Antiqua\", Georgia, serif",
+                    "Perpetua, Baskerville, \"Big Caslon\", \"Palatino Linotype\", Palatino, \"URW Palladio L\", \"Nimbus Roman No9 L\", serif",
+                    "Rockwell, \"Courier Bold\", Courier, Georgia, Times, \"Times New Roman\", serif",
+                    "\"Rockwell Extra Bold\", \"Rockwell Bold\", monospace",
+                    "TimesNewRoman, \"Times New Roman\", Times, Baskerville, Georgia, serif"
+               ],
+               "Monospaced": [
+                    "Consolas, monaco, monospace",
+                    "\"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace",
+                    "\"Lucida Console\", \"Lucida Sans Typewriter\", monaco, \"Bitstream Vera Sans Mono\", monospace",
+                    "\"Lucida Sans Typewriter\", \"Lucida Console\", monaco, \"Bitstream Vera Sans Mono\", monospace",
+                    "monaco, Consolas, \"Lucida Console\", monospace",
+                    "\"Andale Mono\", AndaleMono, monospace"
+               ],
+               "Fantasy": [
+                    "Copperplate, \"Copperplate Gothic Light\", fantasy",
+                    "Papyrus, fantasy"
+               ],
+               "Script": [
+                    "\"Brush Script MT\", cursive"
+               ]
+          }
+     },
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__External_ID__c": "los_smb_flow",
+     "clcommon__Release_Checksum__c": "6fb6c93f5f937e4b457567f4b7c31e496b8f10c38a0dc22c3c46733604bc2217"
+}

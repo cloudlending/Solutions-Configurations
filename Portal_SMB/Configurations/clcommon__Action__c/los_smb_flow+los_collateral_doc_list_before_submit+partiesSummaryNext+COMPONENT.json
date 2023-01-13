@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "partiesSummaryNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "updates": [
+                    {
+                         "value": [
+                              "los_review_loan_summary",
+                              "los_document_list_validation"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(los_application_steps).appearance(current);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "ReviewAndSubmit"
+          },
+          "appearance": {
+               "position": "bottom-left",
+               "render": "$global.attr(isPrincipal);==true",
+               "label": "Next",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "partiesSummaryNext"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_collateral_doc_list_before_submit"
+     },
+     "clcommon__Component_Structure_Name__c": "los_collateral_doc_list_before_submit",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "los_collateral_doc_list_before_submit+partiesSummaryNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_doc_list_before_submit+partiesSummaryNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "5ae3c845b5695c2f792188aa02419f5beaca029471575a3a008dd67945ac3876"
+}

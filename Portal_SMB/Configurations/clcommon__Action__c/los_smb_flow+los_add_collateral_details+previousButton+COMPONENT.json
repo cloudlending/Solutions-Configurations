@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "previousButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "assignments": [
+                    {
+                         "value": 0,
+                         "field": "$nav(los_add_collateral_overlay).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "style": "secondary",
+               "label": "Back",
+               "variant": "text",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "previousButton"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_add_collateral_details"
+     },
+     "clcommon__Component_Structure_Name__c": "los_add_collateral_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_add_collateral_details+previousButton",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_add_collateral_details+previousButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "82873b74ebfe8743544bec021e2d0e8adb613c89a9527103000da55fb825325c"
+}

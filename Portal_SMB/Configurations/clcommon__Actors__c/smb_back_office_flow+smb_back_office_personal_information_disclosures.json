@@ -1,0 +1,145 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "loaded": {
+                    "updates": [
+                         {
+                              "value": [
+                                   "smb_back_office_income_information",
+                                   "smb_back_office_ownership_information"
+                              ],
+                              "name": "$nav.reloads.add;"
+                         }
+                    ],
+                    "assignments": [
+                         {
+                              "arguments": [
+                                   "$this.attr(clcommon__Party_Types__c);",
+                                   "GUARANTOR"
+                              ],
+                              "value": "$ext.checkThePartyType",
+                              "field": "$global.attr(isGuarantorPartyType);"
+                         },
+                         {
+                              "arguments": [
+                                   "$this.attr(clcommon__Party_Types__c);",
+                                   "PRINCIPAL"
+                              ],
+                              "value": "$ext.checkThePartyType",
+                              "field": "$global.attr(isPrincipalPartyType);"
+                         },
+                         {
+                              "arguments": [
+                                   "$this.attr(clcommon__Party_Types__c);",
+                                   "AUTHORIZED SIGNER"
+                              ],
+                              "value": "$ext.checkThePartyType",
+                              "field": "$global.attr(isSignerPartyType);"
+                         },
+                         {
+                              "arguments": [
+                                   "$this.attr(clcommon__Party_Types__c);",
+                                   "BENEFICIAL OWNER"
+                              ],
+                              "value": "$ext.checkThePartyType",
+                              "field": "$global.attr(isBeneficialPartyType);"
+                         }
+                    ]
+               },
+               "fieldChange": {
+                    "clcommon__Party_Types__c": {
+                         "updates": [
+                              {
+                                   "value": [
+                                        "smb_back_office_income_information",
+                                        "smb_back_office_ownership_information"
+                                   ],
+                                   "name": "$nav.reloads.add;"
+                              }
+                         ],
+                         "assignments": [
+                              {
+                                   "arguments": [
+                                        "$this.attr(clcommon__Party_Types__c);",
+                                        "GUARANTOR"
+                                   ],
+                                   "value": "$ext.checkThePartyType",
+                                   "field": "$global.attr(isGuarantorPartyType);"
+                              },
+                              {
+                                   "arguments": [
+                                        "$this.attr(clcommon__Party_Types__c);",
+                                        "PRINCIPAL"
+                                   ],
+                                   "value": "$ext.checkThePartyType",
+                                   "field": "$global.attr(isPrincipalPartyType);"
+                              },
+                              {
+                                   "arguments": [
+                                        "$this.attr(clcommon__Party_Types__c);",
+                                        "AUTHORIZED SIGNER"
+                                   ],
+                                   "value": "$ext.checkThePartyType",
+                                   "field": "$global.attr(isSignerPartyType);"
+                              },
+                              {
+                                   "arguments": [
+                                        "$this.attr(clcommon__Party_Types__c);",
+                                        "BENEFICIAL OWNER"
+                                   ],
+                                   "value": "$ext.checkThePartyType",
+                                   "field": "$global.attr(isBeneficialPartyType);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "sectionStyle": "layout",
+               "editableFields": {
+                    "Id": false
+               },
+               "renderFields": {
+                    "Id": false
+               },
+               "grid": {
+                    "messagePositions": {
+                         "saveSubmitError": "top",
+                         "loadingError": "top",
+                         "loadingAnimation": "global"
+                    },
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "partyId": "$global.attr(partyId);"
+               },
+               "structureName": "smb_back_office_fetch_party_role"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_personal_information_disclosures",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_disclosures",
+     "clcommon__Release_Checksum__c": "d97ed23934ca14847a2464ed75e033b70c2eab3c848dea684139796e9038f2d2"
+}

@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "sendResetEmail",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "handler": {
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(GettingStartedContainer).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "remoteActionArguments": {
+               "emailTemplateName": "Experience_Cloud_New_Member_Welcome_Email",
+               "email": "$this.attr(email);"
+          },
+          "appearance": {
+               "render": false,
+               "label": "Next",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "sendResetEmail"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_signup+RegisterDetails"
+     },
+     "clcommon__Component_Structure_Name__c": "los_register_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalForgotPassword",
+     "clcommon__Unique_Action_Name__c": "RegisterDetails+sendResetEmail",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_signup+RegisterDetails+sendResetEmail+COMPONENT",
+     "clcommon__Release_Checksum__c": "f9186950a47c401c80e8c164cb8afc2e0fc1f74611a01b6a897ba9b4c156c324"
+}

@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "SMBBackOfficeAddAsset",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "SMBBackOfficeAddAsset",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "render": "$global.attr(existingCollateral);!=\"Yes\"",
+               "label": "<span>Add More Item</span>&nbsp;<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(enableAssetSubmitButton);",
+                         "value": "No"
+                    }
+               ],
+               "cruds": [
+                    {
+                         "method": "insert",
+                         "source": "$state(smb_back_office_business_assets_container);",
+                         "options": {
+                              "defaultValue": true,
+                              "structureName": "smb_back_office_business_assets_container"
+                         }
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_assets_container"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_business_assets_container",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_business_assets_container+SMBBackOfficeAddAsset",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_assets_container+SMBBackOfficeAddAsset+COMPONENT",
+     "clcommon__Release_Checksum__c": "4df07edd37e585dcd949b53d18c2fbcadc908ac43986d302196193b57fe9b48d"
+}

@@ -1,0 +1,58 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "selectApplicaiton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "selectApplicaiton",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "position": "bottom-left",
+               "label": "Automate"
+          },
+          "automatic": true,
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(renderPrincipal);",
+                         "value": "$result.attr(PRINCIPAL);"
+                    },
+                    {
+                         "field": "$global.attr(renderGuarantor);",
+                         "value": "$result.attr(GUARANTOR);"
+                    },
+                    {
+                         "field": "$global.attr(renderSinger);",
+                         "value": "$result.attr(AUTHORIZED SIGNER);"
+                    },
+                    {
+                         "field": "$global.attr(renderBeneficialOwner);",
+                         "value": "$result.attr(BENEFICIAL OWNER);"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_review_application_summary"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_review_application_summary",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalGetCurrentStage",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_review_application_summary+selectApplicaiton",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_review_application_summary+selectApplicaiton+COMPONENT",
+     "clcommon__Release_Checksum__c": "0c645d56dd8b8acd8b91afb38ff75a5ce42a97592e13ffa1538a380de3939811"
+}

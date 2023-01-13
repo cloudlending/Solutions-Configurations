@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "savePortalStage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "updates": [
+                    {
+                         "value": [
+                              "los_personal_information_disclosures",
+                              "los_identification_details",
+                              "los_ownership_details",
+                              "los_personal_income_details",
+                              "los_party_type_details",
+                              "los_business_parties_list"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(los_application_steps).appearance(current);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "DemographicInformation"
+          },
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Next",
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
+          },
+          "property": {},
+          "name": "savePortalStage"
+     },
+     "clcommon__Action_Order__c": 8,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_personal_information_disclosures"
+     },
+     "clcommon__Component_Structure_Name__c": "los_personal_information_disclosures",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "los_personal_information_disclosures+savePortalStage",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_personal_information_disclosures+savePortalStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "0101d9a4ce3e7b5ce509a464a89d579bb59cd67ba317581f30469eea4ab40c1f"
+}

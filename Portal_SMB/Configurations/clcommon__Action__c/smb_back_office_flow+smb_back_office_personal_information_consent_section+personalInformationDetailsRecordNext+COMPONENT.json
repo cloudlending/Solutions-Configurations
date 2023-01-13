@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "personalInformationDetailsRecordNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "personalInformationDetailsRecordNext",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Next",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "clcommon__Party__c": {
+                    "solcommon__Position_In_Company__c": "$state(smb_back_office_ownership_information).attr(solcommon__Position_In_Company__c);",
+                    "clcommon__Percent_Ownership__c": "$state(smb_back_office_ownership_information).attr(clcommon__Percent_Ownership__c);",
+                    "id": "$global.attr(partyId);",
+                    "clcommon__Party_Types__c": "$state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c);",
+                    "clcommon__Signer_Capacity__c": "$state(smb_back_office_ownership_information).attr(clcommon__Signer_Capacity__c);",
+                    "genesis__Credit_Check_Consent__c": "$this.attr(genesis__Credit_Check_Consent__c);",
+                    "solcommon__Consent_To_Disclosure_And_Document__c": "$this.attr(solcommon__Consent_To_Disclosure_And_Document__c);"
+               }
+          },
+          "validation": [],
+          "successHandler": {
+               "assignments": [],
+               "actions": [
+                    {
+                         "condition": "$state(smb_back_office_income_information).attr(Id); == \"new_record_id\" or $state(smb_back_office_income_information).attr(Id); == null",
+                         "name": "savePortalIncomeInfo"
+                    },
+                    {
+                         "condition": "$state(smb_back_office_income_information).attr(Id); != \"new_record_id\" and $state(smb_back_office_income_information).attr(Id); !=null",
+                         "name": "savePortalUpdateIncomeInfo"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_personal_information_consent",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalUpdateParty",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_personal_information_consent_section+personalInformationDetailsRecordNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section+personalInformationDetailsRecordNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "d608032676eddbac7de7b992db99de368de15ef2b27c70bbef84a9adb6060735"
+}

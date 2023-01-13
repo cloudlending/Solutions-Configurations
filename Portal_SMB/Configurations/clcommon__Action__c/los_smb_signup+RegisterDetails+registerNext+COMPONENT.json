@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "registerNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "registerWithPartialMatchNext",
+                         "condition": "$result.attr(apiResponse);==3 or $result.attr(apiResponse);==0 or $result.attr(apiResponse);==2"
+                    },
+                    {
+                         "name": "sendResetEmail",
+                         "condition": "$result.attr(apiResponse);==1"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$result.attr(apiResponse);",
+                         "field": "$global.attr(statusCode);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "contact": "$state(RegisterDetails);",
+               "permissionSetName": "SMB_Secured_Borrower"
+          },
+          "appearance": {
+               "label": "Next",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "registerNext"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_signup+RegisterDetails"
+     },
+     "clcommon__Component_Structure_Name__c": "los_register_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveUserData",
+     "clcommon__Unique_Action_Name__c": "RegisterDetails+registerNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_signup+RegisterDetails+registerNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "998ffe16c075d4fd8bafcaab18266743a50b1f2f11018022574eb84e1e71d684"
+}

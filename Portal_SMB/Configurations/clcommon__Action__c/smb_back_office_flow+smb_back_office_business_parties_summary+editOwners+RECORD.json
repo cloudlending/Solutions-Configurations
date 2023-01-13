@@ -1,0 +1,82 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "editOwners",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "editOwners",
+          "property": {},
+          "appearance": {
+               "label": "edit",
+               "style": "iconic",
+               "render": "$this.attr(clcommon__Type__r.Name);!=\"BORROWER\""
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": "$this.attr(id);"
+                    },
+                    {
+                         "field": "$global.attr(editParty);",
+                         "value": true
+                    },
+                    {
+                         "field": "$global.attr(contactId);",
+                         "value": "$this.attr(clcommon__Contact__c);"
+                    },
+                    {
+                         "field": "$global.attr(borrowerAccountIdExisting);",
+                         "value": "$this.attr(clcommon__Account__c);"
+                    },
+                    {
+                         "field": "$nav(smb_back_office_add_business_parties_container).appearance(current);",
+                         "value": "PersonalInformation"
+                    },
+                    {
+                         "field": "$nav(smb_back_office_add_business_parties_container).appearance(lastEnabled);",
+                         "value": 0
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "smb_back_office_add_business_parties_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_business_parties_summary"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "smb_back_office_personal_information_details",
+                              "smb_back_office_income_information",
+                              "smb_back_office_ownership_information",
+                              "smb_back_office_personal_information_disclosures",
+                              "smb_back_office_personal_information_consent_section"
+                         ]
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_parties_summary"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_business_parties_summary",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_business_parties_summary+editOwners",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_parties_summary+editOwners+RECORD",
+     "clcommon__Release_Checksum__c": "4eab54c38c7e959163967e397b43db643a60d84c1d79edd2463effd3b29e0806"
+}

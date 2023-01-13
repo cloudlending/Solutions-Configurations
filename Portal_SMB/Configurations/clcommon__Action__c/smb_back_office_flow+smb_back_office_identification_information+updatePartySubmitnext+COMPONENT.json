@@ -1,0 +1,68 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "updatePartySubmitnext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "updatePartySubmitnext",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "render": false,
+               "label": "Next",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {
+               "clcommon__Party__c": {
+                    "solcommon__Submission_Status__c": "SUBMITTED",
+                    "id": "$global.attr(partyId);"
+               },
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "validation": [
+               "smb_back_office_identification_information"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(identificationInfoId);",
+                         "value": "$global.attr(identificationInfoIdE);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "smb_back_office_add_business_parties_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_business_parties_summary"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_add_business_parties_container"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_identification_information"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_identification_information",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalUpdateParty",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_identification_information+updatePartySubmitnext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_identification_information+updatePartySubmitnext+COMPONENT",
+     "clcommon__Release_Checksum__c": "2933041c6a40cfb639d24c9c980af7877a65633afe43d2887d075d8967f80be1"
+}

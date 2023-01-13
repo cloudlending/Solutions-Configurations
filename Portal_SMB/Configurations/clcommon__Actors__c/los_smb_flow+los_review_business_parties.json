@@ -1,0 +1,71 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "clcommon__Contact__r.Email": false,
+                    "Id": false,
+                    "clcommon__Account__r.Id": false,
+                    "clcommon__Contact__r.Id": false,
+                    "clcommon__Contact__r.LastName": false,
+                    "clcommon__Contact__r.FirstName": false,
+                    "clcommon__Contact__r.Phone": false,
+                    "clcommon__Party_Types__c": false,
+                    "clcommon__Account__r.Name": false,
+                    "clcommon__Percent_Ownership__c": false
+               },
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 12
+                    }
+               },
+               "templates": {
+                    "record": [
+                         {
+                              "condition": "$this.attr(clcommon__Percent_Ownership__c);>19",
+                              "template": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(clcommon__Account__r.Name);</span> <div class=\"partyTypeLabel cardItem\"> $this.attr(clcommon__Party_Types__c); </div><div class=\"cardItem\">$this.attr(clcommon__Contact__r.Email, email);</div><div class=\"cardItem\"><progress id=\"clcommon__Percent_Ownership__c\" value=\"$this.attr(clcommon__Percent_Ownership__c);\" max=\"100\"></progress>$this.attr(clcommon__Percent_Ownership__c);%</div></div>"
+                         },
+                         {
+                              "condition": "$this.attr(clcommon__Percent_Ownership__c);==undefined or $this.attr(clcommon__Percent_Ownership__c);==null or $this.attr(clcommon__Percent_Ownership__c);== 0",
+                              "template": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(clcommon__Account__r.Name);</span> <div class=\"partyTypeLabel cardItem\"> $this.attr(clcommon__Party_Types__c); </div><div class=\"cardItem\">$this.attr(clcommon__Contact__r.Email, email);</div></div>"
+                         }
+                    ]
+               },
+               "renderFields": {
+                    "Id": false,
+                    "clcommon__Account__r.Id": false,
+                    "clcommon__Contact__r.Id": false,
+                    "clcommon__Account__r.Name": false
+               },
+               "title": "Ownership",
+               "columns": 1,
+               "fieldColumns": 1
+          },
+          "property": {
+               "queryProcess": {
+                    "post": "$ext.processPartyType"
+               },
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "los_additional_owners_details"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_review_business_parties",
+     "clcommon__External_ID__c": "los_smb_flow+los_review_business_parties",
+     "clcommon__Release_Checksum__c": "2d5f7286ee1a8b3b6f3fc6dd7cf44da5d5c1f230ec1c7fb3d22052f51fbb7dc6"
+}

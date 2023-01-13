@@ -1,0 +1,156 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_loan_product_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "smb_back_office_loan_product_details",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_loan_product_details",
+          "tableName": "genesis__applications__c",
+          "whereClause": {
+               "freeForm": "id = ':appId'"
+          },
+          "sections": [
+               {
+                    "id": "5b25333ccad-f477-414d-aba0-0asdc15ea02b475",
+                    "name": "Loan Amount",
+                    "title": "How much money do you want to borrow?",
+                    "fields": [
+                         {
+                              "id": "61dfea2e-e160-455e-a3bf-45051b1e011e",
+                              "fieldName": "genesis__Loan_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Loan Amount",
+                                   "placeholderText": "Loan Amount",
+                                   "defaultValue": 0,
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Loan_Amount__c); > 0",
+                                             "message": "<span style=\"color:red\">Anunal Revenue should be greater than zero </span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Loan amount is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "initValue": "0"
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         },
+                         {
+                              "id": "8128d5d9-b2ec-4136-a31f-1c92e4b53634",
+                              "fieldName": "genesis__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account ID",
+                                   "ariaLabel": "Account ID"
+                              }
+                         },
+                         {
+                              "id": "9326fee2-59d8-4299-9b62-c13db5eb90a0",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "4a3637ad-58cc-41b0-9594-050ee631bc45",
+                              "fieldName": "genesis__Requested_Loan_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Loan Amount",
+                                   "placeholderText": "Loan Amount",
+                                   "defaultValue": 0,
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Requested_Loan_Amount__c); > 0",
+                                             "message": "<span style=\"color:red\">Anunal Revenue should be greater than zero </span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Loan amount is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "initValue": "100"
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Requested Loan Amount"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "2830a8fe-f9f4-4bba-9bea-873c7af709fb",
+                    "name": "Loan Product",
+                    "title": "What type of loan are you looking for?",
+                    "fields": [
+                         {
+                              "id": "49814b69-b0a6-41e3-84ea-e389404d0304",
+                              "relationType": "reference",
+                              "fieldName": "genesis__CL_Product__c",
+                              "relationName": "genesis__CL_Product__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__CL_Product__c",
+                                   "whereClause": {
+                                        "freeForm": "id != null and solcommon__Show_On_Portal__c = true and clcommon__Asset_Class__r.Name in ('Small Business','Small Business Unsecured','Small Business Real Estate')"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "e104e92a-f882-46aa-bb09-6a570e7f22b7",
+                                             "fields": [
+                                                  {
+                                                       "id": "3f7952a6-e93e-4da8-8cb6-68ebab0ce521",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "d36e5573-b398-4a85-9eb7-f481b490b367",
+                                                       "fieldName": "solcommon__Portal_Label__c",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Portal Label"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "CL Product",
+                                   "defaultValue": null,
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Product is required."
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "smb_back_office_loan_product_details",
+     "clcommon__Release_Checksum__c": "23db80b02593bac6921f065b37c65728ddc29060e7adfda847b28b7a3cd7aa1e"
+}

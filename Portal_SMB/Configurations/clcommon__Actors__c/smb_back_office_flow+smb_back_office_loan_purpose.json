@@ -1,0 +1,79 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "clickRecord": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(clcommon__CL_Purpose__r.Id);",
+                              "field": "$global.attr(loanPurpose);"
+                         },
+                         {
+                              "value": "$this.attr(clcommon__CL_Purpose__r.Name);",
+                              "field": "$global.attr(loanPurposeName);"
+                         },
+                         {
+                              "value": "",
+                              "field": "$global.attr(purposeValidation);"
+                         },
+                         {
+                              "value": "@mathjs{$this.attr(clcommon__CL_Purpose__r.Name);==\"Other\" ? $state(smb_back_office_loan_existing_purpose).attr(genesis__Application__r.genesis__Other_Purpose__c); : null };",
+                              "field": "$state(smb_back_office_loan_existing_purpose).attr(genesis__Application__r.genesis__Other_Purpose__c);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "sortedField": {
+                    "ascending": true,
+                    "name": "clcommon__CL_Purpose__r.Name"
+               },
+               "sortableFields": [
+                    "clcommon__CL_Purpose__r.Name"
+               ],
+               "editableFields": {
+                    "clcommon__CL_Purpose__r.Name": false
+               },
+               "highlight": true,
+               "noLabelField": "clcommon__CL_Purpose__r.Name",
+               "textAfter": "$global.attr(purposeValidation);",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderFields": {
+                    "clcommon__CL_Purpose__r.Id": false
+               },
+               "autoHighlight": {
+                    "clcommon__CL_Purpose__r.Id": "$state(smb_back_office_loan_existing_purpose).attr(genesis__Application__r.genesis__CL_Purpose__r.Id);"
+               },
+               "fieldColumns": 2,
+               "title": "Loan Purpose"
+          },
+          "property": {
+               "whereClause": {
+                    "loanProduct": "$global.attr(loanProduct);"
+               },
+               "structureName": "smb_back_office_loan_purpose_details_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_loan_purpose",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_loan_purpose",
+     "clcommon__Release_Checksum__c": "909bc4bd28cf94e0d7fe49d90dcf2726974fb414ec12ec448e8b1e35287b3778"
+}

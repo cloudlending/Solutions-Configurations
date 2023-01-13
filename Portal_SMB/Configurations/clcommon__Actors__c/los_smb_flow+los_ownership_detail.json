@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "$state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;PRINCIPAL\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"PRINCIPAL;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER;\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"GUARANTOR;PRINCIPAL;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;PRINCIPAL;GUARANTOR\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER;PRINCIPAL\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"PRINCIPAL;BENEFICIAL OWNER;GUARANTOR\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR;PRINCIPAL\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"PRINCIPAL;GUARANTOR;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"PRINCIPAL;AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"PRINCIPAL;BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;PRINCIPAL;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;PRINCIPAL;AUTHORIZED SIGNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR;PRINCIPAL;AUTHORIZED SIGNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER;PRINCIPAL\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;PRINCIPAL;GUARANTOR;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;PRINCIPAL;GUARANTOR;AUTHORIZED SIGNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;PRINCIPAL;AUTHORIZED SIGNER;GUARANTOR\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"PRINCIPAL;GUARANTOR;BENEFICIAL OWNER;AUTHORIZED SIGNER\" or  $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"PRINCIPAL;GUARANTOR;AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"GUARANTOR;PRINCIPAL;BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER;PRINCIPAL;GUARANTOR\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;GUARANTOR;PRINCIPAL;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;GUARANTOR;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR;AUTHORIZED SIGNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;GUARANTOR;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER;GUARANTOR\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"PRINCIPAL;BENEFICIAL OWNER;AUTHORIZED SIGNER;GUARANTOR\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER;GUARANTOR;PRINCIPAL\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER;GUARANTOR;PRINCIPAL\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"PRINCIPAL;AUTHORIZED SIGNER;GUARANTOR;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"GUARANTOR;AUTHORIZED SIGNER;PRINCIPAL;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER;PRINCIPAL;AUTHORIZED SIGNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"PRINCIPAL;AUTHORIZED SIGNER;BENEFICIAL OWNER;GUARANTOR\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER;PRINCIPAL;GUARANTOR\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;GUARANTOR;BENEFICIAL OWNER;PRINCIPAL\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;PRINCIPAL;BENEFICIAL OWNER;GUARANTOR\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR;AUTHORIZED SIGNER;PRINCIPAL\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"GUARANTOR;AUTHORIZED SIGNER;BENEFICIAL OWNER;PRINCIPAL\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"GUARANTOR;PRINCIPAL;AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"PRINCIPAL;BENEFICIAL OWNER;GUARANTOR;AUTHORIZED SIGNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER;GUARANTOR\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"PRINCIPAL;BENEFICIAL OWNER;GUARANTOR;AUTHORIZED SIGNER\" or $state(smb_back_office_personal_information_disclosures).attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER;PRINCIPAL\" ",
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);",
+                    "partyId": "$global.attr(borrowerPartyId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "los_ownership_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_ownership_detail",
+     "clcommon__External_ID__c": "los_smb_flow+los_ownership_detail",
+     "clcommon__Release_Checksum__c": "c50928d2de9c7808794706c668831f988176e1036c283c5083b1d78a82edd807"
+}

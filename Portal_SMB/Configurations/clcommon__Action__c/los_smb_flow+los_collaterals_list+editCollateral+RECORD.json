@@ -1,0 +1,80 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "editCollateral",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "updates": [
+                    {
+                         "value": "los_edit_collateral_overlay",
+                         "name": "$nav.overlay.add;"
+                    },
+                    {
+                         "value": "los_edit_collateral_details",
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$this.attr(genesis__Collateral__r.Id);",
+                         "field": "$global.attr(collateralId);"
+                    },
+                    {
+                         "value": "",
+                         "field": "$global.attr(collateralValidation);"
+                    },
+                    {
+                         "value": 0,
+                         "field": "$nav(los_edit_collateral_overlay).appearance(current);"
+                    },
+                    {
+                         "value": 0,
+                         "field": "$nav(los_edit_collateral_overlay).appearance(lastEnabled);"
+                    },
+                    {
+                         "value": 0,
+                         "field": "$nav(los_edit_collateral_rent_roll_container).appearance(current);"
+                    },
+                    {
+                         "value": true,
+                         "field": "$global.attr(collateralEdit);"
+                    },
+                    {
+                         "value": "Yes",
+                         "field": "$global.attr(enableAssetSubmitButton);"
+                    },
+                    {
+                         "value": "No",
+                         "field": "$global.attr(existingCollateral);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "style": "iconic",
+               "label": "edit",
+               "tooltip": "Edit Collateral"
+          },
+          "property": {},
+          "name": "editCollateral"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_collaterals_list"
+     },
+     "clcommon__Component_Structure_Name__c": "get_collateral_list",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_collaterals_list+editCollateral",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_collaterals_list+editCollateral+RECORD",
+     "clcommon__Release_Checksum__c": "42b539a28f2e79dd004d5e050b55147d268d00552d6a735245bcb99393c1d1d9"
+}

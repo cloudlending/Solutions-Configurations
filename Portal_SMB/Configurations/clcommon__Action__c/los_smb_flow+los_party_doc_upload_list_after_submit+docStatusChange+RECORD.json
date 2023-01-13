@@ -1,0 +1,51 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "docStatusChange",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "value": [
+                              "los_party_doc_upload_list_after_submit",
+                              "los_collateral_doc_upload_null_acc",
+                              "los_preapproval_record_count"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "documentCategoryId": "$global.attr(SubmittedDoc);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "style": "primary",
+               "render": false,
+               "label": "View"
+          },
+          "property": {},
+          "name": "docStatusChange"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_party_doc_upload_list_after_submit"
+     },
+     "clcommon__Component_Structure_Name__c": "los_party_doc_upload_list_after_submit",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalChangeDocmentCategoryStatus",
+     "clcommon__Unique_Action_Name__c": "los_party_doc_upload_list_after_submit+docStatusChange",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_party_doc_upload_list_after_submit+docStatusChange+RECORD",
+     "clcommon__Release_Checksum__c": "81ccc03f25c07d35a0a837d32e43997a39f56455c56ed8f6d8da94bd5f06d06f"
+}

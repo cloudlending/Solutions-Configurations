@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "previewPopover",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "updates": [
+                    {
+                         "value": "LosDocumentPreviewContainer",
+                         "name": "$nav.overlay.add;"
+                    },
+                    {
+                         "value": [
+                              "los_document_upload_list",
+                              "los_document_upload_list2"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$this.attr(clcommon__DocCat_Attachment_Associations__r);",
+                         "field": "$state(los_document_list);"
+                    },
+                    {
+                         "value": "$this.attr(clcommon__Category_Name__c);",
+                         "field": "$global.attr(categoryName);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "style": "primary",
+               "render": "$this.attr(clcommon__DocCat_Attachment_Associations__r).count(); > 0",
+               "label": "View"
+          },
+          "property": {},
+          "name": "previewPopover"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_document_upload_list2"
+     },
+     "clcommon__Component_Structure_Name__c": "los_fetch_required_documentsforNullAcc",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_document_upload_list2+previewPopover",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_document_upload_list2+previewPopover+RECORD",
+     "clcommon__Release_Checksum__c": "7472e12ffd2b4da6a218b8b26c4f71e466c9f733aeaf8867658ab015714ae096"
+}
