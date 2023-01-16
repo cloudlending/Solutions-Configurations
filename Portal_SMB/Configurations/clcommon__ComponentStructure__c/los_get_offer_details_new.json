@@ -2,25 +2,27 @@
      "attributes": {
           "type": "clcommon__ComponentStructure__c"
      },
-     "Name": "get_manual_offer_selected_details",
+     "Name": "get_offer_details_new",
      "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "los_get_offer_details_new",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Unique_Name__c": "get_manual_offer_selected_details",
+     "clcommon__Release_Checksum__c": "e97c21fe9fc46b879fd2391abf08ef450ac7086edb772211b7f4d3d6caffd46c",
+     "clcommon__Unique_Name__c": "get_offer_details_new",
      "clcommon__data__c": {
-          "structureName": "get_manual_offer_selected_details",
-          "tableName": "genesis__Applications__c",
+          "structureName": "get_offer_details_new",
+          "tableName": "genesis__application_pricing_detail__c",
           "whereClause": {
-               "freeForm": "id= ':appId'"
+               "freeForm": "genesis__Application__c = ':appId'"
           },
           "sections": [
                {
-                    "id": "55f394e7-599e-4433-9156-090eb2543bd2",
+                    "id": "58550f80-ddc75d-4fc5-ba9e-5d44dbdab756",
                     "fields": [
                          {
-                              "id": "9feb6f60-cf57-4639-944b-99cd1cc1caae",
-                              "fieldName": "genesis__Loan_Amount__c",
+                              "id": "b567b907-9028-4208-bc3b-6e9eb62f5ac3",
+                              "fieldName": "genesis__Application__r.genesis__Loan_Amount__c",
                               "fieldUi": {
                                    "fieldType": "currency",
                                    "label": "Loan Amount",
@@ -28,35 +30,63 @@
                               }
                          },
                          {
-                              "id": "8502e0a0-d1c7-4e64-b857-621b381abd33",
+                              "id": "92018f74-fc89-4150-b492-ef94233b9c9b",
                               "fieldName": "genesis__Interest_Rate__c",
                               "fieldUi": {
-                                   "fieldType": "number",
-                                   "label": "Interest Rate",
-                                   "ariaLabel": "Interest Rate"
+                                   "fieldType": "percent",
+                                   "label": "Interest Rate (%)",
+                                   "ariaLabel": "Interest Rate (%)"
                               }
                          },
                          {
-                              "id": "91ea15f7-275b-4e85-a260-561d624003bc",
+                              "id": "cddbd7c1-303c-4930-8856-ce2fd012e153",
                               "fieldName": "genesis__Term__c",
                               "fieldUi": {
                                    "fieldType": "number",
-                                   "label": "Term",
+                                   "label": "Term(in Months)",
+                                   "settingsOptions": {
+                                        "minimumFractionDigits": 0
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralDecimalScale": 0
+                                        }
+                                   },
                                    "ariaLabel": "Term"
                               }
                          },
                          {
-                              "id": "0abd2936-789f-42e7-8f04-3dedde4986f8",
-                              "fieldName": "genesis__Payment_Amount__c",
+                              "id": "ea101582-d0d2-4710-b0a0-871dda1f4f01",
+                              "fieldName": "genesis__Payment_Amount_Derived__c",
                               "fieldUi": {
-                                   "fieldType": "number",
+                                   "fieldType": "currency",
                                    "label": "Payment Amount",
                                    "ariaLabel": "Payment Amount"
                               }
                          },
                          {
-                              "id": "cea869ae-7b99-437b-b89d-9b7670d1be0a",
-                              "fieldName": "genesis__Product_Type__c",
+                              "id": "7aa90e76-ca14-4003-a8bb-00fc6576f256",
+                              "fieldName": "genesis__Selected__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Selected",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Selected"
+                              }
+                         },
+                         {
+                              "id": "cbf6a585-dc5f-4958-b5df-5bf77c983d16",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "e0932662-3c8f-4699-869d-03b7ad7de98e",
+                              "fieldName": "genesis__Application__r.genesis__Product_Type__c",
                               "fieldUi": {
                                    "fieldType": "picklist",
                                    "label": "Product Type",
@@ -104,7 +134,5 @@
                     ]
                }
           ]
-     },
-     "clcommon__External_ID__c": "get_manual_offer_selected_details",
-     "clcommon__Release_Checksum__c": "fda1bc9065615b665cbbdb05597f8a8e11483d3a999641ca2be36150185fde42"
+     }
 }

@@ -5,884 +5,884 @@
      "Name": "smb_back_office_flow",
      "clcommon__Allow_Guest_User_Access__c": false,
      "clcommon__Description__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Is_Template__c": false,
      "clcommon__Related_Configuration_Mapping__c": null,
+     "clcommon__Release_Checksum__c": "b1b2c72048d13de8d6997bc385f2e6adf60c7af51494c54b2e3942b90fd8283c",
      "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
      "clcommon__Unique_Name__c": "smb_back_office_flow",
      "clcommon__data__c": {
-          "messages": {
-               "submitFailureText": "Failed to submit",
-               "loadingFailureText": "Failed to load",
-               "saveFailureText": "Failed to save",
-               "submitAnimationText": "Sending...",
-               "submitSuccessText": "Succeed",
-               "savingAnimationText": "Saving...",
-               "uploadFailureText": "Failed to upload",
-               "loadingAnimationText": "Loading...",
-               "submitExpirationText": "Failed to submit",
-               "saveSuccessText": "Succeed",
-               "uploadFileTooLargeError": "File too large"
-          },
-          "global": {
-               "ExistingCustomer": "",
-               "$global.attr(AccName);": "xyz1233",
-               "noIncome": false,
-               "HMDALoan": false,
-               "smallBusinessRealEstate": "Small Business- Real Estate",
-               "smallBusiness": "Small Business",
-               "smallBusinessSecured": "Small Business- Secured",
-               "applicationId": "$url(Id);"
-          },
-          "settings": {
-               "treeIcons": {
-                    "toExpand": "chevron_right",
-                    "toCollapse": "expand_more",
-                    "end": "lens"
-               },
-               "filters": {
-                    "keywordLabel": "Keyword",
-                    "dialogTitle": "Filters By",
-                    "icon": "filter_list",
-                    "label": "Filtered",
-                    "clearAllText": "Clear All",
-                    "startDateLabel": "Start date",
-                    "endDateLabel": "End date",
-                    "minNumberLabel": "Mininum",
-                    "maxNumberLabel": "Maximum",
-                    "toLabel": "to",
-                    "fromLabel": "from",
-                    "orLabel": "or",
-                    "notSpecifiedLabel": "Not specified",
-                    "clearLabel": "Clear Filter",
-                    "applyLabel": "Apply",
-                    "invalidText": "Invalid value"
-               },
-               "pagination": {
-                    "recordLineTemplate": "$start; - $end; of $total;",
-                    "numberOfRecordsPerPage": 10,
-                    "numberOfPageLinks": 5,
-                    "firstLinkText": "first_page",
-                    "previousLinkText": "chevron_left",
-                    "nextLinkText": "chevron_right",
-                    "lastLinkText": "last_page"
-               },
-               "locale": "en-us",
-               "minimumFractionDigits": 2,
-               "collapsibleIcons": {
-                    "expanded": "expand_more",
-                    "collapsed": "expand_less"
-               },
-               "uploadText": {
-                    "completed": "Completed",
-                    "cancelInProgress": "Cancel",
-                    "removeError": "close"
-               },
-               "skeleton": {
-                    "listView": {
-                         "withAction": {
-                              "height": "72px",
-                              "padding": "24px 12px"
+          "start": "Home",
+          "stages": {
+               "Home": {
+                    "prerequisite": [],
+                    "layout": {
+                         "layoutId": "9e4b668c-6d0b-4499-81f4-3aabbc05f41b",
+                         "name": "ClsAppLayoutOne",
+                         "final": true,
+                         "children": [
+                              {
+                                   "layoutId": "03eea523-2603-4e2b-8321-ebd226bc2fdc",
+                                   "name": "Header",
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "children": [
+                                        {
+                                             "layoutId": "445b0f2b-203b-4798-aaf2-d417381bf836",
+                                             "name": "smb_back_office_header",
+                                             "width": "100%"
+                                        }
+                                   ]
+                              },
+                              {
+                                   "layoutId": "9dcbb447-e44b-45a5-95ae-1917f5ceb9e9",
+                                   "name": "Navigation",
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "children": [
+                                        {
+                                             "layoutId": "smb12345_smb_back_office_content_layout",
+                                             "name": "smb_back_office_content_layout"
+                                        }
+                                   ]
+                              },
+                              {
+                                   "layoutId": "43f3e6b1-527d-416f-8e36-17f3a436fa35",
+                                   "name": "Main",
+                                   "final": true,
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "children": [
+                                        {
+                                             "layoutId": "09216dfe-db73-4e7b-be96-50ae9b526733",
+                                             "name": "Content",
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "children": [
+                                                  {
+                                                       "layoutId": "9bf4482a-b4f7-4c0a-a7c8-85c48cb61161",
+                                                       "name": "smb_back_office_application_flow_steps",
+                                                       "children": [
+                                                            {
+                                                                 "layoutId": "c003dc80-f6e1-40df-beb0-0f95733bd7e7",
+                                                                 "name": "smb_back_office_getting_started_container",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "bb07b539-c2be-422d-aabc-f63805ff67ba",
+                                                                           "name": "smb_back_office_existing_customer_div",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "4f21e440-bb31-401e-b3b2-71203e111569",
+                                                                                     "name": "smb_back_office_existing_customer_container",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "layoutId": "4f21e440-bb31-401e-b3b2-71203e111569",
+                                                                                               "name": "smb_back_office_existing_customer",
+                                                                                               "height": "10%"
+                                                                                          },
+                                                                                          {
+                                                                                               "layoutId": "8c34c7c8-562c-4d06-8c78-ee0121bfe556",
+                                                                                               "name": "smb_back_office_existing_account_div",
+                                                                                               "children": [
+                                                                                                    {
+                                                                                                         "layoutId": "b2c2caa0-1622-416f-819d-d1059a49cb9a",
+                                                                                                         "name": "smb_back_office_account_search_bar",
+                                                                                                         "width": "100%"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "layoutId": "e1ee1d65-b7d5-46a0-b84d-0606b5bf52b9",
+                                                                                                         "name": "smb_back_office_account_search_results_details",
+                                                                                                         "width": "100%"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "layoutId": "d808d932-3263-469a-993f-9a60073d04b9",
+                                                                                                         "name": "smb_back_office_fetch_application_id",
+                                                                                                         "width": "100%"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "layoutId": "ad12afde-69b5-4cbe-8fd2-c9ec2521f20b",
+                                                                                                         "name": "smb_back_office_account_search_fetch_legal_entity",
+                                                                                                         "width": "100%"
+                                                                                                    }
+                                                                                               ],
+                                                                                               "direction": "horizontal",
+                                                                                               "height": "90%"
+                                                                                          }
+                                                                                     ],
+                                                                                     "width": "80%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "337d8dd5-7165-4713-953a-c6cc8493d6e0",
+                                                                                     "name": "smb_back_office_existing_customer_helper_text",
+                                                                                     "width": "20%"
+                                                                                }
+                                                                           ],
+                                                                           "direction": "horizontal"
+                                                                      },
+                                                                      {
+                                                                           "layoutId": "8c34c7c8-562c-4d06-8c78-ee0121bfe556",
+                                                                           "name": "smb_back_office_existing_account_div",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "b2c2caa0-1622-416f-819d-d1059a49cb9a",
+                                                                                     "name": "smb_back_office_account_search_bar",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "e1ee1d65-b7d5-46a0-b84d-0606b5bf52b9",
+                                                                                     "name": "smb_back_office_account_search_results_details",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "d808d932-3263-469a-993f-9a60073d04b9",
+                                                                                     "name": "smb_back_office_fetch_application_id",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "ad12afde-69b5-4cbe-8fd2-c9ec2521f20b",
+                                                                                     "name": "smb_back_office_account_search_fetch_legal_entity",
+                                                                                     "width": "100%"
+                                                                                }
+                                                                           ],
+                                                                           "direction": "horizontal"
+                                                                      }
+                                                                 ]
+                                                            },
+                                                            {
+                                                                 "layoutId": "57704e8b-cd76-4720-96ec-80cf507b6db7",
+                                                                 "name": "smb_back_office_business_details_main_div",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "f17ba137-7e0d-4839-a37c-89c98a1918b1",
+                                                                           "name": "smb_back_office_business_details_container",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "9b395616-38c2-49f2-a7f5-d4e89eb1ae75",
+                                                                                     "name": "smb_back_office_business_Legal_entity_picklist_details",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "3ed756fc-8f06-4319-91dc-38800498e7b1",
+                                                                                     "name": "smb_back_office_business_details",
+                                                                                     "width": "100%"
+                                                                                }
+                                                                           ],
+                                                                           "direction": "horizontal",
+                                                                           "width": "80%"
+                                                                      },
+                                                                      {
+                                                                           "layoutId": "cbc706c8-80f5-4c0e-a14c-6535b0aa79de",
+                                                                           "name": "smb_back_office_business_details_helper_text_container",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "ada964a9-1908-4d2c-af4f-3e43d634e860",
+                                                                                     "name": "smb_back_office_business_details_helper_text",
+                                                                                     "width": "100%"
+                                                                                }
+                                                                           ],
+                                                                           "width": "20%"
+                                                                      }
+                                                                 ]
+                                                            },
+                                                            {
+                                                                 "layoutId": "321c5230-23ed-49d9-b822-c95158fb06dd",
+                                                                 "name": "smb_back_office_industry_code_main_div",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "1cacb426-499f-42b3-aee7-83bb880451aa",
+                                                                           "name": "smb_back_office_industry_code_div1",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "0baf6b8b-01d6-4f97-8ae4-c7ff98dfa8bb",
+                                                                                     "name": "smb_back_office_industry_code_conditional_render",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "6a54f577-e607-44af-92cf-48546654d7aa",
+                                                                                     "name": "smb_back_office_industry_code",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "abbb4508-53ed-4bae-80be-9c8be3427805",
+                                                                                     "name": "smb_back_office_industry_code_checkbox",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "70b70027-be15-4ab6-a9ac-67e1f238fe60",
+                                                                                     "name": "smb_back_office_industry_code_panel",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "d767ed06-8b65-4a4c-b82a-1dce1020c6d7",
+                                                                                     "name": "smb_back_office_fetch_industry_code",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "4d9da516-ada8-4f53-a125-e62afd95b3e1",
+                                                                                     "name": "smb_back_office_fetch_business_info",
+                                                                                     "width": "100%"
+                                                                                }
+                                                                           ],
+                                                                           "direction": "horizontal",
+                                                                           "width": "80%"
+                                                                      },
+                                                                      {
+                                                                           "layoutId": "21f5c745-4a7f-48dc-a3b2-5f669e971f5b",
+                                                                           "name": "smb_back_office_industry_code_div2",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "1d79032c-f2b3-4bd9-b779-8efc1a98dd0b",
+                                                                                     "name": "smb_back_office_industry_code-helper_text",
+                                                                                     "width": "100%"
+                                                                                }
+                                                                           ],
+                                                                           "width": "20%"
+                                                                      }
+                                                                 ],
+                                                                 "direction": "horizontal"
+                                                            },
+                                                            {
+                                                                 "layoutId": "6ac195ce-2f25-472c-a135-28afbf55ddf6",
+                                                                 "name": "smb_back_office_business_financials_div",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "4783fa0e-becd-4334-a5e9-a982d238ce72",
+                                                                           "name": "smb_back_office_business_financials",
+                                                                           "width": "80%"
+                                                                      },
+                                                                      {
+                                                                           "layoutId": "e6b8c4e6-f6b8-4737-ad4d-42e85215dfe0",
+                                                                           "name": "smb_back_office_business_financials_helper_text",
+                                                                           "width": "20%"
+                                                                      },
+                                                                      {
+                                                                           "layoutId": "2d87c999-dc6e-4a6c-8b67-7dd53e8867a7",
+                                                                           "name": "smb_back_office_borrower_party",
+                                                                           "width": "100%"
+                                                                      }
+                                                                 ],
+                                                                 "direction": "horizontal"
+                                                            },
+                                                            {
+                                                                 "layoutId": "5dfda953-cfe5-4ffc-9086-d49cf9f4a8fe",
+                                                                 "name": "smb_back_office_loan_amount_product_div",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "3b5db1d0-19c5-4a80-94a0-995110610974",
+                                                                           "name": "smb_back_office_loan_amont_product_details_div",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "69b2fd34-36a5-4006-bc37-cba435f0a972",
+                                                                                     "name": "smb_back_office_loan_amount_information",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "8a90af15-27b4-4413-96bf-babe41e28297",
+                                                                                     "name": "smb_back_office_loan_details",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "09a8d048-8857-42f1-84f4-4b8f7acf7d22",
+                                                                                     "name": "smb_back_office_asset_class_details",
+                                                                                     "width": "100%"
+                                                                                }
+                                                                           ],
+                                                                           "direction": "horizontal",
+                                                                           "width": "80%"
+                                                                      },
+                                                                      {
+                                                                           "layoutId": "9a2d90cf-eb21-4143-9faf-2740ff9270dd",
+                                                                           "name": "smb_back_office_loan_helper_text_div",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "6e9c916d-4267-43e4-8c38-66065471dc0f",
+                                                                                     "name": "smb_back_office_loan_helper_text",
+                                                                                     "width": "100%"
+                                                                                }
+                                                                           ],
+                                                                           "width": "20%"
+                                                                      }
+                                                                 ],
+                                                                 "direction": "horizontal"
+                                                            },
+                                                            {
+                                                                 "layoutId": "d4fc801a-8ad9-439c-9809-41d769f4f8cb",
+                                                                 "name": "smb_back_office_loan_purpose_container_main",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "43b6bc0d-4097-4328-bb4c-9599e1709d59",
+                                                                           "name": "smb_back_office_loan_purpose_container_main_div",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "961c92e5-f84d-4092-9b17-620a2ea455ff",
+                                                                                     "name": "smb_back_office_loan_purpose",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "de7dd6d7-69f7-4f27-b579-5ab1487d4e83",
+                                                                                     "name": "smb_back_office_loan_existing_purpose",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "8e318971-57e4-472b-9d1c-252b3fded495",
+                                                                                     "name": "smb_back_office_loan_product_purpose_Id",
+                                                                                     "width": "100%"
+                                                                                }
+                                                                           ],
+                                                                           "direction": "horizontal",
+                                                                           "width": "80%"
+                                                                      },
+                                                                      {
+                                                                           "layoutId": "150539f0-b217-4061-a756-d31e6086387b",
+                                                                           "name": "smb_back_office_loan_purpose_helper_text_div",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "d2bdc606-81aa-4cdb-8e97-5e20bbcb29ae",
+                                                                                     "name": "smb_back_office_loan_purpose_helper_text",
+                                                                                     "width": "100%"
+                                                                                }
+                                                                           ],
+                                                                           "width": "20%"
+                                                                      }
+                                                                 ],
+                                                                 "direction": "horizontal"
+                                                            },
+                                                            {
+                                                                 "layoutId": "7f042cc4-056f-4e80-b010-b9ca316a5d23",
+                                                                 "name": "smb_back_office_business_parties_summary_details",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "f4bbd751-9ddf-4223-a841-b0811e15da51",
+                                                                           "name": "smb_back_office_business_parties_summary_divison",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "6b1e84f7-1b21-43c7-a5a3-6c39d002ccdc",
+                                                                                     "name": "smb_back_office_business_parties_details",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "06ecad2d-50f7-44e9-800e-0caf7b5bf99a",
+                                                                                     "name": "smb_back_office_business_parties_summary",
+                                                                                     "width": "100%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "c716f545-02e5-4438-a10d-6a90771be743",
+                                                                                     "name": "smb_back_office_legal_entity_details",
+                                                                                     "width": "100%"
+                                                                                }
+                                                                           ],
+                                                                           "direction": "horizontal"
+                                                                      }
+                                                                 ],
+                                                                 "width": "80%"
+                                                            },
+                                                            {
+                                                                 "layoutId": "921a101b-7333-4f92-b6cc-6367a1a80ded",
+                                                                 "name": "smb_back_office_collateral_details_div",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "1ca7f64d-f020-42c2-bf81-4f2dd3bcca02",
+                                                                           "name": "smb_back_office_collateral_details",
+                                                                           "width": "80%"
+                                                                      },
+                                                                      {
+                                                                           "layoutId": "68e3479c-ff70-4753-8b7c-61fab9ecb3e4",
+                                                                           "name": "smb_back_office_collateral_details_helper_text",
+                                                                           "width": "20%"
+                                                                      },
+                                                                      {
+                                                                           "layoutId": "8d796dec-1d96-43af-a618-b72a43ff4a24",
+                                                                           "name": "smb_back_office_collateral_list_validation",
+                                                                           "width": "100%"
+                                                                      },
+                                                                      {
+                                                                           "layoutId": "5a0788be-4f44-4c86-9983-8632b4730ecf",
+                                                                           "name": "smb_back_office_collateral_list_all",
+                                                                           "width": "100%"
+                                                                      }
+                                                                 ],
+                                                                 "direction": "horizontal"
+                                                            },
+                                                            {
+                                                                 "layoutId": "9bdc8198-1a25-427b-a2c1-7f8ec07b8e07",
+                                                                 "name": "smb_back_office_review_container",
+                                                                 "children": [
+                                                                      {
+                                                                           "layoutId": "c4cd0be3-2151-4775-a896-6e3a017292ad",
+                                                                           "name": "smb_back_office_review_step",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "a64507f3-f6d0-44a0-97a9-9696dc0888f6",
+                                                                                     "name": "smb_back_office_review_summary_div",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "layoutId": "3cd6f469-43ab-464a-abd2-2c34b5290dde",
+                                                                                               "name": "smb_back_office_review_application_summary",
+                                                                                               "width": "100%"
+                                                                                          },
+                                                                                          {
+                                                                                               "layoutId": "eb14d121-7227-4057-b4f0-acbd2983c147",
+                                                                                               "name": "smb_back_office_review_owner_summary",
+                                                                                               "width": "100%"
+                                                                                          },
+                                                                                          {
+                                                                                               "layoutId": "71018a53-cec1-4ff2-939b-5797968d356d",
+                                                                                               "name": "smb_back_office_disclosure",
+                                                                                               "width": "100%"
+                                                                                          }
+                                                                                     ],
+                                                                                     "width": "80%"
+                                                                                },
+                                                                                {
+                                                                                     "layoutId": "f4263ecb-086e-4b8b-be44-8b92bd97e59d",
+                                                                                     "name": "smb_back_office_review_helper_text_div",
+                                                                                     "width": "20%"
+                                                                                }
+                                                                           ],
+                                                                           "direction": "horizontal"
+                                                                      },
+                                                                      {
+                                                                           "layoutId": "134f02e9-07aa-4387-b37d-96e2254012e8",
+                                                                           "name": "smb_back_office_closing_text",
+                                                                           "children": [
+                                                                                {
+                                                                                     "layoutId": "3cab2b16-1b85-496c-a8e6-80e76ada45b0",
+                                                                                     "name": "smb_back_office_closing_text_summary"
+                                                                                }
+                                                                           ]
+                                                                      }
+                                                                 ]
+                                                            }
+                                                       ]
+                                                  },
+                                                  {
+                                                       "layoutId": "ea795109-be20-4698-85db-c679b265377a",
+                                                       "name": "smb_back_office_application_fetch"
+                                                  }
+                                             ]
+                                        }
+                                   ],
+                                   "direction": "horizontal"
+                              }
+                         ]
+                    },
+                    "overlay": [
+                         {
+                              "layoutId": "47f7f288-5602-4636-aa67-24e4491df2f",
+                              "name": "smb_back_office_add_collateral_container",
+                              "title": "Collateral Details"
                          },
-                         "noAction": {
-                              "height": "48px",
-                              "padding": "12px"
+                         {
+                              "layoutId": "06520202-3edc-4d7a-b52a-6d19b53b0511",
+                              "name": "smb_back_office_edit_collateral_overlay",
+                              "children": [
+                                   {
+                                        "layoutId": "3914a00c-cdef-4994-9850-775f55843330",
+                                        "name": "smb_back_office_edit_collateral_container",
+                                        "children": [
+                                             {
+                                                  "layoutId": "8e8d14da-6608-4310-b52e-60e69af24aaa",
+                                                  "name": "smb_back_office_add_collateral_type"
+                                             },
+                                             {
+                                                  "layoutId": "cbcefb0f-9cf9-460e-be03-75c8af58ff0c",
+                                                  "name": "smb_back_office_edit_collateral_section"
+                                             },
+                                             {
+                                                  "layoutId": "a44b1c5b-121e-411d-a014-cdfab4192241",
+                                                  "name": "smb_back_office_fetch_itemised_collateral"
+                                             },
+                                             {
+                                                  "layoutId": "e8067e19-d199-4587-b062-63d2cf9d1409",
+                                                  "name": "smb_back_office_find_collateral_relationship"
+                                             }
+                                        ]
+                                   },
+                                   {
+                                        "layoutId": "94a325af-da26-4917-a11f-dad015d0b179",
+                                        "name": "smb_back_office_edit_business_assets_container",
+                                        "children": [
+                                             {
+                                                  "layoutId": "1aa9786b-d082-4ee4-8dcc-250e742835aa",
+                                                  "name": "smb_back_office_business_assets_container"
+                                             }
+                                        ]
+                                   }
+                              ],
+                              "title": "Collateral Details"
+                         },
+                         {
+                              "layoutId": "47f7f288-5602-4636-aa67-2345e4491df2f",
+                              "name": "smb_back_office_add_business_parties_container",
+                              "children": [
+                                   {
+                                        "layoutId": "4ce23e02-f12a-43cb-8e3c-b1842f730c94",
+                                        "name": "smb_back_office_existing_business_parties_details_main",
+                                        "children": [
+                                             {
+                                                  "layoutId": "1142e717-8fdb-4ecd-9df0-84c095abd98f",
+                                                  "name": "smb_back_office_existing_business_parties_details"
+                                             },
+                                             {
+                                                  "layoutId": "ac0f6b65-37b2-4ee2-8f6b-05d01c65361c",
+                                                  "name": "smb_back_office_account_search_bar_container",
+                                                  "children": [
+                                                       {
+                                                            "layoutId": "8e5e8f63-45fd-4c0f-bf68-7bfbb39bec98",
+                                                            "name": "smb_back_office_accounts_search_bar"
+                                                       },
+                                                       {
+                                                            "layoutId": "b8c7fd33-1efa-4b02-8d9e-411f68e04e24",
+                                                            "name": "smb_back_office_account_search_results"
+                                                       },
+                                                       {
+                                                            "layoutId": "929efb9e-e4cb-4e70-9fd8-f434a37aa8c5",
+                                                            "name": "smb_back_office_app_list_view"
+                                                       }
+                                                  ]
+                                             }
+                                        ]
+                                   },
+                                   {
+                                        "layoutId": "f4d983b8-b7a7-4c4b-8833-685bf996fd92",
+                                        "name": "smb_back_office_search_existing_business_parties",
+                                        "children": [
+                                             {
+                                                  "layoutId": "ac0f6b65-37b2-4ee2-8f6b-05d01c65361c",
+                                                  "name": "smb_back_office_account_search_bar_container",
+                                                  "children": [
+                                                       {
+                                                            "layoutId": "8e5e8f63-45fd-4c0f-bf68-7bfbb39bec98",
+                                                            "name": "smb_back_office_accounts_search_bar"
+                                                       },
+                                                       {
+                                                            "layoutId": "b8c7fd33-1efa-4b02-8d9e-411f68e04e24",
+                                                            "name": "smb_back_office_account_search_results"
+                                                       },
+                                                       {
+                                                            "layoutId": "929efb9e-e4cb-4e70-9fd8-f434a37aa8c5",
+                                                            "name": "smb_back_office_app_list_view"
+                                                       }
+                                                  ]
+                                             }
+                                        ]
+                                   },
+                                   {
+                                        "layoutId": "ec3f4651-7653-4357-a227-b0c72b5080e9",
+                                        "name": "smb_back_office_personal_information_div",
+                                        "children": [
+                                             {
+                                                  "layoutId": "9d24ff86-1ffe-4dc1-a4f4-3d5bb759f5ec",
+                                                  "name": "smb_back_office_personal_information_details"
+                                             },
+                                             {
+                                                  "layoutId": "e42a5d0b-a456-456a-a4ec-3d91b26f1fc5",
+                                                  "name": "smb_back_office_ownership_information"
+                                             },
+                                             {
+                                                  "layoutId": "3449fc0f-6c0f-4587-9c8f-5e692f5f367e",
+                                                  "name": "smb_back_office_income_information"
+                                             },
+                                             {
+                                                  "layoutId": "bc4a8237-4495-48d1-8501-f846012ef774",
+                                                  "name": "smb_back_office_personal_information_disclosures"
+                                             },
+                                             {
+                                                  "layoutId": "f933cdbf-b44e-43d9-9e86-33adf59ddffd",
+                                                  "name": "smb_back_party_type_details"
+                                             },
+                                             {
+                                                  "layoutId": "d7bc4370-fbfa-4280-86ec-6fbe49f8d84e",
+                                                  "name": "smb_back_office_personal_information_consent_section"
+                                             }
+                                        ]
+                                   },
+                                   {
+                                        "layoutId": "a5dbc8f2-d44a-4874-9cc5-8da992a047df",
+                                        "name": "smb_back_office_identification_information"
+                                   },
+                                   {
+                                        "layoutId": "3bd09b2e-55c3-4993-ab72-5697672b6eff",
+                                        "name": "smb_back_office_document_upload_div",
+                                        "children": [
+                                             {
+                                                  "layoutId": "d93c7914-1b57-415e-932e-d778c37d85c8",
+                                                  "name": "smb_back_office_document_upload_section"
+                                             },
+                                             {
+                                                  "layoutId": "ca4fe29f-8a21-4f7c-9cb7-4172e115d1bb",
+                                                  "name": "smb_back_office_document_upload"
+                                             },
+                                             {
+                                                  "layoutId": "751a8775-bfa3-463f-9456-883dc8788396",
+                                                  "name": "smb_back_office_document_doc_div"
+                                             },
+                                             {
+                                                  "layoutId": "0fe04411-d77f-4cb4-8105-c1a9a0abfd30",
+                                                  "name": "smb_back_office_document_doc_panel"
+                                             },
+                                             {
+                                                  "layoutId": "451703c1-bce3-4228-9eab-c739be2b279a",
+                                                  "name": "smb_back_office_document_doc_View"
+                                             }
+                                        ]
+                                   },
+                                   {
+                                        "layoutId": "2bfc3838-0ea6-4ff3-89ab-9984efb19a25",
+                                        "name": "smb_back_office_demographic_information",
+                                        "children": [
+                                             {
+                                                  "layoutId": "1229fe08-a75f-41df-9cc9-c6de4b1f7f97",
+                                                  "name": "smb_back_office_demographic_information_summary"
+                                             },
+                                             {
+                                                  "layoutId": "506a09e1-b7c7-4248-b52a-e79b118ab8da",
+                                                  "name": "smb_back_office_hawaiian_pacific_islander"
+                                             },
+                                             {
+                                                  "layoutId": "f3ca13c8-335b-453c-822a-bb26bc76fb56",
+                                                  "name": "smb_back_office_demographic_information_gender"
+                                             },
+                                             {
+                                                  "layoutId": "3c7e4a5c-e58e-4842-9bef-3cc66896a2db",
+                                                  "name": "smb_back_office_demographic_information_questionaire"
+                                             }
+                                        ]
+                                   }
+                              ],
+                              "title": "Business Parties"
+                         },
+                         {
+                              "layoutId": "47f7f288-02-4636-aa67-205e4491df2f",
+                              "name": "smb_back_office_business_parties_overlay_div",
+                              "children": [
+                                   {
+                                        "layoutId": "8ff7c835-8871-472f-bae0-dcaab9467564",
+                                        "name": "smb_back_office_business_parties_overlay",
+                                        "width": "100%",
+                                        "height": "100%"
+                                   }
+                              ],
+                              "width": "100%",
+                              "title": "Business Parties Summary"
+                         },
+                         {
+                              "layoutId": "47f7f288-02-461136-aa67-205e4491df2f",
+                              "name": "smb_back_office_document_preview_container",
+                              "children": [
+                                   {
+                                        "layoutId": "8ff7c835-8871-472f-bae0-dcaab9467564",
+                                        "name": "smb_back_office_document_list",
+                                        "width": "100%",
+                                        "height": "100%"
+                                   }
+                              ],
+                              "title": "Document List"
+                         },
+                         {
+                              "layoutId": "47f7f288-5602-4636-aa67-345e4491df2f",
+                              "name": "smb_back_office_add_collateral_div",
+                              "children": [
+                                   {
+                                        "layoutId": "a1b19ece-a2f5-479b-8e41-0ce66c1999fd",
+                                        "name": "smb_back_office_add_collateral_steps",
+                                        "children": [
+                                             {
+                                                  "layoutId": "b39846fe-9305-496c-b5bc-3a25d4e26f0f",
+                                                  "name": "smb_back_office_collateral_existing_div",
+                                                  "children": [
+                                                       {
+                                                            "layoutId": "58c0a32c-b4ff-448e-b6d5-635560ed90d3",
+                                                            "name": "smb_back_office_collateral_existing_questionaire"
+                                                       }
+                                                  ]
+                                             },
+                                             {
+                                                  "layoutId": "cd516a65-f80f-44ff-a6d8-0164a9385e8b",
+                                                  "name": "smb_back_office_collateral_search_existing_div",
+                                                  "children": [
+                                                       {
+                                                            "layoutId": "ab151abd-4bb7-409e-914a-8657951e6d7d",
+                                                            "name": "smb_back_office_existing_collateral_search_bar"
+                                                       },
+                                                       {
+                                                            "layoutId": "8e5030e2-8a4c-4277-ad32-904a004976cf",
+                                                            "name": "smb_back_office_existing_collateral_search_results"
+                                                       },
+                                                       {
+                                                            "layoutId": "3fb17e93-202d-4828-bdab-e085294c5113",
+                                                            "name": "genGet_smb_back_office_fetch_account"
+                                                       },
+                                                       {
+                                                            "layoutId": "79cdc312-70bf-4ab2-af3f-e1f77d689ea5",
+                                                            "name": "smb_back_office_existing_current_collateral_search_panel"
+                                                       },
+                                                       {
+                                                            "layoutId": "50ce9411-f664-48ef-95cf-89bd112ad9a4",
+                                                            "name": "smb_back_office_skip_duplicate_collaterals"
+                                                       }
+                                                  ]
+                                             },
+                                             {
+                                                  "layoutId": "0801611e-d869-464a-8718-ea4db174312c",
+                                                  "name": "smb_back_office_collateral_details_divison",
+                                                  "children": [
+                                                       {
+                                                            "layoutId": "8e8d14da-6608-4310-b52e-60e69af24aaa",
+                                                            "name": "smb_back_office_add_collateral_type"
+                                                       },
+                                                       {
+                                                            "layoutId": "47f7f288-5602-4636-aa67-24e4491df2f",
+                                                            "name": "smb_back_office_add_collateral_container"
+                                                       },
+                                                       {
+                                                            "layoutId": "a44b1c5b-121e-411d-a014-cdfab4192241",
+                                                            "name": "smb_back_office_fetch_itemised_collateral"
+                                                       }
+                                                  ]
+                                             },
+                                             {
+                                                  "layoutId": "bfc3cf60-f13e-4b23-b177-8fd85a776f7c",
+                                                  "name": "smb_back_office_business_assets_divison",
+                                                  "children": [
+                                                       {
+                                                            "layoutId": "1aa9786b-d082-4ee4-8dcc-250e742835aa",
+                                                            "name": "smb_back_office_business_assets_container"
+                                                       }
+                                                  ]
+                                             }
+                                        ]
+                                   }
+                              ],
+                              "title": "Collateral Details "
+                         },
+                         {
+                              "layoutId": "d07d90c6-3858-4bd1-9058-82ac841dd885",
+                              "name": "SMBBackOfficeEditBusinessInformation",
+                              "children": [
+                                   {
+                                        "layoutId": "76844db0-f6cb-4fa7-8e26-87988c14110b",
+                                        "name": "Smb_back_office_edit_business_information"
+                                   }
+                              ],
+                              "title": "Business Information"
                          }
-                    },
-                    "queueView": {
-                         "height": "150px",
-                         "padding": "16px"
-                    },
-                    "cardView": {
-                         "height": "300px",
-                         "padding": "16px"
-                    },
-                    "detailView": {
-                         "large": {
-                              "height": "108.75px",
-                              "padding": "28px 12px 20px 12px"
-                         },
-                         "medium": {
-                              "height": "104px",
-                              "padding": "28px 12px 20px 12px"
-                         },
-                         "small": {
-                              "height": "101.625px",
-                              "padding": "28px 12px 20px 12px"
-                         }
-                    }
-               },
-               "sortText": {
-                    "sortBy": "Sort by",
-                    "aToZ": "(A to Z)",
-                    "zToA": "(Z to A)",
-                    "lowToHigh": "(Low to High)",
-                    "highToLow": "(High to Low)",
-                    "mostRecentFirst": "(Most Recent First)",
-                    "mostRecentLast": "(Most Recent Last)"
-               },
-               "currencySymbol": "$",
-               "maximumFractionDigits": 2,
-               "variant": {
-                    "TextField": "outlined"
+                    ]
                }
           },
           "actors": {},
-          "stages": {
-               "Home": {
-                    "overlay": [
-                         {
-                              "title": "Collateral Details",
-                              "name": "smb_back_office_add_collateral_container",
-                              "layoutId": "47f7f288-5602-4636-aa67-24e4491df2f"
+          "settings": {
+               "variant": {
+                    "TextField": "outlined"
+               },
+               "maximumFractionDigits": 2,
+               "currencySymbol": "$",
+               "sortText": {
+                    "mostRecentLast": "(Most Recent Last)",
+                    "mostRecentFirst": "(Most Recent First)",
+                    "highToLow": "(High to Low)",
+                    "lowToHigh": "(Low to High)",
+                    "zToA": "(Z to A)",
+                    "aToZ": "(A to Z)",
+                    "sortBy": "Sort by"
+               },
+               "skeleton": {
+                    "detailView": {
+                         "small": {
+                              "padding": "28px 12px 20px 12px",
+                              "height": "101.625px"
                          },
-                         {
-                              "title": "Collateral Details",
-                              "children": [
-                                   {
-                                        "children": [
-                                             {
-                                                  "name": "smb_back_office_add_collateral_type",
-                                                  "layoutId": "8e8d14da-6608-4310-b52e-60e69af24aaa"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_edit_collateral_section",
-                                                  "layoutId": "cbcefb0f-9cf9-460e-be03-75c8af58ff0c"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_fetch_itemised_collateral",
-                                                  "layoutId": "a44b1c5b-121e-411d-a014-cdfab4192241"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_find_collateral_relationship",
-                                                  "layoutId": "e8067e19-d199-4587-b062-63d2cf9d1409"
-                                             }
-                                        ],
-                                        "name": "smb_back_office_edit_collateral_container",
-                                        "layoutId": "3914a00c-cdef-4994-9850-775f55843330"
-                                   },
-                                   {
-                                        "children": [
-                                             {
-                                                  "name": "smb_back_office_business_assets_container",
-                                                  "layoutId": "1aa9786b-d082-4ee4-8dcc-250e742835aa"
-                                             }
-                                        ],
-                                        "name": "smb_back_office_edit_business_assets_container",
-                                        "layoutId": "94a325af-da26-4917-a11f-dad015d0b179"
-                                   }
-                              ],
-                              "name": "smb_back_office_edit_collateral_overlay",
-                              "layoutId": "06520202-3edc-4d7a-b52a-6d19b53b0511"
+                         "medium": {
+                              "padding": "28px 12px 20px 12px",
+                              "height": "104px"
                          },
-                         {
-                              "title": "Business Parties",
-                              "children": [
-                                   {
-                                        "children": [
-                                             {
-                                                  "name": "smb_back_office_existing_business_parties_details",
-                                                  "layoutId": "1142e717-8fdb-4ecd-9df0-84c095abd98f"
-                                             },
-                                             {
-                                                  "children": [
-                                                       {
-                                                            "name": "smb_back_office_accounts_search_bar",
-                                                            "layoutId": "8e5e8f63-45fd-4c0f-bf68-7bfbb39bec98"
-                                                       },
-                                                       {
-                                                            "name": "smb_back_office_account_search_results",
-                                                            "layoutId": "b8c7fd33-1efa-4b02-8d9e-411f68e04e24"
-                                                       },
-                                                       {
-                                                            "name": "smb_back_office_app_list_view",
-                                                            "layoutId": "929efb9e-e4cb-4e70-9fd8-f434a37aa8c5"
-                                                       }
-                                                  ],
-                                                  "name": "smb_back_office_account_search_bar_container",
-                                                  "layoutId": "ac0f6b65-37b2-4ee2-8f6b-05d01c65361c"
-                                             }
-                                        ],
-                                        "name": "smb_back_office_existing_business_parties_details_main",
-                                        "layoutId": "4ce23e02-f12a-43cb-8e3c-b1842f730c94"
-                                   },
-                                   {
-                                        "children": [
-                                             {
-                                                  "children": [
-                                                       {
-                                                            "name": "smb_back_office_accounts_search_bar",
-                                                            "layoutId": "8e5e8f63-45fd-4c0f-bf68-7bfbb39bec98"
-                                                       },
-                                                       {
-                                                            "name": "smb_back_office_account_search_results",
-                                                            "layoutId": "b8c7fd33-1efa-4b02-8d9e-411f68e04e24"
-                                                       },
-                                                       {
-                                                            "name": "smb_back_office_app_list_view",
-                                                            "layoutId": "929efb9e-e4cb-4e70-9fd8-f434a37aa8c5"
-                                                       }
-                                                  ],
-                                                  "name": "smb_back_office_account_search_bar_container",
-                                                  "layoutId": "ac0f6b65-37b2-4ee2-8f6b-05d01c65361c"
-                                             }
-                                        ],
-                                        "name": "smb_back_office_search_existing_business_parties",
-                                        "layoutId": "f4d983b8-b7a7-4c4b-8833-685bf996fd92"
-                                   },
-                                   {
-                                        "children": [
-                                             {
-                                                  "name": "smb_back_office_personal_information_details",
-                                                  "layoutId": "9d24ff86-1ffe-4dc1-a4f4-3d5bb759f5ec"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_ownership_information",
-                                                  "layoutId": "e42a5d0b-a456-456a-a4ec-3d91b26f1fc5"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_income_information",
-                                                  "layoutId": "3449fc0f-6c0f-4587-9c8f-5e692f5f367e"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_personal_information_disclosures",
-                                                  "layoutId": "bc4a8237-4495-48d1-8501-f846012ef774"
-                                             },
-                                             {
-                                                  "name": "smb_back_party_type_details",
-                                                  "layoutId": "f933cdbf-b44e-43d9-9e86-33adf59ddffd"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_personal_information_consent_section",
-                                                  "layoutId": "d7bc4370-fbfa-4280-86ec-6fbe49f8d84e"
-                                             }
-                                        ],
-                                        "name": "smb_back_office_personal_information_div",
-                                        "layoutId": "ec3f4651-7653-4357-a227-b0c72b5080e9"
-                                   },
-                                   {
-                                        "name": "smb_back_office_identification_information",
-                                        "layoutId": "a5dbc8f2-d44a-4874-9cc5-8da992a047df"
-                                   },
-                                   {
-                                        "children": [
-                                             {
-                                                  "name": "smb_back_office_document_upload_section",
-                                                  "layoutId": "d93c7914-1b57-415e-932e-d778c37d85c8"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_document_upload",
-                                                  "layoutId": "ca4fe29f-8a21-4f7c-9cb7-4172e115d1bb"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_document_doc_div",
-                                                  "layoutId": "751a8775-bfa3-463f-9456-883dc8788396"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_document_doc_panel",
-                                                  "layoutId": "0fe04411-d77f-4cb4-8105-c1a9a0abfd30"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_document_doc_View",
-                                                  "layoutId": "451703c1-bce3-4228-9eab-c739be2b279a"
-                                             }
-                                        ],
-                                        "name": "smb_back_office_document_upload_div",
-                                        "layoutId": "3bd09b2e-55c3-4993-ab72-5697672b6eff"
-                                   },
-                                   {
-                                        "children": [
-                                             {
-                                                  "name": "smb_back_office_demographic_information_summary",
-                                                  "layoutId": "1229fe08-a75f-41df-9cc9-c6de4b1f7f97"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_hawaiian_pacific_islander",
-                                                  "layoutId": "506a09e1-b7c7-4248-b52a-e79b118ab8da"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_demographic_information_gender",
-                                                  "layoutId": "f3ca13c8-335b-453c-822a-bb26bc76fb56"
-                                             },
-                                             {
-                                                  "name": "smb_back_office_demographic_information_questionaire",
-                                                  "layoutId": "3c7e4a5c-e58e-4842-9bef-3cc66896a2db"
-                                             }
-                                        ],
-                                        "name": "smb_back_office_demographic_information",
-                                        "layoutId": "2bfc3838-0ea6-4ff3-89ab-9984efb19a25"
-                                   }
-                              ],
-                              "name": "smb_back_office_add_business_parties_container",
-                              "layoutId": "47f7f288-5602-4636-aa67-2345e4491df2f"
-                         },
-                         {
-                              "title": "Business Parties Summary",
-                              "width": "100%",
-                              "children": [
-                                   {
-                                        "height": "100%",
-                                        "width": "100%",
-                                        "name": "smb_back_office_business_parties_overlay",
-                                        "layoutId": "8ff7c835-8871-472f-bae0-dcaab9467564"
-                                   }
-                              ],
-                              "name": "smb_back_office_business_parties_overlay_div",
-                              "layoutId": "47f7f288-02-4636-aa67-205e4491df2f"
-                         },
-                         {
-                              "title": "Document List",
-                              "children": [
-                                   {
-                                        "height": "100%",
-                                        "width": "100%",
-                                        "name": "smb_back_office_document_list",
-                                        "layoutId": "8ff7c835-8871-472f-bae0-dcaab9467564"
-                                   }
-                              ],
-                              "name": "smb_back_office_document_preview_container",
-                              "layoutId": "47f7f288-02-461136-aa67-205e4491df2f"
-                         },
-                         {
-                              "title": "Collateral Details ",
-                              "children": [
-                                   {
-                                        "children": [
-                                             {
-                                                  "children": [
-                                                       {
-                                                            "name": "smb_back_office_collateral_existing_questionaire",
-                                                            "layoutId": "58c0a32c-b4ff-448e-b6d5-635560ed90d3"
-                                                       }
-                                                  ],
-                                                  "name": "smb_back_office_collateral_existing_div",
-                                                  "layoutId": "b39846fe-9305-496c-b5bc-3a25d4e26f0f"
-                                             },
-                                             {
-                                                  "children": [
-                                                       {
-                                                            "name": "smb_back_office_existing_collateral_search_bar",
-                                                            "layoutId": "ab151abd-4bb7-409e-914a-8657951e6d7d"
-                                                       },
-                                                       {
-                                                            "name": "smb_back_office_existing_collateral_search_results",
-                                                            "layoutId": "8e5030e2-8a4c-4277-ad32-904a004976cf"
-                                                       },
-                                                       {
-                                                            "name": "genGet_smb_back_office_fetch_account",
-                                                            "layoutId": "3fb17e93-202d-4828-bdab-e085294c5113"
-                                                       },
-                                                       {
-                                                            "name": "smb_back_office_existing_current_collateral_search_panel",
-                                                            "layoutId": "79cdc312-70bf-4ab2-af3f-e1f77d689ea5"
-                                                       },
-                                                       {
-                                                            "name": "smb_back_office_skip_duplicate_collaterals",
-                                                            "layoutId": "50ce9411-f664-48ef-95cf-89bd112ad9a4"
-                                                       }
-                                                  ],
-                                                  "name": "smb_back_office_collateral_search_existing_div",
-                                                  "layoutId": "cd516a65-f80f-44ff-a6d8-0164a9385e8b"
-                                             },
-                                             {
-                                                  "children": [
-                                                       {
-                                                            "name": "smb_back_office_add_collateral_type",
-                                                            "layoutId": "8e8d14da-6608-4310-b52e-60e69af24aaa"
-                                                       },
-                                                       {
-                                                            "name": "smb_back_office_add_collateral_container",
-                                                            "layoutId": "47f7f288-5602-4636-aa67-24e4491df2f"
-                                                       },
-                                                       {
-                                                            "name": "smb_back_office_fetch_itemised_collateral",
-                                                            "layoutId": "a44b1c5b-121e-411d-a014-cdfab4192241"
-                                                       }
-                                                  ],
-                                                  "name": "smb_back_office_collateral_details_divison",
-                                                  "layoutId": "0801611e-d869-464a-8718-ea4db174312c"
-                                             },
-                                             {
-                                                  "children": [
-                                                       {
-                                                            "name": "smb_back_office_business_assets_container",
-                                                            "layoutId": "1aa9786b-d082-4ee4-8dcc-250e742835aa"
-                                                       }
-                                                  ],
-                                                  "name": "smb_back_office_business_assets_divison",
-                                                  "layoutId": "bfc3cf60-f13e-4b23-b177-8fd85a776f7c"
-                                             }
-                                        ],
-                                        "name": "smb_back_office_add_collateral_steps",
-                                        "layoutId": "a1b19ece-a2f5-479b-8e41-0ce66c1999fd"
-                                   }
-                              ],
-                              "name": "smb_back_office_add_collateral_div",
-                              "layoutId": "47f7f288-5602-4636-aa67-345e4491df2f"
-                         },
-                         {
-                              "title": "Business Information",
-                              "children": [
-                                   {
-                                        "name": "Smb_back_office_edit_business_information",
-                                        "layoutId": "76844db0-f6cb-4fa7-8e26-87988c14110b"
-                                   }
-                              ],
-                              "name": "SMBBackOfficeEditBusinessInformation",
-                              "layoutId": "d07d90c6-3858-4bd1-9058-82ac841dd885"
+                         "large": {
+                              "padding": "28px 12px 20px 12px",
+                              "height": "108.75px"
                          }
-                    ],
-                    "layout": {
-                         "children": [
-                              {
-                                   "children": [
-                                        {
-                                             "width": "100%",
-                                             "name": "smb_back_office_header",
-                                             "layoutId": "445b0f2b-203b-4798-aaf2-d417381bf836"
-                                        }
-                                   ],
-                                   "layoutPrefix": "ClsAppLayoutOne",
-                                   "name": "Header",
-                                   "layoutId": "03eea523-2603-4e2b-8321-ebd226bc2fdc"
-                              },
-                              {
-                                   "children": [
-                                        {
-                                             "name": "smb_back_office_content_layout",
-                                             "layoutId": "smb12345_smb_back_office_content_layout"
-                                        }
-                                   ],
-                                   "layoutPrefix": "ClsAppLayoutOne",
-                                   "name": "Navigation",
-                                   "layoutId": "9dcbb447-e44b-45a5-95ae-1917f5ceb9e9"
-                              },
-                              {
-                                   "direction": "horizontal",
-                                   "children": [
-                                        {
-                                             "children": [
-                                                  {
-                                                       "children": [
-                                                            {
-                                                                 "children": [
-                                                                      {
-                                                                           "direction": "horizontal",
-                                                                           "children": [
-                                                                                {
-                                                                                     "width": "80%",
-                                                                                     "children": [
-                                                                                          {
-                                                                                               "height": "10%",
-                                                                                               "name": "smb_back_office_existing_customer",
-                                                                                               "layoutId": "4f21e440-bb31-401e-b3b2-71203e111569"
-                                                                                          },
-                                                                                          {
-                                                                                               "height": "90%",
-                                                                                               "direction": "horizontal",
-                                                                                               "children": [
-                                                                                                    {
-                                                                                                         "width": "100%",
-                                                                                                         "name": "smb_back_office_account_search_bar",
-                                                                                                         "layoutId": "b2c2caa0-1622-416f-819d-d1059a49cb9a"
-                                                                                                    },
-                                                                                                    {
-                                                                                                         "width": "100%",
-                                                                                                         "name": "smb_back_office_account_search_results_details",
-                                                                                                         "layoutId": "e1ee1d65-b7d5-46a0-b84d-0606b5bf52b9"
-                                                                                                    },
-                                                                                                    {
-                                                                                                         "width": "100%",
-                                                                                                         "name": "smb_back_office_fetch_application_id",
-                                                                                                         "layoutId": "d808d932-3263-469a-993f-9a60073d04b9"
-                                                                                                    },
-                                                                                                    {
-                                                                                                         "width": "100%",
-                                                                                                         "name": "smb_back_office_account_search_fetch_legal_entity",
-                                                                                                         "layoutId": "ad12afde-69b5-4cbe-8fd2-c9ec2521f20b"
-                                                                                                    }
-                                                                                               ],
-                                                                                               "name": "smb_back_office_existing_account_div",
-                                                                                               "layoutId": "8c34c7c8-562c-4d06-8c78-ee0121bfe556"
-                                                                                          }
-                                                                                     ],
-                                                                                     "name": "smb_back_office_existing_customer_container",
-                                                                                     "layoutId": "4f21e440-bb31-401e-b3b2-71203e111569"
-                                                                                },
-                                                                                {
-                                                                                     "width": "20%",
-                                                                                     "name": "smb_back_office_existing_customer_helper_text",
-                                                                                     "layoutId": "337d8dd5-7165-4713-953a-c6cc8493d6e0"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_existing_customer_div",
-                                                                           "layoutId": "bb07b539-c2be-422d-aabc-f63805ff67ba"
-                                                                      },
-                                                                      {
-                                                                           "direction": "horizontal",
-                                                                           "children": [
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_account_search_bar",
-                                                                                     "layoutId": "b2c2caa0-1622-416f-819d-d1059a49cb9a"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_account_search_results_details",
-                                                                                     "layoutId": "e1ee1d65-b7d5-46a0-b84d-0606b5bf52b9"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_fetch_application_id",
-                                                                                     "layoutId": "d808d932-3263-469a-993f-9a60073d04b9"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_account_search_fetch_legal_entity",
-                                                                                     "layoutId": "ad12afde-69b5-4cbe-8fd2-c9ec2521f20b"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_existing_account_div",
-                                                                           "layoutId": "8c34c7c8-562c-4d06-8c78-ee0121bfe556"
-                                                                      }
-                                                                 ],
-                                                                 "name": "smb_back_office_getting_started_container",
-                                                                 "layoutId": "c003dc80-f6e1-40df-beb0-0f95733bd7e7"
-                                                            },
-                                                            {
-                                                                 "children": [
-                                                                      {
-                                                                           "width": "80%",
-                                                                           "direction": "horizontal",
-                                                                           "children": [
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_business_Legal_entity_picklist_details",
-                                                                                     "layoutId": "9b395616-38c2-49f2-a7f5-d4e89eb1ae75"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_business_details",
-                                                                                     "layoutId": "3ed756fc-8f06-4319-91dc-38800498e7b1"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_business_details_container",
-                                                                           "layoutId": "f17ba137-7e0d-4839-a37c-89c98a1918b1"
-                                                                      },
-                                                                      {
-                                                                           "width": "20%",
-                                                                           "children": [
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_business_details_helper_text",
-                                                                                     "layoutId": "ada964a9-1908-4d2c-af4f-3e43d634e860"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_business_details_helper_text_container",
-                                                                           "layoutId": "cbc706c8-80f5-4c0e-a14c-6535b0aa79de"
-                                                                      }
-                                                                 ],
-                                                                 "name": "smb_back_office_business_details_main_div",
-                                                                 "layoutId": "57704e8b-cd76-4720-96ec-80cf507b6db7"
-                                                            },
-                                                            {
-                                                                 "direction": "horizontal",
-                                                                 "children": [
-                                                                      {
-                                                                           "width": "80%",
-                                                                           "direction": "horizontal",
-                                                                           "children": [
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_industry_code_conditional_render",
-                                                                                     "layoutId": "0baf6b8b-01d6-4f97-8ae4-c7ff98dfa8bb"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_industry_code",
-                                                                                     "layoutId": "6a54f577-e607-44af-92cf-48546654d7aa"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_industry_code_checkbox",
-                                                                                     "layoutId": "abbb4508-53ed-4bae-80be-9c8be3427805"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_industry_code_panel",
-                                                                                     "layoutId": "70b70027-be15-4ab6-a9ac-67e1f238fe60"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_fetch_industry_code",
-                                                                                     "layoutId": "d767ed06-8b65-4a4c-b82a-1dce1020c6d7"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_fetch_business_info",
-                                                                                     "layoutId": "4d9da516-ada8-4f53-a125-e62afd95b3e1"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_industry_code_div1",
-                                                                           "layoutId": "1cacb426-499f-42b3-aee7-83bb880451aa"
-                                                                      },
-                                                                      {
-                                                                           "width": "20%",
-                                                                           "children": [
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_industry_code-helper_text",
-                                                                                     "layoutId": "1d79032c-f2b3-4bd9-b779-8efc1a98dd0b"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_industry_code_div2",
-                                                                           "layoutId": "21f5c745-4a7f-48dc-a3b2-5f669e971f5b"
-                                                                      }
-                                                                 ],
-                                                                 "name": "smb_back_office_industry_code_main_div",
-                                                                 "layoutId": "321c5230-23ed-49d9-b822-c95158fb06dd"
-                                                            },
-                                                            {
-                                                                 "direction": "horizontal",
-                                                                 "children": [
-                                                                      {
-                                                                           "width": "80%",
-                                                                           "name": "smb_back_office_business_financials",
-                                                                           "layoutId": "4783fa0e-becd-4334-a5e9-a982d238ce72"
-                                                                      },
-                                                                      {
-                                                                           "width": "20%",
-                                                                           "name": "smb_back_office_business_financials_helper_text",
-                                                                           "layoutId": "e6b8c4e6-f6b8-4737-ad4d-42e85215dfe0"
-                                                                      },
-                                                                      {
-                                                                           "width": "100%",
-                                                                           "name": "smb_back_office_borrower_party",
-                                                                           "layoutId": "2d87c999-dc6e-4a6c-8b67-7dd53e8867a7"
-                                                                      }
-                                                                 ],
-                                                                 "name": "smb_back_office_business_financials_div",
-                                                                 "layoutId": "6ac195ce-2f25-472c-a135-28afbf55ddf6"
-                                                            },
-                                                            {
-                                                                 "direction": "horizontal",
-                                                                 "children": [
-                                                                      {
-                                                                           "width": "80%",
-                                                                           "direction": "horizontal",
-                                                                           "children": [
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_loan_amount_information",
-                                                                                     "layoutId": "69b2fd34-36a5-4006-bc37-cba435f0a972"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_loan_details",
-                                                                                     "layoutId": "8a90af15-27b4-4413-96bf-babe41e28297"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_asset_class_details",
-                                                                                     "layoutId": "09a8d048-8857-42f1-84f4-4b8f7acf7d22"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_loan_amont_product_details_div",
-                                                                           "layoutId": "3b5db1d0-19c5-4a80-94a0-995110610974"
-                                                                      },
-                                                                      {
-                                                                           "width": "20%",
-                                                                           "children": [
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_loan_helper_text",
-                                                                                     "layoutId": "6e9c916d-4267-43e4-8c38-66065471dc0f"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_loan_helper_text_div",
-                                                                           "layoutId": "9a2d90cf-eb21-4143-9faf-2740ff9270dd"
-                                                                      }
-                                                                 ],
-                                                                 "name": "smb_back_office_loan_amount_product_div",
-                                                                 "layoutId": "5dfda953-cfe5-4ffc-9086-d49cf9f4a8fe"
-                                                            },
-                                                            {
-                                                                 "direction": "horizontal",
-                                                                 "children": [
-                                                                      {
-                                                                           "width": "80%",
-                                                                           "direction": "horizontal",
-                                                                           "children": [
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_loan_purpose",
-                                                                                     "layoutId": "961c92e5-f84d-4092-9b17-620a2ea455ff"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_loan_existing_purpose",
-                                                                                     "layoutId": "de7dd6d7-69f7-4f27-b579-5ab1487d4e83"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_loan_product_purpose_Id",
-                                                                                     "layoutId": "8e318971-57e4-472b-9d1c-252b3fded495"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_loan_purpose_container_main_div",
-                                                                           "layoutId": "43b6bc0d-4097-4328-bb4c-9599e1709d59"
-                                                                      },
-                                                                      {
-                                                                           "width": "20%",
-                                                                           "children": [
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_loan_purpose_helper_text",
-                                                                                     "layoutId": "d2bdc606-81aa-4cdb-8e97-5e20bbcb29ae"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_loan_purpose_helper_text_div",
-                                                                           "layoutId": "150539f0-b217-4061-a756-d31e6086387b"
-                                                                      }
-                                                                 ],
-                                                                 "name": "smb_back_office_loan_purpose_container_main",
-                                                                 "layoutId": "d4fc801a-8ad9-439c-9809-41d769f4f8cb"
-                                                            },
-                                                            {
-                                                                 "width": "80%",
-                                                                 "children": [
-                                                                      {
-                                                                           "direction": "horizontal",
-                                                                           "children": [
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_business_parties_details",
-                                                                                     "layoutId": "6b1e84f7-1b21-43c7-a5a3-6c39d002ccdc"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_business_parties_summary",
-                                                                                     "layoutId": "06ecad2d-50f7-44e9-800e-0caf7b5bf99a"
-                                                                                },
-                                                                                {
-                                                                                     "width": "100%",
-                                                                                     "name": "smb_back_office_legal_entity_details",
-                                                                                     "layoutId": "c716f545-02e5-4438-a10d-6a90771be743"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_business_parties_summary_divison",
-                                                                           "layoutId": "f4bbd751-9ddf-4223-a841-b0811e15da51"
-                                                                      }
-                                                                 ],
-                                                                 "name": "smb_back_office_business_parties_summary_details",
-                                                                 "layoutId": "7f042cc4-056f-4e80-b010-b9ca316a5d23"
-                                                            },
-                                                            {
-                                                                 "direction": "horizontal",
-                                                                 "children": [
-                                                                      {
-                                                                           "width": "80%",
-                                                                           "name": "smb_back_office_collateral_details",
-                                                                           "layoutId": "1ca7f64d-f020-42c2-bf81-4f2dd3bcca02"
-                                                                      },
-                                                                      {
-                                                                           "width": "20%",
-                                                                           "name": "smb_back_office_collateral_details_helper_text",
-                                                                           "layoutId": "68e3479c-ff70-4753-8b7c-61fab9ecb3e4"
-                                                                      },
-                                                                      {
-                                                                           "width": "100%",
-                                                                           "name": "smb_back_office_collateral_list_validation",
-                                                                           "layoutId": "8d796dec-1d96-43af-a618-b72a43ff4a24"
-                                                                      },
-                                                                      {
-                                                                           "width": "100%",
-                                                                           "name": "smb_back_office_collateral_list_all",
-                                                                           "layoutId": "5a0788be-4f44-4c86-9983-8632b4730ecf"
-                                                                      }
-                                                                 ],
-                                                                 "name": "smb_back_office_collateral_details_div",
-                                                                 "layoutId": "921a101b-7333-4f92-b6cc-6367a1a80ded"
-                                                            },
-                                                            {
-                                                                 "children": [
-                                                                      {
-                                                                           "direction": "horizontal",
-                                                                           "children": [
-                                                                                {
-                                                                                     "width": "80%",
-                                                                                     "children": [
-                                                                                          {
-                                                                                               "width": "100%",
-                                                                                               "name": "smb_back_office_review_application_summary",
-                                                                                               "layoutId": "3cd6f469-43ab-464a-abd2-2c34b5290dde"
-                                                                                          },
-                                                                                          {
-                                                                                               "width": "100%",
-                                                                                               "name": "smb_back_office_review_owner_summary",
-                                                                                               "layoutId": "eb14d121-7227-4057-b4f0-acbd2983c147"
-                                                                                          },
-                                                                                          {
-                                                                                               "width": "100%",
-                                                                                               "name": "smb_back_office_disclosure",
-                                                                                               "layoutId": "71018a53-cec1-4ff2-939b-5797968d356d"
-                                                                                          }
-                                                                                     ],
-                                                                                     "name": "smb_back_office_review_summary_div",
-                                                                                     "layoutId": "a64507f3-f6d0-44a0-97a9-9696dc0888f6"
-                                                                                },
-                                                                                {
-                                                                                     "width": "20%",
-                                                                                     "name": "smb_back_office_review_helper_text_div",
-                                                                                     "layoutId": "f4263ecb-086e-4b8b-be44-8b92bd97e59d"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_review_step",
-                                                                           "layoutId": "c4cd0be3-2151-4775-a896-6e3a017292ad"
-                                                                      },
-                                                                      {
-                                                                           "children": [
-                                                                                {
-                                                                                     "name": "smb_back_office_closing_text_summary",
-                                                                                     "layoutId": "3cab2b16-1b85-496c-a8e6-80e76ada45b0"
-                                                                                }
-                                                                           ],
-                                                                           "name": "smb_back_office_closing_text",
-                                                                           "layoutId": "134f02e9-07aa-4387-b37d-96e2254012e8"
-                                                                      }
-                                                                 ],
-                                                                 "name": "smb_back_office_review_container",
-                                                                 "layoutId": "9bdc8198-1a25-427b-a2c1-7f8ec07b8e07"
-                                                            }
-                                                       ],
-                                                       "name": "smb_back_office_application_flow_steps",
-                                                       "layoutId": "9bf4482a-b4f7-4c0a-a7c8-85c48cb61161"
-                                                  },
-                                                  {
-                                                       "name": "smb_back_office_application_fetch",
-                                                       "layoutId": "ea795109-be20-4698-85db-c679b265377a"
-                                                  }
-                                             ],
-                                             "layoutPrefix": "ClsAppLayoutOne",
-                                             "name": "Content",
-                                             "layoutId": "09216dfe-db73-4e7b-be96-50ae9b526733"
-                                        }
-                                   ],
-                                   "layoutPrefix": "ClsAppLayoutOne",
-                                   "final": true,
-                                   "name": "Main",
-                                   "layoutId": "43f3e6b1-527d-416f-8e36-17f3a436fa35"
-                              }
-                         ],
-                         "final": true,
-                         "name": "ClsAppLayoutOne",
-                         "layoutId": "9e4b668c-6d0b-4499-81f4-3aabbc05f41b"
                     },
-                    "prerequisite": []
+                    "cardView": {
+                         "padding": "16px",
+                         "height": "300px"
+                    },
+                    "queueView": {
+                         "padding": "16px",
+                         "height": "150px"
+                    },
+                    "listView": {
+                         "noAction": {
+                              "padding": "12px",
+                              "height": "48px"
+                         },
+                         "withAction": {
+                              "padding": "24px 12px",
+                              "height": "72px"
+                         }
+                    }
+               },
+               "uploadText": {
+                    "removeError": "close",
+                    "cancelInProgress": "Cancel",
+                    "completed": "Completed"
+               },
+               "collapsibleIcons": {
+                    "collapsed": "expand_less",
+                    "expanded": "expand_more"
+               },
+               "minimumFractionDigits": 2,
+               "locale": "en-us",
+               "pagination": {
+                    "lastLinkText": "last_page",
+                    "nextLinkText": "chevron_right",
+                    "previousLinkText": "chevron_left",
+                    "firstLinkText": "first_page",
+                    "numberOfPageLinks": 5,
+                    "numberOfRecordsPerPage": 10,
+                    "recordLineTemplate": "$start; - $end; of $total;"
+               },
+               "filters": {
+                    "invalidText": "Invalid value",
+                    "applyLabel": "Apply",
+                    "clearLabel": "Clear Filter",
+                    "notSpecifiedLabel": "Not specified",
+                    "orLabel": "or",
+                    "fromLabel": "from",
+                    "toLabel": "to",
+                    "maxNumberLabel": "Maximum",
+                    "minNumberLabel": "Mininum",
+                    "endDateLabel": "End date",
+                    "startDateLabel": "Start date",
+                    "clearAllText": "Clear All",
+                    "label": "Filtered",
+                    "icon": "filter_list",
+                    "dialogTitle": "Filters By",
+                    "keywordLabel": "Keyword"
+               },
+               "treeIcons": {
+                    "end": "lens",
+                    "toCollapse": "expand_more",
+                    "toExpand": "chevron_right"
                }
           },
-          "start": "Home"
-     },
-     "clcommon__External_ID__c": "smb_back_office_flow",
-     "clcommon__Release_Checksum__c": "b1b2c72048d13de8d6997bc385f2e6adf60c7af51494c54b2e3942b90fd8283c"
+          "global": {
+               "applicationId": "$url(Id);",
+               "smallBusinessSecured": "Small Business- Secured",
+               "smallBusiness": "Small Business",
+               "smallBusinessRealEstate": "Small Business- Real Estate",
+               "HMDALoan": false,
+               "noIncome": false,
+               "$global.attr(AccName);": "xyz1233",
+               "ExistingCustomer": ""
+          },
+          "messages": {
+               "uploadFileTooLargeError": "File too large",
+               "saveSuccessText": "Succeed",
+               "submitExpirationText": "Failed to submit",
+               "loadingAnimationText": "Loading...",
+               "uploadFailureText": "Failed to upload",
+               "savingAnimationText": "Saving...",
+               "submitSuccessText": "Succeed",
+               "submitAnimationText": "Sending...",
+               "saveFailureText": "Failed to save",
+               "loadingFailureText": "Failed to load",
+               "submitFailureText": "Failed to submit"
+          }
+     }
 }
