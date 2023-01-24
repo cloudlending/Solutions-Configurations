@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addEmploymentBack",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "previous",
+                         "field": "$nav(application_flow_steps).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Back",
+               "style": "secondary"
+          },
+          "property": {},
+          "name": "addEmploymentBack"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_employment"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_employment_info",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_employment+addEmploymentBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "e3c3be97c58a6f3c7f910fc46ee5ec64c40b130ca901661d9a0ec8e470a3c6d7",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_add_employment+addEmploymentBack",
+     "clcommon__Validation_Class__c": null
+}

@@ -1,0 +1,40 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "Logout_mobile",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "user_logout",
+          "messages": {},
+          "disclosureNames": [],
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "redirect": "../secur/logout.jsp"
+          },
+          "remoteActionAPIname": "logout",
+          "context": "Menu",
+          "appearance": {
+               "label": "<span class=\"text\">Logout</span>"
+          },
+          "property": {},
+          "name": "Logout_mobile"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_header_new"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_header_new+Logout_mobile+COMPONENT",
+     "clcommon__Release_Checksum__c": "e52db40d79a47729b65ac0ffe98cb4ae3fd0f7eb20fe37e5ede9c57a23ef508a",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_header_new+Logout_mobile",
+     "clcommon__Validation_Class__c": null
+}

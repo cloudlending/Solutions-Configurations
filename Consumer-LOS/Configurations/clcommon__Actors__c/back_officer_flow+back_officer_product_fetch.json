@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{$this.attr(Id); == $global.attr(loanProduct);  ?  true : false};",
+                              "field": "$global.attr(showCollateral);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "productName": "$global.attr(loanProduct);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "back_officer_product_fetch_query"
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_product_fetch",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_product_fetch",
+     "clcommon__Release_Checksum__c": "58e5f88ea3c8652f19a8e3c54798c75b775548d58a8ce718359288a354f09fc7"
+}

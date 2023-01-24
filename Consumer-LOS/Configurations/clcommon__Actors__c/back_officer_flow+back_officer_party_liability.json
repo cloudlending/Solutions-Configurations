@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{$state(back_officer_party_asset).sum(genesis__Market_Value__c); - $this.sum(genesis__Amount_Owing__c);};",
+                              "field": "$global.attr(networths);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": true,
+               "textAfter": "<p><b>Net Worth: $global.attr(networths, currency);</b></p>",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "title": "Liability Details",
+               "blankMessage": "No liability information!",
+               "editableFields": {
+                    "Id": false
+               },
+               "renderFields": {
+                    "Id": false
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(partyAccountId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "back_officer_party_liability_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_party_liability",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_liability",
+     "clcommon__Release_Checksum__c": "71f4af3d27cc259b11164927944195bb8cdc9c28a9e73cd9a631458aee2273a3"
+}

@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addIncomeBack",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addIncomeBack",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Back",
+               "style": "secondary"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_add_employment"
+                         ]
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_income"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_income_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_income+addIncomeBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "51633476d4c08bef785859c227e286a4cd169b89f2725b91fb27db335cbafcf3",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_income+addIncomeBack",
+     "clcommon__Validation_Class__c": null
+}

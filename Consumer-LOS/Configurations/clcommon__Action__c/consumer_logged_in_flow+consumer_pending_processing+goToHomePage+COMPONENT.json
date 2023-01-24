@@ -1,0 +1,44 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToHomePage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "next": "ApplicationDashboard",
+               "updates": [
+                    {
+                         "value": "",
+                         "name": "$nav.reloads.add;"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "render": false,
+               "position": "bottom-right",
+               "style": "primary",
+               "label": "Go to Home"
+          },
+          "property": {},
+          "name": "goToHomePage"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_pending_processing"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_pending_processing+goToHomePage+COMPONENT",
+     "clcommon__Release_Checksum__c": "822e0bed506add30bca1865a9897f4d58dd0ea356c19d4f3d54c059d0e1c6dad",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_pending_processing+goToHomePage",
+     "clcommon__Validation_Class__c": null
+}

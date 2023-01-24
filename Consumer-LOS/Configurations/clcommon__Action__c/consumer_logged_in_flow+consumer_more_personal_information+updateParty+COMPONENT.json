@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "updateParty",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ]
+          },
+          "validation": [
+               "consumer_more_personal_information"
+          ],
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "clcommon__Party__c": {
+                    "Id": "$this.attr(Id);",
+                    "genesis__Credit_Check_Consent__c": "$this.attr(genesis__Credit_Check_Consent__c);",
+                    "solcommon__Consent_To_Disclosure_And_Document__c": "$this.attr(solcommon__Consent_To_Disclosure_And_Document__c);"
+               }
+          },
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
+          },
+          "property": {},
+          "name": "updateParty"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_more_personal_information"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_more_personal_information",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_more_personal_information+updateParty+COMPONENT",
+     "clcommon__Release_Checksum__c": "637cdc35f5e10e845118b8e4973af3a49cf14088fb9fead796c600497082774b",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalUpdateParty",
+     "clcommon__Unique_Action_Name__c": "consumer_more_personal_information+updateParty",
+     "clcommon__Validation_Class__c": null
+}

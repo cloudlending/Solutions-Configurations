@@ -1,0 +1,75 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "clickRecord": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(Account.Id);",
+                              "field": "$global.attr(borrowerAccountId);"
+                         },
+                         {
+                              "value": "$this.attr(Id);",
+                              "field": "$global.attr(borrowerContactId);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "expansionBottom": "normal",
+               "pagination": {
+                    "lastLinkText": "last_page",
+                    "nextLinkText": "chevron_right",
+                    "previousLinkText": "chevron_left",
+                    "firstLinkText": "first_page",
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "numberOfPageLinks": 2,
+                    "numberOfRecordsPerPage": 10
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No Accounts found!",
+               "renderFields": {
+                    "Account.Id": false,
+                    "Id": false
+               },
+               "editableFields": {
+                    "Account.Id": false,
+                    "Id": false,
+                    "Email": false,
+                    "ints__Social_Security_Number__c": false,
+                    "Phone": false,
+                    "Account.Name": false
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "individual": "Individual",
+                    "email": "$global.attr(accountsQueryBy);",
+                    "accname": "$global.attr(accountsQueryBy);"
+               },
+               "structureName": "back_officer_select_account_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_select_account",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_select_account",
+     "clcommon__Release_Checksum__c": "0ad0af8706988b1bec604baa68ef35c2454e872299af6efd869a7e800cd90f24"
+}

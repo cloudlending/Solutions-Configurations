@@ -1,0 +1,88 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "selectApplicaiton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "selectApplicaiton",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Continue"
+          },
+          "remoteActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(applicationId);",
+                         "value": "$this.attr(genesis__Application__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(accountName);",
+                         "value": "$this.attr(clcommon__Account__r.Name);"
+                    },
+                    {
+                         "field": "$global.attr(contactId);",
+                         "value": "$this.attr(clcommon__Contact__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(applicationStatus);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Status__c);"
+                    },
+                    {
+                         "field": "$global.attr(portalStage);",
+                         "value": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c);"
+                    },
+                    {
+                         "field": "$global.attr(purpose);",
+                         "value": "$this.attr(genesis__Application__r.genesis__CL_Purpose__r.Name);"
+                    },
+                    {
+                         "field": "$global.attr(productName);",
+                         "value": "$this.attr(genesis__Application__r.genesis__CL_Product_Name__c);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_application_list"
+                         ]
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"autoApprove\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"Document\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"autoDecline\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"manualReview\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"autoApprove\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"ReviewAndSubmit\"  or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"ClosingDocument\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"DocumentReview\"",
+                         "name": "goToReview"
+                    },
+                    {
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"OwnerInformation\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"MoreInfo\"",
+                         "name": "goToPersonalInfo"
+                    },
+                    {
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"Employment\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"PersonalIncome\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"\"",
+                         "name": "goToflow"
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_application_list"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_fetch_applications",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_application_list+selectApplicaiton+RECORD",
+     "clcommon__Release_Checksum__c": "d681c64592a2636593cd4cf203cd42f3621a35b89d816a9cf57121227fea5001",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_application_list+selectApplicaiton",
+     "clcommon__Validation_Class__c": null
+}

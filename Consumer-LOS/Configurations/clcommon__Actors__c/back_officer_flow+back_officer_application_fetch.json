@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "loaded": {
+                    "actions": [
+                         {
+                              "name": "startNewApplication",
+                              "condition": "$global.attr(applicationId); == null or $global.attr(applicationId); == \"\""
+                         },
+                         {
+                              "name": "selectApplication",
+                              "condition": "$global.attr(applicationId); != null and $global.attr(applicationId); != \"\""
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "fieldColumns": 1,
+               "renderFields": {
+                    "genesis__CL_Purpose__r.Id": false,
+                    "genesis__Status__c": false,
+                    "genesis__Application__r.genesis__Asset_Class__c": false
+               },
+               "blankMessage": "No applications found!!",
+               "editableFields": {
+                    "genesis__Application__r.solcommon__Multiple_Applicant__c": false,
+                    "genesis__CL_Purpose__r.Id": false,
+                    "genesis__CL_Purpose__r.Name": false,
+                    "genesis__CL_Product_Name__c": false,
+                    "genesis__Status__c": false,
+                    "solcommon__Portal_Stage__c": false,
+                    "genesis__Loan_Amount__c": false,
+                    "Name": false
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "back_officer_application_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_application_fetch",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_application_fetch",
+     "clcommon__Release_Checksum__c": "62aee59b384ca1d80f71eacce1a33b10a5d6e62cdd4efd07654db96b8f11cde3"
+}

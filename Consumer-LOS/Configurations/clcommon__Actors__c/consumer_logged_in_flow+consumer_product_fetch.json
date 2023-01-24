@@ -1,0 +1,52 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(clcommon__Asset_Class__r.Name);",
+                              "field": "$global.attr(assetClassName);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderFields": {
+                    "Id": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "productName": "$state(consumer_product).attr(genesis__CL_Product__c);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "consumer_product_fetch_query1"
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_product_fetch",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_product_fetch",
+     "clcommon__Release_Checksum__c": "cff76a09c12f31569f4158c05b43cf8046140382546b9bbcca6a1c8d4f2d951d"
+}

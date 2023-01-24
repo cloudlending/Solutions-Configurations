@@ -1,0 +1,771 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "consumer_collateral_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "consumer_collateral_details",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "176c23efdf0b998d49abdb5d9246a9361566f150f8e5321aa40653beb74c5424",
+     "clcommon__Unique_Name__c": "consumer_collateral_details",
+     "clcommon__data__c": {
+          "structureName": "consumer_collateral_details",
+          "tableName": "genesis__application_collateral__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId' and genesis__Active__c=true"
+          },
+          "sections": [
+               {
+                    "id": "70b5b546-4826-4b15-9091-6f467c42dd6b",
+                    "fields": [
+                         {
+                              "id": "a4097418-8189-4e21-97f4-00a5f410f494",
+                              "fieldName": "genesis__Collateral__r.clcommon__Collateral_Type__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "a4097418-8asdsa1sss89-4e21-97f4-00a5f410f494",
+                              "fieldName": "genesis__Collateral__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "038c515d-f244-4123-bdb1-bcc586ad3af0",
+                              "fieldName": "genesis__Collateral__r.clcommon__Collateral_Type__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Collateral Type"
+                              }
+                         },
+                         {
+                              "id": "61b322f0-c446-4964-8e57-e833bd745753",
+                              "fieldName": "genesis__Collateral__r.clcommon__Address__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Street Address",
+                                   "ariaLabel": "Address"
+                              }
+                         },
+                         {
+                              "id": "0b2325f3-97bb-415a-a72d-1454c1c4dd29",
+                              "fieldName": "genesis__Collateral__r.clcommon__City__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "City",
+                                   "ariaLabel": "City"
+                              }
+                         },
+                         {
+                              "id": "a8ce2158-4126-4a3a-97c3-023fe1942271",
+                              "fieldName": "genesis__Collateral__r.clcommon__State__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "State",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Alabama,AL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Alabama,AL",
+                                             "optionValue": "Alabama,AL"
+                                        },
+                                        {
+                                             "id": "Alaska,AK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Alaska,AK",
+                                             "optionValue": "Alaska,AK"
+                                        },
+                                        {
+                                             "id": "Arizona,AZ",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Arizona,AZ",
+                                             "optionValue": "Arizona,AZ"
+                                        },
+                                        {
+                                             "id": "Arkansas,AR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Arkansas,AR",
+                                             "optionValue": "Arkansas,AR"
+                                        },
+                                        {
+                                             "id": "California,CA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "California,CA",
+                                             "optionValue": "California,CA"
+                                        },
+                                        {
+                                             "id": "Colorado,CO",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Colorado,CO",
+                                             "optionValue": "Colorado,CO"
+                                        },
+                                        {
+                                             "id": "Connecticut,CT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Connecticut,CT",
+                                             "optionValue": "Connecticut,CT"
+                                        },
+                                        {
+                                             "id": "Delaware,DE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Delaware,DE",
+                                             "optionValue": "Delaware,DE"
+                                        },
+                                        {
+                                             "id": "Florida,FL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Florida,FL",
+                                             "optionValue": "Florida,FL"
+                                        },
+                                        {
+                                             "id": "Georgia,GA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Georgia,GA",
+                                             "optionValue": "Georgia,GA"
+                                        },
+                                        {
+                                             "id": "Hawaii,HI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Hawaii,HI",
+                                             "optionValue": "Hawaii,HI"
+                                        },
+                                        {
+                                             "id": "Idaho,ID",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Idaho,ID",
+                                             "optionValue": "Idaho,ID"
+                                        },
+                                        {
+                                             "id": "Illinois,IL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Illinois,IL",
+                                             "optionValue": "Illinois,IL"
+                                        },
+                                        {
+                                             "id": "Indiana,IN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Indiana,IN",
+                                             "optionValue": "Indiana,IN"
+                                        },
+                                        {
+                                             "id": "Iowa,IA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Iowa,IA",
+                                             "optionValue": "Iowa,IA"
+                                        },
+                                        {
+                                             "id": "Kansas,KS",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Kansas,KS",
+                                             "optionValue": "Kansas,KS"
+                                        },
+                                        {
+                                             "id": "Kentucky,KY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Kentucky,KY",
+                                             "optionValue": "Kentucky,KY"
+                                        },
+                                        {
+                                             "id": "Louisiana,LA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Louisiana,LA",
+                                             "optionValue": "Louisiana,LA"
+                                        },
+                                        {
+                                             "id": "Maine,ME",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Maine,ME",
+                                             "optionValue": "Maine,ME"
+                                        },
+                                        {
+                                             "id": "Maryland,MD",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Maryland,MD",
+                                             "optionValue": "Maryland,MD"
+                                        },
+                                        {
+                                             "id": "Massachusetts,MA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Massachusetts,MA",
+                                             "optionValue": "Massachusetts,MA"
+                                        },
+                                        {
+                                             "id": "Michigan,MI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Michigan,MI",
+                                             "optionValue": "Michigan,MI"
+                                        },
+                                        {
+                                             "id": "Minnesota,MN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Minnesota,MN",
+                                             "optionValue": "Minnesota,MN"
+                                        },
+                                        {
+                                             "id": "Mississippi,MS",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Mississippi,MS",
+                                             "optionValue": "Mississippi,MS"
+                                        },
+                                        {
+                                             "id": "Missouri,MO",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Missouri,MO",
+                                             "optionValue": "Missouri,MO"
+                                        },
+                                        {
+                                             "id": "Montana,MT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Montana,MT",
+                                             "optionValue": "Montana,MT"
+                                        },
+                                        {
+                                             "id": "Nebraska,NE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Nebraska,NE",
+                                             "optionValue": "Nebraska,NE"
+                                        },
+                                        {
+                                             "id": "Nevada,NV",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Nevada,NV",
+                                             "optionValue": "Nevada,NV"
+                                        },
+                                        {
+                                             "id": "New Hampshire,NH",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "New Hampshire,NH",
+                                             "optionValue": "New Hampshire,NH"
+                                        },
+                                        {
+                                             "id": "New Jersey,NJ",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "New Jersey,NJ",
+                                             "optionValue": "New Jersey,NJ"
+                                        },
+                                        {
+                                             "id": "New Mexico,NM",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "New Mexico,NM",
+                                             "optionValue": "New Mexico,NM"
+                                        },
+                                        {
+                                             "id": "New York,NY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "New York,NY",
+                                             "optionValue": "New York,NY"
+                                        },
+                                        {
+                                             "id": "North Carolina,NC",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "North Carolina,NC",
+                                             "optionValue": "North Carolina,NC"
+                                        },
+                                        {
+                                             "id": "North Dakota,ND",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "North Dakota,ND",
+                                             "optionValue": "North Dakota,ND"
+                                        },
+                                        {
+                                             "id": "Ohio,OH",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Ohio,OH",
+                                             "optionValue": "Ohio,OH"
+                                        },
+                                        {
+                                             "id": "Oklahoma,OK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Oklahoma,OK",
+                                             "optionValue": "Oklahoma,OK"
+                                        },
+                                        {
+                                             "id": "Oregon,OR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Oregon,OR",
+                                             "optionValue": "Oregon,OR"
+                                        },
+                                        {
+                                             "id": "Pennsylvania,PA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Pennsylvania,PA",
+                                             "optionValue": "Pennsylvania,PA"
+                                        },
+                                        {
+                                             "id": "Rhode Island,RI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Rhode Island,RI",
+                                             "optionValue": "Rhode Island,RI"
+                                        },
+                                        {
+                                             "id": "South Carolina,SC",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "South Carolina,SC",
+                                             "optionValue": "South Carolina,SC"
+                                        },
+                                        {
+                                             "id": "South Dakota,SD",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "South Dakota,SD",
+                                             "optionValue": "South Dakota,SD"
+                                        },
+                                        {
+                                             "id": "Tennessee,TN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Tennessee,TN",
+                                             "optionValue": "Tennessee,TN"
+                                        },
+                                        {
+                                             "id": "Texas,TX",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Texas,TX",
+                                             "optionValue": "Texas,TX"
+                                        },
+                                        {
+                                             "id": "Utah,UT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Utah,UT",
+                                             "optionValue": "Utah,UT"
+                                        },
+                                        {
+                                             "id": "Vermont,VT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Vermont,VT",
+                                             "optionValue": "Vermont,VT"
+                                        },
+                                        {
+                                             "id": "Virginia,VA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Virginia,VA",
+                                             "optionValue": "Virginia,VA"
+                                        },
+                                        {
+                                             "id": "Washington,WA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Washington,WA",
+                                             "optionValue": "Washington,WA"
+                                        },
+                                        {
+                                             "id": "West Virginia,WV",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "West Virginia,WV",
+                                             "optionValue": "West Virginia,WV"
+                                        },
+                                        {
+                                             "id": "Wisconsin,WI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Wisconsin,WI",
+                                             "optionValue": "Wisconsin,WI"
+                                        },
+                                        {
+                                             "id": "Wyoming,WY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Wyoming,WY",
+                                             "optionValue": "Wyoming,WY"
+                                        }
+                                   ],
+                                   "ariaLabel": "State"
+                              }
+                         },
+                         {
+                              "id": "94392406-4ee0-4fcc-9515-882f7bed82fc",
+                              "fieldName": "genesis__Collateral__r.clcommon__Postal_Code__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Postal Code",
+                                   "ariaLabel": "Postal Code"
+                              }
+                         },
+                         {
+                              "id": "96507420-db43-492d-957c-c81170cd5a2a",
+                              "fieldName": "genesis__Collateral__r.clcommon__Airport__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Airport/Home Base",
+                                   "ariaLabel": "Airport/Home Base"
+                              }
+                         },
+                         {
+                              "id": "16dbcf90-2263-4277-95e4-22402b6441d4",
+                              "fieldName": "genesis__Collateral__r.clcommon__Vehicle_Identification_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Vehicle Identification Number",
+                                   "ariaLabel": "Vehicle Identification Number"
+                              }
+                         },
+                         {
+                              "id": "946ae6f7-f189-44f7-96d1-7d74b72a47d0",
+                              "fieldName": "genesis__Collateral__r.clcommon__Estimated_Value__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Estimated Collateral Value",
+                                   "ariaLabel": "Estimated Value"
+                              }
+                         },
+                         {
+                              "id": "8a2dacd5-4106-446c-8923-7174ccdf6d90",
+                              "fieldName": "genesis__Collateral__r.clcommon__Description__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Description",
+                                   "ariaLabel": "Description"
+                              }
+                         },
+                         {
+                              "id": "d1cc17a6-a240-4758-a208-7c05da36e414",
+                              "fieldName": "genesis__Collateral__r.clcommon__Account_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Deposit Account Number",
+                                   "ariaLabel": "Account Number"
+                              }
+                         },
+                         {
+                              "id": "ae23a808-0087-4dcc-9e79-bd2eca90ec66",
+                              "fieldName": "genesis__Collateral__r.clcommon__Possessory_Current_Balance__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "$currentStage.attr(amountLabel);",
+                                   "ariaLabel": "Available Amount"
+                              }
+                         },
+                         {
+                              "id": "4bb2a42d-4d06-4e33-a52e-551fe08c783c",
+                              "fieldName": "genesis__Collateral__r.clcommon__Port_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Port Name",
+                                   "ariaLabel": "Port Name"
+                              }
+                         },
+                         {
+                              "id": "cf2c1782-6e31-45e4-b442-757b392631bf",
+                              "fieldName": "genesis__Collateral__r.clcommon__Stock_Type__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Stock Type",
+                                   "ariaLabel": "Stock Type"
+                              }
+                         },
+                         {
+                              "id": "502ba75b-34d2-4524-9aa9-66919e4ab7c1",
+                              "fieldName": "genesis__Collateral__r.clcommon__Issued_By__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Issued By",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Lender",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Lender",
+                                             "optionValue": "Lender"
+                                        },
+                                        {
+                                             "id": "Other Issuer",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Other Issuer",
+                                             "optionValue": "Other Issuer"
+                                        }
+                                   ],
+                                   "ariaLabel": "Issued By"
+                              }
+                         },
+                         {
+                              "id": "82491523-4679-4eb0-be1e-3203ec8364b4",
+                              "fieldName": "genesis__Collateral__r.clcommon__Number_of_Shares__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Number of Securities",
+                                   "ariaLabel": "Number of Shares"
+                              }
+                         },
+                         {
+                              "id": "05acc1f2-0f07-4ecd-95be-c2168887338a",
+                              "fieldName": "genesis__Collateral__r.clcommon__Insurance_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Insurance Amount",
+                                   "ariaLabel": "Insurance Amount"
+                              }
+                         },
+                         {
+                              "id": "5836719b-3ef3-43a2-9fdb-de0ab170e6f5",
+                              "fieldName": "genesis__Collateral__r.clcommon__Local_Jurisdiction_Type__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Local Jurisdiction Type",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Borough",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Borough",
+                                             "optionValue": "Borough"
+                                        },
+                                        {
+                                             "id": "City",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "City",
+                                             "optionValue": "City"
+                                        },
+                                        {
+                                             "id": "County",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "County",
+                                             "optionValue": "County"
+                                        },
+                                        {
+                                             "id": "Municipality",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Municipality",
+                                             "optionValue": "Municipality"
+                                        },
+                                        {
+                                             "id": "Others",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Others",
+                                             "optionValue": "Others"
+                                        },
+                                        {
+                                             "id": "Town",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Town",
+                                             "optionValue": "Town"
+                                        },
+                                        {
+                                             "id": "Township",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Township",
+                                             "optionValue": "Township"
+                                        },
+                                        {
+                                             "id": "Village",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Village",
+                                             "optionValue": "Village"
+                                        }
+                                   ],
+                                   "ariaLabel": "Local Jurisdiction Type"
+                              }
+                         },
+                         {
+                              "id": "6d34a3f3-5eb5-496f-90f9-ac383f1140ad",
+                              "fieldName": "genesis__Collateral__r.clcommon__Collateral_Local_Jurisdiction__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Local Jurisdiction Name",
+                                   "ariaLabel": "Collateral Local Jurisdiction Name"
+                              }
+                         },
+                         {
+                              "id": "7db36484-a8bc-4420-8269-43772a2bcfa6",
+                              "fieldName": "genesis__Collateral__r.clcommon__Manufacturer__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Manufacturer",
+                                   "ariaLabel": "Manufacturer"
+                              }
+                         },
+                         {
+                              "id": "b08d8b3a-498d-406b-9cb9-27bc3b10430a",
+                              "fieldName": "genesis__Collateral__r.clcommon__Model__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Model",
+                                   "ariaLabel": "Model"
+                              }
+                         },
+                         {
+                              "id": "41c6f81c-cb85-4d2f-9997-6a17a6157815",
+                              "fieldName": "genesis__Collateral__r.clcommon__Property_Unit_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Property Unit Number",
+                                   "ariaLabel": "Property Unit Number"
+                              }
+                         },
+                         {
+                              "id": "92eee811-a19d-44ba-89df-b7e58a56a287",
+                              "fieldName": "genesis__Collateral__r.clcommon__Vehicle_Type__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "New/Used Vehicles",
+                                   "selectOptions": [
+                                        {
+                                             "id": "new vehicles",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "new vehicles",
+                                             "optionValue": "new vehicles"
+                                        },
+                                        {
+                                             "id": "used vehicles",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "used vehicles",
+                                             "optionValue": "used vehicles"
+                                        }
+                                   ],
+                                   "ariaLabel": "New/Used Vehicles"
+                              }
+                         },
+                         {
+                              "id": "bc6ceb78-0e12-4778-a329-58caa23e3615",
+                              "fieldName": "genesis__Collateral__r.clcommon__Policy_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Policy Number",
+                                   "ariaLabel": "Policy Number"
+                              }
+                         },
+                         {
+                              "id": "e2137c37-3078-4207-bd16-d0a3c92d2cbc",
+                              "fieldName": "genesis__Collateral__r.clcommon__Insurance_Company__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account Name",
+                                   "ariaLabel": "Account Name"
+                              }
+                         },
+                         {
+                              "id": "edf7c9d8-f2ff-4350-937a-85d5054e07dd",
+                              "fieldName": "genesis__Collateral__r.clcommon__Insurance_Company__r.BillingStreet",
+                              "fieldUi": {
+                                   "fieldType": "addressAutocomplete",
+                                   "label": "Billing Street",
+                                   "addressComponentMapping": [
+                                        {
+                                             "addressComponent": "street_number",
+                                             "fieldName": "clcommon__Insurance_Company__r.BillingStreet"
+                                        },
+                                        {
+                                             "addressComponent": "route",
+                                             "fieldName": "clcommon__Insurance_Company__r.BillingStreet"
+                                        },
+                                        {
+                                             "addressComponent": "locality",
+                                             "fieldName": "clcommon__Insurance_Company__r.BillingCity"
+                                        },
+                                        {
+                                             "addressComponent": "administrative_area_level_1",
+                                             "nameType": "short_name",
+                                             "fieldName": "clcommon__Insurance_Company__r.BillingState"
+                                        },
+                                        {
+                                             "addressComponent": "postal_code",
+                                             "fieldName": "clcommon__Insurance_Company__r.BillingPostalCode"
+                                        }
+                                   ],
+                                   "ariaLabel": "Billing Street"
+                              }
+                         },
+                         {
+                              "id": "5f026791-5523-4cfb-8954-3c7891c18292",
+                              "fieldName": "genesis__Collateral__r.clcommon__Insurance_Company__r.BillingCity",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Billing City",
+                                   "ariaLabel": "Billing City"
+                              }
+                         },
+                         {
+                              "id": "6dcfee9b-4165-4994-a308-486e8e8109ae",
+                              "fieldName": "genesis__Collateral__r.clcommon__Insurance_Company__r.BillingState",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Billing State/Province",
+                                   "ariaLabel": "Billing State/Province"
+                              }
+                         },
+                         {
+                              "id": "b2299251-8700-4e29-ab2b-11a6ee4b5387",
+                              "fieldName": "genesis__Collateral__r.clcommon__Insurance_Company__r.BillingPostalCode",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Billing Zip/Postal Code",
+                                   "ariaLabel": "Billing Zip/Postal Code"
+                              }
+                         },
+                         {
+                              "id": "3ff6a852-6c64-4855-b2ef-41fd6956d418",
+                              "fieldName": "genesis__Collateral__r.clcommon__Purchase_Money__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Purchase Money",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Purchase Money"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

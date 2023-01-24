@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "noLabelFields": [
+                    "are_you_customer"
+               ],
+               "grid": {
+                    "field": {
+                         "are_you_customer": {
+                              "selectButton": {
+                                   "xs": 12,
+                                   "sm": 6
+                              }
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true,
+               "title": "Do you want to select an existing customer?"
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "structureName": "backe_officer_customer_query"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_customer_type",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_customer_type",
+     "clcommon__Release_Checksum__c": "0a91e372b4715ce1964794fee752ccadd4ca0bd1b2fd94dd83c588784a546553"
+}

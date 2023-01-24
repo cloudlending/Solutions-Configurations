@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_fetch_applications",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_officer_fetch_applications",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "462ecf1ae98491c58ed416217497111a3c9de4c9ca5dc15f4f1633119d88dd1c",
+     "clcommon__Unique_Name__c": "back_officer_fetch_applications",
+     "clcommon__data__c": {
+          "structureName": "back_officer_fetch_applications",
+          "tableName": "genesis__applications__c",
+          "whereClause": {
+               "freeForm": "Id = ':applicationId'"
+          },
+          "sections": [
+               {
+                    "id": "93bc9355-85fb-4f86-aa9c-755515747a92",
+                    "fields": [
+                         {
+                              "id": "a6d1cc24-a881-47c5-b5a7-eab8aeee3f03",
+                              "fieldName": "genesis__Loan_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "",
+                                   "placeholderText": "Enter Amount",
+                                   "defaultValue": "",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Loan_Amount__c); > 0",
+                                             "message": "<span style=\"color:red\">Loan Amount should be greater than zero</span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Loan amount is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "initValue": "10000",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

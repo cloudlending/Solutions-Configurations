@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         },
+                         "Name": {
+                              "sm": 12
+                         }
+                    }
+               },
+               "renderFields": {
+                    "genesis__Frequency__c": false,
+                    "Id": false
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "incomeId": "$global.attr(incomeId);"
+               },
+               "structureName": "back_officer_add_income_query"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_add_income",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_add_income",
+     "clcommon__Release_Checksum__c": "ef02048fda5626a70691f9af0fe37a4d2929f05314fbbac58bf486e11a1270b8"
+}

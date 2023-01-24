@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "BackButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "BackButton",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Edit",
+               "style": "primary"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(incomeId);",
+                         "value": "$this.attr(Id);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "back_officer_add_income_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_add_income",
+                              "back_officer_income_review"
+                         ]
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_income_review"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_income_query",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_income_review+BackButton+RECORD",
+     "clcommon__Release_Checksum__c": "ff8917d534f9921b68d315601f3d6656229163521e425d011e500971022783be",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_income_review+BackButton",
+     "clcommon__Validation_Class__c": null
+}

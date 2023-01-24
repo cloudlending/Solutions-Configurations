@@ -1,0 +1,61 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "creditApplicationNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "creditApplicationNext",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(productName); == \"Credit Card\" and ($global.attr(applicationId); != \"\" and $global.attr(applicationId); != null)",
+               "label": "Next",
+               "style": "primary"
+          },
+          "remoteActionArguments": {},
+          "validation": [
+               "back_officer_product"
+          ],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "AboutYou"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_product",
+                              "back_officer_product_fetch"
+                         ]
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_product"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_product_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_product+creditApplicationNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "ddab4b5cfc8dca0660e5eaf4be75c325d4e0187ddee5af5eef7e213289ff731f",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_product+creditApplicationNext",
+     "clcommon__Validation_Class__c": null
+}

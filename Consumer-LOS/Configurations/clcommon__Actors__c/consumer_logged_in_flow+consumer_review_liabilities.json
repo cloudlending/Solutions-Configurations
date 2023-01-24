@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top"
+               },
+               "editableFields": {
+                    "genesis__Contact__r.Id": false,
+                    "genesis__Amount_Owing__c": false,
+                    "Id": false,
+                    "genesis__Liability_Type__c": false
+               },
+               "renderFields": {
+                    "genesis__Contact__r.Id": false,
+                    "Id": false
+               },
+               "blankMessage": "No liability information!",
+               "title": "Liability Details"
+          },
+          "property": {
+               "whereClause": {
+                    "contactId": "$global.attr(contactId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "consumer_liability_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_review_liabilities",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_review_liabilities",
+     "clcommon__Release_Checksum__c": "5fe2b9813b0a679a49425ccf88365030bbcbd47a4a96a55c09defe57ad43c1a4"
+}

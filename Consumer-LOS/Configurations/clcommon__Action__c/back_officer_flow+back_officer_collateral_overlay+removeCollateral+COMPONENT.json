@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "removeCollateral",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "removeCollateral",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "style": "secondary",
+               "label": "Close"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "back_officer_collateral_overlay"
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_collateral_overlay"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_add_collateral_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_collateral_overlay+removeCollateral+COMPONENT",
+     "clcommon__Release_Checksum__c": "934c1e9ec34a7fd6caa9e19212a121f081cc9442706bd469fff5cb6eba2f7f81",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_collateral_overlay+removeCollateral",
+     "clcommon__Validation_Class__c": null
+}

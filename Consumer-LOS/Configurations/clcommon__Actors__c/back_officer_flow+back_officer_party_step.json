@@ -1,0 +1,61 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "$global.attr(showPartyTabs);",
+               "hideTitles": true,
+               "titles": [
+                    {
+                         "name": "PartyType",
+                         "title": "Party Type"
+                    },
+                    {
+                         "name": "SelectPartyType",
+                         "render": "$global.attr(showSearchPartiesPage);",
+                         "title": "Select Party"
+                    },
+                    {
+                         "name": "PartyAboutYou",
+                         "title": "About You"
+                    },
+                    {
+                         "name": "PartyMoreInfo",
+                         "title": "More Info"
+                    },
+                    {
+                         "name": "PartyEmployment",
+                         "title": "Employment"
+                    },
+                    {
+                         "name": "PartyIncome",
+                         "title": "Income"
+                    },
+                    {
+                         "name": "PartyNetworth",
+                         "title": "networth"
+                    },
+                    {
+                         "render": "false",
+                         "title": "Collateral"
+                    }
+               ]
+          },
+          "property": {},
+          "type": "steps",
+          "category": "container"
+     },
+     "clcommon__Actor_Name__c": "back_officer_party_step",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_step",
+     "clcommon__Release_Checksum__c": "4ccb17f9fa4e477d34aea382c198da6fda16e3ead79b1bf5f6e4daa2787cc8e9"
+}

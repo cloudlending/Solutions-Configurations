@@ -1,0 +1,76 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "personalInfoNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "personalInfoNext",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Save",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "contact": {
+                    "firstName": "$this.attr(clcommon__Contact__r.FirstName);",
+                    "lastName": "$this.attr(clcommon__Contact__r.LastName);",
+                    "Birthdate": "$this.attr(clcommon__Contact__r.Birthdate);",
+                    "Phone": "$this.attr(clcommon__Contact__r.Phone);",
+                    "email": "$this.attr(clcommon__Contact__r.Email);",
+                    "clcommon__Current_Country__c": "USA",
+                    "ints__Social_Security_Number__c": "$this.attr(clcommon__Contact__r.ints__Social_Security_Number__c);",
+                    "clcommon__Current_Street__c": "$this.attr(clcommon__Contact__r.clcommon__Current_Street__c);",
+                    "clcommon__Current_City__c": "$this.attr(clcommon__Contact__r.clcommon__Current_City__c);",
+                    "clcommon__Current_State__c": "$this.attr(clcommon__Contact__r.clcommon__Current_State__c);",
+                    "clcommon__Current_Zip_Code__c": "$this.attr(clcommon__Contact__r.clcommon__Current_Zip_Code__c);",
+                    "id": "$this.attr(clcommon__Contact__r.Id);"
+               },
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "validation": [
+               "back_officer_edit_party_info"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "",
+                         "value": "back_officer_edit_party_container"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_party",
+                              "back_officer_review_party"
+                         ]
+                    },
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "back_officer_edit_party_container"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_edit_party_info"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_edit_party_info",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_edit_party_info+personalInfoNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "3aa8684973105abb7c38a9d1707b7f015104f70b3a12a6523dc92850d09307f2",
+     "clcommon__Remote_Action_Class__c": "consumerlos.PortalCreateJointPartyAndUser",
+     "clcommon__Unique_Action_Name__c": "back_officer_edit_party_info+personalInfoNext",
+     "clcommon__Validation_Class__c": null
+}

@@ -1,0 +1,74 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveNewEmploymentNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "saveNewEmploymentNext",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(employmentId); == \"\" and $this.attr(genesis__Is_Current_Employer__c);",
+               "style": "primary",
+               "label": "Save",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": "$global.attr(applicationId);",
+               "genesis__Employment_Information__c": {
+                    "genesis__Name_of_employer__c": "$this.attr(genesis__Name_of_employer__c);",
+                    "genesis__Position__c": "$this.attr(genesis__Position__c);",
+                    "genesis__Number_of_years_on_job__c": "$this.attr(genesis__Number_of_years_on_job__c);",
+                    "genesis__Employer_Country__c": "USA",
+                    "genesis__Average_Monthly_Income__c": "$this.attr(genesis__Average_Monthly_Income__c);",
+                    "genesis__Employer_Street__c": "$this.attr(genesis__Employer_Street__c);",
+                    "genesis__Employer_City__c": "$this.attr(genesis__Employer_City__c);",
+                    "genesis__Employer_State__c": "$this.attr(genesis__Employer_State__c);",
+                    "genesis__Employer_Zipcode__c": "$this.attr(genesis__Employer_Zipcode__c);",
+                    "genesis__Self_Employed__c": "$this.attr(genesis__Self_Employed__c);",
+                    "genesis__Contact__c": "$global.attr(contactId);",
+                    "genesis__Is_Current_Employer__c": "$this.attr(genesis__Is_Current_Employer__c);"
+               }
+          },
+          "validation": [
+               "back_officer_save_employer"
+          ],
+          "successHandler": {
+               "assignments": [],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "back_officer_add_employer_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_save_employer",
+                              "back_officer_add_employment",
+                              "back_officer_employment_review",
+                              "back_officer_party_add_employment"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_save_employer"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_add_employment_info",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_save_employer+saveNewEmploymentNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "96ba6f9b42d0663257f6265940b349916d54184d2be9763a6edbfb2cf5af952d",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveEmploymentInformation",
+     "clcommon__Unique_Action_Name__c": "back_officer_save_employer+saveNewEmploymentNext",
+     "clcommon__Validation_Class__c": null
+}

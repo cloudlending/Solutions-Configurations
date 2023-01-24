@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveExistingIncomeNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "value": "consumer_add_income_container",
+                         "name": "$nav.overlay.remove;"
+                    },
+                    {
+                         "value": [
+                              "consumer_income_review",
+                              "consumer_income"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ]
+          },
+          "validation": [
+               "consumer_add_income"
+          ],
+          "remoteActionArguments": {
+               "genesis__Income__c": {
+                    "genesis__Frequency__c": "$this.attr(genesis__Frequency__c);",
+                    "genesis__Contact__c": "$global.attr(contactId);",
+                    "genesis__Amount__c": "$this.attr(genesis__Amount__c);",
+                    "genesis__Income_Type__c": "$this.attr(genesis__Income_Type__c);",
+                    "Name": "$this.attr(Name);",
+                    "Id": "$global.attr(incomeId);"
+               },
+               "genesis__Applications__c": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Save",
+               "style": "primary",
+               "render": "$global.attr(incomeId); != \"\""
+          },
+          "property": {},
+          "name": "saveExistingIncomeNext"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_income"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_add_income_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_income+saveExistingIncomeNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "05a8173072e5b0a043a9e6f89b451efe4be382084ba4bc4f2159cfa87c7a1f5a",
+     "clcommon__Remote_Action_Class__c": "consumerlos.PortalSaveIncome",
+     "clcommon__Unique_Action_Name__c": "consumer_add_income+saveExistingIncomeNext",
+     "clcommon__Validation_Class__c": null
+}

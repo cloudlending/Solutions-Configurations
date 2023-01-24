@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "editParty",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "editParty",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Edit",
+               "style": "primary",
+               "render": "$this.attr(clcommon__Account__r.Id); != $global.attr(borrowerAccountId);"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": "$this.attr(Id);"
+                    },
+                    {
+                         "field": "$global.attr(partyAccountId);",
+                         "value": "$this.attr(clcommon__Account__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(partyContactId);",
+                         "value": "$this.attr(clcommon__Contact__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(showPartyTabs);",
+                         "value": true
+                    },
+                    {
+                         "field": "$nav(back_officer_party_step).appearance(current);",
+                         "value": "PartyAboutYou"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_add_party",
+                              "back_officer_party"
+                         ]
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_parties",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party+editParty+RECORD",
+     "clcommon__Release_Checksum__c": "89ff02a2417def2b715974299bddbb5d4bc71201f25d1f423f1156867f96f6e0",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_party+editParty",
+     "clcommon__Validation_Class__c": null
+}

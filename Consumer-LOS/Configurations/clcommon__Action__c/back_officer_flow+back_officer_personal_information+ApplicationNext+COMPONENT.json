@@ -1,0 +1,78 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "ApplicationNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "ApplicationNext",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "position": "bottom-left",
+               "label": "Next",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "solcommon__Multiple_Applicant__c": "$global.attr(multiApplicant);",
+                    "solcommon__Portal_Stage__c": "MoreInfo",
+                    "genesis__Loan_Amount__c": "$global.attr(loanAmount);",
+                    "genesis__CL_Product__c": "$global.attr(loanProduct);",
+                    "genesis__CL_Purpose__c": "$global.attr(purpose);",
+                    "genesis__Other_Purpose__c": "$global.attr(otherPurposeName);"
+               },
+               "contactId": "$global.attr(borrowerContactId);"
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(applicationId);",
+                         "value": "$result.attr(applicationId);"
+                    },
+                    {
+                         "field": "$global.attr(borrowerAccountId);",
+                         "value": "$result.attr(accountId);"
+                    },
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "next"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_applicant_review",
+                              "back_officer_party",
+                              "back_officer_personal_information"
+                         ]
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_personal_information"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_personal_information_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_personal_information+ApplicationNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "495be50220993452d6c965e9dc164499f664cc6cae5ef767d7a63c660daeb8aa",
+     "clcommon__Remote_Action_Class__c": "consumerlos.PortalSaveConsumerApplication",
+     "clcommon__Unique_Action_Name__c": "back_officer_personal_information+ApplicationNext",
+     "clcommon__Validation_Class__c": null
+}

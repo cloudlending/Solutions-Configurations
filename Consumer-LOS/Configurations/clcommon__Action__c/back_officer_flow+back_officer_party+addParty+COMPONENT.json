@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addParty",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addParty",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Party</span>",
+               "style": "primary",
+               "position": "top-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(showPartyTabs);",
+                         "value": true
+                    },
+                    {
+                         "field": "$global.attr(partyAccountId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(partyContactId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$nav(back_officer_party_step).appearance(current);",
+                         "value": 0
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_add_party",
+                              "back_officer_party"
+                         ]
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_parties",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party+addParty+COMPONENT",
+     "clcommon__Release_Checksum__c": "8e5bb7c808ad9dba70b640f502eb10581ffcf7a9237ab226b1d87ed148f8ca07",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_party+addParty",
+     "clcommon__Validation_Class__c": null
+}

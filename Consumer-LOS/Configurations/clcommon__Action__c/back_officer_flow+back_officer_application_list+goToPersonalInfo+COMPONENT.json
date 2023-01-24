@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToPersonalInfo",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "goToPersonalInfo",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "render": false
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": 1
+                    },
+                    {
+                         "field": "$nav(back_officer_about_you).appearance(current);",
+                         "value": "$global.attr(portalStage);"
+                    }
+               ],
+               "next": "Home"
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_application_list"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_fetch_applications",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_application_list+goToPersonalInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "4eb87373206c4b53aad5e1e165c0d0673a494ec2d0afef2c2882a35c78926cd0",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_application_list+goToPersonalInfo",
+     "clcommon__Validation_Class__c": null
+}

@@ -1,0 +1,121 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "consumer_registration_query",
+     "clcommon__Allow_Guest_User_Access__c": true,
+     "clcommon__External_ID__c": "consumer_registration_query",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Release_Checksum__c": "2e0936218e52bf65d2c7cdb8822eeff21dc13b6e98908abec19824b07aa56945",
+     "clcommon__Unique_Name__c": "consumer_registration_query",
+     "clcommon__data__c": {
+          "structureName": "consumer_registration_query",
+          "sections": [
+               {
+                    "id": "ff5a3b96-5753-44dd-96ac-396160cca621",
+                    "name": "Borrower Info",
+                    "title": "Borrower Information",
+                    "fields": [
+                         {
+                              "id": "2asddc7",
+                              "fieldName": "firstName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "First Name",
+                                   "placeholderText": "Enter First Name",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required"
+                                   }
+                              }
+                         },
+                         {
+                              "id": "2d9c7",
+                              "fieldName": "lastName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Last Name",
+                                   "placeholderText": "Enter Last Name",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required"
+                                   }
+                              }
+                         },
+                         {
+                              "id": "720e9e79-8377-440c-80b8-9b3fe635094e",
+                              "fieldName": "Birthdate",
+                              "fieldUi": {
+                                   "fieldType": "datepicker",
+                                   "label": "Date of Birth",
+                                   "tooltip": "Enter a valid date in the format (mm/dd/yyyy)",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "datePattern": "MM/dd/yyyy",
+                                             "minYear": 1950,
+                                             "showMonthDropdown": true,
+                                             "showYearDropdown": true,
+                                             "disableFuture": true
+                                        }
+                                   },
+                                   "ariaLabel": "Birthdate"
+                              }
+                         },
+                         {
+                              "id": "2dc7",
+                              "fieldName": "email",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Email Id",
+                                   "placeholderText": "Enter Email Id",
+                                   "required": true,
+                                   "regex": "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$",
+                                   "messages": {
+                                        "requiredErrorText": "Required",
+                                        "regexErrorText": "Please enter a valid Email Id."
+                                   }
+                              }
+                         },
+                         {
+                              "id": "3528",
+                              "fieldName": "Phone",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Phone Number",
+                                   "placeholderText": "Enter Phone Number",
+                                   "required": true,
+                                   "regex": "^\\d{10}$",
+                                   "messages": {
+                                        "requiredErrorText": "Required",
+                                        "regexErrorText": "Invalid Phone Number"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "delimiters": [
+                                                  "(",
+                                                  ") ",
+                                                  "-"
+                                             ],
+                                             "numericOnly": true,
+                                             "blocks": [
+                                                  0,
+                                                  3,
+                                                  3,
+                                                  4
+                                             ]
+                                        }
+                                   },
+                                   "ariaLabel": "Phone Number"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

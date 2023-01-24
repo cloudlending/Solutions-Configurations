@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderFields": {
+                    "clcommon__Contact__r.Id": false,
+                    "clcommon__Contact__r.clcommon__Monthly_Residential_Payment_Amount__c": "$this.attr(clcommon__Contact__r.clcommon__Residential_Status__c);!=\"\" and $this.attr(clcommon__Contact__r.clcommon__Residential_Status__c);!=undefined",
+                    "Id": false,
+                    "clcommon__Contact__r.clcommon__Country_of_Citizenship__c": "$this.attr(clcommon__Contact__r.clcommon__Personal_Information__r.clcommon__Not_A_Citizen__c); == true",
+                    "clcommon__Contact__r.clcommon__Service_Member_Military_Status__c": "$this.attr(clcommon__Contact__r.clcommon__Military_Relationship__c); == \"Service Member\" or $this.attr(clcommon__Contact__r.clcommon__Military_Relationship__c); ==\"Service Member Dependent\"",
+                    "clcommon__Contact__r.clcommon__Personal_Information__c": false
+               },
+               "grid": {
+                    "field": {
+                         "clcommon__Contact__r.clcommon__Employee__c": {
+                              "sm": 12
+                         },
+                         "solcommon__Consent_To_Disclosure_And_Document__c": {
+                              "sm": 12
+                         },
+                         "genesis__Credit_Check_Consent__c": {
+                              "sm": 12
+                         },
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true,
+               "title": "More Personal Information"
+          },
+          "property": {
+               "whereClause": {
+                    "applicationId": "$global.attr(applicationId);",
+                    "accountId": "$global.attr(partyAccountId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "back_officer_party_more_personal_information"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_party_more_information",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_more_information",
+     "clcommon__Release_Checksum__c": "915671a5e9a706f0dceb5160e18690409cbd8c8971b12581ed83847d4c94d505"
+}

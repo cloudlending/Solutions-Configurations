@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "genesis__Contact__r.Id": false,
+                    "Id": false,
+                    "genesis__Market_Value__c": false,
+                    "genesis__Asset_Type__c": false
+               },
+               "renderFields": {
+                    "genesis__Contact__r.Id": false,
+                    "Id": false
+               },
+               "blankMessage": "No asset information!",
+               "title": "Asset Details"
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(borrowerAccountId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "back_officer_asset_information_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_review_assets",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_review_assets",
+     "clcommon__Release_Checksum__c": "93756f83bb3985ebb32142c14e6140c1d01c056676722df5bdbfcddc89e14c37"
+}

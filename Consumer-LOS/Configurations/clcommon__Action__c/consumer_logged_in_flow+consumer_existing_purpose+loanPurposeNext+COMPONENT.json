@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "loanPurposeNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "assignments": []
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$result.attr(applicationId);",
+                         "field": "$global.attr(tempApplicationId);"
+                    }
+               ]
+          },
+          "validation": [
+               "consumer_purpose",
+               "consumer_loan_amount",
+               "consumer_existing_purpose"
+          ],
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "Id": "$global.attr(applicationId);",
+                    "solcommon__Multiple_Applicant__c": "$global.attr(multiApplicant);",
+                    "genesis__Loan_Amount__c": "$state(consumer_loan_amount).attr(genesis__Application__r.genesis__Loan_Amount__c);",
+                    "genesis__CL_Product__c": "$global.attr(loanProduct);",
+                    "genesis__CL_Purpose__c": "$global.attr(loanPurpose);",
+                    "genesis__Other_Purpose__c": "$this.attr(genesis__Application__r.genesis__Other_Purpose__c);"
+               }
+          },
+          "appearance": {
+               "render": "$global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined and $global.attr(partyType); == $global.attr(borrowerParty);",
+               "label": "Next",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "loanPurposeNext"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_loan_existing_purpose",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose+loanPurposeNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "f7171f968ba841840d6ead88f032346533a358cd550005b75c624730a2b6307a",
+     "clcommon__Remote_Action_Class__c": "consumerlos.PortalSaveConsumerApplication",
+     "clcommon__Unique_Action_Name__c": "consumer_existing_purpose+loanPurposeNext",
+     "clcommon__Validation_Class__c": null
+}

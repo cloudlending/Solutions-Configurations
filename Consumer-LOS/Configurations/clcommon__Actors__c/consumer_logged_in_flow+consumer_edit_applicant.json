@@ -1,0 +1,60 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editableFields": {
+                    "clcommon__Contact__r.Id": false,
+                    "Id": false
+               },
+               "renderFields": {
+                    "clcommon__Contact__r.Id": false,
+                    "Id": false
+               },
+               "editable": true,
+               "grid": {
+                    "field": {
+                         "clcommon__Current_Street__c": {
+                              "sm": 12
+                         },
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "applicationId": "$global.attr(applicationId);",
+                    "accountId": "$global.attr(userInfo).attr(accountId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "consumer_edit_applicant_info"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_edit_applicant",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_edit_applicant",
+     "clcommon__Release_Checksum__c": "86e572b3afaecfd1552ef6f2fdcc95d9e3429b3c6c42172185469977ca600c73"
+}

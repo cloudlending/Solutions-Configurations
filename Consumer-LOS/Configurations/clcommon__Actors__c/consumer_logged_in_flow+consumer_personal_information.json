@@ -1,0 +1,72 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "sectionStyle": "layout",
+               "editableFields": {
+                    "clcommon__Contact__r.Email": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderSections": {
+                    "mailingaddress": "not $this.attr(clcommon__Contact__r.clcommon__Mailing_Address_Same_as_Current_Address__c);",
+                    "previousaddress": "$this.attr(clcommon__Contact__r.clcommon__Years_At_Current_Address__c); < 2"
+               },
+               "renderFields": {
+                    "Id": false,
+                    "clcommon__Contact__r.Id": false
+               },
+               "grid": {
+                    "field": {
+                         "clcommon__Contact__r.clcommon__Current_Street__c": {
+                              "sm": 12
+                         },
+                         "clcommon__Contact__r.Have_been_at_Address_longer_than_2_years__c": {
+                              "sm": 12
+                         },
+                         "clcommon__Contact__r.clcommon__Mailing_Address_Same_as_Current_Address__c": {
+                              "sm": 12
+                         },
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "showSectionTitle": true,
+               "fieldColumns": 1,
+               "editable": true,
+               "title": "Tell us about yourself"
+          },
+          "property": {
+               "whereClause": {
+                    "applicationId": "$global.attr(applicationId);",
+                    "accountId": "$global.attr(userInfo).attr(accountId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "consumer_personal_information_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_personal_information",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_personal_information",
+     "clcommon__Release_Checksum__c": "38bad7bba2a8b6875671a30ff90f9167d7dd637d98b2edc26fcc9b64f971b818"
+}

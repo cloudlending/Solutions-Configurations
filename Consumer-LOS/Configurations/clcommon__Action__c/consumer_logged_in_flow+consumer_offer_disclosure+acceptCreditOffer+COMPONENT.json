@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "acceptCreditOffer",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "disclosureEnable": "$disclosure(SalesOfferDisclosure);",
+          "disclosureNames": [
+               "SalesOfferDisclosure"
+          ],
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "portalSaveStage"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "offerId": "$global.attr(selectedOfferId);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Accept Offer",
+               "render": "$global.attr(partyType); == $global.attr(borrowerParty);"
+          },
+          "property": {},
+          "name": "acceptCreditOffer"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_offer_disclosure"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_offer_disclosure+acceptCreditOffer+COMPONENT",
+     "clcommon__Release_Checksum__c": "c8555ed38530fb80b1851bce8f8385e644f48a1256ee0deab29ebbecf1d9bf51",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSelectOffer",
+     "clcommon__Unique_Action_Name__c": "consumer_offer_disclosure+acceptCreditOffer",
+     "clcommon__Validation_Class__c": null
+}

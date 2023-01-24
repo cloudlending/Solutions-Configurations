@@ -1,0 +1,110 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "consumer_parties",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "consumer_parties",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "869091871d2c72cad90aba3d54d80298921bdb269aa44f4738501c3a0aa80af0",
+     "clcommon__Unique_Name__c": "consumer_parties",
+     "clcommon__data__c": {
+          "structureName": "consumer_parties",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId' and genesis__Is_Internal_User__c=false"
+          },
+          "sections": [
+               {
+                    "id": "a8d65e03-c676-4bda-9f5a-76c8b3de7b30",
+                    "name": "Party Name",
+                    "fields": [
+                         {
+                              "id": "7a0d9737-d02b-4216-9bed-a0fa3f695bc9",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "86a0ee36-1743-478c-88fc-5904bb23f3a5",
+                              "fieldName": "clcommon__Contact__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Id",
+                                   "ariaLabel": "Id"
+                              }
+                         },
+                         {
+                              "id": "3682413d-2290-458f-bce3-9a158891b4b5",
+                              "fieldName": "clcommon__Contact__r.FirstName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "First Name",
+                                   "ariaLabel": "fname"
+                              }
+                         },
+                         {
+                              "id": "8d13091d-3afc-4ff5-88b0-284af8a53c7e",
+                              "fieldName": "clcommon__Contact__r.LastName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Last Name",
+                                   "ariaLabel": "lname"
+                              }
+                         },
+                         {
+                              "id": "c30550dc-56af-46c6-a34d-1e1c6398d02b",
+                              "fieldName": "clcommon__Contact__r.Phone",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Phone Number",
+                                   "required": true,
+                                   "regex": "^\\d{10}$",
+                                   "messages": {
+                                        "requiredErrorText": "Phone number is required.",
+                                        "regexErrorText": "Invalid phone number"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "delimiters": [
+                                                  "(",
+                                                  ") ",
+                                                  "-"
+                                             ],
+                                             "numericOnly": true,
+                                             "blocks": [
+                                                  0,
+                                                  3,
+                                                  3,
+                                                  4
+                                             ]
+                                        }
+                                   },
+                                   "ariaLabel": "Phone Number"
+                              }
+                         },
+                         {
+                              "id": "c6d7ade5-713d-4e26-84af-25e264f7d773",
+                              "fieldName": "clcommon__Contact__r.Email",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Email Address",
+                                   "required": true,
+                                   "regex": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$",
+                                   "messages": {
+                                        "requiredErrorText": "Email address is required.",
+                                        "regexErrorText": "Invalid email address"
+                                   },
+                                   "ariaLabel": "Email Address"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

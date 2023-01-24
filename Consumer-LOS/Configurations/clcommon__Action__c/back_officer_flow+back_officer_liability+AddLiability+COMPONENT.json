@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "AddLiability",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "AddLiability",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "style": "primary",
+               "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Liability</span>"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "cruds": [
+                    {
+                         "method": "insert",
+                         "source": "$state(back_officer_liability);",
+                         "options": {
+                              "defaultValue": true,
+                              "structureName": "back_officer_liability_query"
+                         }
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_liability"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_liability_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_liability+AddLiability+COMPONENT",
+     "clcommon__Release_Checksum__c": "055323c27a35cab4c44b01f4e904ac8eea4b7678cdb7d0ad746fe53487727de3",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_liability+AddLiability",
+     "clcommon__Validation_Class__c": null
+}

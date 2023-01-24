@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 6
+                    }
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No party information!",
+               "title": "Party Details",
+               "templates": {
+                    "record": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(clcommon__Contact__r.FirstName); $this.attr(clcommon__Contact__r.LastName);</span><div class=\"text\">$this.attr(clcommon__Contact__r.Phone, phone, 'x|\\(xxx\\) xxx-xxxx');</div><div class=\"text\">$this.attr(clcommon__Contact__r.Email, email);</div></div>"
+               },
+               "columns": 1,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "consumer_parties"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_party",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_party",
+     "clcommon__Release_Checksum__c": "d0efad495fe3e39063082c6b2b993c9a925e1686d64995d621f5a70787372ab7"
+}

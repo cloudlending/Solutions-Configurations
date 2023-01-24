@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "editCollateral",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "editCollateral",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Edit",
+               "style": "primary"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$currentStage.attr(collateralId);",
+                         "value": "$this.attr(genesis__Collateral__r.Id);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "back_officer_collateral_overlay"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "back_officer_party_collateral"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "back_officer_collateral_overlay"
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party_collateral"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_party_collateral_list",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_collateral+editCollateral+RECORD",
+     "clcommon__Release_Checksum__c": "bb0c42d4f878d5066ff33d56faf006d9532c0c3dbaa07f6bb371605c36e004fe",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_party_collateral+editCollateral",
+     "clcommon__Validation_Class__c": null
+}

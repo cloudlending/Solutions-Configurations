@@ -1,0 +1,61 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "loanPurposeNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "loanPurposeNext",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Next",
+               "render": "($global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined) and $global.attr(purpose);!=null and $global.attr(purpose);!=\"\" and $global.attr(purpose);!=undefined"
+          },
+          "validation": [
+               "back_officer_purpose",
+               "back_officer_purpose_existing_div",
+               "back_officer_loan_amount"
+          ],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(otherPurposeName);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Other_Purpose__c);"
+                    },
+                    {
+                         "field": "$global.attr(loanAmount);",
+                         "value": "$state(back_officer_loan_amount).attr(genesis__Loan_Amount__c);"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_purpose_existing_div"
+     },
+     "clcommon__Component_Structure_Name__c": "back_office_loan_existing_purpose_div",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_purpose_existing_div+loanPurposeNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "0e340593d57373d141e37dacd9873cebdb874cf086aa532fd3bd62e25d8889e3",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_purpose_existing_div+loanPurposeNext",
+     "clcommon__Validation_Class__c": null
+}

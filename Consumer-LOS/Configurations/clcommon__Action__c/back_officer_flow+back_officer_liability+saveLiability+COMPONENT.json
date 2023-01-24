@@ -1,0 +1,54 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveLiability",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "saveLiability",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Save",
+               "position": "bottom-left"
+          },
+          "remoteActionArguments": {
+               "genesis__Liability__c": "$this;",
+               "applicationId": "$global.attr(applicationId);",
+               "contactId": "$global.attr(borrowerContactId);"
+          },
+          "validation": [
+               "back_officer_liability"
+          ],
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_liability",
+                              "back_officer_review_liabilities"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_liability"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_liability_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_liability+saveLiability+COMPONENT",
+     "clcommon__Release_Checksum__c": "b23bdee22a3f26ceaea1e81babe3be629026fdf62b83097d1e491b828ed1f3ca",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveLiabilityInformation",
+     "clcommon__Unique_Action_Name__c": "back_officer_liability+saveLiability",
+     "clcommon__Validation_Class__c": null
+}

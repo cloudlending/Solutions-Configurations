@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "updateParty",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ]
+          },
+          "validation": [
+               "consumer_personal_information"
+          ],
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "clcommon__Party__c": {
+                    "Id": "$this.attr(Id);"
+               }
+          },
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
+          },
+          "property": {},
+          "name": "updateParty"
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_personal_information"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_personal_information_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_personal_information+updateParty+COMPONENT",
+     "clcommon__Release_Checksum__c": "fcdf57f47e3348d9cfcac571adf6d8f4d8416af4c4225c391aa4f0a8a2a1e24f",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalUpdateParty",
+     "clcommon__Unique_Action_Name__c": "consumer_personal_information+updateParty",
+     "clcommon__Validation_Class__c": null
+}

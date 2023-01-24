@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "assignStepLabel",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "assignments": [
+                    {
+                         "value": "Review And Submit",
+                         "field": "$global.attr(stepsLabel);"
+                    },
+                    {
+                         "value": "@mathjs{(($global.attr(assetClassName); ==\"Consumer Secured\" or $global.attr(assetClassName); ==\"Consumer Real Estate\") and $global.attr(partyType); == $global.attr(borrowerParty);) ? ($global.attr(typeOfApplicant); == \"Joint Credit\"? \"8\" : \"7\") : ($global.attr(typeOfApplicant); == \"Joint Credit\"? \"7\" : \"6\")};",
+                         "field": "$global.attr(stepperCount);"
+                    },
+                    {
+                         "value": "Review And Submit",
+                         "field": "$global.attr(mainStepLabel);"
+                    },
+                    {
+                         "value": "ReviewAndSubmit",
+                         "field": "$nav(consumer_mobile_stepper_panel).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "automatic": true,
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Continue"
+          },
+          "property": {},
+          "name": "assignStepLabel"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_review_step"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_review_step+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "50888336938e49ac82a7e704740020668236acbd05b7028c31afa21488c79b7c",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_review_step+assignStepLabel",
+     "clcommon__Validation_Class__c": null
+}

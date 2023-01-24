@@ -1,0 +1,137 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "consumer_get_offer_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "consumer_get_offer_details",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "5cdeae6dd65ce1d22abd4fd570e471841c58122a63bc71d433c369a93d50c74d",
+     "clcommon__Unique_Name__c": "consumer_get_offer_details",
+     "clcommon__data__c": {
+          "structureName": "consumer_get_offer_details",
+          "tableName": "genesis__application_pricing_detail__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId'"
+          },
+          "sections": [
+               {
+                    "id": "58550f80-c75d-4fc5-ba9e-5d44dbdab756",
+                    "fields": [
+                         {
+                              "id": "672f228d-30ae-43ca-9e39-fa817b53e3d0",
+                              "fieldName": "genesis__Maximum_Financed_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "$global.attr(maxfinancedlabel);",
+                                   "ariaLabel": "Credit Card Limit"
+                              }
+                         },
+                         {
+                              "id": "13976a1a-1b52-4232-aa6e-e95a69c38645",
+                              "fieldName": "genesis__Interest_Rate__c",
+                              "fieldUi": {
+                                   "fieldType": "percent",
+                                   "label": "$global.attr(interestLabel);",
+                                   "ariaLabel": "Interest Rate (%)"
+                              }
+                         },
+                         {
+                              "id": "c4e8534c-0449-4ac1-8ae7-2abb78995a05",
+                              "fieldName": "genesis__Term__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Term",
+                                   "settingsOptions": {
+                                        "minimumFractionDigits": 0
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralDecimalScale": 0
+                                        }
+                                   },
+                                   "ariaLabel": "Term"
+                              }
+                         },
+                         {
+                              "id": "0f7907e7-c6d9-467a-bed0-224552332084",
+                              "fieldName": "genesis__Payment_Amount_Derived__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Payment Amount",
+                                   "ariaLabel": "Payment Amount"
+                              }
+                         },
+                         {
+                              "id": "0b6a06ee-8fc8-4243-a0d8-83b86f171d94",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "a039f003-4854-4486-902a-b4f99b67dd67",
+                              "fieldName": "genesis__Application__r.genesis__APR__c",
+                              "fieldUi": {
+                                   "fieldType": "percent",
+                                   "label": "APR (%)",
+                                   "ariaLabel": "APR (%)"
+                              }
+                         },
+                         {
+                              "id": "e0932662-3c8f-4699-869d-03b7ad7de98e",
+                              "fieldName": "genesis__Application__r.genesis__Product_Type__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Product Type",
+                                   "defaultValue": "LEASE",
+                                   "selectOptions": [
+                                        {
+                                             "id": "LEASE",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "LEASE",
+                                             "optionValue": "LEASE"
+                                        },
+                                        {
+                                             "id": "LOAN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LOAN",
+                                             "optionValue": "LOAN"
+                                        },
+                                        {
+                                             "id": "LINE OF CREDIT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LINE OF CREDIT",
+                                             "optionValue": "LINE OF CREDIT"
+                                        },
+                                        {
+                                             "id": "PACKAGE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PACKAGE",
+                                             "optionValue": "PACKAGE"
+                                        },
+                                        {
+                                             "id": "Treasury Services",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Treasury Services",
+                                             "optionValue": "Treasury Services"
+                                        }
+                                   ],
+                                   "ariaLabel": "Product Type"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

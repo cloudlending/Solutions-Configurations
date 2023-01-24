@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "personalInformationBackCreditAppnWithAppId",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "personalInformationBackCreditAppnWithAppId",
+          "property": {},
+          "appearance": {
+               "style": "secondary",
+               "render": "$global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined and $global.attr(applicationId); !=null and $global.attr(productName); == \"Credit Card\"",
+               "label": "Back",
+               "position": "bottom-left"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": 0
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_product"
+                         ]
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_personal_information"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_personal_information_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_personal_information+personalInformationBackCreditAppnWithAppId+COMPONENT",
+     "clcommon__Release_Checksum__c": "e38b72de38d02b57a35de5f4f531a7faa1a6ca7e442444ef87cf9eb118fa312d",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_personal_information+personalInformationBackCreditAppnWithAppId",
+     "clcommon__Validation_Class__c": null
+}

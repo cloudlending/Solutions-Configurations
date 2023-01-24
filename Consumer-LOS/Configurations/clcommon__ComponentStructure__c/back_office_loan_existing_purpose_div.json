@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_office_loan_existing_purpose_div",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_office_loan_existing_purpose_div",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "3d04a962864de7a0e25bc668a33d35d2c764210a8e1a369f6ed6fe334e6f91c4",
+     "clcommon__Unique_Name__c": "back_office_loan_existing_purpose_div",
+     "clcommon__data__c": {
+          "structureName": "back_office_loan_existing_purpose_div",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c=':appId'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "f2b09f73-d28e-4e0d-9b47-61cfc493de34",
+                    "fields": [
+                         {
+                              "id": "395985c2-32fa-4181-b9d1-c38e7ef208c8",
+                              "fieldName": "genesis__Application__r.genesis__CL_Purpose__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "a0a3cee6-6a41-4596-a9ea-3ef09813aa01",
+                              "fieldName": "genesis__Application__r.genesis__CL_Purpose__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Name",
+                                   "ariaLabel": "Name"
+                              }
+                         },
+                         {
+                              "id": "86dfc0d9-351c-47bb-b2e3-694e8d32b68c",
+                              "fieldName": "genesis__Application__r.genesis__Other_Purpose__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Other Purpose",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Other Purpose is required."
+                                   },
+                                   "ariaLabel": "Other Purpose"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

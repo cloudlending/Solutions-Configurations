@@ -1,0 +1,36 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_guest_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "titleOrientation": "vertical",
+               "titles": [
+                    {
+                         "name": "consumer_getting_started",
+                         "title": "Register"
+                    },
+                    {
+                         "name": "consumer_check_inbox",
+                         "title": "Confirm"
+                    }
+               ],
+               "current": "$global.attr(startStep);"
+          },
+          "property": {},
+          "type": "steps",
+          "category": "container"
+     },
+     "clcommon__Actor_Name__c": "application_flow_steps",
+     "clcommon__External_ID__c": "consumer_guest_flow+application_flow_steps",
+     "clcommon__Release_Checksum__c": "941d7c676ba5e731f6993cea7bca0c0918b529fd6e1d0d9f6c4eda7df7a44be0"
+}

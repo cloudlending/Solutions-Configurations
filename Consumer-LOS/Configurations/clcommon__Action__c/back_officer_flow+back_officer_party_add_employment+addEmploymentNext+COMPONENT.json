@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addEmploymentNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addEmploymentNext",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Next",
+               "style": "primary",
+               "enable": "$this.count(); >0"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(back_officer_party_step).appearance(current);",
+                         "value": "next"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party_add_employment"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_party_employment_info",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_add_employment+addEmploymentNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "d3735d59436e0c7b3aede849e315f24d1ca85f32411b276b8664065e2c8a18d3",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_party_add_employment+addEmploymentNext",
+     "clcommon__Validation_Class__c": null
+}

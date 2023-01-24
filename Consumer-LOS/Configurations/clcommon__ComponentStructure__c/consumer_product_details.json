@@ -1,0 +1,71 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "consumer_product_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "consumer_product_details",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "6e3400f827e2b3690ee4f0fe0b4ea554e4f8ba32f4ea4be95b1b1da138f91041",
+     "clcommon__Unique_Name__c": "consumer_product_details",
+     "clcommon__data__c": {
+          "structureName": "consumer_product_details",
+          "tableName": "genesis__applications__c",
+          "whereClause": {
+               "freeForm": "Id = ':applicationId'"
+          },
+          "sections": [
+               {
+                    "id": "b8cb0860-a7c7-4c38-9227-9cd0d0c803c0",
+                    "fields": [
+                         {
+                              "id": "a67f8db7-373d-481a-a5c8-f4999fce2285",
+                              "relationType": "reference",
+                              "fieldName": "genesis__CL_Product__c",
+                              "relationName": "genesis__CL_Product__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__CL_Product__c",
+                                   "whereClause": {
+                                        "freeForm": "id != null and solcommon__Show_On_Portal__c = true and clcommon__Asset_Class__r.Name in ('Consumer Secured','Consumer Real Estate','Consumer Unsecured')"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "00db3281-614c-4e8e-826e-cf31fd742aea",
+                                             "fields": [
+                                                  {
+                                                       "id": "729e9222-fdad-4514-a2b0-a4fe67696513",
+                                                       "fieldName": "clcommon__Product_Name__c",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "CL Product Id"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "d244f11d-1bdc-42a0-ae09-35dfbf773fc3",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "CL Product",
+                                   "defaultValue": "",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Please select an option"
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

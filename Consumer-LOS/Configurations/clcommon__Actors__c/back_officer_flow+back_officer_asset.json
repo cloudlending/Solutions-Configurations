@@ -1,0 +1,69 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "updates": [
+                         {
+                              "value": [
+                                   "back_officer_liability"
+                              ],
+                              "name": "$nav.reloads.add;"
+                         }
+                    ],
+                    "assignments": [
+                         {
+                              "value": "$date('yyyy, MM, dd');",
+                              "field": "$global.attr(currentDate);"
+                         },
+                         {
+                              "value": "@mathjs{$this.sum(genesis__Market_Value__c); - $state(back_officer_liability).sum(genesis__Amount_Owing__c);};",
+                              "field": "$global.attr(networths);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "title": "Asset Details",
+               "blankMessage": "No asset information!",
+               "editableFields": {
+                    "Id": false
+               },
+               "renderFields": {
+                    "genesis__Contact__r.Id": false,
+                    "Id": false
+               },
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(borrowerAccountId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "back_officer_asset_information_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_asset",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_asset",
+     "clcommon__Release_Checksum__c": "f2bf9ef19454e39360b0ee5f67e6b01fa813144cf0af1d8a8116303f90b92ec5"
+}

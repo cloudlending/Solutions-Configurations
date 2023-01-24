@@ -1,0 +1,51 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToflow",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "goToflow",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "position": "bottom-left"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "$global.attr(portalStage);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_application_fetch"
+                         ]
+                    }
+               ],
+               "next": "Home"
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_application_fetch"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_application_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_application_fetch+goToflow+COMPONENT",
+     "clcommon__Release_Checksum__c": "0b7a7e26087351dc27d7921c835d9ad571d6bd8650bd139b178afdfc26f79105",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_application_fetch+goToflow",
+     "clcommon__Validation_Class__c": null
+}

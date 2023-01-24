@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "consumer_enrollment_info",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "consumer_enrollment_info",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "fa06e9fab33d172962cd193f35cd89a19a3275f4e9f55146ed05625377783d16",
+     "clcommon__Unique_Name__c": "consumer_enrollment_info",
+     "clcommon__data__c": {
+          "structureName": "consumer_enrollment_info",
+          "sections": [
+               {
+                    "id": "",
+                    "fields": [
+                         {
+                              "id": "7b487879",
+                              "fieldName": "enroll_in_online_banking",
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "",
+                                   "required": true,
+                                   "selectedSuffix": "done",
+                                   "selectOptions": [
+                                        {
+                                             "id": "896096623",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Yes",
+                                             "optionValue": "Yes"
+                                        },
+                                        {
+                                             "id": "646472",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "No",
+                                             "optionValue": "No"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "You have to select one option."
+                                   },
+                                   "ariaLabel": "would you like to opt for online banking? "
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

@@ -1,0 +1,169 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_application_status_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_officer_application_status_query",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "4f251dc25ddc2dc8595f46fec9f4e562f9b2bd502d1c6b02b69193f12fdcd26e",
+     "clcommon__Unique_Name__c": "back_officer_application_status_query",
+     "clcommon__data__c": {
+          "structureName": "back_officer_application_status_query",
+          "tableName": "genesis__applications__c",
+          "whereClause": {
+               "freeForm": "Id = ':applicationId'"
+          },
+          "sections": [
+               {
+                    "id": "4f9d8b03-603d-4e8a-8ec7-e87f1030a72a",
+                    "fields": [
+                         {
+                              "id": "a60865fd-b0fd-4746-8829-872e57422b6a",
+                              "fieldName": "Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Application ID",
+                                   "ariaLabel": "Application ID"
+                              }
+                         },
+                         {
+                              "id": "4788e7ea-253b-4195-b92d-7a090d513692",
+                              "fieldName": "genesis__Loan_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Loan Amount",
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         },
+                         {
+                              "id": "12f5d9fc-7e8f-4295-aef1-fffb12e5ed51",
+                              "fieldName": "genesis__Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Status",
+                                   "defaultValue": "NEW - ENTERED",
+                                   "selectOptions": [
+                                        {
+                                             "id": "APPROVED - APPROVED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - APPROVED",
+                                             "optionValue": "APPROVED - APPROVED"
+                                        },
+                                        {
+                                             "id": "APPROVED - CONVERTED TO CONTRACT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - CONVERTED TO CONTRACT",
+                                             "optionValue": "APPROVED - CONVERTED TO CONTRACT"
+                                        },
+                                        {
+                                             "id": "APPROVED - DOCUMENT CHECK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - DOCUMENT CHECK",
+                                             "optionValue": "APPROVED - DOCUMENT CHECK"
+                                        },
+                                        {
+                                             "id": "NEW - CREDIT PULLED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - CREDIT PULLED",
+                                             "optionValue": "NEW - CREDIT PULLED"
+                                        },
+                                        {
+                                             "id": "NEW - ENTERED",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "NEW - ENTERED",
+                                             "optionValue": "NEW - ENTERED"
+                                        },
+                                        {
+                                             "id": "NEW - IN CREDIT CHECK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - IN CREDIT CHECK",
+                                             "optionValue": "NEW - IN CREDIT CHECK"
+                                        },
+                                        {
+                                             "id": "NEW - IN REVIEW",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - IN REVIEW",
+                                             "optionValue": "NEW - IN REVIEW"
+                                        },
+                                        {
+                                             "id": "NEW - PRICING GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - PRICING GENERATED",
+                                             "optionValue": "NEW - PRICING GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW - SCORECARD GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - SCORECARD GENERATED",
+                                             "optionValue": "NEW - SCORECARD GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW - CHECKLIST GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - CHECKLIST GENERATED",
+                                             "optionValue": "NEW - CHECKLIST GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW-SUBMITTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW-SUBMITTED",
+                                             "optionValue": "NEW-SUBMITTED"
+                                        },
+                                        {
+                                             "id": "NEW - VEHICLE VALUATION REQUIRED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - VEHICLE VALUATION REQUIRED",
+                                             "optionValue": "NEW - VEHICLE VALUATION REQUIRED"
+                                        },
+                                        {
+                                             "id": "REJECTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "REJECTED",
+                                             "optionValue": "REJECTED"
+                                        },
+                                        {
+                                             "id": "PULL CREDIT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PULL CREDIT",
+                                             "optionValue": "PULL CREDIT"
+                                        },
+                                        {
+                                             "id": "CLOSING DOCUMENTS GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CLOSING DOCUMENTS GENERATED",
+                                             "optionValue": "CLOSING DOCUMENTS GENERATED"
+                                        },
+                                        {
+                                             "id": "WITHDRAWN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "WITHDRAWN",
+                                             "optionValue": "WITHDRAWN"
+                                        }
+                                   ],
+                                   "ariaLabel": "Status"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

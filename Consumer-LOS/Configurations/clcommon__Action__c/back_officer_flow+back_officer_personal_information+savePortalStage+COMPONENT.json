@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "savePortalStage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "savePortalStage",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "render": false,
+               "label": "Next",
+               "disableWhenLoading": true,
+               "position": "bottom-left"
+          },
+          "remoteActionArguments": {
+               "portalStage": "MoreInfo",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "validation": [],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "next"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_applicant_review",
+                              "back_officer_party",
+                              "back_officer_personal_information"
+                         ]
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_personal_information"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_personal_information_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_personal_information+savePortalStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "953de491b3aa2181abd450d6e656445486a966a1806b19371375d9742004b6ac",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "back_officer_personal_information+savePortalStage",
+     "clcommon__Validation_Class__c": null
+}

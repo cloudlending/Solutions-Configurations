@@ -1,0 +1,61 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "titleOrientation": "vertical",
+               "titles": [
+                    {
+                         "name": "GettingStarted",
+                         "title": "Getting Started"
+                    },
+                    {
+                         "name": "AboutYou",
+                         "title": "About You"
+                    },
+                    {
+                         "name": "OwnerInformation",
+                         "render": "$global.attr(typeOfApplicant); == \"Joint Credit\" ",
+                         "title": "Party Details"
+                    },
+                    {
+                         "name": "Employment",
+                         "title": "Employment Details"
+                    },
+                    {
+                         "name": "PersonalIncome",
+                         "title": "Income Details"
+                    },
+                    {
+                         "name": "AssetLiability",
+                         "title": "Net Worth Details"
+                    },
+                    {
+                         "name": "Collateral",
+                         "render": "($global.attr(assetClassName); ==\"Consumer Secured\" or $global.attr(assetClassName); ==\"Consumer Real Estate\") and $global.attr(partyType); == $global.attr(borrowerParty);",
+                         "title": "Collateral Details"
+                    },
+                    {
+                         "name": "ReviewAndSubmit",
+                         "title": "Review And Submit"
+                    }
+               ]
+          },
+          "property": {},
+          "type": "steps",
+          "category": "container"
+     },
+     "clcommon__Actor_Name__c": "consumer_mobile_stepper_panel",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_mobile_stepper_panel",
+     "clcommon__Release_Checksum__c": "e06b725b0d6e2fb946034673acd2ca873ff034f6d99082ba66887a3a04bbd7f7"
+}

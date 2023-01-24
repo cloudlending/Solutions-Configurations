@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "deleteCollateral",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "value": [
+                              "consumer_collateral_details",
+                              "consumer_review_collateral"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "collateralId": "$this.attr(genesis__Collateral__r.Id);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "label": "<i class=\"fa fa-trash\" aria-hidden=\"true\"></i> Delete",
+               "style": "secondary"
+          },
+          "property": {},
+          "name": "deleteCollateral"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_collateral_details"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_collateral_details",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_collateral_details+deleteCollateral+RECORD",
+     "clcommon__Release_Checksum__c": "6a8d52d2a73c29ad615dc2197d409b9d7c076ce47f464e475aa19ac7934ac0de",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalDeactivateAppCollateral",
+     "clcommon__Unique_Action_Name__c": "consumer_collateral_details+deleteCollateral",
+     "clcommon__Validation_Class__c": null
+}

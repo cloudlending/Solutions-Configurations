@@ -1,0 +1,45 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "fieldChange": {
+                    "Name": {
+                         "actions": [
+                              {
+                                   "name": "callCount",
+                                   "condition": "$this.attr(Name); != undefined"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "title": "Search by Name or Email",
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "structureName": "back_officer_party_search"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_party_search",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_search",
+     "clcommon__Release_Checksum__c": "9c4bc79f517154f0ed6f98c7f6136dc98592bcb0128b2b6e1a3a54ced6bdb2aa"
+}

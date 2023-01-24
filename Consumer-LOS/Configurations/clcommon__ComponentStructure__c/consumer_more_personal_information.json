@@ -1,0 +1,391 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "consumer_more_personal_information",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "consumer_more_personal_information",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "1af5aeaa06dd3f30ac74af37cf0829d44b3d4a2a3a65f44207229f7d7dce7641",
+     "clcommon__Unique_Name__c": "consumer_more_personal_information",
+     "clcommon__data__c": {
+          "structureName": "consumer_more_personal_information",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "clcommon__Contact__r.AccountId = ':accountId' and genesis__Application__c = ':applicationId'"
+          },
+          "sections": [
+               {
+                    "id": "e6c1da11-0b5b-483e-92b5-74f2fc22340f",
+                    "fields": [
+                         {
+                              "id": "1724c205-7232-426a-a85e-1604f754a7c6",
+                              "fieldName": "clcommon__Contact__r.clcommon__Personal_Information__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "record ID",
+                                   "ariaLabel": "Contact ID"
+                              }
+                         },
+                         {
+                              "id": "6b5bed27-737b-42a6-8bfa-654425c2c1fa",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "dd36d320-c970-41af-aa32-9ad067db369c",
+                              "fieldName": "clcommon__Contact__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Contact ID",
+                                   "ariaLabel": "Contact ID"
+                              }
+                         },
+                         {
+                              "id": "720e9e79-8377-440c-80b8-9b3fe635094e",
+                              "fieldName": "clcommon__Contact__r.Birthdate",
+                              "fieldUi": {
+                                   "fieldType": "datepicker",
+                                   "label": "Date of Birth",
+                                   "tooltip": "Enter a valid date in the format (MM/dd/yyyy)",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$ext.confirmAge",
+                                             "arguments": [
+                                                  "$this.attr(clcommon__Contact__r.Birthdate);",
+                                                  18
+                                             ],
+                                             "message": "You have to be 18 years old."
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Birth Date is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "datePattern": "MM/dd/yyyy",
+                                             "minYear": 1950,
+                                             "showMonthDropdown": true,
+                                             "showYearDropdown": true
+                                        }
+                                   },
+                                   "ariaLabel": "Birthdate"
+                              }
+                         },
+                         {
+                              "id": "af7b6e01-ef2e-4abb-82e9-e63623dceaed",
+                              "fieldName": "clcommon__Contact__r.ints__Social_Security_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Social Security Number",
+                                   "placeholderText": "Enter Social Security Number",
+                                   "required": true,
+                                   "regex": "^\\d{9}$",
+                                   "messages": {
+                                        "requiredErrorText": "Social security number is required.",
+                                        "regexErrorText": "Social Security Number is invalid."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "masked": "x|*|***-**-xxxx",
+                                             "numericOnly": true,
+                                             "delimiter": "-",
+                                             "blocks": [
+                                                  3,
+                                                  2,
+                                                  4
+                                             ]
+                                        }
+                                   },
+                                   "ariaLabel": "Social Security Number"
+                              }
+                         },
+                         {
+                              "id": "fbd7a6bc-b3ae-4fc3-a515-5b9f53045600",
+                              "fieldName": "clcommon__Contact__r.clcommon__Military_Relationship__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Military Relationship",
+                                   "prompt": "Select",
+                                   "selectOptions": [
+                                        {
+                                             "id": "None",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "None",
+                                             "optionValue": "None"
+                                        },
+                                        {
+                                             "id": "Unknown",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Unknown",
+                                             "optionValue": "Unknown"
+                                        },
+                                        {
+                                             "id": "Service Member",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Service Member",
+                                             "optionValue": "Service Member"
+                                        },
+                                        {
+                                             "id": "Service Member Dependent",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Service Member Dependent",
+                                             "optionValue": "Service Member Dependent"
+                                        }
+                                   ],
+                                   "ariaLabel": "Military Relationship"
+                              }
+                         },
+                         {
+                              "id": "2df231fc-e80c-406f-8c76-28db9da1014c",
+                              "fieldName": "clcommon__Contact__r.clcommon__Service_Member_Military_Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Service Member Military Status",
+                                   "prompt": "Select",
+                                   "selectOptions": [
+                                        {
+                                             "id": "None",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "None",
+                                             "optionValue": "None"
+                                        },
+                                        {
+                                             "id": "Unknown",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Unknown",
+                                             "optionValue": "Unknown"
+                                        },
+                                        {
+                                             "id": "Active Duty",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Active Duty",
+                                             "optionValue": "Active Duty"
+                                        },
+                                        {
+                                             "id": "Retired",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Retired",
+                                             "optionValue": "Retired"
+                                        },
+                                        {
+                                             "id": "Reserve",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Reserve",
+                                             "optionValue": "Reserve"
+                                        },
+                                        {
+                                             "id": "Veteran",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Veteran",
+                                             "optionValue": "Veteran"
+                                        }
+                                   ],
+                                   "ariaLabel": "Service Member Military Status"
+                              }
+                         },
+                         {
+                              "id": "8f2fb1b8-bc8c-4bf0-bd6e-7455ceeed1f0",
+                              "fieldName": "clcommon__Contact__r.clcommon__Marital_Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Marital Status",
+                                   "defaultValue": "",
+                                   "prompt": "Select",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Married",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Married",
+                                             "optionValue": "Married"
+                                        },
+                                        {
+                                             "id": "Unmarried",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Unmarried",
+                                             "optionValue": "Unmarried"
+                                        },
+                                        {
+                                             "id": "Separated",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Separated",
+                                             "optionValue": "Separated"
+                                        },
+                                        {
+                                             "id": "Not Provided",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Not Provided",
+                                             "optionValue": "Not Provided"
+                                        }
+                                   ],
+                                   "ariaLabel": "Marital Status"
+                              }
+                         },
+                         {
+                              "id": "26d52851-265b-4e93-b5af-3d366730eb92",
+                              "fieldName": "clcommon__Contact__r.clcommon__Residential_Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Residential Status",
+                                   "defaultValue": "",
+                                   "prompt": "Select",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Rent",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Rent",
+                                             "optionValue": "Rent"
+                                        },
+                                        {
+                                             "id": "Own Home",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Own Home",
+                                             "optionValue": "Own Home"
+                                        },
+                                        {
+                                             "id": "Living with Parents",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Living with Parents",
+                                             "optionValue": "Living with Parents"
+                                        },
+                                        {
+                                             "id": "Other",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Other",
+                                             "optionValue": "Other"
+                                        }
+                                   ],
+                                   "ariaLabel": "Residential Status"
+                              }
+                         },
+                         {
+                              "id": "69b907c2-9a66-41b1-a3fe-220f6cfe14aa",
+                              "fieldName": "clcommon__Contact__r.clcommon__Monthly_Residential_Payment_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Monthly Residential Payment Amount",
+                                   "placeholderText": "Enter Amount",
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Monthly Residential Payment Amount"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "2321435",
+                    "fields": [
+                         {
+                              "id": "b1da97df-752a-4dac-849e-df3e1c713ec4",
+                              "fieldName": "clcommon__Contact__r.clcommon__Personal_Information__r.clcommon__Not_A_Citizen__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Not A US Citizen",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Not A US Citizen"
+                              }
+                         },
+                         {
+                              "id": "7f505395-a09c-4480-8f2c-7c70c5e8d512",
+                              "fieldName": "clcommon__Contact__r.clcommon__Country_of_Citizenship__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Country of Citizenship",
+                                   "placeholderText": "Enter Country of Citizenship",
+                                   "ariaLabel": "Country of Citizenship"
+                              }
+                         },
+                         {
+                              "id": "5a22cb07-6148-4aad-98ec-00864bbdb1d7",
+                              "fieldName": "genesis__Credit_Check_Consent__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Permission to pull credit",
+                                   "ariaLabel": "Permission to pull credit"
+                              }
+                         },
+                         {
+                              "id": "68246100-ece8-4744-a480-ce94a985551c",
+                              "fieldName": "solcommon__Consent_To_Disclosure_And_Document__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "I consent to receive disclosures and documents electronically",
+                                   "defaultValue": false,
+                                   "ariaLabel": "I consent to receive disclosures and documents electronically"
+                              }
+                         },
+                         {
+                              "id": "ea2a3cd6-225b-4d2a-878c-ef2b46b9342c",
+                              "relationType": "reference",
+                              "fieldName": "clcommon__Contact__r.clcommon__Legal_Entity_Type__c",
+                              "relationName": "clcommon__Legal_Entity_Type__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__Legal_Entity__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "ef17d9ef-efe0-485b-bf43-14f7c4adb96a",
+                                             "fields": [
+                                                  {
+                                                       "id": "ca76b622-35de-4e2a-8399-1fb149adb705",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "36a288fe-320b-4570-a519-fdea55c82c5b",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Legal Class Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Legal Entity Type"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

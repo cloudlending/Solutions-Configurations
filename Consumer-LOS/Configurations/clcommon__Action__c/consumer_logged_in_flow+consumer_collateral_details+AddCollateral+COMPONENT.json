@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "AddCollateral",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "updates": [
+                    {
+                         "value": "consumer_add_collateral_container",
+                         "name": "$nav.overlay.add;"
+                    },
+                    {
+                         "value": "consumer_add_collateral_container",
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "",
+                         "field": "$global.attr(collateralId);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "style": "primary",
+               "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Collateral</span>",
+               "position": "top-right"
+          },
+          "property": {},
+          "name": "AddCollateral"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_collateral_details"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_collateral_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_collateral_details+AddCollateral+COMPONENT",
+     "clcommon__Release_Checksum__c": "16f3b13e86bc05c182d51645e82fd96fe137f6752016d58e6b04b7269b7d0afc",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_collateral_details+AddCollateral",
+     "clcommon__Validation_Class__c": null
+}
