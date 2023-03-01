@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "loanPurposeNextValidation",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "assignments": [
+                    {
+                         "value": "<p style=\"font-size:10.5px; font-weight:400; color:#f44336;\">Purpose is required</p>",
+                         "field": "$global.attr(purposeValidation);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "validation": [
+               "los_loan_purpose_details"
+          ],
+          "remoteActionArguments": {},
+          "appearance": {
+               "style": "primary",
+               "position": "bottom-left",
+               "render": "$global.attr(loanPurpose);==null or $global.attr(loanPurpose);==\"\" or $global.attr(loanPurpose);==undefined",
+               "label": "Next"
+          },
+          "property": {},
+          "name": "loanPurposeNextValidation"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_loan_existing_purpose"
+     },
+     "clcommon__Component_Structure_Name__c": "los_loan_existing_purpose",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_loan_existing_purpose+loanPurposeNextValidation+COMPONENT",
+     "clcommon__Release_Checksum__c": "23293c595c423fd2857513bbade9e75bce1500a6e5e14c94bdd4c6ff6306eebe",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_loan_existing_purpose+loanPurposeNextValidation",
+     "clcommon__Validation_Class__c": null
+}

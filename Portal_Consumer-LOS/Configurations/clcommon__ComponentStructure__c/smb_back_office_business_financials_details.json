@@ -1,0 +1,153 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_business_financials_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "smb_back_office_business_financials_details",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "83db42c2913f87a67b785bf07869f6cb01760d0c5a6d6af68030d7b119f73ff6",
+     "clcommon__Unique_Name__c": "smb_back_office_business_financials_details",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_business_financials_details",
+          "tableName": "genesis__business_information__c",
+          "whereClause": {
+               "freeForm": "Id = ':businessId'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "6266d960-41cc-4625-ab2b-7f664fdcaf47",
+                    "name": "Business Average Annual Revenue",
+                    "fields": [
+                         {
+                              "id": "1d68b80e-97b2-44d6-8547-a6132e8d6404",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "5221da3c-c70a-462b-a61d-a3157128444d",
+                              "fieldName": "solcommon__Total_Revenue__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Business Average Annual Revenue",
+                                   "placeholderText": "Enter Details",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(solcommon__Total_Revenue__c); > 0",
+                                             "message": "<span style=\"color:red\">Anunal Revenue should be greater than zero </span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Annual Revenue is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Annual Revenue"
+                              }
+                         },
+                         {
+                              "id": "3719",
+                              "fieldName": "genesis__Total_Sales__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Total Sales",
+                                   "placeholderText": "Enter Details",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Total_Sales__c); > 0",
+                                             "message": "<span style=\"color:red\">Total sales should be greater than zero </span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Total Sales is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Total Sales"
+                              }
+                         },
+                         {
+                              "id": "3721",
+                              "fieldName": "genesis__Total_Liabilities__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Total Debt",
+                                   "placeholderText": "Enter Details",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Total_Liabilities__c); > 0",
+                                             "message": "<span style=\"color:red\">Total Debt should be greater than zero </span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Total Debt is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Total Debt"
+                              }
+                         },
+                         {
+                              "id": "18d3fa7c-8ca3-4773-805a-c35791ee09be",
+                              "relationType": "childrenRelation",
+                              "fieldName": "genesis__Accounts__r",
+                              "relationName": "genesis__Accounts__r",
+                              "relationJson": {
+                                   "tableName": "Account",
+                                   "whereClause": {
+                                        "freeForm": "id !=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "f9cc906f-7e40-45f1-98fd-2b60fd8962e6",
+                                             "fields": [
+                                                  {
+                                                       "id": "e4d8363a-7b0d-46d5-87eb-775bdfe5a6d4",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Account ID"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": null,
+                                   "label": ""
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

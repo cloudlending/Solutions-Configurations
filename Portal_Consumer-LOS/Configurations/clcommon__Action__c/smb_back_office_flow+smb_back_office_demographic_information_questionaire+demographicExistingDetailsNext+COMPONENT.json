@@ -1,0 +1,71 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "demographicExistingDetailsNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "demographicExistingDetailsNext",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "style": "primary",
+               "render": "$this.attr(Id);!=\"new_record_id\" and $this.attr(Id);!=\"\" and $this.attr(Id);!=undefined",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "intdm__personal_demographic_information__c": {
+                    "Id": "$this.attr(Id);",
+                    "intdm__Other_Hispanic_or_Latino__c": "$state(smb_back_office_demographic_information_summary).attr(intdm__Other_Hispanic_or_Latino__c);",
+                    "intdm__Other_Pacific_Islander__c": "$state(smb_back_office_demographic_information_summary).attr(intdm__Other_Pacific_Islander__c);",
+                    "intdm__Other_Asian__c": "$state(smb_back_office_demographic_information_summary).attr(intdm__Other_Asian__c);",
+                    "intdm__Tribe__c": "$state(smb_back_office_demographic_information_summary).attr(intdm__Tribe__c);",
+                    "intdm__Demographic_Data_Collection_Method__c": "$this.attr(intdm__Demographic_Data_Collection_Method__c);",
+                    "intdm__Ethnicity_Visually_Identified__c": "$this.attr(intdm__Ethnicity_Visually_Identified__c);",
+                    "intdm__Race_Visually_Identified__c": "$this.attr(intdm__Race_Visually_Identified__c);",
+                    "intdm__Gender_Visually_Identified__c": "$this.attr(intdm__Gender_Visually_Identified__c);",
+                    "intdm__Gender_Opt_Out__c": "$state(smb_back_office_demographic_information_summary).attr(intdm__Gender_Opt_Out__c);",
+                    "intdm__Race_Opt_Out__c": "$state(smb_back_office_demographic_information_summary).attr(intdm__Race_Opt_Out__c);",
+                    "intdm__Race_Sub_Category__c": "$state(smb_back_office_demographic_information_summary).attr(intdm__Race_Sub_Category__c);",
+                    "intdm__Race__c": "$state(smb_back_office_demographic_information_summary).attr(intdm__Race__c);",
+                    "intdm__Ethnic_Sub_Category__c": "$state(smb_back_office_demographic_information_summary).attr(intdm__Ethnic_Sub_Category__c);",
+                    "intdm__Ethnicity_Opt_Out__c": "$state(smb_back_office_demographic_information_summary).attr(intdm__Ethnicity_Opt_Out__c);",
+                    "intdm__Hispanic_or_Latino_Ethnicity__c": "$state(smb_back_office_demographic_information_summary).attr(intdm__Hispanic_or_Latino_Ethnicity__c);",
+                    "intdm__Contact__c": "$global.attr(contactId);"
+               }
+          },
+          "validation": [
+               "smb_back_office_demographic_information_questionaire",
+               "smb_back_office_demographic_information_gender",
+               "smb_back_office_demographic_information_summary"
+          ],
+          "successHandler": {
+               "updates": [],
+               "actions": [
+                    {
+                         "name": "updateGenderInformation"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_questionaire"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_demographic_information_questionaire",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_questionaire+demographicExistingDetailsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "e5563a8fe654da58e680af567a4cfe04f78d878d9670cb148e3f11dcb0ea162c",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveDemographicInformation",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_demographic_information_questionaire+demographicExistingDetailsNext",
+     "clcommon__Validation_Class__c": null
+}

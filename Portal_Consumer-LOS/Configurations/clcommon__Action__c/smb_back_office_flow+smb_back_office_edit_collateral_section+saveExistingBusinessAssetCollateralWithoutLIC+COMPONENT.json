@@ -1,0 +1,117 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveExistingBusinessAssetCollateralWithoutLIC",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "saveExistingBusinessAssetCollateralWithoutLIC",
+          "property": {},
+          "appearance": {
+               "render": "($this.attr(genesis__Collateral__r.Id); != \"\" and $this.attr(genesis__Collateral__r.Id); != undefined and $this.attr(genesis__Collateral__r.Id); != \"new_record_id\") and $global.attr(isLifeInsurance); != \"Life Insurance\" and $global.attr(itemizedCollateral);==true and $state(smb_back_office_find_collateral_relationship).count(); ==0",
+               "position": "bottom-right",
+               "style": "primary",
+               "label": "Proceed"
+          },
+          "remoteActionArguments": {
+               "collateral": {
+                    "Id": "$this.attr(genesis__Collateral__r.Id);",
+                    "clcommon__Purchase_Money__c": "$this.attr(genesis__Collateral__r.clcommon__Purchase_Money__c);",
+                    "clcommon__Description__c": "$this.attr(genesis__Collateral__r.clcommon__Description__c);",
+                    "clcommon__Postal_Code__c": "$this.attr(genesis__Collateral__r.clcommon__Postal_Code__c);",
+                    "clcommon__State__c": "$this.attr(genesis__Collateral__r.clcommon__State__c);",
+                    "clcommon__City__c": "$this.attr(genesis__Collateral__r.clcommon__City__c);",
+                    "clcommon__Address__c": "$this.attr(genesis__Collateral__r.clcommon__Address__c);",
+                    "clcommon__Collateral_Type__c": "$state(smb_back_office_add_collateral_type).attr(genesis__Collateral__r.clcommon__Collateral_Type__c);",
+                    "clcommon__Equipment_Description__c": "$this.attr(genesis__Collateral__r.clcommon__Equipment_Description__c);",
+                    "clcommon__Property_County__c": "$this.attr(genesis__Collateral__r.clcommon__Property_County__c);",
+                    "clcommon__Property_Type__c": "$this.attr(genesis__Collateral__r.clcommon__Property_Type__c);",
+                    "clcommon__Property_Legal_Description__c": "$this.attr(genesis__Collateral__r.clcommon__Property_Legal_Description__c);",
+                    "clcommon__Property_Deed_Execution_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Property_Deed_Execution_Date__c);",
+                    "clcommon__Dwelling__c": "$this.attr(genesis__Collateral__r.clcommon__Dwelling__c);",
+                    "clcommon__Homestead_Property__c": "$this.attr(genesis__Collateral__r.clcommon__Homestead_Property__c);",
+                    "clcommon__Mortgage_Deed_Recording_Number__c": "$this.attr(genesis__Collateral__r.clcommon__Mortgage_Deed_Recording_Number__c);",
+                    "clcommon__Mortgage_Deed_Recording_Page__c": "$this.attr(genesis__Collateral__r.clcommon__Mortgage_Deed_Recording_Page__c);",
+                    "clcommon__Possessory_Current_Balance__c": "$this.attr(genesis__Collateral__r.clcommon__Possessory_Current_Balance__c);",
+                    "clcommon__Number_of_Shares__c": "$this.attr(genesis__Collateral__r.clcommon__Number_of_Shares__c);",
+                    "clcommon__Collateral_Local_Jurisdiction__c": "$this.attr(genesis__Collateral__r.clcommon__Collateral_Local_Jurisdiction__c);",
+                    "clcommon__Issued_By__c": "$this.attr(genesis__Collateral__r.clcommon__Issued_By__c);",
+                    "clcommon__Issuer_Name__c": "$this.attr(genesis__Collateral__r.clcommon__Issuer_Name__c);",
+                    "clcommon__Model__c": "$this.attr(genesis__Collateral__r.clcommon__Model__c);",
+                    "clcommon__Property_Unit_Number__c": "$this.attr(genesis__Collateral__r.clcommon__Property_Unit_Number__c);",
+                    "clcommon__Vehicle_Identification_Number__c": "$this.attr(genesis__Collateral__r.clcommon__Vehicle_Identification_Number__c);",
+                    "clcommon__Port_Name__c": "$this.attr(genesis__Collateral__r.clcommon__Port_Name__c);",
+                    "clcommon__Vehicle_Type__c": "$this.attr(genesis__Collateral__r.clcommon__Vehicle_Type__c);",
+                    "clcommon__Insurance_Amount__c": "$this.attr(genesis__Collateral__r.clcommon__Insurance_Amount__c);",
+                    "clcommon__Stock_Type__c": "$this.attr(genesis__Collateral__r.clcommon__Stock_Type__c);",
+                    "clcommon__Local_Jurisdiction_Type__c": "$this.attr(genesis__Collateral__r.clcommon__Local_Jurisdiction_Type__c);",
+                    "clcommon__Policy_Number__c": "$this.attr(genesis__Collateral__r.clcommon__Policy_Number__c);",
+                    "clcommon__Manufacturer__c": "$this.attr(genesis__Collateral__r.clcommon__Manufacturer__c);",
+                    "clcommon__Airport__c": "$this.attr(genesis__Collateral__r.clcommon__Airport__c);",
+                    "clcommon__Possessory_Type__c": "$this.attr(genesis__Collateral__r.clcommon__Possessory_Type__c);",
+                    "clcommon__Certificate_Number__c": "$this.attr(genesis__Collateral__r.clcommon__Certificate_Number__c);",
+                    "clcommon__Certificated__c": "$this.attr(genesis__Collateral__r.clcommon__Certificated__c);",
+                    "clcommon__Vessel_Type__c": "$this.attr(genesis__Collateral__r.clcommon__Vessel_Type__c);",
+                    "clcommon__Name_of_Vessel__c": "$this.attr(genesis__Collateral__r.clcommon__Name_of_Vessel__c);",
+                    "clcommon__Life_Insurance_Verification_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Verification_Date__c);",
+                    "clcommon__Life_Insurance_Effective_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Effective_Date__c);",
+                    "intdm__New_Manufactured_Home__c": "$this.attr(genesis__Collateral__r.intdm__New_Manufactured_Home__c);",
+                    "clcommon__Make__c": "$this.attr(genesis__Collateral__r.clcommon__Make__c);",
+                    "clcommon__Style__c": "$this.attr(genesis__Collateral__r.clcommon__Style__c);",
+                    "clcommon__Length_in_Feet__c": "$this.attr(genesis__Collateral__r.clcommon__Length_in_Feet__c);",
+                    "clcommon__Age__c": "$this.attr(genesis__Collateral__r.clcommon__Age__c);",
+                    "clcommon__Year__c": "$this.attr(genesis__Collateral__r.clcommon__Year__c);",
+                    "clcommon__Vehicle_Serial_Number__c": "$this.attr(genesis__Collateral__r.clcommon__Vehicle_Serial_Number__c);",
+                    "clcommon__Vehicle_Color__c": "$this.attr(genesis__Collateral__r.clcommon__Vehicle_Color__c);",
+                    "clcommon__Weight_in_Lbs__c": "$this.attr(genesis__Collateral__r.clcommon__Weight_in_Lbs__c);",
+                    "clcommon__Account_Number__c": "$this.attr(genesis__Collateral__r.clcommon__Account_Number__c);",
+                    "clcommon__Insurance_Company_Name__c)": "$this.attr(genesis__Collateral__r.clcommon__Insurance_Company_Name__c);",
+                    "clcommon__Collateral_Name__c": "$this.attr(genesis__Collateral__r.clcommon__Collateral_Name__c);",
+                    "clcommon__Estimated_Value__c": "$this.attr(genesis__Collateral__r.clcommon__Estimated_Value__c);"
+               },
+               "genesis__Applications__c": {
+                    "solcommon__Portal_Stage__c": "CollateralDetails",
+                    "Id": "$global.attr(applicationId);"
+               }
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(collateralId);",
+                         "value": "$result.attr(collateralId);"
+                    },
+                    {
+                         "field": "$nav(smb_back_office_edit_collateral_overlay).appearance(current);",
+                         "value": "BusinessAssets"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "smb_back_office_collateral_list_validation",
+                              "smb_back_office_collateral_details"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_edit_collateral_section"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_edit_collateral_section",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_edit_collateral_section+saveExistingBusinessAssetCollateralWithoutLIC+COMPONENT",
+     "clcommon__Release_Checksum__c": "beeeaeda9f70adbba472aec39aa528434446611e86cae159f690929df196ee1f",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveCollateral",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_edit_collateral_section+saveExistingBusinessAssetCollateralWithoutLIC",
+     "clcommon__Validation_Class__c": null
+}

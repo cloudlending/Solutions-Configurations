@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "savePersonalIncome",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Back",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "updatePartyInfo"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "genesis__Income__c": [
+                    {
+                         "genesis__Amount__c": "$state(los_beneficial_income_details).attr(genesis__Amount__c);",
+                         "name": "Annual Personal Income",
+                         "genesis__Contact__c": "$global.attr(borrowerContactId);"
+                    }
+               ],
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               }
+          },
+          "appearance": {
+               "render": false,
+               "label": "Next",
+               "style": "primary",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "savePersonalIncome"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_beneficial_personal_details_disclosures"
+     },
+     "clcommon__Component_Structure_Name__c": "los_beneficial_personal_information_disclosures",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_personal_details_disclosures+savePersonalIncome+COMPONENT",
+     "clcommon__Release_Checksum__c": "c8311aa2f84da5dcfd670c7cce96c0b1817354112c633e56b1b50b0ad531b78e",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIncome",
+     "clcommon__Unique_Action_Name__c": "los_beneficial_personal_details_disclosures+savePersonalIncome",
+     "clcommon__Validation_Class__c": null
+}

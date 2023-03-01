@@ -1,0 +1,125 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "selectApplication",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "selectApplication",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "label": "Continue",
+               "style": "primary"
+          },
+          "remoteActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(applicationStatus);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Status__c);"
+                    },
+                    {
+                         "field": "$global.attr(portalStage);",
+                         "value": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c);"
+                    },
+                    {
+                         "field": "$global.attr(purpose);",
+                         "value": "$this.attr(genesis__Application__r.genesis__CL_Purpose__r.Name);"
+                    },
+                    {
+                         "field": "$global.attr(showCollateral);",
+                         "value": "@mathjs{($this.attr(genesis__Application__r.genesis__Asset_Class__c); == \"Consumer Secured\" or $this.attr(genesis__Application__r.genesis__Asset_Class__c); ==\"Consumer Real Estate\") ? true : false };"
+                    },
+                    {
+                         "field": "$global.attr(assetClassName);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Asset_Class__c);"
+                    },
+                    {
+                         "field": "$global.attr(productName);",
+                         "value": "$this.attr(genesis__Application__r.genesis__CL_Product_Name__c);"
+                    },
+                    {
+                         "field": "$global.attr(loanProduct);",
+                         "value": "$this.attr(genesis__Application__r.genesis__CL_Product__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(isCollectDocumentRequired);",
+                         "value": "$this.attr(genesis__Application__r.genesis__CL_Product__r.solcommon__Document_Collection_Required__c);"
+                    },
+                    {
+                         "field": "$global.attr(loanPurpose);",
+                         "value": "$this.attr(genesis__Application__r.genesis__CL_Purpose__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(loanAmount);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Loan_Amount__c);"
+                    },
+                    {
+                         "field": "$global.attr(borrowerPartyId);",
+                         "value": "$this.attr(Id);"
+                    },
+                    {
+                         "field": "$global.attr(partyTypes);",
+                         "value": "$this.attr(clcommon__Party_Types__c);"
+                    },
+                    {
+                         "field": "$global.attr(backofficerAccountId);",
+                         "value": "$this.attr(clcommon__Account__c);"
+                    },
+                    {
+                         "field": "$global.attr(businessInfoId);",
+                         "value": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(otherPurposeName);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Other_Purpose__c);"
+                    },
+                    {
+                         "field": "$global.attr(typeOfApplicant);",
+                         "value": "@mathjs{($this.attr(genesis__Application__r.solcommon__Multiple_Applicant__c); == true ? \"Joint Credit\" : \"Individual Credit\" )};"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"BusinessDetails\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"IndustryCode\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"BusinessFinancials\"",
+                         "name": "goToBusiness"
+                    },
+                    {
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"LoanDetails\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"LoanPurpose\"",
+                         "name": "goToLoanDetails"
+                    },
+                    {
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"BusinessParties\" ",
+                         "name": "goToBusinessParties"
+                    },
+                    {
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"CollateralDetails\"",
+                         "name": "goToCollateral"
+                    },
+                    {
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"ReviewAndSubmit\"",
+                         "name": "goToReview"
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_application_fetch"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_application_query",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_application_fetch+selectApplication+RECORD",
+     "clcommon__Release_Checksum__c": "789a7d5723969462b4a7ae3d0e050ffdeb70b92347ade668512e12ef4cab5fb6",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_application_fetch+selectApplication",
+     "clcommon__Validation_Class__c": null
+}

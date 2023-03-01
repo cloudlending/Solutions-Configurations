@@ -1,0 +1,52 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "updatePartyInfo",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "clcommon__Party__c": {
+                    "genesis__Credit_Check_Consent__c": "$this.attr(genesis__Credit_Check_Consent__c);",
+                    "solcommon__Consent_To_Disclosure_And_Document__c": "$this.attr(solcommon__Consent_To_Disclosure_And_Document__c);",
+                    "clcommon__Party_Types__c": "$state(los_beneficial_party_types).attr(clcommon__Party_Types__c);",
+                    "id": "$global.attr(borrowerPartyId);"
+               },
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "position": "bottom-left",
+               "render": false,
+               "label": "Next",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "updatePartyInfo"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_beneficial_personal_details_disclosures"
+     },
+     "clcommon__Component_Structure_Name__c": "los_beneficial_personal_information_disclosures",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_personal_details_disclosures+updatePartyInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "03aa9ee22047c5c39d946a81132d3d204f6a5e6aaa8f151141064fba8575f742",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalUpdateParty",
+     "clcommon__Unique_Action_Name__c": "los_beneficial_personal_details_disclosures+updatePartyInfo",
+     "clcommon__Validation_Class__c": null
+}

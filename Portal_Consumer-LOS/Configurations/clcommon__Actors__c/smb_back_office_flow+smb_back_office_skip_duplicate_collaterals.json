@@ -1,0 +1,38 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1
+          },
+          "property": {
+               "structureName": "$genGet_smb_back_office_skip_duplicate_collateral",
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               }
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_skip_duplicate_collaterals",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_skip_duplicate_collaterals",
+     "clcommon__Release_Checksum__c": "a170daa9b1e83b9fc2f7e556ef99c569fbe45734078e366c83ffcea9f98e2f69"
+}

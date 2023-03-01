@@ -1,0 +1,146 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(solcommon__Collateral_Type_Name__c);",
+                              "field": "$global.attr(isLifeInsurance);"
+                         },
+                         {
+                              "value": "@mathjs{ $this.attr(solcommon__Collateral_Type_Name__c);  == \"Commercial Real Estate\" ? \"Next\" :\"Save\"};",
+                              "field": "$global.attr(actionLabel);"
+                         }
+                    ]
+               },
+               "fieldChange": {
+                    "genesis__Collateral__r.clcommon__Collateral_Type__c": {
+                         "updates": [
+                              {
+                                   "value": "los_add_collateral_details",
+                                   "name": "$nav.reloads.add;"
+                              }
+                         ],
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{ $this.attr(clcommon__Collateral_Type__r).attr(Name);  == \"Securities\" ? \"Investment Security Amount\" :  \"Estimated Collateral Value\"};",
+                                   "field": "$global.attr(estimatedValue);"
+                              },
+                              {
+                                   "value": "",
+                                   "field": "$this.attr(solcommon__Collateral_Type_Name__c);"
+                              },
+                              {
+                                   "value": "$this.attr(clcommon__Collateral_Type__r).attr(Name);",
+                                   "field": "$global.attr(isLifeInsurance);"
+                              },
+                              {
+                                   "value": "@mathjs{ $this.attr(clcommon__Collateral_Type__r).attr(Name);  == \"Commercial Real Estate\" ? \"Next\" :\"Save\"};",
+                                   "field": "$global.attr(actionLabel);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "genesis__Collateral__r.clcommon__Possessory_Type__c": false
+               },
+               "renderFields": {
+                    "genesis__Collateral__r.clcommon__Property_Legal_Description__c": false,
+                    "genesis__Collateral__r.clcommon__Mortgage_Deed_Recording_Number__c": false,
+                    "genesis__Collateral__r.clcommon__Postal_Code__c": false,
+                    "genesis__Collateral__r.clcommon__State__c": false,
+                    "genesis__Collateral__r.clcommon__Model__c": false,
+                    "genesis__Collateral__r.clcommon__Age__c": false,
+                    "genesis__Collateral__r.clcommon__Vehicle_Color__c": false,
+                    "genesis__Collateral__r.clcommon__Description__c": false,
+                    "genesis__Collateral__r.clcommon__Weight_in_Lbs__c": false,
+                    "genesis__Collateral__r.clcommon__Property_Deed_Execution_Date__c": false,
+                    "genesis__Collateral__r.clcommon__Make__c": false,
+                    "Id": false,
+                    "genesis__Collateral__r.clcommon__Port_Name__c": false,
+                    "genesis__Collateral__r.clcommon__Year__c": false,
+                    "genesis__Collateral__r.clcommon__Is_Insured_Party_Not_Policy_Owner__c": false,
+                    "genesis__Collateral__r.clcommon__Purchase_Money__c": false,
+                    "genesis__Collateral__r.clcommon__Collateral_Name__c": false,
+                    "genesis__Collateral__r.clcommon__Life_Insurance_Verification_Date__c": false,
+                    "genesis__Collateral__r.clcommon__Issued_By__c": false,
+                    "genesis__Collateral__r.clcommon__RV_Body_Style__c": false,
+                    "genesis__Collateral__r.clcommon__Homestead_Property__c": false,
+                    "genesis__Collateral__r.clcommon__Property_Type__c": false,
+                    "genesis__Collateral__r.clcommon__Certificate_Number__c": false,
+                    "genesis__Collateral__r.clcommon__Property_County__c": false,
+                    "genesis__Collateral__r.clcommon__Vehicle_Type__c": false,
+                    "genesis__Collateral__r.clcommon__Vessel_Type__c": false,
+                    "genesis__Collateral__r.clcommon__Number_of_Shares__c": false,
+                    "genesis__Collateral__r.clcommon__Airport__c": false,
+                    "genesis__Collateral__r.clcommon__Collateral_Type__r.Id": false,
+                    "genesis__Collateral__r.clcommon__Manufacturer__c": false,
+                    "genesis__Collateral__r.Id": false,
+                    "genesis__Collateral__r.clcommon__Dwelling__c": false,
+                    "genesis__Collateral__r.clcommon__Possessory_Current_Balance__c": false,
+                    "genesis__Collateral__r.clcommon__Life_Insurance_Effective_Date__c": false,
+                    "genesis__Collateral__r.intdm__New_Manufactured_Home__c": false,
+                    "solcommon__Collateral_Type_Name__c": false,
+                    "genesis__Collateral__r.clcommon__Local_Jurisdiction_Type__c": false,
+                    "genesis__Collateral__r.clcommon__Equipment_Description__c": false,
+                    "genesis__Collateral__r.clcommon__Property_Unit_Number__c": false,
+                    "genesis__Collateral__r.clcommon__Insurance_Company_Name__c": false,
+                    "genesis__Collateral__r.clcommon__Collateral_Local_Jurisdiction__c": false,
+                    "genesis__Collateral__r.clcommon__Issuer__c": false,
+                    "genesis__Collateral__r.clcommon__Life_Insurance_Beneficiary__c": false,
+                    "genesis__Collateral__r.clcommon__Vehicle_Serial_Number__c": false,
+                    "genesis__Collateral__r.clcommon__Account_Number__c": false,
+                    "genesis__Collateral__r.clcommon__Style__c": false,
+                    "genesis__Collateral__r.clcommon__Certificated__c": false,
+                    "genesis__Collateral__r.clcommon__Address__c": false,
+                    "genesis__Collateral__r.clcommon__Estimated_Value__c": false,
+                    "genesis__Collateral__r.clcommon__Policy_Number__c": false,
+                    "genesis__Collateral__r.clcommon__Mortgage_Deed_Recording_Page__c": false,
+                    "genesis__Collateral__r.clcommon__Name_of_Vessel__c": false,
+                    "genesis__Collateral__r.clcommon__Insured_Party_Of_Insurance_Policy__c": false,
+                    "genesis__Collateral__r.clcommon__Vehicle_Identification_Number__c": false,
+                    "genesis__Collateral__r.clcommon__Insurance_Amount__c": false,
+                    "genesis__Collateral__r.clcommon__Length_in_Feet__c": false,
+                    "genesis__Collateral__r.clcommon__City__c": false,
+                    "genesis__Collateral__r.clcommon__Insurance_Company__c": false,
+                    "genesis__Collateral__r.clcommon__Stock_Type__c": false,
+                    "genesis__Collateral__r.clcommon__Possessory_Type__c": false
+               },
+               "grid": {
+                    "field": {
+                         "genesis__Collateral__r.clcommon__Collateral_Type__c": {
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);",
+                    "collateralId": "$global.attr(collateralId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "smb_back_office_add_collateral_type"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_add_collateral_type",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_add_collateral_type",
+     "clcommon__Release_Checksum__c": "3b84ce7996e664b86a1af292814192350a81c381605a5358c2314629c0fb9a5c"
+}

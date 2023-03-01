@@ -1,0 +1,98 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_business_industry_code_capture",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "los_business_industry_code_capture",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "f4c8bc7f2ed0c06f67dabb3c40efc5c0762ca87ff856bfcdb59d3e01d004fbcf",
+     "clcommon__Unique_Name__c": "los_business_industry_code_capture",
+     "clcommon__data__c": {
+          "structureName": "los_business_industry_code_capture",
+          "tableName": "genesis__business_information__c",
+          "whereClause": {
+               "freeForm": "solcommon__Industry_Code__r.Id = ':industryCode' and id=':businessId'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "c44d167b-45ab-4a4e-92e4-e77ef24ae825",
+                    "fields": [
+                         {
+                              "id": "c240402c-668a-436e-8adf-56e8e6c5074d",
+                              "fieldName": "solcommon__Industry_Code__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "9392a0ae-362f-441e-b8a0-16bedeb250cb",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "f6d3f7ea-397c-4cdc-a058-14622cf69d2c",
+                              "relationType": "reference",
+                              "fieldName": "solcommon__Industry_Code__c",
+                              "relationName": "solcommon__Industry_Code__r",
+                              "relationJson": {
+                                   "tableName": "solcommon__Industry_Code__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null and Name=':industryCode'"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "85bb6788-b700-4021-9012-d731df6c25f7",
+                                             "fields": [
+                                                  {
+                                                       "id": "a66e5fac-9f9f-4d1b-be22-bbe60c1cf1a3",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "c8ac11fc-af59-4475-880f-08de03a6c1aa",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Industry Code\t Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Industry Code"
+                              }
+                         },
+                         {
+                              "id": "59820fd5-58c8-453a-b5ed-13bbe30cfda5",
+                              "fieldName": "genesis__NAICS_Code__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Industry Code",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Industry Code is required"
+                                   },
+                                   "ariaLabel": "NAICS Code"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

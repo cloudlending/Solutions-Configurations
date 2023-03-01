@@ -1,0 +1,69 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_disclosure",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "smb_back_office_disclosure",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Release_Checksum__c": "fd26318ba64f2bad6986706ae7230ef26bb6a808e202cdf12f1c3904a9190dae",
+     "clcommon__Unique_Name__c": "smb_back_office_disclosure",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_disclosure",
+          "sections": [
+               {
+                    "id": "smb_back_office_disclosure",
+                    "name": "Please choose the below business parties to whom you would like to create a portal user",
+                    "title": "Please choose the below business parties to whom you would like to create a portal user",
+                    "fields": [
+                         {
+                              "id": "a345",
+                              "fieldName": "create_account_email",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Principal",
+                                   "defaultValue": false,
+                                   "messages": {},
+                                   "ariaLabel": "Create account email checkbox"
+                              }
+                         },
+                         {
+                              "id": "a345",
+                              "fieldName": "create_account_email_owner_user",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Beneficial owner",
+                                   "defaultValue": false,
+                                   "messages": {},
+                                   "ariaLabel": "Create account email checkbox"
+                              }
+                         },
+                         {
+                              "id": "a345",
+                              "fieldName": "create_account_email_guarantor_user",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Guarantor",
+                                   "defaultValue": false,
+                                   "messages": {},
+                                   "ariaLabel": "Create account email checkbox"
+                              }
+                         },
+                         {
+                              "id": "a345",
+                              "fieldName": "create_account_email_signer_user",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Authorized signer",
+                                   "defaultValue": false,
+                                   "messages": {},
+                                   "ariaLabel": "Create account email checkbox"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

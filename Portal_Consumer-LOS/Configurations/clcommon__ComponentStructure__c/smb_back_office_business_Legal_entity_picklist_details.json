@@ -1,0 +1,69 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_business_Legal_entity_picklist_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "smb_back_office_business_Legal_entity_picklist_details",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "1a56205d3251e9af257ad315a4eaa16c37acd80d6e3b20bc28a14ca3a7e503f2",
+     "clcommon__Unique_Name__c": "smb_back_office_business_Legal_entity_picklist_details",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_business_Legal_entity_picklist_details",
+          "tableName": "account",
+          "whereClause": {
+               "freeForm": "Id = ':accountId'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "8c5a7267-7cfa-4e8b-95a0-574809d30f8c",
+                    "fields": [
+                         {
+                              "id": "87d3eab9-9977-4eb1-8462-20c004f2bdd0",
+                              "relationType": "reference",
+                              "fieldName": "clcommon__Legal_Entity_Type__c",
+                              "relationName": "clcommon__Legal_Entity_Type__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__Legal_Entity__c",
+                                   "whereClause": {
+                                        "freeForm": "clcommon__Individual__c = false"
+                                   },
+                                   "orderBy": "Name ASC",
+                                   "sections": [
+                                        {
+                                             "id": "e0f5e5a8-05fe-4efe-a8b0-6512aeabdac9",
+                                             "fields": [
+                                                  {
+                                                       "id": "ad6988e1-4a41-4725-8b66-0e9f080e76be",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "5f40a2eb-5b4e-4c50-b4f3-b40c0be11591",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Legal Class Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Business Legal Classification",
+                                   "prompt": "Select One"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

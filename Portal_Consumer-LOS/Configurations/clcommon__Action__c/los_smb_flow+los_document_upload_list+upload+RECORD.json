@@ -1,0 +1,61 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "upload",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "messages": {
+               "uploadInvalidFileType": "You can only upload the files with the following file types: .pdf, .png, .jpg, .jpeg, .csv, .txt, .xls, .xlsx, .doc, .docx"
+          },
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "docStatusChange"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$this.attr(Id);",
+                         "field": "$global.attr(SubmittedDoc);"
+                    }
+               ]
+          },
+          "uploadActionArguments": {
+               "attachmentParentId": "$this.attr(Id);"
+          },
+          "remoteActionArguments": {
+               "documentCategoryId": "$this.attr(Id);",
+               "attachmentIds": "$uploadedAttachmentIds;"
+          },
+          "appearance": {
+               "style": "primary",
+               "label": "Upload File"
+          },
+          "property": {
+               "uploadType": "document",
+               "multiple": true,
+               "maxSize": 3000000000,
+               "accept": ".pdf, .png, .jpg, .jpeg, .csv, .txt, .xls, .xlsx, .doc, .docx"
+          },
+          "name": "upload"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "upload",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_document_upload_list"
+     },
+     "clcommon__Component_Structure_Name__c": "los_fetch_required_documents",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "los_smb_flow+los_document_upload_list+upload+RECORD",
+     "clcommon__Release_Checksum__c": "ad1974328c5759fca87ade6da387377b536784f373f7c71f0d77fb9346a1d0f2",
+     "clcommon__Remote_Action_Class__c": "genesis.PortalLinkAttachmentAPI",
+     "clcommon__Unique_Action_Name__c": "los_document_upload_list+upload",
+     "clcommon__Validation_Class__c": null
+}

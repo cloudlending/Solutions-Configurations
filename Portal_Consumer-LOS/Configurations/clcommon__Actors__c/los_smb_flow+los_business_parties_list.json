@@ -1,0 +1,92 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "executions": [
+                         {
+                              "name": "$ext.makeLabelsOfPartyTypes"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editableFields": {
+                    "clcommon__Party_Types__c": false,
+                    "clcommon__Contact__r.Email": false,
+                    "clcommon__Contact__r.Phone": false,
+                    "clcommon__Percent_Ownership__c": false,
+                    "clcommon__Account__r.Name": false,
+                    "clcommon__Contact__r.FirstName": false,
+                    "clcommon__Contact__r.Id": false,
+                    "Id": false,
+                    "clcommon__Contact__r.LastName": false,
+                    "clcommon__Account__r.Id": false
+               },
+               "renderFields": {
+                    "clcommon__Contact__r.Phone": false,
+                    "clcommon__Percent_Ownership__c": "$this.attr(clcommon__Party_Types__c);!=\"AUTHORIZED SIGNER\"",
+                    "clcommon__Contact__r.FirstName": false,
+                    "clcommon__Contact__r.Id": false,
+                    "Id": false,
+                    "clcommon__Contact__r.LastName": false,
+                    "clcommon__Account__r.Id": false
+               },
+               "textBefore": "Add all individuals with a 20% or greater ownership stake",
+               "templates": {
+                    "record": [
+                         {
+                              "condition": "$this.attr(clcommon__Percent_Ownership__c);>19",
+                              "template": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(clcommon__Account__r.Name);</span> <div class=\"partyTypeLabel cardItem\"> $this.attr(clcommon__Party_Types__c); </div><div class=\"cardItem\">$this.attr(clcommon__Contact__r.Email, email);</div><div class=\"cardItem\"><progress id=\"clcommon__Percent_Ownership__c\" value=\"$this.attr(clcommon__Percent_Ownership__c);\" max=\"100\"></progress>$this.attr(clcommon__Percent_Ownership__c);%</div></div>"
+                         },
+                         {
+                              "condition": "$this.attr(clcommon__Percent_Ownership__c);==undefined or $this.attr(clcommon__Percent_Ownership__c);==null or $this.attr(clcommon__Percent_Ownership__c);== 0",
+                              "template": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(clcommon__Account__r.Name);</span><div class=\"partyTypeLabel cardItem\"> $this.attr(clcommon__Party_Types__c); </div><div class=\"cardItem\">$this.attr(clcommon__Contact__r.Email, email);</div></div>"
+                         }
+                    ]
+               },
+               "title": "Business Parties Summary",
+               "blankMessage": "No Parties Added!",
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 6
+                    }
+               },
+               "columns": 1,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "los_business_parties_summary",
+               "queryProcess": {
+                    "post": "$ext.processPartyType"
+               }
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_business_parties_list",
+     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_list",
+     "clcommon__Release_Checksum__c": "a76651a5384141f0f7fca0d593b0e85d6ed1b3b2ac9e4a2255c15fde77981469"
+}

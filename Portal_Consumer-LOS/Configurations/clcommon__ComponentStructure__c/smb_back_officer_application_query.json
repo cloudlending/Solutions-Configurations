@@ -1,0 +1,712 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_application_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "smb_back_officer_application_query",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "d670c92e4c648515f7cb0ec4ab6d245e48bd347581a0e96e911eb66e43b56004",
+     "clcommon__Unique_Name__c": "back_officer_application_query",
+     "clcommon__data__c": {
+          "structureName": "back_officer_application_query",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':applicationId' and clcommon__Type__r.Name = 'BORROWER'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "3804b2bb-6adf-4d49-a539-ac5ec964d4be",
+                    "fields": [
+                         {
+                              "id": "d0ca8be7-3351-4c2b-b7ed-3a2bd0d86a77",
+                              "fieldName": "genesis__Application__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Application ID",
+                                   "ariaLabel": "Application ID"
+                              }
+                         },
+                         {
+                              "id": "93b759e5-1ec3-4600-ae31-39ab166e6a8a",
+                              "fieldName": "genesis__Application__r.genesis__Asset_Class__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Asset Class Name",
+                                   "ariaLabel": "Asset Class Name"
+                              }
+                         },
+                         {
+                              "id": "c4ddc6fb-a5fc-4a56-ad78-f3d86416f693",
+                              "fieldName": "clcommon__Account__r.genesis__Business_Information__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "c02174a2-853b-4958-aea7-3d88b4c780ea",
+                              "fieldName": "genesis__Application__r.genesis__Loan_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Loan Amount",
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         },
+                         {
+                              "id": "fb55aeff-b1c1-4709-a845-10b8efc7d3af",
+                              "fieldName": "genesis__Application__r.solcommon__Portal_Stage__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Portal Stage",
+                                   "selectOptions": [
+                                        {
+                                             "id": "AdditionalOwners",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AdditionalOwners",
+                                             "optionValue": "AdditionalOwners"
+                                        },
+                                        {
+                                             "id": "ApplicationSubmitted",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ApplicationSubmitted",
+                                             "optionValue": "ApplicationSubmitted"
+                                        },
+                                        {
+                                             "id": "BusinessAnnualRevenue",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BusinessAnnualRevenue",
+                                             "optionValue": "BusinessAnnualRevenue"
+                                        },
+                                        {
+                                             "id": "BusinessEntity",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BusinessEntity",
+                                             "optionValue": "BusinessEntity"
+                                        },
+                                        {
+                                             "id": "BusinessInformation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BusinessInformation",
+                                             "optionValue": "BusinessInformation"
+                                        },
+                                        {
+                                             "id": "BusinessFinancials",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BusinessFinancials",
+                                             "optionValue": "BusinessFinancials"
+                                        },
+                                        {
+                                             "id": "CollateralDetails",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CollateralDetails",
+                                             "optionValue": "CollateralDetails"
+                                        },
+                                        {
+                                             "id": "manualReview",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ManualReview",
+                                             "optionValue": "manualReview"
+                                        },
+                                        {
+                                             "id": "OwnerInformation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "OwnerInformation",
+                                             "optionValue": "OwnerInformation"
+                                        },
+                                        {
+                                             "id": "ReviewAndSubmit",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ReviewAndSubmit",
+                                             "optionValue": "ReviewAndSubmit"
+                                        },
+                                        {
+                                             "id": "PersonalIncome",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PersonalIncome",
+                                             "optionValue": "PersonalIncome"
+                                        },
+                                        {
+                                             "id": "IndustryCode",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "IndustryCode",
+                                             "optionValue": "IndustryCode"
+                                        },
+                                        {
+                                             "id": "LoanDetails",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LoanDetails",
+                                             "optionValue": "LoanDetails"
+                                        },
+                                        {
+                                             "id": "LoanPurpose",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LoanPurpose",
+                                             "optionValue": "LoanPurpose"
+                                        },
+                                        {
+                                             "id": "BusinessParties",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BusinessParties",
+                                             "optionValue": "BusinessParties"
+                                        },
+                                        {
+                                             "id": "ExistingCustomer",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ExistingCustomer",
+                                             "optionValue": "ExistingCustomer"
+                                        },
+                                        {
+                                             "id": "SearchAccount",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SearchAccount",
+                                             "optionValue": "SearchAccount"
+                                        },
+                                        {
+                                             "id": "PersonalInformation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PersonalInformation",
+                                             "optionValue": "PersonalInformation"
+                                        },
+                                        {
+                                             "id": "IdentificationInformation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "IdentificationInformation",
+                                             "optionValue": "IdentificationInformation"
+                                        },
+                                        {
+                                             "id": "Documents",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Documents",
+                                             "optionValue": "Documents"
+                                        },
+                                        {
+                                             "id": "DemographicInformation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "DemographicInformation",
+                                             "optionValue": "DemographicInformation"
+                                        },
+                                        {
+                                             "id": "DocumentReview",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "DocumentReview",
+                                             "optionValue": "DocumentReview"
+                                        }
+                                   ],
+                                   "ariaLabel": "Portal Stage"
+                              }
+                         },
+                         {
+                              "id": "3801f7b7-96b6-47a4-a3d6-b0e09fa44f45",
+                              "fieldName": "genesis__Application__r.genesis__Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Status",
+                                   "defaultValue": "NEW - ENTERED",
+                                   "selectOptions": [
+                                        {
+                                             "id": "APPROVED - APPROVED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - APPROVED",
+                                             "optionValue": "APPROVED - APPROVED"
+                                        },
+                                        {
+                                             "id": "APPROVED - CONVERTED TO CONTRACT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - CONVERTED TO CONTRACT",
+                                             "optionValue": "APPROVED - CONVERTED TO CONTRACT"
+                                        },
+                                        {
+                                             "id": "APPROVED - DOCUMENT CHECK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - DOCUMENT CHECK",
+                                             "optionValue": "APPROVED - DOCUMENT CHECK"
+                                        },
+                                        {
+                                             "id": "NEW - CREDIT PULLED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - CREDIT PULLED",
+                                             "optionValue": "NEW - CREDIT PULLED"
+                                        },
+                                        {
+                                             "id": "NEW - ENTERED",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "NEW - ENTERED",
+                                             "optionValue": "NEW - ENTERED"
+                                        },
+                                        {
+                                             "id": "NEW - IN CREDIT CHECK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - IN CREDIT CHECK",
+                                             "optionValue": "NEW - IN CREDIT CHECK"
+                                        },
+                                        {
+                                             "id": "NEW - IN REVIEW",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - IN REVIEW",
+                                             "optionValue": "NEW - IN REVIEW"
+                                        },
+                                        {
+                                             "id": "NEW - PRICING GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - PRICING GENERATED",
+                                             "optionValue": "NEW - PRICING GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW - SCORECARD GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - SCORECARD GENERATED",
+                                             "optionValue": "NEW - SCORECARD GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW - CHECKLIST GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - CHECKLIST GENERATED",
+                                             "optionValue": "NEW - CHECKLIST GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW-SUBMITTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW-SUBMITTED",
+                                             "optionValue": "NEW-SUBMITTED"
+                                        },
+                                        {
+                                             "id": "NEW - VEHICLE VALUATION REQUIRED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - VEHICLE VALUATION REQUIRED",
+                                             "optionValue": "NEW - VEHICLE VALUATION REQUIRED"
+                                        },
+                                        {
+                                             "id": "REJECTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "REJECTED",
+                                             "optionValue": "REJECTED"
+                                        },
+                                        {
+                                             "id": "PULL CREDIT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PULL CREDIT",
+                                             "optionValue": "PULL CREDIT"
+                                        },
+                                        {
+                                             "id": "CLOSING DOCUMENTS GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CLOSING DOCUMENTS GENERATED",
+                                             "optionValue": "CLOSING DOCUMENTS GENERATED"
+                                        },
+                                        {
+                                             "id": "WITHDRAWN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "WITHDRAWN",
+                                             "optionValue": "WITHDRAWN"
+                                        }
+                                   ],
+                                   "ariaLabel": "Status"
+                              }
+                         },
+                         {
+                              "id": "7c9c13e8-6714-49a8-a667-8bf135bc307b",
+                              "fieldName": "genesis__Application__r.genesis__CL_Product_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "CL Product Name",
+                                   "ariaLabel": "CL Product Name"
+                              }
+                         },
+                         {
+                              "id": "369ee8ee-8f64-4d8a-97bf-ac8c8cc49318",
+                              "fieldName": "genesis__Application__r.genesis__CL_Product__r.solcommon__Document_Collection_Required__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Document Collection Required?",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Document Collection Required?"
+                              }
+                         },
+                         {
+                              "id": "7c9c13e8-6714-49a8-a667-8bf135bc307b",
+                              "fieldName": "genesis__Application__r.genesis__CL_Product__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "CL Product Name",
+                                   "ariaLabel": "CL Product Name"
+                              }
+                         },
+                         {
+                              "id": "120fefc0-e586-47f7-91c6-4ae002db4320",
+                              "fieldName": "genesis__Application__r.genesis__CL_Purpose__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Name",
+                                   "ariaLabel": "Name"
+                              }
+                         },
+                         {
+                              "id": "5d86f890-a129-4471-81f6-efac0482c768",
+                              "fieldName": "genesis__Application__r.genesis__CL_Purpose__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "12d8e449-3e00-49f2-95b9-fcca9f7c7c15",
+                              "relationType": "reference",
+                              "fieldName": "genesis__Application__r.genesis__CL_Purpose__c",
+                              "relationName": "genesis__CL_Purpose__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__CL_Purpose__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "0de59716-9bbc-45bd-8962-aaa7136be0c7",
+                                             "fields": [
+                                                  {
+                                                       "id": "12789c58-fc33-4e2d-81ce-bf0afeea5c27",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "5e3a7082-5693-462e-85fd-7fc384d9e134",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "CL Purpose"
+                              }
+                         },
+                         {
+                              "id": "f9db0f39-1563-4702-a041-d1c3ced9f991",
+                              "fieldName": "genesis__Application__r.solcommon__Multiple_Applicant__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Multiple Applicant",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Multiple Applicant"
+                              }
+                         },
+                         {
+                              "id": "c7c7cb88-69af-4be1-bce7-262ceba99b5e",
+                              "fieldName": "clcommon__Contact__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Contact ID",
+                                   "ariaLabel": "Contact ID"
+                              }
+                         },
+                         {
+                              "id": "81a7e50a-54e3-4fda-97bf-e7d97b40af66",
+                              "fieldName": "clcommon__Account__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account ID",
+                                   "ariaLabel": "Account ID"
+                              }
+                         },
+                         {
+                              "id": "216bb4c3-b6ac-46c8-b19f-a8be47d7d9a1",
+                              "fieldName": "solcommon__Submission_Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Submission Status",
+                                   "defaultValue": "PENDING",
+                                   "selectOptions": [
+                                        {
+                                             "id": "PENDING",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "PENDING",
+                                             "optionValue": "PENDING"
+                                        },
+                                        {
+                                             "id": "SUBMITTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SUBMITTED",
+                                             "optionValue": "SUBMITTED"
+                                        }
+                                   ],
+                                   "ariaLabel": "Submission Status"
+                              }
+                         },
+                         {
+                              "id": "21bc65c4-0ec3-403c-a32b-c3a30edf23b7",
+                              "fieldName": "clcommon__Party_Types__c",
+                              "fieldUi": {
+                                   "fieldType": "multipicklist",
+                                   "label": "Party Types",
+                                   "selectOptions": [
+                                        {
+                                             "id": "APPRAISAL ADMINISTRATOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPRAISAL ADMINISTRATOR",
+                                             "optionValue": "APPRAISAL ADMINISTRATOR"
+                                        },
+                                        {
+                                             "id": "LESSOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LESSOR",
+                                             "optionValue": "LESSOR"
+                                        },
+                                        {
+                                             "id": "LESSEE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LESSEE",
+                                             "optionValue": "LESSEE"
+                                        },
+                                        {
+                                             "id": "DEALER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "DEALER",
+                                             "optionValue": "DEALER"
+                                        },
+                                        {
+                                             "id": "BORROWER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BORROWER",
+                                             "optionValue": "BORROWER"
+                                        },
+                                        {
+                                             "id": "BENEFICIAL OWNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BENEFICIAL OWNER",
+                                             "optionValue": "BENEFICIAL OWNER"
+                                        },
+                                        {
+                                             "id": "BENEFICIAL OWNER MANAGER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BENEFICIAL OWNER MANAGER",
+                                             "optionValue": "BENEFICIAL OWNER MANAGER"
+                                        },
+                                        {
+                                             "id": "BENEFICIAL OWNER CERTIFIER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BENEFICIAL OWNER CERTIFIER",
+                                             "optionValue": "BENEFICIAL OWNER CERTIFIER"
+                                        },
+                                        {
+                                             "id": "CO-BORROWER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CO-BORROWER",
+                                             "optionValue": "CO-BORROWER"
+                                        },
+                                        {
+                                             "id": "GUARANTOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "GUARANTOR",
+                                             "optionValue": "GUARANTOR"
+                                        },
+                                        {
+                                             "id": "ENTITY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ENTITY",
+                                             "optionValue": "ENTITY"
+                                        },
+                                        {
+                                             "id": "LOAN OFFICER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LOAN OFFICER",
+                                             "optionValue": "LOAN OFFICER"
+                                        },
+                                        {
+                                             "id": "REVIEWER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "REVIEWER",
+                                             "optionValue": "REVIEWER"
+                                        },
+                                        {
+                                             "id": "VENDOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "VENDOR",
+                                             "optionValue": "VENDOR"
+                                        },
+                                        {
+                                             "id": "COSIGNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "COSIGNER",
+                                             "optionValue": "COSIGNER"
+                                        },
+                                        {
+                                             "id": "PARENT COMPANY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PARENT COMPANY",
+                                             "optionValue": "PARENT COMPANY"
+                                        },
+                                        {
+                                             "id": "SUBSIDIARY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SUBSIDIARY",
+                                             "optionValue": "SUBSIDIARY"
+                                        },
+                                        {
+                                             "id": "RELATED ENTITY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "RELATED ENTITY",
+                                             "optionValue": "RELATED ENTITY"
+                                        },
+                                        {
+                                             "id": "DIRECT CONTACT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "DIRECT CONTACT",
+                                             "optionValue": "DIRECT CONTACT"
+                                        },
+                                        {
+                                             "id": "TRUSTEE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "TRUSTEE",
+                                             "optionValue": "TRUSTEE"
+                                        },
+                                        {
+                                             "id": "NOTARY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NOTARY",
+                                             "optionValue": "NOTARY"
+                                        },
+                                        {
+                                             "id": "BUILDER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BUILDER",
+                                             "optionValue": "BUILDER"
+                                        },
+                                        {
+                                             "id": "AUTHORIZED SIGNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AUTHORIZED SIGNER",
+                                             "optionValue": "AUTHORIZED SIGNER"
+                                        },
+                                        {
+                                             "id": "ATTORNEY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ATTORNEY",
+                                             "optionValue": "ATTORNEY"
+                                        },
+                                        {
+                                             "id": "POWER OF ATTORNEY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "POWER OF ATTORNEY",
+                                             "optionValue": "POWER OF ATTORNEY"
+                                        },
+                                        {
+                                             "id": "GROUND LEASE LESSOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "GROUND LEASE LESSOR",
+                                             "optionValue": "GROUND LEASE LESSOR"
+                                        }
+                                   ],
+                                   "ariaLabel": "Party Types"
+                              }
+                         },
+                         {
+                              "id": "0b28d5da-f32f-4eb1-b590-2e1f013db12a",
+                              "fieldName": "clcommon__Contact__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Contact ID",
+                                   "ariaLabel": "Contact ID"
+                              }
+                         },
+                         {
+                              "id": "50349648-08d7-4168-bf6e-2911375d7d42",
+                              "fieldName": "clcommon__Type__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Party Type Name",
+                                   "ariaLabel": "Party Type Name"
+                              }
+                         },
+                         {
+                              "id": "b549451b-5876-4d2b-b0c3-07f4bcb68d52",
+                              "fieldName": "genesis__Application__r.genesis__Other_Purpose__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Other Purpose",
+                                   "ariaLabel": "Other Purpose"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

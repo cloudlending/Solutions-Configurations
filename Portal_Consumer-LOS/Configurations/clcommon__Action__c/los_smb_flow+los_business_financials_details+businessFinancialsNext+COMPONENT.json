@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessFinancialsNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "updatePartySubmit"
+                    }
+               ]
+          },
+          "validation": [
+               "los_business_financials_details"
+          ],
+          "remoteActionArguments": {
+               "genesis__Business_Information__c": {
+                    "solcommon__Total_Revenue__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c);",
+                    "genesis__Total_Liabilities__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c);",
+                    "genesis__Total_Sales__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c);",
+                    "id": "$global.attr(businessInfoId);"
+               },
+               "applicationId": "$global.attr(applicationId);",
+               "accountId": "$global.attr(businessAccountId);"
+          },
+          "appearance": {
+               "label": "Next",
+               "style": "primary",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "businessFinancialsNext"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_business_financials_details"
+     },
+     "clcommon__Component_Structure_Name__c": "los_business_financial_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_business_financials_details+businessFinancialsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "eee7e0abce7c821b573c850494e3be591efeca8e85df6c30d0512365446dc09b",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveBusinessInfo",
+     "clcommon__Unique_Action_Name__c": "los_business_financials_details+businessFinancialsNext",
+     "clcommon__Validation_Class__c": null
+}

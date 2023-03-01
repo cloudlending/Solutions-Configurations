@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "ExistingBusinessPartiesYes",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "ExistingBusinessPartiesYes",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "label": "Next",
+               "style": "primary",
+               "disableWhenLoading": true
+          },
+          "validation": [
+               "existingCustomer"
+          ],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(smb_back_office_getting_started_container).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(AccName);",
+                         "value": "@@@123//"
+                    },
+                    {
+                         "field": "$state(smb_back_office_account_search_bar).attr(Name);",
+                         "value": ""
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.relaods.add;",
+                         "value": [
+                              "smb_back_office_business_Legal_entity_picklist_details",
+                              "smb_back_office_account_search_results_details"
+                         ]
+                    }
+               ]
+          },
+          "messages": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_customer"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_existing_customer",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_customer+ExistingBusinessPartiesYes+COMPONENT",
+     "clcommon__Release_Checksum__c": "0e1301d77bca413dd42affdf2ad6d4db3693432019ede4ee10d1321eff9df820",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_existing_customer+ExistingBusinessPartiesYes",
+     "clcommon__Validation_Class__c": null
+}

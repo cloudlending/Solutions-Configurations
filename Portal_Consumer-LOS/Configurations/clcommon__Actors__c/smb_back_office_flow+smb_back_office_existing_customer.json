@@ -1,0 +1,75 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "fieldChange": {
+                    "ExistingCustomer": {
+                         "updates": [
+                              {
+                                   "value": [
+                                        "smb_back_office_account_search_results_details",
+                                        "smb_back_office_account_search_bar"
+                                   ],
+                                   "name": "$nav.reloads.add;"
+                              }
+                         ],
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(ExistingCustomer); == \"Yes\" ? \"SelectAccount\" : \"OwnerInformation\" };",
+                                   "field": "$global.attr(accountTypeNextStage);"
+                              },
+                              {
+                                   "value": "@mathjs{$this.attr(ExistingCustomer); == \"Yes\" ? \"$global.attr(borrowerAccountId);\" : \"\" };",
+                                   "field": "$global.attr(borrowerAccountId);"
+                              },
+                              {
+                                   "value": "@mathjs{($this.attr(ExistingCustomer); == \"No\" or $this.attr(ExistingCustomer); == undefined) ? \"Acc123444\": \"$global.attr(AccName);\"};",
+                                   "field": "$global.attr(AccName);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editable": true,
+               "fieldColumns": 1,
+               "noLabelFields": [
+                    "ExistingCustomer"
+               ],
+               "title": "Does the customer have an existing relationship with the Bank?",
+               "grid": {
+                    "field": {
+                         "ExistingCustomer": {
+                              "selectButton": {
+                                   "xs": 12,
+                                   "sm": 6
+                              }
+                         }
+                    }
+               }
+          },
+          "property": {
+               "structureName": "smb_back_office_existing_customer"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_existing_customer",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_customer",
+     "clcommon__Release_Checksum__c": "0c828599eed4e0114025c47ed5676012ca6a109fa78a1a33ff4cfd1f2bf2e26d"
+}

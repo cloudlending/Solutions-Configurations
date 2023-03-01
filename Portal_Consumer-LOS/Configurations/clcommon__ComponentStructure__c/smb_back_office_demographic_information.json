@@ -1,0 +1,391 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_demographic_information",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "smb_back_office_demographic_information",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "833762d8c1690372217f925ca29223717802c727b844f39dd40ff93f03e4fede",
+     "clcommon__Unique_Name__c": "smb_back_office_demographic_information",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_demographic_information",
+          "tableName": "intdm__personal_demographic_information__c",
+          "whereClause": {
+               "freeForm": "intdm__Contact__c =':contactId'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "cadd4a98-9612-44d4-a034-396a2f45a3f4",
+                    "name": "Ethinicity",
+                    "title": "Ethinicity",
+                    "fields": [
+                         {
+                              "id": "5df2ea4b-f7c7-40f2-a4ff-06ed9dbb3063",
+                              "fieldName": "intdm__Ethnicity_Opt_Out__c",
+                              "fieldUi": {
+                                   "fieldType": "switch",
+                                   "label": "I do not wish to provide ethnicity. ",
+                                   "defaultValue": false,
+                                   "ariaLabel": "I do not wish to provide ethnicity. "
+                              }
+                         },
+                         {
+                              "id": "6da7c9c0-59d3-4fc1-ac29-35f683705902",
+                              "fieldName": "intdm__Hispanic_or_Latino_Ethnicity__c",
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "Hispanic Or Latino Ethnicity",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "id": "Hispanic",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Hispanic or Latino",
+                                             "optionValue": "Hispanic"
+                                        },
+                                        {
+                                             "id": "Latino",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Not Hispanic or Latino",
+                                             "optionValue": "Latino"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Ethinicity is Required."
+                                   },
+                                   "ariaLabel": "Hispanic Or Latino Ethnicity"
+                              }
+                         },
+                         {
+                              "id": "89a683ef-799f-4b8b-9695-7db9fb7f8f32",
+                              "fieldName": "intdm__Ethnic_Sub_Category__c",
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "Ethnic Sub Category",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "id": "Mexican",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Mexican",
+                                             "optionValue": "Mexican"
+                                        },
+                                        {
+                                             "id": "Puerto Rican",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Puerto Rican",
+                                             "optionValue": "Puerto Rican"
+                                        },
+                                        {
+                                             "id": "Cuban",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Cuban",
+                                             "optionValue": "Cuban"
+                                        },
+                                        {
+                                             "id": "Other Hispanic or Latino",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Other Hispanic or Latino",
+                                             "optionValue": "Other Hispanic or Latino"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Ethnic Sub Category is Required."
+                                   },
+                                   "ariaLabel": "Ethnic Sub Category"
+                              }
+                         },
+                         {
+                              "id": "a71c3624-8a6a-4aeb-a481-da0b65615b2a",
+                              "fieldName": "intdm__Other_Hispanic_or_Latino__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Other Hispanic or Latino",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Other Hispanic or Latino is Required."
+                                   },
+                                   "ariaLabel": "Other Hispanic or Latino"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "7f5b9030-991e-4ddc-a0de-e63b867bdebb",
+                    "name": "Race",
+                    "title": "Race",
+                    "fields": [
+                         {
+                              "id": "02beeaf2-b5c3-4ffd-b9ec-e2483552d40b",
+                              "fieldName": "intdm__Race_Opt_Out__c",
+                              "fieldUi": {
+                                   "fieldType": "switch",
+                                   "label": "I do not wish to provide race information.",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Race Opt Out"
+                              }
+                         },
+                         {
+                              "id": "1a39e75c-74c9-4098-9872-7d78c29e2138",
+                              "fieldName": "intdm__Race__c",
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "Race",
+                                   "required": true,
+                                   "selectedSuffix": "done",
+                                   "selectOptions": [
+                                        {
+                                             "id": "American Indian or Alaska",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "American Indian or Alaska",
+                                             "optionValue": "American Indian or Alaska"
+                                        },
+                                        {
+                                             "id": "Asian",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Asian",
+                                             "optionValue": "Asian"
+                                        },
+                                        {
+                                             "id": "Black or African American",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Black or African American",
+                                             "optionValue": "Black or African American"
+                                        },
+                                        {
+                                             "id": "Hawaiian or Pacific Islander",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Hawaiian or Pacific Islander",
+                                             "optionValue": "Hawaiian or Pacific Islander"
+                                        },
+                                        {
+                                             "id": "White",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "White",
+                                             "optionValue": "White"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Race is Required."
+                                   },
+                                   "ariaLabel": "Race"
+                              }
+                         },
+                         {
+                              "id": "2e59b2f2-d5f0-426c-826f-eb71b5447303",
+                              "fieldName": "intdm__Race_Sub_Category__c",
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "Race Sub Category",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "id": "Asian Indian",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Asian Indian",
+                                             "optionValue": "Asian Indian",
+                                             "optionRender": "$this.attr(intdm__Race__c);==\"Asian\""
+                                        },
+                                        {
+                                             "id": "Samoan",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Samoan",
+                                             "optionValue": "Samoan",
+                                             "optionRender": "$this.attr(intdm__Race__c);==\"Hawaiian or Pacific Islander\""
+                                        },
+                                        {
+                                             "id": "Other Pacific Islander",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Other Pacific Islander",
+                                             "optionValue": "Other Pacific Islander",
+                                             "optionRender": "$this.attr(intdm__Race__c);==\"Hawaiian or Pacific Islander\""
+                                        },
+                                        {
+                                             "id": "Chinese",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Chinese",
+                                             "optionValue": "Chinese",
+                                             "optionRender": "$this.attr(intdm__Race__c);==\"Asian\""
+                                        },
+                                        {
+                                             "id": "Filipino",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Filipino",
+                                             "optionValue": "Filipino",
+                                             "optionRender": "$this.attr(intdm__Race__c);==\"Asian\""
+                                        },
+                                        {
+                                             "id": "Japanese",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Japanese",
+                                             "optionValue": "Japanese",
+                                             "optionRender": "$this.attr(intdm__Race__c);==\"Asian\""
+                                        },
+                                        {
+                                             "id": "Korean",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Korean",
+                                             "optionValue": "Korean",
+                                             "optionRender": "$this.attr(intdm__Race__c);==\"Asian\""
+                                        },
+                                        {
+                                             "id": "Vietnamese",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Vietnamese",
+                                             "optionValue": "Vietnamese",
+                                             "optionRender": "$this.attr(intdm__Race__c);==\"Asian\""
+                                        },
+                                        {
+                                             "id": "Other Asian",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Other Asian",
+                                             "optionValue": "Other Asian",
+                                             "optionRender": "$this.attr(intdm__Race__c);==\"Asian\""
+                                        },
+                                        {
+                                             "id": "Native Hawaiian",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Native Hawaiian",
+                                             "optionValue": "Native Hawaiian",
+                                             "optionRender": "$this.attr(intdm__Race__c);==\"Hawaiian or Pacific Islander\""
+                                        },
+                                        {
+                                             "id": "Guamanian or Chamorro",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Guamanian or Chamorro",
+                                             "optionValue": "Guamanian or Chamorro",
+                                             "optionRender": "$this.attr(intdm__Race__c);==\"Hawaiian or Pacific Islander\""
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Race Sub Category is Required."
+                                   },
+                                   "ariaLabel": "Race Sub Category"
+                              }
+                         },
+                         {
+                              "id": "b6122896-ba6d-4d7b-9622-81bda01d14bb",
+                              "fieldName": "intdm__Other_Asian__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Other Asian",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Other Asian is Required."
+                                   },
+                                   "ariaLabel": "Other Asian"
+                              }
+                         },
+                         {
+                              "id": "25b7897c-00ee-417c-9c3c-fc2130b4548f",
+                              "fieldName": "intdm__Other_Pacific_Islander__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Other Pacific Islander",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Other Pacific Islander is Required."
+                                   },
+                                   "ariaLabel": "Other Pacific Islander"
+                              }
+                         },
+                         {
+                              "id": "88f532b0-308f-433d-bb3a-0f6d5a8bf630",
+                              "fieldName": "intdm__Tribe__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Tribe",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Tribe is Required."
+                                   },
+                                   "ariaLabel": "Tribe"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "0de3e033-440a-4d99-a375-d78ef6fb97bb",
+                    "name": "sex",
+                    "title": "Sex",
+                    "fields": [
+                         {
+                              "id": "a5e4d837-dcb7-49b2-9236-5328f44ac775",
+                              "fieldName": "intdm__Gender_Opt_Out__c",
+                              "fieldUi": {
+                                   "fieldType": "switch",
+                                   "label": "I do not wish to provide gender information",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Gender Opt Out"
+                              }
+                         },
+                         {
+                              "id": "f7dc906a-f9c6-4805-99e0-0f3734b99632",
+                              "relationType": "reference",
+                              "fieldName": "intdm__Contact__c",
+                              "relationName": "intdm__Contact__r",
+                              "relationJson": {
+                                   "tableName": "Contact",
+                                   "whereClause": {
+                                        "freeForm": "id !=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "3211fe43-c318-4c13-896c-9dde94a3648a",
+                                             "fields": [
+                                                  {
+                                                       "id": "6ae75a27-56c3-4b00-9bbc-fa0c5feaa560",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Contact ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "d0e942db-c417-43d3-a361-550d04b0f2d5",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Full Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Contact"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

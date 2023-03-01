@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "delteRentRollDetails",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "value": "los_edit_collateral_rent_roll_list",
+                         "name": "$nav.reloads.add;"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "objectName": "rentRoll",
+               "recordId": "$this.attr(Id);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>",
+               "style": "secondary"
+          },
+          "property": {},
+          "name": "delteRentRollDetails"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_edit_collateral_rent_roll_list"
+     },
+     "clcommon__Component_Structure_Name__c": "los_collateral_rent_roll_list",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "los_smb_flow+los_edit_collateral_rent_roll_list+delteRentRollDetails+RECORD",
+     "clcommon__Release_Checksum__c": "64e2e1cefd6247f032165ed6254c2d9e82b02f4d6d4ca6bb0f6b3d8eb6ee4b09",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalGenericDeleteAPI",
+     "clcommon__Unique_Action_Name__c": "los_edit_collateral_rent_roll_list+delteRentRollDetails",
+     "clcommon__Validation_Class__c": null
+}

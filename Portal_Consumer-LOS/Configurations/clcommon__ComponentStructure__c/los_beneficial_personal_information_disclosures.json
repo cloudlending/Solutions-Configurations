@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_beneficial_personal_information_disclosures",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "los_beneficial_personal_information_disclosures",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "e53732d7b22b542b666651d07dc4096f053f756bea144ad008c729c9cdecbd91",
+     "clcommon__Unique_Name__c": "los_beneficial_personal_information_disclosures",
+     "clcommon__data__c": {
+          "structureName": "los_beneficial_personal_information_disclosures",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "Id =':partyId'"
+          },
+          "sections": [
+               {
+                    "id": "9c40a475-6d15-42fe-a3ee-2cd5971aa4fb",
+                    "fields": [
+                         {
+                              "id": "50031e0e-5cfe-4195-8271-452fccc5aa73",
+                              "fieldName": "genesis__Credit_Check_Consent__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "I consent to pull consumer credit report",
+                                   "defaultValue": false,
+                                   "ariaLabel": "I consent to pull consumer credit report"
+                              }
+                         },
+                         {
+                              "id": "b93a388c-6a3d-4691-a96d-26c5a07525b5",
+                              "fieldName": "solcommon__Consent_To_Disclosure_And_Document__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "I consent to receive disclosure and documents electronically",
+                                   "defaultValue": false,
+                                   "ariaLabel": "I consent to receive disclosure and documents electronically"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

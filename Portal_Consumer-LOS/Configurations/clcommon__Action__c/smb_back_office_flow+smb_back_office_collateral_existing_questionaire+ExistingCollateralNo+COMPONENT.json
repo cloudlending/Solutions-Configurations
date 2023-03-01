@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "ExistingCollateralNo",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "ExistingCollateralNo",
+          "property": {},
+          "appearance": {
+               "render": "$this.attr(existingCollateral); != \"Yes\"",
+               "label": "Next",
+               "style": "primary",
+               "disableWhenLoading": true
+          },
+          "validation": [
+               "smb_back_office_collateral_existing_questionaire"
+          ],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(smb_back_office_add_collateral_steps).appearance(current);",
+                         "value": "2"
+                    },
+                    {
+                         "field": "$global.attr(enableAssetSubmitButton);",
+                         "value": "Yes"
+                    },
+                    {
+                         "field": "$global.attr(collateralId);",
+                         "value": ""
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "smb_back_office_add_collateral_type",
+                              "smb_back_office_add_collateral_container"
+                         ]
+                    }
+               ]
+          },
+          "messages": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_collateral_existing_questionaire"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_collateral_existing_questionaire",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_collateral_existing_questionaire+ExistingCollateralNo+COMPONENT",
+     "clcommon__Release_Checksum__c": "072358c5b47db5c2aa331de0919bd5c1134831cf0aefabb6c9553a42d577d6ef",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_collateral_existing_questionaire+ExistingCollateralNo",
+     "clcommon__Validation_Class__c": null
+}

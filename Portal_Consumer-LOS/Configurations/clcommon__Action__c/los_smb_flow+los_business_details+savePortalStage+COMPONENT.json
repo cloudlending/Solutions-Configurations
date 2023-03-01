@@ -1,0 +1,72 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "savePortalStage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "updates": [
+                    {
+                         "value": [
+                              "los_business_details",
+                              "los_business_legal_entity_types",
+                              "los_fetch_party_details",
+                              "los_fetch_business_account_details"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(los_application_steps).appearance(current);"
+                    },
+                    {
+                         "value": "$global.attr(tempApplicationId);",
+                         "field": "$global.attr(applicationId);"
+                    },
+                    {
+                         "value": "$global.attr(tempBusinessAccountId);",
+                         "field": "$global.attr(businessAccountId);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(tempApplicationId);",
+               "portalStage": "IndustryCode"
+          },
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Next",
+               "render": false,
+               "style": "primary"
+          },
+          "property": {},
+          "name": "savePortalStage"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_business_details"
+     },
+     "clcommon__Component_Structure_Name__c": "los_basic_business_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_business_details+savePortalStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "fca144aecf0107196870bd81485612dab675e51932ac412afb2d51e2db9d17b7",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "los_business_details+savePortalStage",
+     "clcommon__Validation_Class__c": null
+}

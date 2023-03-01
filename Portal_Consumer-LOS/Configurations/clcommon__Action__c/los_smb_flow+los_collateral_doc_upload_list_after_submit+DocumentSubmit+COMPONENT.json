@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "DocumentSubmit",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "value": "DocumentReview",
+                         "field": "$nav(document_widget_steps).appearance(current);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "DocumentReview"
+          },
+          "appearance": {
+               "label": "Next",
+               "position": "bottom-right",
+               "render": false,
+               "style": "primary"
+          },
+          "property": {},
+          "name": "DocumentSubmit"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_collateral_doc_upload_list_after_submit"
+     },
+     "clcommon__Component_Structure_Name__c": "los_document_upload_list_after_approval",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_doc_upload_list_after_submit+DocumentSubmit+COMPONENT",
+     "clcommon__Release_Checksum__c": "1f2b892a155da62b4c619d2adac7cc6b0c5623b41d7f9047e71ffb73ccc0b685",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "los_collateral_doc_upload_list_after_submit+DocumentSubmit",
+     "clcommon__Validation_Class__c": null
+}

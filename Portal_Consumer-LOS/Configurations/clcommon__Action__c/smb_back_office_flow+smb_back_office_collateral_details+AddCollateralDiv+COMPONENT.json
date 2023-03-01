@@ -1,0 +1,89 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "AddCollateralDiv",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "AddCollateralDiv",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "<span>Add Collateral</span>&nbsp;<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> ",
+               "position": "top-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(smb_back_office_add_collateral_steps).appearance(current);",
+                         "value": 0
+                    },
+                    {
+                         "field": "$nav(smb_back_office_add_collateral_steps).appearance(lastEnabled);",
+                         "value": 0
+                    },
+                    {
+                         "field": "$state(smb_back_office_collateral_existing_questionaire).attr(existingCollateral);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(enableAssetSubmitButton);",
+                         "value": "Yes"
+                    },
+                    {
+                         "field": "$global.attr(collateralId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(collateralValidation);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(collateralEdit);",
+                         "value": false
+                    },
+                    {
+                         "field": "$global.attr(itemizedCollateral);",
+                         "value": false
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "smb_back_office_add_collateral_div"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_collateral_existing_questionaire"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_collateral_details"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_add_collateral_container"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_collateral_details"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_collateral_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_collateral_details+AddCollateralDiv+COMPONENT",
+     "clcommon__Release_Checksum__c": "fabefde3ed61c60f2dda838305e9e7f43e2f2a38fc51039764ae93b0da4ef8c1",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_collateral_details+AddCollateralDiv",
+     "clcommon__Validation_Class__c": null
+}

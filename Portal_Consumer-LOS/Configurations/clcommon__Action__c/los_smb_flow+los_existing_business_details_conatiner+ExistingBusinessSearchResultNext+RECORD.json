@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "ExistingBusinessSearchResultNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "updates": [
+                    {
+                         "value": [
+                              "los_business_details",
+                              "los_business_legal_entity_types",
+                              "los_business_details_optional_form"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    },
+                    {
+                         "value": "los_existing_business_details_conatiner",
+                         "name": "$nav.overlay.remove;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$this.attr(clcommon__Related_Entity__c);",
+                         "field": "$global.attr(businessAccountId);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "validation": [],
+          "remoteActionArguments": {},
+          "appearance": {
+               "style": "primary",
+               "render": true,
+               "label": "Continue"
+          },
+          "property": {},
+          "name": "ExistingBusinessSearchResultNext"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_existing_business_details_conatiner"
+     },
+     "clcommon__Component_Structure_Name__c": "los_existing_business_entites",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "los_smb_flow+los_existing_business_details_conatiner+ExistingBusinessSearchResultNext+RECORD",
+     "clcommon__Release_Checksum__c": "cf4ef2b005e93a1a0e1ed0c0047964e651be839f93a43412e610f6edb2817cb3",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_existing_business_details_conatiner+ExistingBusinessSearchResultNext",
+     "clcommon__Validation_Class__c": null
+}

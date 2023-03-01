@@ -1,0 +1,51 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "validatePartyBUtton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "businessPartiesListNext"
+                    }
+               ]
+          },
+          "validation": [
+               "los_business_parties_list"
+          ],
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Next",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "validatePartyBUtton"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_business_parties_list"
+     },
+     "clcommon__Component_Structure_Name__c": "los_business_parties_summary",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_list+validatePartyBUtton+COMPONENT",
+     "clcommon__Release_Checksum__c": "22c9d33ac990f5f55eb381aeb9dfea725e19356cf4c3195812776dd504d12bed",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalValidatePartyDetails",
+     "clcommon__Unique_Action_Name__c": "los_business_parties_list+validatePartyBUtton",
+     "clcommon__Validation_Class__c": null
+}

@@ -1,0 +1,30 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "$genGet_Los_FetchAccountQuery"
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_fetch_collateral_accounts_details",
+     "clcommon__External_ID__c": "los_smb_flow+los_fetch_collateral_accounts_details",
+     "clcommon__Release_Checksum__c": "be8a1adcc6fe26bdccb27f1d816a32aa4d14451c0cfdeb40aaa643c321d5934c"
+}

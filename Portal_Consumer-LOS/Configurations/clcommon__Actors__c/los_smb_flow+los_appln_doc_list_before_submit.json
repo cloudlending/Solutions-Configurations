@@ -1,0 +1,68 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "false",
+               "queueSecondaryText": "<p>$this.attr(clcommon__Description__c);</p><p class=\"declineReason\"></p>",
+               "queuePrimaryText": "<span class=\"$this.attr(clcommon__Status__c, className); document-status\">$this.attr(clcommon__Status__c);</span><span class=\"docCategoryTitle\"> $this.attr(clcommon__Category_Name__c);</span> ",
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               },
+               "droppableRecord": {
+                    "uploadActionName": "upload",
+                    "type": "FILE"
+               },
+               "editableFields": {
+                    "Id": false,
+                    "Name": false,
+                    "clcommon__Description__c": false,
+                    "clcommon__Status__c": false,
+                    "clcommon__Category_Name__c": false,
+                    "clcommon__Parent_Document_Category__r.Id": false,
+                    "clcommon__Account__r.Name": false,
+                    "clcommon__Account__c": false
+               },
+               "renderFields": {
+                    "Id": false,
+                    "Name": false
+               },
+               "fieldColumns": 1,
+               "groupBy": {
+                    "field": "clcommon__Account__c",
+                    "ascending": true,
+                    "titles": [
+                         {
+                              "title": "Documents for Application"
+                         }
+                    ]
+               }
+          },
+          "property": {
+               "structureName": "los_appln_doc_list_before_submit",
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               }
+          },
+          "type": "queue-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_appln_doc_list_before_submit",
+     "clcommon__External_ID__c": "los_smb_flow+los_appln_doc_list_before_submit",
+     "clcommon__Release_Checksum__c": "012b3caf394bf18079176f5818eefc7c86c4916698771a22ad460ef93403191c"
+}

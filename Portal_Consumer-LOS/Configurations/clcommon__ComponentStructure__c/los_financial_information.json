@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_financial_information",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "los_financial_information",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Release_Checksum__c": "0c6e063c5f3607c93a3961549a7ba9337a33abbc4852c874530dd65c53b9c597",
+     "clcommon__Unique_Name__c": "los_financial_information",
+     "clcommon__data__c": {
+          "structureName": "los_financial_information",
+          "sections": [
+               {
+                    "id": "6268fd63-b652-4108asd-9e33-63cd5740b7d1",
+                    "fields": [
+                         {
+                              "id": "2caedc5c-7ab2asd-429b-8354-eae782fdf75c",
+                              "fieldName": "newAccount",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Open a new account with Thrive Bank",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         },
+                         {
+                              "id": "2caedc5c-7ab2asdasd-429b-835asd4-eae782fdf75c",
+                              "fieldName": "bankAccount",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Wire to an external bank account",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

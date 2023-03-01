@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "showSectionTitle": true,
+               "sectionStyle": "layout",
+               "renderFields": {
+                    "solcommon__Industry_Code__c": false,
+                    "Id": false,
+                    "solcommon__Industry_Code__r.Id": false
+               },
+               "render": "$state(smb_back_office_industry_code_conditional_render).attr(industryCodeCheckbox); == true",
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 12
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "industryCode": "$global.attr(indusrtyCode);",
+                    "businessId": "$global.attr(businessInfoId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "smb_back_office_industry_code_checkbox"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_industry_code_checkbox",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_industry_code_checkbox",
+     "clcommon__Release_Checksum__c": "e10df8de3ba2707e0ba6ff0ad7d06df2be44496b6471b1ebcbd570081a134d8c"
+}

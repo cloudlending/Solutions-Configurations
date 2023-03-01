@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(clcommon__Asset_Class__r.Name);",
+                              "field": "$global.attr(assetClassName);"
+                         },
+                         {
+                              "value": "$this.attr(solcommon__Pre_Approval_Document_Collection__c);",
+                              "field": "$global.attr(preApprovalDocumentCollection);"
+                         },
+                         {
+                              "value": "$this.attr(solcommon__Collect_Documents_Post_Approval__c);",
+                              "field": "$global.attr(postApprovalDocumentCollection);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "fieldColumns": 1,
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               }
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "product": "$state(los_loan_product_details).attr(genesis__CL_Product__c);"
+               },
+               "structureName": "los_fetch_asset_class_name"
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_fetch_asset_class_name",
+     "clcommon__External_ID__c": "los_smb_flow+los_fetch_asset_class_name",
+     "clcommon__Release_Checksum__c": "24b3aca85b17ecaa405c7b2ecc3647d6ff9afc246fc82d60dd02d895311bb2ec"
+}

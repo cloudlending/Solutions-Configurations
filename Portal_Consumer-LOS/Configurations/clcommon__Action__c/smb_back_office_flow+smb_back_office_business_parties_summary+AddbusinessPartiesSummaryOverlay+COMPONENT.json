@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "AddbusinessPartiesSummaryOverlay",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "AddbusinessPartiesSummaryOverlay",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "style": "primary",
+               "label": "Next",
+               "position": "bottom-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(portalStage);",
+                         "value": "@mathjs{($global.attr(assetClassName); == \"Small Business\" or $global.attr(assetClassName); == \"Small Business Real Estate\")? \"CollateralDetails\" : \"ReviewAndSubmit\"};"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "smb_back_office_business_parties_overlay_div"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_parties_summary"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_business_parties_summary",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_parties_summary+AddbusinessPartiesSummaryOverlay+COMPONENT",
+     "clcommon__Release_Checksum__c": "571b76e2b19374890f5753a64718708ebb147023d6bee1d43d1c98a5fdf39be0",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_business_parties_summary+AddbusinessPartiesSummaryOverlay",
+     "clcommon__Validation_Class__c": null
+}

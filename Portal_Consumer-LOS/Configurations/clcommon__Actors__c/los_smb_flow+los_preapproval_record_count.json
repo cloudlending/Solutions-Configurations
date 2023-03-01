@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{$this.count(); == 0 ? \"Great! No Pending Documents to be uploaded proceed to next step.\" : \"\"};",
+                              "field": "$global.attr(recordCountPreApp);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "accId": "$global.attr(borrowerAccountId);",
+                    "businessAccountId": "$global.attr(businessAccountId);",
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "los_document_record_count",
+               "module": "document"
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_preapproval_record_count",
+     "clcommon__External_ID__c": "los_smb_flow+los_preapproval_record_count",
+     "clcommon__Release_Checksum__c": "db13b2f75c9031817ad6059503fd3f1d0b262107a0e198f7899ce56e19aa9778"
+}

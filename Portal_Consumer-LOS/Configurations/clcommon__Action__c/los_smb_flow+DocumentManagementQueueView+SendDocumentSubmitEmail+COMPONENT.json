@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "SendDocumentSubmitEmail",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "DocumentSubmit"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "documentPage": "preApproval"
+          },
+          "confirmation": {
+               "cancelOrCloseHandler": {},
+               "cancelText": "Cancel",
+               "confirmText": "Confirm",
+               "showConfirmButtons": true,
+               "showCloseButton": false,
+               "content": "<p>Please Verify your documents before submission.</br>Once submitted you may not be able to edit your loan information.</p>",
+               "title": "Confirm Submission",
+               "type": "prompt"
+          },
+          "appearance": {
+               "label": "Next",
+               "position": "bottom-left",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "SendDocumentSubmitEmail"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+DocumentManagementQueueView"
+     },
+     "clcommon__Component_Structure_Name__c": "document_management_queue_view",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+DocumentManagementQueueView+SendDocumentSubmitEmail+COMPONENT",
+     "clcommon__Release_Checksum__c": "1f052796838229b6e9b5b8060914620999858566d55c6872f4ecf9a3347e49a0",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalDocumentUploadNotification",
+     "clcommon__Unique_Action_Name__c": "DocumentManagementQueueView+SendDocumentSubmitEmail",
+     "clcommon__Validation_Class__c": null
+}
