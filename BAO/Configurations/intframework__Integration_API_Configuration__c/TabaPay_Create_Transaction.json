@@ -44,7 +44,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 0,
-     "intframework__Release_Checksum__c": "cd1de7f594c45a8da728fc99eb6132d06ec539009478493163cdc00e32310a92",
+     "intframework__Release_Checksum__c": "895181cc8f3ab0396134e46902305bb81318ed3bf4bb5812467f11fe0acf84c8",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "TabaPay",
@@ -57,10 +57,6 @@
                     {
                          "externalField": "type",
                          "value": "pull"
-                    },
-                    {
-                         "externalField": "amount",
-                         "value": "0.03"
                     }
                ],
                "filters": [
@@ -83,6 +79,10 @@
                               {
                                    "externalField": "referenceID",
                                    "fieldAPI": "id"
+                              },
+                              {
+                                   "externalField": "amount",
+                                   "fieldAPI": "oao__Funding_Amount__c"
                               }
                          ],
                          "whereClause": "oao__Application__c = :recordId"
