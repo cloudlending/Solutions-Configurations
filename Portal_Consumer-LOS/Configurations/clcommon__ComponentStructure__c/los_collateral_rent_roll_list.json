@@ -1,0 +1,250 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_collateral_rent_roll_list",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "los_collateral_rent_roll_list",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "c0a4d5813e564a26555fc68353ade51f7782363653cbe98fd42eb109f4d6a94c",
+     "clcommon__Unique_Name__c": "los_collateral_rent_roll_list",
+     "clcommon__data__c": {
+          "structureName": "los_collateral_rent_roll_list",
+          "tableName": "genesis__rent_roll__c",
+          "whereClause": {
+               "freeForm": "genesis__Collateral__c=':collateralId'"
+          },
+          "sections": [
+               {
+                    "id": "3b68b027-6542-4a9e-8252-4e80b4fba33d",
+                    "fields": [
+                         {
+                              "id": "ac05be96-0989-45fc-8232-7d53aa6cd6a5",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "c5e0127e-557d-454b-853f-2d9f1ff7ea1e",
+                              "fieldName": "genesis__Application__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "fdb9d2ca-1c04-4c4e-a292-942e042ea7aa",
+                              "fieldName": "genesis__Collateral__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "b7fe9acc-9224-4574-9ec4-9de1ef8c2cf8",
+                              "fieldName": "genesis__Business_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Tenant Name",
+                                   "ariaLabel": "Business Name"
+                              }
+                         },
+                         {
+                              "id": "9c6be652-8924-41be-9c64-5fee5200d9ef",
+                              "fieldName": "genesis__Unit_Type__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Unit Type",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Commercial",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Commercial",
+                                             "optionValue": "Commercial"
+                                        },
+                                        {
+                                             "id": "Residential",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Residential",
+                                             "optionValue": "Residential"
+                                        }
+                                   ],
+                                   "ariaLabel": "Unit Type"
+                              }
+                         },
+                         {
+                              "id": "2d8ec268-1079-49e8-8731-5aa311ad7ba1",
+                              "fieldName": "genesis__Suite_Unit_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Suite/Unit Number",
+                                   "ariaLabel": "Suite/Unit Number"
+                              }
+                         },
+                         {
+                              "id": "a2980d4f-4b75-4693-bbbf-5457a0aa1a43",
+                              "fieldName": "genesis__Square_Footage__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Square Footage",
+                                   "format": {
+                                        "options": {
+                                             "numeral": true
+                                        }
+                                   },
+                                   "ariaLabel": "Square Footage"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "ce6c01c3-b46d-464a-b147-1cd373eba3e3",
+                    "name": "residentialRentRoll",
+                    "fields": [
+                         {
+                              "id": "dd267aee-1b03-48f3-ba27-48321cf377b4",
+                              "fieldName": "genesis__Number_of_bedrooms__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Number of bedrooms",
+                                   "format": {
+                                        "options": {
+                                             "numericOnly": true
+                                        }
+                                   },
+                                   "ariaLabel": "Number of bedrooms"
+                              }
+                         },
+                         {
+                              "id": "a0c2026b-5821-4947-b89f-40e3b7b40eba",
+                              "fieldName": "genesis__Number_of_bathrooms__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Number of bathrooms",
+                                   "format": {
+                                        "options": {
+                                             "numericOnly": true
+                                        }
+                                   },
+                                   "ariaLabel": "Number of bathrooms"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "7a5b8452-c0ec-4131-9379-74256d231849",
+                    "fields": [
+                         {
+                              "id": "25d0ba13-a375-4b77-a4f9-ae6ca6d5a9c4",
+                              "fieldName": "genesis__Lease_Start_Date__c",
+                              "fieldUi": {
+                                   "fieldType": "datepicker",
+                                   "label": "Lease Start Date",
+                                   "format": {
+                                        "options": {
+                                             "datePattern": "MM/dd/yyyy",
+                                             "minYear": 1950,
+                                             "showMonthDropdown": true,
+                                             "showYearDropdown": true
+                                        }
+                                   },
+                                   "ariaLabel": "Lease Start Date"
+                              }
+                         },
+                         {
+                              "id": "e38f9433-a960-4468-9ffc-54a4c39e7381",
+                              "fieldName": "genesis__Lease_End_Date__c",
+                              "fieldUi": {
+                                   "fieldType": "datepicker",
+                                   "label": "Lease End Date",
+                                   "format": {
+                                        "options": {
+                                             "datePattern": "MM/dd/yyyy",
+                                             "minYear": 1950,
+                                             "showMonthDropdown": true,
+                                             "showYearDropdown": true
+                                        }
+                                   },
+                                   "ariaLabel": "Lease End Date"
+                              }
+                         },
+                         {
+                              "id": "9c42ee0d-a830-470b-93c3-a13b1a7d1b04",
+                              "fieldName": "genesis__Increases__c",
+                              "fieldUi": {
+                                   "fieldType": "percent",
+                                   "label": "Increases",
+                                   "ariaLabel": "Increases"
+                              }
+                         },
+                         {
+                              "id": "f4ae2b5c-ab36-43df-98f8-5da9b5f2fb00",
+                              "fieldName": "genesis__Expenses_Paid__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Expenses Paid",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Modified Gross",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Modified Gross",
+                                             "optionValue": "Modified Gross"
+                                        },
+                                        {
+                                             "id": "Triple Net",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Triple Net",
+                                             "optionValue": "Triple Net"
+                                        },
+                                        {
+                                             "id": "Full Service Gross",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Full Service Gross",
+                                             "optionValue": "Full Service Gross"
+                                        }
+                                   ],
+                                   "ariaLabel": "Expenses Paid"
+                              }
+                         },
+                         {
+                              "id": "33440f36-d15e-4d32-be16-6212ca52daf0",
+                              "fieldName": "genesis__Current_Monthly_Rent__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Monthly Rent",
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        }
+                                   },
+                                   "ariaLabel": "Current Monthly Rent"
+                              }
+                         },
+                         {
+                              "id": "35a9aaeb-b97b-469d-a001-d813e6790a9d",
+                              "fieldName": "genesis__Comments__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Comments",
+                                   "ariaLabel": "Comments"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

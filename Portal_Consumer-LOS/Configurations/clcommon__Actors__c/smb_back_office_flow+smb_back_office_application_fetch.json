@@ -1,0 +1,99 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "executions": [
+                         {
+                              "name": "$ext.scrollTop"
+                         }
+                    ],
+                    "actions": [
+                         {
+                              "name": "startNewApplication",
+                              "condition": "$global.attr(applicationId); == null or $global.attr(applicationId); == \"\""
+                         },
+                         {
+                              "name": "selectApplication",
+                              "condition": "$global.attr(applicationId); != null and $global.attr(applicationId); != \"\""
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderFields": {
+                    "clcommon__Party_Types__c": false,
+                    "clcommon__Contact__r.Id": false,
+                    "genesis__Application__r.genesis__Asset_Class__c": false,
+                    "genesis__Application__r.genesis__CL_Purpose__r.Id": false,
+                    "genesis__Application__r.genesis__Loan_Amount__c": false,
+                    "genesis__Application__r.genesis__Status__c": false,
+                    "clcommon__Account__c": false,
+                    "genesis__Application__r.solcommon__Portal_Stage__c": false,
+                    "clcommon__Account__r.genesis__Business_Information__r.Id": false,
+                    "clcommon__Type__r.Name": false,
+                    "solcommon__Submission_Status__c": false,
+                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false,
+                    "genesis__Application__r.genesis__CL_Product__r.solcommon__Document_Collection_Required__c": false,
+                    "genesis__Application__r.genesis__Other_Purpose__c": false,
+                    "clcommon__Contact__c": false,
+                    "genesis__Application__r.genesis__CL_Product__r.Id": false,
+                    "genesis__Application__r.genesis__CL_Product_Name__c": false,
+                    "genesis__Application__r.genesis__CL_Purpose__c": false,
+                    "genesis__Application__r.Name": false,
+                    "genesis__Application__r.solcommon__Multiple_Applicant__c": false
+               },
+               "editableFields": {
+                    "clcommon__Party_Types__c": false,
+                    "clcommon__Contact__r.Id": false,
+                    "genesis__Application__r.genesis__Asset_Class__c": false,
+                    "genesis__Application__r.genesis__CL_Purpose__r.Id": false,
+                    "genesis__Application__r.genesis__Loan_Amount__c": false,
+                    "genesis__Application__r.genesis__Status__c": false,
+                    "clcommon__Account__c": false,
+                    "genesis__Application__r.solcommon__Portal_Stage__c": false,
+                    "clcommon__Account__r.genesis__Business_Information__r.Id": false,
+                    "clcommon__Type__r.Name": false,
+                    "solcommon__Submission_Status__c": false,
+                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false,
+                    "genesis__Application__r.genesis__CL_Product__r.solcommon__Document_Collection_Required__c": false,
+                    "genesis__Application__r.genesis__Other_Purpose__c": false,
+                    "clcommon__Contact__c": false,
+                    "genesis__Application__r.genesis__CL_Product__r.Id": false,
+                    "genesis__Application__r.genesis__CL_Product_Name__c": false,
+                    "genesis__Application__r.genesis__CL_Purpose__c": false,
+                    "genesis__Application__r.Name": false,
+                    "genesis__Application__r.solcommon__Multiple_Applicant__c": false
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "back_officer_application_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_application_fetch",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_application_fetch",
+     "clcommon__Release_Checksum__c": "e9622e5306a501691a290806b618430076c78b207ad1e44fe03e9fbf30e738b2"
+}

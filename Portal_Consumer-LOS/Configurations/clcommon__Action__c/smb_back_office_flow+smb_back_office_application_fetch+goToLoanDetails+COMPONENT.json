@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToLoanDetails",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "goToLoanDetails",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "render": false
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(smb_back_office_application_flow_steps).appearance(current);",
+                         "value": "$global.attr(portalStage);"
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_application_fetch"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_application_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_application_fetch+goToLoanDetails+COMPONENT",
+     "clcommon__Release_Checksum__c": "79bf57fe30b3951694ac70e194e681e8f695e33462d017ce22206880670239a6",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_application_fetch+goToLoanDetails",
+     "clcommon__Validation_Class__c": null
+}

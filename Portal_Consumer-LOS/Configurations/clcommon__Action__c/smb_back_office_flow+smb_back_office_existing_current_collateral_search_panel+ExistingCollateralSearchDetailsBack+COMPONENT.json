@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "ExistingCollateralSearchDetailsBack",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "ExistingCollateralSearchDetailsBack",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "secondary",
+               "label": "Back"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(smb_back_office_add_collateral_steps).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_collateral_existing_questionaire"
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_current_collateral_search_panel"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_existing_current_collateral_search_panel",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_current_collateral_search_panel+ExistingCollateralSearchDetailsBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "c9eb12e1862dd558ab4128e744dd9132345b4b265936fe4c6de7d95e0c5c90f9",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_existing_current_collateral_search_panel+ExistingCollateralSearchDetailsBack",
+     "clcommon__Validation_Class__c": null
+}

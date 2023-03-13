@@ -1,0 +1,95 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "actions": [
+                         {
+                              "name": "goToPersonalInfo",
+                              "condition": "$state(los_applicatiion_list).count(); == 0"
+                         }
+                    ],
+                    "assignments": [
+                         {
+                              "value": "$global.attr(userInfo).attr(accountId);",
+                              "field": "$global.attr(borrowerAccountId);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "sortedField": {
+                    "ascending": false,
+                    "name": "genesis__Applications__c.Name"
+               },
+               "sortableFields": [
+                    "genesis__Applications__c.Name"
+               ],
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "pagination": {
+                    "lastLinkText": "last_page",
+                    "nextLinkText": "chevron_right",
+                    "previousLinkText": "chevron_left",
+                    "firstLinkText": "first_page",
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "numberOfPageLinks": 5,
+                    "numberOfRecordsPerPage": 10
+               },
+               "textBefore": "Select an existing loan application below to continue, or click 'Start New Loan Application' to complete a new loan application.",
+               "title": "Welcome back, $global.attr(userInfo).attr(firstName);!",
+               "blankMessage": "No Applications Found.",
+               "renderFields": {
+                    "genesis__Applications__c.genesis__CL_Purpose__c": false,
+                    "genesis__Applications__c.genesis__Is_Review_Application__c": false,
+                    "genesis__Applications__c.Id": false,
+                    "genesis__Applications__c.genesis__Asset_Class__c": false,
+                    "genesis__Applications__c.genesis__CL_Product__r.solcommon__Collect_Documents_Post_Approval__c": false,
+                    "genesis__Applications__c.genesis__Other_Purpose__c": false,
+                    "genesis__Applications__c.genesis__CL_Product__c": false,
+                    "genesis__Applications__c.genesis__CL_Product__r.solcommon__Pre_Approval_Document_Collection__c": false
+               },
+               "editableFields": {
+                    "genesis__Applications__c.genesis__CL_Purpose__r.Name": false,
+                    "genesis__Applications__c.genesis__CL_Purpose__c": false,
+                    "genesis__Applications__c.genesis__Is_Review_Application__c": false,
+                    "genesis__Applications__c.genesis__Status__c": false,
+                    "genesis__Applications__c.Id": false,
+                    "genesis__Applications__c.Name": false,
+                    "genesis__Applications__c.genesis__Asset_Class__c": false,
+                    "genesis__Applications__c.genesis__CL_Product__r.solcommon__Portal_Label__c": false,
+                    "genesis__Applications__c.genesis__CL_Product__r.solcommon__Collect_Documents_Post_Approval__c": false,
+                    "genesis__Applications__c.genesis__Other_Purpose__c": false,
+                    "genesis__Applications__c.genesis__Account__r.Name": false,
+                    "genesis__Applications__c.genesis__CL_Product__c": false,
+                    "genesis__Applications__c.genesis__CL_Product__r.solcommon__Pre_Approval_Document_Collection__c": false,
+                    "genesis__Applications__c.genesis__Loan_Amount__c": false
+               }
+          },
+          "property": {
+               "queryName": "query_los_fetch_applications",
+               "structureName": "los_fetch_applications"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_applicatiion_list",
+     "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list",
+     "clcommon__Release_Checksum__c": "e75c0bb79cf78b4482baa81cc2d36b8d07cc592587c0b9b9fe25a5c9e240e69f"
+}

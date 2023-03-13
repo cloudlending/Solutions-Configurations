@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "closeButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "assignments": [
+                    {
+                         "value": "previous",
+                         "field": "$nav(los_collateral_rent_roll_container).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "style": "secondary",
+               "label": "Cancel",
+               "variant": "text",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "closeButton"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_add_rent_roll_details"
+     },
+     "clcommon__Component_Structure_Name__c": "los_add_collateral_rent_roll_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_add_rent_roll_details+closeButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "e7367a81ffa9c94de87faffdc54478152d7d889d7a36c8b3c7c125666fe75009",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_add_rent_roll_details+closeButton",
+     "clcommon__Validation_Class__c": null
+}

@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "polling",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "messages": {
+               "showSubmitAnimation": false
+          },
+          "handler": {},
+          "pendingHandler": {
+               "assignments": [
+                    {
+                         "value": "Please wait while we verify your business and individual identities...",
+                         "field": "$global.attr(loadedText);"
+                    }
+               ]
+          },
+          "failureHandler": {
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(los_review_steps).appearance(current);"
+                    }
+               ]
+          },
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "fetchPortalStage"
+                    }
+               ]
+          },
+          "pollingMaxTries": 30,
+          "pollingPeriod": 3000,
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "automatic": true,
+          "appearance": {
+               "label": "",
+               "render": "$global.attr(isPrincipal);==true",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "polling"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_transition_animation"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_transition_animation+polling+COMPONENT",
+     "clcommon__Release_Checksum__c": "799eecd82a848fa07232371234e79d3158b6b147e301f0faa7d89f51f9d6f562",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalPollingAPI",
+     "clcommon__Unique_Action_Name__c": "los_transition_animation+polling",
+     "clcommon__Validation_Class__c": null
+}

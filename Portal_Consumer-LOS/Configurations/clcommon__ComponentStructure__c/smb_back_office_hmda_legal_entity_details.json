@@ -1,0 +1,113 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_hmda_legal_entity_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "smb_back_office_hmda_legal_entity_details",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "0f3d7e1639cc57dd3a7f19ce4eb785ee8054ae4f4b5212dd2e19d570d9e3e5e0",
+     "clcommon__Unique_Name__c": "smb_back_office_hmda_legal_entity_details",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_hmda_legal_entity_details",
+          "tableName": "genesis__applications__c",
+          "whereClause": {
+               "freeForm": "Id = ':appId'"
+          },
+          "sections": [
+               {
+                    "id": "a9c6573a-1bc0-4f3c-9ea1-eebf511d3fce",
+                    "fields": [
+                         {
+                              "id": "e462c2f0-633c-4d5e-a655-c94f93a2cf3e",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "862ebd2e-cb6c-4b39-a019-0029f9b2df8b",
+                              "fieldName": "genesis__CL_Product__r.clcommon__HMDA_Loan__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "HMDA Loan",
+                                   "defaultValue": false,
+                                   "ariaLabel": "HMDA Loan"
+                              }
+                         },
+                         {
+                              "id": "13c7ec04-9aaa-45b3-ac0a-ec29c41c570b",
+                              "fieldName": "genesis__Account__r.clcommon__Legal_Entity_Type__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "46fb8c35-46f1-43ea-9d3f-f9a3ecbf92fe",
+                              "fieldName": "genesis__Account__r.clcommon__Legal_Entity_Type__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Legal Class Name",
+                                   "ariaLabel": "Legal Class Name"
+                              }
+                         },
+                         {
+                              "id": "c2f0c288-e056-416c-b6d3-446d59bc0111",
+                              "relationType": "reference",
+                              "fieldName": "genesis__Account__r.clcommon__Legal_Entity_Type__c",
+                              "relationName": "clcommon__Legal_Entity_Type__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__Legal_Entity__c",
+                                   "whereClause": {
+                                        "freeForm": "id  !=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "9c7f86b6-7a29-463e-b320-4461869d71a9",
+                                             "fields": [
+                                                  {
+                                                       "id": "e5ac16ce-4fa9-4741-b18e-4ba6c9c639a1",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "cf15246c-a240-4352-9936-cdc7010f2ae9",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Legal Class Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Legal Entity Type"
+                              }
+                         },
+                         {
+                              "id": "8705160e-db20-45e4-a43e-275df177face",
+                              "fieldName": "genesis__CL_Product__r.solcommon__Document_Collection_Required__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Document Collection Required?",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Document Collection Required?"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

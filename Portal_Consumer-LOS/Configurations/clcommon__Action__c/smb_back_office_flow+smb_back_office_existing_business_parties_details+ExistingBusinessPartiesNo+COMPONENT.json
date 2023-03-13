@@ -1,0 +1,81 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "ExistingBusinessPartiesNo",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "ExistingBusinessPartiesNo",
+          "property": {},
+          "appearance": {
+               "render": "$this.attr(existingCustomer); == \"No\"",
+               "label": "Next",
+               "style": "primary",
+               "disableWhenLoading": true
+          },
+          "validation": [
+               "existingCustomer"
+          ],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(smb_back_office_add_business_parties_container).appearance(current);",
+                         "value": "2"
+                    },
+                    {
+                         "field": "$global.attr(borrowerAccountIdExisting);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(partyTypes);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(identificationInfoId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(incomeId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$state(smb_back_office_income_information).attr(genesis__Amount__c);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(contactId);",
+                         "value": ""
+                    }
+               ],
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ]
+          },
+          "messages": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_business_parties_details"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_existing_business_parties",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_business_parties_details+ExistingBusinessPartiesNo+COMPONENT",
+     "clcommon__Release_Checksum__c": "01e4f62add22768de53a08524cdeff935da02de9a923256ce719775188cd6f28",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_existing_business_parties_details+ExistingBusinessPartiesNo",
+     "clcommon__Validation_Class__c": null
+}

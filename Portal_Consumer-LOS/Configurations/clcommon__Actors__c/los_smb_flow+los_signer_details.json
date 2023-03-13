@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "render": "$global.attr(isSignerPartyType);==true",
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);",
+                    "partyId": "$global.attr(borrowerPartyId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "los_signer_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_signer_details",
+     "clcommon__External_ID__c": "los_smb_flow+los_signer_details",
+     "clcommon__Release_Checksum__c": "f6f612e64eda85ea316d489649d1aaca77f5d44684ac68dac5268db34cd8bebf"
+}

@@ -1,0 +1,91 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": true,
+               "editableFields": {
+                    "Id": false,
+                    "genesis__Business_Information__r.genesis__Tax_Identification_Number__c": false,
+                    "genesis__Business_Information__r.genesis__DBA_Name__c": false,
+                    "clcommon__Legal_Entity_Type__r.clcommon__Individual__c": false,
+                    "genesis__Business_Information__r.Id": false,
+                    "BillingPostalCode": false,
+                    "BillingStreet": false,
+                    "BillingCity": false,
+                    "clcommon__Legal_Entity_Type__r.Name": false,
+                    "Name": false,
+                    "genesis__Business_Information__r.genesis__Business_Registration_State__c": false,
+                    "genesis__Business_Information__r.genesis__Date_Business_Established__c": false,
+                    "clcommon__Legal_Entity_Type__r.Id": false,
+                    "Phone": false,
+                    "BillingState": false
+               },
+               "renderFields": {
+                    "Id": false,
+                    "genesis__Business_Information__r.genesis__Tax_Identification_Number__c": false,
+                    "genesis__Business_Information__r.genesis__DBA_Name__c": false,
+                    "clcommon__Legal_Entity_Type__r.clcommon__Individual__c": false,
+                    "genesis__Business_Information__r.Id": false,
+                    "BillingPostalCode": false,
+                    "genesis__Business_Information__r.genesis__Resolution_Type__c": false,
+                    "BillingStreet": false,
+                    "BillingCity": false,
+                    "genesis__Business_Information__r.genesis__Completed_Resolution_Date__c": false,
+                    "clcommon__Legal_Entity_Type__r.Name": false,
+                    "Name": false,
+                    "genesis__Business_Information__r.genesis__Business_Registration_State__c": false,
+                    "genesis__Business_Information__r.genesis__Date_Business_Established__c": false,
+                    "genesis__Business_Information__r.genesis__Beneficial_Owner_Exempt__c": false,
+                    "clcommon__Legal_Entity_Type__r.Id": false,
+                    "Phone": false,
+                    "genesis__Business_Information__r.genesis__Management_Type__c": false,
+                    "genesis__Business_Information__r.genesis__Business_Description__c": false,
+                    "BillingState": false
+               },
+               "grid": {
+                    "field": {
+                         "BillingState": {
+                              "sm": 6
+                         },
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "title": "Tell us about your business",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "accId": "$global.attr(businessAccountId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "los_basic_business_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_business_legal_entity_types",
+     "clcommon__External_ID__c": "los_smb_flow+los_business_legal_entity_types",
+     "clcommon__Release_Checksum__c": "28403338ab735fc3a042b9044db8f800f20691ee41652ea80ecca399878354dc"
+}

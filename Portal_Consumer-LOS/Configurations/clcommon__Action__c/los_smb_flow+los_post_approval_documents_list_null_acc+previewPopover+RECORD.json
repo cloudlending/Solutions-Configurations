@@ -1,0 +1,60 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "previewPopover",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "updates": [
+                    {
+                         "value": "LosDocumentPreviewContainer",
+                         "name": "$nav.overlay.add;"
+                    },
+                    {
+                         "value": [
+                              "los_post_approval_documents_list",
+                              "los_post_approval_documents_list_null_acc",
+                              "los_post_approval_record_count"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$this.attr(clcommon__DocCat_Attachment_Associations__r);",
+                         "field": "$state(los_document_list);"
+                    },
+                    {
+                         "value": "$this.attr(clcommon__Category_Name__c);",
+                         "field": "$global.attr(categoryName);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "style": "primary",
+               "render": "$this.attr(clcommon__DocCat_Attachment_Associations__r).count(); > 0",
+               "label": "View"
+          },
+          "property": {},
+          "name": "previewPopover"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_post_approval_documents_list_null_acc"
+     },
+     "clcommon__Component_Structure_Name__c": "los_post_approval_documents_list_null_acc",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "los_smb_flow+los_post_approval_documents_list_null_acc+previewPopover+RECORD",
+     "clcommon__Release_Checksum__c": "bd4db83a2dc29f668e36698a208ca14b35761898f775d3282fd2c278877bfdc3",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_post_approval_documents_list_null_acc+previewPopover",
+     "clcommon__Validation_Class__c": null
+}

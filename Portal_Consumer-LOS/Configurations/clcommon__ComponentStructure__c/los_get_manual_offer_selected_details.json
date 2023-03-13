@@ -1,0 +1,110 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "get_manual_offer_selected_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "los_get_manual_offer_selected_details",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "fd79e793f4919be3d3fa4852efd073a5c01278602a8d8876f884bd2e193f3c05",
+     "clcommon__Unique_Name__c": "get_manual_offer_selected_details",
+     "clcommon__data__c": {
+          "structureName": "get_manual_offer_selected_details",
+          "tableName": "genesis__Applications__c",
+          "whereClause": {
+               "freeForm": "id= ':appId'"
+          },
+          "sections": [
+               {
+                    "id": "55f394e7-599e-4433-9156-090eb2543bd2",
+                    "fields": [
+                         {
+                              "id": "9feb6f60-cf57-4639-944b-99cd1cc1caae",
+                              "fieldName": "genesis__Loan_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Loan Amount",
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         },
+                         {
+                              "id": "8502e0a0-d1c7-4e64-b857-621b381abd33",
+                              "fieldName": "genesis__Interest_Rate__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Interest Rate",
+                                   "ariaLabel": "Interest Rate"
+                              }
+                         },
+                         {
+                              "id": "91ea15f7-275b-4e85-a260-561d624003bc",
+                              "fieldName": "genesis__Term__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Term",
+                                   "ariaLabel": "Term"
+                              }
+                         },
+                         {
+                              "id": "0abd2936-789f-42e7-8f04-3dedde4986f8",
+                              "fieldName": "genesis__Payment_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Payment Amount",
+                                   "ariaLabel": "Payment Amount"
+                              }
+                         },
+                         {
+                              "id": "cea869ae-7b99-437b-b89d-9b7670d1be0a",
+                              "fieldName": "genesis__Product_Type__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Product Type",
+                                   "defaultValue": "LEASE",
+                                   "selectOptions": [
+                                        {
+                                             "id": "LEASE",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "LEASE",
+                                             "optionValue": "LEASE"
+                                        },
+                                        {
+                                             "id": "LOAN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LOAN",
+                                             "optionValue": "LOAN"
+                                        },
+                                        {
+                                             "id": "LINE OF CREDIT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LINE OF CREDIT",
+                                             "optionValue": "LINE OF CREDIT"
+                                        },
+                                        {
+                                             "id": "PACKAGE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PACKAGE",
+                                             "optionValue": "PACKAGE"
+                                        },
+                                        {
+                                             "id": "Treasury Services",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Treasury Services",
+                                             "optionValue": "Treasury Services"
+                                        }
+                                   ],
+                                   "ariaLabel": "Product Type"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

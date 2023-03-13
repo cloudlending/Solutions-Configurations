@@ -1,0 +1,178 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "document_management_queue_view",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "los_document_management_queue_view",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "id",
+     "clcommon__Record_Access_Filter__c": "ownerId",
+     "clcommon__Release_Checksum__c": "789d2ae8542287b196703106e2a2324d33a80e1ed0fc5482ffe7fab0a5b2e9d7",
+     "clcommon__Unique_Name__c": "document_management_queue_view",
+     "clcommon__data__c": {
+          "structureName": "document_management_queue_view",
+          "sections": [
+               {
+                    "id": "",
+                    "fields": [
+                         {
+                              "id": "62e3",
+                              "fieldName": "clcommon__Document_Category__c.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Id"
+                              }
+                         },
+                         {
+                              "id": "62eb",
+                              "fieldName": "clcommon__Document_Category__c.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Name"
+                              }
+                         },
+                         {
+                              "id": "d3d0",
+                              "fieldName": "clcommon__Document_Category__c.clcommon__Category_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Category name"
+                              }
+                         },
+                         {
+                              "id": "d3d1",
+                              "fieldName": "clcommon__Document_Category__c.clcommon__Status__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Category status"
+                              }
+                         },
+                         {
+                              "id": "3a66",
+                              "fieldName": "clcommon__Document_Category__c.genesis__Application__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Application Id"
+                              }
+                         },
+                         {
+                              "id": "b010",
+                              "fieldName": "genesis__Policy_Exception__c.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Policy exception Id"
+                              }
+                         },
+                         {
+                              "id": "ea52",
+                              "fieldName": "genesis__Policy_Exception__c.genesis__Policy_Exception_Definition__r.genesis__Portal_Title__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Policy exception name"
+                              }
+                         },
+                         {
+                              "id": "4ccb",
+                              "fieldName": "genesis__Policy_Exception__c.genesis__Policy_Exception_Definition__r.genesis__Portal_Description__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Policy exception description"
+                              }
+                         },
+                         {
+                              "id": "4cbb",
+                              "fieldName": "genesis__Policy_Exception__c.genesis__Status__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Policy exception status"
+                              }
+                         },
+                         {
+                              "id": "e9f6",
+                              "relationType": "childrenRelation",
+                              "fieldName": null,
+                              "relationName": "clcommon__Document_Category__c.clcommon__DocCat_Attachment_Associations__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__Category_Attachment_Association__c",
+                                   "whereClause": {
+                                        "freeForm": "id != null"
+                                   },
+                                   "orderBy": "createddate desc limit 1",
+                                   "sections": [
+                                        {
+                                             "id": "3a09d4c9-90dd-47c3-a4d0-c8f7f67a32f1",
+                                             "fields": [
+                                                  {
+                                                       "id": "ebb3b1c5-09d4-4145-82f9-035dad7bd85c",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "6367c662-56b4-4c60-bc25-771db26d1fc6",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Category Attachment Name"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "2e5b79b9-f210-41ca-b815-378bf60227ef",
+                                                       "fieldName": "clcommon__Attachment_Id__c",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Attachment Id"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "a9ff3499-0618-4b27-a6db-f21328c50ecb",
+                                                       "fieldName": "clcommon__Content_Version_Id__c",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Content Version Id",
+                                                            "ariaLabel": "Content Version Id"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "a049ee1b-15b7-4615-8aa5-ddabc974d7d9",
+                                                       "fieldName": "CreatedDate",
+                                                       "fieldUi": {
+                                                            "fieldType": "datetime",
+                                                            "label": "Created Date"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": null,
+                                   "label": ""
+                              }
+                         },
+                         {
+                              "id": "d3d0",
+                              "fieldName": "clcommon__Document_Category__c.clcommon__Description__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Description"
+                              }
+                         },
+                         {
+                              "id": "1f6dda54-f586-4626-ad45-36d1ca236c89",
+                              "fieldName": "clcommon__Document_Category__c.clcommon__Required__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Required",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Required"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

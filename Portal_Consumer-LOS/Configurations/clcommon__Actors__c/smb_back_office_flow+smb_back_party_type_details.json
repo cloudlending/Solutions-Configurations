@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": false,
+               "fieldColumns": 1,
+               "multipleSelections": true,
+               "editableFields": {
+                    "clcommon__Party_Types__c": true,
+                    "clcommon__Type__c": true,
+                    "clcommon__Type__r.Name": true
+               },
+               "editable": true,
+               "renderFields": {
+                    "clcommon__Type__c": false
+               }
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "Smb_party_type_test"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_party_type_details",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_party_type_details",
+     "clcommon__Release_Checksum__c": "aba591add6b473cbadc37ac15b8c2488f7c63157b3af6fffb055c7410fdfa794"
+}

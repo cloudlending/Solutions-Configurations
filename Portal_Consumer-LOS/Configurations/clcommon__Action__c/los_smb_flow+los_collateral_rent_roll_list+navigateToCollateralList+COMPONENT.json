@@ -1,0 +1,44 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "navigateToCollateralList",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "updates": [
+                    {
+                         "value": "los_add_collateral_overlay",
+                         "name": "$nav.overlay.remove;"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "validation": [],
+          "appearance": {
+               "style": "primary",
+               "label": "Submit",
+               "render": "$global.attr(itemizedCollateral);!=true",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "navigateToCollateralList"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_collateral_rent_roll_list"
+     },
+     "clcommon__Component_Structure_Name__c": "los_collateral_rent_roll_list",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_rent_roll_list+navigateToCollateralList+COMPONENT",
+     "clcommon__Release_Checksum__c": "25f6132fa64a9ea7f9dc4ea427559525a0a421c7e0d08c5d4b7f1781a26fadb0",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_collateral_rent_roll_list+navigateToCollateralList",
+     "clcommon__Validation_Class__c": null
+}

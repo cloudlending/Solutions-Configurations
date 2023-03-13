@@ -1,0 +1,84 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "$genGetSmbBackOfficeFetchAccountQuery",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "genGetSmbBackOfficeFetchAccountQuery",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "d5e998b6f3709592d682d640dee4b23c6a8f979d0700bfe43b5e2b189a6c1430",
+     "clcommon__Unique_Name__c": "$genGetSmbBackOfficeFetchAccountQuery",
+     "clcommon__data__c": {
+          "structureName": "$genGetSmbBackOfficeFetchAccountQuery",
+          "tableName": "genesis__applications__c",
+          "whereClause": {
+               "freeForm": "genesis__Account__c = ':accountId'"
+          },
+          "sections": [
+               {
+                    "id": "6a18218d-fc6e-4632-b4b2-8ac1c8f3e52c",
+                    "fields": [
+                         {
+                              "id": "7cf01054-88fb-436f-91cc-4b9181aeedc5",
+                              "relationType": "reference",
+                              "fieldName": "genesis__Account__c",
+                              "relationName": "genesis__Account__r",
+                              "relationJson": {
+                                   "tableName": "Account",
+                                   "whereClause": {
+                                        "freeForm": "id !=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "a1f879c0-26bc-45c4-829a-450dc89a8871",
+                                             "fields": [
+                                                  {
+                                                       "id": "9c832660-19b2-490f-8897-dfd8f4c7fe2b",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Account ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "6a2ea843-3f1f-495d-8b91-f0dbc0a7b7dc",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Account Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Account"
+                              }
+                         },
+                         {
+                              "id": "5fc04a41-5c82-4138-9dac-56af9e801c5d",
+                              "fieldName": "genesis__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account ID",
+                                   "ariaLabel": "Account ID"
+                              }
+                         },
+                         {
+                              "id": "f1931b79-a835-4e7d-b954-4b5d8bb8fed1",
+                              "fieldName": "genesis__Account__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account Name",
+                                   "ariaLabel": "Account Name"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "fetchPortalStage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$result.attr(portalStage);",
+                         "field": "$nav(los_review_steps).appearance(current);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "label": "GetPortaStage",
+               "style": "primary",
+               "render": false
+          },
+          "property": {},
+          "name": "fetchPortalStage"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_manual_offer"
+     },
+     "clcommon__Component_Structure_Name__c": "get_manual_offer_selected_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_manual_offer+fetchPortalStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "58fcbffecc5a0c4f20bbf511dfbb4cc65afdfe9a9c9291e44fed1d229bce6a70",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalGetCurrentStage",
+     "clcommon__Unique_Action_Name__c": "los_manual_offer+fetchPortalStage",
+     "clcommon__Validation_Class__c": null
+}

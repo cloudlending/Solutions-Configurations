@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "selectExistingCollateral",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "updates": [
+                    {
+                         "value": "los_existing_collateral_details",
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$this.attr(clcommon__Collateral__r.Id);",
+                         "field": "$global.attr(collateralId);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Select"
+          },
+          "property": {},
+          "name": "selectExistingCollateral"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_existing_current_collateral_search_panel"
+     },
+     "clcommon__Component_Structure_Name__c": "los_fetch_existing_collateral_skip_current",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "los_smb_flow+los_existing_current_collateral_search_panel+selectExistingCollateral+RECORD",
+     "clcommon__Release_Checksum__c": "acc0417c17310db341c2849233e461ec4b1e1be46e3a4826b526d6f799e39c31",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_existing_current_collateral_search_panel+selectExistingCollateral",
+     "clcommon__Validation_Class__c": null
+}

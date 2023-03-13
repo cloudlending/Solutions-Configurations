@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.Id);",
+                              "field": "$global.attr(businessInfoId);"
+                         },
+                         {
+                              "value": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.solcommon__Industry_Code__c);",
+                              "field": "$global.attr(indusrtyCode);"
+                         },
+                         {
+                              "value": "$this.attr(Id);",
+                              "field": "$global.attr(businessPartyId);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {},
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "accId": "$global.attr(backofficerAccountId);"
+               },
+               "structureName": "smb_back_office_fetch_business_info"
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_fetch_business_info",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_fetch_business_info",
+     "clcommon__Release_Checksum__c": "cc84aa6f1a9ca60b83cec617529dab327db0c0785ed1df69f9a43a41dea03e6e"
+}

@@ -1,0 +1,44 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "businessBasicsBack",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Back",
+          "handler": {
+               "updates": [
+                    {
+                         "value": "EditBusinessInformation",
+                         "name": "$nav.overlay.remove;"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "secondary",
+               "variant": "text",
+               "label": "Cancel"
+          },
+          "property": {},
+          "name": "businessBasicsBack"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_edit_business_information"
+     },
+     "clcommon__Component_Structure_Name__c": "los_review_loan_summary",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_edit_business_information+businessBasicsBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "6b960e3a0a9232944ae09a30ef37f82548997e3ed6621ccccf0aee3efe05234f",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_edit_business_information+businessBasicsBack",
+     "clcommon__Validation_Class__c": null
+}

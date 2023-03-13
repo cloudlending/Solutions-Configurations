@@ -1,0 +1,51 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToReviewApplication",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Back",
+          "handler": {
+               "next": "Home",
+               "assignments": [
+                    {
+                         "value": "ReviewAndSubmit",
+                         "field": "$nav(los_application_steps).appearance(current);"
+                    },
+                    {
+                         "value": "LoanReviewDocuments",
+                         "field": "$nav(los_review_steps).appearance(current);"
+                    },
+                    {
+                         "value": "YES",
+                         "field": "$global.attr(showHome);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "position": "bottom-left",
+               "render": false
+          },
+          "property": {},
+          "name": "goToReviewApplication"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list"
+     },
+     "clcommon__Component_Structure_Name__c": "los_fetch_applications",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list+goToReviewApplication+COMPONENT",
+     "clcommon__Release_Checksum__c": "c2fd52906e9167c965a56efa591f92bb65821f13f00ee0121dbd8228e48dc233",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_applicatiion_list+goToReviewApplication",
+     "clcommon__Validation_Class__c": null
+}

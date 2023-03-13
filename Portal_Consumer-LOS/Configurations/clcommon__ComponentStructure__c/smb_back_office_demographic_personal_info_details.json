@@ -1,0 +1,74 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_demographic_personal_info_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "smb_back_office_demographic_personal_info_details",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "76aa3d261bf6cab73da1aeadf75ac53f2fbcefbf5e29427c91880c0e9612e811",
+     "clcommon__Unique_Name__c": "smb_back_office_demographic_personal_info_details",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_demographic_personal_info_details",
+          "tableName": "contact",
+          "whereClause": {
+               "freeForm": "Id = ':contactId'"
+          },
+          "sections": [
+               {
+                    "id": "6c27f714-4a39-48be-8fc1-0862d027f2a8",
+                    "fields": [
+                         {
+                              "id": "7683b10c-d7b3-46c5-8d2a-00332c1a1f6c",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Contact ID",
+                                   "ariaLabel": "Contact ID"
+                              }
+                         },
+                         {
+                              "id": "d19095b5-8934-4f47-91de-49fb0a2a06c2",
+                              "fieldName": "clcommon__Personal_Information__r.clcommon__Gender__c",
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "Gender",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "id": "Male",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Male",
+                                             "optionValue": "Male"
+                                        },
+                                        {
+                                             "id": "Female",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Female",
+                                             "optionValue": "Female"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Gender is Required."
+                                   },
+                                   "ariaLabel": "Gender"
+                              }
+                         },
+                         {
+                              "id": "8c629e9e-b74c-4f63-bd35-2804a64d6897",
+                              "fieldName": "clcommon__Personal_Information__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

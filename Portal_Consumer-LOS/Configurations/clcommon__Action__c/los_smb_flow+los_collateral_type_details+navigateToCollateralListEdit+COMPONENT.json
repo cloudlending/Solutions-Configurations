@@ -1,0 +1,52 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "navigateToCollateralListEdit",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "updates": [
+                    {
+                         "value": "los_edit_collateral_overlay",
+                         "name": "$nav.overlay.remove;"
+                    },
+                    {
+                         "value": [
+                              "los_collaterals_list",
+                              "los_collateral_type_details"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "validation": [],
+          "appearance": {
+               "style": "primary",
+               "label": "Submit",
+               "render": "$global.attr(collateralEdit);==true",
+               "enable": "$global.attr(enableAssetSubmitButton);==\"Yes\"",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "navigateToCollateralListEdit"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_collateral_type_details"
+     },
+     "clcommon__Component_Structure_Name__c": "los_add_collateral_type_details_list",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_type_details+navigateToCollateralListEdit+COMPONENT",
+     "clcommon__Release_Checksum__c": "e39b403b837bab14e7f32d18d8e9742cf3e7533a6c2ed77025d5f508e0f01d60",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_collateral_type_details+navigateToCollateralListEdit",
+     "clcommon__Validation_Class__c": null
+}

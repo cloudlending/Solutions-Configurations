@@ -1,0 +1,131 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_party_beneficial_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "los_party_beneficial_details",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "6c08a17c272be8adb2ef74d72c827fde4aceefb32ebcf30be7a5e97c207f3767",
+     "clcommon__Unique_Name__c": "los_party_beneficial_details",
+     "clcommon__data__c": {
+          "structureName": "los_party_beneficial_details",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "Id=':partyId'"
+          },
+          "orderBy": "CreatedDate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "487398d6-5ec5-49ac-9fc4-673c83ce0630",
+                    "fields": [
+                         {
+                              "id": "8b91b8ec-c998-4c56-9dc7-48e08e2d105c",
+                              "fieldName": "solcommon__Position_In_Company__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Position In Company",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Position In Company is required."
+                                   },
+                                   "ariaLabel": "Position In Company"
+                              }
+                         },
+                         {
+                              "id": "5dfddbf2-b3c6-4a5d-91f6-9ad07de03365",
+                              "fieldName": "clcommon__Percent_Ownership__c",
+                              "fieldUi": {
+                                   "fieldType": "percent",
+                                   "label": "Percent Ownership",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(clcommon__Percent_Ownership__c); >= 20 and $this.attr(clcommon__Percent_Ownership__c); <= 100",
+                                             "message": "<span style=\"color:red\">Ownership should be greater than or equal to 20% and less than or equal to 100% </span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Percent Ownership is required"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "none"
+                                        }
+                                   },
+                                   "ariaLabel": "Percent Ownership"
+                              }
+                         },
+                         {
+                              "id": "05750318-7c81-433e-9f7f-a8f28f2a4bb8",
+                              "fieldName": "clcommon__Signer_Capacity__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Signer Capacity",
+                                   "required": true,
+                                   "prompt": "Select",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Partner",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Partner",
+                                             "optionValue": "Partner"
+                                        },
+                                        {
+                                             "id": "Agent",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Agent",
+                                             "optionValue": "Agent"
+                                        },
+                                        {
+                                             "id": "Officer",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Officer",
+                                             "optionValue": "Officer"
+                                        },
+                                        {
+                                             "id": "Member",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Member",
+                                             "optionValue": "Member"
+                                        },
+                                        {
+                                             "id": "Official",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Official",
+                                             "optionValue": "Official"
+                                        },
+                                        {
+                                             "id": "Trustee",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Trustee",
+                                             "optionValue": "Trustee"
+                                        },
+                                        {
+                                             "id": "Beneficiary",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Beneficiary",
+                                             "optionValue": "Beneficiary"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Signer Capacity is required"
+                                   },
+                                   "ariaLabel": "Signer Capacity"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

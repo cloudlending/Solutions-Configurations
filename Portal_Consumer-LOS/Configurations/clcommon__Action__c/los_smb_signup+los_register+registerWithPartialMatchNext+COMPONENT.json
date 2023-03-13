@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "registerWithPartialMatchNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "sendResgitrationEmail"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": 0,
+                         "field": "$global.attr(statusCode);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "permissionSetName": "SMB_Secured_Borrower",
+               "createNewUserForPartialMatch": true,
+               "contact": "$state(los_register);"
+          },
+          "confirmation": {
+               "cancelOrCloseHandler": {},
+               "cancelText": "No",
+               "confirmText": "Yes",
+               "showConfirmButtons": true,
+               "content": "<p>The input details do not match with our records , Do you want to proceed with registering as a new customer?</p>",
+               "title": "Are you sure?",
+               "type": "prompt"
+          },
+          "appearance": {
+               "style": "primary",
+               "render": false,
+               "label": "Next"
+          },
+          "property": {},
+          "name": "registerWithPartialMatchNext"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_signup+los_register"
+     },
+     "clcommon__Component_Structure_Name__c": "los_register_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_signup+los_register+registerWithPartialMatchNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "e89172570533294537c558c3b7d5c76eca1805d43013c92e267442c95039309b",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveUserData",
+     "clcommon__Unique_Action_Name__c": "los_register+registerWithPartialMatchNext",
+     "clcommon__Validation_Class__c": null
+}

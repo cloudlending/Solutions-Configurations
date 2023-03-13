@@ -1,0 +1,93 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_demographic_information_pacific_islander",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "smb_back_office_demographic_information_pacific_islander",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "295ecdf3981a05c49eeb9594573f1652b3ceaca51f77184f63297d15c5977952",
+     "clcommon__Unique_Name__c": "smb_back_office_demographic_information_pacific_islander",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_demographic_information_pacific_islander",
+          "tableName": "intdm__personal_demographic_information__c",
+          "whereClause": {
+               "freeForm": "id !=null"
+          },
+          "sections": [
+               {
+                    "id": "2d7d1926-7355-4796-bd00-3d676abfc88e",
+                    "name": "Race Sub Category",
+                    "fields": [
+                         {
+                              "id": "ac9bf82b-8f2b-480a-8715-8264d45a595c",
+                              "fieldName": "intdm__Race_Sub_Category__c",
+                              "fieldUi": {
+                                   "fieldType": "radiobuttons",
+                                   "label": "Race Sub Category",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Samoan",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Samoan",
+                                             "optionValue": "Samoan"
+                                        },
+                                        {
+                                             "id": "Other Pacific Islander",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Other Pacific Islander",
+                                             "optionValue": "Other Pacific Islander"
+                                        },
+                                        {
+                                             "id": "Native Hawaiian",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Native Hawaiian",
+                                             "optionValue": "Native Hawaiian"
+                                        },
+                                        {
+                                             "id": "Guamanian or Chamorro",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Guamanian or Chamorro",
+                                             "optionValue": "Guamanian or Chamorro"
+                                        }
+                                   ],
+                                   "ariaLabel": "Race Sub Category"
+                              }
+                         },
+                         {
+                              "id": "f699ec19-ba43-4088-aee8-713beeb71645",
+                              "fieldName": "intdm__Other_Pacific_Islander__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Other Pacific Islander",
+                                   "ariaLabel": "Other Pacific Islander"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "6531e5e1-3bdc-42bd-a62a-9b2ea2ba7d67",
+                    "name": "Sex",
+                    "title": "Sex",
+                    "fields": [
+                         {
+                              "id": "75ba4a48-6496-4a9f-b471-4573057275e3",
+                              "fieldName": "intdm__Gender_Opt_Out__c",
+                              "fieldUi": {
+                                   "fieldType": "switch",
+                                   "label": "Gender Opt Out",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Gender Opt Out"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

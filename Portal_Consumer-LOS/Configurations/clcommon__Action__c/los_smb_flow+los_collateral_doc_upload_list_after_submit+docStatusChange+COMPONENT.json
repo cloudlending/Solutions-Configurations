@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "docStatusChange",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "value": [
+                              "los_collateral_doc_upload_list_after_submit"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "documentCategoryId": "$global.attr(SubmittedDoc);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "style": "primary",
+               "render": false,
+               "label": "View"
+          },
+          "property": {},
+          "name": "docStatusChange"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_collateral_doc_upload_list_after_submit"
+     },
+     "clcommon__Component_Structure_Name__c": "los_document_upload_list_after_approval",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_doc_upload_list_after_submit+docStatusChange+COMPONENT",
+     "clcommon__Release_Checksum__c": "dcfdd933a1162e465378e0e80b0708e0f5bc865b5e388ebba9ce59fe3902d0c5",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalChangeDocmentCategoryStatus",
+     "clcommon__Unique_Action_Name__c": "los_collateral_doc_upload_list_after_submit+docStatusChange",
+     "clcommon__Validation_Class__c": null
+}

@@ -1,0 +1,73 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "savePersonalInfo",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "savePersonalIncomeExisting",
+                         "condition": "$state(los_beneficial_income_details).attr(Id);!=\"\" and $state(los_beneficial_income_details).attr(Id);!=undefined and $state(los_beneficial_income_details).attr(Id);!=\"new_record_id\""
+                    },
+                    {
+                         "name": "savePersonalIncome",
+                         "condition": "$state(los_beneficial_income_details).attr(Id);==\"\" or $state(los_beneficial_income_details).attr(Id);==undefined or $state(los_beneficial_income_details).attr(Id);==\"new_record_id\""
+                    }
+               ]
+          },
+          "validation": [
+               "los_beneficial_income_details",
+               "los_beneficial_personalinfo_details",
+               "los_beneficial_ownership_details",
+               "los_beneficial_party_types"
+          ],
+          "remoteActionArguments": {
+               "contact": {
+                    "clcommon__Current_Zip_Code__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.clcommon__Current_Zip_Code__c);",
+                    "clcommon__Current_City__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.clcommon__Current_City__c);",
+                    "ints__Social_Security_Number__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.ints__Social_Security_Number__c);",
+                    "clcommon__Current_Country_Code__c": "US",
+                    "clcommon__Current_Country__c": "US",
+                    "Title": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Title);",
+                    "Email": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Email);",
+                    "FirstName": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.FirstName);",
+                    "Phone": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Phone);",
+                    "Birthdate": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Birthdate);",
+                    "clcommon__Current_State__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.clcommon__Current_State__c);",
+                    "clcommon__Current_Street__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.clcommon__Current_Street__c);",
+                    "LastName": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.LastName);",
+                    "id": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Id);"
+               },
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Next",
+               "enable": "$this.attr(solcommon__Consent_To_Disclosure_And_Document__c);==true and $this.attr(genesis__Credit_Check_Consent__c);==true",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "savePersonalInfo"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_beneficial_personal_details_disclosures"
+     },
+     "clcommon__Component_Structure_Name__c": "los_beneficial_personal_information_disclosures",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_personal_details_disclosures+savePersonalInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "05cc997976a165a5f4e7649f05b04b52e64b04b4daa78ca97041243b0411a63a",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSavePersonalInfo",
+     "clcommon__Unique_Action_Name__c": "los_beneficial_personal_details_disclosures+savePersonalInfo",
+     "clcommon__Validation_Class__c": null
+}

@@ -1,0 +1,79 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "pagination": {
+                    "lastLinkText": "last_page",
+                    "nextLinkText": "chevron_right",
+                    "previousLinkText": "chevron_left",
+                    "firstLinkText": "first_page",
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "numberOfPageLinks": 5,
+                    "numberOfRecordsPerPage": 10
+               },
+               "editableFields": {
+                    "clcommon__Account__c": false,
+                    "clcommon__Collateral__r.Id": false,
+                    "clcommon__Collateral__r.clcommon__Postal_Code__c": false,
+                    "clcommon__Collateral__r.clcommon__State__c": false,
+                    "clcommon__Collateral__r.clcommon__City__c": false,
+                    "clcommon__Collateral__r.clcommon__Address__c": false,
+                    "clcommon__Collateral__r.clcommon__Description__c": false,
+                    "clcommon__Collateral__r.clcommon__Collateral_Type__r.Name": false
+               },
+               "filters": {
+                    "keyword": {
+                         "fieldNames": [
+                              "clcommon__Collateral__r.clcommon__Collateral_Type__r.Name",
+                              "clcommon__Collateral__r.clcommon__Description__c",
+                              "clcommon__Collateral__r.clcommon__Address__c",
+                              "clcommon__Collateral__r.clcommon__City__c",
+                              "clcommon__Collateral__r.clcommon__State__c"
+                         ],
+                         "filterLabel": "Search Collateral"
+                    }
+               },
+               "blankMessage": "No records found!",
+               "variant": {
+                    "TextField": "default"
+               },
+               "renderFields": {
+                    "clcommon__Collateral__c": false,
+                    "clcommon__Account__c": false,
+                    "clcommon__Collateral__r.Id": false
+               },
+               "title": "Select Existing Collateral",
+               "render": "$state(los_collateral_list_all).count();==0"
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "los_fetch_existing_collateral"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_existing_collateral_search_panel",
+     "clcommon__External_ID__c": "los_smb_flow+los_existing_collateral_search_panel",
+     "clcommon__Release_Checksum__c": "6ce901c1af6190768e31f86c16c274736aecdc41c33e700e59cb677338cbb50d"
+}

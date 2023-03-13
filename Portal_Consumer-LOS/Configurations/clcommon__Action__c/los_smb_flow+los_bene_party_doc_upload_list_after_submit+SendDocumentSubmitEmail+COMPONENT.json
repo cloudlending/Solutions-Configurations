@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "SendDocumentSubmitEmail",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "DocumentSubmit"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "documentPage": "preApproval"
+          },
+          "confirmation": {
+               "cancelOrCloseHandler": {},
+               "cancelText": "Cancel",
+               "confirmText": "Confirm",
+               "showConfirmButtons": true,
+               "showCloseButton": false,
+               "content": "<p>Please Verify your documents before submission.</br>Once submitted you may not be able to edit your loan information.</p>",
+               "title": "Confirm Submission",
+               "type": "prompt"
+          },
+          "appearance": {
+               "label": "Next",
+               "position": "bottom-left",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "SendDocumentSubmitEmail"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_bene_party_doc_upload_list_after_submit"
+     },
+     "clcommon__Component_Structure_Name__c": "los_beneficial_party_doc_upload_list_after_submit",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_bene_party_doc_upload_list_after_submit+SendDocumentSubmitEmail+COMPONENT",
+     "clcommon__Release_Checksum__c": "4b70de7577cfef5189f9c83cdc00bff8973923e97d924dd70ae964d12b5679b9",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalDocumentUploadNotification",
+     "clcommon__Unique_Action_Name__c": "los_bene_party_doc_upload_list_after_submit+SendDocumentSubmitEmail",
+     "clcommon__Validation_Class__c": null
+}

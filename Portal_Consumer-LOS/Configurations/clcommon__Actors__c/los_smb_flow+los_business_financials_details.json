@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editable": true,
+               "showSectionTitle": true,
+               "sectionStyle": "layout",
+               "renderFields": {
+                    "clcommon__Account__r.genesis__Business_Information__r.Id": false,
+                    "id": false
+               },
+               "title": "Tell us about your business financials",
+               "grid": {
+                    "field": {
+                         "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c": {
+                              "sm": 6
+                         },
+                         "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c": {
+                              "xs": 12,
+                              "sm": 6
+                         },
+                         "clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c": {
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "accId": "$global.attr(businessAccountId);",
+                    "appId": "$global.attr(applicationId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "los_business_financial_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_business_financials_details",
+     "clcommon__External_ID__c": "los_smb_flow+los_business_financials_details",
+     "clcommon__Release_Checksum__c": "6e037159692b9c3c85e81cb7f99a77a5f4c7f052434dd50ee551e4f1cf465f24"
+}

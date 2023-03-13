@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "clcommon__Reason__c": false,
+                    "clcommon__Status__c": false,
+                    "CreatedDate": false,
+                    "Name": false,
+                    "clcommon__Content_Version_Id__c": false,
+                    "clcommon__Attachment_Id__c": false
+               },
+               "renderFields": {
+                    "clcommon__Reason__c": false,
+                    "clcommon__Status__c": false,
+                    "CreatedDate": false,
+                    "clcommon__Content_Version_Id__c": false,
+                    "clcommon__Attachment_Id__c": false
+               },
+               "render": "$state(smb_back_office_document_doc_panel).attr(clcommon__DocCat_Attachment_Associations__r).count(); > 0",
+               "queuePrimaryText": "<p class=\"attachmentName\">$this.attr(Name);</p><p class=\"uploadedDate\">Updated on: $this.attr(CreatedDate, date, 'MM/dd/yyyy');</p>"
+          },
+          "property": {
+               "structureName": "smb_back_office_document_view"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_document_doc_View",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_document_doc_View",
+     "clcommon__Release_Checksum__c": "2cdaeb5d2c002bd66b080df8a061a204611faf788ce97c4d84788ffbff7221e2"
+}

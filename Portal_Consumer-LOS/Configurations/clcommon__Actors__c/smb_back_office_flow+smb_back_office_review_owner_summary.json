@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 6
+                    }
+               },
+               "templates": {
+                    "record": [
+                         {
+                              "condition": "$this.attr(clcommon__Percent_Ownership__c); > 19",
+                              "template": "<div style=\"margin: 20px; font-size: 16px; font-family: Roboto; line-height: 2.4;\"><div class=\"AccName\">$this.attr(clcommon__Account__r.Name);</div><div class=\"PartyType\"> $this.attr(clcommon__Party_Types__c); </div><div><progress id=\"clcommon__Percent_Ownership__c\" value=\"$this.attr(clcommon__Percent_Ownership__c);\" max=\"100\"></progress>$this.attr(clcommon__Percent_Ownership__c);%</div></div>"
+                         },
+                         {
+                              "condition": "$this.attr(clcommon__Percent_Ownership__c); == undefined or $this.attr(clcommon__Percent_Ownership__c); == null or $this.attr(clcommon__Percent_Ownership__c);== 0",
+                              "template": "<div style=\"margin: 20px; font-size: 16px; font-family: Roboto; line-height: 2.4;\"><div class=\"AccName\">$this.attr(clcommon__Account__r.Name);</div><div class=\"PartyType\"> $this.attr(clcommon__Party_Types__c); </div></div>"
+                         }
+                    ]
+               },
+               "renderFields": {
+                    "id": false
+               },
+               "title": "Ownership",
+               "columns": 1,
+               "fieldColumns": 1
+          },
+          "property": {
+               "queryProcess": {
+                    "post": "$ext.processPartyType"
+               },
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "smb_back_office_review_owner_summary"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_review_owner_summary",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_review_owner_summary",
+     "clcommon__Release_Checksum__c": "9394c319b61317802a5190a415757a0ac801f01636ffe492d946bf58dbe4ac06"
+}

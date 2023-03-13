@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "backButtonEdit",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "backButtonEdit",
+          "property": {},
+          "appearance": {
+               "style": "secondary",
+               "render": "$global.attr(collateralEdit);==true",
+               "label": "Back",
+               "position": "bottom-left"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(smb_back_office_edit_collateral_overlay).appearance(current);",
+                         "value": "previous"
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_assets_container"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_business_assets_container",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_assets_container+backButtonEdit+COMPONENT",
+     "clcommon__Release_Checksum__c": "33dd915b1ca81cece207348cd0fdcde52663dc1d94870b01b0d54f1147a396e7",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_business_assets_container+backButtonEdit",
+     "clcommon__Validation_Class__c": null
+}

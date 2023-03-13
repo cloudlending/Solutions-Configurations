@@ -1,0 +1,271 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_document_record_count",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "los_document_record_count",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "3e485648a361680a90b6468c0b080d13ce2659f0d50807b79fba06bcade57467",
+     "clcommon__Unique_Name__c": "los_document_record_count",
+     "clcommon__data__c": {
+          "structureName": "los_document_record_count",
+          "tableName": "clcommon__document_category__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId' and  clcommon__Show_In_Portal__c = 'UPLOAD_VIA_PORTAL' and clcommon__Active__c = true and (clcommon__Account__c = null or clcommon__Account__c =':accId' or clcommon__Account__c=':businessAccountId')"
+          },
+          "sections": [
+               {
+                    "id": "8f6107f5-9007-42d1-920d-69ac1f664f9a",
+                    "fields": [
+                         {
+                              "id": "44336ae6-24f3-4290-9d3f-936a445693d5",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "02a7053b-ecb5-4046-b734-1d322042e39e",
+                              "fieldName": "Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Document Category Name",
+                                   "ariaLabel": "Document Category Name"
+                              }
+                         },
+                         {
+                              "id": "d144fc47-1321-4d66-8677-d720284d6da7",
+                              "fieldName": "clcommon__Description__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Description",
+                                   "ariaLabel": "Description"
+                              }
+                         },
+                         {
+                              "id": "27b9f9c6-862d-4a45-80b0-223de2d8ff30",
+                              "fieldName": "clcommon__Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Status",
+                                   "defaultValue": "OPEN",
+                                   "selectOptions": [
+                                        {
+                                             "id": "OPEN",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "OPEN",
+                                             "optionValue": "OPEN"
+                                        },
+                                        {
+                                             "id": "SUBMITTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SUBMITTED",
+                                             "optionValue": "SUBMITTED"
+                                        },
+                                        {
+                                             "id": "APPROVED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED",
+                                             "optionValue": "APPROVED"
+                                        },
+                                        {
+                                             "id": "REJECTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "REJECTED",
+                                             "optionValue": "REJECTED"
+                                        }
+                                   ],
+                                   "ariaLabel": "Status"
+                              }
+                         },
+                         {
+                              "id": "a7b6ec89-a74d-4c4c-8d0c-d0f77d182f3f",
+                              "fieldName": "clcommon__Category_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Category Name",
+                                   "ariaLabel": "Category Name"
+                              }
+                         },
+                         {
+                              "id": "3d38bd8a-f976-4b2a-ab8e-f5f8c2b9050d",
+                              "relationType": "childrenRelation",
+                              "fieldName": null,
+                              "relationName": "clcommon__DocCat_Attachment_Associations__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__Category_Attachment_Association__c",
+                                   "whereClause": {
+                                        "freeForm": "id != null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "1f1bef93-e128-49c1-8a02-8377c5007825",
+                                             "fields": [
+                                                  {
+                                                       "id": "87ea9b77-feb9-4b0f-8204-1ed281f921ed",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "5019215d-1cd8-4af8-b442-11047b0ba63e",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Category Attachment Name"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "f5d3b133-651c-4dc4-8f04-1ffde199b3bd",
+                                                       "fieldName": "clcommon__Attachment_Id__c",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Attachment Id"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "96a92b9e-25f9-47c0-9b1e-eaf214c3006d",
+                                                       "fieldName": "clcommon__Content_Version_Id__c",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Content Version Id"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "e9efb343-ed49-4430-8ee4-745552ea9939",
+                                                       "fieldName": "CreatedDate",
+                                                       "fieldUi": {
+                                                            "fieldType": "datetime",
+                                                            "label": "Created Date"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": null,
+                                   "label": ""
+                              }
+                         },
+                         {
+                              "id": "5830343d-d01b-4b31-902a-19d35c3543a8",
+                              "fieldName": "clcommon__Parent_Document_Category__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "f765cbeb-6657-4fd9-a0f2-d0c397121c01",
+                              "fieldName": "clcommon__Account__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account Name",
+                                   "ariaLabel": "Account Name"
+                              }
+                         },
+                         {
+                              "id": "320a8991-212f-4689-bc5f-e393ccca5702",
+                              "relationType": "reference",
+                              "fieldName": "clcommon__Account__c",
+                              "relationName": "clcommon__Account__r",
+                              "relationJson": {
+                                   "tableName": "Account",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "17f4cbc6-5fe8-4b42-a826-e0c080be047f",
+                                             "fields": [
+                                                  {
+                                                       "id": "dea2397a-8bac-4482-baf6-f1661f66b8f6",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Account ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "56ea9204-3be2-4dbb-8c41-1df24177c226",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Account Name"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Account"
+                              }
+                         },
+                         {
+                              "id": "0b050279-6b86-4e2a-ae07-dc20a8e4ce23",
+                              "fieldName": "clcommon__Document_Definition__r.genesis__Object_Type__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Object Type",
+                                   "ariaLabel": "Object Type"
+                              }
+                         },
+                         {
+                              "id": "30d021d4-587d-4bd1-b5a8-9a9c53c05bd2",
+                              "relationType": "reference",
+                              "fieldName": "clcommon__Collateral__c",
+                              "relationName": "clcommon__Collateral__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__Collateral__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "5a6f6655-08e4-4040-91fb-fb20f8afe36a",
+                                             "fields": [
+                                                  {
+                                                       "id": "e883246f-70a2-4eba-8acc-b2c8aaa2b2d6",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "33b93fab-aa92-4796-ae79-ae9821396104",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Collateral ID"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Collateral"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

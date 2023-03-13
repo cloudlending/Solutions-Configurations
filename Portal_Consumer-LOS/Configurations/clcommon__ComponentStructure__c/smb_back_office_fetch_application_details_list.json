@@ -1,0 +1,63 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_fetch_application_details_list",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "smb_back_office_fetch_application_details_list",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "0db7bcdff06ddb009a6a8273d02d62e675ec0972251b06d078a56aaec062091b",
+     "clcommon__Unique_Name__c": "smb_back_office_fetch_application_details_list",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_fetch_application_details_list",
+          "tableName": "clcommon__Party__c",
+          "whereClause": {
+               "freeForm": "clcommon__Account__c = ':accountId'"
+          },
+          "sections": [
+               {
+                    "id": "b1f7f524-85a5-450d-85ee-b0fa4ce6bc6b",
+                    "fields": [
+                         {
+                              "id": "705ca245-2e07-4c69-888d-8c745dd056fa",
+                              "fieldName": "genesis__Application__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "e8a0d674-eb85-40f1-99f3-d17951327e7f",
+                              "fieldName": "genesis__Application__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Application ID",
+                                   "ariaLabel": "Application ID"
+                              }
+                         },
+                         {
+                              "id": "b2d40740-b83f-47a3-832a-205f58253a84",
+                              "fieldName": "genesis__Application__r.CreatedDate",
+                              "fieldUi": {
+                                   "fieldType": "datetime",
+                                   "label": "Created Date",
+                                   "ariaLabel": "Created Date"
+                              }
+                         },
+                         {
+                              "id": "ed549ff8-3584-4188-9461-95671015334c",
+                              "fieldName": "genesis__Application__r.genesis__Loan_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Loan Amount",
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

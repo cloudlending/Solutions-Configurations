@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{$state(los_document_record_count).count(); == 0 ? \"No Documents!\" : \"\"};",
+                              "field": "$global.attr(recordCount);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "fieldColumns": 1,
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "accId": "$global.attr(borrowerAccountId);",
+                    "businessAccountId": "$global.attr(businessAccountId);",
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "los_document_record_count",
+               "module": "document"
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_document_record_count",
+     "clcommon__External_ID__c": "los_smb_flow+los_document_record_count",
+     "clcommon__Release_Checksum__c": "ebba46402ffe281ff75a85dc8690eca93d7c4f5d11454e748add427279cbacbb"
+}

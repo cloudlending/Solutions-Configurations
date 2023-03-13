@@ -1,0 +1,28 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {},
+          "property": {
+               "structureName": "los_dummy_query",
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               }
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_dummy_list",
+     "clcommon__External_ID__c": "los_smb_flow+los_dummy_list",
+     "clcommon__Release_Checksum__c": "cd586fb9ba4dd64cc6a5f5664d48ed3a104ecaf7646652c8dae2a815e423000d"
+}

@@ -1,0 +1,73 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "savePortalUpdateIncomeInfo",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "savePortalUpdateIncomeInfo",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "render": false,
+               "label": "Next",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               },
+               "genesis__Income__c": [
+                    {
+                         "Id": "$state(smb_back_office_income_information).attr(Id);",
+                         "genesis__Amount__c": "$state(smb_back_office_income_information).attr(genesis__Amount__c);",
+                         "name": "Annual Personal Income",
+                         "genesis__Contact__c": "$global.attr(contactId);"
+                    }
+               ]
+          },
+          "validation": [
+               "smb_back_office_personal_information_consent_section",
+               "smb_back_office_income_information"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": "$global.attr(tempPartyId);"
+                    },
+                    {
+                         "field": "$global.attr(BusinessPartyAccountId);",
+                         "value": "$global.attr(tempBusinessPartyAccountId);"
+                    },
+                    {
+                         "field": "$global.attr(borrowerAccountIdExisting);",
+                         "value": "$global.attr(tempborrowerAccountIdExisting);"
+                    },
+                    {
+                         "field": "$nav(smb_back_office_add_business_parties_container).appearance(current);",
+                         "value": "next"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_personal_information_consent",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section+savePortalUpdateIncomeInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "f18da64a3e9f25cf4243240c9c86d73c060939135ac8a347c0623cceadb5366d",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIncome",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_personal_information_consent_section+savePortalUpdateIncomeInfo",
+     "clcommon__Validation_Class__c": null
+}

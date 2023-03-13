@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "backButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {
+               "assignments": [
+                    {
+                         "value": "previous",
+                         "field": "$nav(los_add_collateral_overlay).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "style": "secondary",
+               "label": "Back",
+               "variant": "text",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "backButton"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_existing_current_collateral_search_panel"
+     },
+     "clcommon__Component_Structure_Name__c": "los_fetch_existing_collateral_skip_current",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "los_smb_flow+los_existing_current_collateral_search_panel+backButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "4f1bb329daae24eb21dfa000a4e942e8706f0d546e647f21888667955de8c104",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_existing_current_collateral_search_panel+backButton",
+     "clcommon__Validation_Class__c": null
+}

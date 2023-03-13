@@ -1,0 +1,84 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_fetch_party_role",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "smb_back_office_fetch_party_role",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "941464df65353086f51d2d470713bc0338b63d1ccd361228b72e91003e34150f",
+     "clcommon__Unique_Name__c": "smb_back_office_fetch_party_role",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_fetch_party_role",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "Id = ':partyId'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "d712bc5d-5dd6-4b9f-a6d7-eabefa6f1ba0",
+                    "name": "Select the party Role(s)",
+                    "title": "Select the party Role(s)",
+                    "fields": [
+                         {
+                              "id": "6ccc2628-fbdc-41be-8840-0addb5a900a3",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "f27ed7e3-a038-4370-8706-512249709b61",
+                              "fieldName": "clcommon__Party_Types__c",
+                              "fieldUi": {
+                                   "fieldType": "multiselectbuttons",
+                                   "label": "Party Roles",
+                                   "placeholderText": "Select Party Role(s)",
+                                   "required": true,
+                                   "prompt": "Select the party role(s)",
+                                   "selectOptions": [
+                                        {
+                                             "id": "BENEFICIAL OWNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BENEFICIAL OWNER",
+                                             "optionValue": "BENEFICIAL OWNER"
+                                        },
+                                        {
+                                             "id": "GUARANTOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "GUARANTOR",
+                                             "optionValue": "GUARANTOR"
+                                        },
+                                        {
+                                             "id": "PRINCIPAL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PRINCIPAL",
+                                             "optionValue": "PRINCIPAL"
+                                        },
+                                        {
+                                             "id": "AUTHORIZED SIGNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AUTHORIZED SIGNER",
+                                             "optionValue": "AUTHORIZED SIGNER"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Party Role is required."
+                                   },
+                                   "ariaLabel": "Party Types"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

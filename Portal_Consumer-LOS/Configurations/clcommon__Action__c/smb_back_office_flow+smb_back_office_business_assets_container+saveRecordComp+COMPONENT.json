@@ -1,0 +1,61 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveRecordComp",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "saveRecordComp",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "style": "primary",
+               "label": "save",
+               "render": "$global.attr(existingCollateral);!=\"Yes\""
+          },
+          "remoteActionArguments": {
+               "collateralTypeDetails": "$this;",
+               "collateralId": "$global.attr(collateralId);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "uploadActionArguments": {},
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(editAsset);",
+                         "value": "123124"
+                    },
+                    {
+                         "field": "$global.attr(enableAssetSubmitButton);",
+                         "value": "Yes"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_business_assets_container"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_assets_container"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_business_assets_container",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_assets_container+saveRecordComp+COMPONENT",
+     "clcommon__Release_Checksum__c": "3805203bbf21c78d469cc4bc8620fd4e0ce91661a335f7c3be92fafd1f3d574a",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveCollateralTypeDetail",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_business_assets_container+saveRecordComp",
+     "clcommon__Validation_Class__c": null
+}

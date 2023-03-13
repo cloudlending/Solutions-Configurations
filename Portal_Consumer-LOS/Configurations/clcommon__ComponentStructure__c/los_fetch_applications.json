@@ -1,0 +1,168 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_fetch_applications",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "los_fetch_applications",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "b7d54b78f52e8ca705a2985f9a815ef5c69b7d2b232aad1c6e0a20dfca207542",
+     "clcommon__Unique_Name__c": "los_fetch_applications",
+     "clcommon__data__c": {
+          "structureName": "los_fetch_applications",
+          "sections": [
+               {
+                    "id": "dcd4ea32-180b-428c-ad50-5602d3fc4dda",
+                    "fields": [
+                         {
+                              "id": "528a241b-9982-47bf-868a-57292c818ace",
+                              "fieldName": "genesis__Applications__c.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Application ID",
+                                   "ariaLabel": "Application ID"
+                              }
+                         },
+                         {
+                              "id": "2d5fd322-4203-4f50-a3c0-0fc8d7cdaf68",
+                              "fieldName": "genesis__Applications__c.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Application ID",
+                                   "ariaLabel": "Application ID"
+                              }
+                         },
+                         {
+                              "id": "ac4ebbf2-20d2-4012-8e9a-f918a4f927a4",
+                              "fieldName": "genesis__Applications__c.genesis__Account__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Borrower",
+                                   "ariaLabel": "Borrower"
+                              }
+                         },
+                         {
+                              "id": "8ce92060-933a-4786-b3ba-99d4e50c4235",
+                              "fieldName": "genesis__Applications__c.genesis__Asset_Class__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Asset Class",
+                                   "ariaLabel": "Asset Class"
+                              }
+                         },
+                         {
+                              "id": "ca7d05a2-450b-4a10-a101-b6243883a31d",
+                              "fieldName": "genesis__Applications__c.genesis__CL_Product__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "CL Product",
+                                   "ariaLabel": "CL Product"
+                              }
+                         },
+                         {
+                              "id": "ce694287-8d61-41e6-8c06-cc3c19f55261",
+                              "fieldName": "genesis__Applications__c.genesis__CL_Product__r.solcommon__Portal_Label__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Product",
+                                   "ariaLabel": "CL Product Name"
+                              }
+                         },
+                         {
+                              "id": "bbc00939-4ee9-4b96-87d8-24e6bc47b14a",
+                              "fieldName": "genesis__Applications__c.genesis__CL_Purpose__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "CL Purpose",
+                                   "ariaLabel": "CL Purpose"
+                              }
+                         },
+                         {
+                              "id": "5ad0ec7f-0a0e-4719-8d04-a8ba8f3b2f772132",
+                              "fieldName": "genesis__Applications__c.genesis__CL_Purpose__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Purpose",
+                                   "ariaLabel": "Purpose"
+                              }
+                         },
+                         {
+                              "id": "3645f6fb-f79b-4f2d-99b2-7878b57691897cb57691897c",
+                              "fieldName": "genesis__Applications__c.genesis__Other_Purpose__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Other Purpose",
+                                   "ariaLabel": "Other Purpose"
+                              }
+                         },
+                         {
+                              "id": "f6294658-2a27-4b57-9c78-a3febee1a4fe",
+                              "fieldName": "genesis__Applications__c.genesis__Loan_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Loan Amount",
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         },
+                         {
+                              "id": "0aba85a9-95c8-4d58-b188-d63c23718709",
+                              "fieldName": "genesis__Applications__c.genesis__Status__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Status",
+                                   "ariaLabel": "Status"
+                              }
+                         },
+                         {
+                              "id": "e996d6ac-c9cf-4f52-b707-adb1e8146ff0",
+                              "fieldName": "genesis__Applications__c.genesis__Is_Review_Application__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Is Review Application",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Is Review Application"
+                              }
+                         },
+                         {
+                              "id": "9ffed4ef-a4db-48be-a486-b6b1ddb5a511",
+                              "fieldName": "genesis__Applications__c.genesis__CL_Product__r.solcommon__Pre_Approval_Document_Collection__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Pre Approval Document Collection",
+                                   "defaultValue": "Exception Based Documents",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Exception Based Documents",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "Exception Based Documents",
+                                             "optionValue": "Exception Based Documents"
+                                        },
+                                        {
+                                             "id": "All Documents",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "All Documents",
+                                             "optionValue": "All Documents"
+                                        }
+                                   ],
+                                   "ariaLabel": "Pre Approval Document Collection"
+                              }
+                         },
+                         {
+                              "id": "d60a805d-d2ee-4776-aee1-14f1d8000e55",
+                              "fieldName": "genesis__Applications__c.genesis__CL_Product__r.solcommon__Collect_Documents_Post_Approval__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Collect Documents Post-approval",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Collect Documents Post-approval"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}
