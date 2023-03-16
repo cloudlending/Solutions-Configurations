@@ -43,10 +43,10 @@
           "intframework__External_Id__c": "Documents_And_Disclosures_CSI_Documents_And_Disclosures"
      },
      "intframework__Log_Filter__c": null,
-     "intframework__Log_Request_Response__c": true,
+     "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 1,
-     "intframework__Release_Checksum__c": "5ea4ad984bf606255c5098d681102aca158f62afddb15946176a0dcd084cfc0b",
+     "intframework__Release_Checksum__c": "815606b4db4ed72c1f8e3895a36b198ed0f940db17f900dcae341c2572d95993",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "CSI",
@@ -62,7 +62,7 @@
                     },
                     {
                          "externalField": "mappingData$$data",
-                         "value": "Q2.loan.v8.2022.202.json"
+                         "value": "Q2.loan.v9.2023.46.json"
                     }
                ],
                "filters": [
@@ -1397,7 +1397,7 @@
                               },
                               {
                                    "externalField": "InsuranceCompanyName",
-                                   "fieldAPI": "genesis__Collateral__r.clcommon__Insurance_Company__r.name"
+                                   "fieldAPI": "genesis__Collateral__r.clcommon__Insurance_Company__r.Name"
                               },
                               {
                                    "externalField": "InsuranceCompanyId",
@@ -1445,6 +1445,10 @@
                                    "externalField": "ControllingInstitution",
                                    "fieldAPI": "genesis__Collateral__r.clcommon__Issuer__c",
                                    "queriesAnotherObject": "true"
+                              },
+                              {
+                                   "externalField": "ControllingInstitutionName",
+                                   "fieldAPI": "genesis__Collateral__r.clcommon__Issuer__r.Name"
                               },
                               {
                                    "externalField": "AssignedPartnership",
@@ -2205,6 +2209,10 @@
                               {
                                    "externalField": "NonIndividual.DateBusinessEstablished",
                                    "fieldAPI": "genesis__Business_Information__r.genesis__Date_Business_Established__c"
+                              },
+                              {
+                                   "externalField": "NonIndividual.NatureOfBusinessDescription",
+                                   "fieldAPI": "genesis__Business_Information__r.genesis__NAICS_Description__c"
                               }
                          ],
                          "whereClause": "Id IN :Mapping__Parties__AccountId OR Id IN :Mapping__Parties__ContactAccountId OR Id IN :Mapping__Relationships__Entity OR Id in :Mapping__ApplicationLevel__Auto_Debit_Account_OwnerId OR Id in :Mapping__ApplicationLevel__SettlementAgentId OR Id in :Mapping__ApplicationLevel__SettlementAgentContactId OR Id in :Mapping__Collaterals__LifeInsuranceBeneficiary OR Id in :Mapping__Collaterals__ControllingInstitution OR Id in :Mapping__Collaterals__InsuredParty OR Id in :Mapping__Collaterals__InsuranceCompanyId OR Id in :Mapping__Collaterals__landlordOfTheLeasedProperty OR Id in :Mapping__CollateralOwners__accountId"
@@ -2721,6 +2729,25 @@
                               }
                          ],
                          "whereClause": "genesis__Party__c in :Mapping__Parties__EntityId AND genesis__Related_Party__c in :Mapping__Parties__EntityId"
+                    },
+                    {
+                         "objectAPI": "clcommon__Party_Type__c",
+                         "objectAlias": "PartyTypeCodes",
+                         "fields": [
+                              {
+                                   "externalField": "Id",
+                                   "fieldAPI": "Id"
+                              },
+                              {
+                                   "externalField": "Name",
+                                   "fieldAPI": "Name"
+                              },
+                              {
+                                   "externalField": "PartyTypeCode",
+                                   "fieldAPI": "clcommon__Party_Type_Code__c"
+                              }
+                         ],
+                         "whereClause": "clcommon__Party_Type_Code__c != null"
                     }
                ]
           }
@@ -2736,7 +2763,7 @@
      "intframework__Send_File__c": false,
      "intframework__UI_Page_Name__c": "CSIInteractionsPages",
      "intframework__UI_Page_Type__c": "SKUID",
-     "intframework__Use_New_Logging_Mechanism__c": true,
+     "intframework__Use_New_Logging_Mechanism__c": false,
      "intframework__Use_Response_Mocker__c": false,
      "solcommon__Release_Checksum__c": null,
      "intframework__Disable_Integration_Logs__c": false
