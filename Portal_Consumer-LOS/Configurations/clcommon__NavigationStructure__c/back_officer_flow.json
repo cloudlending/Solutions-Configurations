@@ -1,0 +1,862 @@
+{
+     "attributes": {
+          "type": "clcommon__NavigationStructure__c"
+     },
+     "Name": "back_officer_flow",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Description__c": null,
+     "clcommon__External_ID__c": "back_officer_flow",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Is_Template__c": false,
+     "clcommon__Related_Configuration_Mapping__c": null,
+     "clcommon__Release_Checksum__c": "f71abfc7dee21997ae38589c7122e6b06de1cc24cdd5057c60e30c960245c15e",
+     "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
+     "clcommon__Unique_Name__c": "back_officer_flow",
+     "clcommon__data__c": {
+          "messages": {
+               "submitFailureText": "Failed to submit",
+               "loadingFailureText": "Failed to load",
+               "saveFailureText": "Failed to save",
+               "submitAnimationText": "Sending...",
+               "submitSuccessText": "Succeed",
+               "savingAnimationText": "Saving...",
+               "uploadFailureText": "Failed to upload",
+               "loadingAnimationText": "Loading...",
+               "submitExpirationText": "Failed to submit",
+               "saveSuccessText": "Succeed",
+               "uploadFileTooLargeError": "File too large"
+          },
+          "global": {
+               "submitted": false,
+               "accountsQueryBy": "Qewert1235",
+               "accountName": "",
+               "estimatedValue": "Estimated Collateral Value",
+               "partyContactId": "",
+               "showCollateral": "false",
+               "showAccountDetails": true,
+               "PartyName": "!@#$%",
+               "applicationId": "$url(Id);",
+               "loadingText": "Please wait while we evaluate your loan application...",
+               "showPartyTabs": false,
+               "partyAccountId": "",
+               "fetchPartiesBy": "Qewert1235"
+          },
+          "settings": {
+               "treeIcons": {
+                    "toExpand": "chevron_right",
+                    "toCollapse": "expand_more",
+                    "end": "lens"
+               },
+               "filters": {
+                    "keywordLabel": "Keyword",
+                    "dialogTitle": "Filters By",
+                    "icon": "filter_list",
+                    "label": "Filtered",
+                    "clearAllText": "Clear All",
+                    "startDateLabel": "Start date",
+                    "endDateLabel": "End date",
+                    "minNumberLabel": "Mininum",
+                    "maxNumberLabel": "Maximum",
+                    "toLabel": "to",
+                    "fromLabel": "from",
+                    "orLabel": "or",
+                    "notSpecifiedLabel": "Not specified",
+                    "clearLabel": "Clear Filter",
+                    "applyLabel": "Apply",
+                    "invalidText": "Invalid value"
+               },
+               "pagination": {
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "numberOfRecordsPerPage": 10,
+                    "numberOfPageLinks": 5,
+                    "firstLinkText": "first_page",
+                    "previousLinkText": "chevron_left",
+                    "nextLinkText": "chevron_right",
+                    "lastLinkText": "last_page"
+               },
+               "locale": "en-us",
+               "minimumFractionDigits": 2,
+               "collapsibleIcons": {
+                    "expanded": "expand_more",
+                    "collapsed": "expand_less"
+               },
+               "uploadText": {
+                    "completed": "Completed",
+                    "cancelInProgress": "Cancel",
+                    "removeError": "close"
+               },
+               "skeleton": {
+                    "listView": {
+                         "withAction": {
+                              "height": "72px",
+                              "padding": "24px 12px"
+                         },
+                         "noAction": {
+                              "height": "48px",
+                              "padding": "12px"
+                         }
+                    },
+                    "queueView": {
+                         "height": "150px",
+                         "padding": "16px"
+                    },
+                    "cardView": {
+                         "height": "300px",
+                         "padding": "16px"
+                    },
+                    "detailView": {
+                         "large": {
+                              "height": "108.75px",
+                              "padding": "28px 12px 20px 12px"
+                         },
+                         "medium": {
+                              "height": "104px",
+                              "padding": "28px 12px 20px 12px"
+                         },
+                         "small": {
+                              "height": "101.625px",
+                              "padding": "28px 12px 20px 12px"
+                         }
+                    }
+               },
+               "sortText": {
+                    "sortBy": "Sort by",
+                    "aToZ": "(A to Z)",
+                    "zToA": "(Z to A)",
+                    "lowToHigh": "(Low to High)",
+                    "highToLow": "(High to Low)",
+                    "mostRecentFirst": "(Most Recent First)",
+                    "mostRecentLast": "(Most Recent Last)"
+               },
+               "currencySymbol": "$",
+               "maximumFractionDigits": 2,
+               "variant": {
+                    "TextField": "outlined"
+               }
+          },
+          "actors": {},
+          "stages": {
+               "ApplicationDashboard": {
+                    "layout": {
+                         "children": [
+                              {
+                                   "children": [
+                                        {
+                                             "name": "back_officer_header",
+                                             "layoutId": "42c0f442-886b-409b-b778-9987f53dcbf7"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "name": "Header",
+                                   "layoutId": "ce86fd14-dd05-4dfb-910b-b32e44143b6c"
+                              },
+                              {
+                                   "direction": "horizontal",
+                                   "children": [
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar1",
+                                             "layoutId": "92d406d6-9a89-47ab-b3df-ac83343e389f"
+                                        },
+                                        {
+                                             "children": [
+                                                  {
+                                                       "children": [
+                                                            {
+                                                                 "name": "back_officer_application_fetch",
+                                                                 "layoutId": "bf9b6e71-cffd-4734-81db-6d83af21205b"
+                                                            }
+                                                       ],
+                                                       "name": "back_officer_application_list_container",
+                                                       "layoutId": "40521284-72bf-4d2b-b28f-19964baea884"
+                                                  }
+                                             ],
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Content",
+                                             "layoutId": "a5a90c49-4c95-41f4-88ac-c36e5377fcac"
+                                        },
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar2",
+                                             "layoutId": "dca71283-697f-4a79-acfb-e2ec6ac922b9"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "final": true,
+                                   "name": "Main",
+                                   "layoutId": "c238f423-edc1-49e4-94c5-0f4e87bef4bf"
+                              }
+                         ],
+                         "final": true,
+                         "name": "ClsAppLayoutOne",
+                         "layoutId": "243d8a10-2979-48fb-9517-a783bc812788"
+                    }
+               },
+               "Home": {
+                    "overlay": [
+                         {
+                              "children": [
+                                   {
+                                        "name": "back_officer_party_search",
+                                        "layoutId": "8771cd2f-ef07-1211-ba40-2b16bb48fab2"
+                                   },
+                                   {
+                                        "name": "back_officer_party_list",
+                                        "layoutId": "15dds-ef07-1211-ba40-2b16bb48fab2"
+                                   }
+                              ],
+                              "name": "back_officer_search_party_overlay",
+                              "layoutId": "62d70bc7-8fe1-4eb9-92ae-b96649610bca"
+                         },
+                         {
+                              "title": "Party Information",
+                              "children": [
+                                   {
+                                        "name": "back_officer_add_party",
+                                        "layoutId": "fa818a5e-edb4-4dc0-a8be-3b74dc0e6848"
+                                   }
+                              ],
+                              "name": "back_officer_add_party_container",
+                              "layoutId": "5ea70ac7-8a98-4c80-afa0-ad647548fbc9"
+                         },
+                         {
+                              "title": "Document List",
+                              "children": [
+                                   {
+                                        "height": "100%",
+                                        "name": "back_officer_document_list",
+                                        "layoutId": "a8d89883-ef54-4886-8130-41f3e4ee4b3f"
+                                   }
+                              ],
+                              "name": "back_officer_document_preview_container",
+                              "layoutId": "221e1758-7b6d-4946-b645-96fe27e098df"
+                         },
+                         {
+                              "title": "Employment Information",
+                              "children": [
+                                   {
+                                        "name": "back_officer_save_employer",
+                                        "layoutId": "e5e9b093-d03c-41d3-a0a6-4f85c6371ccf"
+                                   }
+                              ],
+                              "name": "back_officer_add_employer_container",
+                              "layoutId": "aaf296ec-702a-4702-bb64-9550e4fe85c3"
+                         },
+                         {
+                              "title": "Income Information",
+                              "children": [
+                                   {
+                                        "name": "back_officer_add_income",
+                                        "layoutId": "884bba13-d52b-4b1e-8ff1-c8e12f39ba73"
+                                   }
+                              ],
+                              "name": "back_officer_add_income_container",
+                              "layoutId": "ae03bbf1-0b84-45df-a2f2-b3b3915780f9"
+                         },
+                         {
+                              "title": "Applicant Information",
+                              "children": [
+                                   {
+                                        "name": "back_officer_edit_applicant",
+                                        "layoutId": "48ea9131-e15c-463b-bc4c-90ed38099e5c"
+                                   }
+                              ],
+                              "name": "back_officer_edit_applicant_container",
+                              "layoutId": "87e0534e-a463-4d07-a011-569cf8fb656e"
+                         },
+                         {
+                              "title": "Party Information",
+                              "children": [
+                                   {
+                                        "width": "100%",
+                                        "name": "back_officer_edit_party_info",
+                                        "layoutId": "181d03f0-afa7-47e2-b5e2-4dbceb8ce2bd"
+                                   }
+                              ],
+                              "name": "back_officer_edit_party_container",
+                              "layoutId": "76775943-25af-4533-90ec-b8e5942881ee"
+                         },
+                         {
+                              "title": "Collateral Details",
+                              "name": "back_officer_collateral_overlay",
+                              "layoutId": "fe84732e-125b-4f6c-a43c-03e7c26134f5"
+                         }
+                    ],
+                    "layout": {
+                         "children": [
+                              {
+                                   "children": [
+                                        {
+                                             "name": "back_officer_header",
+                                             "layoutId": "3c483e8b-816a-4833-827d-161dc8ec8e60"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "name": "Header",
+                                   "layoutId": "e35cb6db-08ad-47af-a679-64b3f7d688e8"
+                              },
+                              {
+                                   "direction": "horizontal",
+                                   "children": [
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar1",
+                                             "layoutId": "97c1ddae-af4a-4884-b31d-2918c2778714"
+                                        },
+                                        {
+                                             "children": [
+                                                  {
+                                                       "name": "back_office_bread_crumb",
+                                                       "layoutId": "36805e13-cdc1-4040-abc8-dbb3e4dded83"
+                                                  },
+                                                  {
+                                                       "children": [
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "100%",
+                                                                                     "name": "back_officer_product",
+                                                                                     "layoutId": "8771cd2f-312312-4b75-ba40-2b16bb48fab2"
+                                                                                },
+                                                                                {
+                                                                                     "width": "100%",
+                                                                                     "name": "back_officer_product_fetch",
+                                                                                     "layoutId": "c5d07082-ac12-qw1321-a000-ab181ca3df08"
+                                                                                }
+                                                                           ],
+                                                                           "name": "back_officer_container",
+                                                                           "layoutId": "3372d8a8-5cb8-4dff-84fc-e30826286639"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "back_officer_product_helper",
+                                                                           "layoutId": "e7b57577-ed20-4ede-a573-4c13ff9f319e"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_product_container",
+                                                                 "layoutId": "debd5f6a-97f2-42d0-97c6-9793318f905b"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "back_officer_applying_for",
+                                                                           "layoutId": "23adb365-5c89-499a-b3d5-11017f830c65"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "back_officer_applying_for_helper",
+                                                                           "layoutId": "890254fd-228d-439e-8fea-11f77878dd5e"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_applying_for_container",
+                                                                 "layoutId": "d6fc1163-eb2d-471f-b6c8-2a214203464d"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "children": [
+                                                                                {
+                                                                                     "name": "back_officer_loan_amount",
+                                                                                     "layoutId": "7159f4d7-1eca-4ddd-b6f8-cfb846abadc6"
+                                                                                },
+                                                                                {
+                                                                                     "name": "back_officer_purpose",
+                                                                                     "layoutId": "c7693a93-39cf-45c8-9aff-3af099ba177f"
+                                                                                },
+                                                                                {
+                                                                                     "name": "back_officer_purpose_existing_div",
+                                                                                     "layoutId": "04ae58ac-74cf-46d3-8c68-6a960f704455"
+                                                                                }
+                                                                           ],
+                                                                           "name": "back_officer_loan_details_conatiner",
+                                                                           "layoutId": "ca6976a2-1e8a-4999-925e-2a1ac3dd64f7"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "back_officer_loan_amount_helper",
+                                                                           "layoutId": "890254fd-wqe2131-439e-8fea-11f77878dd5e"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_loan_details_step",
+                                                                 "layoutId": "bc9842e4-c5d9-4f20-a2cd-d9aa430bcdec"
+                                                            },
+                                                            {
+                                                                 "direction": "horizontal",
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "back_officer_account_type",
+                                                                           "layoutId": "04d12624-7f63-4e7b-ba81-d3e56996581f"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "back_officer_account_type_helper",
+                                                                           "layoutId": "2595e443-78cf-4983-9fc4-b8559a07f265"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_customer_type_container",
+                                                                 "layoutId": "ae737def-e14c-4a27-8389-e9ad47f9ad31"
+                                                            },
+                                                            {
+                                                                 "direction": "horizontal",
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "100%",
+                                                                                     "name": "back_officer_search_account",
+                                                                                     "layoutId": "c4b545dc-939d-46fd-b6c8-35eb1118d36d"
+                                                                                },
+                                                                                {
+                                                                                     "width": "100%",
+                                                                                     "name": "back_officer_select_account",
+                                                                                     "layoutId": "b43a5dbc-cbb8-4a0a-ab7f-a47c71cd0416"
+                                                                                }
+                                                                           ],
+                                                                           "name": "back_officer_select_account_info",
+                                                                           "layoutId": "e7704674-93d7-4251-98d8-a3c37413ccf5"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "back_officer_select_account_info_helper",
+                                                                           "layoutId": "66e8be9f-ea2a-4725-906d-3c1dfecf43c4"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_select_account_container",
+                                                                 "layoutId": "b993c615-3526-4d25-9a74-a208364cf9f7"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "back_officer_personal_information",
+                                                                           "layoutId": "8c072876-35f4-4925-82e4-908e5ae77c1d"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "back_officer_personal_information_helper",
+                                                                           "layoutId": "7a900d6c-13ef-4025-942a-0eeffce4ac8f"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_personal_information_container",
+                                                                 "layoutId": "9c0ab866-f711-4dec-b2ba-fbc6d0d8e741"
+                                                            },
+                                                            {
+                                                                 "direction": "horizontal",
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "back_officer_more_personal_information",
+                                                                           "layoutId": "c3ecd01f-4497-4067-aa65-a7fb04253a96"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "back_officer_more_personal_information_helper",
+                                                                           "layoutId": "6602ae97-9122-4d30-8bda-6f0d8a6d5882"
+                                                                      },
+                                                                      {
+                                                                           "width": "100%",
+                                                                           "name": "back_officer_fetch_personal_information",
+                                                                           "layoutId": "4e375e95-fef5-4f5b-8d25-10301ab78558"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_more_personal_information_container",
+                                                                 "layoutId": "d7bf4524-5334-4a62-8da9-08b5894386e4"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "back_officer_add_employment",
+                                                                           "layoutId": "a4fde8bd-70d5-4401-8045-6ffb37bccc44"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "back_officer_add_employment_helper",
+                                                                           "layoutId": "b2e31f40-98da-4100-ae34-7836e3ce8de3"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_add_employment_container",
+                                                                 "layoutId": "1ea81d68-34dd-4b8f-bf55-042e829f0fbe"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "back_officer_income",
+                                                                           "layoutId": "8f61e0e1-8859-4035-b2ed-d0c3dbae1d59"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "back_officer_income_helper",
+                                                                           "layoutId": "cdfe09fb-d7b3-41bc-a5b2-e825f4036bb7"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_income_container",
+                                                                 "layoutId": "856bd390-3bee-4b77-b19d-fea8065c4868"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "100%",
+                                                                                     "name": "back_officer_asset",
+                                                                                     "layoutId": "8771cd2f-ef07-4b75-ba40-2b16bb48fab2"
+                                                                                },
+                                                                                {
+                                                                                     "width": "100%",
+                                                                                     "name": "back_officer_liability",
+                                                                                     "layoutId": "c5d07082-ac12-4a1d-a000-ab181ca3df08"
+                                                                                }
+                                                                           ],
+                                                                           "name": "back_officer_networth",
+                                                                           "layoutId": "8f61e0e1-8859-21211-b2ed-d0c3dbae1d59"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "back_officer_networth_helper",
+                                                                           "layoutId": "cdfe09fb-d7b3-2121ss-a5b2-e825f4036bb7"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_networth_container",
+                                                                 "layoutId": "856bd390-3bee-4b77-eq31-fea8065c4868"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "back_officer_collateral",
+                                                                           "layoutId": "9bf0dd22-55b3-4b60-b9c8-186772537153"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "back_officer_collateral_helper",
+                                                                           "layoutId": "e97df197-f04e-44ce-91c9-08c8f6e8eee1"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_collateral_container",
+                                                                 "layoutId": "4aad71f7-634c-4b2e-8c87-b07811e6a061"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "100%",
+                                                                           "children": [
+                                                                                {
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "75%",
+                                                                                               "children": [
+                                                                                                    {
+                                                                                                         "width": "100%",
+                                                                                                         "name": "back_officer_party",
+                                                                                                         "layoutId": "c5d07082-ac12-2233-a000-ab181ca3df08"
+                                                                                                    }
+                                                                                               ],
+                                                                                               "name": "back_officer_party_block",
+                                                                                               "layoutId": "8f61e0e1-12312-4035-b2ed-d0c3dbae1d59"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "25%",
+                                                                                               "name": "back_officer_party_helper",
+                                                                                               "layoutId": "cdfe09fb-d7b3-31231-a5b2-e825f4036bb7"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "back_officer_party_container",
+                                                                                     "layoutId": "a17e41ac-d311-4795-8f58-d348bb0c2781"
+                                                                                }
+                                                                           ],
+                                                                           "name": "back_officer_party_stepper",
+                                                                           "layoutId": "856bd390-3bee-31231-b19d-fea8065c4868"
+                                                                      },
+                                                                      {
+                                                                           "width": "100%",
+                                                                           "children": [
+                                                                                {
+                                                                                     "direction": "horizontal",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "75%",
+                                                                                               "name": "back_officer_party_type",
+                                                                                               "layoutId": "d5c6d6a5-2c5b-4a47-ad81-380fe0d49453"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "25%",
+                                                                                               "name": "back_officer_party_type_helper",
+                                                                                               "layoutId": "da13ae72-2175-43a5-b857-995c9b7e4583"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "back_officer_party_type_container",
+                                                                                     "layoutId": "f0bc079d-efb7-4c38-92a0-d9cd29646887"
+                                                                                },
+                                                                                {
+                                                                                     "direction": "horizontal",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "75%",
+                                                                                               "children": [
+                                                                                                    {
+                                                                                                         "width": "100%",
+                                                                                                         "name": "back_officer_search_party",
+                                                                                                         "layoutId": "9ae08116-d904-4b20-aca7-48e8683ebe3e"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "width": "100%",
+                                                                                                         "name": "back_officer_select_party",
+                                                                                                         "layoutId": "e081361b-d3c8-4037-817e-62a7d407d7f1"
+                                                                                                    }
+                                                                                               ],
+                                                                                               "name": "back_officer_select_party_info",
+                                                                                               "layoutId": "eae65e13-65f4-4166-ab44-4bfded7ffa09"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "25%",
+                                                                                               "name": "back_officer_select_party_helper",
+                                                                                               "layoutId": "58bab789-276b-4988-b30a-9e9d946e3800"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "back_officer_select_party_container",
+                                                                                     "layoutId": "9016dcce-530a-4ff0-bec7-d56c89062e67"
+                                                                                },
+                                                                                {
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "75%",
+                                                                                               "name": "back_officer_party_personal_information",
+                                                                                               "layoutId": "6afe5ee7-3cce-4630-ac75-f77981b15bcb"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "25%",
+                                                                                               "name": "back_officer_party_personal_information_helper",
+                                                                                               "layoutId": "7b62a8d1-6ee2-4681-b4ed-be66b773e254"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "back_officer_party_personal_information_container",
+                                                                                     "layoutId": "7e1e3dd1-e394-4809-a70d-90dad91b3e65"
+                                                                                },
+                                                                                {
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "75%",
+                                                                                               "name": "back_officer_party_more_information",
+                                                                                               "layoutId": "5c8cc71c-5f33-4823-b0b2-b29f769f6cc2"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "25%",
+                                                                                               "name": "back_officer_party_more_information_helper",
+                                                                                               "layoutId": "168c935b-2a3b-4a71-8484-1874e6876a7c"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "back_officer_party_more_information_container",
+                                                                                     "layoutId": "169169b7-d925-401b-ae8b-3b3ad27b0cd9"
+                                                                                },
+                                                                                {
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "75%",
+                                                                                               "name": "back_officer_party_add_employment",
+                                                                                               "layoutId": "a863dc4c-b6bb-43de-875a-963f40b98d60"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "25%",
+                                                                                               "name": "back_officer_party_add_employment_helper",
+                                                                                               "layoutId": "d7aa2de4-d5b7-4a2b-820e-b463eaa132b6"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "back_officer_party_add_employment_container",
+                                                                                     "layoutId": "bdc9d84f-d214-4933-b61d-ab219493729c"
+                                                                                },
+                                                                                {
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "75%",
+                                                                                               "name": "back_officer_party_income",
+                                                                                               "layoutId": "f20e56c9-ae4e-4839-86c5-355d56044c88"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "25%",
+                                                                                               "name": "back_officer_party_income_helper",
+                                                                                               "layoutId": "e954bba9-02a9-4d5b-b7dd-b04a7530405d"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "back_officer_party_income_container",
+                                                                                     "layoutId": "92b7d168-f844-41e9-b078-2572506bd193"
+                                                                                },
+                                                                                {
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "75%",
+                                                                                               "children": [
+                                                                                                    {
+                                                                                                         "width": "100%",
+                                                                                                         "name": "back_officer_party_asset",
+                                                                                                         "layoutId": "8771cd2f-ef07-3213-ba40-2b16bb48fab2"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "width": "100%",
+                                                                                                         "name": "back_officer_party_liability",
+                                                                                                         "layoutId": "c5d07082-3123-4a1d-a000-ab181ca3df08"
+                                                                                                    }
+                                                                                               ],
+                                                                                               "name": "back_officer_party_networth",
+                                                                                               "layoutId": "b069a44f-c121-42ec-8b98-7864dc3119d1"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "25%",
+                                                                                               "name": "back_officer_party_networth_helper",
+                                                                                               "layoutId": "60dea633-15dc-4d0f-b99e-2e9aaac11052"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "back_officer_party_networth_container",
+                                                                                     "layoutId": "d84e3456-6e2e-42ae-9c90-2e797b88a097"
+                                                                                },
+                                                                                {
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "75%",
+                                                                                               "name": "back_officer_party_collateral",
+                                                                                               "layoutId": "73387116-d157-4137-8128-065c70768ef4"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "25%",
+                                                                                               "name": "back_officer_party_collateral_helper",
+                                                                                               "layoutId": "a0973ea4-7eb4-48f6-b96e-0872c5c03111"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "back_officer_party_collateral_container",
+                                                                                     "layoutId": "e00b14ad-ffc3-4e08-8161-f6dfd1e83f7a"
+                                                                                }
+                                                                           ],
+                                                                           "name": "back_officer_party_step",
+                                                                           "layoutId": "856bd390-11111-31231-b19d-fea8065c4868"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_party_step_container",
+                                                                 "layoutId": "484f87b7-qwer12-31231-928a-db5c2fd1e7fd"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "direction": "horizontal",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "back_officer_review_title",
+                                                                                               "layoutId": "15b8f261-e062-45d0-a75f-d9b068406e96"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "back_officer_applicant_review",
+                                                                                               "layoutId": "3ce6f771-6c59-4162-8c0d-9e8a3135b371"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "back_officer_review_party",
+                                                                                               "layoutId": "d12acc35-a82d-4833-967c-039c9553dca0"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "back_officer_employment_review",
+                                                                                               "layoutId": "6edaad04-a9c0-4665-bb35-cbc0e0179de6"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "back_officer_income_review",
+                                                                                               "layoutId": "73a58e8c-5d4e-4c1f-b577-38c1e8b27c41"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "back_officer_review_assets",
+                                                                                               "layoutId": "0fc003b6-a910-41ba-9067-944c3d659845"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "back_officer_review_liabilities",
+                                                                                               "layoutId": "bc770b65-84fa-4d7f-a1cd-249f9b89821b"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "back_officer_review_colateral",
+                                                                                               "layoutId": "acc3e09b-26d3-47b5-afc5-6149dd14ea39"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "back_officer_review_disclosure",
+                                                                                               "layoutId": "111fbe0f-bd3c-4a41-9c39-74441687b16c"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "back_officer_review",
+                                                                                     "layoutId": "ed8dad90-b0ea-4329-a125-0102a24fa244"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "back_officer_review_helper",
+                                                                                     "layoutId": "ae3b5d44-438b-422c-bd8a-6719943429e0"
+                                                                                }
+                                                                           ],
+                                                                           "name": "back_officer_review_container",
+                                                                           "layoutId": "e53fe979-e889-4886-8e91-71d45b6b2b53"
+                                                                      },
+                                                                      {
+                                                                           "direction": "horizontal",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "back_officer_processing",
+                                                                                     "layoutId": "96c25bed-d817-402b-a6a8-0a2a17f433b8"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "back_officer_processing_helper",
+                                                                                     "layoutId": "6b56f3f9-fc14-425c-8556-a5786f043492"
+                                                                                }
+                                                                           ],
+                                                                           "name": "back_officer_processing_container",
+                                                                           "layoutId": "246d2485-2be6-42bc-ac83-87b6f145c76c"
+                                                                      }
+                                                                 ],
+                                                                 "name": "back_officer_review_step",
+                                                                 "layoutId": "2ea4a1dc-a32b-4ac4-87b8-6eef2fe4e83f"
+                                                            }
+                                                       ],
+                                                       "name": "application_flow_steps",
+                                                       "layoutId": "b140331e-aab0-4196-b859-9fa1282da778"
+                                                  }
+                                             ],
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Content",
+                                             "layoutId": "c33f6ca8-718c-49c0-b416-d0b15b93632d"
+                                        },
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar2",
+                                             "layoutId": "a4b9aea0-d5da-46d2-b8e4-6a226e4169fd"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "final": true,
+                                   "name": "Main",
+                                   "layoutId": "15ea7213-ede8-4d8d-9a88-b18ce812b5be"
+                              }
+                         ],
+                         "final": true,
+                         "name": "ClsAppLayoutOne",
+                         "layoutId": "1b8c8c60-b743-47f0-a872-b07a1c021ef2"
+                    },
+                    "prerequisite": []
+               }
+          },
+          "start": "ApplicationDashboard"
+     }
+}

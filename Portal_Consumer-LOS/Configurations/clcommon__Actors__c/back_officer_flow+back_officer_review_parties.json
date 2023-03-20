@@ -1,0 +1,41 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "false",
+               "templates": {
+                    "record": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(FirstName);&nbsp; $this.attr(LastName);</span><div class=\"divider\"></div><div><span class=\"fa fa-phone\"> &nbsp;&nbsp; </span>$this.attr(Phone);</div><div><span class=\"fa fa-envelope\">&nbsp;&nbsp; </span>$this.attr(Email);</div><div><span class=\"fa fa-calendar\">&nbsp;&nbsp; </span>$this.attr(Birthdate);</div><div><span class=\"fa fa-id-card\">&nbsp;&nbsp; </span>$this.attr(ints__Social_Security_Number__c, masked, 'x|*|***-**-xxxx'); </div><div class=\"divider\"></div></div><div><span class=\"fa fa-map-marker\">&nbsp;&nbsp; </span>$this.attr(clcommon__Current_Street__c);,&nbsp;$this.attr(clcommon__Current_City__c);,&nbsp;$this.attr(clcommon__Current_State__c);,&nbsp;$this.attr(clcommon__Current_Zip_Code__c);</div></div>"
+               },
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 6
+                    }
+               },
+               "columns": 1,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "back_officer_parties"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_review_parties",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_review_parties",
+     "clcommon__Release_Checksum__c": "d33d15261754e2699b918b3dcf03af2fa78159fcbc95109dd3e78a7029c3f443"
+}

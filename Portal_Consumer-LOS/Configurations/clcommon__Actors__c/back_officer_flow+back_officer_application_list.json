@@ -1,0 +1,76 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "pagination": {
+                    "lastLinkText": "last_page",
+                    "nextLinkText": "chevron_right",
+                    "previousLinkText": "chevron_left",
+                    "firstLinkText": "first_page",
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "numberOfPageLinks": 5,
+                    "numberOfRecordsPerPage": 8
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top"
+               },
+               "editableFields": {
+                    "genesis__Application__r.Id": false,
+                    "genesis__Application__r.genesis__Loan_Amount__c": false,
+                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false,
+                    "genesis__Application__r.genesis__Status__c": false,
+                    "genesis__Application__r.solcommon__Portal_Stage__c": false,
+                    "genesis__Application__r.Name": false
+               },
+               "editable": true,
+               "renderAs": [
+                    {
+                         "value": "card-view",
+                         "condition": "$client; == \"phone\""
+                    },
+                    {
+                         "value": "list-view",
+                         "condition": "$client; != \"phone\""
+                    }
+               ],
+               "templates": {
+                    "record": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(genesis__Application__r.Name);</span><div class=\"divider\"></div><div><span class=\"text\">Loan Amount: </span>$this.attr(genesis__Application__r.genesis__Loan_Amount__c,currency);</div><div><span class=\"text\">Purpose: </span>$this.attr(genesis__Application__r.genesis__CL_Purpose__r.Name); </div><div class=\"divider\"></div></div>"
+               },
+               "renderFields": {
+                    "clcommon__Account__r.Id": false,
+                    "genesis__Application__r.solcommon__Multiple_Applicant__c": false,
+                    "genesis__Application__r.Id": false,
+                    "clcommon__Contact__r.Id": false,
+                    "clcommon__Account__r.Name": false,
+                    "genesis__Application__r.genesis__Status__c": false,
+                    "genesis__Application__r.solcommon__Portal_Stage__c": false
+               },
+               "textBefore": "Select an existing loan application below to continue, or click 'Start New Loan Application' to complete a new loan application.",
+               "title": "Welcome back, $global.attr(userInfo).attr(firstName);!",
+               "blankMessage": "No Applications Found."
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(userInfo).attr(accountId);"
+               },
+               "structureName": "back_officer_fetch_applications"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_application_list",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_application_list",
+     "clcommon__Release_Checksum__c": "35b8da02f47d04184a86ba2c6a87a26d50ccbef6b772a1dc3a8d40248a1f20df"
+}

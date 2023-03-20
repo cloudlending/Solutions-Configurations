@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveAsset",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "saveAsset",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Save",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "genesis__Asset_Information__c": "$this;",
+               "contactId": "$global.attr(partyContactId);"
+          },
+          "validation": [
+               "back_officer_party_asset"
+          ],
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_party_asset"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party_asset"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_party_asset_information_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_asset+saveAsset+COMPONENT",
+     "clcommon__Release_Checksum__c": "9e00c1a2985315c94792655c02b361aa3a28381ad821cf2c98cf7f4bbeaead7f",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveAssetInformation",
+     "clcommon__Unique_Action_Name__c": "back_officer_party_asset+saveAsset",
+     "clcommon__Validation_Class__c": null
+}

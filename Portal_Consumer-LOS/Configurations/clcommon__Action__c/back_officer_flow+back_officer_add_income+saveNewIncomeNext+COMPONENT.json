@@ -1,0 +1,65 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveNewIncomeNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "saveNewIncomeNext",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Save",
+               "style": "primary",
+               "render": "$global.attr(incomeId); == \"\""
+          },
+          "remoteActionArguments": {
+               "genesis__Income__c": {
+                    "genesis__Frequency__c": "$this.attr(genesis__Frequency__c);",
+                    "genesis__Contact__c": "$global.attr(contactId);",
+                    "genesis__Amount__c": "$this.attr(genesis__Amount__c);",
+                    "genesis__Income_Type__c": "$this.attr(genesis__Income_Type__c);",
+                    "Name": "$this.attr(Name);"
+               },
+               "genesis__Applications__c": "$global.attr(applicationId);"
+          },
+          "validation": [
+               "back_officer_add_income"
+          ],
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "back_officer_add_income_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_income_review",
+                              "back_officer_income",
+                              "back_officer_party_income"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_add_income"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_add_income_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_add_income+saveNewIncomeNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "d5e6c5cae782094e953e1b84952fbde9eabf10b18c3369bbd00c89c18e8d386a",
+     "clcommon__Remote_Action_Class__c": "consumerlos.PortalSaveIncome",
+     "clcommon__Unique_Action_Name__c": "back_officer_add_income+saveNewIncomeNext",
+     "clcommon__Validation_Class__c": null
+}

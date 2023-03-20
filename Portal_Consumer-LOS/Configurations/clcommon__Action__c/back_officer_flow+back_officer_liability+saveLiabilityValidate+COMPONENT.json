@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveLiabilityValidate",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "saveLiabilityValidate",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Save",
+               "render": false,
+               "position": "bottom-left"
+          },
+          "remoteActionArguments": {
+               "genesis__Liability__c": "$this;",
+               "applicationId": "$global.attr(applicationId);",
+               "contactId": "$global.attr(borrowerContactId);"
+          },
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "nextLiability"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_liability"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_liability_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_liability+saveLiabilityValidate+COMPONENT",
+     "clcommon__Release_Checksum__c": "336347c92edfcc44c84ed191a5a2e551b66da865b3f593089bb6d606dab8c29f",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveLiabilityInformation",
+     "clcommon__Unique_Action_Name__c": "back_officer_liability+saveLiabilityValidate",
+     "clcommon__Validation_Class__c": null
+}

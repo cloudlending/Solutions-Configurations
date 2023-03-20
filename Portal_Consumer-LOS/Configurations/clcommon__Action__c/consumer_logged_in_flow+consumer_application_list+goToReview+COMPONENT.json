@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToReview",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Back",
+          "handler": {
+               "next": "Home",
+               "assignments": [
+                    {
+                         "value": "ReviewAndSubmit",
+                         "field": "$nav(application_flow_steps).appearance(current);"
+                    },
+                    {
+                         "value": "$global.attr(portalStage);",
+                         "field": "$nav(consumer_review_step).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "render": false,
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "goToReview"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_application_list"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_fetch_applications",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_application_list+goToReview+COMPONENT",
+     "clcommon__Release_Checksum__c": "25755509e65e1cd4b0d47b62d4520b48e1c450a931f799400adecbe5ee4240f8",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_application_list+goToReview",
+     "clcommon__Validation_Class__c": null
+}

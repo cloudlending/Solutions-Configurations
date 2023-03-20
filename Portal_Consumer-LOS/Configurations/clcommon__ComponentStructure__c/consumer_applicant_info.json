@@ -1,0 +1,134 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "consumer_applicant_info",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "consumer_applicant_info",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "b523b09e36dbba3423111006986e03efc3ae115dd0eab695446b21e049757104",
+     "clcommon__Unique_Name__c": "consumer_applicant_info",
+     "clcommon__data__c": {
+          "structureName": "consumer_applicant_info",
+          "tableName": "contact",
+          "whereClause": {
+               "freeForm": "AccountId = ':accountId'"
+          },
+          "sections": [
+               {
+                    "id": "c4b5a95b-cd84-4a7c-8dae-cf7e32756e67",
+                    "fields": [
+                         {
+                              "id": "e1ef2df2-e0db-4ce5-85e5-8a5919776965",
+                              "fieldName": "FirstName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "First Name",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "First Name"
+                              }
+                         },
+                         {
+                              "id": "139a7e23-95ed-4d70-916c-0f69522797e1",
+                              "fieldName": "LastName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Last Name",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "Last Name"
+                              }
+                         },
+                         {
+                              "id": "f0c52dbb-fdb0-4ee6-884e-1a91e8052b61",
+                              "fieldName": "Phone",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Phone Number",
+                                   "ariaLabel": "Phone Phone"
+                              }
+                         },
+                         {
+                              "id": "e288e745-6981-45a9-9a6e-fe28862107c4",
+                              "fieldName": "Email",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Email Address",
+                                   "ariaLabel": "Email"
+                              }
+                         },
+                         {
+                              "id": "943e62ce-3ebf-4ffc-8b66-33ee1cfb38cc",
+                              "fieldName": "Birthdate",
+                              "fieldUi": {
+                                   "fieldType": "date",
+                                   "label": "Date of Birth",
+                                   "ariaLabel": "Birthdate"
+                              }
+                         },
+                         {
+                              "id": "10b56765-13dc-4d71-8ec6-bc2cca9f42bb",
+                              "fieldName": "ints__Social_Security_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "SSN",
+                                   "ariaLabel": "SSN"
+                              }
+                         },
+                         {
+                              "id": "ed32fd11-c062-49c9-8f6f-b7aeda3e9aea",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Id",
+                                   "ariaLabel": "Id"
+                              }
+                         },
+                         {
+                              "id": "2edfe163-fe3d-4f9e-bc2e-d260f8488e71",
+                              "fieldName": "clcommon__Current_Street__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Current Street",
+                                   "ariaLabel": "Current Street"
+                              }
+                         },
+                         {
+                              "id": "7b2f5f4b-5a20-4ef0-8f62-d23687009517",
+                              "fieldName": "clcommon__Current_City__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Current City",
+                                   "ariaLabel": "Current City"
+                              }
+                         },
+                         {
+                              "id": "7f637a42-8975-4478-93f0-21c11227a878",
+                              "fieldName": "clcommon__Current_State__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Current State/Province",
+                                   "ariaLabel": "Current State/Province"
+                              }
+                         },
+                         {
+                              "id": "fa0d1e1c-5fd8-43c4-a2da-0f2f687f23fc",
+                              "fieldName": "clcommon__Current_Zip_Code__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Current Zip/Postal Code",
+                                   "ariaLabel": "Current Zip/Postal Code"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

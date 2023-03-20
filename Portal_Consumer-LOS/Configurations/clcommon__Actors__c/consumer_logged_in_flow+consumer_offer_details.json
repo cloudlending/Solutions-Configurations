@@ -1,0 +1,95 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{$global.attr(productName); == \"Credit Card\" ? \"Credit Card Limit\" : \"Max Financed Amount\"};",
+                              "field": "$global.attr(maxfinancedlabel);"
+                         },
+                         {
+                              "value": "@mathjs{$global.attr(productName); == \"Credit Card\" ? \"Credit Card \" : \"loan\"};",
+                              "field": "$global.attr(loanType);"
+                         },
+                         {
+                              "value": "@mathjs{$global.attr(productName); == \"Credit Card\" ? \"APR (%) \" : \"Interest Rate (%)\"};",
+                              "field": "$global.attr(interestLabel);"
+                         }
+                    ]
+               },
+               "clickRecord": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(Id);",
+                              "field": "$global.attr(selectedOfferId);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No offers generated",
+               "highlight": true,
+               "editableFields": {
+                    "genesis__Application__r.genesis__APR__c": false,
+                    "Id": false,
+                    "genesis__Payment_Amount_Derived__c": false,
+                    "genesis__Term__c": false,
+                    "genesis__Interest_Rate__c": false,
+                    "genesis__Maximum_Financed_Amount__c": false,
+                    "genesis__Application__r.genesis__Product_Type__c": false
+               },
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 4
+                    }
+               },
+               "renderFields": {
+                    "genesis__Application__r.genesis__Product_Type__c": false,
+                    "genesis__Application__r.genesis__APR__c": false,
+                    "Id": false,
+                    "genesis__Payment_Amount_Derived__c": "$this.attr(genesis__Application__r.genesis__Product_Type__c); != \"LINE OF CREDIT\"",
+                    "genesis__Term__c": "$this.attr(genesis__Application__r.genesis__Product_Type__c);!= \"LINE OF CREDIT\""
+               },
+               "renderText": {
+                    "textAfter": "$this.attr(genesis__Application__r.genesis__Product_Type__c); == \"LINE OF CREDIT\""
+               },
+               "textAfter": "<div class=\"credit_container\"><div class=\"credit_item\"><div ><b>Introductory APR for Balance Transfers</b></div><div><p>0% for the first 12 billing cycles following account opening when the balance is transferred within the first 90 days following account opening .After that , the non -promotional APR fot the balance transfers will apply.</div></div><div  class=\"credit_item\" style=\"padding-top:15px\"><div  ><b> Current Non-Promotional APR for Balance Transfers</b></div><div><p>24.4%</p>This APR varies with the market based on the prime rate</div></div><div> ",
+               "textBefore": "Your $global.attr(loanType); has been approved. Please review the credit options and select the option that meet your needs.",
+               "title": "Congratulations!",
+               "editable": "$global.attr(partyType); == \"BORROWER\"",
+               "columns": 1,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "consumer_get_offer_details"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_offer_details",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_offer_details",
+     "clcommon__Release_Checksum__c": "1f28ac59eabe41aa738e8eef3a2d2f435de620a4b41a3e0526da3732e08ce2c9"
+}

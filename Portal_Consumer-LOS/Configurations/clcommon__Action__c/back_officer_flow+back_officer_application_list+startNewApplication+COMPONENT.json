@@ -1,0 +1,77 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "startNewApplication",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "startNewApplication",
+          "property": {},
+          "appearance": [
+               {
+                    "condition": "$client; != \"phone\"",
+                    "value": {
+                         "label": "Start New Application",
+                         "style": "primary",
+                         "position": "top-right"
+                    }
+               },
+               {
+                    "condition": "$client; == \"phone\"",
+                    "value": {
+                         "label": "Start New Application",
+                         "style": "primary",
+                         "position": "bottom-left"
+                    }
+               }
+          ],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(back_officer_getting_started).appearance(current);",
+                         "value": 0
+                    },
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": 0
+                    },
+                    {
+                         "field": "$global.attr(applicationId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(showHome);",
+                         "value": "YES"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_application_list"
+                         ]
+                    }
+               ],
+               "next": "Home"
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_application_list"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_fetch_applications",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_application_list+startNewApplication+COMPONENT",
+     "clcommon__Release_Checksum__c": "1631d9640e78b53aabbb1a48088fdb0c322889be6fadfe67bd4a6d812f6bc760",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_application_list+startNewApplication",
+     "clcommon__Validation_Class__c": null
+}

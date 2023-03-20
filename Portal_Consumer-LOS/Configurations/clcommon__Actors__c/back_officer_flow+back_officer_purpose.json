@@ -1,0 +1,72 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "clickRecord": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(clcommon__CL_Purpose__r.Id);",
+                              "field": "$global.attr(purpose);"
+                         },
+                         {
+                              "value": "$this.attr(clcommon__CL_Purpose__r.Name);",
+                              "field": "$global.attr(loanPurposeName);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "highlight": true,
+               "editableFields": {
+                    "clcommon__CL_Purpose__r.Name": false
+               },
+               "renderFields": {
+                    "clcommon__CL_Purpose__r.Id": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editable": true,
+               "autoHighlight": {
+                    "clcommon__CL_Purpose__r.Id": "$state(back_officer_purpose_existing_div).attr(genesis__Application__r.genesis__CL_Purpose__r.Id);"
+               },
+               "grid": {
+                    "field": {
+                         "genesis__CL_Purpose__c": {
+                              "selectButton": {
+                                   "sm": 6,
+                                   "xs": 12
+                              }
+                         }
+                    }
+               },
+               "title": "Select Purpose of Loan"
+          },
+          "property": {
+               "whereClause": {
+                    "loanProduct": "$global.attr(loanProduct);"
+               },
+               "structureName": "back_officer_purpose_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_purpose",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_purpose",
+     "clcommon__Release_Checksum__c": "303782ba7b75af9a6a2326a2bfcba8670262d9d7164ebe501fbf40ca8f820d54"
+}

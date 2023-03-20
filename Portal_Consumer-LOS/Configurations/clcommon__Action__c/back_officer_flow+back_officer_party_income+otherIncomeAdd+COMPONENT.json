@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "otherIncomeAdd",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "otherIncomeAdd",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Income</span>",
+               "style": "primary",
+               "position": "top-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(incomeId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(contactId);",
+                         "value": "$global.attr(partyContactId);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "back_officer_add_income_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_add_income",
+                              "back_officer_party_income"
+                         ]
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party_income"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_party_income_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_income+otherIncomeAdd+COMPONENT",
+     "clcommon__Release_Checksum__c": "a66860d31fcd7c732bc81c72c802dd5da329c4f90023da4a9a4dc2d9e6a06523",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_party_income+otherIncomeAdd",
+     "clcommon__Validation_Class__c": null
+}

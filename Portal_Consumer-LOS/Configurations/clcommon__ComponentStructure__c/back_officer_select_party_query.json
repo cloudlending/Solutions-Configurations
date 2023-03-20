@@ -1,0 +1,81 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_select_party_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_officer_select_party_query",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "9bbfbe2223eedf546fcd3419a5592f6061e63469446ae2b0ed95463e136f8ea4",
+     "clcommon__Unique_Name__c": "back_officer_select_party_query",
+     "clcommon__data__c": {
+          "structureName": "back_officer_select_party_query",
+          "tableName": "contact",
+          "whereClause": {
+               "freeForm": "(Account.Name LIKE '%:accname%' OR  Email LIKE '%:email%') AND (clcommon__Legal_Entity_Type__r.clcommon__Legal_Entity_Type__c = ':individual' AND Account.Id != ':borrowerAccountId')"
+          },
+          "sections": [
+               {
+                    "id": "765fe7ac-1a79-4ed0-9523-abf0782937f8",
+                    "fields": [
+                         {
+                              "id": "9f1c9abc-1719-4b8a-b155-5087411bc862",
+                              "fieldName": "Account.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Name",
+                                   "ariaLabel": "Customer Name"
+                              }
+                         },
+                         {
+                              "id": "67957c6b-767a-4ef5-b31d-1d536918df5e",
+                              "fieldName": "Phone",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Phone",
+                                   "ariaLabel": "Business Phone"
+                              }
+                         },
+                         {
+                              "id": "d9032407-068f-4578-b82d-5cffc577c73f",
+                              "fieldName": "ints__Social_Security_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "SSN",
+                                   "ariaLabel": "Social Security Number"
+                              }
+                         },
+                         {
+                              "id": "0d288c47-f1e8-4146-90a4-ac42925986a6",
+                              "fieldName": "Email",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Email",
+                                   "ariaLabel": "Email"
+                              }
+                         },
+                         {
+                              "id": "34d92675-2a37-4b27-a561-e4762d065b29",
+                              "fieldName": "Account.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account ID",
+                                   "ariaLabel": "Account ID"
+                              }
+                         },
+                         {
+                              "id": "d7290411-b26e-4b7a-bb0f-af1bbfd3be5c",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Contact ID",
+                                   "ariaLabel": "Contact ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

@@ -1,0 +1,63 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_product_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_officer_product_details",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "456eb967eb8721e86c191509b1a9c7bcb421de76d249e569fb728de446e6b9ed",
+     "clcommon__Unique_Name__c": "back_officer_product_details",
+     "clcommon__data__c": {
+          "structureName": "back_officer_product_details",
+          "tableName": "genesis__applications__c",
+          "whereClause": {
+               "freeForm": "id = ':applicationId'"
+          },
+          "sections": [
+               {
+                    "id": "b8cb0860-a7c7-4c38-9227-9cd0d0c803c0",
+                    "fields": [
+                         {
+                              "id": "a67f8db7-373d-481a-a5c8-f4999fce2285",
+                              "relationType": "reference",
+                              "fieldName": "genesis__CL_Product__c",
+                              "relationName": "genesis__CL_Product__r",
+                              "relationJson": {
+                                   "tableName": "clcommon__CL_Product__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null and clcommon__Asset_Class__r.Name in ('Consumer Secured' ,'Consumer Unsecured','Consumer Real Estate')"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "00db3281-614c-4e8e-826e-cf31fd742aea",
+                                             "fields": [
+                                                  {
+                                                       "id": "729e9222-fdad-4514-a2b0-a4fe67696513",
+                                                       "fieldName": "clcommon__Product_Name__c",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "CL Product Id"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "CL Product",
+                                   "defaultValue": "",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Please select an option"
+                                   }
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

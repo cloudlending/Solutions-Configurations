@@ -1,0 +1,118 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_employment_info",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_officer_employment_info",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "f895d84af1b3d058462fe82215bb88cde5d234595cf17c1e2da36a6eddcd42e5",
+     "clcommon__Unique_Name__c": "back_officer_employment_info",
+     "clcommon__data__c": {
+          "structureName": "back_officer_employment_info",
+          "tableName": "genesis__employment_information__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':applicationId' and genesis__Contact__r.AccountId = ':accountId'"
+          },
+          "sections": [
+               {
+                    "id": "8f560354-2905-4c5c-9162-171a4679f6b2",
+                    "fields": [
+                         {
+                              "id": "7356ec87-91e8-4e12-8829-9797ad462744",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "29c340ad-ee18-4bf2-89ff-b72037dd0d3b",
+                              "fieldName": "genesis__Name_of_employer__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": " Employer Name",
+                                   "ariaLabel": "Name of employer"
+                              }
+                         },
+                         {
+                              "id": "dcb4cc81-f035-4fc0-a20d-24f6d64c4d21",
+                              "fieldName": "genesis__Position__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Position",
+                                   "ariaLabel": "Position"
+                              }
+                         },
+                         {
+                              "id": "f508325f-d9e2-4602-b19a-a8e4a5ebbced",
+                              "fieldName": "genesis__Number_of_years_on_job__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Time at Employer",
+                                   "ariaLabel": "Number of years on job"
+                              }
+                         },
+                         {
+                              "id": "b22c7741-6413-41ab-a955-c5a57f72c852",
+                              "fieldName": "genesis__Average_Monthly_Income__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Monthly Income",
+                                   "ariaLabel": "Average Monthly Income"
+                              }
+                         },
+                         {
+                              "id": "99cf481c-98d1-480b-831c-778007da5fb9",
+                              "fieldName": "genesis__Employer_Street__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Address",
+                                   "ariaLabel": "Employer Street"
+                              }
+                         },
+                         {
+                              "id": "ddcece99-df91-4b06-a63a-7fcc83d5569d",
+                              "fieldName": "genesis__Employer_City__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "City",
+                                   "ariaLabel": "Employer City"
+                              }
+                         },
+                         {
+                              "id": "0910ed40-713b-4bae-96c0-dc161f2669dd",
+                              "fieldName": "genesis__Employer_State__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "State",
+                                   "ariaLabel": "Employer State"
+                              }
+                         },
+                         {
+                              "id": "eefeffd0-9ef4-4d4e-8b80-5e37418e3c19",
+                              "fieldName": "genesis__Employer_Zipcode__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Postal Code",
+                                   "ariaLabel": "Employer Zipcode"
+                              }
+                         },
+                         {
+                              "id": "b869ff71-67da-40c5-a74f-b40f4c406f46",
+                              "fieldName": "genesis__Self_Employed__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Self Employed",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Self Employed"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

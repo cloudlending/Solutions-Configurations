@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "genesis__Contact__r.Id": false,
+                    "genesis__Amount_Owing__c": false,
+                    "Id": false,
+                    "genesis__Liability_Type__c": false
+               },
+               "renderFields": {
+                    "genesis__Contact__r.Id": false,
+                    "Id": false
+               },
+               "blankMessage": "No liability information!",
+               "title": "Liability Details"
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(borrowerAccountId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "back_officer_liability_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_review_liabilities",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_review_liabilities",
+     "clcommon__Release_Checksum__c": "4e866fd51b70729ff0803d4f4b1aec78953deff31241b953740ac8f9e924effc"
+}

@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No income information!",
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 6
+                    }
+               },
+               "textBefore": "Alimony, child support or separate maintenance income need not be revealed if you do not wish to have it considered as a basis for repayment.",
+               "templates": {
+                    "record": "<div class=\"customCard\"><div class=\"cardHeader\">$this.attr(Name);</div><div class=\"text label\">$this.attr(genesis__Income_Type__c);</div><div class=\"text\">Monthly Income</div><div class=\"text\">$this.attr(genesis__Amount__c, currency);</div></div>"
+               },
+               "columns": 1,
+               "title": "Income Details",
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "contactId": "$global.attr(contactId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "consumer_income_query"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_income",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_income",
+     "clcommon__Release_Checksum__c": "f4e767b47c68231dbc2e1b29252515e68f6c5b621ddb3d71fb25bdc12fd26dc0"
+}

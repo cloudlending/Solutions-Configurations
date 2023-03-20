@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No income information!",
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 12
+                    }
+               },
+               "editableFields": {
+                    "Id": false,
+                    "genesis__Amount__c": false,
+                    "genesis__Income_Type__c": false
+               },
+               "renderFields": {
+                    "Id": false
+               },
+               "title": "Income History",
+               "templates": {
+                    "record": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(Name);</span><div class=\"divider\"></div><div><span class=\"text\">Income Type:</span>&nbsp;&nbsp;$this.attr(genesis__Income_Type__c);</div><div><span class=\"text\">Amount: </span>&nbsp;&nbsp;$this.attr(genesis__Amount__c, currency);</div><div class=\"divider\"></div></div>"
+               },
+               "columns": 1,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "contactId": "$global.attr(contactId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "consumer_income_query"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_income_review",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_income_review",
+     "clcommon__Release_Checksum__c": "beb7bdbb34bdbbe25073e5bc0652843ce62104aefa9bc0764ac3adf2cf7efacc"
+}

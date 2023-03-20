@@ -1,0 +1,186 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "consumer_add_income_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "consumer_add_income_query",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "ec87a4bdf69384a6012f0e344db082569a5ed8ae8792a4d9d60ccc1a2cdc5f62",
+     "clcommon__Unique_Name__c": "consumer_add_income_query",
+     "clcommon__data__c": {
+          "structureName": "consumer_add_income_query",
+          "tableName": "genesis__income__c",
+          "whereClause": {
+               "freeForm": "Id = ':incomeId'"
+          },
+          "sections": [
+               {
+                    "id": "9baf8082-cbca-4857-a843-30177235e39e",
+                    "fields": [
+                         {
+                              "id": "4cfb57c1-ef71-423a-a059-83960905d3a7",
+                              "fieldName": "Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Income Name",
+                                   "placeholderText": "Enter Income Name",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "Income Name"
+                              }
+                         },
+                         {
+                              "id": "568bd56d-dc91-461e-8f5b-ca342417e417",
+                              "fieldName": "genesis__Income_Type__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Income Type",
+                                   "defaultValue": "",
+                                   "required": true,
+                                   "prompt": "Select",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Social Security Income",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Social Security Income",
+                                             "optionValue": "Social Security Income"
+                                        },
+                                        {
+                                             "id": "Rental Income",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Rental Income",
+                                             "optionValue": "Rental Income"
+                                        },
+                                        {
+                                             "id": "Pension and/or annuities",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Pension and/or annuities",
+                                             "optionValue": "Pension and/or annuities"
+                                        },
+                                        {
+                                             "id": "Disability Income",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Disability Income",
+                                             "optionValue": "Disability Income"
+                                        },
+                                        {
+                                             "id": "Retirement Income",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Retirement Income",
+                                             "optionValue": "Retirement Income"
+                                        },
+                                        {
+                                             "id": "Bonus",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Bonus",
+                                             "optionValue": "Bonus"
+                                        },
+                                        {
+                                             "id": "Dividends",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Dividends",
+                                             "optionValue": "Dividends"
+                                        },
+                                        {
+                                             "id": "Child Support",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Child Support",
+                                             "optionValue": "Child Support"
+                                        },
+                                        {
+                                             "id": "Others",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Others",
+                                             "optionValue": "Others"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "Income Type"
+                              }
+                         },
+                         {
+                              "id": "1fcf3dbd-4f48-4fbf-9ee9-a97fdcc7484d",
+                              "fieldName": "genesis__Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Monthly Income",
+                                   "placeholderText": "Enter Monthly Income",
+                                   "defaultValue": "",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Amount__c); > 0",
+                                             "message": "<span style=\"color:red\">Amount must  be greater than zero </span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0,
+                                             "initValue": ""
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Monthly Income"
+                              }
+                         },
+                         {
+                              "id": "829110e0-8e21-4f09-ad04-eda7c336a552",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "6675cc01-dc40-4f87-81ec-ae284dfa84e7",
+                              "fieldName": "genesis__Frequency__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Frequency",
+                                   "defaultValue": "Monthly",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Monthly",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "Monthly",
+                                             "optionValue": "Monthly"
+                                        },
+                                        {
+                                             "id": "Annual",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Annual",
+                                             "optionValue": "Annual"
+                                        }
+                                   ],
+                                   "ariaLabel": "Frequency"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

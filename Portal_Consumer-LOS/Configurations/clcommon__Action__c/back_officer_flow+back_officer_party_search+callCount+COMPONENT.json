@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "callCount",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "callCount",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "label": "New",
+               "style": "primary",
+               "render": false
+          },
+          "remoteActionArguments": {},
+          "remoteActionAPIname": "",
+          "validation": [],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(PartyName);",
+                         "value": "$ext.countCharacter",
+                         "arguments": [
+                              "$this.attr(Name);",
+                              "$global.attr(PartyName);"
+                         ]
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "Next Button"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party_search"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_party_search",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_search+callCount+COMPONENT",
+     "clcommon__Release_Checksum__c": "0fefb925266597c51bbaeaea44435bec52496a7ca705b6a1edad1ca2281e861a",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_party_search+callCount",
+     "clcommon__Validation_Class__c": null
+}

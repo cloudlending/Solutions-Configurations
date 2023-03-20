@@ -1,0 +1,61 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "assignStepLabel",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "Employment Details",
+                         "field": "$global.attr(stepsLabel);"
+                    },
+                    {
+                         "value": "@mathjs{$global.attr(typeOfApplicant); == \"Joint Credit\"? \"4\" : \"3\"};",
+                         "field": "$global.attr(stepperCount);"
+                    },
+                    {
+                         "value": "Employment Details",
+                         "field": "$global.attr(mainStepLabel);"
+                    },
+                    {
+                         "value": "Employment",
+                         "field": "$nav(consumer_mobile_stepper_panel).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "automatic": true,
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Continue"
+          },
+          "property": {},
+          "name": "assignStepLabel"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_employment"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_employment_info",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_employment+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "5e01e0971d4d89721599584cbf917600d772acd55d57f6fc94e1fb97609859d4",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_add_employment+assignStepLabel",
+     "clcommon__Validation_Class__c": null
+}

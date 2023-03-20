@@ -1,0 +1,88 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "personalInformationMailingNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "personalInformationMailingNext",
+          "property": {},
+          "appearance": {
+               "render": "not $this.attr(clcommon__Contact__r.clcommon__Mailing_Address_Same_as_Current_Address__c);",
+               "position": "bottom-left",
+               "label": "Next",
+               "disableWhenLoading": true,
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "contact": {
+                    "clcommon__Current_Zip_Code__c": "$this.attr(clcommon__Contact__r.clcommon__Current_Zip_Code__c);",
+                    "clcommon__Current_State__c": "$this.attr(clcommon__Contact__r.clcommon__Current_State__c);",
+                    "clcommon__Current_City__c": "$this.attr(clcommon__Contact__r.clcommon__Current_City__c);",
+                    "clcommon__Current_Street__c": "$this.attr(clcommon__Contact__r.clcommon__Current_Street__c);",
+                    "clcommon__Current_Country__c": "USA",
+                    "clcommon__Years_At_Current_Address__c": "$this.attr(clcommon__Contact__r.clcommon__Years_At_Current_Address__c);",
+                    "email": "$this.attr(clcommon__Contact__r.Email);",
+                    "clcommon__Mailing_Address_Same_as_Current_Address__c": "$this.attr(clcommon__Contact__r.clcommon__Mailing_Address_Same_as_Current_Address__c);",
+                    "Phone": "$this.attr(clcommon__Contact__r.Phone);",
+                    "lastName": "$this.attr(clcommon__Contact__r.LastName);",
+                    "firstName": "$this.attr(clcommon__Contact__r.FirstName);",
+                    "MailingCountry": "USA",
+                    "MailingStreet": "$this.attr(clcommon__Contact__r.MailingStreet);",
+                    "MailingCity": "$this.attr(clcommon__Contact__r.MailingCity);",
+                    "MailingState": "$this.attr(clcommon__Contact__r.MailingState);",
+                    "MailingPostalCode": "$this.attr(clcommon__Contact__r.MailingPostalCode);",
+                    "Id": "$this.attr(clcommon__Contact__r.Id);",
+                    "OtherStreet": "$this.attr(clcommon__Contact__r.OtherStreet);",
+                    "OtherCity": "$this.attr(clcommon__Contact__r.OtherCity);",
+                    "OtherState": "$this.attr(clcommon__Contact__r.OtherState);",
+                    "OtherPostalCode": "$this.attr(clcommon__Contact__r.OtherPostalCode);"
+               }
+          },
+          "validation": [
+               "back_officer_personal_information"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(borrowerContactId);",
+                         "value": "$result.attr(contactId);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined",
+                         "name": "savePortalStage"
+                    },
+                    {
+                         "condition": "$global.attr(productName); != \"Credit Card\" and ($global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined or $global.attr(applicationId); == null)",
+                         "name": "ApplicationNext"
+                    },
+                    {
+                         "condition": "$global.attr(productName); == \"Credit Card\" and ($global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined or  $global.attr(applicationId);== null)",
+                         "name": "creditApplicationNext"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 6,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_personal_information"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_personal_information_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_personal_information+personalInformationMailingNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "77ea9c1d0cf876ca188ead5238522be5c8b3c34031fb2ffb2671cda332c3c3da",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSavePersonalInfo",
+     "clcommon__Unique_Action_Name__c": "back_officer_personal_information+personalInformationMailingNext",
+     "clcommon__Validation_Class__c": null
+}

@@ -1,0 +1,51 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveAssetValidate",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "saveLiabilityValidate"
+                    }
+               ]
+          },
+          "validation": [
+               "consumer_asset",
+               "consumer_liability"
+          ],
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "genesis__Asset_Information__c": "$state(consumer_asset);",
+               "contactId": "$global.attr(contactId);"
+          },
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "saveAssetValidate"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_liability_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability+saveAssetValidate+COMPONENT",
+     "clcommon__Release_Checksum__c": "c11be303e277dd7a0e5aeea7aa1fedb026ec1947f42b2fbdc3dfa0a1bfbc6ab0",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveAssetInformation",
+     "clcommon__Unique_Action_Name__c": "consumer_liability+saveAssetValidate",
+     "clcommon__Validation_Class__c": null
+}

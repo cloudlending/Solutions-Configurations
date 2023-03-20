@@ -1,0 +1,69 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "updates": [
+                         {
+                              "value": [
+                                   "consumer_liability"
+                              ],
+                              "name": "$nav.reloads.add;"
+                         }
+                    ],
+                    "assignments": [
+                         {
+                              "value": "$date('yyyy, MM, dd');",
+                              "field": "$global.attr(currentDate);"
+                         },
+                         {
+                              "value": "@mathjs{$this.sum(genesis__Market_Value__c); - $state(consumer_liability).sum(genesis__Amount_Owing__c);};",
+                              "field": "$global.attr(networths);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "title": "Asset Details",
+               "blankMessage": "No asset information!",
+               "editableFields": {
+                    "Id": false
+               },
+               "renderFields": {
+                    "genesis__Contact__r.Id": false,
+                    "Id": false
+               },
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "contactId": "$global.attr(contactId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "consumer_asset_information_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_asset",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_asset",
+     "clcommon__Release_Checksum__c": "7bb75d9d52cf5916737c0a38c9a7a4bb80d41d23ecc1ecbab451e03c2f8d9efe"
+}

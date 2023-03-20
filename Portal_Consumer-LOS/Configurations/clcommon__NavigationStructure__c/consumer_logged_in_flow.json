@@ -1,0 +1,793 @@
+{
+     "attributes": {
+          "type": "clcommon__NavigationStructure__c"
+     },
+     "Name": "consumer_logged_in_flow",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Description__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Is_Template__c": false,
+     "clcommon__Related_Configuration_Mapping__c": null,
+     "clcommon__Release_Checksum__c": "f612387f159b0ab4a99ad62bc8357f6620be530f7af971753afab583adce51ac",
+     "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
+     "clcommon__Unique_Name__c": "consumer_logged_in_flow",
+     "clcommon__data__c": {
+          "messages": {
+               "submitFailureText": "Failed to submit",
+               "loadingFailureText": "Failed to load",
+               "saveFailureText": "Failed to save",
+               "submitAnimationText": "Sending...",
+               "submitSuccessText": "Succeed",
+               "savingAnimationText": "Saving...",
+               "uploadFailureText": "Failed to upload",
+               "loadingAnimationText": "Loading...",
+               "submitExpirationText": "Failed to submit",
+               "saveSuccessText": "Succeed",
+               "uploadFileTooLargeError": "File too large"
+          },
+          "global": {
+               "contactId": "",
+               "submitted": false,
+               "accountName": "",
+               "selectedProduct": "Personal Loan",
+               "showCollateral": false,
+               "typeOfApplicant": "",
+               "applicationId": "",
+               "multiApplicant": false,
+               "statusSubmitted": "SUBMITTED",
+               "statusApproved": "APPROVED",
+               "loadingText": "Please wait while we evaluate your loan application...",
+               "currentDate": "",
+               "borrowerParty": "BORROWER",
+               "partyType": "BORROWER"
+          },
+          "settings": {
+               "treeIcons": {
+                    "toExpand": "chevron_right",
+                    "toCollapse": "expand_more",
+                    "end": "lens"
+               },
+               "filters": {
+                    "keywordLabel": "Keyword",
+                    "dialogTitle": "Filters By",
+                    "icon": "filter_list",
+                    "label": "Filtered",
+                    "clearAllText": "Clear All",
+                    "startDateLabel": "Start date",
+                    "endDateLabel": "End date",
+                    "minNumberLabel": "Mininum",
+                    "maxNumberLabel": "Maximum",
+                    "toLabel": "to",
+                    "fromLabel": "from",
+                    "orLabel": "or",
+                    "notSpecifiedLabel": "Not specified",
+                    "clearLabel": "Clear Filter",
+                    "applyLabel": "Apply",
+                    "invalidText": "Invalid value"
+               },
+               "pagination": {
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "numberOfRecordsPerPage": 10,
+                    "numberOfPageLinks": 5,
+                    "firstLinkText": "first_page",
+                    "previousLinkText": "chevron_left",
+                    "nextLinkText": "chevron_right",
+                    "lastLinkText": "last_page"
+               },
+               "locale": "en-us",
+               "minimumFractionDigits": 2,
+               "collapsibleIcons": {
+                    "expanded": "expand_more",
+                    "collapsed": "expand_less"
+               },
+               "uploadText": {
+                    "completed": "Completed",
+                    "cancelInProgress": "Cancel",
+                    "removeError": "close"
+               },
+               "skeleton": {
+                    "listView": {
+                         "withAction": {
+                              "height": "72px",
+                              "padding": "24px 12px"
+                         },
+                         "noAction": {
+                              "height": "48px",
+                              "padding": "12px"
+                         }
+                    },
+                    "queueView": {
+                         "height": "150px",
+                         "padding": "16px"
+                    },
+                    "cardView": {
+                         "height": "300px",
+                         "padding": "16px"
+                    },
+                    "detailView": {
+                         "large": {
+                              "height": "108.75px",
+                              "padding": "28px 12px 20px 12px"
+                         },
+                         "medium": {
+                              "height": "104px",
+                              "padding": "28px 12px 20px 12px"
+                         },
+                         "small": {
+                              "height": "101.625px",
+                              "padding": "28px 12px 20px 12px"
+                         }
+                    }
+               },
+               "sortText": {
+                    "sortBy": "Sort by",
+                    "aToZ": "(A to Z)",
+                    "zToA": "(Z to A)",
+                    "lowToHigh": "(Low to High)",
+                    "highToLow": "(High to Low)",
+                    "mostRecentFirst": "(Most Recent First)",
+                    "mostRecentLast": "(Most Recent Last)"
+               },
+               "currencySymbol": "$",
+               "maximumFractionDigits": 2,
+               "variant": {
+                    "TextField": "outlined"
+               }
+          },
+          "actors": {},
+          "stages": {
+               "ApplicationDashboard": {
+                    "layout": {
+                         "children": [
+                              {
+                                   "children": [
+                                        {
+                                             "name": "consumer_header_new",
+                                             "layoutId": "edb209fa-7682-4f21-a5e9-c1e86a6c912d"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "name": "Header",
+                                   "layoutId": "c254a33a-a0a4-43c3-a850-6f881f00d11b"
+                              },
+                              {
+                                   "direction": "horizontal",
+                                   "children": [
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar1",
+                                             "layoutId": "201e3fa0-10e1-495a-8889-c5e4c63433bc"
+                                        },
+                                        {
+                                             "children": [
+                                                  {
+                                                       "children": [
+                                                            {
+                                                                 "name": "consumer_login_stage",
+                                                                 "layoutId": "bd9493a1-4a9b-41a6-a394-8e9913d5e9f2"
+                                                            },
+                                                            {
+                                                                 "name": "consumer_application_list",
+                                                                 "layoutId": "fc0f29e9-6373-4cb0-bbcd-149d646dfe15"
+                                                            }
+                                                       ],
+                                                       "name": "consumer_application_stages",
+                                                       "layoutId": "9721e35e-0260-4fde-be42-42125e0bf6f7"
+                                                  }
+                                             ],
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Content",
+                                             "layoutId": "87fa12fc-7e61-4855-9c4b-dabdfb94be45"
+                                        },
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar2",
+                                             "layoutId": "242d5ad8-6105-44bf-b849-df0b8e0465b7"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "final": true,
+                                   "name": "Main",
+                                   "layoutId": "1ea0068d-1edb-4928-9924-24022765b0ca"
+                              }
+                         ],
+                         "final": true,
+                         "name": "ClsAppLayoutOne",
+                         "layoutId": "e36f1c9f-bf7a-4afa-9c74-84b326095509"
+                    }
+               },
+               "Home": {
+                    "overlay": [
+                         {
+                              "title": "Party Information",
+                              "children": [
+                                   {
+                                        "name": "consumer_add_party",
+                                        "layoutId": "fa818a5e-edb4-4dc0-a8be-3b74dc0e6848"
+                                   }
+                              ],
+                              "name": "consumer_add_party_container",
+                              "layoutId": "5ea70ac7-8a98-4c80-afa0-ad647548fbc9"
+                         },
+                         {
+                              "title": "Document List",
+                              "children": [
+                                   {
+                                        "height": "100%",
+                                        "name": "consumer_document_list",
+                                        "layoutId": "a8d89883-ef54-4886-8130-41f3e4ee4b3f"
+                                   }
+                              ],
+                              "name": "consumer_document_preview_container",
+                              "layoutId": "221e1758-7b6d-4946-b645-96fe27e098df"
+                         },
+                         {
+                              "title": "Employment Information",
+                              "children": [
+                                   {
+                                        "name": "consumer_save_employer",
+                                        "layoutId": "e5e9b093-d03c-41d3-a0a6-4f85c6371ccf"
+                                   }
+                              ],
+                              "name": "consumer_add_employer_container",
+                              "layoutId": "aaf296ec-702a-4702-bb64-9550e4fe85c3"
+                         },
+                         {
+                              "title": "Income Information",
+                              "children": [
+                                   {
+                                        "name": "consumer_add_income",
+                                        "layoutId": "884bba13-d52b-4b1e-8ff1-c8e12f39ba73"
+                                   }
+                              ],
+                              "name": "consumer_add_income_container",
+                              "layoutId": "ae03bbf1-0b84-45df-a2f2-b3b3915780f9"
+                         },
+                         {
+                              "title": "Applicant Information",
+                              "children": [
+                                   {
+                                        "name": "consumer_edit_applicant",
+                                        "layoutId": "48ea9131-e15c-463b-bc4c-90ed38099e5c"
+                                   }
+                              ],
+                              "name": "consumer_edit_applicant_container",
+                              "layoutId": "87e0534e-a463-4d07-a011-569cf8fb656e"
+                         },
+                         {
+                              "title": "Collateral Details",
+                              "name": "consumer_add_collateral_container",
+                              "layoutId": "47f7f288-5602-4636-aa67-205e4491df2f"
+                         },
+                         {
+                              "height": "auto",
+                              "width": "100vw",
+                              "children": [
+                                   {
+                                        "name": "los_getting_started",
+                                        "layoutId": "da0d15cb-05dc-4e39-ae43-bdd9cb349cb1"
+                                   }
+                              ],
+                              "name": "consumer_mobile_stepper_panel",
+                              "layoutId": "30ce4e81-e893-4d1a-ae77-fb13f018dab5"
+                         }
+                    ],
+                    "layout": {
+                         "children": [
+                              {
+                                   "children": [
+                                        {
+                                             "name": "consumer_header_new",
+                                             "layoutId": "ac95471f-75d7-41ad-98db-55db6e396c50"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "name": "Header",
+                                   "layoutId": "518d9fc3-915e-4893-8269-0d05fb041e6f"
+                              },
+                              {
+                                   "direction": "horizontal",
+                                   "children": [
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar1",
+                                             "layoutId": "c4b06605-644b-4030-b790-d00ace834a3a"
+                                        },
+                                        {
+                                             "children": [
+                                                  {
+                                                       "children": [
+                                                            {
+                                                                 "name": "consumer_bread_crumb",
+                                                                 "layoutId": "903cfe61-7935-4864-8cb8-8ee3cc50f366"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "name": "consumer_mobile_stepper",
+                                                                           "layoutId": "de21cb57-4e15-4735-a972-4df4acbee1ab"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_mobile_contaner",
+                                                                 "layoutId": "e988b69a-333f-47a4-8393-80792a1877af"
+                                                            }
+                                                       ],
+                                                       "name": "consumer_outer_container",
+                                                       "layoutId": "ea926198-4b84-4b20-9c2c-94b03fc37d95"
+                                                  },
+                                                  {
+                                                       "children": [
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "100%",
+                                                                                     "name": "consumer_product",
+                                                                                     "layoutId": "8771cd2f-312312-4b75-ba40-2b16bb48fab2"
+                                                                                },
+                                                                                {
+                                                                                     "width": "100%",
+                                                                                     "name": "consumer_product_fetch",
+                                                                                     "layoutId": "c5d07082-ac12-qw1321-a000-ab181ca3df08"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_product_container",
+                                                                           "layoutId": "3372d8a8-5cb8-4dff-84fc-e30826286639"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "consumer_product_helper",
+                                                                           "layoutId": "e7b57577-ed20-4ede-a573-4c13ff9f319e"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_getting_started",
+                                                                 "layoutId": "6f518e2a-a7b7-4d21-b2ec-a660913631e6"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "consumer_applying_for",
+                                                                           "layoutId": "23adb365-5c89-499a-b3d5-11017f830c65"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "consumer_applying_for_helper",
+                                                                           "layoutId": "890254fd-228d-439e-8fea-11f77878dd5e"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_applying_for_container",
+                                                                 "layoutId": "d6fc1163-eb2d-471f-b6c8-2a214203464d"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "children": [
+                                                                                {
+                                                                                     "name": "consumer_loan_amount",
+                                                                                     "layoutId": "9c4f2cfe-6a80-4d41-9eda-ae78279875a1"
+                                                                                },
+                                                                                {
+                                                                                     "name": "consumer_purpose",
+                                                                                     "layoutId": "c7693a93-39cf-45c8-9aff-3af099ba177f"
+                                                                                },
+                                                                                {
+                                                                                     "name": "consumer_existing_purpose",
+                                                                                     "layoutId": "c19fde2a-2bf6-426a-bf5f-b96198f8fb69"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_loan_details_container",
+                                                                           "layoutId": "0b22e6fc-6a3d-402e-bccd-91a7f048e7a9"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "consumer_loan_details_helper",
+                                                                           "layoutId": "0a40c257-2be3-406c-b35b-fba1048cc399"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_loan_details_step",
+                                                                 "layoutId": "bc9842e4-c5d9-4f20-a2cd-d9aa430bcdec"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "consumer_personal_information",
+                                                                           "layoutId": "8c072876-35f4-4925-82e4-908e5ae77c1d"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "consumer_personal_information_helper",
+                                                                           "layoutId": "7a900d6c-13ef-4050-942a-0eeffce4ac8f"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_personal_information_container",
+                                                                 "layoutId": "9c0ab866-f711-4dec-b2ba-fbc6d0d8e741"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "consumer_more_personal_information",
+                                                                           "layoutId": "c3ecd01f-4497-4067-aa65-a7fb04253a96"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "consumer_more_personal_information_helper",
+                                                                           "layoutId": "6602ae97-9122-4d30-8bda-6f0d8a6d5882"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_more_personal_information_container",
+                                                                 "layoutId": "d7bf4524-5334-4a62-8da9-08b5894386e4"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "consumer_party",
+                                                                           "layoutId": "8f61e0e1-12312-4035-b2ed-d0c3dbae1d59"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "consumer_party_helper",
+                                                                           "layoutId": "cdfe09fb-d7b3-31231-a5b2-e825f4036bb7"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_party_container",
+                                                                 "layoutId": "856bd390-3bee-31231-b19d-fea8065c4868"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "consumer_add_employment",
+                                                                           "layoutId": "a4fde8bd-70d5-4401-8045-6ffb37bccc44"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "consumer_add_employment_helper",
+                                                                           "layoutId": "b2e31f40-98da-4100-ae34-7836e3ce8de3"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_add_employment_container",
+                                                                 "layoutId": "1ea81d68-34dd-4b8f-bf55-042e829f0fbe"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "consumer_income",
+                                                                           "layoutId": "8f61e0e1-8859-4035-b2ed-d0c3dbae1d59"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "consumer_income_helper",
+                                                                           "layoutId": "cdfe09fb-d7b3-41bc-a5b2-e825f4036bb7"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_income_container",
+                                                                 "layoutId": "856bd390-3bee-4b77-b19d-fea8065c4868"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "100%",
+                                                                                     "name": "consumer_asset",
+                                                                                     "layoutId": "8771cd2f-ef07-4b75-ba40-2b16bb48fab2"
+                                                                                },
+                                                                                {
+                                                                                     "width": "100%",
+                                                                                     "name": "consumer_liability",
+                                                                                     "layoutId": "c5d07082-ac12-4a1d-a000-ab181ca3df08"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_networth",
+                                                                           "layoutId": "8f61e0e1-8859-21211-b2ed-d0c3dbae1d59"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "consumer_networth_helper",
+                                                                           "layoutId": "cdfe09fb-d7b3-2121ss-a5b2-e825f4036bb7"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_networth_container",
+                                                                 "layoutId": "856bd390-3bee-4b77-eq31-fea8065c4868"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "width": "75%",
+                                                                           "name": "consumer_collateral_details",
+                                                                           "layoutId": "bab1d0f9-8a0a-4ef3-b96f-43401a8cac19"
+                                                                      },
+                                                                      {
+                                                                           "width": "25%",
+                                                                           "name": "consumer_collateral_helper",
+                                                                           "layoutId": "29795cff-2660-49fd-96c3-8c554b057e9a"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_collateral_container",
+                                                                 "layoutId": "9b35f76e-e822-4d7e-89bc-e291e60e0446"
+                                                            },
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "direction": "horizontal",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "consumer_review_title",
+                                                                                               "layoutId": "15b8f261-e062-45d0-a75f-d9b068406e96"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "consumer_applicant_review",
+                                                                                               "layoutId": "3ce6f771-6c59-4162-8c0d-9e8a3135b371"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "consumer_employment_review",
+                                                                                               "layoutId": "6edaad04-a9c0-4665-bb35-cbc0e0179de6"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "consumer_income_review",
+                                                                                               "layoutId": "73a58e8c-5d4e-4c1f-b577-38c1e8b27c41"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "consumer_review_assets",
+                                                                                               "layoutId": "a106e07b-df1f-4bfd-a089-e989672e243a"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "consumer_review_liabilities",
+                                                                                               "layoutId": "b3cbef65-9534-4fba-b57b-0f04c6702471"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "consumer_review_collateral",
+                                                                                               "layoutId": "bf7938af-f6a5-43f1-ae92-d1840b0425a4"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "consumer_review_disclosure",
+                                                                                               "layoutId": "111fbe0f-bd3c-4a41-9c39-74441687b16c"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "consumer_review",
+                                                                                     "layoutId": "ed8dad90-b0ea-4329-a125-0102a24fa244"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "consumer_review_helper",
+                                                                                     "layoutId": "ae3b5d44-438b-422c-bd8a-6719943429e0"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_review_container",
+                                                                           "layoutId": "e53fe979-e889-4886-8e91-71d45b6b2b53"
+                                                                      },
+                                                                      {
+                                                                           "direction": "horizontal",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "consumer_individual",
+                                                                                     "layoutId": "96c50bed-1111-402b-a6a8-0a2a17f433b8"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "consumer_individual_helper",
+                                                                                     "layoutId": "11122-fc14-450c-8556-a5786f043492"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_individual_container",
+                                                                           "layoutId": "246d2485-2121-42bc-ac83-87b6f145c76c"
+                                                                      },
+                                                                      {
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "100%",
+                                                                                     "name": "consumer_search",
+                                                                                     "layoutId": "a26ac302-194b-4b3b-9c8e-51b4e6c613f4"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_search_container",
+                                                                           "layoutId": "84f488f5-d773-4f49-8fe8-66740af39b7f"
+                                                                      },
+                                                                      {
+                                                                           "direction": "horizontal",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "consumer_processing",
+                                                                                     "layoutId": "96c50bed-d817-402b-a6a8-0a2a17f433b8"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "consumer_processing_helper",
+                                                                                     "layoutId": "6b56f3f9-fc14-450c-8556-a5786f043492"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_processing_container",
+                                                                           "layoutId": "246d2485-2be6-42bc-ac83-87b6f145c76c"
+                                                                      },
+                                                                      {
+                                                                           "width": "100%",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "consumer_document",
+                                                                                     "layoutId": "23adb365-11332-499a-b3d5-11017f830c65"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "consumer_document_helper",
+                                                                                     "layoutId": "890254fd-228d-312e-8fea-11f77878dd5e"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_document_container",
+                                                                           "layoutId": "e53fe979-ewqeqw-4886-8e91-71d45b6b2b53"
+                                                                      },
+                                                                      {
+                                                                           "direction": "horizontal",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "consumer_success_submission",
+                                                                                     "layoutId": "96c50bed-d817-2w23-a6a8-0a2a17f433b8"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "consumer_document_helper",
+                                                                                     "layoutId": "890254fd-228d-312e-8fea-11f77878dd5e"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_success_submission_container",
+                                                                           "layoutId": "246d2485-312w-42bc-ac83-87b6f145c76c"
+                                                                      },
+                                                                      {
+                                                                           "direction": "horizontal",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "children": [
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "consumer_offer_details",
+                                                                                               "layoutId": "c87a343a-5b0e-4fa7-826e-6f6e65392341"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "consumer_offer_credit_content",
+                                                                                               "layoutId": "c4ea9abb-aa37-42b0-bc87-d692d913cb66"
+                                                                                          },
+                                                                                          {
+                                                                                               "width": "100%",
+                                                                                               "name": "consumer_offer_disclosure",
+                                                                                               "layoutId": "bdbba74f-e86e-4081-b11e-8793843823ef"
+                                                                                          }
+                                                                                     ],
+                                                                                     "name": "consumer_offer",
+                                                                                     "layoutId": "404acac9-829a-4618-8c13-567e1a6e6ccb"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "consumer_offer_helper",
+                                                                                     "layoutId": "6b5736b9-c5ce-4ee6-b44f-07b28968d909"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_offer_container",
+                                                                           "layoutId": "0cee2a29-1c80-405d-bf2c-f41083650bf7"
+                                                                      },
+                                                                      {
+                                                                           "direction": "horizontal",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "consumer_inbox",
+                                                                                     "layoutId": "4edd92e9-2aeb-4365-ad24-40c192193c89"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "consumer_inbox_helper",
+                                                                                     "layoutId": "10dd7656-5680-4751-9f3c-9696a3348778"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_inbox_container",
+                                                                           "layoutId": "4e7266e4-6730-4785-afe5-b775329d6613"
+                                                                      },
+                                                                      {
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "consumer_reject",
+                                                                                     "layoutId": "1658133e-3d21-49b6-a5a4-4662ac2c706e"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "consumer_reject_helper",
+                                                                                     "layoutId": "eeb0fc64-a4c4-4df1-9879-15075caf9259"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_reject_container",
+                                                                           "layoutId": "48dd62e7-3100-44e0-b45a-7338b6693531"
+                                                                      },
+                                                                      {
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "50%",
+                                                                                     "name": "consumer_enroll",
+                                                                                     "layoutId": "9d6a4576-2229-432e-8326-87a1688ee7f0"
+                                                                                },
+                                                                                {
+                                                                                     "width": "50%",
+                                                                                     "name": "consumer_enroll_helper",
+                                                                                     "layoutId": "9b2bcbd2-3b87-4ac4-a5d5-c7a230672ce5"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_enroll_container",
+                                                                           "layoutId": "144ca929-7ea4-4203-a5be-f635725d7bb4"
+                                                                      },
+                                                                      {
+                                                                           "direction": "horizontal",
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "consumer_pending_processing",
+                                                                                     "layoutId": "d4251a07-10ae-4c07-9c85-6193c3ecc39f"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "consumer_pending_helper",
+                                                                                     "layoutId": "5461f868-2343-4947-ae75-5e896ebd782d"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_pending_container",
+                                                                           "layoutId": "59d9f51d-aa22-41e1-8e06-76c872540dc6"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_review_step",
+                                                                 "layoutId": "2ea4a1dc-a32b-4ac4-87b8-6eef2fe4e83f"
+                                                            }
+                                                       ],
+                                                       "name": "application_flow_steps",
+                                                       "layoutId": "b140331e-aab0-4196-b859-9fa1282da778"
+                                                  }
+                                             ],
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Content",
+                                             "layoutId": "fc102971-6877-4882-b960-d36b8b048547"
+                                        },
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar2",
+                                             "layoutId": "c6c8a128-70ee-4baf-948a-869708f72cea"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "final": true,
+                                   "name": "Main",
+                                   "layoutId": "17266ed6-063d-4474-9017-e8d4ef00ffaf"
+                              }
+                         ],
+                         "final": true,
+                         "name": "ClsAppLayoutOne",
+                         "layoutId": "a504f1d4-f977-440a-9a89-5b508ff50a3c"
+                    },
+                    "prerequisite": []
+               }
+          },
+          "start": "ApplicationDashboard"
+     }
+}

@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "editableFields": {
+                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false,
+                    "genesis__Application__r.genesis__CL_Purpose__r.Id": false
+               },
+               "renderFields": {
+                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false,
+                    "genesis__Application__r.genesis__CL_Purpose__r.Id": false,
+                    "genesis__Application__r.genesis__Other_Purpose__c": "$global.attr(loanPurposeName);==\"Other\""
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editable": true,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "consumer_loan_existing_purpose"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_existing_purpose",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose",
+     "clcommon__Release_Checksum__c": "69fda2d0360304ea346d9ef2abf1ccec33e84bfcffc4edaf3c992ce8b89333f5"
+}

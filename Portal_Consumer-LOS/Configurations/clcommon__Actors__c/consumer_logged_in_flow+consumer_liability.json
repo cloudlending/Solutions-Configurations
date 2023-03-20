@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{$state(consumer_asset).sum(genesis__Market_Value__c); - $this.sum(genesis__Amount_Owing__c);};",
+                              "field": "$global.attr(networths);"
+                         },
+                         {
+                              "value": "@mathjs{($global.attr(assetClassName); ==\"Consumer Unsecured\" or $global.attr(partyType); != $global.attr(borrowerParty);) ? \"ReviewAndSubmit\" : \"Collateral\"};",
+                              "field": "$global.attr(portalStage);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": true,
+               "textAfter": "<p><b>Net Worth: $global.attr(networths, currency);</b></p>",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "title": "Liability Details",
+               "blankMessage": "No liability information!",
+               "editableFields": {
+                    "Id": false
+               },
+               "renderFields": {
+                    "genesis__Contact__r.Id": false,
+                    "Id": false
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "contactId": "$global.attr(contactId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "consumer_liability_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_liability",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability",
+     "clcommon__Release_Checksum__c": "c83d0681ab586302075ced65ae91fade572adaaf198f968caf594ae79cfe1c1b"
+}

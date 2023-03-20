@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "submitCoApplicantNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "submitCoApplicantNext",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Submit",
+               "position": "bottom-right",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "accountId": "$global.attr(partyAccountId);",
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               }
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(showPartyTabs);",
+                         "value": false
+                    },
+                    {
+                         "field": "$nav(back_officer_party_step).appearance(current);",
+                         "value": 0
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party_liability"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_party_liability_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_liability+submitCoApplicantNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "b973457a0c120f5ef93c4ca6fa9cac3e69e12637c301494afb4ce808eb33eccd",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalApplicationSubmission",
+     "clcommon__Unique_Action_Name__c": "back_officer_party_liability+submitCoApplicantNext",
+     "clcommon__Validation_Class__c": null
+}

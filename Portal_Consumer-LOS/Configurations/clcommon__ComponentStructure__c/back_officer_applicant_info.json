@@ -1,0 +1,152 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_applicant_info",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_officer_applicant_info",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "94e13597d6d8645660731be6f49859ca5db54552720fafab5d792ee41f55579a",
+     "clcommon__Unique_Name__c": "back_officer_applicant_info",
+     "clcommon__data__c": {
+          "structureName": "back_officer_applicant_info",
+          "tableName": "contact",
+          "whereClause": {
+               "freeForm": "AccountId = ':accountId'"
+          },
+          "sections": [
+               {
+                    "id": "c4b5a95b-cd84-4a7c-8dae-cf7e32756e67",
+                    "fields": [
+                         {
+                              "id": "5c68f4cf-90e1-4310-bbc8-0198e978a91c",
+                              "fieldName": "FirstName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "First Name",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "First Name"
+                              }
+                         },
+                         {
+                              "id": "ef3b2557-38b2-4b2e-8b1c-ae43af5f0034",
+                              "fieldName": "LastName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Last Name",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "Last Name"
+                              }
+                         },
+                         {
+                              "id": "05a73fb2-2372-4f64-bf57-3943c9d175f6",
+                              "fieldName": "Phone",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Phone Number",
+                                   "ariaLabel": "Phone Phone"
+                              }
+                         },
+                         {
+                              "id": "41119d60-7274-4efa-a591-1fdcd6cbbf17",
+                              "fieldName": "Email",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Email Address",
+                                   "ariaLabel": "Email"
+                              }
+                         },
+                         {
+                              "id": "d373fce8-68e3-47a4-be13-f2e701b23953",
+                              "fieldName": "Birthdate",
+                              "fieldUi": {
+                                   "fieldType": "date",
+                                   "label": "Date of Birth",
+                                   "ariaLabel": "Birthdate"
+                              }
+                         },
+                         {
+                              "id": "9e7fb668-c57a-4e3f-8f5b-d76fcf576e7e",
+                              "fieldName": "ints__Social_Security_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "SSN",
+                                   "ariaLabel": "SSN"
+                              }
+                         },
+                         {
+                              "id": "62e0a7b8-c8d5-42d6-8a79-913cde5ffc8a",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Id",
+                                   "ariaLabel": "Id"
+                              }
+                         },
+                         {
+                              "id": "003977e2-8fa0-4aea-9f8d-2f84b373662a",
+                              "fieldName": "clcommon__Current_Street__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Street Address",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Street address is Required."
+                                   },
+                                   "ariaLabel": "Street Address"
+                              }
+                         },
+                         {
+                              "id": "7cc1e357-665d-4271-9ec1-9443ff808989",
+                              "fieldName": "clcommon__Current_State__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "State",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "State is Required."
+                                   },
+                                   "ariaLabel": "State"
+                              }
+                         },
+                         {
+                              "id": "47a020c0-10c0-49c9-87d4-d99748acdcef",
+                              "fieldName": "clcommon__Current_City__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "City",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "City is Required."
+                                   },
+                                   "ariaLabel": "City"
+                              }
+                         },
+                         {
+                              "id": "162b657e-a0cc-4742-8b8d-0ac1e5cff25a",
+                              "fieldName": "clcommon__Current_Zip_Code__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Postal Code",
+                                   "required": true,
+                                   "regex": "^(\\d{5}(\\d{4})?)$",
+                                   "messages": {
+                                        "requiredErrorText": "Postal code is required.",
+                                        "regexErrorText": "Please enter a valid postal code"
+                                   },
+                                   "ariaLabel": "Postal Code"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

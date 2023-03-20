@@ -1,0 +1,51 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No employment information!",
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 12
+                    }
+               },
+               "templates": {
+                    "record": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(genesis__Name_of_employer__c);</span><div class=\"divider\"></div><div><span class=\"text\">Position: </span>$this.attr(genesis__Position__c);</div><div><span class=\"text\">Monthly Salary: </span>$this.attr(genesis__Average_Monthly_Income__c, currency);</div><div class=\"divider\"></div></div>"
+               },
+               "title": "Employment History",
+               "columns": 1,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "contactId": "$global.attr(contactId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "consumer_employment_info"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_employment_review",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_employment_review",
+     "clcommon__Release_Checksum__c": "eb98971c4e488a8eec8b24c3d405d84e2c5c5e7d761e9e73baee2d9dde9cda3d"
+}

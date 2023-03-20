@@ -1,0 +1,249 @@
+{
+     "attributes": {
+          "type": "clcommon__NavigationStructure__c"
+     },
+     "Name": "consumer_guest_flow",
+     "clcommon__Allow_Guest_User_Access__c": true,
+     "clcommon__Description__c": null,
+     "clcommon__External_ID__c": "consumer_guest_flow",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Is_Template__c": false,
+     "clcommon__Related_Configuration_Mapping__c": null,
+     "clcommon__Release_Checksum__c": "5e4de8d95fccdd118455981cd6f12ee733cb54841513e4d5e937998679a6e2d4",
+     "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
+     "clcommon__Unique_Name__c": "consumer_guest_flow",
+     "clcommon__data__c": {
+          "messages": {
+               "submitFailureText": "Failed to submit",
+               "loadingFailureText": "Failed to load",
+               "saveFailureText": "Failed to save",
+               "submitAnimationText": "Sending...",
+               "submitSuccessText": "Succeed",
+               "savingAnimationText": "Saving...",
+               "uploadFailureText": "Failed to upload",
+               "loadingAnimationText": "Loading...",
+               "submitExpirationText": "Failed to submit",
+               "saveSuccessText": "Succeed",
+               "uploadFileTooLargeError": "File too large"
+          },
+          "global": {
+               "startStep": "$url(startStep);"
+          },
+          "settings": {
+               "treeIcons": {
+                    "end": "lens",
+                    "toCollapse": "expand_more",
+                    "toExpand": "chevron_right"
+               },
+               "filters": {
+                    "invalidText": "Invalid value",
+                    "applyLabel": "Apply",
+                    "clearLabel": "Clear Filter",
+                    "notSpecifiedLabel": "Not specified",
+                    "orLabel": "or",
+                    "fromLabel": "from",
+                    "toLabel": "to",
+                    "maxNumberLabel": "Maximum",
+                    "minNumberLabel": "Mininum",
+                    "endDateLabel": "End date",
+                    "startDateLabel": "Start date",
+                    "clearAllText": "Clear All",
+                    "label": "Filtered",
+                    "icon": "filter_list",
+                    "dialogTitle": "Filters By",
+                    "keywordLabel": "Keyword"
+               },
+               "pagination": {
+                    "lastLinkText": "last_page",
+                    "nextLinkText": "chevron_right",
+                    "previousLinkText": "chevron_left",
+                    "firstLinkText": "first_page",
+                    "numberOfPageLinks": 5,
+                    "numberOfRecordsPerPage": 10,
+                    "recordLineTemplate": "$start; - $end; of $total;"
+               },
+               "locale": "en-us",
+               "minimumFractionDigits": 2,
+               "collapsibleIcons": {
+                    "collapsed": "expand_less",
+                    "expanded": "expand_more"
+               },
+               "uploadText": {
+                    "removeError": "close",
+                    "cancelInProgress": "Cancel",
+                    "completed": "Completed"
+               },
+               "skeleton": {
+                    "detailView": {
+                         "small": {
+                              "padding": "28px 12px 20px 12px",
+                              "height": "101.625px"
+                         },
+                         "medium": {
+                              "padding": "28px 12px 20px 12px",
+                              "height": "104px"
+                         },
+                         "large": {
+                              "padding": "28px 12px 20px 12px",
+                              "height": "108.75px"
+                         }
+                    },
+                    "cardView": {
+                         "padding": "16px",
+                         "height": "300px"
+                    },
+                    "queueView": {
+                         "padding": "16px",
+                         "height": "150px"
+                    },
+                    "listView": {
+                         "noAction": {
+                              "padding": "12px",
+                              "height": "48px"
+                         },
+                         "withAction": {
+                              "padding": "24px 12px",
+                              "height": "72px"
+                         }
+                    }
+               },
+               "sortText": {
+                    "mostRecentLast": "(Most Recent Last)",
+                    "mostRecentFirst": "(Most Recent First)",
+                    "highToLow": "(High to Low)",
+                    "lowToHigh": "(Low to High)",
+                    "zToA": "(Z to A)",
+                    "aToZ": "(A to Z)",
+                    "sortBy": "Sort by"
+               },
+               "currencySymbol": "$",
+               "maximumFractionDigits": 2,
+               "variant": {
+                    "TextField": "outlined"
+               }
+          },
+          "actors": {},
+          "stages": {
+               "Home": {
+                    "layout": {
+                         "children": [
+                              {
+                                   "children": [
+                                        {
+                                             "name": "consumer_header",
+                                             "layoutId": "4acf5dba-6cba-4b97-9666-551004c9c2d7"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "name": "Header",
+                                   "layoutId": "bc43c634-2544-4985-8747-1bf5e47daac0"
+                              },
+                              {
+                                   "direction": "horizontal",
+                                   "children": [
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar1",
+                                             "layoutId": "0575c3cd-d31c-4f37-8e61-e6988b9bbf21"
+                                        },
+                                        {
+                                             "children": [
+                                                  {
+                                                       "name": "consumer_signup_bread_crumb",
+                                                       "layoutId": "b71061d1-bddd-4827-a2b2-3c7e0a8d07b6"
+                                                  },
+                                                  {
+                                                       "name": "consumer_mobile_stepper",
+                                                       "layoutId": "0e3d6ad8-e8e2-4777-bda7-a63c62db33b0"
+                                                  },
+                                                  {
+                                                       "width": "100%",
+                                                       "children": [
+                                                            {
+                                                                 "children": [
+                                                                      {
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "consumer_customer",
+                                                                                     "layoutId": "23adb365-5c89-499a-b3d5-11017f830c65"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "consumer_customer_helper",
+                                                                                     "layoutId": "890254fd-228d-439e-8fea-11f77878dd5e"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_customer_container",
+                                                                           "layoutId": "4e38b0db-4571-46e2-82b4-7ac61ae31137"
+                                                                      },
+                                                                      {
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "consumer_registration",
+                                                                                     "layoutId": "23adb365-5c89-321-b3d5-11017f830c65"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "consumer_registration_helper",
+                                                                                     "layoutId": "890254fd-wqe2131-439e-8fea-11f77878dd5e"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_registration_container",
+                                                                           "layoutId": "07226e37-c985-4b39-bc0f-6b5bb28e8267"
+                                                                      },
+                                                                      {
+                                                                           "children": [
+                                                                                {
+                                                                                     "width": "75%",
+                                                                                     "name": "consumer_existing",
+                                                                                     "layoutId": "d0431262-6f87-4916-bb40-ad4808775f9a"
+                                                                                },
+                                                                                {
+                                                                                     "width": "25%",
+                                                                                     "name": "consumer_existing_user_helper",
+                                                                                     "layoutId": "aee0264a-8e84-49ff-bd7c-cfd82ca7f530"
+                                                                                }
+                                                                           ],
+                                                                           "name": "consumer_existing_container",
+                                                                           "layoutId": "47799901-05ab-416a-b953-04dc360dc7cb"
+                                                                      }
+                                                                 ],
+                                                                 "name": "consumer_getting_started",
+                                                                 "layoutId": "af60e07e-ee2a-4232-8d1c-7ca74255435e"
+                                                            },
+                                                            {
+                                                                 "name": "consumer_check_inbox",
+                                                                 "layoutId": "af341371-e4ce-4e09-b678-18d131faed04"
+                                                            }
+                                                       ],
+                                                       "name": "application_flow_steps",
+                                                       "layoutId": "9e8b20e1-c03c-4127-92bd-4c8cd570c71b"
+                                                  }
+                                             ],
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Content",
+                                             "layoutId": "a4e9eb8f-66e5-4e86-8b58-864c9aaac53d"
+                                        },
+                                        {
+                                             "layoutPrefix": "ClsAppLayoutOne",
+                                             "name": "Sidebar2",
+                                             "layoutId": "c6b8aa65-89c9-456e-8209-7a64c610efbb"
+                                        }
+                                   ],
+                                   "layoutPrefix": "ClsAppLayoutOne",
+                                   "final": true,
+                                   "name": "Main",
+                                   "layoutId": "fb946298-52ac-4fc2-bf64-65c5e09d09d5"
+                              }
+                         ],
+                         "final": true,
+                         "name": "ClsAppLayoutOne",
+                         "layoutId": "7b15ddd7-f515-43c7-9cfa-1fd7abe046ea"
+                    }
+               }
+          },
+          "start": "Home"
+     }
+}

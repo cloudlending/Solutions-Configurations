@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "nextButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "nextButton",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(productName); != \"Credit Card\"",
+               "label": "Next",
+               "style": "primary"
+          },
+          "validation": [
+               "back_officer_product"
+          ],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(loanProduct);",
+                         "value": "$this.attr(genesis__CL_Product__c);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_product",
+                              "back_officer_product_fetch"
+                         ]
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_product"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_product_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_product+nextButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "1fd6876469e97fb1854691608a22ad671430ffc5ffff9c1657c09d5ee4d6cceb",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_product+nextButton",
+     "clcommon__Validation_Class__c": null
+}

@@ -1,0 +1,58 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "editIncome",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "editIncome",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Edit",
+               "style": "primary"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(incomeId);",
+                         "value": "$this.attr(Id);"
+                    },
+                    {
+                         "field": "$global.attr(contactId);",
+                         "value": "$global.attr(partyContactId);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "back_officer_add_income_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_add_income",
+                              "back_officer_party_income"
+                         ]
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party_income"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_party_income_query",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_income+editIncome+RECORD",
+     "clcommon__Release_Checksum__c": "cac97f0f369d7d13dbf393688425c2305fef6fbfdeda163329a39be575f287b0",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_party_income+editIncome",
+     "clcommon__Validation_Class__c": null
+}

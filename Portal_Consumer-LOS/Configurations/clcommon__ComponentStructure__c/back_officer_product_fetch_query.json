@@ -1,0 +1,45 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_product_fetch_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_officer_product_fetch_query",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "1012d82381c3b14888315588158afac4c19bd7ee24a3c19c5a6309cfc69d53e1",
+     "clcommon__Unique_Name__c": "back_officer_product_fetch_query",
+     "clcommon__data__c": {
+          "structureName": "back_officer_product_fetch_query",
+          "tableName": "clcommon__cl_product__c",
+          "whereClause": {
+               "freeForm": "Id=':productName' and clcommon__Asset_Class__r.Name in ('Consumer Secured','Consumer Real Estate')"
+          },
+          "sections": [
+               {
+                    "id": "5da181ea-f477-4116-bf30-00f28251f655",
+                    "fields": [
+                         {
+                              "id": "d293d2da-4d9f-4591-a8ce-52a80d3efe74",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "118383d6-b97a-43dc-93c2-029b7309876a",
+                              "fieldName": "clcommon__Product_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Product Name",
+                                   "ariaLabel": "Product Name"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

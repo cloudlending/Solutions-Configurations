@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "closeIncome",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "updates": [
+                    {
+                         "value": "consumer_add_income_container",
+                         "name": "$nav.overlay.remove;"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Close",
+               "style": "secondary"
+          },
+          "property": {},
+          "name": "closeIncome"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_income"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_add_income_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_income+closeIncome+COMPONENT",
+     "clcommon__Release_Checksum__c": "395961a47d4e5141f613f270f5d6721c0a8d04a840a01a84283f7ad2c3df583e",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_add_income+closeIncome",
+     "clcommon__Validation_Class__c": null
+}

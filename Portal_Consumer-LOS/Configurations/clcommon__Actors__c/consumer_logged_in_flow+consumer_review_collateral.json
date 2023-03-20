@@ -1,0 +1,93 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{($this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); == \"Securities\" or $this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); == \"Investment Property(Securities)\") ? \"Investment Security Amount\" : \"Estimated Collateral Value\"};",
+                              "field": "$global.attr(estimatedValue);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "($global.attr(assetClassName); ==\"Consumer Secured\" or $global.attr(assetClassName); ==\"Consumer Real Estate\") and $global.attr(partyType); == $global.attr(borrowerParty);",
+               "editableFields": {
+                    "clcommon__Collateral_Type__r.Id": false,
+                    "Id": false,
+                    "clcommon__Description__c": false,
+                    "clcommon__Postal_Code__c": false,
+                    "clcommon__City__c": false,
+                    "clcommon__Collateral_Type__r.Name": false,
+                    "clcommon__Collateral_Name__c": false,
+                    "clcommon__Address__c": false,
+                    "clcommon__State__c": false
+               },
+               "templates": {
+                    "record": [
+                         {
+                              "condition": "$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); != \"Titled Vehicles\" and $this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); != \"Motorized Recreational Vehicle\" and $this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); != \"Deposits Account\" and $this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); != \"Other Possessory\" and $this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); != \"Life Insurance\" and $this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); != \"Motor Vehicle\" and $this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); != \"Documented Vessel\"",
+                              "template": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(genesis__Collateral__r.clcommon__Description__c);</span><div class=\"text label\">$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name);</div><div><span class=\"text\">$global.attr(estimatedValue); : </span>$this.attr(genesis__Collateral__r.clcommon__Estimated_Value__c,currency);</div><div class=\"text\">$this.attr(genesis__Collateral__r.clcommon__Address__c); ,&nbsp;$this.attr(genesis__Collateral__r.clcommon__City__c);, &nbsp;$this.attr(genesis__Collateral__r.clcommon__State__c);,&nbsp;$this.attr(genesis__Collateral__r.clcommon__Postal_Code__c); </div></div>"
+                         },
+                         {
+                              "condition": "$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); == \"Titled Vehicles\" or $this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); == \"Motorized Recreational Vehicle\" or  $this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); == \"Motor Vehicle\" or $this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); == \"Documented Vessel\"",
+                              "template": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(genesis__Collateral__r.clcommon__Description__c);</span><div class=\"divider\"></div><div class=\"text\"> $this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name);</div><div><span class=\"text\">$global.attr(estimatedValue); : </span>$this.attr(genesis__Collateral__r.clcommon__Estimated_Value__c,currency);</div><div><span class=\"text\">Vehicle Identification Number : </span>$this.attr(genesis__Collateral__r.clcommon__Vehicle_Identification_Number__c);</div><div class=\"text\">$this.attr(genesis__Collateral__r.clcommon__Address__c); ,&nbsp;$this.attr(genesis__Collateral__r.clcommon__City__c);, &nbsp;$this.attr(genesis__Collateral__r.clcommon__State__c);,&nbsp;$this.attr(genesis__Collateral__r.clcommon__Postal_Code__c); </div></div>"
+                         },
+                         {
+                              "condition": "$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); == \"Life Insurance\"",
+                              "template": "<div class=\"customCard\"><div class=\"cardHeader\">$this.attr(genesis__Collateral__r.clcommon__Description__c);</div><div class=\"text label\">$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name);</span></div><div><span class=\"text\">Insurnace Amount : </span>$this.attr(genesis__Collateral__r.clcommon__Insurance_Amount__c,currency);</div><div class=\"text\"> $this.attr(genesis__Collateral__r.clcommon__Address__c); ,&nbsp;$this.attr(genesis__Collateral__r.clcommon__City__c);, &nbsp;$this.attr(genesis__Collateral__r.clcommon__State__c);,&nbsp;$this.attr(genesis__Collateral__r.clcommon__Postal_Code__c); </div></div>"
+                         },
+                         {
+                              "condition": "$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); == \"Deposits Account\" or $this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name); == \"Other Possessory\"",
+                              "template": "<div class=\"customCard\"><div class=\"cardHeader\">$this.attr(genesis__Collateral__r.clcommon__Description__c);</div><div class=\"text label\">$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name);</div><div><span class=\"text\">Deposit Amount : </span>$this.attr(genesis__Collateral__r.clcommon__Possessory_Current_Balance__c,currency);</div><div class=\"text\">$this.attr(genesis__Collateral__r.clcommon__Address__c); ,&nbsp;$this.attr(genesis__Collateral__r.clcommon__City__c);, &nbsp;$this.attr(genesis__Collateral__r.clcommon__State__c);,&nbsp;$this.attr(genesis__Collateral__r.clcommon__Postal_Code__c); </div></div>"
+                         }
+                    ]
+               },
+               "renderFields": {
+                    "clcommon__Collateral_Type__r.Id": false,
+                    "Id": false,
+                    "clcommon__Collateral_Name__c": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No Collaterals Added!",
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 12
+                    }
+               },
+               "columns": 1,
+               "fieldColumns": 1,
+               "title": "Collateral Summary"
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "consumer_collateral_details"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_review_collateral",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_review_collateral",
+     "clcommon__Release_Checksum__c": "7d5fb5a32bb104e2bc79c3496f721205b402fc84487a6515f129c66415f32a39"
+}

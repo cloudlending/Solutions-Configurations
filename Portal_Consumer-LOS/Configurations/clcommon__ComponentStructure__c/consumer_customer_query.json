@@ -1,0 +1,52 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "consumer_customer_query",
+     "clcommon__Allow_Guest_User_Access__c": true,
+     "clcommon__External_ID__c": "consumer_customer_query",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "41f94fd1820ce754d1a14a3ecd2ce1698b7cd388f5c1dd8df24a4780fb75e4fa",
+     "clcommon__Unique_Name__c": "consumer_customer_query",
+     "clcommon__data__c": {
+          "structureName": "consumer_customer_query",
+          "sections": [
+               {
+                    "id": "",
+                    "fields": [
+                         {
+                              "id": "7b49",
+                              "fieldName": "are_you_customer",
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "id": "yes",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Yes",
+                                             "optionValue": "Yes"
+                                        },
+                                        {
+                                             "id": "no",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "No",
+                                             "optionValue": "No"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "You have to select one option."
+                                   },
+                                   "ariaLabel": "Are you an existing customer?"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

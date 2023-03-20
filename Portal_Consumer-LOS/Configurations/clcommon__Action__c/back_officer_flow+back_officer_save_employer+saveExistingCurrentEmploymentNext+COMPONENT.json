@@ -1,0 +1,88 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveExistingCurrentEmploymentNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "saveExistingCurrentEmploymentNext",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(employmentId); != \"\" and not $this.attr(genesis__Is_Current_Employer__c);",
+               "style": "primary",
+               "label": "Save",
+               "position": "bottom-right"
+          },
+          "confirmation": {
+               "type": "prompt",
+               "title": "Are you sure?",
+               "content": "<p>Please ensure to add atleast one current employment information</p>",
+               "showConfirmButtons": true,
+               "confirmText": "Yes",
+               "cancelText": "No",
+               "cancelOrCloseHandler": {}
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": "$global.attr(applicationId);",
+               "genesis__Employment_Information__c": {
+                    "Id": "$global.attr(employmentId);",
+                    "genesis__Name_of_employer__c": "$this.attr(genesis__Name_of_employer__c);",
+                    "genesis__Position__c": "$this.attr(genesis__Position__c);",
+                    "genesis__Number_of_years_on_job__c": "$this.attr(genesis__Number_of_years_on_job__c);",
+                    "genesis__Average_Monthly_Income__c": "$this.attr(genesis__Average_Monthly_Income__c);",
+                    "genesis__Employer_Street__c": "$this.attr(genesis__Employer_Street__c);",
+                    "genesis__Employer_City__c": "$this.attr(genesis__Employer_City__c);",
+                    "genesis__Employer_State__c": "$this.attr(genesis__Employer_State__c);",
+                    "genesis__Employer_Zipcode__c": "$this.attr(genesis__Employer_Zipcode__c);",
+                    "genesis__Self_Employed__c": "$this.attr(genesis__Self_Employed__c);",
+                    "genesis__Contact__c": "$global.attr(contactId);",
+                    "genesis__Is_Current_Employer__c": "$this.attr(genesis__Is_Current_Employer__c);"
+               }
+          },
+          "validation": [
+               "back_officer_save_employer"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(employmentId);",
+                         "value": ""
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "back_officer_add_employer_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_save_employer",
+                              "back_officer_add_employment",
+                              "back_officer_employment_review",
+                              "back_officer_party_add_employment"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_save_employer"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_add_employment_info",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_save_employer+saveExistingCurrentEmploymentNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "d6744134ff57eb2ebe6e26d53ccb559c8789bd3434c28ebe9d76d333484da446",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveEmploymentInformation",
+     "clcommon__Unique_Action_Name__c": "back_officer_save_employer+saveExistingCurrentEmploymentNext",
+     "clcommon__Validation_Class__c": null
+}

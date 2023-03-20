@@ -1,0 +1,54 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "consumer_product_fetch_query1",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "consumer_product_fetch_query1",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "a299e42ec17db3ae100c230a6e9c9a940265983afc0e7518e5ee153f7f5e2307",
+     "clcommon__Unique_Name__c": "consumer_product_fetch_query1",
+     "clcommon__data__c": {
+          "structureName": "consumer_product_fetch_query1",
+          "tableName": "clcommon__cl_product__c",
+          "whereClause": {
+               "freeForm": "Id=':productName'"
+          },
+          "sections": [
+               {
+                    "id": "5da181ea-f477-4116-bf30-00f28251f655",
+                    "fields": [
+                         {
+                              "id": "af730231-aaad-433a-879d-e13d653c5d3e",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "152216b3-55e8-45df-a9b5-bd6570662700",
+                              "fieldName": "clcommon__Product_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Product Name",
+                                   "ariaLabel": "Product Name"
+                              }
+                         },
+                         {
+                              "id": "6d8f67b5-9515-4f59-89e0-c9ff1a611cc9",
+                              "fieldName": "clcommon__Asset_Class__r.Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Asset Class Name",
+                                   "ariaLabel": "Asset Class Name"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

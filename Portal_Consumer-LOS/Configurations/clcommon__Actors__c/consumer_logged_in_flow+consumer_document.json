@@ -1,0 +1,74 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": false,
+               "sortedField": {
+                    "ascending": false,
+                    "name": "genesis__Policy_Exception__c.genesis__Policy_Exception_Definition__r.genesis__Portal_Title__c"
+               },
+               "sortableFields": [
+                    "genesis__Policy_Exception__c.genesis__Policy_Exception_Definition__r.genesis__Portal_Title__c"
+               ],
+               "editableFields": {
+                    "clcommon__Document_Category__c.genesis__Application__c": false,
+                    "clcommon__Document_Category__c.clcommon__Status__c": false,
+                    "clcommon__Document_Category__c.Id": false,
+                    "genesis__Policy_Exception__c.Id": false,
+                    "clcommon__Document_Category__c.Name": false,
+                    "clcommon__Document_Category__c.clcommon__Description__c": false,
+                    "genesis__Policy_Exception__c.genesis__Status__c": false,
+                    "genesis__Policy_Exception__c.genesis__Policy_Exception_Definition__r.genesis__Portal_Title__c": false,
+                    "clcommon__Document_Category__c.clcommon__Category_Name__c": false,
+                    "genesis__Policy_Exception__c.genesis__Policy_Exception_Definition__r.genesis__Portal_Description__c": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No documents ",
+               "droppableRecord": {
+                    "type": "FILE",
+                    "uploadActionName": "upload"
+               },
+               "textBefore": "We need additional documents to process the Loan Application.",
+               "title": "Additional Requirements",
+               "queuePrimaryText": "<span class=\"$this.attr(clcommon__Document_Category__c.clcommon__Status__c, className); document-status\">$this.attr(clcommon__Document_Category__c.clcommon__Status__c);</span><span class=\"docCategoryTitle\"> $this.attr(clcommon__Document_Category__c.clcommon__Category_Name__c);</span> ",
+               "queueSecondaryText": "<p>$this.attr(clcommon__Document_Category__c.clcommon__Description__c);</p><p class=\"declineReason\"></p>",
+               "groupBy": {
+                    "titles": [
+                         {
+                              "title": "<div class=\"policyTitle\"><div>$this.attr(genesis__Policy_Exception__c.genesis__Policy_Exception_Definition__r.genesis__Portal_Title__c);</div></div><div class=\"policyDescription\">$this.attr(genesis__Policy_Exception__c.genesis__Policy_Exception_Definition__r.genesis__Portal_Description__c);</div>"
+                         }
+                    ],
+                    "field": "genesis__Policy_Exception__c.Id"
+               },
+               "fieldColumns": 1
+          },
+          "property": {
+               "module": "document",
+               "queryName": "queryPolicyConditionDocumentCategory",
+               "structureName": "consumer_document_management_queue_view"
+          },
+          "type": "queue-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_document",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_document",
+     "clcommon__Release_Checksum__c": "70d930842b196a6a824a77cda3507faeb032a9d33590965237d32084a2f7449e"
+}

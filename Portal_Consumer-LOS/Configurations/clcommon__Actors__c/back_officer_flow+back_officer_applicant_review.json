@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No applicant information!",
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "editableFields": {
+                    "Id": false,
+                    "clcommon__Current_Street__c": false,
+                    "ints__Social_Security_Number__c": false,
+                    "Birthdate": false,
+                    "Email": false,
+                    "MobilePhone": false,
+                    "LastName": false,
+                    "FirstName": false
+               },
+               "templates": {
+                    "record": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(FirstName);&nbsp; $this.attr(LastName);</span><div class=\"divider\"></div><div><span class=\"fa fa-phone\"> &nbsp;&nbsp; </span>$this.attr(Phone, phone, 'x|\\(xxx\\) xxx-xxxx');</div><div><span class=\"fa fa-envelope\">&nbsp;&nbsp; </span>$this.attr(Email);</div><div><span class=\"fa fa-calendar\">&nbsp;&nbsp; </span>$this.attr(Birthdate);</div><div><span class=\"fa fa-id-card\">&nbsp;&nbsp; </span>$this.attr(ints__Social_Security_Number__c, masked, 'x|*|***-**-xxxx'); </div><div class=\"divider\"></div></div><div><span class=\"fa fa-map-marker\">&nbsp;&nbsp; </span>$this.attr(clcommon__Current_Street__c);,&nbsp;$this.attr(clcommon__Current_City__c);,&nbsp;$this.attr(clcommon__Current_State__c);,&nbsp;$this.attr(clcommon__Current_Zip_Code__c);</div></div>"
+               },
+               "renderFields": {
+                    "Id": false
+               },
+               "title": "Applicant Details",
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(borrowerAccountId);"
+               },
+               "structureName": "back_officer_applicant_info"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_applicant_review",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_applicant_review",
+     "clcommon__Release_Checksum__c": "7e744d55f470ed911a8c19b7a8293064507da9c73472b236b3aa09d05511b6e4"
+}

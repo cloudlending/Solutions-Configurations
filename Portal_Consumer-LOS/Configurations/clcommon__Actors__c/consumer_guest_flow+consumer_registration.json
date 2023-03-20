@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_guest_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderFields": {
+                    "Id": false
+               },
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true,
+               "textBefore": "<p>By registering with Thrive Bank, you can save your application and return to complete it at any time. When you click ‘Next’, you will receive an email at the address provided below with the instructions to complete the registration process.</p>",
+               "title": "<div class=\"title1\">Tell us about Yourself</div>"
+          },
+          "property": {
+               "structureName": "consumer_registration_query"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_registration",
+     "clcommon__External_ID__c": "consumer_guest_flow+consumer_registration",
+     "clcommon__Release_Checksum__c": "d905e78e13c882e8460ab52756b50af13949eec822a6c91216eca8781f45536d"
+}

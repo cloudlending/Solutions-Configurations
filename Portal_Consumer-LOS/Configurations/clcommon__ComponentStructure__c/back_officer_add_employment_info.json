@@ -1,0 +1,571 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_add_employment_info",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_officer_add_employment_info",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "25e4aaa92bfbf581c4cbb557a0d00997766cb0a074cc4b02766ec39bcebe63f1",
+     "clcommon__Unique_Name__c": "back_officer_add_employment_info",
+     "clcommon__data__c": {
+          "structureName": "back_officer_add_employment_info",
+          "tableName": "genesis__employment_information__c",
+          "whereClause": {
+               "freeForm": "Id = ':employmentId'"
+          },
+          "sections": [
+               {
+                    "id": "8f560354-2905-4c5c-9162-171a4679f6b2",
+                    "fields": [
+                         {
+                              "id": "3b97017e-79d2-44a3-ab58-4bbdac732b7f",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "29c340ad-ee18-4bf2-89ff-b72037dd0d3b",
+                              "fieldName": "genesis__Name_of_employer__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": " Employer Name",
+                                   "placeholderText": "Enter Employer Name",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "Name of employer"
+                              }
+                         },
+                         {
+                              "id": "dcb4cc81-f035-4fc0-a20d-24f6d64c4d21",
+                              "fieldName": "genesis__Position__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Position",
+                                   "placeholderText": "Enter Position",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "Position"
+                              }
+                         },
+                         {
+                              "id": "f508325f-d9e2-4602-b19a-a8e4a5ebbced",
+                              "fieldName": "genesis__Number_of_years_on_job__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Time at Employer",
+                                   "placeholderText": "Enter Time at Employer",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true
+                                        }
+                                   },
+                                   "ariaLabel": "Number of years on job"
+                              }
+                         },
+                         {
+                              "id": "b22c7741-6413-41ab-a955-c5a57f72c852",
+                              "fieldName": "genesis__Average_Monthly_Income__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Monthly Income",
+                                   "placeholderText": "Enter Monthly Income",
+                                   "defaultValue": "",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Average_Monthly_Income__c); > 0",
+                                             "message": "<span style=\"color:red\">Monthly income should be greater than zero </span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0,
+                                             "initValue": ""
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Average Monthly Income"
+                              }
+                         },
+                         {
+                              "id": "99cf481c-98d1-480b-831c-778007da5fb9",
+                              "fieldName": "genesis__Employer_Street__c",
+                              "fieldUi": {
+                                   "fieldType": "addressAutocomplete",
+                                   "label": "Street Address",
+                                   "placeholderText": "Enter Street Address ",
+                                   "required": true,
+                                   "addressComponentMapping": [
+                                        {
+                                             "addressComponent": "street_number",
+                                             "fieldName": "genesis__Employer_Street__c"
+                                        },
+                                        {
+                                             "addressComponent": "route",
+                                             "fieldName": "genesis__Employer_Street__c"
+                                        },
+                                        {
+                                             "addressComponent": "locality",
+                                             "fieldName": "genesis__Employer_City__c"
+                                        },
+                                        {
+                                             "addressComponent": "administrative_area_level_1",
+                                             "nameType": "short_name",
+                                             "fieldName": "genesis__Employer_State__c"
+                                        },
+                                        {
+                                             "addressComponent": "postal_code",
+                                             "fieldName": "genesis__Employer_Zipcode__c"
+                                        }
+                                   ],
+                                   "addressComponentRestrictions": {
+                                        "country": [
+                                             "us"
+                                        ]
+                                   },
+                                   "messages": {
+                                        "requiredErrorText": "Street address is Required."
+                                   },
+                                   "ariaLabel": "Street"
+                              }
+                         },
+                         {
+                              "id": "ddcece99-df91-4b06-a63a-7fcc83d5569d",
+                              "fieldName": "genesis__Employer_City__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "City",
+                                   "placeholderText": "Enter City",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "Employer City"
+                              }
+                         },
+                         {
+                              "id": "7d34dd35-265d-4c1d-8a0b-a87d3e933fd0",
+                              "fieldName": "genesis__Employer_State__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "State",
+                                   "required": true,
+                                   "prompt": "Select",
+                                   "selectOptions": [
+                                        {
+                                             "id": "AL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AL",
+                                             "optionValue": "AL"
+                                        },
+                                        {
+                                             "id": "AK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AK",
+                                             "optionValue": "AK"
+                                        },
+                                        {
+                                             "id": "AZ",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AZ",
+                                             "optionValue": "AZ"
+                                        },
+                                        {
+                                             "id": "AR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AR",
+                                             "optionValue": "AR"
+                                        },
+                                        {
+                                             "id": "CA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CA",
+                                             "optionValue": "CA"
+                                        },
+                                        {
+                                             "id": "CO",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CO",
+                                             "optionValue": "CO"
+                                        },
+                                        {
+                                             "id": "CT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CT",
+                                             "optionValue": "CT"
+                                        },
+                                        {
+                                             "id": "DE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "DE",
+                                             "optionValue": "DE"
+                                        },
+                                        {
+                                             "id": "FL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "FL",
+                                             "optionValue": "FL"
+                                        },
+                                        {
+                                             "id": "GA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "GA",
+                                             "optionValue": "GA"
+                                        },
+                                        {
+                                             "id": "HI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "HI",
+                                             "optionValue": "HI"
+                                        },
+                                        {
+                                             "id": "ID",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ID",
+                                             "optionValue": "ID"
+                                        },
+                                        {
+                                             "id": "IL",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "IL",
+                                             "optionValue": "IL"
+                                        },
+                                        {
+                                             "id": "IN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "IN",
+                                             "optionValue": "IN"
+                                        },
+                                        {
+                                             "id": "IA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "IA",
+                                             "optionValue": "IA"
+                                        },
+                                        {
+                                             "id": "KS",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "KS",
+                                             "optionValue": "KS"
+                                        },
+                                        {
+                                             "id": "KY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "KY",
+                                             "optionValue": "KY"
+                                        },
+                                        {
+                                             "id": "LA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "LA",
+                                             "optionValue": "LA"
+                                        },
+                                        {
+                                             "id": "ME",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ME",
+                                             "optionValue": "ME"
+                                        },
+                                        {
+                                             "id": "MD",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MD",
+                                             "optionValue": "MD"
+                                        },
+                                        {
+                                             "id": "MA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MA",
+                                             "optionValue": "MA"
+                                        },
+                                        {
+                                             "id": "MI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MI",
+                                             "optionValue": "MI"
+                                        },
+                                        {
+                                             "id": "MN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MN",
+                                             "optionValue": "MN"
+                                        },
+                                        {
+                                             "id": "MS",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MS",
+                                             "optionValue": "MS"
+                                        },
+                                        {
+                                             "id": "MO",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MO",
+                                             "optionValue": "MO"
+                                        },
+                                        {
+                                             "id": "MT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "MT",
+                                             "optionValue": "MT"
+                                        },
+                                        {
+                                             "id": "NE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NE",
+                                             "optionValue": "NE"
+                                        },
+                                        {
+                                             "id": "NV",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NV",
+                                             "optionValue": "NV"
+                                        },
+                                        {
+                                             "id": "NH",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NH",
+                                             "optionValue": "NH"
+                                        },
+                                        {
+                                             "id": "NJ",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NJ",
+                                             "optionValue": "NJ"
+                                        },
+                                        {
+                                             "id": "NM",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NM",
+                                             "optionValue": "NM"
+                                        },
+                                        {
+                                             "id": "NY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NY",
+                                             "optionValue": "NY"
+                                        },
+                                        {
+                                             "id": "NC",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NC",
+                                             "optionValue": "NC"
+                                        },
+                                        {
+                                             "id": "ND",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ND",
+                                             "optionValue": "ND"
+                                        },
+                                        {
+                                             "id": "OH",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "OH",
+                                             "optionValue": "OH"
+                                        },
+                                        {
+                                             "id": "OK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "OK",
+                                             "optionValue": "OK"
+                                        },
+                                        {
+                                             "id": "OR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "OR",
+                                             "optionValue": "OR"
+                                        },
+                                        {
+                                             "id": "PA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PA",
+                                             "optionValue": "PA"
+                                        },
+                                        {
+                                             "id": "RI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "RI",
+                                             "optionValue": "RI"
+                                        },
+                                        {
+                                             "id": "SC",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SC",
+                                             "optionValue": "SC"
+                                        },
+                                        {
+                                             "id": "SD",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SD",
+                                             "optionValue": "SD"
+                                        },
+                                        {
+                                             "id": "TN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "TN",
+                                             "optionValue": "TN"
+                                        },
+                                        {
+                                             "id": "TX",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "TX",
+                                             "optionValue": "TX"
+                                        },
+                                        {
+                                             "id": "UT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "UT",
+                                             "optionValue": "UT"
+                                        },
+                                        {
+                                             "id": "VT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "VT",
+                                             "optionValue": "VT"
+                                        },
+                                        {
+                                             "id": "VA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "VA",
+                                             "optionValue": "VA"
+                                        },
+                                        {
+                                             "id": "WA",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "WA",
+                                             "optionValue": "WA"
+                                        },
+                                        {
+                                             "id": "WV",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "WV",
+                                             "optionValue": "WV"
+                                        },
+                                        {
+                                             "id": "WI",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "WI",
+                                             "optionValue": "WI"
+                                        },
+                                        {
+                                             "id": "WY",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "WY",
+                                             "optionValue": "WY"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "State is required."
+                                   },
+                                   "ariaLabel": "State"
+                              }
+                         },
+                         {
+                              "id": "613a1e7b-4d19-4fb1-8ffb-3b0bc3e45a52",
+                              "fieldName": "genesis__Employer_Zipcode__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Postal Code",
+                                   "placeholderText": "Enter Postal Code",
+                                   "required": true,
+                                   "regex": "^(\\d{5}(\\d{4})?)$",
+                                   "messages": {
+                                        "requiredErrorText": "Postal code is required.",
+                                        "regexErrorText": "Please enter a valid postal code"
+                                   },
+                                   "ariaLabel": "Postal Code"
+                              }
+                         },
+                         {
+                              "id": "b869ff71-67da-40c5-a74f-b40f4c406f46",
+                              "fieldName": "genesis__Self_Employed__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Self Employed",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Self Employed"
+                              }
+                         },
+                         {
+                              "id": "89f27d2e-4407-4a8f-aea3-166f090dfdf4",
+                              "fieldName": "genesis__Is_Current_Employer__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Is Current Employer",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Is Current Employer"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

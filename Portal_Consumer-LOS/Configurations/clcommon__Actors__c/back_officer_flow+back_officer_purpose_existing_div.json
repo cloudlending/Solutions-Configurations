@@ -1,0 +1,57 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "editableFields": {
+                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false,
+                    "genesis__Application__r.genesis__CL_Purpose__r.Id": false
+               },
+               "renderFields": {
+                    "genesis__Application__r.genesis__Other_Purpose__c": "$global.attr(loanPurposeName);==\"Other\"",
+                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false,
+                    "genesis__Application__r.genesis__CL_Purpose__r.Id": false
+               },
+               "editable": true,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "back_office_loan_existing_purpose_div"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_purpose_existing_div",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_purpose_existing_div",
+     "clcommon__Release_Checksum__c": "4007a04e95bbf915c4cdbcef55b41d6d94d07b43b3da57a2eb0d4f7af71a3330"
+}
