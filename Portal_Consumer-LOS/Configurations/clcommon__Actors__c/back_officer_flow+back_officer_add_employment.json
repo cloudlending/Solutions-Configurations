@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No employment information!",
+               "editable": true,
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 6
+                    }
+               },
+               "textBefore": "Please provide the employment information or source of income information for the last 3 years. Please click on \"Add Employer\" to record multiple sources of income.",
+               "templates": {
+                    "record": "<div class=\"customCard\"><div class=\"cardHeader\">$this.attr(genesis__Name_of_employer__c);</div><div class=\"text label\">$this.attr(genesis__Position__c);</div><div class=\"text\">Monthly Salary</div><div class=\"text\">$this.attr(genesis__Average_Monthly_Income__c, currency);</div></div>"
+               },
+               "renderFields": {
+                    "id": false
+               },
+               "title": "Employment Details",
+               "fieldColumns": 1,
+               "columns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(borrowerAccountId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "back_officer_employment_info"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_add_employment",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_add_employment",
+     "clcommon__Release_Checksum__c": "e50b7960fd439565030761209a44b40b29a75b24fe051ea9d1fa5884f729ecc6"
+}

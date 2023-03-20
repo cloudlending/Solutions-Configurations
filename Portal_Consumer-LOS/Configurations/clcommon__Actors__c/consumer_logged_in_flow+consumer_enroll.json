@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": true,
+               "grid": {
+                    "field": {
+                         "enroll_in_online_banking": {
+                              "selectButton": {
+                                   "xs": 12,
+                                   "sm": 6
+                              }
+                         }
+                    }
+               },
+               "noLabelFields": [
+                    "enroll_in_online_banking"
+               ],
+               "title": "Would you like to enroll in online banking?",
+               "fieldColumns": 1
+          },
+          "property": {
+               "structureName": "consumer_enrollment_info"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_enroll",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_enroll",
+     "clcommon__Release_Checksum__c": "fea945a0b7774c2a3946dc9e23cc72139d47660eceec47c71a94865387a547f4"
+}

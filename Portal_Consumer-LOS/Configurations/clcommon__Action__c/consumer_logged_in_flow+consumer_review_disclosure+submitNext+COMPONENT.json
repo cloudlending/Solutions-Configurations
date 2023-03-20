@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "submitNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "disclosureEnable": "$disclosure(SalesReviewDisclsure);",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "moveToConfirmationPage",
+                         "condition": "$result.attr(processApplication); == undefined"
+                    },
+                    {
+                         "name": "moveToPolling",
+                         "condition": "$result.attr(processApplication);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "accountId": "$global.attr(userInfo).attr(accountId);",
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               }
+          },
+          "appearance": {
+               "render": true,
+               "position": "bottom-left",
+               "label": "Submit",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "submitNext"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_review_disclosure"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_review_disclosure+submitNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "07325316e9b5ddd9e94616835e58fd46b17543a532065bae0857b5ee2bc6f840",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalApplicationSubmission",
+     "clcommon__Unique_Action_Name__c": "consumer_review_disclosure+submitNext",
+     "clcommon__Validation_Class__c": null
+}

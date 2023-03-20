@@ -1,0 +1,82 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "clickRecord": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(clcommon__CL_Purpose__r.Id);",
+                              "field": "$global.attr(loanPurpose);"
+                         },
+                         {
+                              "value": "$this.attr(clcommon__CL_Purpose__r.Name);",
+                              "field": "$global.attr(loanPurposeName);"
+                         },
+                         {
+                              "value": "",
+                              "field": "$global.attr(purposeValidation);"
+                         },
+                         {
+                              "value": "@mathjs{$global.attr(loanPurposeName);==\"Other\"? $state(consumer_back_office_loan_existing_purpose).attr(genesis__Application__r.genesis__Other_Purpose__c); :\"\"};",
+                              "field": "$state(consumer_back_office_loan_existing_purpose).attr(genesis__Application__r.genesis__Other_Purpose__c);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "textAfter": "$global.attr(purposeValidation);",
+               "autoHighlight": {
+                    "clcommon__CL_Purpose__r.Id": "$state(consumer_existing_purpose).attr(genesis__Application__r.genesis__CL_Purpose__r.Id);"
+               },
+               "highlight": true,
+               "renderFields": {
+                    "clcommon__CL_Purpose__r.Id": false
+               },
+               "editableFields": {
+                    "clcommon__CL_Purpose__r.Name": false,
+                    "clcommon__CL_Purpose__r.Id": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "grid": {
+                    "field": {
+                         "genesis__Application__r.genesis__CL_Purpose__c": {
+                              "selectButton": {
+                                   "sm": 6,
+                                   "xs": 12
+                              }
+                         }
+                    }
+               },
+               "title": "What is the purpose of the loan?",
+               "editable": "$global.attr(partyType); == $global.attr(borrowerParty);"
+          },
+          "property": {
+               "whereClause": {
+                    "loanProduct": "$global.attr(loanProduct);"
+               },
+               "structureName": "consumer_loan_purpose_details_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_purpose",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_purpose",
+     "clcommon__Release_Checksum__c": "f08b50478f06de7ed6e4f0deb6aecabb6db350d4c6ec713fec4887ed156161a2"
+}

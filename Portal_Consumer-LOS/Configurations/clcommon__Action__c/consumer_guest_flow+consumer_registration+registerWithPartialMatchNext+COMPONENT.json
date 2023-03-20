@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "registerWithPartialMatchNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "sendRegistrationEmail"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": 0,
+                         "field": "$global.attr(statusCode);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "permissionSetName": "Consumer_Unsecured_Borrower",
+               "contact": "$state(consumer_registration);",
+               "createNewUserForPartialMatch": true
+          },
+          "confirmation": {
+               "cancelOrCloseHandler": {},
+               "cancelText": "No",
+               "confirmText": "Yes",
+               "showConfirmButtons": true,
+               "content": "<p>The input details do not match with our records , Do you want to proceed with registering as a new customer ?</p>",
+               "type": "prompt"
+          },
+          "appearance": {
+               "style": "primary",
+               "label": "Next",
+               "render": false
+          },
+          "property": {},
+          "name": "registerWithPartialMatchNext"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_guest_flow+consumer_registration"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_registration_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_guest_flow+consumer_registration+registerWithPartialMatchNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "689c7b33a0095a38bb65140283c21e67bad346f0eac27aee37f1ab479529fa47",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveUserData",
+     "clcommon__Unique_Action_Name__c": "consumer_registration+registerWithPartialMatchNext",
+     "clcommon__Validation_Class__c": null
+}

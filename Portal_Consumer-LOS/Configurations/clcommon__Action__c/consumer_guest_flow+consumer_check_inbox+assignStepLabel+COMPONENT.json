@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "assignStepLabel",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "assignments": [
+                    {
+                         "value": "Confirm",
+                         "field": "$global.attr(stepsLabel);"
+                    },
+                    {
+                         "value": "2",
+                         "field": "$global.attr(stepperCount);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "automatic": true,
+          "appearance": {
+               "label": "Continue",
+               "style": "primary",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "assignStepLabel"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_guest_flow+consumer_check_inbox"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_guest_flow+consumer_check_inbox+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "6b316f70843b49e4630d82a0df4bdcdf4df9ec9faeeca777b4ca50cdeff0b672",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_check_inbox+assignStepLabel",
+     "clcommon__Validation_Class__c": null
+}

@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "savePortalStage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "updates": [
+                    {
+                         "value": [
+                              "consumer_applicant_review",
+                              "consumer_personal_information",
+                              "consumer_party"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(application_flow_steps).appearance(current);"
+                    }
+               ]
+          },
+          "validation": [
+               "consumer_personal_information"
+          ],
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "MoreInfo"
+          },
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
+          },
+          "property": {},
+          "name": "savePortalStage"
+     },
+     "clcommon__Action_Order__c": 6,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_personal_information"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_personal_information_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_personal_information+savePortalStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "0548b655d24f96a7f093059a9c4c88530c1b3aeac5b9fc712faea36f94dd0da2",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "consumer_personal_information+savePortalStage",
+     "clcommon__Validation_Class__c": null
+}

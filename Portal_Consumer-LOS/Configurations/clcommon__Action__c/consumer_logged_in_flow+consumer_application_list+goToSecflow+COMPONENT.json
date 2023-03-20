@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToSecflow",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Back",
+          "handler": {
+               "next": "Home",
+               "assignments": [
+                    {
+                         "value": "AboutYou",
+                         "field": "$nav(application_flow_steps).appearance(current);"
+                    },
+                    {
+                         "value": 0,
+                         "field": "$nav(consumer_about_you).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "position": "bottom-left",
+               "render": false
+          },
+          "property": {},
+          "name": "goToSecflow"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_application_list"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_fetch_applications",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_application_list+goToSecflow+COMPONENT",
+     "clcommon__Release_Checksum__c": "78b370a848a9315ff9f4070f24daaf28f2feb791408cc18d73f9f2a17dcd92f8",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_application_list+goToSecflow",
+     "clcommon__Validation_Class__c": null
+}

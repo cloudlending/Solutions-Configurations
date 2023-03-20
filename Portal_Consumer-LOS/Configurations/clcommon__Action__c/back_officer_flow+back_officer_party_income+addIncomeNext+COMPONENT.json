@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "addIncomeNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "addIncomeNext",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Next",
+               "style": "primary"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(back_officer_party_step).appearance(current);",
+                         "value": "next"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party_income"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_party_income_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_income+addIncomeNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "d2c446b2990366f6719cbaadd65172704d43c472b729816818f84ee192b5446b",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_party_income+addIncomeNext",
+     "clcommon__Validation_Class__c": null
+}

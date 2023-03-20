@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "editEmployment",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "editEmployment",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Edit",
+               "style": "primary"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(employmentId);",
+                         "value": "$this.attr(Id);"
+                    },
+                    {
+                         "field": "$global.attr(contactId);",
+                         "value": "$global.attr(partyContactId);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "back_officer_add_employer_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "back_officer_save_employer"
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party_add_employment"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_party_employment_info",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_add_employment+editEmployment+RECORD",
+     "clcommon__Release_Checksum__c": "ba094eda901166c372e743011da4df6635b83b8c04ef7455573e46ff2575bd4e",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_party_add_employment+editEmployment",
+     "clcommon__Validation_Class__c": null
+}

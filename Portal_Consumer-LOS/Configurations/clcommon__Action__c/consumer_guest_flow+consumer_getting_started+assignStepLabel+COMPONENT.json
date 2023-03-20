@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "assignStepLabel",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "assignments": [
+                    {
+                         "value": "Register",
+                         "field": "$global.attr(stepsLabel);"
+                    },
+                    {
+                         "value": "1",
+                         "field": "$global.attr(stepperCount);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "automatic": true,
+          "appearance": {
+               "label": "Continue",
+               "style": "primary",
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "assignStepLabel"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_guest_flow+consumer_getting_started"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_guest_flow+consumer_getting_started+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "1f98fa17dc5f5e1a404cdb74cf449f4a7c08fa41de4d31c47b3ad3f8804aec9b",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_getting_started+assignStepLabel",
+     "clcommon__Validation_Class__c": null
+}

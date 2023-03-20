@@ -1,0 +1,43 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "backButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "backButton",
+          "property": {},
+          "appearance": {
+               "style": "secondary",
+               "label": "Back",
+               "position": "bottom-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(back_officer_party_step).appearance(current);",
+                         "value": "previous"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party_collateral"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_party_collateral_list",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_collateral+backButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "53aa089522d09003ababf893d00213fad6fcb8dfca2e3b3a9a80acf60f5a88bb",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_party_collateral+backButton",
+     "clcommon__Validation_Class__c": null
+}

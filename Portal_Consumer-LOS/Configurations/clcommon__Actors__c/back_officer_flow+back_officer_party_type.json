@@ -1,0 +1,70 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "are_you_customer": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(are_you_customer); == \"Yes\" ? \"1\" : \"2\" };",
+                                   "field": "$global.attr(accountTypeNextStage);"
+                              },
+                              {
+                                   "value": "@mathjs{$this.attr(are_you_customer); == \"Yes\" ? \"$global.attr(partyAccountId);\" : \"\" };",
+                                   "field": "$global.attr(partyAccountId);"
+                              },
+                              {
+                                   "value": "@mathjs{$this.attr(are_you_customer); == \"Yes\" ? true : false };",
+                                   "field": "$global.attr(showSearchPartiesPage);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "grid": {
+                    "field": {
+                         "are_you_customer": {
+                              "selectButton": {
+                                   "xs": 12,
+                                   "sm": 6
+                              }
+                         }
+                    }
+               },
+               "noLabelFields": [
+                    "are_you_customer"
+               ],
+               "fieldColumns": 1,
+               "editable": true,
+               "title": "Does the customer have an existing relationship with the Bank?"
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "structureName": "back_officer_customer_query"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_party_type",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_type",
+     "clcommon__Release_Checksum__c": "b2c658ecea569762dbbea4f85f50978398a0bc38ebd71c19f6bf813eeb7706dd"
+}

@@ -1,0 +1,77 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "loanPurposeExistingNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "loanPurposeExistingNext",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Next",
+               "render": "$global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined"
+          },
+          "remoteActionArguments": {
+               "contactId": "$global.attr(borrowerContactId);",
+               "genesis__Applications__c": {
+                    "genesis__Other_Purpose__c": "$this.attr(genesis__Application__r.genesis__Other_Purpose__c);",
+                    "genesis__CL_Purpose__c": "$global.attr(purpose);",
+                    "genesis__CL_Product__c": "$global.attr(loanProduct);",
+                    "genesis__Loan_Amount__c": "$state(back_officer_loan_amount).attr(genesis__Loan_Amount__c);",
+                    "solcommon__Portal_Stage__c": "AboutYou",
+                    "solcommon__Multiple_Applicant__c": "$global.attr(multiApplicant);",
+                    "Id": "$global.attr(applicationId);"
+               }
+          },
+          "validation": [
+               "back_officer_purpose",
+               "back_officer_purpose_existing_div",
+               "back_officer_loan_amount"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(applicationId);",
+                         "value": "$result.attr(applicationId);"
+                    },
+                    {
+                         "field": "$global.attr(borrowerAccountId);",
+                         "value": "$result.attr(accountId);"
+                    },
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(loanAmount);",
+                         "value": "$state(back_officer_loan_amount).attr(genesis__Loan_Amount__c);"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_purpose_existing_div"
+     },
+     "clcommon__Component_Structure_Name__c": "back_office_loan_existing_purpose_div",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_purpose_existing_div+loanPurposeExistingNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "9fc5e6e8810e27fc697a3c426f88bc1e3107185286f1eec832f486eb580f51f3",
+     "clcommon__Remote_Action_Class__c": "consumerlos.PortalSaveConsumerApplication",
+     "clcommon__Unique_Action_Name__c": "back_officer_purpose_existing_div+loanPurposeExistingNext",
+     "clcommon__Validation_Class__c": null
+}

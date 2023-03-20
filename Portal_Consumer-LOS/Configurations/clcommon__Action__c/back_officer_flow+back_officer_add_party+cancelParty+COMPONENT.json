@@ -1,0 +1,41 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "cancelParty",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "cancelParty",
+          "property": {},
+          "appearance": {
+               "style": "secondary",
+               "label": "Cancel"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "back_officer_add_party_container"
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_add_party"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_add_party_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_add_party+cancelParty+COMPONENT",
+     "clcommon__Release_Checksum__c": "d8fd8f31ba5b389d0dd31a2cda7434b0073a58da28e40d54edacecb178f6230e",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_add_party+cancelParty",
+     "clcommon__Validation_Class__c": null
+}

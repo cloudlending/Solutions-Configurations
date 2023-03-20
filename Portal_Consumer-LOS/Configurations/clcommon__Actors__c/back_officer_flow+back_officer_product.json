@@ -1,0 +1,77 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "updates": [
+                         {
+                              "value": "back_officer_product_fetch",
+                              "name": "$nav.reloads.add;"
+                         }
+                    ]
+               },
+               "fieldChange": {
+                    "genesis__CL_Product__c": {
+                         "assignments": [
+                              {
+                                   "value": "$this.attr(genesis__CL_Product__c);",
+                                   "field": "$global.attr(loanProduct);"
+                              },
+                              {
+                                   "value": "$this.attr(genesis__CL_Product__r).attr(clcommon__Product_Name__c);",
+                                   "field": "$global.attr(productName);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "grid": {
+                    "field": {
+                         "genesis__CL_Product__c": {
+                              "selectButton": {
+                                   "sm": 6,
+                                   "xs": 12
+                              }
+                         }
+                    }
+               },
+               "title": "Select the type of Loan",
+               "noLabelFields": [
+                    "genesis__CL_Product__c"
+               ],
+               "fieldColumns": 1,
+               "editable": "$global.attr(applicationId);==undefined or $global.attr(applicationId);==\"\""
+          },
+          "property": {
+               "whereClause": {
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "back_officer_product_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_product",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_product",
+     "clcommon__Release_Checksum__c": "7146f2994bf2ad7b24c64c979603530199ccd9842417dc01267680e09b874e18"
+}

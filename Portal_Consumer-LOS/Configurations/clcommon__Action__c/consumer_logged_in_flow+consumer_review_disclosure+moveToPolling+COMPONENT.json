@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "moveToPolling",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "animation",
+                         "field": "$nav(consumer_review_step).appearance(current);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "portalStage": "manualReview",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Back",
+               "style": "secondary",
+               "render": false
+          },
+          "property": {},
+          "name": "moveToPolling"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_review_disclosure"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_review_disclosure+moveToPolling+COMPONENT",
+     "clcommon__Release_Checksum__c": "fcafb73374487c8ed894395a9b46ea665ec8a6fb81ff26c70dca55befa4a04c1",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "consumer_review_disclosure+moveToPolling",
+     "clcommon__Validation_Class__c": null
+}

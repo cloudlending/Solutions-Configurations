@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveLiabilityValidate",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "nextLiability"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "genesis__Liability__c": "$this;",
+               "contactId": "$global.attr(contactId);"
+          },
+          "appearance": {
+               "style": "primary",
+               "label": "Save",
+               "render": false,
+               "position": "bottom-left"
+          },
+          "property": {},
+          "name": "saveLiabilityValidate"
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_liability_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability+saveLiabilityValidate+COMPONENT",
+     "clcommon__Release_Checksum__c": "f5f87416f5a449833b301bc6ac203dbd3922853a559cc700badf476943f04b25",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveLiabilityInformation",
+     "clcommon__Unique_Action_Name__c": "consumer_liability+saveLiabilityValidate",
+     "clcommon__Validation_Class__c": null
+}

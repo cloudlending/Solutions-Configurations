@@ -1,0 +1,73 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveParty",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "saveParty",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Save"
+          },
+          "remoteActionArguments": {
+               "contact": {
+                    "FirstName": "$this.attr(clcommon__Contact__r.FirstName);",
+                    "LastName": "$this.attr(clcommon__Contact__r.LastName);",
+                    "MailingStreet": "$this.attr(clcommon__Contact__r.MailingStreet);",
+                    "MailingCity": "$this.attr(clcommon__Contact__r.MailingCity);",
+                    "MailingState": "$this.attr(clcommon__Contact__r.MailingState);",
+                    "MailingPostalCode": "$this.attr(clcommon__Contact__r.MailingPostalCode);",
+                    "MobilePhone": "$this.attr(clcommon__Contact__r.MobilePhone);",
+                    "Email": "$this.attr(clcommon__Contact__r.Email);",
+                    "ints__Social_Security_Number__c": "$this.attr(clcommon__Contact__r.ints__Social_Security_Number__c);",
+                    "id": "$this.attr(clcommon__Contact__r.Id);"
+               },
+               "clcommon__Party__c": {
+                    "clcommon__Percent_Ownership__c": "$this.attr(clcommon__Percent_Ownership__c);",
+                    "solcommon__Is_Guarantor__c": "$this.attr(solcommon__Is_Guarantor__c);",
+                    "id": "$this.attr(Id);"
+               },
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               }
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": "$result.attr(party);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "back_officer_party"
+                    },
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "back_officer_add_party_container"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_add_party"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_add_party_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_add_party+saveParty+COMPONENT",
+     "clcommon__Release_Checksum__c": "b5c68eabbe06b5fc54c02e9f2bda90a7dbac644b59604afe4215a21760e6c135",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalAdditionOwnerInfo",
+     "clcommon__Unique_Action_Name__c": "back_officer_add_party+saveParty",
+     "clcommon__Validation_Class__c": null
+}

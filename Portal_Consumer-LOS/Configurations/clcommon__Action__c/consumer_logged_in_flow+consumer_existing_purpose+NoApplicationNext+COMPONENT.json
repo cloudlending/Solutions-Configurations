@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "NoApplicationNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$result.attr(applicationId);",
+                         "field": "$global.attr(tempApplicationId);"
+                    }
+               ]
+          },
+          "validation": [
+               "consumer_purpose",
+               "consumer_existing_purpose",
+               "consumer_loan_amount"
+          ],
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "solcommon__Multiple_Applicant__c": "$global.attr(multiApplicant);",
+                    "genesis__Loan_Amount__c": "$state(consumer_loan_amount).attr(genesis__Application__r.genesis__Loan_Amount__c);",
+                    "genesis__CL_Product__c": "$global.attr(loanProduct);",
+                    "genesis__CL_Purpose__c": "$global.attr(loanPurpose);",
+                    "genesis__Other_Purpose__c": "$this.attr(genesis__Application__r.genesis__Other_Purpose__c);"
+               }
+          },
+          "appearance": {
+               "render": "($global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined) and $global.attr(productName); != \"Credit Card\" and $global.attr(loanPurposeName);!=\"\" and $global.attr(loanPurposeName);!=undefined",
+               "label": "Next",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "NoApplicationNext"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_loan_existing_purpose",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose+NoApplicationNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "09a106d96342cc074f4eb8d1cdbd24cbc9fb76a9d395e02c58173af0802cb89a",
+     "clcommon__Remote_Action_Class__c": "consumerlos.PortalSaveConsumerApplication",
+     "clcommon__Unique_Action_Name__c": "consumer_existing_purpose+NoApplicationNext",
+     "clcommon__Validation_Class__c": null
+}

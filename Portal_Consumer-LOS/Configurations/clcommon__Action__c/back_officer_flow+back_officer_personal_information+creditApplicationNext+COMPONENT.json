@@ -1,0 +1,70 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "creditApplicationNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "creditApplicationNext",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "label": "Next",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "genesis__Loan_Amount__c": 0,
+                    "solcommon__Portal_Stage__c": "MoreInfo",
+                    "genesis__Requested_Loan_Amount__c": 1,
+                    "genesis__Credit_Limit__c": 1,
+                    "genesis__CL_Product__c": "$global.attr(loanProduct);"
+               },
+               "contactId": "$global.attr(borrowerContactId);"
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(applicationId);",
+                         "value": "$result.attr(applicationId);"
+                    },
+                    {
+                         "field": "$global.attr(borrowerAccountId);",
+                         "value": "$result.attr(accountId);"
+                    },
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(loanType);",
+                         "value": ""
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 7,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_personal_information"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_personal_information_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_personal_information+creditApplicationNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "f4e24361f474d08b728f74c2ef2fab1e133d6bc9fbaa522dbe5879dbee61702f",
+     "clcommon__Remote_Action_Class__c": "consumerlos.PortalSaveConsumerApplication",
+     "clcommon__Unique_Action_Name__c": "back_officer_personal_information+creditApplicationNext",
+     "clcommon__Validation_Class__c": null
+}

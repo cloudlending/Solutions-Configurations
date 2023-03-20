@@ -1,0 +1,88 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_add_party_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_officer_add_party_query",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "ed048baa785c3ff458a8ab17c76687ee5f3433df6ba54dcee1e023293cf878a4",
+     "clcommon__Unique_Name__c": "back_officer_add_party_query",
+     "clcommon__data__c": {
+          "structureName": "back_officer_add_party_query",
+          "sections": [
+               {
+                    "id": "a8d65e03-c676-4bda-9f5a-76c8b3de7b30",
+                    "name": "Party Name",
+                    "fields": [
+                         {
+                              "id": "e95ba66c-1686-4ad4-a9d7-a2dbe0267ba9",
+                              "fieldName": "FirstName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "First Name",
+                                   "ariaLabel": "fname"
+                              }
+                         },
+                         {
+                              "id": "aff694bb-9aed-45d3-93c3-c3d754fda242",
+                              "fieldName": "LastName",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Last Name",
+                                   "ariaLabel": "lname"
+                              }
+                         },
+                         {
+                              "id": "c30550dc-56af-46c6-a34d-1e1c6398d02b",
+                              "fieldName": "Phone",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Phone Number",
+                                   "required": true,
+                                   "regex": "^\\d{10}$",
+                                   "messages": {
+                                        "requiredErrorText": "Phone number is required.",
+                                        "regexErrorText": "Invalid phone number"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "delimiters": [
+                                                  "(",
+                                                  ") ",
+                                                  "-"
+                                             ],
+                                             "numericOnly": true,
+                                             "blocks": [
+                                                  0,
+                                                  3,
+                                                  3,
+                                                  4
+                                             ]
+                                        }
+                                   },
+                                   "ariaLabel": "Phone Number"
+                              }
+                         },
+                         {
+                              "id": "c6d7ade5-713d-4e26-84af-25e264f7d773",
+                              "fieldName": "Email",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Email Address",
+                                   "required": true,
+                                   "regex": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$",
+                                   "messages": {
+                                        "requiredErrorText": "Email address is required.",
+                                        "regexErrorText": "Invalid email address"
+                                   },
+                                   "ariaLabel": "Email Address"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

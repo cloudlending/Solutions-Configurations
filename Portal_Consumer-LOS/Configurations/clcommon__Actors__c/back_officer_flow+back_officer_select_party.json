@@ -1,0 +1,75 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "clickRecord": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(Account.Id);",
+                              "field": "$global.attr(partyAccountId);"
+                         },
+                         {
+                              "value": "$this.attr(Id);",
+                              "field": "$global.attr(partyContactId);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "pagination": {
+                    "lastLinkText": "last_page",
+                    "nextLinkText": "chevron_right",
+                    "previousLinkText": "chevron_left",
+                    "firstLinkText": "first_page",
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "numberOfPageLinks": 2,
+                    "numberOfRecordsPerPage": 10
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No Parties found!",
+               "editableFields": {
+                    "Id": false,
+                    "Account.Id": false,
+                    "Email": false,
+                    "ints__Social_Security_Number__c": false,
+                    "Phone": false,
+                    "Account.Name": false
+               },
+               "renderFields": {
+                    "Id": false,
+                    "Account.Id": false
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "borrowerAccountId": "$global.attr(borrowerAccountId);",
+                    "individual": "Individual",
+                    "email": "$global.attr(fetchPartiesBy);",
+                    "accname": "$global.attr(fetchPartiesBy);"
+               },
+               "structureName": "back_officer_select_party_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_select_party",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_select_party",
+     "clcommon__Release_Checksum__c": "a445a22da219a73e5b7a3c25e7d5306834ddd9e86a95db41d70461939b945d04"
+}

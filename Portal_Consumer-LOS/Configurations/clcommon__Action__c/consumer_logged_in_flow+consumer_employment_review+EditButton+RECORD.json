@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "EditButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "updates": [
+                    {
+                         "value": "consumer_add_employer_container",
+                         "name": "$nav.overlay.add;"
+                    },
+                    {
+                         "value": [
+                              "consumer_save_employment",
+                              "consumer_employment_review",
+                              "consumer_save_employer"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$this.attr(Id);",
+                         "field": "$global.attr(employmentId);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Edit",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "EditButton"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_employment_review"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_employment_info",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_employment_review+EditButton+RECORD",
+     "clcommon__Release_Checksum__c": "0c99581d01eb64bcde0489538aee2b07231b9ab2ec200ae6752738e50981aada",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_employment_review+EditButton",
+     "clcommon__Validation_Class__c": null
+}

@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "renderFields": {
+                    "Id": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "showSectionTitle": true,
+               "sectionStyle": "layout",
+               "editable": true,
+               "fieldColumns": 1,
+               "title": "Input the requested loan amount"
+          },
+          "property": {
+               "whereClause": {
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "back_officer_fetch_applications"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_loan_amount",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_loan_amount",
+     "clcommon__Release_Checksum__c": "46d8659616aed6a86d72bacffcab61320f28a9397274aa2358beb908d2c9f3cf"
+}

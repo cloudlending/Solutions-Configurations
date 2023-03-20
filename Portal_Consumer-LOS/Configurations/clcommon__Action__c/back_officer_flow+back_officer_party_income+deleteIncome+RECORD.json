@@ -1,0 +1,46 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "deleteIncome",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "deleteIncome",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>  Delete",
+               "style": "secondary"
+          },
+          "remoteActionArguments": {
+               "objectName": "income",
+               "recordId": "$this.attr(Id);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "back_officer_party_income"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_party_income"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_party_income_query",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_income+deleteIncome+RECORD",
+     "clcommon__Release_Checksum__c": "00da62d055886ebf341b8472cae6ea9618e4538578539b9a1d638df0a0758277",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalGenericDeleteAPI",
+     "clcommon__Unique_Action_Name__c": "back_officer_party_income+deleteIncome",
+     "clcommon__Validation_Class__c": null
+}

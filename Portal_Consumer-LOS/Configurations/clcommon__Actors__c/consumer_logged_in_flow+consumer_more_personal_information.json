@@ -1,0 +1,95 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "clcommon__Contact__r.clcommon__Personal_Information__r.clcommon__Not_A_Citizen__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(clcommon__Contact__r.clcommon__Personal_Information__r.clcommon__Not_A_Citizen__c); == false? \"\":  $this.attr(clcommon__Contact__r.clcommon__Country_of_Citizenship__c);};",
+                                   "field": "$this.attr(clcommon__Contact__r.clcommon__Country_of_Citizenship__c);"
+                              }
+                         ]
+                    }
+               },
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{ $global.attr(typeOfApplicant); == \"Joint Credit\" ? \"OwnerInformation\" : \"Employment\" };",
+                              "field": "$global.attr(portalStage);"
+                         },
+                         {
+                              "value": "$this.attr(clcommon__Contact__r.clcommon__Legal_Entity_Type__c);",
+                              "field": "$global.attr(legalEntityType);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editableFields": {
+                    "clcommon__Contact__r.Id": false,
+                    "clcommon__Contact__r.clcommon__Personal_Information__r.Id": false,
+                    "clcommon__Contact__r.clcommon__Legal_Entity_Type__c": false,
+                    "Id": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No income information available",
+               "renderFields": {
+                    "clcommon__Contact__r.Id": false,
+                    "clcommon__Contact__r.clcommon__Personal_Information__r.Id": false,
+                    "clcommon__Contact__r.clcommon__Monthly_Residential_Payment_Amount__c": "$this.attr(clcommon__Contact__r.clcommon__Residential_Status__c);!=\"\" and $this.attr(clcommon__Contact__r.clcommon__Residential_Status__c);!=undefined",
+                    "clcommon__Contact__r.clcommon__Country_of_Citizenship__c": "$this.attr(clcommon__Contact__r.clcommon__Personal_Information__r.clcommon__Not_A_Citizen__c); == true",
+                    "clcommon__Contact__r.clcommon__Service_Member_Military_Status__c": "$this.attr(clcommon__Contact__r.clcommon__Military_Relationship__c); == \"Service Member\" or $this.attr(clcommon__Contact__r.clcommon__Military_Relationship__c); ==\"Service Member Dependent\"",
+                    "clcommon__Contact__r.clcommon__Legal_Entity_Type__c": false,
+                    "Id": false
+               },
+               "grid": {
+                    "field": {
+                         "solcommon__Consent_To_Disclosure_And_Document__c": {
+                              "sm": 12
+                         },
+                         "genesis__Credit_Check_Consent__c": {
+                              "sm": 12
+                         },
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true,
+               "title": "More information about you"
+          },
+          "property": {
+               "whereClause": {
+                    "applicationId": "$global.attr(applicationId);",
+                    "accountId": "$global.attr(userInfo).attr(accountId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "consumer_more_personal_information"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_more_personal_information",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_more_personal_information",
+     "clcommon__Release_Checksum__c": "3816419822105969e6dc85686f5449b4a6ee6c0c8a61b7c9dddf4292eeecd886"
+}

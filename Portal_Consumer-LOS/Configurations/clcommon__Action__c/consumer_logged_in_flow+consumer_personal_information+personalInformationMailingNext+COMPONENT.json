@@ -1,0 +1,78 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "personalInformationMailingNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "updateParty"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$this.attr(clcommon__Contact__r.Id);",
+                         "field": "$global.attr(contactId);"
+                    }
+               ]
+          },
+          "validation": [
+               "consumer_personal_information"
+          ],
+          "remoteActionArguments": {
+               "contact": {
+                    "clcommon__Current_Zip_Code__c": "$this.attr(clcommon__Contact__r.clcommon__Current_Zip_Code__c);",
+                    "clcommon__Current_State__c": "$this.attr(clcommon__Contact__r.clcommon__Current_State__c);",
+                    "clcommon__Current_City__c": "$this.attr(clcommon__Contact__r.clcommon__Current_City__c);",
+                    "clcommon__Current_Street__c": "$this.attr(clcommon__Contact__r.clcommon__Current_Street__c);",
+                    "clcommon__Current_Country__c": "USA",
+                    "clcommon__Years_At_Current_Address__c": "$this.attr(clcommon__Contact__r.clcommon__Years_At_Current_Address__c);",
+                    "email": "$this.attr(clcommon__Contact__r.Email);",
+                    "clcommon__Mailing_Address_Same_as_Current_Address__c": "$this.attr(clcommon__Contact__r.clcommon__Mailing_Address_Same_as_Current_Address__c);",
+                    "Phone": "$this.attr(clcommon__Contact__r.Phone);",
+                    "lastName": "$this.attr(clcommon__Contact__r.LastName);",
+                    "firstName": "$this.attr(clcommon__Contact__r.FirstName);",
+                    "MailingCountry": "USA",
+                    "MailingStreet": "$this.attr(clcommon__Contact__r.MailingStreet);",
+                    "MailingCity": "$this.attr(clcommon__Contact__r.MailingCity);",
+                    "MailingState": "$this.attr(clcommon__Contact__r.MailingState);",
+                    "MailingPostalCode": "$this.attr(clcommon__Contact__r.MailingPostalCode);",
+                    "id": "$this.attr(clcommon__Contact__r.Id);",
+                    "OtherStreet": "$this.attr(clcommon__Contact__r.OtherStreet);",
+                    "OtherCity": "$this.attr(clcommon__Contact__r.OtherCity);",
+                    "OtherState": "$this.attr(clcommon__Contact__r.OtherState);",
+                    "OtherPostalCode": "$this.attr(clcommon__Contact__r.OtherPostalCode);"
+               }
+          },
+          "appearance": {
+               "render": "not $this.attr(clcommon__Contact__r.clcommon__Mailing_Address_Same_as_Current_Address__c);",
+               "position": "bottom-right",
+               "label": "Next",
+               "disableWhenLoading": true,
+               "style": "primary"
+          },
+          "property": {},
+          "name": "personalInformationMailingNext"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_personal_information"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_personal_information_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_personal_information+personalInformationMailingNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "3d3422f11b6eddea226182ef58c4225c1f3e4f499790b6be40272c9cf3cfc1f7",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSavePersonalInfo",
+     "clcommon__Unique_Action_Name__c": "consumer_personal_information+personalInformationMailingNext",
+     "clcommon__Validation_Class__c": null
+}

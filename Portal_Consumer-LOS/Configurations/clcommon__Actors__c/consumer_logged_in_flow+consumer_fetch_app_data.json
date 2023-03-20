@@ -1,0 +1,40 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c);",
+                              "field": "$nav(application_flow_steps).appearance(current);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(userInfo).attr(accountId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "consumer_loan_amount_details"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_fetch_app_data",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_fetch_app_data",
+     "clcommon__Release_Checksum__c": "e4466d75e2736b3bcc826c3a19231aa3381c56f7a087000bb56da6ef2fa16746"
+}

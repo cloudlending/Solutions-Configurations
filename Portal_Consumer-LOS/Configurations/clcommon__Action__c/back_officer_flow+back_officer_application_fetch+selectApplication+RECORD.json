@@ -1,0 +1,100 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "selectApplication",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "selectApplication",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Continue"
+          },
+          "remoteActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(applicationStatus);",
+                         "value": "$this.attr(genesis__Application__r.genesis__Status__c);"
+                    },
+                    {
+                         "field": "$global.attr(legalEntityType);",
+                         "value": "$this.attr(clcommon__Contact__r.clcommon__Legal_Entity_Type__r.Id);"
+                    },
+                    {
+                         "field": "$global.attr(portalStage);",
+                         "value": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c);"
+                    },
+                    {
+                         "field": "$global.attr(purpose);",
+                         "value": "$this.attr(genesis__Application__r.genesis__CL_Purpose__r.Name);"
+                    },
+                    {
+                         "field": "$global.attr(showCollateral);",
+                         "value": "@mathjs{($this.attr(genesis__Application__r.genesis__Asset_Class__c); == \"Consumer Secured\" or $this.attr(genesis__Application__r.genesis__Asset_Class__c); ==\"Consumer Real Estate\") ? true : false };"
+                    },
+                    {
+                         "field": "$global.attr(productName);",
+                         "value": "$this.attr(genesis__Application__r.genesis__CL_Product_Name__c);"
+                    },
+                    {
+                         "field": "$global.attr(borrowerAccountId);",
+                         "value": "$this.attr(clcommon__Account__c);"
+                    },
+                    {
+                         "field": "$global.attr(borrowerContactId);",
+                         "value": "$this.attr(clcommon__Contact__c);"
+                    },
+                    {
+                         "field": "$global.attr(typeOfApplicant);",
+                         "value": "@mathjs{($this.attr(genesis__Application__r.solcommon__Multiple_Applicant__c); == true ? \"Joint Credit\" : \"Individual Credit\" )};"
+                    },
+                    {
+                         "field": "$global.attr(loanProduct);",
+                         "value": "$this.attr(genesis__Application__r.genesis__CL_Product__c);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "back_officer_application_fetch"
+                         ]
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"manualReview\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"ReviewAndSubmit\"",
+                         "name": "goToReview"
+                    },
+                    {
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"AboutYou\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"MoreInfo\"",
+                         "name": "goToPersonalInfo"
+                    },
+                    {
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"Employment\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"Collateral\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"PersonalIncome\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"AssetLiability\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); ==  \"OwnerInformation\"",
+                         "name": "goToflow"
+                    }
+               ]
+          }
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_application_fetch"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_application_query",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_application_fetch+selectApplication+RECORD",
+     "clcommon__Release_Checksum__c": "14a1cd16d84d00e41863c97ea43fbf6bccdbb93b9e965194e3ad81740f68afae",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_application_fetch+selectApplication",
+     "clcommon__Validation_Class__c": null
+}

@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "saveParty",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "value": [
+                              "consumer_party",
+                              "consumer_add_party"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    },
+                    {
+                         "value": "consumer_add_party_container",
+                         "name": "$nav.overlay.remove;"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "permissionSetName": "Consumer_Unsecured_Borrower",
+               "contact": {
+                    "FirstName": "$this.attr(FirstName);",
+                    "LastName": "$this.attr(LastName);",
+                    "Phone": "$this.attr(Phone);",
+                    "Email": "$this.attr(Email);",
+                    "clcommon__Legal_Entity_Type__c": "$global.attr(legalEntityType);"
+               },
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "style": "primary",
+               "label": "Save"
+          },
+          "property": {},
+          "name": "saveParty"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_party"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_add_party_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_party+saveParty+COMPONENT",
+     "clcommon__Release_Checksum__c": "f97a0e9131ec5b372b9f5d849c642baebe93d5beae451bbd4f29d87a3751f9ae",
+     "clcommon__Remote_Action_Class__c": "consumerlos.PortalCreateJointPartyAndUser",
+     "clcommon__Unique_Action_Name__c": "consumer_add_party+saveParty",
+     "clcommon__Validation_Class__c": null
+}

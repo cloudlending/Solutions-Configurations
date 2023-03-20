@@ -1,0 +1,77 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "creditApplicationNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "updates": [
+                    {
+                         "value": [
+                              "consumer_product",
+                              "consumer_product_fetch"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$result.attr(applicationId);",
+                         "field": "$global.attr(applicationId);"
+                    },
+                    {
+                         "value": 0,
+                         "field": "$nav(application_flow_steps).appearance(current);"
+                    },
+                    {
+                         "value": "AboutYou",
+                         "field": "$nav(application_flow_steps).appearance(current);"
+                    }
+               ]
+          },
+          "validation": [
+               "consumer_product"
+          ],
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "genesis__Loan_Amount__c": 0,
+                    "solcommon__Portal_Stage__c": "AboutYou",
+                    "genesis__Requested_Loan_Amount__c": 1,
+                    "genesis__Credit_Limit__c": 1,
+                    "genesis__CL_Product__c": "$this.attr(genesis__CL_Product__c);"
+               }
+          },
+          "appearance": {
+               "render": "$global.attr(productName); == \"Credit Card\" and $global.attr(partyType); == $global.attr(borrowerParty); and ( $global.attr(applicationId);==null or $global.attr(applicationId);==undefined or $global.attr(applicationId);==\"\")",
+               "label": "Next",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "creditApplicationNext"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_product"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_product_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_product+creditApplicationNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "a250805961086f52aea523bbddce0918e7b994ca07fbdf0f97ab56624eb72f3a",
+     "clcommon__Remote_Action_Class__c": "consumerlos.PortalSaveConsumerApplication",
+     "clcommon__Unique_Action_Name__c": "consumer_product+creditApplicationNext",
+     "clcommon__Validation_Class__c": null
+}

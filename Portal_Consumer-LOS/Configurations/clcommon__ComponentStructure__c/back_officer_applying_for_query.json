@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_applying_for_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_officer_applying_for_query",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "72d3b00cefb41c9c7d85222cb1a9f1cea48d8294f1ac79ed145a0944cf8abb7f",
+     "clcommon__Unique_Name__c": "back_officer_applying_for_query",
+     "clcommon__data__c": {
+          "structureName": "back_officer_applying_for_query",
+          "sections": [
+               {
+                    "id": "",
+                    "fields": [
+                         {
+                              "id": "7b49",
+                              "fieldName": "are_you_applying_for",
+                              "fieldUi": {
+                                   "fieldType": "selectbuttons",
+                                   "label": "",
+                                   "defaultValue": "$global.attr(typeOfApplicant);",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "id": "individual",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Individual Credit",
+                                             "optionValue": "Individual Credit"
+                                        },
+                                        {
+                                             "id": "joint",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Joint Credit",
+                                             "optionValue": "Joint Credit"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Please select an option."
+                                   },
+                                   "ariaLabel": "Are you applying for?"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

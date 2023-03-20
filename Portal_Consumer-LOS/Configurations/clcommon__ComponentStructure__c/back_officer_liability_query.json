@@ -1,0 +1,321 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_liability_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_officer_liability_query",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "0e20fe0ef6426b13decf0b1f2720d14d17f29554d460e2c9f46a23fcca4ce38a",
+     "clcommon__Unique_Name__c": "back_officer_liability_query",
+     "clcommon__data__c": {
+          "structureName": "back_officer_liability_query",
+          "tableName": "genesis__liability__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':applicationId' and genesis__Contact__r.AccountId = ':accountId' and solcommon__Is_Credit_Report_Liability__c = false"
+          },
+          "sections": [
+               {
+                    "id": "bef586d6-64a8-4964-a64c-0661161c8c51",
+                    "fields": [
+                         {
+                              "id": "a519d79c-69cb-4cd6-99a2-042ed634bf82",
+                              "fieldName": "genesis__Liability_Type__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Liability Type",
+                                   "required": true,
+                                   "prompt": "Select",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Personal Loan",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Personal Loan",
+                                             "optionValue": "Personal Loan"
+                                        },
+                                        {
+                                             "id": "Student Loan",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Student Loan",
+                                             "optionValue": "Student Loan"
+                                        },
+                                        {
+                                             "id": "Credit Card",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Credit Card",
+                                             "optionValue": "Credit Card"
+                                        },
+                                        {
+                                             "id": "Notes Payable",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Notes Payable",
+                                             "optionValue": "Notes Payable"
+                                        },
+                                        {
+                                             "id": "Real Estate/Mortgage",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Real Estate/Mortgage",
+                                             "optionValue": "Real Estate/Mortgage"
+                                        },
+                                        {
+                                             "id": "Other Expenses",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Other Expenses",
+                                             "optionValue": "Other Expenses"
+                                        },
+                                        {
+                                             "id": "Fed and State Tax",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Fed and State Tax",
+                                             "optionValue": "Fed and State Tax"
+                                        },
+                                        {
+                                             "id": "HELOC",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "HELOC",
+                                             "optionValue": "HELOC"
+                                        },
+                                        {
+                                             "id": "Utility Payments",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Utility Payments",
+                                             "optionValue": "Utility Payments"
+                                        },
+                                        {
+                                             "id": "Family Expenses",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Family Expenses",
+                                             "optionValue": "Family Expenses"
+                                        },
+                                        {
+                                             "id": "Other",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Other",
+                                             "optionValue": "Other"
+                                        },
+                                        {
+                                             "id": "Public OR Government Education",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Public OR Government Education",
+                                             "optionValue": "Public OR Government Education"
+                                        },
+                                        {
+                                             "id": "Groceries",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Groceries",
+                                             "optionValue": "Groceries"
+                                        },
+                                        {
+                                             "id": "General Basic Insurances",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "General Basic Insurances",
+                                             "optionValue": "General Basic Insurances"
+                                        },
+                                        {
+                                             "id": "Investment property costs",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Investment property costs",
+                                             "optionValue": "Investment property costs"
+                                        },
+                                        {
+                                             "id": "Medical and Health",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Medical and Health",
+                                             "optionValue": "Medical and Health"
+                                        },
+                                        {
+                                             "id": "Recreation And Entertainment",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Recreation And Entertainment",
+                                             "optionValue": "Recreation And Entertainment"
+                                        },
+                                        {
+                                             "id": "Telephone Internet Pay TVMedia Streaming",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Telephone Internet Pay TVMedia Streaming",
+                                             "optionValue": "Telephone Internet Pay TVMedia Streaming"
+                                        },
+                                        {
+                                             "id": "Transport",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Transport",
+                                             "optionValue": "Transport"
+                                        },
+                                        {
+                                             "id": "Primary Residence Costs",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Primary Residence Costs",
+                                             "optionValue": "Primary Residence Costs"
+                                        },
+                                        {
+                                             "id": "Other Living Expense",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Other Living Expense",
+                                             "optionValue": "Other Living Expense"
+                                        },
+                                        {
+                                             "id": "Pets",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Pets",
+                                             "optionValue": "Pets"
+                                        },
+                                        {
+                                             "id": "Rent/Board",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Rent/Board",
+                                             "optionValue": "Rent/Board"
+                                        },
+                                        {
+                                             "id": "Non-Government school primary and secondary fees",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Non-Government school primary and secondary fees",
+                                             "optionValue": "Non-Government school primary and secondary fees"
+                                        },
+                                        {
+                                             "id": "HECS/HELP",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "HECS/HELP",
+                                             "optionValue": "HECS/HELP"
+                                        },
+                                        {
+                                             "id": "Lease payments",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Lease payments",
+                                             "optionValue": "Lease payments"
+                                        },
+                                        {
+                                             "id": "Alimony and maintenance payments",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Alimony and maintenance payments",
+                                             "optionValue": "Alimony and maintenance payments"
+                                        },
+                                        {
+                                             "id": "Medical charges",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Medical charges",
+                                             "optionValue": "Medical charges"
+                                        },
+                                        {
+                                             "id": "Legal, accounting and tax agent fees",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Legal, accounting and tax agent fees",
+                                             "optionValue": "Legal, accounting and tax agent fees"
+                                        },
+                                        {
+                                             "id": "Counselling services",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Counselling services",
+                                             "optionValue": "Counselling services"
+                                        },
+                                        {
+                                             "id": "Union and professional association fees",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Union and professional association fees",
+                                             "optionValue": "Union and professional association fees"
+                                        },
+                                        {
+                                             "id": "Sickness and personal accident insurance",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Sickness and personal accident insurance",
+                                             "optionValue": "Sickness and personal accident insurance"
+                                        },
+                                        {
+                                             "id": "Superannuation, annuities, and life insurance",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Superannuation, annuities, and life insurance",
+                                             "optionValue": "Superannuation, annuities, and life insurance"
+                                        },
+                                        {
+                                             "id": "Existing Loan",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Existing Loan",
+                                             "optionValue": "Existing Loan"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "Liability Type"
+                              }
+                         },
+                         {
+                              "id": "00242078-22b1-4cbe-9fc3-5cafe5c919d5",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "83c49574-045c-40dc-956d-b461b4924efd",
+                              "fieldName": "genesis__Amount_Owing__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Amount Owing",
+                                   "placeholderText": "Enter Amount Owing",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Amount Owing"
+                              }
+                         },
+                         {
+                              "id": "983ed483-3cca-49d6-948b-c8ffef3d2be8",
+                              "fieldName": "genesis__Contact__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Contact ID",
+                                   "ariaLabel": "Contact ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

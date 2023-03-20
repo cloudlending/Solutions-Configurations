@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "submitApplicantNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "submitApplicantNext",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Submit",
+               "position": "bottom-left"
+          },
+          "remoteActionArguments": {
+               "accountId": "$global.attr(borrowerAccountId);",
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               }
+          },
+          "successHandler": {
+               "redirect": {
+                    "url": "/apex/consumerlos__ApplicationAgentView?Id=$global.attr(applicationId);"
+               }
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureEnable": "$disclosure(AgentDisclosure);",
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_review_disclosure"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_review_disclosure+submitApplicantNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "ee000d9aeb91108ef833f5b3c4aa3535342a8e6f709078cf762336dd8031ef3d",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalApplicationSubmission",
+     "clcommon__Unique_Action_Name__c": "back_officer_review_disclosure+submitApplicantNext",
+     "clcommon__Validation_Class__c": null
+}

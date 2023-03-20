@@ -1,0 +1,28 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "queuePrimaryText": "<p class=\"attachmentName\">$this.attr(Name);</p><p class=\"uploadedDate\">Updated on: $this.attr(CreatedDate, date, 'MM/dd/yyyy');</p>",
+               "fieldColumns": 1
+          },
+          "property": {
+               "structureName": "consumer_document_preview"
+          },
+          "type": "queue-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_document_list",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_document_list",
+     "clcommon__Release_Checksum__c": "8669ef39f10e4b992b777364434a5d17682dcca4fce53e98f106ae5b9db0a3a3"
+}

@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "blankMessage": "No income information!",
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 6
+                    }
+               },
+               "textBefore": "Alimony, child support or separate maintenance income need not be revealed if the borrower does not wish to have it considered as a basis for repayment.",
+               "templates": {
+                    "record": "<div class=\"customCard\"><div class=\"cardHeader\">$this.attr(Name);</div><div class=\"text label\">$this.attr(genesis__Income_Type__c);</div><div class=\"text\">Monthly Income</div><div class=\"text\">$this.attr(genesis__Amount__c, currency);</div></div>"
+               },
+               "columns": 1,
+               "title": "Income Details",
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(partyAccountId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "back_officer_party_income_query"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_party_income",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party_income",
+     "clcommon__Release_Checksum__c": "fa880ac8949ab0b436bd1ff4c4fef6f02bffb09bad3a61b3caaa5e513e395012"
+}

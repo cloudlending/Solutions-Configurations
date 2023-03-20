@@ -1,0 +1,52 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "EditButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "EditButton",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Edit",
+               "style": "primary"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(applicantId);",
+                         "value": "$this.attr(Id);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "back_officer_edit_applicant_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "back_officer_edit_applicant"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_applicant_review"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_applicant_info",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_applicant_review+EditButton+RECORD",
+     "clcommon__Release_Checksum__c": "739a031439aec4b586c2fd4f0619995dec48b56b1f1f8f8da5b1f47645492d49",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_applicant_review+EditButton",
+     "clcommon__Validation_Class__c": null
+}

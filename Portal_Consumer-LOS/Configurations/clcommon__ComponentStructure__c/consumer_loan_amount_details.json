@@ -1,0 +1,202 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "consumer_loan_amount_details",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "consumer_loan_amount_details",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "88bd0167afd1c067298b1543c123b5d779e05b8296c483adf9352f9569cce2bf",
+     "clcommon__Unique_Name__c": "consumer_loan_amount_details",
+     "clcommon__data__c": {
+          "structureName": "consumer_loan_amount_details",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "clcommon__Account__c = ':accountId' and genesis__Application__c = ':applicationId'"
+          },
+          "sections": [
+               {
+                    "id": "5b2sad5ccad-f477-414d-aba0-0c15ea02b475",
+                    "name": "Loan Amount",
+                    "fields": [
+                         {
+                              "id": "54a86ca6-163c-4084-9790-9eab9e685baa",
+                              "fieldName": "genesis__Application__r.genesis__Loan_Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "",
+                                   "placeholderText": "Enter Amount",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Application__r.genesis__Loan_Amount__c); > 0",
+                                             "message": "<span style=\"color:red\">Loan Amount should be greater than zero</span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Loan amount is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Loan Amount"
+                              }
+                         },
+                         {
+                              "id": "bdab32e2-0d35-4bc4-8347-023316fbb62b",
+                              "fieldName": "genesis__Application__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "3776896f-49ee-4712-a920-ed300b2ba60e",
+                              "fieldName": "genesis__Application__r.solcommon__Portal_Stage__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Portal Stage",
+                                   "selectOptions": [
+                                        {
+                                             "id": "AdditionalOwners",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AdditionalOwners",
+                                             "optionValue": "AdditionalOwners"
+                                        },
+                                        {
+                                             "id": "ApplicationSubmitted",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ApplicationSubmitted",
+                                             "optionValue": "ApplicationSubmitted"
+                                        },
+                                        {
+                                             "id": "autoApprove",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AutoApprove",
+                                             "optionValue": "autoApprove"
+                                        },
+                                        {
+                                             "id": "autoDecline",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AutoDecline",
+                                             "optionValue": "autoDecline"
+                                        },
+                                        {
+                                             "id": "BusinessAnnualRevenue",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BusinessAnnualRevenue",
+                                             "optionValue": "BusinessAnnualRevenue"
+                                        },
+                                        {
+                                             "id": "BusinessEntity",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BusinessEntity",
+                                             "optionValue": "BusinessEntity"
+                                        },
+                                        {
+                                             "id": "BusinessInformation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BusinessInformation",
+                                             "optionValue": "BusinessInformation"
+                                        },
+                                        {
+                                             "id": "BusinessFinancials",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BusinessFinancials",
+                                             "optionValue": "BusinessFinancials"
+                                        },
+                                        {
+                                             "id": "CollateralDetails",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CollateralDetails",
+                                             "optionValue": "CollateralDetails"
+                                        },
+                                        {
+                                             "id": "manualReview",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ManualReview",
+                                             "optionValue": "manualReview"
+                                        },
+                                        {
+                                             "id": "OwnerInformation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "OwnerInformation",
+                                             "optionValue": "OwnerInformation"
+                                        },
+                                        {
+                                             "id": "ReviewAndSubmit",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "ReviewAndSubmit",
+                                             "optionValue": "ReviewAndSubmit"
+                                        },
+                                        {
+                                             "id": "PersonalIncome",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PersonalIncome",
+                                             "optionValue": "PersonalIncome"
+                                        },
+                                        {
+                                             "id": "GettingStarted",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "GettingStarted",
+                                             "optionValue": "GettingStarted"
+                                        },
+                                        {
+                                             "id": "AboutYou",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AboutYou",
+                                             "optionValue": "AboutYou"
+                                        },
+                                        {
+                                             "id": "Employment",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Employment",
+                                             "optionValue": "Employment"
+                                        },
+                                        {
+                                             "id": "Income",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Income",
+                                             "optionValue": "Income"
+                                        },
+                                        {
+                                             "id": "Review",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Review",
+                                             "optionValue": "Review"
+                                        }
+                                   ],
+                                   "ariaLabel": "Portal Stage"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

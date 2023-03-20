@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "Name": {
+                         "actions": [
+                              {
+                                   "name": "fetchAccountBy",
+                                   "condition": "$this.attr(Name); != undefined"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "grid": {
+                    "field": {
+                         "$$default": {
+                              "sm": 12
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true,
+               "title": "Search Existing Customers",
+               "transient": true
+          },
+          "property": {
+               "structureName": "back_officer_search_accounts_query"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_search_account",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_search_account",
+     "clcommon__Release_Checksum__c": "c2466650868f7e74304f1d965c43e20b659bc00697bc38f26b00d380195952c6"
+}

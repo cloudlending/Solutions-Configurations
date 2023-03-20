@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "creditApplicationExistingNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "updates": [
+                    {
+                         "value": [
+                              "consumer_product",
+                              "consumer_product_fetch"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": 0,
+                         "field": "$nav(application_flow_steps).appearance(current);"
+                    },
+                    {
+                         "value": "AboutYou",
+                         "field": "$nav(application_flow_steps).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "validation": [
+               "consumer_product"
+          ],
+          "appearance": {
+               "render": "$global.attr(productName); == \"Credit Card\" and $global.attr(partyType); == $global.attr(borrowerParty); and $global.attr(applicationId);!=null and $global.attr(applicationId);!=undefined and $global.attr(applicationId);!=\"\"",
+               "label": "Next",
+               "style": "primary"
+          },
+          "property": {},
+          "name": "creditApplicationExistingNext"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_product"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_product_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_product+creditApplicationExistingNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "f1b8a4109d5409f6e9d24e6bf8dbc529b92451003752222ca320f86a404a17f4",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_product+creditApplicationExistingNext",
+     "clcommon__Validation_Class__c": null
+}

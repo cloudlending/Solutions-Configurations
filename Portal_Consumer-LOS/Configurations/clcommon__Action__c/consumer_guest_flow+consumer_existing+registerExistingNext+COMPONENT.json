@@ -1,0 +1,68 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "registerExistingNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "registerWithPartialMatchNext",
+                         "condition": "$result.attr(apiResponse);==3"
+                    },
+                    {
+                         "name": "sendRegistrationEmail",
+                         "condition": "$result.attr(apiResponse);==0 or $result.attr(apiResponse);==2"
+                    },
+                    {
+                         "name": "resetPassword",
+                         "condition": "$result.attr(apiResponse);==1"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "$result.attr(apiResponse);",
+                         "field": "$global.attr(statusCode);"
+                    }
+               ]
+          },
+          "validation": [
+               "consumer_existing"
+          ],
+          "remoteActionArguments": {
+               "permissionSetName": "Consumer_Unsecured_Borrower",
+               "contact": "$state(consumer_existing);",
+               "isExistingUser": true
+          },
+          "appearance": {
+               "position": "bottom-right",
+               "style": "primary",
+               "label": "Next"
+          },
+          "property": {},
+          "name": "registerExistingNext"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_guest_flow+consumer_existing"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_existing_signup_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_guest_flow+consumer_existing+registerExistingNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "48786cae6ec7f009942bb807fc824ed927a1ec01b6f70a528ab516e7f54802c2",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveUserData",
+     "clcommon__Unique_Action_Name__c": "consumer_existing+registerExistingNext",
+     "clcommon__Validation_Class__c": null
+}

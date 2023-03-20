@@ -1,0 +1,81 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "titleOrientation": "vertical",
+               "numberOfVisibleTitles": [
+                    {
+                         "value": 2,
+                         "condition": "$client; == \"phone\""
+                    }
+               ],
+               "titles": [
+                    {
+                         "subTitle": "Type of Loan",
+                         "title": "Getting Started"
+                    },
+                    {
+                         "subTitle": "Applying For",
+                         "title": "Getting Started"
+                    },
+                    {
+                         "subTitle": "Loan Amount",
+                         "title": "Getting Started"
+                    },
+                    {
+                         "name": "AboutYou",
+                         "subTitle": "Basic Details",
+                         "title": "About You"
+                    },
+                    {
+                         "name": "MoreInfo",
+                         "subTitle": "More Info About You",
+                         "title": "About You"
+                    },
+                    {
+                         "name": "OwnerInformation",
+                         "render": "$global.attr(typeOfApplicant); == \"Joint Credit\" ",
+                         "title": "Party Details"
+                    },
+                    {
+                         "name": "Employment",
+                         "title": "Employment Details"
+                    },
+                    {
+                         "name": "PersonalIncome",
+                         "title": "Income Details"
+                    },
+                    {
+                         "name": "AssetLiability",
+                         "title": "Net Worth Details"
+                    },
+                    {
+                         "name": "Collateral",
+                         "render": "($global.attr(assetClassName); ==\"Consumer Secured\" or $global.attr(assetClassName); ==\"Consumer Real Estate\") and $global.attr(partyType); == $global.attr(borrowerParty);",
+                         "title": "Collateral Details"
+                    },
+                    {
+                         "name": "ReviewAndSubmit",
+                         "title": "Review And Submit"
+                    }
+               ]
+          },
+          "property": {},
+          "type": "steps",
+          "category": "container"
+     },
+     "clcommon__Actor_Name__c": "application_flow_steps",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+application_flow_steps",
+     "clcommon__Release_Checksum__c": "dbab92941777b2c77717a017fa1284b7cf744a7a0376399ca2d2d222c386c929"
+}

@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "deleteAsset",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "updates": [
+                    {
+                         "value": [
+                              "consumer_liability"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "objectName": "liability",
+               "recordId": "$this.attr(Id);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>",
+               "style": "secondary",
+               "render": "$this.attr(Id); != undefined"
+          },
+          "property": {},
+          "name": "deleteAsset"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_liability_query",
+     "clcommon__Display_Type__c": "RECORD",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability+deleteAsset+RECORD",
+     "clcommon__Release_Checksum__c": "20f8a34f209255c2128de431338154a2b54bd46d29152806ff51649f0e58ea8a",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalGenericDeleteAPI",
+     "clcommon__Unique_Action_Name__c": "consumer_liability+deleteAsset",
+     "clcommon__Validation_Class__c": null
+}

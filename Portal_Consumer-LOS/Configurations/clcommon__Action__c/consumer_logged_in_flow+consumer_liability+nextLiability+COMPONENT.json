@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "nextLiability",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {},
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ],
+               "updates": [
+                    {
+                         "value": [
+                              "consumer_review_liabilities",
+                              "consumer_liability",
+                              "consumer_asset",
+                              "consumer_review_assets"
+                         ],
+                         "name": "$nav.reloads.add;"
+                    }
+               ],
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(application_flow_steps).appearance(current);"
+                    }
+               ]
+          },
+          "remoteActionArguments": {
+               "portalStage": "$global.attr(portalStage);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "style": "primary",
+               "render": false
+          },
+          "property": {},
+          "name": "nextLiability"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability"
+     },
+     "clcommon__Component_Structure_Name__c": "consumer_liability_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability+nextLiability+COMPONENT",
+     "clcommon__Release_Checksum__c": "71ed58e89210adea0bdfb46d5c3247c4784a61c372fb200fab50927c8cfa48e2",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "consumer_liability+nextLiability",
+     "clcommon__Validation_Class__c": null
+}

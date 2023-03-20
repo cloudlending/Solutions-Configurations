@@ -1,0 +1,144 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_party_asset_information_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__External_ID__c": "back_officer_party_asset_information_query",
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Release_Checksum__c": "6d39dcc641887d5e587ca4745c3a909a191b02d6b4e0b89b8bc9f03c71364817",
+     "clcommon__Unique_Name__c": "back_officer_party_asset_information_query",
+     "clcommon__data__c": {
+          "structureName": "back_officer_party_asset_information_query",
+          "tableName": "genesis__asset_information__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':applicationId' and genesis__Contact__r.AccountId = ':accountId'"
+          },
+          "sections": [
+               {
+                    "id": "ed788abf-eade-4e3a-b0cd-229209b2c8e1",
+                    "fields": [
+                         {
+                              "id": "d334fd0e-2aed-4d7a-a968-f25cc6415848",
+                              "fieldName": "genesis__Asset_Type__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Asset Type",
+                                   "required": true,
+                                   "prompt": "Select",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Cash",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Cash",
+                                             "optionValue": "Cash"
+                                        },
+                                        {
+                                             "id": "Cash-Savings",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Cash-Savings",
+                                             "optionValue": "Cash-Savings"
+                                        },
+                                        {
+                                             "id": "Certificate of Deposits",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Certificate of Deposits",
+                                             "optionValue": "Certificate of Deposits"
+                                        },
+                                        {
+                                             "id": "Notes and Contracts held",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Notes and Contracts held",
+                                             "optionValue": "Notes and Contracts held"
+                                        },
+                                        {
+                                             "id": "Securities/Bonds",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Securities/Bonds",
+                                             "optionValue": "Securities/Bonds"
+                                        },
+                                        {
+                                             "id": "Real Estate",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Real Estate",
+                                             "optionValue": "Real Estate"
+                                        },
+                                        {
+                                             "id": "Other",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "Other",
+                                             "optionValue": "Other"
+                                        },
+                                        {
+                                             "id": "Other Liquid Assets",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Other Liquid Assets",
+                                             "optionValue": "Other Liquid Assets"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "Asset Type"
+                              }
+                         },
+                         {
+                              "id": "35eca35e-2ff5-42ae-899f-99580c7549d6",
+                              "fieldName": "genesis__Market_Value__c",
+                              "fieldUi": {
+                                   "fieldType": "currency",
+                                   "label": "Current Value",
+                                   "placeholderText": "Enter Current Value",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "numeralDecimalScale": 0
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Current Value"
+                              }
+                         },
+                         {
+                              "id": "a8adf22c-dd0a-4f87-851d-bc9cc6b1630c",
+                              "fieldName": "Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Asset Description",
+                                   "placeholderText": "Enter Asset Description",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required"
+                                   },
+                                   "ariaLabel": "Asset Description"
+                              }
+                         },
+                         {
+                              "id": "a1395892-aa18-4c7d-99ca-7c8d7d86db85",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     }
+}

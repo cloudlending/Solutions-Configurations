@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "@mathjs{$state(back_officer_asset).sum(genesis__Market_Value__c); - $this.sum(genesis__Amount_Owing__c);};",
+                              "field": "$global.attr(networths);"
+                         },
+                         {
+                              "value": "@mathjs{($global.attr(showCollateral); == false and $global.attr(typeOfApplicant); == \"Joint Credit\") ? \"OwnerInformation\" : ($global.attr(showCollateral); == true ? \"Collateral\":\"ReviewAndSubmit\")};",
+                              "field": "$global.attr(portalStage);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": true,
+               "textAfter": "<p><b>Net Worth: $global.attr(networths, currency);</b></p>",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "title": "Liability Details",
+               "blankMessage": "No liability information!",
+               "editableFields": {
+                    "Id": false
+               },
+               "renderFields": {
+                    "genesis__Contact__r.Id": false,
+                    "Id": false
+               }
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(borrowerAccountId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "back_officer_liability_query"
+          },
+          "type": "list-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_liability",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_liability",
+     "clcommon__Release_Checksum__c": "0e59590a35a1b4d64f748bf458df871dab1cca9e1ced7792ad28d21c2edd9d45"
+}

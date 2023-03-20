@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "fieldChange": {
+                    "are_you_applying_for": {
+                         "assignments": [
+                              {
+                                   "value": "$this.attr(are_you_applying_for);",
+                                   "field": "$global.attr(typeOfApplicant);"
+                              },
+                              {
+                                   "value": "@mathjs{$this.attr(are_you_applying_for); == \"Joint Credit\" ? true : false};",
+                                   "field": "$global.attr(multiApplicant);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "editable": true,
+               "fieldColumns": 1,
+               "noLabelFields": [
+                    "are_you_applying_for"
+               ],
+               "title": [
+                    {
+                         "value": "Is the borrower applying for Individual Credit or Joint Credit?",
+                         "condition": "$client; != \"phone\""
+                    }
+               ],
+               "grid": {
+                    "field": {
+                         "are_you_applying_for": {
+                              "selectButton": {
+                                   "xs": 12,
+                                   "sm": 6
+                              }
+                         }
+                    }
+               }
+          },
+          "property": {
+               "structureName": "back_officer_applying_for_query"
+          },
+          "type": "base-panel",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_applying_for",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_applying_for",
+     "clcommon__Release_Checksum__c": "31c968a08be23992e7f99d01a015575c4fd6b3f095a0bebb7136fdb728672cc7"
+}

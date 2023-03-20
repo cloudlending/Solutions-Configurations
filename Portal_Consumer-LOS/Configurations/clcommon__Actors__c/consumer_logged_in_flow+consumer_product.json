@@ -1,0 +1,102 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "loaded": {
+                    "updates": [
+                         {
+                              "value": "consumer_product_fetch",
+                              "name": "$nav.reloads.add;"
+                         }
+                    ],
+                    "assignments": [
+                         {
+                              "value": "$this.attr(genesis__CL_Product__r).attr(clcommon__Product_Name__c);",
+                              "field": "$global.attr(productName);"
+                         },
+                         {
+                              "value": "$this.attr(genesis__CL_Product__c);",
+                              "field": "$global.attr(loanProduct);"
+                         },
+                         {
+                              "value": "Type Of Loan",
+                              "field": "$global.attr(stepsLabel);"
+                         },
+                         {
+                              "value": "<span class=\"fa-light fa-angle-down\"></span>",
+                              "field": "$global.attr(stepLabelIcon);"
+                         },
+                         {
+                              "value": "1",
+                              "field": "$global.attr(stepperCount);"
+                         },
+                         {
+                              "value": "GettingStated",
+                              "field": "$nav(consumer_mobile_stepper_panel).appearance(current);"
+                         }
+                    ]
+               },
+               "fieldChange": {
+                    "genesis__CL_Product__c": {
+                         "assignments": [
+                              {
+                                   "value": "$this.attr(genesis__CL_Product__r).attr(clcommon__Product_Name__c);",
+                                   "field": "$global.attr(productName);"
+                              },
+                              {
+                                   "value": "$this.attr(genesis__CL_Product__c);",
+                                   "field": "$global.attr(loanProduct);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "grid": {
+                    "field": {
+                         "genesis__CL_Product__c": {
+                              "selectButton": {
+                                   "sm": 6,
+                                   "xs": 12
+                              }
+                         }
+                    }
+               },
+               "title": "What type of loan you are looking for?",
+               "noLabelFields": [
+                    "genesis__CL_Product__c"
+               ],
+               "fieldColumns": 1,
+               "editable": "$global.attr(partyType); == $global.attr(borrowerParty); and ($global.attr(applicationId);==undefined or $global.attr(applicationId);==\"\")"
+          },
+          "property": {
+               "referenceWhereClause": {
+                    "genesis__CL_Product__r": {
+                         "ConsumerUnsecured": "$global.attr(ConsumerUnsecured);",
+                         "ConsumerRealEstate": "$global.attr(ConsumerRealEstate);",
+                         "ConsumerSecured": "$global.attr(ConsumerSecured);"
+                    }
+               },
+               "whereClause": {
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "queryWithDefaultNew": true,
+               "structureName": "consumer_product_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_product",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_product",
+     "clcommon__Release_Checksum__c": "a548bbe03e8982cb3c40995c396f40a08cc6def3bbb17da2c82b62ff46b58155"
+}

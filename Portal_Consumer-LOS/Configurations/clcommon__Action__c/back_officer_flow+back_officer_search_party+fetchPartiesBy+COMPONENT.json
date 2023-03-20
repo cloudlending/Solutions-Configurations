@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "fetchPartiesBy",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "fetchPartiesBy",
+          "property": {},
+          "appearance": {
+               "automatic": true,
+               "render": false,
+               "label": "Back",
+               "style": "secondary"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(fetchPartiesBy);",
+                         "value": "$this.attr(Name);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "back_officer_select_party"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_search_party"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_search_accounts_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_search_party+fetchPartiesBy+COMPONENT",
+     "clcommon__Release_Checksum__c": "ed63ed63251151f7472f15d2ee963d6d96183d5212c6c437bc7acdc47de6dc67",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "back_officer_search_party+fetchPartiesBy",
+     "clcommon__Validation_Class__c": null
+}

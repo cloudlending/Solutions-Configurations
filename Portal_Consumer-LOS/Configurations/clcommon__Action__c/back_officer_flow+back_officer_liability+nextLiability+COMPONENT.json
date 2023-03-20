@@ -1,0 +1,53 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "nextLiability",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "nextLiability",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Next",
+               "render": false,
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "$global.attr(portalStage);"
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "next"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow+back_officer_liability"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_liability_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_liability+nextLiability+COMPONENT",
+     "clcommon__Release_Checksum__c": "7d03e2c7ea9c88f3f006278207aa8f21aff93133f3a083903db78174f7bf2056",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "back_officer_liability+nextLiability",
+     "clcommon__Validation_Class__c": null
+}

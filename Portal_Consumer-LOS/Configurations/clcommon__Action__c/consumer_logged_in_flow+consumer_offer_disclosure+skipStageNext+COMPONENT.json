@@ -1,0 +1,45 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "skipStageNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "ariaLabel": "Next",
+          "handler": {
+               "assignments": [
+                    {
+                         "value": "next",
+                         "field": "$nav(application_flow_steps).appearance(current);"
+                    }
+               ]
+          },
+          "pendingHandler": {},
+          "failureHandler": {},
+          "successHandler": {},
+          "validation": [],
+          "remoteActionArguments": {},
+          "appearance": {
+               "label": "Next",
+               "style": "primary",
+               "render": "$global.attr(partyType); != $global.attr(borrowerParty);"
+          },
+          "property": {},
+          "name": "skipStageNext"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_offer_disclosure"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_offer_disclosure+skipStageNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "9a719b56846c642139dec9e0dc61d29c9e99e8c6122a0cff656cbe44b9af7564",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "consumer_offer_disclosure+skipStageNext",
+     "clcommon__Validation_Class__c": null
+}

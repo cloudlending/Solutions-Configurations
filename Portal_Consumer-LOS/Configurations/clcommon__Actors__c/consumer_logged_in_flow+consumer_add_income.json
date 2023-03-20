@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "consumer_logged_in_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         },
+                         "Name": {
+                              "sm": 12
+                         }
+                    }
+               },
+               "renderFields": {
+                    "genesis__Frequency__c": false,
+                    "Id": false
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "incomeId": "$global.attr(incomeId);"
+               },
+               "structureName": "consumer_add_income_query"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "consumer_add_income",
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_income",
+     "clcommon__Release_Checksum__c": "58b096093446c1d21f98fe9dda12ea26f7dd1842d78210d78b2f4bd3139ea376"
+}

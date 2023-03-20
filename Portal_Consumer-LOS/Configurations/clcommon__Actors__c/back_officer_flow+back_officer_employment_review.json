@@ -1,0 +1,47 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "back_officer_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top"
+               },
+               "blankMessage": "No employment information!",
+               "grid": {
+                    "card": {
+                         "xs": 12,
+                         "sm": 12
+                    }
+               },
+               "templates": {
+                    "record": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(genesis__Name_of_employer__c);</span><div class=\"divider\"></div><div><span class=\"text\">Position: </span>$this.attr(genesis__Position__c);</div><div><span class=\"text\">Monthly Salary: </span>$this.attr(genesis__Average_Monthly_Income__c, currency);</div><div class=\"divider\"></div></div>"
+               },
+               "title": "Employment History",
+               "columns": 1,
+               "fieldColumns": 1
+          },
+          "property": {
+               "whereClause": {
+                    "accountId": "$global.attr(borrowerAccountId);",
+                    "applicationId": "$global.attr(applicationId);"
+               },
+               "structureName": "back_officer_employment_info"
+          },
+          "type": "card-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "back_officer_employment_review",
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_employment_review",
+     "clcommon__Release_Checksum__c": "cc72f3b303280f4e38b1f1e11498132163d81b1cf1bd46f4b100220d5eabefcc"
+}
