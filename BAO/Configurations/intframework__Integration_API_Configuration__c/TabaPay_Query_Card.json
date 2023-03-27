@@ -44,7 +44,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 0,
-     "intframework__Release_Checksum__c": "4b499657004404b4391bfeb26557c577d3c8397ba13fbe2a6d574a44d1dee80a",
+     "intframework__Release_Checksum__c": "cb34d2621b158a9d2cc8f80381aa537f042cc0f9e964c46d2ce4b19a3c97eec3",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "TabaPay",
@@ -90,9 +90,28 @@
                                    {
                                         "externalField": "card.push.enabled",
                                         "fieldAPI": "oao__Push_Enabled__c"
+                                   },
+                                   {
+                                        "externalField": "fundingStatus",
+                                        "fieldAPI": "oao__Status__c"
                                    }
                               ],
                               "whereClause": "oao__Application__c = :recordId"
+                         }
+                    ]
+               },
+               {
+                    "dmlOperation": "Update",
+                    "objectMappings": [
+                         {
+                              "objectAPI": "genesis__Applications__c",
+                              "fields": [
+                                   {
+                                        "externalField": "appFundingStatus",
+                                        "fieldAPI": "genesis__Status__c"
+                                   }
+                              ],
+                              "whereClause": "id = :recordId"
                          }
                     ]
                }
