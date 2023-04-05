@@ -9,7 +9,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "7c3445b823cecb4100ad916dc5a37f7ec00d3d26483830178e90c9c89562b5b9",
+     "clcommon__Release_Checksum__c": "677a5992e30e1e1b68b546c12179ed81ff1ef51c3e30f05ddf8828293f8e982b",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
           "successMessage": "Rule Evaluation Passed for rule : Eligibility (Party)",
@@ -22,12 +22,12 @@
                     "actionName": "Action1"
                }
           ],
-          "sObjectName": "",
+          "sObjectName": "clcommon__Rule__c",
           "saveRuleClass": null,
           "ruleName": "Eligibility (Party)",
           "priority": 1,
           "parentRuleID": null,
-          "parentRecordId": null,
+          "parentRecordId": "a3Q8V000000nmPs",
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : Eligibility (Party)",
           "failureActions": [
@@ -39,18 +39,22 @@
                     "actionName": "Action2"
                }
           ],
+          "externalId": "Eligibility_Party_Small_Business",
           "executeActions": null,
-          "evaluationExpression": "$1&&$2",
+          "evaluationExpression": "$1&&$2&&$3",
           "enabled": null,
           "criteria": [
                {
+                    "useBusinessDays": null,
                     "type": "Expression",
                     "sequence": "$1",
                     "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
                     "minimumValue": "",
                     "maximumValue": "",
                     "matchingValue": "Amusement, Gambling and Recreation Industries",
                     "matchingType": "!=",
+                    "isFieldComparison": null,
                     "fieldType": "STRING",
                     "fieldName": "Industry Sub Sector",
                     "fieldAPIName": "clcommon__account__r.genesis__business_information__r.solcommon__industry_sub_sector__c",
@@ -59,16 +63,37 @@
                     "additionalParams": null
                },
                {
+                    "useBusinessDays": null,
                     "type": "Expression",
                     "sequence": "$2",
                     "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
                     "minimumValue": "",
                     "maximumValue": "",
                     "matchingValue": "BORROWER",
                     "matchingType": "CONTAINS",
+                    "isFieldComparison": null,
                     "fieldType": "MULTIPICKLIST",
                     "fieldName": "Party Types",
                     "fieldAPIName": "clcommon__party_types__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "useBusinessDays": null,
+                    "type": "Expression",
+                    "sequence": "$3",
+                    "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "454390, 459510, 713120, 713290, 522299, 561210, 561990, 722310, 921110, 921130, 921190, 922120, 922130, 922150, 922160, 922190, 923120, 923130, 923140, 924110, 924120, 925110, 925120, 926110, 926120, 926130, 926140, 926150, 927110, 928120, 519210, 522291, 522292, 522390, 813410, 525990, 531110, 531120, 531130, 531190, 813110, 236117, 236210",
+                    "matchingType": "NOT IN",
+                    "isFieldComparison": null,
+                    "fieldType": "STRING",
+                    "fieldName": "NAICS Code",
+                    "fieldAPIName": "clcommon__account__r.genesis__business_information__r.genesis__naics_code__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
