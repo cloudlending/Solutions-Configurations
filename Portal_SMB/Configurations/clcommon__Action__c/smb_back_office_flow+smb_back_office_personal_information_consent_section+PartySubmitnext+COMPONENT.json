@@ -1,0 +1,74 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "PartySubmitnext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "PartySubmitnext",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "render": false,
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "clcommon__Party__c": {
+                    "id": "$global.attr(tempPartyId);",
+                    "solcommon__Submission_Status__c": "SUBMITTED"
+               }
+          },
+          "validation": [
+               "smb_back_office_personal_information_consent_section"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(businessPartyId);",
+                         "value": "$global.attr(tempPartyId);"
+                    },
+                    {
+                         "field": "$global.attr(BusinessPartyAccountId);",
+                         "value": "$global.attr(tempBusinessPartyAccountId);"
+                    },
+                    {
+                         "field": "$global.attr(borrowerAccountIdExisting);",
+                         "value": "$global.attr(tempborrowerAccountIdExisting);"
+                    },
+                    {
+                         "field": "$global.attr(partyTypes);",
+                         "value": "$global.attr(temppartyTypes);"
+                    },
+                    {
+                         "field": "$global.attr(borrowerContactIdExisting);",
+                         "value": "$global.attr(tempborrowerContactIdExisting);"
+                    },
+                    {
+                         "field": "$nav(smb_back_office_add_business_parties_container).appearance(current);",
+                         "value": "next"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_personal_information_consent",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalUpdateParty",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_personal_information_consent_section+PartySubmitnext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section+PartySubmitnext+COMPONENT",
+     "clcommon__Release_Checksum__c": "2951c8255bef116426a8f26fcc77f4d6859485884aedfc79bb2eef09d68c7839"
+}

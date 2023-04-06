@@ -8,13 +8,13 @@
           "name": "docStatusChange",
           "property": {},
           "appearance": {
-               "style": "primary",
+               "label": "View",
                "render": false,
-               "label": "View"
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "documentCategoryId": "$global.attr(SubmittedDoc);",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "documentCategoryId": "$global.attr(SubmittedDoc);"
           },
           "successHandler": {
                "assignments": [
@@ -59,9 +59,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_upload_document_panel_sub_folder",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_document_doc_panel+docStatusChange+COMPONENT",
-     "clcommon__Release_Checksum__c": "6705e88fbe58866cb5921fb29cbeef98620393fd1f7474b03b5dabc548bbca90",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalChangeDocmentCategoryStatus",
      "clcommon__Unique_Action_Name__c": "smb_back_office_document_doc_panel+docStatusChange",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_document_doc_panel+docStatusChange+COMPONENT",
+     "clcommon__Release_Checksum__c": "6705e88fbe58866cb5921fb29cbeef98620393fd1f7474b03b5dabc548bbca90"
 }

@@ -1,0 +1,78 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "genesis__Identification_Type__c": {
+                         "assignments": [
+                              {
+                                   "value": "",
+                                   "field": "$this.attr(genesis__Identification_Number__c);"
+                              },
+                              {
+                                   "value": "",
+                                   "field": "$this.attr(genesis__Date_of_Issuance__c);"
+                              },
+                              {
+                                   "value": "",
+                                   "field": "$this.attr(genesis__Expiration_Date__c);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "$state(smb_back_office_parties_identification_record_check).count();==0",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderFields": {
+                    "genesis__State_of_Issuance__c": false,
+                    "Id": false
+               },
+               "title": "Identification Information of $state(smb_back_office_personal_information_details).attr(FirstName); $state(smb_back_office_personal_information_details).attr(LastName);",
+               "grid": {
+                    "messagePositions": {
+                         "saveSubmitError": "top",
+                         "loadingError": "top",
+                         "loadingAnimation": "global"
+                    },
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "accountId": "$global.attr(borrowerAccountIdExisting);"
+               },
+               "structureName": "smb_back_office_identification_information_prefill"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_identification_information_prefill",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_identification_information_prefill",
+     "clcommon__Release_Checksum__c": "aaebb0282c5dba84a7ee306a0180803cda3b489fab1bd0352915ca327a09f5f2"
+}

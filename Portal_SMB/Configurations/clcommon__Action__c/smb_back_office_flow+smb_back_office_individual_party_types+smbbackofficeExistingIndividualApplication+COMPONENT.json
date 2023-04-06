@@ -1,0 +1,80 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "smbbackofficeExistingIndividualApplication",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "smbbackofficeExistingIndividualApplication",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "style": "primary",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               },
+               "contact": {
+                    "clcommon__Personal_Information__c": "$state(smb_back_office_individual_personal_information).attr(clcommon__Personal_Information__r.Id);",
+                    "id": "$global.attr(contactId);"
+               },
+               "account": {
+                    "id": "$global.attr(backofficerAccountId);",
+                    "clcommon__Legal_Entity_Type__c": "$state(smb_back_office_business_Legal_entity_picklist_details).attr(clcommon__Legal_Entity_Type__c);",
+                    "clcommon__Is_Sole_Proprietorship__c": true
+               },
+               "genesis__Business_Information__c": {
+                    "genesis__Business_Description__c": "$this.attr(genesis__Business_Information__r.genesis__Business_Description__c);",
+                    "genesis__Beneficial_Owner_Exempt__c": "$this.attr(genesis__Business_Information__r.genesis__Beneficial_Owner_Exempt__c);",
+                    "genesis__Management_Type__c": "$this.attr(genesis__Business_Information__r.genesis__Management_Type__c);",
+                    "genesis__Completed_Resolution_Date__c": "$this.attr(genesis__Business_Information__r.genesis__Completed_Resolution_Date__c);",
+                    "genesis__Resolution_Type__c": "$this.attr(genesis__Business_Information__r.genesis__Resolution_Type__c);",
+                    "genesis__Business_Registration_State__c": "$this.attr(genesis__Business_Information__r.genesis__Business_Registration_State__c);",
+                    "genesis__DBA_Name__c": "$this.attr(genesis__Business_Information__r.genesis__DBA_Name__c);",
+                    "genesis__Tax_Identification_Number__c": "$this.attr(genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
+                    "genesis__Date_Business_Established__c": "$this.attr(genesis__Business_Information__r.genesis__Date_Business_Established__c);",
+                    "id": "$global.attr(businessInfoId);"
+               }
+          },
+          "validation": [
+               "smb_back_office_business_details"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(businessEntityType);",
+                         "value": "$state(smb_back_office_business_Legal_entity_picklist_details).attr(clcommon__Legal_Entity_Type__c);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "name": "smbBackOfficeindividualUpdateExistingParty"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 8,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_party_types"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_individual_party_types",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveApplication",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_individual_party_types+smbbackofficeExistingIndividualApplication",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_party_types+smbbackofficeExistingIndividualApplication+COMPONENT",
+     "clcommon__Release_Checksum__c": "b5978e84890e09f5390790de201541f30b35a8463937d51c1861861801d9b432"
+}

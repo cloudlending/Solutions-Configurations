@@ -1,0 +1,54 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "render": "$state(los_identification_records_check).count();==0",
+               "editable": true,
+               "fieldColumns": 1,
+               "title": "More information about you",
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "sm": 6,
+                              "xs": 12
+                         }
+                    }
+               },
+               "renderFields": {
+                    "genesis__State_of_Issuance__c": false,
+                    "Id": false
+               }
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "accId": "$global.attr(borrowerAccountId);"
+               },
+               "structureName": "los_identification_info_new"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_identification_details_new",
+     "clcommon__External_ID__c": "los_smb_flow+los_identification_details_new",
+     "clcommon__Release_Checksum__c": "088b15ca40fd6afe0098541a6527eab86955f467fd1436702cf4dafc269fcf87"
+}

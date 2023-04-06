@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "identificationInformationDetailsNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "identificationInformationDetailsNext",
+          "property": {},
+          "appearance": {
+               "render": "($this.attr(genesis__Identification_Type__c); != undefined and $this.attr(genesis__Identification_Type__c); != \"\" and $this.attr(genesis__Identification_Type__c); != \"Select one\")",
+               "style": "primary",
+               "label": "Next"
+          },
+          "remoteActionArguments": {
+               "partyId": "$global.attr(businessPartyId);",
+               "applicationId": "$global.attr(applicationId);",
+               "accountId": "$global.attr(borrowerAccountIdExisting);",
+               "genesis__Identification_Information__c": {
+                    "genesis__Expiration_Date__c": "$this.attr(genesis__Expiration_Date__c);",
+                    "genesis__Date_of_Issuance__c": "$this.attr(genesis__Date_of_Issuance__c);",
+                    "genesis__Identification_Number__c": "$this.attr(genesis__Identification_Number__c);",
+                    "genesis__Identification_Type__c": "$this.attr(genesis__Identification_Type__c);"
+               }
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(identificationInfoIdE);",
+                         "value": "$result.attr(identificationInfoId);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$global.attr(HMDALoan); == true and ($global.attr(HMDALegalClassName); ==\"Sole Proprietorship\" or $global.attr(HMDALegalClassName); ==\"Individual\") ",
+                         "name": "savePortalStage"
+                    },
+                    {
+                         "condition": "($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\" and $global.attr(HMDALegalClassName); !=\"Individual\") or ($global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\" and $global.attr(HMDALegalClassName); !=\"Individual\") or ($global.attr(HMDALoan); == false and ($global.attr(HMDALegalClassName); ==\"Sole Proprietorship\" or $global.attr(HMDALegalClassName); ==\"Individual\"))",
+                         "name": "updatePartySubmitnext"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_identification_information_prefill"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_identification_information_prefill",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIdentificationInformation",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_identification_information_prefill+identificationInformationDetailsNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_identification_information_prefill+identificationInformationDetailsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "f8d1edfddebb65d88288bdb7623298df37a726b86d6126824c72dcf960d526ce"
+}

@@ -8,10 +8,10 @@
           "name": "personalInformationDetailsBack",
           "property": {},
           "appearance": {
-               "label": "Back",
-               "style": "secondary",
+               "render": "$global.attr(editParty);==false",
                "position": "bottom-left",
-               "render": "$global.attr(editParty);==false"
+               "style": "secondary",
+               "label": "Back"
           },
           "successHandler": {},
           "failureHandler": {},
@@ -30,7 +30,7 @@
           },
           "ariaLabel": "Back"
      },
-     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -40,9 +40,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_personal_information_consent",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section+personalInformationDetailsBack+COMPONENT",
-     "clcommon__Release_Checksum__c": "f224ac6f42de6fbadbc0d8f39792012dc078f4b32b241230ad5708baec092691",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "smb_back_office_personal_information_consent_section+personalInformationDetailsBack",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section+personalInformationDetailsBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "f85d26a1ae328add70fc72c68d086efe0bb59bd0599912fba721fe282cf7b6a1"
 }

@@ -5,31 +5,31 @@
      "Name": "backButton",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Back",
+          "name": "backButton",
+          "property": {},
+          "appearance": {
+               "label": "Back",
+               "style": "secondary",
+               "variant": "text",
+               "position": "bottom-left"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(los_application_steps).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
                "executions": [
                     {
                          "name": "$ext.scrollTop"
                     }
-               ],
-               "assignments": [
-                    {
-                         "value": "previous",
-                         "field": "$nav(los_application_steps).appearance(current);"
-                    }
                ]
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "position": "bottom-left",
-               "variant": "text",
-               "style": "secondary",
-               "label": "Back"
-          },
-          "property": {},
-          "name": "backButton"
+          "ariaLabel": "Back"
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "normal",
@@ -41,9 +41,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_fetch_required_documentsforNullAcc",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_document_upload_list2+backButton+COMPONENT",
-     "clcommon__Release_Checksum__c": "6ca8c226455db4d12c8938077aa07834f6210ae8be5a4526005ba892a034e5fb",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_document_upload_list2+backButton",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_document_upload_list2+backButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "6ca8c226455db4d12c8938077aa07834f6210ae8be5a4526005ba892a034e5fb"
 }

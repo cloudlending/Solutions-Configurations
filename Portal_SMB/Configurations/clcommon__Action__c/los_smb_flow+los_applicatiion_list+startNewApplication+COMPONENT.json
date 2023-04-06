@@ -5,82 +5,82 @@
      "Name": "startNewApplication",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Back",
+          "name": "startNewApplication",
+          "property": {},
+          "appearance": {
+               "label": "<span>New Application</span> <i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>",
+               "style": "primary",
+               "position": "top-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
-               "next": "Home",
                "assignments": [
                     {
-                         "value": 0,
-                         "field": "$nav(los_application_steps).appearance(current);"
+                         "field": "$nav(los_application_steps).appearance(current);",
+                         "value": 0
                     },
                     {
-                         "value": 0,
-                         "field": "$nav(los_application_steps).appearance(lastEnabled);"
+                         "field": "$nav(los_application_steps).appearance(lastEnabled);",
+                         "value": 0
                     },
                     {
-                         "value": "",
-                         "field": "$global.attr(applicationId);"
+                         "field": "$global.attr(applicationId);",
+                         "value": ""
                     },
                     {
-                         "value": true,
-                         "field": "$global.attr(isPrincipal);"
+                         "field": "$global.attr(isPrincipal);",
+                         "value": true
                     },
                     {
-                         "value": "",
-                         "field": "$global.attr(assetClassName);"
+                         "field": "$global.attr(assetClassName);",
+                         "value": ""
                     },
                     {
-                         "value": "PRINCIPAL",
-                         "field": "$global.attr(partyType);"
+                         "field": "$global.attr(partyType);",
+                         "value": "PRINCIPAL"
                     },
                     {
-                         "value": "",
-                         "field": "$global.attr(businessInfoId);"
+                         "field": "$global.attr(businessInfoId);",
+                         "value": ""
                     },
                     {
-                         "value": false,
-                         "field": "$global.attr(isCollectDocumentRequired);"
+                         "field": "$global.attr(isCollectDocumentRequired);",
+                         "value": false
                     },
                     {
-                         "value": "$global.attr(userInfo).attr(accountId);",
-                         "field": "$global.attr(borrowerAccountId);"
+                         "field": "$global.attr(borrowerAccountId);",
+                         "value": "$global.attr(userInfo).attr(accountId);"
                     },
                     {
-                         "value": "",
-                         "field": "$global.attr(borrowerPartyId);"
+                         "field": "$global.attr(borrowerPartyId);",
+                         "value": ""
                     },
                     {
-                         "value": "",
-                         "field": "$global.attr(businessAccountId);"
+                         "field": "$global.attr(businessAccountId);",
+                         "value": ""
                     },
                     {
-                         "value": "",
-                         "field": "$global.attr(loanPurpose);"
+                         "field": "$global.attr(loanPurpose);",
+                         "value": ""
                     },
                     {
-                         "value": "YES",
-                         "field": "$global.attr(showHome);"
+                         "field": "$global.attr(showHome);",
+                         "value": "YES"
                     },
                     {
-                         "value": "",
-                         "field": "$global.attr(borrrowerAccountId);"
+                         "field": "$global.attr(otherPurposeName);",
+                         "value": ""
                     },
                     {
-                         "value": "",
-                         "field": "$global.attr(otherPurposeName);"
+                         "field": "$global.attr(businessEntityType);",
+                         "value": ""
                     }
-               ]
+               ],
+               "next": "Home"
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "position": "top-right",
-               "style": "primary",
-               "label": "<span>New Application</span> <i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>"
-          },
-          "property": {},
-          "name": "startNewApplication"
+          "ariaLabel": "Back"
      },
      "clcommon__Action_Order__c": 4,
      "clcommon__Action_Type__c": "normal",
@@ -92,9 +92,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_fetch_applications",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list+startNewApplication+COMPONENT",
-     "clcommon__Release_Checksum__c": "dfdac132e42b3b429f2ce34f99d47bd0a636422593cab2f9bb4a7b3e9596e812",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_applicatiion_list+startNewApplication",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list+startNewApplication+COMPONENT",
+     "clcommon__Release_Checksum__c": "a79b7c752661c5b7e5532cc41048e6f4c79c818a8a35e138d296d80b53936239"
 }

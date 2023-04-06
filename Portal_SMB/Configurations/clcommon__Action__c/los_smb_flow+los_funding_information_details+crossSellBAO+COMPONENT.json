@@ -5,42 +5,42 @@
      "Name": "crossSellBAO",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
+          "name": "crossSellBAO",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "position": "bottom-left",
+               "render": "$this.attr(newAccount);",
+               "style": "primary"
+          },
+          "confirmation": {
+               "type": "prompt",
+               "title": "",
+               "content": "<p style=\"font-size:16px;\">Are you sure you want to proceed with Account Creation?</p>",
+               "showConfirmButtons": true,
+               "confirmText": "Yes",
+               "cancelText": "No",
+               "cancelOrCloseHandler": {}
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "next": {
-                    "stageName": "Home",
-                    "navName": "cross_sell_bao",
                     "data": {
-                         "isCollectDocumentRequired": "$global.attr(isCollectDocumentRequired);",
-                         "isHMDALoan": "$global.attr(isHMDALoan);",
-                         "assetClassName": "$global.attr(assetClassName);",
-                         "isPrincipal": "$global.attr(isPrincipal);",
-                         "portalStage": "BaoProducts",
+                         "applicationId": "$global.attr(applicationId);",
                          "businessAccountId": "$global.attr(businessAccountId);",
-                         "applicationId": "$global.attr(applicationId);"
-                    }
+                         "portalStage": "BaoProducts",
+                         "isPrincipal": "$global.attr(isPrincipal);",
+                         "assetClassName": "$global.attr(assetClassName);",
+                         "isHMDALoan": "$global.attr(isHMDALoan);",
+                         "isCollectDocumentRequired": "$global.attr(isCollectDocumentRequired);"
+                    },
+                    "navName": "cross_sell_bao",
+                    "stageName": "Home"
                }
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "confirmation": {
-               "cancelOrCloseHandler": {},
-               "cancelText": "No",
-               "confirmText": "Yes",
-               "showConfirmButtons": true,
-               "content": "<p style=\"font-size:16px;\">Are you sure you want to proceed with Account Creation?</p>",
-               "title": "",
-               "type": "prompt"
-          },
-          "appearance": {
-               "style": "primary",
-               "render": "$this.attr(newAccount);",
-               "position": "bottom-left",
-               "label": "Next"
-          },
-          "property": {},
-          "name": "crossSellBAO"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "normal",
@@ -52,9 +52,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_financial_information",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_funding_information_details+crossSellBAO+COMPONENT",
-     "clcommon__Release_Checksum__c": "39ead6dfcd544493681fb7d870430d84c6ddf5a835a182065121ff929f6c389c",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_funding_information_details+crossSellBAO",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_funding_information_details+crossSellBAO+COMPONENT",
+     "clcommon__Release_Checksum__c": "39ead6dfcd544493681fb7d870430d84c6ddf5a835a182065121ff929f6c389c"
 }

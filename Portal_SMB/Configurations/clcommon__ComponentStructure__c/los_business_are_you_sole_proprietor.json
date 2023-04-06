@@ -1,0 +1,82 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_business_are_you_sole_proprietor",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_business_are_you_sole_proprietor",
+     "clcommon__data__c": {
+          "structureName": "los_business_are_you_sole_proprietor",
+          "sections": [
+               {
+                    "id": "A123",
+                    "fields": [
+                         {
+                              "id": "A124",
+                              "fieldName": "are_you_sole_proprietor",
+                              "fieldUi": {
+                                   "fieldType": "radiobuttons",
+                                   "label": "Are you a Sole Proprietor?",
+                                   "defaultValue": "",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "id": "zzzzzz",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Yes",
+                                             "optionValue": "true"
+                                        },
+                                        {
+                                             "id": "aaaaa",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "No",
+                                             "optionValue": "false"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "Are you a Sole Proprietor?"
+                              }
+                         },
+                         {
+                              "id": "A1245346",
+                              "fieldName": "business_id_type",
+                              "fieldUi": {
+                                   "fieldType": "radiobuttons",
+                                   "label": "What Business Tax ID do you use?",
+                                   "required": true,
+                                   "selectOptions": [
+                                        {
+                                             "id": "gggggggg",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SSN/ITIN",
+                                             "optionValue": "SSN/ITIN"
+                                        },
+                                        {
+                                             "id": "llllllllllllllll",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "EIN",
+                                             "optionValue": "EIN"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "What Business Tax ID do you use?"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_business_are_you_sole_proprietor",
+     "clcommon__Release_Checksum__c": "011d3180b5b1564e3cbc1a533e12e444bf030ad70a609c12021f15e4fe24b1d4"
+}

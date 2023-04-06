@@ -5,28 +5,28 @@
      "Name": "delteRentRollDetails",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "delteRentRollDetails",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>",
+               "style": "secondary"
+          },
+          "remoteActionArguments": {
+               "objectName": "rentRoll",
+               "recordId": "$this.attr(Id);",
+               "applicationId": "$global.attr(applicationId);"
+          },
           "successHandler": {
                "updates": [
                     {
-                         "value": "los_collateral_rent_roll_list",
-                         "name": "$nav.reloads.add;"
+                         "name": "$nav.reloads.add;",
+                         "value": "los_collateral_rent_roll_list"
                     }
                ]
           },
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "recordId": "$this.attr(Id);",
-               "objectName": "rentRoll"
-          },
-          "appearance": {
-               "style": "secondary",
-               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>"
-          },
-          "property": {},
-          "name": "delteRentRollDetails"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "submit",
@@ -38,9 +38,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_collateral_rent_roll_list",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "los_smb_flow+los_collateral_rent_roll_list+delteRentRollDetails+RECORD",
-     "clcommon__Release_Checksum__c": "6686b903c58beb0577f4430bc1fa3d5e521bae4e1afb66910c25454ee4ac9201",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalGenericDeleteAPI",
      "clcommon__Unique_Action_Name__c": "los_collateral_rent_roll_list+delteRentRollDetails",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_rent_roll_list+delteRentRollDetails+RECORD",
+     "clcommon__Release_Checksum__c": "6686b903c58beb0577f4430bc1fa3d5e521bae4e1afb66910c25454ee4ac9201"
 }

@@ -13,16 +13,9 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "editable": true,
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
-               },
-               "showSectionTitle": true,
-               "sectionStyle": "layout",
-               "fieldColumns": 1,
-               "title": "Loan Details",
+               "noLabelFields": [
+                    "genesis__Application__r.genesis__Loan_Amount__c"
+               ],
                "grid": {
                     "field": {
                          "genesis__Application__r.genesis__Loan_Amount__c": {
@@ -30,16 +23,23 @@
                          }
                     }
                },
-               "noLabelFields": [
-                    "genesis__Application__r.genesis__Loan_Amount__c"
-               ]
+               "title": "Loan Details",
+               "fieldColumns": 1,
+               "sectionStyle": "layout",
+               "showSectionTitle": true,
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               },
+               "editable": true
           },
           "property": {
+               "structureName": "los_loan_amount_details",
+               "queryWithDefaultNew": true,
                "whereClause": {
                     "appId": "$global.attr(applicationId);"
-               },
-               "queryWithDefaultNew": true,
-               "structureName": "los_loan_amount_details"
+               }
           },
           "type": "detail-view",
           "category": "component"

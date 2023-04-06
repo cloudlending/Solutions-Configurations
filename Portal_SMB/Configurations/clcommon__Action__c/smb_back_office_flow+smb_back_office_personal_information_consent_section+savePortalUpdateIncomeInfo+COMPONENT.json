@@ -8,23 +8,23 @@
           "name": "savePortalUpdateIncomeInfo",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "id": "$global.attr(applicationId);"
-               },
                "genesis__Income__c": [
                     {
-                         "Id": "$state(smb_back_office_income_information).attr(Id);",
-                         "genesis__Amount__c": "$state(smb_back_office_income_information).attr(genesis__Amount__c);",
+                         "genesis__Contact__c": "$global.attr(borrowerContactIdExisting);",
                          "name": "Annual Personal Income",
-                         "genesis__Contact__c": "$global.attr(contactId);"
+                         "genesis__Amount__c": "$state(smb_back_office_income_information).attr(genesis__Amount__c);",
+                         "Id": "$state(smb_back_office_income_information).attr(Id);"
                     }
-               ]
+               ],
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               }
           },
           "validation": [
                "smb_back_office_personal_information_consent_section",
@@ -33,20 +33,24 @@
           "successHandler": {
                "assignments": [
                     {
-                         "field": "$global.attr(partyId);",
-                         "value": "$global.attr(tempPartyId);"
-                    },
-                    {
-                         "field": "$global.attr(BusinessPartyAccountId);",
-                         "value": "$global.attr(tempBusinessPartyAccountId);"
-                    },
-                    {
-                         "field": "$global.attr(borrowerAccountIdExisting);",
-                         "value": "$global.attr(tempborrowerAccountIdExisting);"
-                    },
-                    {
                          "field": "$nav(smb_back_office_add_business_parties_container).appearance(current);",
                          "value": "next"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "smb_back_office_parties_identification_record_check",
+                              "smb_back_office_identification_information_prefill",
+                              "smb_back_office_identification_information",
+                              "smb_back_office_business_parties_summary"
+                         ]
+                    }
+               ],
+               "actions": [
+                    {
+                         "name": "PartySubmitnext"
                     }
                ]
           },
@@ -55,7 +59,7 @@
           "handler": {},
           "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Order__c": 6,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -65,9 +69,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_personal_information_consent",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section+savePortalUpdateIncomeInfo+COMPONENT",
-     "clcommon__Release_Checksum__c": "f18da64a3e9f25cf4243240c9c86d73c060939135ac8a347c0623cceadb5366d",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIncome",
      "clcommon__Unique_Action_Name__c": "smb_back_office_personal_information_consent_section+savePortalUpdateIncomeInfo",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section+savePortalUpdateIncomeInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "0c731b071bff44adebaf0223786ceb10b107ffdec284525c365332aad468687e"
 }

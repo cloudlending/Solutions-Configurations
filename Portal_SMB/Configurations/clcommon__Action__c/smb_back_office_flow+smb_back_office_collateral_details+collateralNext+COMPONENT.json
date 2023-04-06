@@ -1,0 +1,66 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "collateralNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "collateralNext",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(HMDALoan); == true and ($global.attr(HMDALegalClassName); == \"Individual\" or $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\") and $state(smb_back_office_collateral_list_validation).count();>=1",
+               "style": "primary",
+               "label": "Next",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "ReviewAndSubmit"
+          },
+          "validation": [
+               "smb_back_office_business_details"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(smb_back_office_application_flow_steps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(collateralValidation);",
+                         "value": ""
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "smb_back_office_review_owner_summary"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_collateral_details"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_collateral_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_collateral_details+collateralNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_collateral_details+collateralNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "ecb1d3c355d0b584a2e1ad956c83344533d3133fdc0910e7700c809ca90ef56d"
+}

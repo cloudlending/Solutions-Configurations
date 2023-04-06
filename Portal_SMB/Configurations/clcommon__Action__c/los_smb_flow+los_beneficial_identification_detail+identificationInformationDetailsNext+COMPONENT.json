@@ -5,44 +5,48 @@
      "Name": "identificationInformationDetailsNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "identificationInformationDetailsNext",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "position": "bottom-left",
+               "style": "primary",
+               "render": "$this.attr(Id); == \"\" or $this.attr(Id); == undefined or $this.attr(Id); == \"new_record_id\""
+          },
+          "remoteActionArguments": {
+               "genesis__Identification_Information__c": {
+                    "genesis__Identification_Type__c": "$this.attr(genesis__Identification_Type__c);",
+                    "genesis__Identification_Number__c": "$this.attr(genesis__Identification_Number__c);",
+                    "genesis__Date_of_Issuance__c": "$this.attr(genesis__Date_of_Issuance__c);",
+                    "genesis__Expiration_Date__c": "$this.attr(genesis__Expiration_Date__c);"
+               },
+               "accountId": "$global.attr(borrowerAccountId);",
+               "applicationId": "$global.attr(applicationId);",
+               "partyId": "$global.attr(borrowerPartyId);"
+          },
           "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(identificationInfoId);",
+                         "value": "$result.attr(identificationInfoId);"
+                    },
+                    {
+                         "field": "$global.attr(portalStage);",
+                         "value": "@mathjs{$global.attr(isHMDALoan);==true ? \"BeneficialDemographicInfo\" : ($global.attr(isCollectDocumentRequired);==true ? \"Documents\" : \"ReviewAndSubmit\")};"
+                    }
+               ],
                "actions": [
                     {
                          "name": "savePortalStage"
                     }
-               ],
-               "assignments": [
-                    {
-                         "value": "$result.attr(identificationInfoId);",
-                         "field": "$global.attr(identificationInfoId);"
-                    }
                ]
           },
-          "remoteActionArguments": {
-               "partyId": "$global.attr(borrowerPartyId);",
-               "applicationId": "$global.attr(applicationId);",
-               "accountId": "$global.attr(borrowerAccountId);",
-               "genesis__Identification_Information__c": {
-                    "genesis__Expiration_Date__c": "$this.attr(genesis__Expiration_Date__c);",
-                    "genesis__Date_of_Issuance__c": "$this.attr(genesis__Date_of_Issuance__c);",
-                    "genesis__Identification_Number__c": "$this.attr(genesis__Identification_Number__c);",
-                    "genesis__Identification_Type__c": "$this.attr(genesis__Identification_Type__c);"
-               }
-          },
-          "appearance": {
-               "render": "$this.attr(Id); == \"\" or $this.attr(Id); == undefined or $this.attr(Id); == \"new_record_id\"",
-               "style": "primary",
-               "position": "bottom-left",
-               "label": "Next"
-          },
-          "property": {},
-          "name": "identificationInformationDetailsNext"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -52,9 +56,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_identification_info",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail+identificationInformationDetailsNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "371fb5e214de44308eb4b4ffd850ff093d1bd620dfff01b8b092b49616b103fc",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIdentificationInformation",
      "clcommon__Unique_Action_Name__c": "los_beneficial_identification_detail+identificationInformationDetailsNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail+identificationInformationDetailsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "811af1e0e523d86ee5c69ace4cf9184b54ed899b3ec75673cfd3843f0c29bfcf"
 }

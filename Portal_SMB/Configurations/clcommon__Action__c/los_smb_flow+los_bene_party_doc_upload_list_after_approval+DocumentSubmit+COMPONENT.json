@@ -5,35 +5,35 @@
      "Name": "DocumentSubmit",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "DocumentSubmit",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "render": false,
+               "position": "bottom-right",
+               "label": "Next"
+          },
+          "remoteActionArguments": {
+               "portalStage": "BeneficialConfirmation",
+               "applicationId": "$global.attr(applicationId);"
+          },
           "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(los_review_steps).appearance(current);",
+                         "value": "BeneficialConfirmation"
+                    }
+               ],
                "executions": [
                     {
                          "name": "$ext.scrollTop"
                     }
-               ],
-               "assignments": [
-                    {
-                         "value": "BeneficialConfirmation",
-                         "field": "$nav(los_review_steps).appearance(current);"
-                    }
                ]
           },
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "BeneficialConfirmation"
-          },
-          "appearance": {
-               "label": "Next",
-               "position": "bottom-right",
-               "render": false,
-               "style": "primary"
-          },
-          "property": {},
-          "name": "DocumentSubmit"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "submit",
@@ -45,9 +45,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_beneficial_party_doc_upload_list_after_submit",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_bene_party_doc_upload_list_after_approval+DocumentSubmit+COMPONENT",
-     "clcommon__Release_Checksum__c": "1053233d67648b4d6fdd63275ce5594af531aec3780aa285f052839e76c66129",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
      "clcommon__Unique_Action_Name__c": "los_bene_party_doc_upload_list_after_approval+DocumentSubmit",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_bene_party_doc_upload_list_after_approval+DocumentSubmit+COMPONENT",
+     "clcommon__Release_Checksum__c": "1053233d67648b4d6fdd63275ce5594af531aec3780aa285f052839e76c66129"
 }

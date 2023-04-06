@@ -27,43 +27,43 @@
                }
           ],
           "appearance": {
-               "editableFields": {
-                    "genesis__Payment_Amount_Derived__c": false,
+               "fieldColumns": 1,
+               "columns": 3,
+               "title": "Congratulations!",
+               "subTitle": "Your loan application for $this.attr(genesis__Application__r.genesis__Loan_Amount__c,currency); has been approved. Please review the credit options below and select the option that meets your needs.",
+               "highlight": true,
+               "grid": {
+                    "card": {
+                         "sm": 4,
+                         "xs": 12
+                    }
+               },
+               "renderFields": {
+                    "genesis__Application__r.genesis__Loan_Amount__c": true,
                     "genesis__Selected__c": false,
-                    "genesis__Payment_Amount_Per_Period__c": false,
-                    "genesis__Term__c": false,
-                    "genesis__Interest_Rate__c": false,
-                    "genesis__Maximum_Financed_Amount__c": false,
-                    "genesis__Application__r.genesis__Loan_Amount__c": false,
-                    "Id": false
+                    "Id": false,
+                    "genesis__Application__r.genesis__Product_Type__c": false,
+                    "genesis__Payment_Amount_Derived__c": "$this.attr(genesis__Application__r.genesis__Product_Type__c); != \"LINE OF CREDIT\" "
                },
                "autoHighlight": {
                     "genesis__Selected__c": "true"
                },
-               "renderFields": {
-                    "genesis__Payment_Amount_Derived__c": "$this.attr(genesis__Application__r.genesis__Product_Type__c); != \"LINE OF CREDIT\" ",
-                    "genesis__Application__r.genesis__Product_Type__c": false,
+               "editableFields": {
                     "Id": false,
+                    "genesis__Application__r.genesis__Loan_Amount__c": false,
+                    "genesis__Maximum_Financed_Amount__c": false,
+                    "genesis__Interest_Rate__c": false,
+                    "genesis__Term__c": false,
+                    "genesis__Payment_Amount_Per_Period__c": false,
                     "genesis__Selected__c": false,
-                    "genesis__Application__r.genesis__Loan_Amount__c": true
-               },
-               "grid": {
-                    "card": {
-                         "xs": 12,
-                         "sm": 4
-                    }
-               },
-               "highlight": true,
-               "subTitle": "Your loan application for $this.attr(genesis__Application__r.genesis__Loan_Amount__c,currency); has been approved. Please review the credit options below and select the option that meets your needs.",
-               "title": "Congratulations!",
-               "columns": 3,
-               "fieldColumns": 1
+                    "genesis__Payment_Amount_Derived__c": false
+               }
           },
           "property": {
+               "structureName": "get_offer_details_new",
                "whereClause": {
                     "appId": "$global.attr(applicationId);"
-               },
-               "structureName": "get_offer_details_new"
+               }
           },
           "type": "card-view",
           "category": "component"

@@ -5,47 +5,47 @@
      "Name": "ExistingCollateralNo",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {},
-          "handler": {
-               "updates": [
-                    {
-                         "value": [
-                              "los_add_collateral_details",
-                              "los_select_collateral_type"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "2",
-                         "field": "$nav(los_add_collateral_overlay).appearance(current);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(collateralId);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(collateralTypeName);"
-                    }
-               ]
+          "name": "ExistingCollateralNo",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "position": "bottom-left",
+               "label": "Next",
+               "render": "$this.attr(existingCollateral); != \"Yes\""
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
           "validation": [
                "los_select_type_of_collateral"
           ],
-          "appearance": {
-               "render": "$this.attr(existingCollateral); != \"Yes\"",
-               "label": "Next",
-               "position": "bottom-left",
-               "style": "primary"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(los_add_collateral_overlay).appearance(current);",
+                         "value": "2"
+                    },
+                    {
+                         "field": "$global.attr(collateralId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(collateralTypeName);",
+                         "value": ""
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "los_add_collateral_details",
+                              "los_select_collateral_type"
+                         ]
+                    }
+               ]
           },
-          "property": {},
-          "name": "ExistingCollateralNo"
+          "messages": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -57,9 +57,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_select_type_of_collateral",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_select_type_of_collateral+ExistingCollateralNo+COMPONENT",
-     "clcommon__Release_Checksum__c": "7879150002c4b8169611616cabdb381129ed1acc5ab9075da156378342aeb473",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_select_type_of_collateral+ExistingCollateralNo",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_select_type_of_collateral+ExistingCollateralNo+COMPONENT",
+     "clcommon__Release_Checksum__c": "7879150002c4b8169611616cabdb381129ed1acc5ab9075da156378342aeb473"
 }

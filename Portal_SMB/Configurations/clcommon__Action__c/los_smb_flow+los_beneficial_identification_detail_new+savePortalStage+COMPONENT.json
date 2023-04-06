@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "savePortalStage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "savePortalStage",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "render": false,
+               "disableWhenLoading": true,
+               "label": "Next",
+               "position": "bottom-left"
+          },
+          "remoteActionArguments": {
+               "portalStage": "$global.attr(portalStage);",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(los_application_steps).appearance(current);",
+                         "value": "next"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "los_identification_records_check"
+                         ]
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail_new"
+     },
+     "clcommon__Component_Structure_Name__c": "los_identification_info_new",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "los_beneficial_identification_detail_new+savePortalStage",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail_new+savePortalStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "3a40579d7afbb39d9d39399a8e4fe1f800fe841fba793c19fa6a27c5dcaf6db9"
+}

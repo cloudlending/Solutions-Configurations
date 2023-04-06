@@ -1,0 +1,38 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "Smb_Use_Personal_Address_As_Business_Address",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "Smb_Use_Personal_Address_As_Business_Address",
+     "clcommon__data__c": {
+          "structureName": "Smb_Use_Personal_Address_As_Business_Address",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "Id = ':partyId'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "bd2f5b83-608e-4660-ad79-bc9f8b108724",
+                    "fields": [
+                         {
+                              "id": "0e1de7fc-722d-4777-8170-b80639c3a27c",
+                              "fieldName": "solcommon__Use_Personal_Address_As_Business_Address__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Use Personal Address as Business Address",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Use Personal Address as Business Address"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "Smb_Use_Personal_Address_As_Business_Address",
+     "clcommon__Release_Checksum__c": "a71ddfe3928acbafc2b9b4dab84b3c7ce3a56a5c60c02d12e986d55083987294"
+}

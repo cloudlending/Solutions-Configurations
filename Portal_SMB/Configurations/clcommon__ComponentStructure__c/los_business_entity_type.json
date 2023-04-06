@@ -1,0 +1,45 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_business_entity_type",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_business_entity_type",
+     "clcommon__data__c": {
+          "structureName": "los_business_entity_type",
+          "tableName": "clcommon__legal_entity__c",
+          "whereClause": {
+               "freeForm": "Name=':businessEntityType'"
+          },
+          "sections": [
+               {
+                    "id": "8abef7b9-dc69-457d-b1f6-7611948e029c",
+                    "fields": [
+                         {
+                              "id": "b7a5aa2c-2389-4bd5-aba5-fe126e213d01",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "6ef9113d-2497-4d3c-ba59-3cf36e83dff9",
+                              "fieldName": "Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Legal Class Name",
+                                   "ariaLabel": "Legal Class Name"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_business_entity_type",
+     "clcommon__Release_Checksum__c": "2a9e795480e906d780565d905cadf80ab053c37167cf33fb8368e1ab89337381"
+}

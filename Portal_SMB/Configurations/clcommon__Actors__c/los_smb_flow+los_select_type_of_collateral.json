@@ -27,26 +27,26 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
-               },
-               "editable": true,
-               "fieldColumns": 1,
-               "noLabelFields": [
-                    "existingCollateral"
-               ],
-               "title": "Do you want to select an existing collateral?",
                "grid": {
                     "field": {
                          "existingCollateral": {
                               "selectButton": {
-                                   "xs": 12,
-                                   "sm": 6
+                                   "sm": 6,
+                                   "xs": 12
                               }
                          }
                     }
+               },
+               "title": "Do you want to select an existing collateral?",
+               "noLabelFields": [
+                    "existingCollateral"
+               ],
+               "fieldColumns": 1,
+               "editable": true,
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
                }
           },
           "property": {

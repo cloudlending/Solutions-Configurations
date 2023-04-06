@@ -16,34 +16,34 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "render": "$global.attr(isBeneficialPartyType);==true",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "editable": true,
+               "fieldColumns": 1,
+               "renderFields": {
+                    "clcommon__Party_Types__c": false,
+                    "clcommon__Signer_Capacity__c": false
+               },
                "grid": {
                     "field": {
                          "$default": {
-                              "xs": 12,
-                              "sm": 6
+                              "sm": 6,
+                              "xs": 12
                          }
                     }
                },
-               "renderFields": {
-                    "clcommon__Signer_Capacity__c": false,
-                    "clcommon__Party_Types__c": false
-               },
-               "fieldColumns": 1,
-               "editable": true,
-               "messagePositions": {
-                    "loadingAnimation": "global",
-                    "loadingError": "top",
-                    "saveSubmitError": "top"
-               }
+               "render": "$global.attr(isBeneficialPartyType);==true"
           },
           "property": {
-               "whereClause": {
-                    "appId": "$global.attr(applicationId);",
-                    "partyId": "$global.attr(borrowerPartyId);"
-               },
+               "structureName": "los_ownership_details",
                "queryWithDefaultNew": true,
-               "structureName": "los_ownership_details"
+               "whereClause": {
+                    "partyId": "$global.attr(borrowerPartyId);",
+                    "appId": "$global.attr(applicationId);"
+               }
           },
           "type": "detail-view",
           "category": "component"

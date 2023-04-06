@@ -5,32 +5,32 @@
      "Name": "sendResgitrationEmail",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {
-               "submitFailureText": "$serverMessage;"
+          "name": "sendResgitrationEmail",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "render": false,
+               "style": "primary"
           },
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "remoteActionArguments": {
+               "email": "$this.attr(email);",
+               "emailTemplateName": "Experience_Cloud_New_Member_Welcome_Email"
+          },
           "successHandler": {
                "assignments": [
                     {
-                         "value": "next",
-                         "field": "$nav(los_getting_started_container).appearance(current);"
+                         "field": "$nav(los_getting_started_container).appearance(current);",
+                         "value": "next"
                     }
                ]
           },
-          "remoteActionArguments": {
-               "emailTemplateName": "Experience_Cloud_New_Member_Welcome_Email",
-               "email": "$this.attr(email);"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
           },
-          "appearance": {
-               "style": "primary",
-               "render": false,
-               "label": "Next"
-          },
-          "property": {},
-          "name": "sendResgitrationEmail"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "submit",
@@ -42,9 +42,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_register_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_signup+los_existing_customer+sendResgitrationEmail+COMPONENT",
-     "clcommon__Release_Checksum__c": "9496e29d5574c3475eb9fc03f761282218946d8c436502d4d6f2147e5faf68d0",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalForgotPassword",
      "clcommon__Unique_Action_Name__c": "los_existing_customer+sendResgitrationEmail",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_signup+los_existing_customer+sendResgitrationEmail+COMPONENT",
+     "clcommon__Release_Checksum__c": "9496e29d5574c3475eb9fc03f761282218946d8c436502d4d6f2147e5faf68d0"
 }

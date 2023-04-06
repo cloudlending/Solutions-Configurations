@@ -4,11 +4,9 @@
      },
      "Name": "los_personal_information_details",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "los_personal_information_details",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "5a3a6fd6fea55dfea782e44445a25e45e403a131709805bc9fa8187fa2c4df0e",
      "clcommon__Unique_Name__c": "los_personal_information_details",
      "clcommon__data__c": {
           "structureName": "los_personal_information_details",
@@ -36,6 +34,10 @@
                               "fieldUi": {
                                    "fieldType": "string",
                                    "label": "First Name",
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
+                                   "messages": {
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
+                                   },
                                    "ariaLabel": "First Name"
                               }
                          },
@@ -45,6 +47,10 @@
                               "fieldUi": {
                                    "fieldType": "string",
                                    "label": "Last Name",
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
+                                   "messages": {
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
+                                   },
                                    "ariaLabel": "Last Name"
                               }
                          },
@@ -55,6 +61,7 @@
                                    "fieldType": "addressAutocomplete",
                                    "label": "Street Address",
                                    "required": true,
+                                   "regex": "^[a-zA-Z0-9\n#/\\s]*$",
                                    "addressComponentMapping": [
                                         {
                                              "addressComponent": "street_number",
@@ -84,7 +91,8 @@
                                         ]
                                    },
                                    "messages": {
-                                        "requiredErrorText": "Street address is Required."
+                                        "requiredErrorText": "Street address is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "Street Address"
                               }
@@ -96,8 +104,10 @@
                                    "fieldType": "string",
                                    "label": "City",
                                    "required": true,
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "City is Required."
+                                        "requiredErrorText": "City is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "City"
                               }
@@ -463,7 +473,7 @@
                                         }
                                    ],
                                    "messages": {
-                                        "requiredErrorText": "State is Required."
+                                        "requiredErrorText": "State is required."
                                    },
                                    "ariaLabel": "MailingState"
                               }
@@ -479,6 +489,15 @@
                                    "messages": {
                                         "requiredErrorText": "Postal code is required.",
                                         "regexErrorText": "Please enter a valid postal code"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numericOnly": true,
+                                             "blocks": [
+                                                  5
+                                             ],
+                                             "initValue": "12345"
+                                        }
                                    },
                                    "ariaLabel": "Postal Code"
                               }
@@ -509,7 +528,7 @@
                                                   3,
                                                   4
                                              ],
-                                             "initValue": "2312411324"
+                                             "initValue": "1234567890"
                                         }
                                    },
                                    "ariaLabel": "Phone Number"
@@ -544,6 +563,10 @@
                               "fieldUi": {
                                    "fieldType": "string",
                                    "label": " Job Title",
+                                   "regex": "^[a-zA-Z0-9\\s]*$",
+                                   "messages": {
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
+                                   },
                                    "ariaLabel": "Title"
                               }
                          },
@@ -557,7 +580,7 @@
                                    "regex": "^\\d{9}$",
                                    "messages": {
                                         "requiredErrorText": "Social security number is required.",
-                                        "regexErrorText": "Social Security Number is invalid."
+                                        "regexErrorText": "Social security number is invalid."
                                    },
                                    "format": {
                                         "options": {
@@ -569,7 +592,7 @@
                                                   2,
                                                   4
                                              ],
-                                             "initValue": "123214135"
+                                             "initValue": "123456789"
                                         }
                                    },
                                    "ariaLabel": "Social Security Number"
@@ -590,9 +613,20 @@
                                    },
                                    "ariaLabel": "Email Address"
                               }
+                         },
+                         {
+                              "id": "fd73c24e-d74b-4d6a-ba68-784e6b2cf9a0",
+                              "fieldName": "clcommon__Personal_Information__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
                          }
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "los_personal_information_details",
+     "clcommon__Release_Checksum__c": "56753245b9e4900eb97edad36849163bfd5c45b73865c64983f1016eb83294dc"
 }

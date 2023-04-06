@@ -7,19 +7,19 @@
      "clcommon__Action_Definition__c": {
           "name": "upload",
           "property": {
-               "uploadType": "document",
-               "multiple": true,
+               "accept": ".pdf, .png, .jpg, .jpeg, .csv, .txt, .xls, .xlsx, .doc, .docx",
                "maxSize": 3000000000,
-               "accept": ".pdf, .png, .jpg, .jpeg, .csv, .txt, .xls, .xlsx, .doc, .docx"
+               "multiple": true,
+               "uploadType": "document"
           },
           "appearance": {
-               "style": "primary",
+               "label": "Upload File",
                "render": "$this.attr(clcommon__Status__c); != $global.attr(statusSubmitted); and $this.attr(clcommon__Status__c); != $global.attr(statusApproved);",
-               "label": "Upload File"
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "documentCategoryId": "$this.attr(Id);",
-               "attachmentIds": "$uploadedAttachmentIds;"
+               "attachmentIds": "$uploadedAttachmentIds;",
+               "documentCategoryId": "$this.attr(Id);"
           },
           "uploadActionArguments": {
                "attachmentParentId": "$this.attr(Id);"
@@ -54,9 +54,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_upload_document_panel_sub_folder",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_document_doc_panel+upload+RECORD",
-     "clcommon__Release_Checksum__c": "03053d9368721caa60b51e7a48c8148c4b4bcb67abcbc61d4f3d0e523c924db1",
      "clcommon__Remote_Action_Class__c": "genesis.PortalLinkAttachmentAPI",
      "clcommon__Unique_Action_Name__c": "smb_back_office_document_doc_panel+upload",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_document_doc_panel+upload+RECORD",
+     "clcommon__Release_Checksum__c": "03053d9368721caa60b51e7a48c8148c4b4bcb67abcbc61d4f3d0e523c924db1"
 }

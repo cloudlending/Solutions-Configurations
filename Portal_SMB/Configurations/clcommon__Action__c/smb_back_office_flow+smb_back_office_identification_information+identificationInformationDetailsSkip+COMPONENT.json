@@ -1,0 +1,50 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "identificationInformationDetailsSkip",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "identificationInformationDetailsSkip",
+          "property": {},
+          "appearance": {
+               "render": "($this.attr(Id); == \"\" or $this.attr(Id); == undefined or $this.attr(Id); == \"new_record_id\") and ($this.attr(genesis__Identification_Type__c); == undefined or $this.attr(genesis__Identification_Type__c); == \"\" or $this.attr(genesis__Identification_Type__c); == \"Select one\")",
+               "style": "primary",
+               "label": "Skip"
+          },
+          "remoteActionArguments": {},
+          "successHandler": {
+               "assignments": []
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "actions": [
+                    {
+                         "condition": "$global.attr(HMDALoan); == true and ($global.attr(HMDALegalClassName); ==\"Sole Proprietorship\" or $global.attr(HMDALegalClassName); ==\"Individual\") ",
+                         "name": "savePortalStage"
+                    },
+                    {
+                         "condition": "($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\" and $global.attr(HMDALegalClassName); !=\"Individual\") or ($global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\" and $global.attr(HMDALegalClassName); !=\"Individual\") or ($global.attr(HMDALoan); == false and ($global.attr(HMDALegalClassName); ==\"Sole Proprietorship\" or $global.attr(HMDALegalClassName); ==\"Individual\"))",
+                         "name": "updatePartySubmitnext"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_identification_information"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_identification_information",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_identification_information+identificationInformationDetailsSkip",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_identification_information+identificationInformationDetailsSkip+COMPONENT",
+     "clcommon__Release_Checksum__c": "1c3580937f68a55951b5c606e584fca3cc1f1dd561ac737a59aba107dad7e08c"
+}

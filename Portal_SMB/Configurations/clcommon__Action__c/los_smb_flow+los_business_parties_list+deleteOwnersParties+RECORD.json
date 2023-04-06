@@ -5,30 +5,30 @@
      "Name": "deleteOwnersParties",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "deleteOwnersParties",
+          "property": {},
+          "appearance": {
+               "label": "delete",
+               "render": false,
+               "style": "iconic",
+               "tooltip": "Delete Party"
+          },
+          "remoteActionArguments": {
+               "objectName": "party",
+               "recordId": "$this.attr(id);",
+               "applicationId": "$global.attr(applicationId);"
+          },
           "successHandler": {
                "updates": [
                     {
-                         "value": "los_business_parties_list",
-                         "name": "$nav.reloads.add;"
+                         "name": "$nav.reloads.add;",
+                         "value": "los_business_parties_list"
                     }
                ]
           },
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "recordId": "$this.attr(id);",
-               "objectName": "party"
-          },
-          "appearance": {
-               "tooltip": "Delete Party",
-               "style": "iconic",
-               "render": false,
-               "label": "delete"
-          },
-          "property": {},
-          "name": "deleteOwnersParties"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "submit",
@@ -40,9 +40,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_business_parties_summary",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_list+deleteOwnersParties+RECORD",
-     "clcommon__Release_Checksum__c": "da9430fe8bb84b7a3f49121ddaa46e06e8166234490bad9d6285cadb18439f2a",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalGenericDeleteAPI",
      "clcommon__Unique_Action_Name__c": "los_business_parties_list+deleteOwnersParties",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_list+deleteOwnersParties+RECORD",
+     "clcommon__Release_Checksum__c": "da9430fe8bb84b7a3f49121ddaa46e06e8166234490bad9d6285cadb18439f2a"
 }

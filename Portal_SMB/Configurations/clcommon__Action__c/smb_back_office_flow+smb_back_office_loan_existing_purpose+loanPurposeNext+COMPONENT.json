@@ -8,21 +8,21 @@
           "name": "loanPurposeNext",
           "property": {},
           "appearance": {
-               "label": "Next",
+               "render": "$global.attr(loanPurpose);!=null and $global.attr(loanPurpose);!=\"\" and $global.attr(loanPurpose);!=undefined and $global.attr(loanPurpose);!=\"new_record_id\"",
                "style": "primary",
-               "render": "$global.attr(loanPurpose);!=null and $global.attr(loanPurpose);!=\"\" and $global.attr(loanPurpose);!=undefined and $global.attr(loanPurpose);!=\"new_record_id\""
+               "label": "Next"
           },
           "remoteActionArguments": {
-               "genesis__Business_Information__c": {
-                    "id": "$global.attr(businessInfoId);"
+               "genesis__Applications__c": {
+                    "genesis__Other_Purpose__c": "$this.attr(genesis__Application__r.genesis__Other_Purpose__c);",
+                    "genesis__CL_Purpose__c": "$global.attr(loanPurpose);",
+                    "id": "$global.attr(applicationId);"
                },
                "account": {
                     "id": "$global.attr(backofficerAccountId);"
                },
-               "genesis__Applications__c": {
-                    "id": "$global.attr(applicationId);",
-                    "genesis__CL_Purpose__c": "$global.attr(loanPurpose);",
-                    "genesis__Other_Purpose__c": "$this.attr(genesis__Application__r.genesis__Other_Purpose__c);"
+               "genesis__Business_Information__c": {
+                    "id": "$global.attr(businessInfoId);"
                }
           },
           "validation": [
@@ -47,6 +47,11 @@
                ],
                "actions": [
                     {
+                         "condition": "$global.attr(businessEntityType);==\"Individual\"",
+                         "name": "ConsentCheckIndividual"
+                    },
+                    {
+                         "condition": "$global.attr(businessEntityType);!=\"Individual\"",
                          "name": "savePortalStage"
                     }
                ]
@@ -56,7 +61,7 @@
           "handler": {},
           "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -66,9 +71,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_loan_existing_purpose",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_loan_existing_purpose+loanPurposeNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "a2ee8a2e9774d0cf9e0ba1e8e9587fd7f22a05974dacd3e2940bb423e244dff3",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveApplication",
      "clcommon__Unique_Action_Name__c": "smb_back_office_loan_existing_purpose+loanPurposeNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_loan_existing_purpose+loanPurposeNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "cae71dadff7c89d4b99b3ee094c6181719d19388bfc64161d2f9c0b43f74e883"
 }

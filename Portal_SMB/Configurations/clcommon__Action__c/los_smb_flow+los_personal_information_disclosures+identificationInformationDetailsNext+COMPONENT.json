@@ -5,50 +5,50 @@
      "Name": "identificationInformationDetailsNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "identificationInformationDetailsNext",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Next",
+               "style": "primary",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "genesis__Identification_Information__c": {
+                    "genesis__Identification_Type__c": "$state(los_identification_details).attr(genesis__Identification_Type__c);",
+                    "genesis__Identification_Number__c": "$state(los_identification_details).attr(genesis__Identification_Number__c);",
+                    "genesis__Date_of_Issuance__c": "$state(los_identification_details).attr(genesis__Date_of_Issuance__c);",
+                    "genesis__Expiration_Date__c": "$state(los_identification_details).attr(genesis__Expiration_Date__c);"
+               },
+               "accountId": "$global.attr(borrowerAccountId);",
+               "applicationId": "$global.attr(applicationId);",
+               "partyId": "$global.attr(borrowerPartyId);"
+          },
+          "validation": [],
           "successHandler": {
-               "actions": [
-                    {
-                         "name": "savePersonalAnnualIncomeExisting",
-                         "condition": "$state(los_personal_income_details).attr(Id);!=\"\" and $state(los_personal_income_details).attr(Id);!=undefined and $state(los_personal_income_details).attr(Id);!=\"new_record_id\""
-                    },
-                    {
-                         "name": "savePersonalAnnualIncome",
-                         "condition": "$state(los_personal_income_details).attr(Id);==\"\" or $state(los_personal_income_details).attr(Id);==undefined or $state(los_personal_income_details).attr(Id);==\"new_record_id\""
-                    }
-               ],
                "assignments": [
                     {
-                         "value": "$result.attr(identificationInfoId);",
-                         "field": "$global.attr(identificationInfoId);"
+                         "field": "$global.attr(identificationInfoId);",
+                         "value": "$result.attr(identificationInfoId);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$state(los_personal_income_details).attr(Id);!=\"\" and $state(los_personal_income_details).attr(Id);!=undefined and $state(los_personal_income_details).attr(Id);!=\"new_record_id\"",
+                         "name": "savePersonalAnnualIncomeExisting"
+                    },
+                    {
+                         "condition": "$state(los_personal_income_details).attr(Id);==\"\" or $state(los_personal_income_details).attr(Id);==undefined or $state(los_personal_income_details).attr(Id);==\"new_record_id\"",
+                         "name": "savePersonalAnnualIncome"
                     }
                ]
           },
-          "validation": [],
-          "remoteActionArguments": {
-               "partyId": "$global.attr(borrowerPartyId);",
-               "applicationId": "$global.attr(applicationId);",
-               "accountId": "$global.attr(borrowerAccountId);",
-               "genesis__Identification_Information__c": {
-                    "genesis__Expiration_Date__c": "$state(los_identification_details).attr(genesis__Expiration_Date__c);",
-                    "genesis__Date_of_Issuance__c": "$state(los_identification_details).attr(genesis__Date_of_Issuance__c);",
-                    "genesis__Identification_Number__c": "$state(los_identification_details).attr(genesis__Identification_Number__c);",
-                    "genesis__Identification_Type__c": "$state(los_identification_details).attr(genesis__Identification_Type__c);"
-               }
-          },
-          "appearance": {
-               "render": false,
-               "style": "primary",
-               "label": "Next",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "identificationInformationDetailsNext"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Order__c": 6,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -58,9 +58,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_personal_information_disclosures",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_personal_information_disclosures+identificationInformationDetailsNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "b7c9099d687f3f09360774892c245c81599cb270f86e70a9c797357d8aaea7a4",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIdentificationInformation",
      "clcommon__Unique_Action_Name__c": "los_personal_information_disclosures+identificationInformationDetailsNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_personal_information_disclosures+identificationInformationDetailsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "5d781b8b447f6d551dacae32d488aee7568a720e07c07c714ce907cc7e208dcb"
 }

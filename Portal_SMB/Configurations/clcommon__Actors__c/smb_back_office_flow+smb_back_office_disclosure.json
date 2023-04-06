@@ -21,6 +21,9 @@
                "showSectionTitle": true,
                "sectionStyle": "layout",
                "renderFields": {
+                    "create_account_email_partner_user": "$global.attr(renderPartner);",
+                    "create_account_email_trustee_user": "$global.attr(renderTrustee);",
+                    "create_account_email_control_person": "$global.attr(renderConrtolPerson);",
                     "create_account_email_signer_user": "$global.attr(renderSinger);",
                     "create_account_email_guarantor_user": "$global.attr(renderGuarantor);",
                     "create_account_email_owner_user": "$global.attr(renderBeneficialOwner);",
@@ -46,5 +49,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_disclosure",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_disclosure",
-     "clcommon__Release_Checksum__c": "45d1c735a1352d400e8b0a0d534290d9c5e381342e73d2ae1b89c15e6e60649a"
+     "clcommon__Release_Checksum__c": "c2a48c22c563e6efa8722f7d3c4a8a467b505dd4cc227e55263c4a643d3be7bf"
 }

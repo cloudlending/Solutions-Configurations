@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "assignStepLabel",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "assignStepLabel",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Continue"
+          },
+          "automatic": true,
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(stepsLabel);",
+                         "value": "Review"
+                    },
+                    {
+                         "field": "$global.attr(stepperCount);",
+                         "value": "6"
+                    },
+                    {
+                         "field": "$global.attr(mainStepLabel);",
+                         "value": "Review"
+                    },
+                    {
+                         "field": "$nav(los_mobile_stepper_panel).appearance(current);",
+                         "value": "ReviewAndSubmit"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_review_steps"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_review_steps+assignStepLabel",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_review_steps+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "d71a81257ee46f203bd00828b8d37c92a0972d3256dbeadd428ee26bc20a2171"
+}

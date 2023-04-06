@@ -8,14 +8,14 @@
           "name": "savePortalStageNew",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "IndustryCode",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "IndustryCode"
           },
           "validation": [
                "smb_back_office_business_details"
@@ -24,11 +24,15 @@
                "assignments": [
                     {
                          "field": "$nav(smb_back_office_application_flow_steps).appearance(current);",
-                         "value": "next"
+                         "value": "IndustryCode"
                     },
                     {
                          "field": "$global.attr(backofficerAccountId);",
                          "value": "$global.attr(tempbackofficerAccountId);"
+                    },
+                    {
+                         "field": "$global.attr(businessEntityType);",
+                         "value": "$state(smb_back_office_business_Legal_entity_picklist_details).attr(clcommon__Legal_Entity_Type__c);"
                     }
                ],
                "executions": [
@@ -52,9 +56,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_basic_business_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_details+savePortalStageNew+COMPONENT",
-     "clcommon__Release_Checksum__c": "7ad15762a9449eb877da0a80a2114aa078452aded74297f00679b335cd71d0e6",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
      "clcommon__Unique_Action_Name__c": "smb_back_office_business_details+savePortalStageNew",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_details+savePortalStageNew+COMPONENT",
+     "clcommon__Release_Checksum__c": "1c6577c4c3d2dc7a81e868429f78208e14b066f083066d13f3556cec568aa9fb"
 }

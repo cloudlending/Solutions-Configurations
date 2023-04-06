@@ -9,12 +9,20 @@
           "clcommon__External_ID__c": "smb_back_office_flow"
      },
      "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
           "generalHandlers": {
                "loaded": {}
           },
           "recordActions": [],
           "componentActions": [],
           "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
                "grid": {
                     "card": {
                          "xs": 12,
@@ -25,11 +33,11 @@
                     "record": [
                          {
                               "condition": "$this.attr(clcommon__Percent_Ownership__c); > 19",
-                              "template": "<div style=\"margin: 20px; font-size: 16px; font-family: Roboto; line-height: 2.4;\"><div class=\"AccName\">$this.attr(clcommon__Account__r.Name);</div><div class=\"PartyType\"> $this.attr(clcommon__Party_Types__c); </div><div><progress id=\"clcommon__Percent_Ownership__c\" value=\"$this.attr(clcommon__Percent_Ownership__c);\" max=\"100\"></progress>$this.attr(clcommon__Percent_Ownership__c);%</div></div>"
+                              "template": "<div style=\"margin: 20px; font-size: 16px; font-family: Roboto; line-height: 2.4;\"><div class=\"AccName\">$this.attr(clcommon__Account__r.Name);</div><div class=\"PartyType\"> $this.attr(clcommon__Party_Types__c); </div><div>$this.attr(clcommon__Contact__r.Email, email);</div><div><progress id=\"clcommon__Percent_Ownership__c\" value=\"$this.attr(clcommon__Percent_Ownership__c);\" max=\"100\"></progress>$this.attr(clcommon__Percent_Ownership__c);%</div></div>"
                          },
                          {
                               "condition": "$this.attr(clcommon__Percent_Ownership__c); == undefined or $this.attr(clcommon__Percent_Ownership__c); == null or $this.attr(clcommon__Percent_Ownership__c);== 0",
-                              "template": "<div style=\"margin: 20px; font-size: 16px; font-family: Roboto; line-height: 2.4;\"><div class=\"AccName\">$this.attr(clcommon__Account__r.Name);</div><div class=\"PartyType\"> $this.attr(clcommon__Party_Types__c); </div></div>"
+                              "template": "<div style=\"margin: 20px; font-size: 16px; font-family: Roboto; line-height: 2.4;\"><div class=\"AccName\">$this.attr(clcommon__Account__r.Name);</div><div class=\"PartyType\"> $this.attr(clcommon__Party_Types__c); </div><div>$this.attr(clcommon__Contact__r.Email, email);</div></div>"
                          }
                     ]
                },
@@ -56,5 +64,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_business_parties_summary",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_parties_summary",
-     "clcommon__Release_Checksum__c": "2b83b250ac9092d75fb4019dd0a3c3458ea1b938d5f7f5280de396285b3b2ea7"
+     "clcommon__Release_Checksum__c": "a3014cc44859093fd58c48dfee081a6106609536d0e5a19d1b260bf749af8096"
 }

@@ -5,26 +5,26 @@
      "Name": "navigateToCollateralList",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
+          "name": "navigateToCollateralList",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Submit",
+               "render": "$global.attr(itemizedCollateral);!=true",
+               "position": "bottom-left"
+          },
+          "validation": [],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "updates": [
                     {
-                         "value": "los_edit_collateral_overlay",
-                         "name": "$nav.overlay.remove;"
+                         "name": "$nav.overlay.remove;",
+                         "value": "los_edit_collateral_overlay"
                     }
                ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "validation": [],
-          "appearance": {
-               "position": "bottom-left",
-               "render": "$global.attr(itemizedCollateral);!=true",
-               "label": "Submit",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "navigateToCollateralList"
+          }
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -36,9 +36,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_collateral_rent_roll_list",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_edit_collateral_rent_roll_list+navigateToCollateralList+COMPONENT",
-     "clcommon__Release_Checksum__c": "a844f6a445cbcf1a0682519381c6691f6e0bd42cebd33e97442d75139a004640",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_edit_collateral_rent_roll_list+navigateToCollateralList",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_edit_collateral_rent_roll_list+navigateToCollateralList+COMPONENT",
+     "clcommon__Release_Checksum__c": "a844f6a445cbcf1a0682519381c6691f6e0bd42cebd33e97442d75139a004640"
 }

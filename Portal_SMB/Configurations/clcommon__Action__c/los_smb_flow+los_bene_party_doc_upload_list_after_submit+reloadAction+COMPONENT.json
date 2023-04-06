@@ -5,29 +5,29 @@
      "Name": "reloadAction",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
+          "name": "reloadAction",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "style": "primary",
+               "render": true
+          },
+          "automatic": true,
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "updates": [
                     {
+                         "name": "$nav.reloads.add;",
                          "value": [
                               "los_bene_party_doc_upload_list_after_submit"
-                         ],
-                         "name": "$nav.reloads.add;"
+                         ]
                     }
                ]
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "automatic": true,
-          "appearance": {
-               "render": true,
-               "style": "primary",
-               "label": "Next",
-               "position": "bottom-right"
-          },
-          "property": {},
-          "name": "reloadAction"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -39,9 +39,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_beneficial_party_doc_upload_list_after_submit",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_bene_party_doc_upload_list_after_submit+reloadAction+COMPONENT",
-     "clcommon__Release_Checksum__c": "c3b8ec44458528bf9e65c5551219bfccdbb28e7638107b1535b84fe4ef715411",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_bene_party_doc_upload_list_after_submit+reloadAction",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_bene_party_doc_upload_list_after_submit+reloadAction+COMPONENT",
+     "clcommon__Release_Checksum__c": "c3b8ec44458528bf9e65c5551219bfccdbb28e7638107b1535b84fe4ef715411"
 }

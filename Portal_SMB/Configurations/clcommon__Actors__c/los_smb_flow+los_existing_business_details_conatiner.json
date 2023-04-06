@@ -16,33 +16,33 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "editableFields": {
-                    "clcommon__Entity__r.Name": false,
-                    "clcommon__Related_Entity__r.Name": false,
-                    "clcommon__Related_Entity__c": false,
-                    "clcommon__Entity__c": false,
-                    "clcommon__Entity_Role__c": false,
-                    "Id": false
-               },
-               "blankMessage": "No Existing Businesses available",
-               "renderFields": {
-                    "clcommon__Related_Entity__c": false,
-                    "clcommon__Entity__c": false,
-                    "clcommon__Entity_Role__c": false,
-                    "Id": false
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
                },
                "fieldColumns": 1,
-               "messagePositions": {
-                    "loadingAnimation": "global",
-                    "loadingError": "top",
-                    "saveSubmitError": "top"
+               "renderFields": {
+                    "Id": false,
+                    "clcommon__Entity_Role__c": false,
+                    "clcommon__Entity__c": false,
+                    "clcommon__Related_Entity__c": false
+               },
+               "blankMessage": "No Existing Businesses available",
+               "editableFields": {
+                    "Id": false,
+                    "clcommon__Entity_Role__c": false,
+                    "clcommon__Entity__c": false,
+                    "clcommon__Related_Entity__c": false,
+                    "clcommon__Related_Entity__r.Name": false,
+                    "clcommon__Entity__r.Name": false
                }
           },
           "property": {
+               "structureName": "los_existing_business_entites",
                "whereClause": {
                     "accountId": "$global.attr(userInfo).attr(accountId);"
-               },
-               "structureName": "los_existing_business_entites"
+               }
           },
           "type": "list-view",
           "category": "component"

@@ -16,51 +16,51 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
-               },
-               "editableFields": {
-                    "clcommon__Contact__r.FirstName": " $global.attr(partyType); == \"PRINCIPAL\"",
-                    "clcommon__Contact__r.Email": " $global.attr(partyType); == \"PRINCIPAL\"",
-                    "clcommon__Contact__r.LastName": " $global.attr(partyType); == \"PRINCIPAL\"",
-                    "clcommon__Contact__r.Phone": " $global.attr(partyType); == \"PRINCIPAL\"",
-                    "clcommon__Party_Types__c": false
-               },
-               "renderFields": {
-                    "clcommon__Contact__r.clcommon__Current_Street__c": false,
-                    "clcommon__Contact__r.Id": false,
-                    "clcommon__Contact__r.clcommon__Current_City__c": false,
-                    "clcommon__Contact__r.Birthdate": false,
-                    "clcommon__Contact__r.clcommon__Current_Zip_Code__c": false,
-                    "clcommon__Contact__r.clcommon__Current_State__c": false,
-                    "Id": false,
-                    "clcommon__Party_Types__c": false,
-                    "clcommon__Contact__r.genesis__SSN__c": false
-               },
-               "editable": "$global.attr(partyId); ==\"\" or $global.attr(partyId);==undefined",
+               "fieldColumns": 1,
                "grid": {
-                    "messagePositions": {
-                         "saveSubmitError": "top",
-                         "loadingError": "top",
-                         "loadingAnimation": "global"
-                    },
                     "field": {
                          "$default": {
-                              "xs": 12,
-                              "sm": 6
+                              "sm": 6,
+                              "xs": 12
                          }
+                    },
+                    "messagePositions": {
+                         "loadingAnimation": "global",
+                         "loadingError": "top",
+                         "saveSubmitError": "top"
                     }
                },
-               "fieldColumns": 1
+               "editable": "$global.attr(partyId); ==\"\" or $global.attr(partyId);==undefined",
+               "renderFields": {
+                    "clcommon__Contact__r.genesis__SSN__c": false,
+                    "clcommon__Party_Types__c": false,
+                    "Id": false,
+                    "clcommon__Contact__r.clcommon__Current_State__c": false,
+                    "clcommon__Contact__r.clcommon__Current_Zip_Code__c": false,
+                    "clcommon__Contact__r.Birthdate": false,
+                    "clcommon__Contact__r.clcommon__Current_City__c": false,
+                    "clcommon__Contact__r.Id": false,
+                    "clcommon__Contact__r.clcommon__Current_Street__c": false
+               },
+               "editableFields": {
+                    "clcommon__Party_Types__c": false,
+                    "clcommon__Contact__r.Phone": " $global.attr(partyType); == \"PRINCIPAL\"",
+                    "clcommon__Contact__r.LastName": " $global.attr(partyType); == \"PRINCIPAL\"",
+                    "clcommon__Contact__r.Email": " $global.attr(partyType); == \"PRINCIPAL\"",
+                    "clcommon__Contact__r.FirstName": " $global.attr(partyType); == \"PRINCIPAL\""
+               },
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               }
           },
           "property": {
+               "structureName": "smb_business_party_personal_info",
+               "queryWithDefaultNew": true,
                "whereClause": {
                     "partyId": "$global.attr(partyId);"
-               },
-               "queryWithDefaultNew": true,
-               "structureName": "smb_business_party_personal_info"
+               }
           },
           "type": "detail-view",
           "category": "component"

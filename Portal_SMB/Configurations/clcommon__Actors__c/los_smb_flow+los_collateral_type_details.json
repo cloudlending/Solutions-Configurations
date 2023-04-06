@@ -16,43 +16,43 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "pagination": {
-                    "lastLinkText": "last_page",
-                    "nextLinkText": "chevron_right",
-                    "previousLinkText": "chevron_left",
-                    "firstLinkText": "first_page",
-                    "recordLineTemplate": "$start; - $end; of $total;",
-                    "numberOfPageLinks": 5,
-                    "numberOfRecordsPerPage": 8
-               },
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
+               "editable": "$this.attr(Id);==$global.attr(editAsset); or $this.attr(Id);==undefined",
+               "blankMessage": "No business assets available!",
+               "title": "Add Business Asset Details",
+               "renderFields": {
+                    "Id": false,
+                    "clcommon__Collateral_Type__r.Name": "$this.attr(Id);!=$global.attr(editAsset); and $this.attr(Id);!=undefined",
+                    "clcommon__Collateral_Type__c": "$this.attr(Id);==$global.attr(editAsset); or $this.attr(Id);==undefined",
+                    "clcommon__Collateral__c": false,
+                    "clcommon__Valuation_Date__c": false
                },
                "editableFields": {
-                    "clcommon__Valuation_Date__c": false,
-                    "clcommon__Collateral__c": false,
-                    "Id": false,
+                    "clcommon__Collateral_Type__r.Name": false,
                     "clcommon__Collateral_Type__c": true,
-                    "clcommon__Collateral_Type__r.Name": false
-               },
-               "renderFields": {
-                    "clcommon__Valuation_Date__c": false,
+                    "Id": false,
                     "clcommon__Collateral__c": false,
-                    "clcommon__Collateral_Type__c": "$this.attr(Id);==$global.attr(editAsset); or $this.attr(Id);==undefined",
-                    "clcommon__Collateral_Type__r.Name": "$this.attr(Id);!=$global.attr(editAsset); and $this.attr(Id);!=undefined",
-                    "Id": false
+                    "clcommon__Valuation_Date__c": false
                },
-               "title": "Add Business Asset Details",
-               "blankMessage": "No business assets available!",
-               "editable": "$this.attr(Id);==$global.attr(editAsset); or $this.attr(Id);==undefined"
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               },
+               "pagination": {
+                    "numberOfRecordsPerPage": 8,
+                    "numberOfPageLinks": 5,
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "firstLinkText": "first_page",
+                    "previousLinkText": "chevron_left",
+                    "nextLinkText": "chevron_right",
+                    "lastLinkText": "last_page"
+               }
           },
           "property": {
+               "structureName": "los_add_collateral_type_details_list",
                "whereClause": {
                     "collateralId": "$global.attr(collateralId);"
-               },
-               "structureName": "los_add_collateral_type_details_list"
+               }
           },
           "type": "list-view",
           "category": "component"

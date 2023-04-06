@@ -21,9 +21,12 @@
                     "loadingError": "top",
                     "loadingAnimation": "global"
                },
+               "editableFields": {
+                    "clcommon__Legal_Entity_Type__c": "$global.attr(backofficerAccountId); == \"\" or $global.attr(backofficerAccountId); == null or $global.attr(backofficerAccountId); == undefined"
+               },
                "editable": true,
                "fieldColumns": 1,
-               "title": "Business Information ",
+               "title": "Business Information",
                "grid": {
                     "field": {
                          "$default": {
@@ -45,5 +48,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_business_Legal_entity_picklist_details",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_Legal_entity_picklist_details",
-     "clcommon__Release_Checksum__c": "6535f069b55f8993dd7e07b82d81158ce5086968a2c6f6b3ee68786f9397cd61"
+     "clcommon__Release_Checksum__c": "d7fdf1967267bb6514b2ce5d2d5f39765b23a368308c643d97a6c3c243131d92"
 }

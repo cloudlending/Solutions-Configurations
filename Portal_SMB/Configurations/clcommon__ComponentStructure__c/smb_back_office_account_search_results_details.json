@@ -4,17 +4,15 @@
      },
      "Name": "smb_back_office_account_search_results_details",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "smb_back_office_account_search_results_details",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "4068998abfdc87603ea05d62e8b1daa87cdcdec89e073dfda30cf8cabab91bc8",
      "clcommon__Unique_Name__c": "smb_back_office_account_search_results_details",
      "clcommon__data__c": {
           "structureName": "smb_back_office_account_search_results_details",
           "tableName": "account",
           "whereClause": {
-               "freeForm": "Name like '%:Name%' and (clcommon__Legal_Entity_Type__c != null and clcommon__Legal_Entity_Type__r.clcommon__Individual__c = false)"
+               "freeForm": "Name like '%:Name%' and ((clcommon__Legal_Entity_Type__c != null and clcommon__Legal_Entity_Type__r.clcommon__Individual__c = false) or clcommon__Is_Sole_Proprietorship__c = true)"
           },
           "sections": [
                {
@@ -183,5 +181,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "smb_back_office_account_search_results_details",
+     "clcommon__Release_Checksum__c": "43020860232510de8bb23ca2de02b4f383c6f24c30d8e3bd1b95ac79336699b7"
 }

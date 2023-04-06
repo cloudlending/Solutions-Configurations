@@ -1,0 +1,144 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_individual_party_types",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "smb_back_office_individual_party_types",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_individual_party_types",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "Id = ':partyId'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "d712bc5d-5dd6-4b9f-a6d7-eabefa6f1ba0",
+                    "name": "Select the party Role(s)",
+                    "title": "Select the party Role(s)",
+                    "fields": [
+                         {
+                              "id": "d0bc4428-c218-4396-9134-8f86aa4e499b",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "f602364c-19dc-4053-a2d4-0a436fba98d7",
+                              "fieldName": "clcommon__Party_Types__c",
+                              "fieldUi": {
+                                   "fieldType": "multiselectbuttons",
+                                   "label": "Party Types",
+                                   "selectOptions": [
+                                        {
+                                             "id": "GUARANTOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "GUARANTOR",
+                                             "optionValue": "GUARANTOR"
+                                        },
+                                        {
+                                             "id": "AUTHORIZED SIGNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "AUTHORIZED SIGNER",
+                                             "optionValue": "AUTHORIZED SIGNER"
+                                        },
+                                        {
+                                             "id": "HYPOTHECATOR",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "HYPOTHECATOR",
+                                             "optionValue": "HYPOTHECATOR"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Party Role is required."
+                                   },
+                                   "ariaLabel": "Party Types"
+                              }
+                         }
+                    ]
+               },
+               {
+                    "id": "906437690426",
+                    "fields": [
+                         {
+                              "id": "9507cbf5-ce0e-4bb5-a7cc-fb09e60cedcb",
+                              "fieldName": "clcommon__Signer_Capacity__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Signer Capacity",
+                                   "required": true,
+                                   "prompt": "Select One",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Partner",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Partner",
+                                             "optionValue": "Partner"
+                                        },
+                                        {
+                                             "id": "Agent",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Agent",
+                                             "optionValue": "Agent"
+                                        },
+                                        {
+                                             "id": "Officer",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Officer",
+                                             "optionValue": "Officer"
+                                        },
+                                        {
+                                             "id": "Member",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Member",
+                                             "optionValue": "Member"
+                                        },
+                                        {
+                                             "id": "Official",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Official",
+                                             "optionValue": "Official"
+                                        },
+                                        {
+                                             "id": "Trustee",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Trustee",
+                                             "optionValue": "Trustee"
+                                        },
+                                        {
+                                             "id": "Beneficiary",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Beneficiary",
+                                             "optionValue": "Beneficiary"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Signer Capacity is Required."
+                                   },
+                                   "ariaLabel": "Signer Capacity"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "smb_back_office_individual_party_types",
+     "clcommon__Release_Checksum__c": "1835558a53dd327c6133fd7e6eb67585918c5ce560ac066336b65c02c3a7c219"
+}

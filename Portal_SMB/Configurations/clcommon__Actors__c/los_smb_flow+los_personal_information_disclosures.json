@@ -13,19 +13,19 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
+               "editable": true,
+               "fieldColumns": 1,
                "renderFields": {
                     "clcommon__Type__c": false
-               },
-               "fieldColumns": 1,
-               "editable": true
+               }
           },
           "property": {
-               "whereClause": {
-                    "appId": "$global.attr(applicationId);",
-                    "partyId": "$global.attr(borrowerPartyId);"
-               },
+               "structureName": "los_personal_information_disclosures",
                "queryWithDefaultNew": true,
-               "structureName": "los_personal_information_disclosures"
+               "whereClause": {
+                    "partyId": "$global.attr(borrowerPartyId);",
+                    "appId": "$global.attr(applicationId);"
+               }
           },
           "type": "detail-view",
           "category": "component"

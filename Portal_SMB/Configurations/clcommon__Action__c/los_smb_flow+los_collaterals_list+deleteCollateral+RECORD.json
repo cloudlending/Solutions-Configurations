@@ -5,37 +5,37 @@
      "Name": "deleteCollateral",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "deleteCollateral",
+          "property": {},
+          "appearance": {
+               "tooltip": "Delete Collateral",
+               "style": "iconic",
+               "label": "delete"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "collateralId": "$this.attr(genesis__Collateral__r.Id);"
+          },
           "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(collateralValidation);",
+                         "value": ""
+                    }
+               ],
                "updates": [
                     {
+                         "name": "$nav.reloads.add;",
                          "value": [
                               "los_collaterals_list",
                               "los_collaterals_list_validation"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "",
-                         "field": "$global.attr(collateralValidation);"
+                         ]
                     }
                ]
           },
-          "remoteActionArguments": {
-               "collateralId": "$this.attr(genesis__Collateral__r.Id);",
-               "applicationId": "$global.attr(applicationId);"
-          },
-          "appearance": {
-               "label": "delete",
-               "style": "iconic",
-               "tooltip": "Delete Collateral"
-          },
-          "property": {},
-          "name": "deleteCollateral"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "submit",
@@ -47,9 +47,9 @@
      },
      "clcommon__Component_Structure_Name__c": "get_collateral_list",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "los_smb_flow+los_collaterals_list+deleteCollateral+RECORD",
-     "clcommon__Release_Checksum__c": "23e329e42219a6defb0a4420d8ce96b17d70237627aa929982f7d1c73cc9e330",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalDeactivateAppCollateral",
      "clcommon__Unique_Action_Name__c": "los_collaterals_list+deleteCollateral",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_collaterals_list+deleteCollateral+RECORD",
+     "clcommon__Release_Checksum__c": "23e329e42219a6defb0a4420d8ce96b17d70237627aa929982f7d1c73cc9e330"
 }

@@ -44,7 +44,6 @@
                     "genesis__Application__r.Id": false,
                     "Id": false
                },
-               "render": true,
                "grid": {
                     "messagePositions": {
                          "saveSubmitError": "top",
@@ -64,7 +63,7 @@
           "property": {
                "queryWithDefaultNew": true,
                "whereClause": {
-                    "contactId": "$global.attr(contactId);",
+                    "contactId": "$global.attr(borrowerContactIdExisting);",
                     "appId": "$global.attr(applicationId);"
                },
                "structureName": "smb_back_office_income_information"
@@ -74,5 +73,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_income_information",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_income_information",
-     "clcommon__Release_Checksum__c": "4862902df7cf020d86a05c51d2bbb1b5c7f6db34993f40a85c0650e2ac3cb53b"
+     "clcommon__Release_Checksum__c": "66747ff210755d382ebadcb7947c71397c5d05679f68b3a144c6c18fa9941f7a"
 }

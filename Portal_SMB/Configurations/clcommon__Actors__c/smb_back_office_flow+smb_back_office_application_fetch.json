@@ -28,6 +28,12 @@
                               "name": "selectApplication",
                               "condition": "$global.attr(applicationId); != null and $global.attr(applicationId); != \"\""
                          }
+                    ],
+                    "assignments": [
+                         {
+                              "value": "$this.attr(clcommon__Account__r.clcommon__Legal_Entity_Type__r.Name);",
+                              "field": "$global.attr(businessEntityType);"
+                         }
                     ]
                }
           },
@@ -95,5 +101,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_application_fetch",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_application_fetch",
-     "clcommon__Release_Checksum__c": "e9622e5306a501691a290806b618430076c78b207ad1e44fe03e9fbf30e738b2"
+     "clcommon__Release_Checksum__c": "4f1d21af5f6f9e31b8650300f3353cbf8deef369e8f2ba0f957064bd0cbbf195"
 }

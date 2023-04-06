@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "identificationInformationDetailsBack",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "identificationInformationDetailsBack",
+          "property": {},
+          "appearance": {
+               "label": "Back",
+               "style": "secondary",
+               "position": "bottom-left"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(smb_back_office_add_business_parties_container).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "smb_back_office_personal_information_details",
+                              "smb_back_office_ownership_information",
+                              "smb_back_office_personal_information_disclosures",
+                              "smb_back_office_personal_information_consent_section",
+                              "smb_back_office_income_information"
+                         ]
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_identification_information_prefill"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_identification_information_prefill",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_identification_information_prefill+identificationInformationDetailsBack",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_identification_information_prefill+identificationInformationDetailsBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "34ef75b79958165985c866ecf15ab70dcc7818fb77d4154ba671f2ab3fdfd3ce"
+}

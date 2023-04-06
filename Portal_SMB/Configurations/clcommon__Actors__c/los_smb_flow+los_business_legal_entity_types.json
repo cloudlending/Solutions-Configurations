@@ -12,80 +12,92 @@
           "messages": {
                "showLoadingAnimation": true
           },
-          "generalHandlers": {},
+          "generalHandlers": {
+               "fieldChange": {
+                    "clcommon__Legal_Entity_Type__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(clcommon__Legal_Entity_Type__r).attr(Name); == \"Sole Proprietorship\" ? \"null\" : $state(los_business_details).attr(genesis__Business_Information__r.genesis__Resolution_Type__c);};",
+                                   "field": "$state(los_business_details).attr(genesis__Business_Information__r.genesis__Resolution_Type__c);"
+                              }
+                         ]
+                    }
+               }
+          },
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "editable": true,
-               "editableFields": {
-                    "Id": false,
-                    "genesis__Business_Information__r.genesis__Tax_Identification_Number__c": false,
-                    "genesis__Business_Information__r.genesis__DBA_Name__c": false,
-                    "clcommon__Legal_Entity_Type__r.clcommon__Individual__c": false,
-                    "genesis__Business_Information__r.Id": false,
-                    "BillingPostalCode": false,
-                    "BillingStreet": false,
-                    "BillingCity": false,
-                    "clcommon__Legal_Entity_Type__r.Name": false,
-                    "Name": false,
-                    "genesis__Business_Information__r.genesis__Business_Registration_State__c": false,
-                    "genesis__Business_Information__r.genesis__Date_Business_Established__c": false,
-                    "clcommon__Legal_Entity_Type__r.Id": false,
-                    "Phone": false,
-                    "BillingState": false
-               },
-               "renderFields": {
-                    "Id": false,
-                    "genesis__Business_Information__r.genesis__Tax_Identification_Number__c": false,
-                    "genesis__Business_Information__r.genesis__DBA_Name__c": false,
-                    "clcommon__Legal_Entity_Type__r.clcommon__Individual__c": false,
-                    "genesis__Business_Information__r.Id": false,
-                    "BillingPostalCode": false,
-                    "genesis__Business_Information__r.genesis__Resolution_Type__c": false,
-                    "BillingStreet": false,
-                    "BillingCity": false,
-                    "genesis__Business_Information__r.genesis__Completed_Resolution_Date__c": false,
-                    "clcommon__Legal_Entity_Type__r.Name": false,
-                    "Name": false,
-                    "genesis__Business_Information__r.genesis__Business_Registration_State__c": false,
-                    "genesis__Business_Information__r.genesis__Date_Business_Established__c": false,
-                    "genesis__Business_Information__r.genesis__Beneficial_Owner_Exempt__c": false,
-                    "clcommon__Legal_Entity_Type__r.Id": false,
-                    "Phone": false,
-                    "genesis__Business_Information__r.genesis__Management_Type__c": false,
-                    "genesis__Business_Information__r.genesis__Business_Description__c": false,
-                    "BillingState": false
+               "fieldColumns": 1,
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
                },
                "grid": {
                     "field": {
-                         "BillingState": {
-                              "sm": 6
-                         },
                          "$default": {
-                              "xs": 12,
+                              "sm": 6,
+                              "xs": 12
+                         },
+                         "BillingState": {
                               "sm": 6
                          }
                     }
                },
-               "title": "Tell us about your business",
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
+               "renderFields": {
+                    "BillingState": false,
+                    "clcommon__Is_Sole_Proprietorship__c": false,
+                    "genesis__Business_Information__r.genesis__Business_Description__c": false,
+                    "genesis__Business_Information__r.genesis__Management_Type__c": false,
+                    "Phone": false,
+                    "clcommon__Legal_Entity_Type__r.Id": false,
+                    "genesis__Business_Information__r.genesis__Beneficial_Owner_Exempt__c": false,
+                    "genesis__Business_Information__r.genesis__Date_Business_Established__c": false,
+                    "genesis__Business_Information__r.genesis__Business_Registration_State__c": false,
+                    "Name": false,
+                    "clcommon__Legal_Entity_Type__r.Name": false,
+                    "genesis__Business_Information__r.genesis__Completed_Resolution_Date__c": false,
+                    "BillingCity": false,
+                    "BillingStreet": false,
+                    "genesis__Business_Information__r.genesis__Resolution_Type__c": false,
+                    "BillingPostalCode": false,
+                    "genesis__Business_Information__r.Id": false,
+                    "clcommon__Legal_Entity_Type__r.clcommon__Individual__c": false,
+                    "genesis__Business_Information__r.genesis__DBA_Name__c": false,
+                    "genesis__Business_Information__r.genesis__Tax_Identification_Number__c": false,
+                    "Id": false
                },
-               "fieldColumns": 1
+               "editableFields": {
+                    "BillingState": false,
+                    "Phone": false,
+                    "clcommon__Legal_Entity_Type__r.Id": false,
+                    "genesis__Business_Information__r.genesis__Date_Business_Established__c": false,
+                    "genesis__Business_Information__r.genesis__Business_Registration_State__c": false,
+                    "Name": false,
+                    "clcommon__Legal_Entity_Type__r.Name": false,
+                    "BillingCity": false,
+                    "BillingStreet": false,
+                    "BillingPostalCode": false,
+                    "genesis__Business_Information__r.Id": false,
+                    "clcommon__Legal_Entity_Type__r.clcommon__Individual__c": false,
+                    "genesis__Business_Information__r.genesis__DBA_Name__c": false,
+                    "genesis__Business_Information__r.genesis__Tax_Identification_Number__c": false,
+                    "Id": false
+               },
+               "editable": true,
+               "render": "$state(los_business_are_you_sole_proprietor).attr(are_you_sole_proprietor); == \"false\""
           },
           "property": {
+               "structureName": "los_basic_business_details",
+               "queryWithDefaultNew": true,
                "whereClause": {
                     "accId": "$global.attr(businessAccountId);"
-               },
-               "queryWithDefaultNew": true,
-               "structureName": "los_basic_business_details"
+               }
           },
           "type": "detail-view",
           "category": "component"
      },
      "clcommon__Actor_Name__c": "los_business_legal_entity_types",
      "clcommon__External_ID__c": "los_smb_flow+los_business_legal_entity_types",
-     "clcommon__Release_Checksum__c": "28403338ab735fc3a042b9044db8f800f20691ee41652ea80ecca399878354dc"
+     "clcommon__Release_Checksum__c": "0f8229c7b4983a0cc89cda31bf3f3e7c33cb75e188bbed474f7ed8c913ad9252"
 }

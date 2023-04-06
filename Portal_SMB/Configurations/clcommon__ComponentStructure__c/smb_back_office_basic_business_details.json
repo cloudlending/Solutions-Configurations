@@ -4,11 +4,9 @@
      },
      "Name": "smb_back_office_basic_business_details",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "smb_back_office_basic_business_details",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "1e4945c3c181eed1218399217e39179dcae20017afa50b509bf8dd7830555bfd",
      "clcommon__Unique_Name__c": "smb_back_office_basic_business_details",
      "clcommon__data__c": {
           "structureName": "smb_back_office_basic_business_details",
@@ -197,8 +195,10 @@
                                    "fieldType": "string",
                                    "label": "Business Name (Legal Name)",
                                    "required": true,
+                                   "regex": "^[a-zA-Z0-9\\s]*$",
                                    "messages": {
-                                        "requiredErrorText": "Business name is required."
+                                        "requiredErrorText": "Business name is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "Business Name"
                               }
@@ -209,6 +209,10 @@
                               "fieldUi": {
                                    "fieldType": "string",
                                    "label": "Business Description",
+                                   "regex": "^[a-zA-Z0-9\\s]*$",
+                                   "messages": {
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
+                                   },
                                    "ariaLabel": "Business Description"
                               }
                          },
@@ -255,8 +259,10 @@
                               "fieldUi": {
                                    "fieldType": "string",
                                    "label": "DBA Name (if applicable)",
+                                   "regex": "^[a-zA-Z0-9\\s]*$",
                                    "messages": {
-                                        "requiredErrorText": "DBA name is required."
+                                        "requiredErrorText": "DBA name is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "DBA Name"
                               }
@@ -266,7 +272,7 @@
                               "fieldName": "genesis__Business_Information__r.genesis__Tax_Identification_Number__c",
                               "fieldUi": {
                                    "fieldType": "string",
-                                   "label": "Fedral Tax ID",
+                                   "label": "Federal Tax ID",
                                    "required": "$state(smb_back_office_business_Legal_entity_picklist_details).attr(clcommon__Legal_Entity_Type__r).attr(Name);!=\"Sole Proprietorship\"",
                                    "regex": "^[0-9]{9}$",
                                    "messages": {
@@ -301,7 +307,8 @@
                                                   3,
                                                   3,
                                                   4
-                                             ]
+                                             ],
+                                             "initValue": "9485747475"
                                         }
                                    },
                                    "ariaLabel": "Phone Number"
@@ -314,27 +321,28 @@
                                    "fieldType": "addressAutocomplete",
                                    "label": "Street Address",
                                    "required": true,
+                                   "regex": "^[a-zA-Z0-9\n#/\\s]*$",
                                    "addressComponentMapping": [
                                         {
                                              "addressComponent": "street_number",
-                                             "fieldName": "clcommon__Account__r.BillingStreet"
+                                             "fieldName": "BillingStreet"
                                         },
                                         {
                                              "addressComponent": "route",
-                                             "fieldName": "clcommon__Account__r.BillingStreet"
+                                             "fieldName": "BillingStreet"
                                         },
                                         {
                                              "addressComponent": "locality",
-                                             "fieldName": "clcommon__Account__r.BillingCity"
+                                             "fieldName": "BillingCity"
                                         },
                                         {
                                              "addressComponent": "administrative_area_level_1",
                                              "nameType": "short_name",
-                                             "fieldName": "clcommon__Account__r.BillingState"
+                                             "fieldName": "BillingState"
                                         },
                                         {
                                              "addressComponent": "postal_code",
-                                             "fieldName": "clcommon__Account__r.BillingPostalCode"
+                                             "fieldName": "BillingPostalCode"
                                         }
                                    ],
                                    "addressComponentRestrictions": {
@@ -343,7 +351,8 @@
                                         ]
                                    },
                                    "messages": {
-                                        "requiredErrorText": "Address is required."
+                                        "requiredErrorText": "Address is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "Street Address"
                               }
@@ -355,8 +364,10 @@
                                    "fieldType": "string",
                                    "label": "City",
                                    "required": true,
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "City is required."
+                                        "requiredErrorText": "City is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "City"
                               }
@@ -368,7 +379,7 @@
                                    "fieldType": "picklist",
                                    "label": "State",
                                    "required": true,
-                                   "prompt": "Select a state...",
+                                   "prompt": "Select",
                                    "selectOptions": [
                                         {
                                              "id": "AL",
@@ -738,6 +749,15 @@
                                    "messages": {
                                         "requiredErrorText": "Postal code is required.",
                                         "regexErrorText": "Please enter a valid postal code"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numericOnly": true,
+                                             "blocks": [
+                                                  5
+                                             ],
+                                             "initValue": "94137"
+                                        }
                                    },
                                    "ariaLabel": "Postal Code"
                               }
@@ -1196,7 +1216,7 @@
                               "fieldUi": {
                                    "fieldType": "datepicker",
                                    "label": "Completed Resolution Date",
-                                   "required": "$this.attr(genesis__Business_Information__r.genesis__Resolution_Type__c);!=\"\" and $this.attr(genesis__Business_Information__r.genesis__Resolution_Type__c);!=undefined",
+                                   "required": "$this.attr(genesis__Business_Information__r.genesis__Resolution_Type__c);==\"Customer providing - not needed\" or $this.attr(genesis__Business_Information__r.genesis__Resolution_Type__c);== \"Resolution on file - not needed\"",
                                    "messages": {
                                         "requiredErrorText": "Completed Resolution Date is required"
                                    },
@@ -1252,5 +1272,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "smb_back_office_basic_business_details",
+     "clcommon__Release_Checksum__c": "820abc08aadeb9627a797db5c59698d8e8452397402fcfcd4a73c572c40ca30e"
 }

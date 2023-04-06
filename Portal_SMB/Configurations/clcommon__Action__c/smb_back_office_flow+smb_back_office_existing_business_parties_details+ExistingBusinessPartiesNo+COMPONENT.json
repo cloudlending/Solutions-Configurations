@@ -8,10 +8,10 @@
           "name": "ExistingBusinessPartiesNo",
           "property": {},
           "appearance": {
-               "render": "$this.attr(existingCustomer); == \"No\"",
-               "label": "Next",
+               "disableWhenLoading": true,
                "style": "primary",
-               "disableWhenLoading": true
+               "label": "Next",
+               "render": "$this.attr(existingCustomer); == \"No\""
           },
           "validation": [
                "existingCustomer"
@@ -46,11 +46,11 @@
                          "value": ""
                     },
                     {
-                         "field": "$global.attr(partyId);",
+                         "field": "$global.attr(businessPartyId);",
                          "value": ""
                     },
                     {
-                         "field": "$global.attr(contactId);",
+                         "field": "$global.attr(borrowerContactIdExisting);",
                          "value": ""
                     }
                ],
@@ -73,9 +73,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_existing_business_parties",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_business_parties_details+ExistingBusinessPartiesNo+COMPONENT",
-     "clcommon__Release_Checksum__c": "01e4f62add22768de53a08524cdeff935da02de9a923256ce719775188cd6f28",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "smb_back_office_existing_business_parties_details+ExistingBusinessPartiesNo",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_business_parties_details+ExistingBusinessPartiesNo+COMPONENT",
+     "clcommon__Release_Checksum__c": "9e0efe1688c80c6484190455612bc4360fedec4cca1e82065a3e7d8c009f0212"
 }

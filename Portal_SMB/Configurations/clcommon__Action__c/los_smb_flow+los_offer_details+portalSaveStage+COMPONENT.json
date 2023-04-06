@@ -5,32 +5,32 @@
      "Name": "portalSaveStage",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
+          "name": "portalSaveStage",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "style": "primary",
+               "render": true
+          },
+          "automatic": true,
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "los_offer_details"
+                    }
+               ],
                "executions": [
                     {
                          "name": "$ext.scrollTop"
                     }
-               ],
-               "updates": [
-                    {
-                         "value": "los_offer_details",
-                         "name": "$nav.reloads.add;"
-                    }
                ]
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "automatic": true,
-          "appearance": {
-               "render": true,
-               "style": "primary",
-               "label": "Next",
-               "position": "bottom-right"
-          },
-          "property": {},
-          "name": "portalSaveStage"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -42,9 +42,9 @@
      },
      "clcommon__Component_Structure_Name__c": "get_offer_details_new",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_offer_details+portalSaveStage+COMPONENT",
-     "clcommon__Release_Checksum__c": "a456ee99b0c88449cea7a688848948c44983e63b421d20beadebb2501c393c69",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_offer_details+portalSaveStage",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_offer_details+portalSaveStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "a456ee99b0c88449cea7a688848948c44983e63b421d20beadebb2501c393c69"
 }

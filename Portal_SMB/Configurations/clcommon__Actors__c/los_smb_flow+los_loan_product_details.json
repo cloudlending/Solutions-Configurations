@@ -13,39 +13,39 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
+               "editable": true,
+               "fieldColumns": 1,
+               "noLabelFields": [
+                    "genesis__CL_Product__c"
+               ],
+               "showSectionTitle": true,
+               "renderFields": {
+                    "genesis__Asset_Class__c": false
+               },
                "grid": {
                     "field": {
                          "genesis__CL_Product__c": {
                               "selectButton": {
-                                   "xs": 12,
-                                   "sm": 6
+                                   "sm": 6,
+                                   "xs": 12
                               }
                          }
                     }
-               },
-               "renderFields": {
-                    "genesis__Asset_Class__c": false
-               },
-               "showSectionTitle": true,
-               "noLabelFields": [
-                    "genesis__CL_Product__c"
-               ],
-               "fieldColumns": 1,
-               "editable": true
+               }
           },
           "property": {
-               "referenceWhereClause": {
-                    "genesis__CL_Product__r": {
-                         "smallBusinessRealEstate": "$global.attr(smallBusinessRealEstate);",
-                         "smallBusinessSecured": "$global.attr(smallBusinessSecured);",
-                         "smallBusiness": "$global.attr(smallBusiness);"
-                    }
-               },
+               "structureName": "los_loan_product_details",
+               "queryWithDefaultNew": true,
                "whereClause": {
                     "appId": "$global.attr(applicationId);"
                },
-               "queryWithDefaultNew": true,
-               "structureName": "los_loan_product_details"
+               "referenceWhereClause": {
+                    "genesis__CL_Product__r": {
+                         "smallBusiness": "$global.attr(smallBusiness);",
+                         "smallBusinessSecured": "$global.attr(smallBusinessSecured);",
+                         "smallBusinessRealEstate": "$global.attr(smallBusinessRealEstate);"
+                    }
+               }
           },
           "type": "detail-view",
           "category": "component"

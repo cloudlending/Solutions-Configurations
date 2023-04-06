@@ -5,43 +5,43 @@
      "Name": "upload",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "messages": {
-               "uploadInvalidFileType": "You can only upload the files with the following file types: .pdf, .png, .jpg, .jpeg, .csv, .txt, .xls, .xlsx, .doc, .docx"
+          "name": "upload",
+          "property": {
+               "accept": ".pdf, .png, .jpg, .jpeg, .csv, .txt, .xls, .xlsx, .doc, .docx",
+               "maxSize": 3000000000,
+               "multiple": true,
+               "uploadType": "document"
           },
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "actions": [
-                    {
-                         "name": "docStatusChange"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "$this.attr(Id);",
-                         "field": "$global.attr(SubmittedDoc);"
-                    }
-               ]
+          "appearance": {
+               "label": "Upload File",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "attachmentIds": "$uploadedAttachmentIds;",
+               "documentCategoryId": "$this.attr(Id);"
           },
           "uploadActionArguments": {
                "attachmentParentId": "$this.attr(Id);"
           },
-          "remoteActionArguments": {
-               "documentCategoryId": "$this.attr(Id);",
-               "attachmentIds": "$uploadedAttachmentIds;"
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(SubmittedDoc);",
+                         "value": "$this.attr(Id);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "name": "docStatusChange"
+                    }
+               ]
           },
-          "appearance": {
-               "style": "primary",
-               "label": "Upload File"
-          },
-          "property": {
-               "uploadType": "document",
-               "multiple": true,
-               "maxSize": 3000000000,
-               "accept": ".pdf, .png, .jpg, .jpeg, .csv, .txt, .xls, .xlsx, .doc, .docx"
-          },
-          "name": "upload"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "uploadInvalidFileType": "You can only upload the files with the following file types: .pdf, .png, .jpg, .jpeg, .csv, .txt, .xls, .xlsx, .doc, .docx"
+          }
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "upload",
@@ -53,9 +53,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_beneficial_party_doc_upload_list_after_submit",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "los_smb_flow+los_bene_party_doc_upload_list_after_submit+upload+RECORD",
-     "clcommon__Release_Checksum__c": "227b60c98e09019471897e681a0236f332a4191a039401ade171240840d08fd9",
      "clcommon__Remote_Action_Class__c": "genesis.PortalLinkAttachmentAPI",
      "clcommon__Unique_Action_Name__c": "los_bene_party_doc_upload_list_after_submit+upload",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_bene_party_doc_upload_list_after_submit+upload+RECORD",
+     "clcommon__Release_Checksum__c": "227b60c98e09019471897e681a0236f332a4191a039401ade171240840d08fd9"
 }

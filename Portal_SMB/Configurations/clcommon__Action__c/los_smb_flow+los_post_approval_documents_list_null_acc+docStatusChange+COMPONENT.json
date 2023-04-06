@@ -5,33 +5,33 @@
      "Name": "docStatusChange",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "docStatusChange",
+          "property": {},
+          "appearance": {
+               "label": "View",
+               "render": false,
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "documentCategoryId": "$global.attr(SubmittedDoc);"
+          },
           "successHandler": {
                "updates": [
                     {
+                         "name": "$nav.reloads.add;",
                          "value": [
                               "los_post_approval_record_count",
                               "los_post_approval_documents_list",
                               "los_post_approval_documents_list_null_acc"
-                         ],
-                         "name": "$nav.reloads.add;"
+                         ]
                     }
                ]
           },
-          "remoteActionArguments": {
-               "documentCategoryId": "$global.attr(SubmittedDoc);",
-               "applicationId": "$global.attr(applicationId);"
-          },
-          "appearance": {
-               "style": "primary",
-               "render": false,
-               "label": "View"
-          },
-          "property": {},
-          "name": "docStatusChange"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "submit",
@@ -43,9 +43,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_post_approval_documents_list_null_acc",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_post_approval_documents_list_null_acc+docStatusChange+COMPONENT",
-     "clcommon__Release_Checksum__c": "9b4446fa6e658d38d3f0009f533a7f5454e9bd164f818ea6a569e1e1b77f87c1",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalChangeDocmentCategoryStatus",
      "clcommon__Unique_Action_Name__c": "los_post_approval_documents_list_null_acc+docStatusChange",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_post_approval_documents_list_null_acc+docStatusChange+COMPONENT",
+     "clcommon__Release_Checksum__c": "9b4446fa6e658d38d3f0009f533a7f5454e9bd164f818ea6a569e1e1b77f87c1"
 }

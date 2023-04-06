@@ -5,33 +5,33 @@
      "Name": "businessBasicsBack",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Back",
+          "name": "businessBasicsBack",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "secondary",
+               "variant": "text",
+               "label": "Back"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(los_application_steps).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
                "executions": [
                     {
                          "name": "$ext.scrollTop"
                     }
-               ],
-               "assignments": [
-                    {
-                         "value": "previous",
-                         "field": "$nav(los_application_steps).appearance(current);"
-                    }
                ]
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "label": "Back",
-               "variant": "text",
-               "style": "secondary",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "businessBasicsBack"
+          "ariaLabel": "Back"
      },
-     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -41,9 +41,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_basic_business_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_business_details+businessBasicsBack+COMPONENT",
-     "clcommon__Release_Checksum__c": "8055e9d53913373572facaa8d1d89e74b41e14702e75cee4dba0c1e77c254fb0",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_business_details+businessBasicsBack",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_business_details+businessBasicsBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "b7d73d5d7b352a89605f4baef63cff1c39effdf00e98ca47c6aff7fa9e77ed0c"
 }

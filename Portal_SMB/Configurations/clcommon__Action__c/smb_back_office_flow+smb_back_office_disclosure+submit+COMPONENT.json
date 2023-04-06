@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "submit",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "submit",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "render": "$global.attr(businessEntityType);!=\"Individual\"",
+               "label": "Submit"
+          },
+          "confirmation": {
+               "type": "prompt",
+               "title": "",
+               "content": "<p style=\"font-size:16px;\">Want to add any more information to complete the application?</p>",
+               "showConfirmButtons": true,
+               "confirmText": "Yes",
+               "cancelText": "No",
+               "cancelOrCloseHandler": {
+                    "actions": [
+                         {
+                              "name": "backOfficeSubmit"
+                         }
+                    ]
+               }
+          },
+          "remoteActionArguments": {
+               "signer_user": "$this.attr(create_account_email_signer_user);",
+               "partner_user": "$this.attr(create_account_email_partner_user);",
+               "create_account_email": "$this.attr(create_account_email);",
+               "additional_parties": true,
+               "trustee_user": "$this.attr(create_account_email_trustee_user);",
+               "control_person_user": "$this.attr(create_account_email_control_person);",
+               "owner_user": "$this.attr(create_account_email_owner_user);",
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               },
+               "guarantor_user": "$this.attr(create_account_email_guarantor_user);"
+          },
+          "successHandler": {
+               "redirect": {
+                    "url": "/apex/q2dlos__ApplicationBackOfficeView?Id=$global.attr(applicationId);"
+               }
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_disclosure"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_disclosure",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalApplicationSubmission",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_disclosure+submit",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_disclosure+submit+COMPONENT",
+     "clcommon__Release_Checksum__c": "62aa551b362a8a0f8846a004987f6281e9e6be6e543a8dd2db20dfd4368a4bb4"
+}

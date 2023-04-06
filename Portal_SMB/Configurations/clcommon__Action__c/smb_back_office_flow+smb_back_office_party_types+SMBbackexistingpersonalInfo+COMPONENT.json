@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "SMBbackexistingpersonalInfo",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "SMBbackexistingpersonalInfo",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "render": "$global.attr(contactId); != null and $global.attr(contactId); != \"\" and $global.attr(contactId); != undefined ",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "contact": {
+                    "Birthdate": "$state(smb_back_office_individual_personal_information).attr(Birthdate);",
+                    "ints__Social_Security_Number__c": "$state(smb_back_office_individual_personal_information).attr(ints__Social_Security_Number__c);",
+                    "FirstName": "$state(smb_back_office_individual_personal_information).attr(FirstName);",
+                    "LastName": "$state(smb_back_office_individual_personal_information).attr(LastName);",
+                    "Email": "$state(smb_back_office_individual_personal_information).attr(Email);",
+                    "Phone": "$state(smb_back_office_individual_personal_information).attr(Phone);",
+                    "clcommon__Current_City__c": "$state(smb_back_office_individual_personal_information).attr(clcommon__Current_City__c);",
+                    "clcommon__Current_State_Code__c": "$state(smb_back_office_individual_personal_information).attr(clcommon__Current_State_Code__c);",
+                    "clcommon__Current_Zip_Code__c": "$state(smb_back_office_individual_personal_information).attr(clcommon__Current_Zip_Code__c);",
+                    "clcommon__Current_Country__c": "US",
+                    "clcommon__Current_Street__c": "$state(smb_back_office_individual_personal_information).attr(clcommon__Current_Street__c);",
+                    "Id": "$global.attr(contactId);"
+               }
+          },
+          "validation": [
+               ""
+          ],
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "smbbackofficeindividualpersonalinformation"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_party_types"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_party_types",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSavePersonalInfo",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_party_types+SMBbackexistingpersonalInfo",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_party_types+SMBbackexistingpersonalInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "c461d07ee70827ab737c65db11c54d1380b4bb7fbb8f528de21b91540a0006a4"
+}

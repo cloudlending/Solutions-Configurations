@@ -44,15 +44,15 @@
           "property": {
                "queryWithDefaultNew": true,
                "whereClause": {
-                    "contactId": "$global.attr(contactId);",
+                    "contactId": "$global.attr(borrowerContactIdExisting);",
                     "appId": "$global.attr(applicationId);"
                },
-               "structureName": "smb_back_office_demographic_information_questionaire"
+               "structureName": "smb_back_office_demographic_information_questionnaire"
           },
           "type": "detail-view",
           "category": "component"
      },
      "clcommon__Actor_Name__c": "smb_back_office_demographic_information_questionaire",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_questionaire",
-     "clcommon__Release_Checksum__c": "03fe54dbf77278a665c50a2a27f560d20d21a736984a5a78f34c3be0eb2c384d"
+     "clcommon__Release_Checksum__c": "ef93bc10d7339b94bebb2489dd2ecc1ca6112be0f3ea5be234e5cc16efb91b43"
 }

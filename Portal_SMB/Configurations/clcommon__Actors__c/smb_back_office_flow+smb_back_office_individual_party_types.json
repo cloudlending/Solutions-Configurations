@@ -1,0 +1,93 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "clcommon__Party_Types__c": {
+                         "assignments": [
+                              {
+                                   "arguments": [
+                                        "$this.attr(clcommon__Party_Types__c);",
+                                        "AUTHORIZED SIGNER"
+                                   ],
+                                   "value": "$ext.checkThePartyType",
+                                   "field": "$global.attr(isBorrowerSignerPartyType);"
+                              }
+                         ]
+                    }
+               },
+               "loaded": {
+                    "assignments": [
+                         {
+                              "arguments": [
+                                   "$this.attr(clcommon__Party_Types__c);",
+                                   "AUTHORIZED SIGNER"
+                              ],
+                              "value": "$ext.checkThePartyType",
+                              "field": "$global.attr(isBorrowerSignerPartyType);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "sectionStyle": "layout",
+               "editableFields": {
+                    "Id": false
+               },
+               "renderFields": {
+                    "clcommon__Signer_Capacity__c": "$global.attr(isBorrowerSignerPartyType);==true",
+                    "genesis__Credit_Check_Consent__c": false,
+                    "Id": false
+               },
+               "grid": {
+                    "messagePositions": {
+                         "saveSubmitError": "top",
+                         "loadingError": "top",
+                         "loadingAnimation": "global"
+                    },
+                    "field": {
+                         "clcommon__Signer_Capacity__c": {
+                              "sm": 6
+                         },
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "render": "$state(smb_back_office_business_Legal_entity_picklist_details).attr(clcommon__Legal_Entity_Type__r).attr(Name); == \"Individual\"",
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "partyId": "$global.attr(partyId);"
+               },
+               "structureName": "smb_back_office_individual_party_types"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_individual_party_types",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_party_types",
+     "clcommon__Release_Checksum__c": "42d48575edb430a8dcc2f11b90333644f05fe4ffecf0ef3e4bba4ecb686a3351"
+}

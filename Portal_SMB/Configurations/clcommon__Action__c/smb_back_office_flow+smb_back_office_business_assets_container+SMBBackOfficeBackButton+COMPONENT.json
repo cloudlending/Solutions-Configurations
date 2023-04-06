@@ -8,10 +8,10 @@
           "name": "SMBBackOfficeBackButton",
           "property": {},
           "appearance": {
-               "style": "secondary",
-               "render": "$global.attr(collateralEdit);!=true and $global.attr(existingCollateral);!=\"Yes\"",
+               "position": "bottom-left",
                "label": "Back",
-               "position": "bottom-left"
+               "render": "$global.attr(collateralEdit);!=true and $global.attr(existingCollateral);!=\"Yes\"",
+               "style": "secondary"
           },
           "successHandler": {},
           "failureHandler": {},
@@ -35,9 +35,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_business_assets_container",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_assets_container+SMBBackOfficeBackButton+COMPONENT",
-     "clcommon__Release_Checksum__c": "cb1610af18c71cb0b97d30bf19212b759e1ade0c42642d2b4312263f8ff770dd",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "smb_back_office_business_assets_container+SMBBackOfficeBackButton",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_assets_container+SMBBackOfficeBackButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "cb1610af18c71cb0b97d30bf19212b759e1ade0c42642d2b4312263f8ff770dd"
 }

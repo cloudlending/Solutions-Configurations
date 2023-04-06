@@ -13,19 +13,19 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
+               "fieldColumns": 1,
+               "editable": true,
                "renderFields": {
                     "Id": false
-               },
-               "editable": true,
-               "fieldColumns": 1
+               }
           },
           "property": {
-               "queryWithDefaultNew": true,
+               "structureName": "los_personal_income_details",
                "whereClause": {
-                    "contactId": "$global.attr(borrowerContactId);",
-                    "appId": "$global.attr(applicationId);"
+                    "appId": "$global.attr(applicationId);",
+                    "contactId": "$global.attr(borrowerContactId);"
                },
-               "structureName": "los_personal_income_details"
+               "queryWithDefaultNew": true
           },
           "type": "detail-view",
           "category": "component"

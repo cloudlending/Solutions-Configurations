@@ -16,19 +16,19 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "fieldColumns": 1,
                "messagePositions": {
-                    "saveSubmitError": "top",
+                    "loadingAnimation": "global",
                     "loadingError": "top",
-                    "loadingAnimation": "global"
-               }
+                    "saveSubmitError": "top"
+               },
+               "fieldColumns": 1
           },
           "property": {
+               "structureName": "los_business_fetch_industry_code",
+               "queryWithDefaultNew": true,
                "whereClause": {
                     "industrycode": "$state(los_business_industry_code).attr(solcommon__Industry_Code__c);"
-               },
-               "queryWithDefaultNew": true,
-               "structureName": "los_business_fetch_industry_code"
+               }
           },
           "type": "data-model",
           "category": "component"

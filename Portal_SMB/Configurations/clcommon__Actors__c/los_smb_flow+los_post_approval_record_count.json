@@ -25,13 +25,13 @@
                "fieldColumns": 1
           },
           "property": {
-               "whereClause": {
-                    "accId": "$global.attr(borrowerAccountId);",
-                    "businessAccountId": "$global.attr(businessAccountId);",
-                    "appId": "$global.attr(applicationId);"
-               },
+               "module": "document",
                "structureName": "los_document_record_count",
-               "module": "document"
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);",
+                    "businessAccountId": "$global.attr(businessAccountId);",
+                    "accId": "$global.attr(borrowerAccountId);"
+               }
           },
           "type": "data-model",
           "category": "component"

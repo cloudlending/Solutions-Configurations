@@ -8,9 +8,9 @@
           "name": "demographicDetailsBack",
           "property": {},
           "appearance": {
-               "label": "Back",
+               "position": "bottom-left",
                "style": "secondary",
-               "position": "bottom-left"
+               "label": "Back"
           },
           "successHandler": {},
           "failureHandler": {},
@@ -20,6 +20,16 @@
                     {
                          "field": "$nav(smb_back_office_add_business_parties_container).appearance(current);",
                          "value": "previous"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "smb_back_office_parties_identification_record_check",
+                              "smb_back_office_identification_information",
+                              "smb_back_office_identification_information_prefill"
+                         ]
                     }
                ]
           },
@@ -33,11 +43,11 @@
           },
           "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_questionaire"
      },
-     "clcommon__Component_Structure_Name__c": "smb_back_office_demographic_information_questionaire",
+     "clcommon__Component_Structure_Name__c": "smb_back_office_demographic_information_questionnaire",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_questionaire+demographicDetailsBack+COMPONENT",
-     "clcommon__Release_Checksum__c": "22d26d181541b7e88f62c0f10a06864dda194bb1d5bb04e9433733b60a158a07",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "smb_back_office_demographic_information_questionaire+demographicDetailsBack",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_questionaire+demographicDetailsBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "24d3c1695f47c26aca88ec8762d4acc58ac329775e7ae7e3c8b8964c54575b78"
 }

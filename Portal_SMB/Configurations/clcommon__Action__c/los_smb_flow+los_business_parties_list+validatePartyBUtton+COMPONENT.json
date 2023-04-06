@@ -5,13 +5,19 @@
      "Name": "validatePartyBUtton",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {
-               "submitFailureText": "$serverMessage;"
+          "name": "validatePartyBUtton",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Next",
+               "position": "bottom-left"
           },
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "validation": [
+               "los_business_parties_list"
+          ],
           "successHandler": {
                "actions": [
                     {
@@ -19,21 +25,15 @@
                     }
                ]
           },
-          "validation": [
-               "los_business_parties_list"
-          ],
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
           },
-          "appearance": {
-               "position": "bottom-left",
-               "label": "Next",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "validatePartyBUtton"
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -43,9 +43,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_business_parties_summary",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_list+validatePartyBUtton+COMPONENT",
-     "clcommon__Release_Checksum__c": "22c9d33ac990f5f55eb381aeb9dfea725e19356cf4c3195812776dd504d12bed",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalValidatePartyDetails",
      "clcommon__Unique_Action_Name__c": "los_business_parties_list+validatePartyBUtton",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_list+validatePartyBUtton+COMPONENT",
+     "clcommon__Release_Checksum__c": "c01e6b8939b00f9540a3e6223b14852085e26dfaba9cb60fe546a4b1a47cf1d1"
 }

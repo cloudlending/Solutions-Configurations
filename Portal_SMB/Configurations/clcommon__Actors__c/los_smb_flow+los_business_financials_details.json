@@ -16,42 +16,42 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
-               },
-               "editable": true,
-               "showSectionTitle": true,
-               "sectionStyle": "layout",
-               "renderFields": {
-                    "clcommon__Account__r.genesis__Business_Information__r.Id": false,
-                    "id": false
-               },
-               "title": "Tell us about your business financials",
+               "fieldColumns": 1,
                "grid": {
                     "field": {
-                         "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c": {
+                         "clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c": {
                               "sm": 6
                          },
                          "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c": {
-                              "xs": 12,
-                              "sm": 6
+                              "sm": 6,
+                              "xs": 12
                          },
-                         "clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c": {
+                         "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c": {
                               "sm": 6
                          }
                     }
                },
-               "fieldColumns": 1
+               "title": "Tell us about your business financials",
+               "renderFields": {
+                    "id": false,
+                    "clcommon__Account__r.genesis__Business_Information__r.Id": false
+               },
+               "sectionStyle": "layout",
+               "showSectionTitle": true,
+               "editable": true,
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               }
           },
           "property": {
-               "whereClause": {
-                    "accId": "$global.attr(businessAccountId);",
-                    "appId": "$global.attr(applicationId);"
-               },
+               "structureName": "los_business_financial_details",
                "queryWithDefaultNew": true,
-               "structureName": "los_business_financial_details"
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);",
+                    "accId": "$global.attr(businessAccountId);"
+               }
           },
           "type": "detail-view",
           "category": "component"

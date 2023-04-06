@@ -13,37 +13,38 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "fieldColumns": 1,
-               "editable": true,
+               "renderFields": {
+                    "genesis__Application__r.genesis__CL_Purpose__r.Id": false,
+                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false,
+                    "genesis__Application__r.genesis__Other_Purpose__c": "$global.attr(loanPurposeName);==\"Other\""
+               },
+               "editableFields": {
+                    "genesis__Application__r.genesis__CL_Purpose__r.Id": false,
+                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false
+               },
+               "textBefore": "$global.attr(purposeValidation);",
                "grid": {
                     "field": {
                          "$default": {
-                              "xs": 12,
-                              "sm": 6
+                              "sm": 6,
+                              "xs": 12
                          }
                     }
                },
-               "editableFields": {
-                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false,
-                    "genesis__Application__r.genesis__CL_Purpose__r.Id": false
-               },
-               "renderFields": {
-                    "genesis__Application__r.genesis__Other_Purpose__c": "$global.attr(loanPurposeName);==\"Other\"",
-                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false,
-                    "genesis__Application__r.genesis__CL_Purpose__r.Id": false
-               }
+               "editable": true,
+               "fieldColumns": 1
           },
           "property": {
+               "structureName": "los_loan_existing_purpose",
+               "queryWithDefaultNew": true,
                "whereClause": {
                     "appId": "$global.attr(applicationId);"
-               },
-               "queryWithDefaultNew": true,
-               "structureName": "los_loan_existing_purpose"
+               }
           },
           "type": "detail-view",
           "category": "component"
      },
      "clcommon__Actor_Name__c": "los_loan_existing_purpose",
      "clcommon__External_ID__c": "los_smb_flow+los_loan_existing_purpose",
-     "clcommon__Release_Checksum__c": "7e2014f43cc65a6de7e369e24209c106853a880b55ca2f241eef9f1b3c86403f"
+     "clcommon__Release_Checksum__c": "afcc86e5f47da720968c879d721252cd6506f4273e5df1967177491c47f27117"
 }

@@ -5,44 +5,44 @@
      "Name": "partiesSummaryNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "partiesSummaryNext",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Next",
+               "render": "$global.attr(isPrincipal);==true",
+               "position": "bottom-left"
+          },
+          "remoteActionArguments": {
+               "portalStage": "ReviewAndSubmit",
+               "applicationId": "$global.attr(applicationId);"
+          },
           "successHandler": {
-               "executions": [
+               "assignments": [
                     {
-                         "name": "$ext.scrollTop"
+                         "field": "$nav(los_application_steps).appearance(current);",
+                         "value": "next"
                     }
                ],
                "updates": [
                     {
+                         "name": "$nav.reloads.add;",
                          "value": [
                               "los_review_loan_summary",
                               "los_document_list_validation"
-                         ],
-                         "name": "$nav.reloads.add;"
+                         ]
                     }
                ],
-               "assignments": [
+               "executions": [
                     {
-                         "value": "next",
-                         "field": "$nav(los_application_steps).appearance(current);"
+                         "name": "$ext.scrollTop"
                     }
                ]
           },
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "ReviewAndSubmit"
-          },
-          "appearance": {
-               "position": "bottom-left",
-               "render": "$global.attr(isPrincipal);==true",
-               "label": "Next",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "partiesSummaryNext"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "submit",
@@ -54,9 +54,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_collateral_doc_list_before_submit",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_collateral_doc_list_before_submit+partiesSummaryNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "5ae3c845b5695c2f792188aa02419f5beaca029471575a3a008dd67945ac3876",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
      "clcommon__Unique_Action_Name__c": "los_collateral_doc_list_before_submit+partiesSummaryNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_doc_list_before_submit+partiesSummaryNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "5ae3c845b5695c2f792188aa02419f5beaca029471575a3a008dd67945ac3876"
 }

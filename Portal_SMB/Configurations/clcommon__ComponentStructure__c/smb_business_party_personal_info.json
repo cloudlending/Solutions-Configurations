@@ -4,11 +4,9 @@
      },
      "Name": "smb_business_party_personal_info",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "smb_business_party_personal_info",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "ea75b1c744a1ebd60ecde808dbc9b1eb1f0e639e065d43f83adffa09a007537a",
      "clcommon__Unique_Name__c": "smb_business_party_personal_info",
      "clcommon__data__c": {
           "structureName": "smb_business_party_personal_info",
@@ -28,8 +26,10 @@
                                    "fieldType": "string",
                                    "label": "First Name",
                                    "required": true,
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "First Name is required"
+                                        "requiredErrorText": "First Name is required",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "First Name"
                               }
@@ -42,7 +42,8 @@
                                    "label": "Last Name",
                                    "required": true,
                                    "messages": {
-                                        "requiredErrorText": "Last Name is required"
+                                        "requiredErrorText": "Last Name is required",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "Last Name"
                               }
@@ -341,8 +342,10 @@
                                    "fieldType": "text",
                                    "label": "Street Adress",
                                    "required": true,
+                                   "regex": "^[a-zA-Z0-9\n#/\\s]*$",
                                    "messages": {
-                                        "requiredErrorText": "Street address  is required"
+                                        "requiredErrorText": "Street address  is required",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "Street Address"
                               }
@@ -354,8 +357,10 @@
                                    "fieldType": "string",
                                    "label": "City",
                                    "required": true,
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "City is required"
+                                        "requiredErrorText": "City is required",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "City"
                               }
@@ -733,8 +738,18 @@
                                    "fieldType": "string",
                                    "label": "Postal Code",
                                    "required": true,
+                                   "regex": "^(\\d{5}(-\\d{4})?)$",
                                    "messages": {
-                                        "requiredErrorText": "Postal code  is required"
+                                        "requiredErrorText": "Postal code  is required",
+                                        "regexErrorText": "Please enter a valid postal code"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numericOnly": true,
+                                             "blocks": [
+                                                  5
+                                             ]
+                                        }
                                    },
                                    "ariaLabel": "Postal Code"
                               }
@@ -742,5 +757,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "smb_business_party_personal_info",
+     "clcommon__Release_Checksum__c": "8383a821d2a262eab9d3e876b37620764ad60c699ea27cebf343437d93a0b25c"
 }

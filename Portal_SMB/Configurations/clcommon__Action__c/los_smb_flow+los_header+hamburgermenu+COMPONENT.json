@@ -5,21 +5,21 @@
      "Name": "hamburgermenu",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "hamburger_menu",
-          "messages": {},
-          "disclosureNames": [],
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "position": "top-right",
-               "render": "$global.attr(userInfo).attr(userType); != \"Guest\"",
-               "style": "tertiary",
-               "label": "Welcome back, $global.attr(userInfo).attr(firstName); $global.attr(userInfo).attr(lastName);  &nbsp;<i class=\"fa fa-angle-down\" style=\"font-size:20px;\" aria-hidden=\"true\"></i>"
-          },
+          "name": "hamburgermenu",
           "property": {},
-          "name": "hamburgermenu"
+          "appearance": {
+               "label": "Welcome back, $global.attr(userInfo).attr(firstName); $global.attr(userInfo).attr(lastName);  &nbsp;<i class=\"fa fa-angle-down\" style=\"font-size:20px;\" aria-hidden=\"true\"></i>",
+               "style": "tertiary",
+               "render": "$global.attr(userInfo).attr(userType); != \"Guest\"",
+               "position": "top-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "hamburger_menu"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "context",
@@ -31,9 +31,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_header+hamburgermenu+COMPONENT",
-     "clcommon__Release_Checksum__c": "1d9c433eb4d6d57e134c79f522f5ffb670e1ee3bf5e2303992a1497f1ef6d293",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_header+hamburgermenu",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_header+hamburgermenu+COMPONENT",
+     "clcommon__Release_Checksum__c": "1d9c433eb4d6d57e134c79f522f5ffb670e1ee3bf5e2303992a1497f1ef6d293"
 }

@@ -8,15 +8,15 @@
           "name": "savePortalStage",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
-               "disableWhenLoading": true,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "LoanPurpose",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "LoanPurpose"
           },
           "validation": [
                "smb_back_office_loan_details"
@@ -49,9 +49,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_loan_product_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_loan_details+savePortalStage+COMPONENT",
-     "clcommon__Release_Checksum__c": "e0e539d15b7e08c789015c10f211096a1b9292a85c69a2457a52a629c4b752f6",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
      "clcommon__Unique_Action_Name__c": "smb_back_office_loan_details+savePortalStage",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_loan_details+savePortalStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "e0e539d15b7e08c789015c10f211096a1b9292a85c69a2457a52a629c4b752f6"
 }

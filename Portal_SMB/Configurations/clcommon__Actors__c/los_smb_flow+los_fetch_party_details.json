@@ -27,11 +27,11 @@
           "componentActions": [],
           "appearance": {},
           "property": {
-               "structureName": "los_fetch_party_details",
                "whereClause": {
-                    "accountId": "$global.attr(userInfo).attr(accountId);",
-                    "appId": "$global.attr(applicationId);"
-               }
+                    "appId": "$global.attr(applicationId);",
+                    "accountId": "$global.attr(userInfo).attr(accountId);"
+               },
+               "structureName": "los_fetch_party_details"
           },
           "type": "data-model",
           "category": "component"

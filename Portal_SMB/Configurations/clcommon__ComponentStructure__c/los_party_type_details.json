@@ -4,11 +4,9 @@
      },
      "Name": "los_party_type_details",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "los_party_type_details",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "dde1e4ab92469cee39fc92aca8ace094145ef7d403a3ca62016c931650074ffe",
      "clcommon__Unique_Name__c": "los_party_type_details",
      "clcommon__data__c": {
           "structureName": "los_party_type_details",
@@ -30,13 +28,6 @@
                                    "selectedSuffix": "done",
                                    "selectOptions": [
                                         {
-                                             "id": "BENEFICIAL OWNER",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "BENEFICIAL OWNER",
-                                             "optionValue": "BENEFICIAL OWNER"
-                                        },
-                                        {
                                              "id": "AUTHORIZED SIGNER",
                                              "active": true,
                                              "defaultOption": false,
@@ -44,11 +35,43 @@
                                              "optionValue": "AUTHORIZED SIGNER"
                                         },
                                         {
+                                             "id": "BENEFICIAL OWNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "BENEFICIAL OWNER",
+                                             "optionValue": "BENEFICIAL OWNER",
+                                             "optionRender": "$global.attr(businessEntityType);!=\"Individual\""
+                                        },
+                                        {
+                                             "id": "CONTROL PERSON",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CONTROL PERSON",
+                                             "optionValue": "CONTROL PERSON",
+                                             "optionRender": "$global.attr(businessEntityType);!=\"Individual\""
+                                        },
+                                        {
                                              "id": "GUARANTOR",
                                              "active": true,
                                              "defaultOption": false,
                                              "optionText": "GUARANTOR",
                                              "optionValue": "GUARANTOR"
+                                        },
+                                        {
+                                             "id": "PARTNER",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PARTNER",
+                                             "optionValue": "PARTNER",
+                                             "optionRender": "$global.attr(businessEntityType);!=\"Individual\""
+                                        },
+                                        {
+                                             "id": "TRUSTEE",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "TRUSTEE",
+                                             "optionValue": "TRUSTEE",
+                                             "optionRender": "($global.attr(businessEntityType);==\"Trust\" or $global.attr(businessEntityType);==\"Trust with Individual Trustee\" or $global.attr(businessEntityType);==\"Trust with Non-Individual Trustee\")"
                                         }
                                    ],
                                    "messages": {
@@ -60,5 +83,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "los_party_type_details",
+     "clcommon__Release_Checksum__c": "004aa58d735febb0d2bbb6d88abe449bf2d48c4945968a1132eff6f683ae2fd2"
 }

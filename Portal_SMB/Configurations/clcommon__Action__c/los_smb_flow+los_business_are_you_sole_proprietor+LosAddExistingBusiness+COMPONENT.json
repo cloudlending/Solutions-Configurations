@@ -1,0 +1,49 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "LosAddExistingBusiness",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "LosAddExistingBusiness",
+          "property": {},
+          "appearance": {
+               "position": "top-right",
+               "render": "($global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined or $global.attr(applicationId); == \"new_record_id\") and ($this.attr(are_you_sole_proprietor); ==\"false\" or $this.attr(business_id_type);==\"EIN\")",
+               "label": "<span>Choose From Existing</span>  <i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>",
+               "style": "primary"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "los_existing_business_overlay"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "los_existing_business_details_conatiner"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_business_are_you_sole_proprietor"
+     },
+     "clcommon__Component_Structure_Name__c": "los_business_are_you_sole_proprietor",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_business_are_you_sole_proprietor+LosAddExistingBusiness",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_business_are_you_sole_proprietor+LosAddExistingBusiness+COMPONENT",
+     "clcommon__Release_Checksum__c": "bbfa4f84cbc9d2a38230b52c3f4a0cba2ca31db7b1b0fe08b08e9b61d41045ed"
+}

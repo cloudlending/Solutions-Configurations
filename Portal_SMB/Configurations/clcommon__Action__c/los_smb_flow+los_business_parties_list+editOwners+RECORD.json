@@ -5,35 +5,35 @@
      "Name": "editOwners",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
+          "name": "editOwners",
+          "property": {},
+          "appearance": {
+               "label": "edit",
+               "style": "iconic",
+               "render": "$this.attr(clcommon__Type__r.Name); !=\"BORROWER\"",
+               "tooltip": "Edit Party"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
-               "updates": [
-                    {
-                         "value": "los_business_parties_overlay",
-                         "name": "$nav.overlay.add;"
-                    },
-                    {
-                         "value": "los_business_parties_list",
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
                "assignments": [
                     {
-                         "value": "$this.attr(id);",
-                         "field": "$global.attr(partyId);"
+                         "field": "$global.attr(partyId);",
+                         "value": "$this.attr(id);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "los_business_parties_overlay"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "los_business_parties_list"
                     }
                ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "tooltip": "Edit Party",
-               "render": "$this.attr(clcommon__Type__r.Name); !=\"BORROWER\"",
-               "style": "iconic",
-               "label": "edit"
-          },
-          "property": {},
-          "name": "editOwners"
+          }
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -45,9 +45,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_business_parties_summary",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_list+editOwners+RECORD",
-     "clcommon__Release_Checksum__c": "fe3b5ec05639ebc4ffa3de0b817adc158af076b1ccc3cdf9e95ec804528356b1",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_business_parties_list+editOwners",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_list+editOwners+RECORD",
+     "clcommon__Release_Checksum__c": "fe3b5ec05639ebc4ffa3de0b817adc158af076b1ccc3cdf9e95ec804528356b1"
 }

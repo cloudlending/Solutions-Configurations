@@ -5,27 +5,27 @@
      "Name": "ExistingCustomerNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {},
+          "name": "ExistingCustomerNext",
+          "property": {},
+          "appearance": {
+               "disableWhenLoading": true,
+               "render": "$this.attr(existingCustomer);==\"Yes\"",
+               "style": "primary",
+               "label": "Next"
+          },
+          "validation": [
+               "ExistingCustomer"
+          ],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "redirect": {
                     "url": "/s/login"
                }
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "validation": [
-               "ExistingCustomer"
-          ],
-          "appearance": {
-               "label": "Next",
-               "style": "primary",
-               "render": "$this.attr(existingCustomer);==\"Yes\"",
-               "disableWhenLoading": true
-          },
-          "property": {},
-          "name": "ExistingCustomerNext"
+          "messages": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -37,9 +37,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_existing_customer",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_signup+ExistingCustomer+ExistingCustomerNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "a4e4238e6bd8684687f3f9b7768e9b944962817823a19364b28118dd8a6cef2b",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "ExistingCustomer+ExistingCustomerNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_signup+ExistingCustomer+ExistingCustomerNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "a4e4238e6bd8684687f3f9b7768e9b944962817823a19364b28118dd8a6cef2b"
 }

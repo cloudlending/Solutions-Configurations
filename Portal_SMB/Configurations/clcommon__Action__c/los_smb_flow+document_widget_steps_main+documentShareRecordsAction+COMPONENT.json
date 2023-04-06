@@ -1,0 +1,52 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "documentShareRecordsAction",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "documentShareRecordsAction",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "render": true
+          },
+          "automatic": true,
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "DocumentManagementQueueView",
+                              "los_party_doc_upload_list_after_submit",
+                              "los_collateral_doc_upload_null_acc",
+                              "los_preapproval_record_count",
+                              "los_bene_party_doc_upload_list_after_submit"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+document_widget_steps_main"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalCreateDocumentShareRecords",
+     "clcommon__Unique_Action_Name__c": "document_widget_steps_main+documentShareRecordsAction",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+document_widget_steps_main+documentShareRecordsAction+COMPONENT",
+     "clcommon__Release_Checksum__c": "30e774e9ddf88b9c19e7240b9b5d63b0d0b42c5b2eeb3a144a5ad880fc2739aa"
+}

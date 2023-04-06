@@ -5,29 +5,29 @@
      "Name": "startBeneficialFlow",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Back",
+          "name": "startBeneficialFlow",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "position": "bottom-left"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
-               "next": "Home",
                "assignments": [
                     {
-                         "value": "BeneficialPersonalInfo",
-                         "field": "$nav(los_application_steps).appearance(current);"
+                         "field": "$nav(los_application_steps).appearance(current);",
+                         "value": "BeneficialPersonalInfo"
                     },
                     {
-                         "value": "YES",
-                         "field": "$global.attr(showHome);"
+                         "field": "$global.attr(showHome);",
+                         "value": "YES"
                     }
-               ]
+               ],
+               "next": "Home"
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "position": "bottom-left",
-               "render": false
-          },
-          "property": {},
-          "name": "startBeneficialFlow"
+          "ariaLabel": "Back"
      },
      "clcommon__Action_Order__c": 7,
      "clcommon__Action_Type__c": "normal",
@@ -39,9 +39,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_fetch_applications",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list+startBeneficialFlow+COMPONENT",
-     "clcommon__Release_Checksum__c": "97449faa7052fa9e0f431496e312f8dfde8d01ff13bad137a51326eb69abe538",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_applicatiion_list+startBeneficialFlow",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list+startBeneficialFlow+COMPONENT",
+     "clcommon__Release_Checksum__c": "97449faa7052fa9e0f431496e312f8dfde8d01ff13bad137a51326eb69abe538"
 }

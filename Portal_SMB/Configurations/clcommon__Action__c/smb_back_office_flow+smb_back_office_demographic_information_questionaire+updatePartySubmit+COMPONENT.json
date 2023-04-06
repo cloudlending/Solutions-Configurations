@@ -8,17 +8,17 @@
           "name": "updatePartySubmit",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
                "clcommon__Party__c": {
-                    "solcommon__Submission_Status__c": "SUBMITTED",
-                    "id": "$global.attr(partyId);"
-               },
-               "applicationId": "$global.attr(applicationId);"
+                    "id": "$global.attr(businessPartyId);",
+                    "solcommon__Submission_Status__c": "SUBMITTED"
+               }
           },
           "validation": [
                "smb_back_office_demographic_information_questionaire"
@@ -52,11 +52,11 @@
           },
           "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_questionaire"
      },
-     "clcommon__Component_Structure_Name__c": "smb_back_office_demographic_information_questionaire",
+     "clcommon__Component_Structure_Name__c": "smb_back_office_demographic_information_questionnaire",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_questionaire+updatePartySubmit+COMPONENT",
-     "clcommon__Release_Checksum__c": "93acd13bafdd572af2ef925bd3124126a06350c3a6a461ef5258db8568e0ac40",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalUpdateParty",
      "clcommon__Unique_Action_Name__c": "smb_back_office_demographic_information_questionaire+updatePartySubmit",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_questionaire+updatePartySubmit+COMPONENT",
+     "clcommon__Release_Checksum__c": "e608b141adebe8dde8c312cf0b838f8a22e7e64fc1b5cbf21e6d6addf0c7694d"
 }

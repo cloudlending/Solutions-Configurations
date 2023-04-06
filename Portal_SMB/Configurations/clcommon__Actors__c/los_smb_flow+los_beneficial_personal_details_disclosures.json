@@ -13,15 +13,15 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "fieldColumns": 1,
-               "editable": true
+               "editable": true,
+               "fieldColumns": 1
           },
           "property": {
-               "queryWithDefaultNew": true,
+               "structureName": "los_beneficial_personal_information_disclosures",
                "whereClause": {
                     "partyId": "$global.attr(borrowerPartyId);"
                },
-               "structureName": "los_beneficial_personal_information_disclosures"
+               "queryWithDefaultNew": true
           },
           "type": "detail-view",
           "category": "component"

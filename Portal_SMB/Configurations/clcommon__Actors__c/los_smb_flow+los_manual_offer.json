@@ -21,37 +21,37 @@
                }
           ],
           "appearance": {
-               "fieldColumns": 1,
-               "columns": 1,
-               "renderFields": {
-                    "genesis__Product_Type__c": false,
-                    "genesis__Payment_Amount_Derived__c": "$this.attr(genesis__Product_Type__c); != \"LINE OF CREDIT\" "
-               },
-               "editableFields": {
-                    "genesis__Interest_Rate__c": false,
-                    "genesis__Term__c": false,
-                    "genesis__Payment_Amount__c": false,
-                    "genesis__Product_Type__c": false,
-                    "genesis__Loan_Amount__c": false
-               },
-               "subTitle": "Your loan application for $this.attr(genesis__Loan_Amount__c,currency); has been approved. Please review the credit offered",
-               "title": "Congratulations!",
-               "messagePositions": {
-                    "loadingAnimation": "global",
-                    "loadingError": "top",
-                    "saveSubmitError": "top"
-               },
                "grid": {
                     "card": {
                          "sm": 6
                     }
-               }
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "title": "Congratulations!",
+               "subTitle": "Your loan application for $this.attr(genesis__Loan_Amount__c,currency); has been approved. Please review the credit offered",
+               "editableFields": {
+                    "genesis__Loan_Amount__c": false,
+                    "genesis__Product_Type__c": false,
+                    "genesis__Payment_Amount__c": false,
+                    "genesis__Term__c": false,
+                    "genesis__Interest_Rate__c": false
+               },
+               "renderFields": {
+                    "genesis__Payment_Amount_Derived__c": "$this.attr(genesis__Product_Type__c); != \"LINE OF CREDIT\" ",
+                    "genesis__Product_Type__c": false
+               },
+               "columns": 1,
+               "fieldColumns": 1
           },
           "property": {
-               "structureName": "get_manual_offer_selected_details",
                "whereClause": {
                     "appId": "$global.attr(applicationId);"
-               }
+               },
+               "structureName": "get_manual_offer_selected_details"
           },
           "type": "card-view",
           "category": "component"

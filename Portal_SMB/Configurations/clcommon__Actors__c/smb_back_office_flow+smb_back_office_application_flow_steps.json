@@ -24,6 +24,18 @@
                          "title": "Business Information"
                     },
                     {
+                         "name": "MoreBusinessDetails",
+                         "render": "$global.attr(HMDALegalClassName); == \"Individual\"",
+                         "subTitle": "More Business Details",
+                         "title": "Business Information"
+                    },
+                    {
+                         "name": "IdentificationInformation",
+                         "render": "$global.attr(HMDALegalClassName); == \"Individual\"",
+                         "subTitle": "Identification Information",
+                         "title": "Business Information"
+                    },
+                    {
                          "name": "IndustryCode",
                          "subTitle": "Industry Code",
                          "title": "Business Information"
@@ -42,6 +54,12 @@
                          "name": "LoanPurpose",
                          "subTitle": "Loan Purpose",
                          "title": "Loan Information"
+                    },
+                    {
+                         "name": "DemographicInformation",
+                         "render": "$global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); == \"Individual\"",
+                         "subTitle": "Demographic Information",
+                         "title": "Demographic Information"
                     },
                     {
                          "name": "BusinessParties",
@@ -64,5 +82,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_application_flow_steps",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_application_flow_steps",
-     "clcommon__Release_Checksum__c": "1e4f66c4535fa29e87b3ca820193be4bf3bb2f8004d5d2e275213486d1fac3b9"
+     "clcommon__Release_Checksum__c": "15966089375bdc384093b3c160dc8fb968bcb856873594b5514ad0be1d7ec847"
 }

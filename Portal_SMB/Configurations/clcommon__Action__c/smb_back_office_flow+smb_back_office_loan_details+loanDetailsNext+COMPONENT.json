@@ -8,21 +8,21 @@
           "name": "loanDetailsNext",
           "property": {},
           "appearance": {
-               "label": "Next",
-               "style": "primary"
+               "style": "primary",
+               "label": "Next"
           },
           "remoteActionArguments": {
-               "genesis__Business_Information__c": {
-                    "id": "$global.attr(businessInfoId);"
+               "genesis__Applications__c": {
+                    "genesis__CL_Product__c": "$this.attr(genesis__CL_Product__c);",
+                    "genesis__Loan_Amount__c": "$this.attr(genesis__Loan_Amount__c);",
+                    "genesis__Requested_Loan_Amount__c": "$this.attr(genesis__Loan_Amount__c);",
+                    "id": "$global.attr(applicationId);"
                },
                "account": {
                     "id": "$global.attr(backofficerAccountId);"
                },
-               "genesis__Applications__c": {
-                    "id": "$global.attr(applicationId);",
-                    "genesis__Requested_Loan_Amount__c": "$this.attr(genesis__Loan_Amount__c);",
-                    "genesis__Loan_Amount__c": "$this.attr(genesis__Loan_Amount__c);",
-                    "genesis__CL_Product__c": "$this.attr(genesis__CL_Product__c);"
+               "genesis__Business_Information__c": {
+                    "id": "$global.attr(businessInfoId);"
                }
           },
           "validation": [
@@ -37,6 +37,14 @@
                     {
                          "field": "$global.attr(loanProduct);",
                          "value": "$this.attr(genesis__CL_Product__c);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "smb_back_office_legal_entity_details"
+                         ]
                     }
                ],
                "actions": [
@@ -60,9 +68,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_loan_product_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_loan_details+loanDetailsNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "41bc2c60a9f89b4562381f0e2943717934232021ba2ae1dcf5e621633f463f34",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveApplication",
      "clcommon__Unique_Action_Name__c": "smb_back_office_loan_details+loanDetailsNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_loan_details+loanDetailsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "130015a17af072ccd9a86e624de337578a6917de3447061153a28cee3009b42a"
 }

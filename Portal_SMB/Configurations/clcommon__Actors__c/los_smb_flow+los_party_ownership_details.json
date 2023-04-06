@@ -13,6 +13,26 @@
                "showLoadingAnimation": true
           },
           "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "arguments": [
+                                   "$this.attr(clcommon__Party_Types__c);",
+                                   "AUTHORIZED SIGNER"
+                              ],
+                              "value": "$ext.checkThePartyType",
+                              "field": "$global.attr(isSignerPartyTypeTwo);"
+                         },
+                         {
+                              "arguments": [
+                                   "$this.attr(clcommon__Party_Types__c);",
+                                   "BENEFICIAL OWNER"
+                              ],
+                              "value": "$ext.checkThePartyType",
+                              "field": "$global.attr(isBeneficialPartyTypeTwo);"
+                         }
+                    ]
+               },
                "fieldChange": {
                     "clcommon__Party_Types__c": {
                          "assignments": [
@@ -34,70 +54,48 @@
                               }
                          ]
                     }
-               },
-               "loaded": {
-                    "assignments": [
-                         {
-                              "arguments": [
-                                   "$this.attr(clcommon__Party_Types__c);",
-                                   "AUTHORIZED SIGNER"
-                              ],
-                              "value": "$ext.checkThePartyType",
-                              "field": "$global.attr(isSignerPartyTypeTwo);"
-                         },
-                         {
-                              "arguments": [
-                                   "$this.attr(clcommon__Party_Types__c);",
-                                   "BENEFICIAL OWNER"
-                              ],
-                              "value": "$ext.checkThePartyType",
-                              "field": "$global.attr(isBeneficialPartyTypeTwo);"
-                         }
-                    ]
                }
           },
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
-               },
-               "renderFields": {
-                    "clcommon__Signer_Capacity__c": false,
-                    "clcommon__Percent_Ownership__c": false,
-                    "solcommon__Position_In_Company__c": false,
-                    "Id": false
-               },
+               "editable": true,
+               "fieldColumns": 1,
                "grid": {
                     "field": {
-                         "clcommon__Party_Types__c": {
-                              "selectButton": {
-                                   "xs": 12,
-                                   "sm": 4
-                              }
-                         },
                          "$default": {
-                              "xs": 12,
-                              "sm": 6
+                              "sm": 6,
+                              "xs": 12
+                         },
+                         "clcommon__Party_Types__c": {
+                              "sm": 6,
+                              "xs": 12
                          }
                     }
                },
-               "fieldColumns": 1,
-               "editable": true
+               "renderFields": {
+                    "Id": false,
+                    "solcommon__Position_In_Company__c": false,
+                    "clcommon__Percent_Ownership__c": false,
+                    "clcommon__Signer_Capacity__c": false
+               },
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               }
           },
           "property": {
-               "queryWithDefaultNew": true,
+               "structureName": "los_beneifical_party_types",
                "whereClause": {
                     "partyId": "$global.attr(partyId);"
                },
-               "structureName": "los_beneifical_party_types"
+               "queryWithDefaultNew": true
           },
           "type": "detail-view",
           "category": "component"
      },
      "clcommon__Actor_Name__c": "los_party_ownership_details",
      "clcommon__External_ID__c": "los_smb_flow+los_party_ownership_details",
-     "clcommon__Release_Checksum__c": "96deb0ba7dd48a37aa2e1c660177df59ac904c8f162c6b19fedeffa33e5e5b86"
+     "clcommon__Release_Checksum__c": "0785db592ea5b62d97780841e0642b6ba1b3dfd38bda734ff1c15d447f182fbe"
 }

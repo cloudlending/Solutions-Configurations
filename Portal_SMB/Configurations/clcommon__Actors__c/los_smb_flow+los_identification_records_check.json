@@ -1,0 +1,29 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {},
+          "property": {
+               "structureName": "los_identification_info",
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);",
+                    "accId": "$global.attr(borrowerAccountId);"
+               }
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_identification_records_check",
+     "clcommon__External_ID__c": "los_smb_flow+los_identification_records_check",
+     "clcommon__Release_Checksum__c": "d68ff874caa8c9ba6c353c87707ae963ca49ab4a772f94499c0ea3919cd7bac5"
+}

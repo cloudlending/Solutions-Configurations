@@ -4,11 +4,9 @@
      },
      "Name": "los_add_collateral_details",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "los_add_collateral_details",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "1083d604caa8040b3b6d2777204a18175f542f4f6966ab3724857e85655f0ef7",
      "clcommon__Unique_Name__c": "los_add_collateral_details",
      "clcommon__data__c": {
           "structureName": "los_add_collateral_details",
@@ -108,8 +106,10 @@
                                    "fieldType": "string",
                                    "label": "Collateral Description",
                                    "required": true,
+                                   "regex": "^[a-zA-Z0-9\\s]*$",
                                    "messages": {
-                                        "requiredErrorText": "Description is required."
+                                        "requiredErrorText": "Description is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "Description"
                               }
@@ -148,6 +148,7 @@
                                    "fieldType": "addressAutocomplete",
                                    "label": "Street Address",
                                    "required": true,
+                                   "regex": "^[a-zA-Z0-9\n#/\\s]*$",
                                    "addressComponentMapping": [
                                         {
                                              "addressComponent": "street_number",
@@ -172,7 +173,8 @@
                                         }
                                    ],
                                    "messages": {
-                                        "requiredErrorText": "Street Address is required."
+                                        "requiredErrorText": "Street Address is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "Address"
                               }
@@ -184,8 +186,10 @@
                                    "fieldType": "string",
                                    "label": "City",
                                    "required": true,
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "City is required."
+                                        "requiredErrorText": "City is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "City"
                               }
@@ -707,19 +711,6 @@
                               }
                          },
                          {
-                              "id": "12407789-2122-4389-a3a9-212221433fa",
-                              "fieldName": "genesis__Collateral__r.clcommon__Issuer_Name__c",
-                              "fieldUi": {
-                                   "fieldType": "string",
-                                   "label": "Issuer Name",
-                                   "required": true,
-                                   "messages": {
-                                        "requiredErrorText": "Issuer Name is required"
-                                   },
-                                   "ariaLabel": "Issuer Name"
-                              }
-                         },
-                         {
                               "id": "82491523-4679-4eb0-be1e-3203ec8364b4",
                               "fieldName": "genesis__Collateral__r.clcommon__Number_of_Shares__c",
                               "fieldUi": {
@@ -1225,19 +1216,6 @@
                               }
                          },
                          {
-                              "id": "89wwa6c-5828-4f93-8b88-94d036854ede",
-                              "fieldName": "genesis__Collateral__r.clcommon__Insurance_Company_Name__c",
-                              "fieldUi": {
-                                   "fieldType": "string",
-                                   "label": "Insurance Company Name",
-                                   "required": "$global.attr(collateralTypeName); == \"Life Insurance\"",
-                                   "messages": {
-                                        "requiredErrorText": "Insurance Company is required."
-                                   },
-                                   "ariaLabel": "Insurance Company Name"
-                              }
-                         },
-                         {
                               "id": "bc6ceb78-0e12-4778-a329-58caa23e3615",
                               "fieldName": "genesis__Collateral__r.clcommon__Policy_Number__c",
                               "fieldUi": {
@@ -1633,5 +1611,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "los_add_collateral_details",
+     "clcommon__Release_Checksum__c": "eec8f0ada25dade1b1d63f4e98256f7211fa7d313860db45736d12b93f1210fb"
 }

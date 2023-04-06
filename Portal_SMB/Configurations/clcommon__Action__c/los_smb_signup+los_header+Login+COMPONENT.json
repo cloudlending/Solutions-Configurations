@@ -5,20 +5,20 @@
      "Name": "Login",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
+          "name": "Login",
+          "property": {},
+          "appearance": {
+               "label": "Login",
+               "render": "$global.attr(userInfo).attr(userType); == \"Guest\"",
+               "style": "tertiary",
+               "position": "top-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "redirect": "/s/login"
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "position": "top-right",
-               "style": "tertiary",
-               "render": "$global.attr(userInfo).attr(userType); == \"Guest\"",
-               "label": "Login"
-          },
-          "property": {},
-          "name": "Login"
+          }
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -30,9 +30,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_signup+los_header+Login+COMPONENT",
-     "clcommon__Release_Checksum__c": "8592e85eb1ef72f65285a06a2e8038c0b6795410150d484f2ce3954fb3f0a255",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_header+Login",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_signup+los_header+Login+COMPONENT",
+     "clcommon__Release_Checksum__c": "8592e85eb1ef72f65285a06a2e8038c0b6795410150d484f2ce3954fb3f0a255"
 }

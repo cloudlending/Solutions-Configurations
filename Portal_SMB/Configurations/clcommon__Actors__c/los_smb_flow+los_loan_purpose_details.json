@@ -33,53 +33,53 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "sortedField": {
-                    "ascending": true,
-                    "name": "clcommon__CL_Purpose__r.Name"
-               },
-               "sortableFields": [
-                    "clcommon__CL_Purpose__r.Name"
-               ],
-               "editableFields": {
-                    "clcommon__CL_Purpose__r.Name": false
-               },
-               "highlight": true,
-               "noLabelField": "clcommon__CL_Purpose__r.Name",
-               "textAfter": "$global.attr(purposeValidation);",
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
-               },
-               "editable": "$global.attr(partyType);== \"PRINCIPAL\"",
-               "renderFields": {
-                    "clcommon__CL_Purpose__r.Id": false
-               },
-               "autoHighlight": {
-                    "clcommon__CL_Purpose__r.Id": "$state(los_loan_existing_purpose).attr(genesis__Application__r.genesis__CL_Purpose__r.Id);"
-               },
+               "title": "What is the purpose of this loan?",
                "grid": {
                     "field": {
                          "genesis__Application__r.genesis__CL_Purpose__c": {
                               "selectButton": {
-                                   "sm": 6,
-                                   "xs": 12
+                                   "xs": 12,
+                                   "sm": 6
                               }
                          }
                     }
                },
-               "title": "What is the purpose of this loan?"
+               "autoHighlight": {
+                    "clcommon__CL_Purpose__r.Id": "$state(los_loan_existing_purpose).attr(genesis__Application__r.genesis__CL_Purpose__r.Id);"
+               },
+               "renderFields": {
+                    "clcommon__CL_Purpose__r.Id": false
+               },
+               "editable": "$global.attr(partyType);== \"PRINCIPAL\"",
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               },
+               "textAfter": "",
+               "noLabelField": "clcommon__CL_Purpose__r.Name",
+               "highlight": true,
+               "editableFields": {
+                    "clcommon__CL_Purpose__r.Name": false
+               },
+               "sortableFields": [
+                    "clcommon__CL_Purpose__r.Name"
+               ],
+               "sortedField": {
+                    "name": "clcommon__CL_Purpose__r.Name",
+                    "ascending": true
+               }
           },
           "property": {
+               "structureName": "los_loan_purpose_details",
                "whereClause": {
                     "loanProduct": "$global.attr(loanProduct);"
-               },
-               "structureName": "los_loan_purpose_details"
+               }
           },
           "type": "list-view",
           "category": "component"
      },
      "clcommon__Actor_Name__c": "los_loan_purpose_details",
      "clcommon__External_ID__c": "los_smb_flow+los_loan_purpose_details",
-     "clcommon__Release_Checksum__c": "ba119a2019296e454bbeb244505a9381b3dfa5f9cf06350e9d06e212d836926f"
+     "clcommon__Release_Checksum__c": "954ef80594972a4af909fec610634f6f39fe196a3a7051c1ee6f4906b9ffdcdd"
 }

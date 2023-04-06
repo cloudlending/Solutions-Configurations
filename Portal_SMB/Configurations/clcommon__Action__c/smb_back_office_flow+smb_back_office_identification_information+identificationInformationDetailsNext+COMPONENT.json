@@ -8,12 +8,12 @@
           "name": "identificationInformationDetailsNext",
           "property": {},
           "appearance": {
-               "render": "($this.attr(Id); == \"\" or $this.attr(Id); == undefined or $this.attr(Id); == \"new_record_id\")",
+               "render": "($this.attr(Id); == \"\" or $this.attr(Id); == undefined or $this.attr(Id); == \"new_record_id\") and ($this.attr(genesis__Identification_Type__c); != undefined and $this.attr(genesis__Identification_Type__c); != \"\" and $this.attr(genesis__Identification_Type__c); != \"Select one\")",
                "style": "primary",
                "label": "Next"
           },
           "remoteActionArguments": {
-               "partyId": "$global.attr(partyId);",
+               "partyId": "$global.attr(businessPartyId);",
                "applicationId": "$global.attr(applicationId);",
                "accountId": "$global.attr(borrowerAccountIdExisting);",
                "genesis__Identification_Information__c": {
@@ -32,11 +32,11 @@
                ],
                "actions": [
                     {
-                         "condition": "$global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\" ",
+                         "condition": "$global.attr(HMDALoan); == true and ($global.attr(HMDALegalClassName); ==\"Sole Proprietorship\" or $global.attr(HMDALegalClassName); ==\"Individual\") ",
                          "name": "savePortalStage"
                     },
                     {
-                         "condition": "($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\") or ($global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\") or ($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\")",
+                         "condition": "($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\" and $global.attr(HMDALegalClassName); !=\"Individual\") or ($global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\" and $global.attr(HMDALegalClassName); !=\"Individual\") or ($global.attr(HMDALoan); == false and ($global.attr(HMDALegalClassName); ==\"Sole Proprietorship\" or $global.attr(HMDALegalClassName); ==\"Individual\"))",
                          "name": "updatePartySubmitnext"
                     }
                ]
@@ -46,7 +46,7 @@
           "handler": {},
           "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -56,9 +56,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_identification_information",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_identification_information+identificationInformationDetailsNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "de66081f0a9031120892bc39878fa6a75f18401378da39fa7a135f713c7b95f0",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIdentificationInformation",
      "clcommon__Unique_Action_Name__c": "smb_back_office_identification_information+identificationInformationDetailsNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_identification_information+identificationInformationDetailsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "a283a0946fbaa28925a4fd8ca807e627760d18ca461f756557342497e9bfdac9"
 }

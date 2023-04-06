@@ -5,28 +5,28 @@
      "Name": "edit",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "messages": {},
-          "disclosureNames": [],
+          "name": "edit",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i>",
+               "render": "$this.attr(Id);!=$global.attr(editAsset); and $this.attr(Id);!=undefined and $global.attr(existingCollateral);!=\"Yes\"",
+               "style": "secondary"
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "assignments": [
                     {
-                         "value": "$this.attr(Id);",
-                         "field": "$global.attr(editAsset);"
+                         "field": "$global.attr(editAsset);",
+                         "value": "$this.attr(Id);"
                     }
                ]
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "uploadActionArguments": {},
-          "remoteActionArguments": {},
-          "appearance": {
-               "style": "secondary",
-               "render": "$this.attr(Id);!=$global.attr(editAsset); and $this.attr(Id);!=undefined and $global.attr(existingCollateral);!=\"Yes\"",
-               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i>"
-          },
-          "property": {},
-          "name": "edit"
+          "disclosureNames": [],
+          "messages": {}
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "normal",
@@ -38,9 +38,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_add_collateral_type_details_list",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "los_smb_flow+los_collateral_type_details+edit+RECORD",
-     "clcommon__Release_Checksum__c": "2462f51c5caa6ea9d7636cfbe4fc136c0a656669cf2dc5577ce2bf0002947e92",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_collateral_type_details+edit",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_type_details+edit+RECORD",
+     "clcommon__Release_Checksum__c": "2462f51c5caa6ea9d7636cfbe4fc136c0a656669cf2dc5577ce2bf0002947e92"
 }

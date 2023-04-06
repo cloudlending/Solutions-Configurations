@@ -8,9 +8,9 @@
           "name": "selectApplication",
           "property": {},
           "appearance": {
-               "render": false,
+               "style": "primary",
                "label": "Continue",
-               "style": "primary"
+               "render": false
           },
           "remoteActionArguments": {},
           "successHandler": {},
@@ -33,6 +33,10 @@
                     {
                          "field": "$global.attr(showCollateral);",
                          "value": "@mathjs{($this.attr(genesis__Application__r.genesis__Asset_Class__c); == \"Consumer Secured\" or $this.attr(genesis__Application__r.genesis__Asset_Class__c); ==\"Consumer Real Estate\") ? true : false };"
+                    },
+                    {
+                         "field": "$global.attr(HMDALoan);",
+                         "value": "$this.attr(genesis__Application__r.genesis__CL_Product__r.clcommon__HMDA_Loan__c);"
                     },
                     {
                          "field": "$global.attr(assetClassName);",
@@ -63,6 +67,22 @@
                          "value": "$this.attr(Id);"
                     },
                     {
+                         "field": "$global.attr(partyId);",
+                         "value": "$this.attr(Id);"
+                    },
+                    {
+                         "field": "$global.attr(HMDALegalClassName);",
+                         "value": "$this.attr(clcommon__Account__r.clcommon__Legal_Entity_Type__r.Name);"
+                    },
+                    {
+                         "field": "$global.attr(businessEntityType);",
+                         "value": "$this.attr(clcommon__Account__r.clcommon__Legal_Entity_Type__r.Name);"
+                    },
+                    {
+                         "field": "$global.attr(contactId);",
+                         "value": "$this.attr(clcommon__Contact__c);"
+                    },
+                    {
                          "field": "$global.attr(partyTypes);",
                          "value": "$this.attr(clcommon__Party_Types__c);"
                     },
@@ -85,7 +105,7 @@
                ],
                "actions": [
                     {
-                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"BusinessDetails\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"IndustryCode\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"BusinessFinancials\"",
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"BusinessDetails\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"IndustryCode\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"BusinessFinancials\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"MoreBusinessDetails\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"IdentificationInformation\"",
                          "name": "goToBusiness"
                     },
                     {
@@ -93,7 +113,7 @@
                          "name": "goToLoanDetails"
                     },
                     {
-                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"BusinessParties\" ",
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"BusinessParties\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"DemographicInformation\"",
                          "name": "goToBusinessParties"
                     },
                     {
@@ -103,6 +123,10 @@
                     {
                          "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"ReviewAndSubmit\"",
                          "name": "goToReview"
+                    },
+                    {
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"BeneficialSummary\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"manualReview\"",
+                         "name": "goToBusinessPartiesSummary"
                     }
                ]
           }
@@ -117,9 +141,9 @@
      },
      "clcommon__Component_Structure_Name__c": "back_officer_application_query",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_application_fetch+selectApplication+RECORD",
-     "clcommon__Release_Checksum__c": "789a7d5723969462b4a7ae3d0e050ffdeb70b92347ade668512e12ef4cab5fb6",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "smb_back_office_application_fetch+selectApplication",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_application_fetch+selectApplication+RECORD",
+     "clcommon__Release_Checksum__c": "d2bb5b0c9e5f578599f49155e04f803f73a0a5ce0dd24f7ae16854bb5adc351c"
 }

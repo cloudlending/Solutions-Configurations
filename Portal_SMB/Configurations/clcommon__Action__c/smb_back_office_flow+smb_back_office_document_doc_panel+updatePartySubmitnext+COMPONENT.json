@@ -8,17 +8,17 @@
           "name": "updatePartySubmitnext",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": "($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\") or ($global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\") or ($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\")",
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "render": "($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\") or ($global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\") or ($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\")",
+               "style": "primary"
           },
           "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
                "clcommon__Party__c": {
-                    "solcommon__Submission_Status__c": "SUBMITTED",
-                    "id": "$global.attr(partyId);"
-               },
-               "applicationId": "$global.attr(applicationId);"
+                    "id": "$global.attr(partyId);",
+                    "solcommon__Submission_Status__c": "SUBMITTED"
+               }
           },
           "validation": [
                "smb_back_office_document_doc_panel"
@@ -54,9 +54,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_upload_document_panel_sub_folder",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_document_doc_panel+updatePartySubmitnext+COMPONENT",
-     "clcommon__Release_Checksum__c": "4813d9feb36e3a2af05904a2317613ba6d1a952e70369d282885695efdc99c35",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalUpdateParty",
      "clcommon__Unique_Action_Name__c": "smb_back_office_document_doc_panel+updatePartySubmitnext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_document_doc_panel+updatePartySubmitnext+COMPONENT",
+     "clcommon__Release_Checksum__c": "4813d9feb36e3a2af05904a2317613ba6d1a952e70369d282885695efdc99c35"
 }
