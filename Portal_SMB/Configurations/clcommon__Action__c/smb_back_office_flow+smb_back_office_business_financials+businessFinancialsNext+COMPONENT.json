@@ -8,18 +8,18 @@
           "name": "businessFinancialsNext",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Next"
+               "label": "Next",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "accountId": "$global.attr(backofficerAccountId);",
-               "applicationId": "$global.attr(applicationId);",
                "genesis__Business_Information__c": {
-                    "id": "$global.attr(businessInfoId);",
-                    "genesis__Total_Liabilities__c": "$this.attr(genesis__Total_Liabilities__c);",
+                    "solcommon__Total_Revenue__c": "$this.attr(solcommon__Total_Revenue__c);",
                     "genesis__Total_Sales__c": "$this.attr(genesis__Total_Sales__c);",
-                    "solcommon__Total_Revenue__c": "$this.attr(solcommon__Total_Revenue__c);"
-               }
+                    "genesis__Total_Liabilities__c": "$this.attr(genesis__Total_Liabilities__c);",
+                    "id": "$global.attr(businessInfoId);"
+               },
+               "applicationId": "$global.attr(applicationId);",
+               "accountId": "$global.attr(backofficerAccountId);"
           },
           "validation": [
                "smb_back_office_business_financials"
@@ -27,7 +27,12 @@
           "successHandler": {
                "actions": [
                     {
+                         "condition": "$global.attr(businessEntityType);!=\"Individual\"",
                          "name": "updatePartySubmitbusinessFinancials"
+                    },
+                    {
+                         "condition": "$global.attr(businessEntityType);==\"Individual\"",
+                         "name": "savePortalStage"
                     }
                ]
           },
@@ -46,9 +51,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_business_financials_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_financials+businessFinancialsNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "845832211898cdec465c20dd6b580d9f500aa2ba164d48a12cae185a5e10ba17",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveBusinessInfo",
      "clcommon__Unique_Action_Name__c": "smb_back_office_business_financials+businessFinancialsNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_financials+businessFinancialsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "7d5fa456c4a33927c8c5ee7f7c40f7a9635fca30dc78e50088dabb12c0d6bfcd"
 }

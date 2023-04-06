@@ -1,0 +1,62 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "assignStepLabel",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "assignStepLabel",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Continue"
+          },
+          "automatic": true,
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(stepsLabel);",
+                         "value": "Identification Info"
+                    },
+                    {
+                         "field": "$global.attr(stepperCount);",
+                         "value": "2"
+                    },
+                    {
+                         "field": "$global.attr(mainStepLabel);",
+                         "value": "Identification Info"
+                    },
+                    {
+                         "field": "$nav(los_mobile_stepper_panel).appearance(current);",
+                         "value": "IdentificationInformation"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "los_beneficial_identification_detail_new"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail_new"
+     },
+     "clcommon__Component_Structure_Name__c": "los_identification_info_new",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_beneficial_identification_detail_new+assignStepLabel",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail_new+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "90b05c4246617b8068dcdbaeac8f3d6c74320750182c46f4b167eeab2ace0d29"
+}

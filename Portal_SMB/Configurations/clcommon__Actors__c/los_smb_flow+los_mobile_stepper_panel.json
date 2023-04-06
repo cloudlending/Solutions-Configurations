@@ -1,0 +1,116 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "titles": [
+                    {
+                         "title": "Getting Started",
+                         "subTitle": "Basic Details",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "name": "BasicDetails"
+                    },
+                    {
+                         "title": "Getting Started",
+                         "subTitle": "Loan  Details",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "name": "LoanDetails"
+                    },
+                    {
+                         "title": "Getting Started",
+                         "subTitle": "Loan Purpose",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "name": "LoanPurpose"
+                    },
+                    {
+                         "title": "Business Information",
+                         "subTitle": "Business Details",
+                         "render": "$global.attr(isPrincipal);==true ",
+                         "name": "BusinessDetails"
+                    },
+                    {
+                         "title": "Business Information",
+                         "subTitle": "Industry Code",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "name": "IndustryCode"
+                    },
+                    {
+                         "title": "Business Information",
+                         "subTitle": "Business Financials",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "name": "BusinessFinancials"
+                    },
+                    {
+                         "title": "Personal Info",
+                         "subTitle": "More Info",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "name": "PersonalInformation"
+                    },
+                    {
+                         "title": "Personal Info",
+                         "subTitle": "Demographic Information",
+                         "render": "$global.attr(isPrincipal);==true and $global.attr(isHMDALoan);==true",
+                         "name": "DemographicInformation"
+                    },
+                    {
+                         "title": "Business Parties",
+                         "subTitle": "Party Summary",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "name": "BusinessParties"
+                    },
+                    {
+                         "title": "Business Parties",
+                         "subTitle": "Beneficial Summary",
+                         "render": "$global.attr(isPrincipal);==true",
+                         "name": "BeneficialSummary"
+                    },
+                    {
+                         "title": "Collateral",
+                         "render": "($global.attr(assetClassName); == \"Small Business\" or $global.attr(assetClassName); == \"Small Business Real Estate\") and $global.attr(isPrincipal);==true",
+                         "name": "CollateralDetails"
+                    },
+                    {
+                         "title": "Personal Info",
+                         "render": "$global.attr(isPrincipal);!=true",
+                         "name": "BeneficialPersonalInfo"
+                    },
+                    {
+                         "title": "Identification Info",
+                         "render": "$global.attr(isPrincipal);!=true",
+                         "name": "IdentificationInformation"
+                    },
+                    {
+                         "title": "Demographic Info",
+                         "render": "$global.attr(isHMDALoan);==true and $global.attr(isPrincipal);!=true",
+                         "name": "BeneficialDemographicInfo"
+                    },
+                    {
+                         "title": "Document",
+                         "render": "$global.attr(isCollectDocumentRequired);==true",
+                         "name": "Documents"
+                    },
+                    {
+                         "title": "Review",
+                         "name": "ReviewAndSubmit"
+                    }
+               ],
+               "titleOrientation": "vertical"
+          },
+          "property": {},
+          "type": "steps",
+          "category": "container"
+     },
+     "clcommon__Actor_Name__c": "los_mobile_stepper_panel",
+     "clcommon__External_ID__c": "los_smb_flow+los_mobile_stepper_panel",
+     "clcommon__Release_Checksum__c": "d2cd7b9ef3291377db1d60f46ef3c888e801252bd5094355ee3eff2a830c10ec"
+}

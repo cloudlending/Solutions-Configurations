@@ -5,28 +5,28 @@
      "Name": "backToBeneficialPersonal",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Back",
+          "name": "backToBeneficialPersonal",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "secondary",
+               "variant": "text",
+               "label": "Back"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "assignments": [
                     {
-                         "value": "previous",
-                         "field": "$nav(los_application_steps).appearance(current);"
+                         "field": "$nav(los_application_steps).appearance(current);",
+                         "value": "previous"
                     }
                ]
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "label": "Back",
-               "variant": "text",
-               "style": "secondary",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "backToBeneficialPersonal"
+          "ariaLabel": "Back"
      },
-     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -36,9 +36,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_demographic_information_gender",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_gender_information+backToBeneficialPersonal+COMPONENT",
-     "clcommon__Release_Checksum__c": "74c53bdd8e729da7977232f75f5158f69c077718f4002b132f59926cee266c0b",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_beneficial_gender_information+backToBeneficialPersonal",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_gender_information+backToBeneficialPersonal+COMPONENT",
+     "clcommon__Release_Checksum__c": "7a21a39a076c1c3a97595a9c07dc41d057272b882add935857af9627b0565aad"
 }

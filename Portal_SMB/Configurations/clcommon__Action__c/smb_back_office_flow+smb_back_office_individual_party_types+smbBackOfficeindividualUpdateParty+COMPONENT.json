@@ -1,0 +1,55 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "smbBackOfficeindividualUpdateParty",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "smbBackOfficeindividualUpdateParty",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "style": "primary",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "clcommon__Party__c": {
+                    "id": "$global.attr(tempPartyId);",
+                    "clcommon__Signer_Capacity__c": "$this.attr(clcommon__Signer_Capacity__c);"
+               },
+               "additionalPartyTypes": "$this.attr(clcommon__Party_Types__c);",
+               "applicationId": "$global.attr(tempApplicationId);"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "actions": [
+                    {
+                         "condition": "$state(smb_back_office_individual_personal_income_information).attr(Id); == \"new_record_id\" or $state(smb_back_office_individual_personal_income_information).attr(Id); == null",
+                         "name": "savePortalIncomeInfo"
+                    },
+                    {
+                         "condition": "$state(smb_back_office_individual_personal_income_information).attr(Id); != \"new_record_id\" and $state(smb_back_office_individual_personal_income_information).attr(Id); !=null",
+                         "name": "savePortalUpdateIncomeInfo"
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_party_types"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_individual_party_types",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalUpdateParty",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_individual_party_types+smbBackOfficeindividualUpdateParty",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_party_types+smbBackOfficeindividualUpdateParty+COMPONENT",
+     "clcommon__Release_Checksum__c": "44531f4de3c21cae1cae75efeb5b335c9fdef1fe2dda774f3a87af23c934c7a9"
+}

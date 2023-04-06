@@ -1,0 +1,48 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "value": "$this.attr(Id);",
+                              "field": "$state(los_business_legal_entity_types).attr(clcommon__Legal_Entity_Type__c);"
+                         }
+                    ]
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               },
+               "fieldColumns": 1
+          },
+          "property": {
+               "structureName": "los_business_entity_type",
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "businessEntityType": "$global.attr(businessEntityType);"
+               }
+          },
+          "type": "data-model",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_business_entity_type",
+     "clcommon__External_ID__c": "los_smb_flow+los_business_entity_type",
+     "clcommon__Release_Checksum__c": "c49e7c096533ad84dad1199299a64a7786549f866c43ca332b2c12f37a85d677"
+}

@@ -38,7 +38,7 @@
                     },
                     {
                          "name": "DemographicInformation",
-                         "render": "$global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\"",
+                         "render": "$global.attr(HMDALoan); == true and ($global.attr(HMDALegalClassName); == \"Individual\" or $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\")",
                          "title": "Demographics"
                     }
                ]
@@ -49,5 +49,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_add_business_parties_container",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_add_business_parties_container",
-     "clcommon__Release_Checksum__c": "7dee40547a4af4c828f65993f83eeb60180a5e593eb0df34df397f3fb4f0f9f2"
+     "clcommon__Release_Checksum__c": "5d86b6a4d729de3bb11a145c212e8bc523e1c91c795ddb72be4595105379d2d9"
 }

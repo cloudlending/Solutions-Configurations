@@ -13,7 +13,6 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "titleOrientation": "vertical",
                "titles": [
                     {
                          "render": "$global.attr(isPrincipal);==true",
@@ -67,7 +66,7 @@
                     },
                     {
                          "name": "BeneficialSummary",
-                         "render": "$global.attr(isPrincipal);==true",
+                         "render": "$global.attr(isPrincipal);==true and $global.attr(businessEntityType);!=\"Individual\"",
                          "subTitle": "Beneficial Summary",
                          "title": "Business Parties"
                     },
@@ -100,7 +99,8 @@
                          "name": "ReviewAndSubmit",
                          "title": "Review"
                     }
-               ]
+               ],
+               "titleOrientation": "vertical"
           },
           "property": {},
           "type": "steps",
@@ -108,5 +108,5 @@
      },
      "clcommon__Actor_Name__c": "los_application_steps",
      "clcommon__External_ID__c": "los_smb_flow+los_application_steps",
-     "clcommon__Release_Checksum__c": "bec5a507f7ddc92ed23addb6bf1953ed6f37be04d03778baf5f29515db191e5b"
+     "clcommon__Release_Checksum__c": "4e4dcaf800f1cd2900b4fc98e643929c42b95c482c2927069a9302dd93448aef"
 }

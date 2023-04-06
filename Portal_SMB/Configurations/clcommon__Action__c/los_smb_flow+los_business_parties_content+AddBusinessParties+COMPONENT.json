@@ -5,50 +5,50 @@
      "Name": "AddBusinessParties",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
+          "name": "AddBusinessParties",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "position": "top-right",
+               "label": "<span>Add Business Parties</span> <i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
-               "updates": [
+               "assignments": [
                     {
-                         "value": "los_business_parties_overlay",
-                         "name": "$nav.overlay.add;"
+                         "field": "$nav(los_business_parties_overlay).appearance(current);",
+                         "value": 0
                     },
                     {
+                         "field": "$global.attr(partyId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(isSignerPartyTypeTwo);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(isBeneficialPartyTypeTwo);",
+                         "value": ""
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "los_business_parties_overlay"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
                          "value": [
                               "los_party_ownership_details",
                               "los_party_personalinfo_details",
                               "los_party_beneficial_details"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": 0,
-                         "field": "$nav(los_business_parties_overlay).appearance(current);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(partyId);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(isSignerPartyTypeTwo);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(isBeneficialPartyTypeTwo);"
+                         ]
                     }
                ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "label": "<span>Add Business Parties</span> <i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>",
-               "position": "top-right",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "AddBusinessParties"
+          }
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -60,9 +60,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_content+AddBusinessParties+COMPONENT",
-     "clcommon__Release_Checksum__c": "87302b3974e03678823a99ca0c6249aafdce5be4c2ba192f272ca1839ba6911f",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_business_parties_content+AddBusinessParties",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_content+AddBusinessParties+COMPONENT",
+     "clcommon__Release_Checksum__c": "87302b3974e03678823a99ca0c6249aafdce5be4c2ba192f272ca1839ba6911f"
 }

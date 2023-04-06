@@ -8,8 +8,8 @@
           "name": "selectApplicaiton",
           "property": {},
           "appearance": {
-               "label": "Automate",
-               "style": "primary"
+               "style": "primary",
+               "label": "Automate"
           },
           "automatic": true,
           "remoteActionArguments": {
@@ -32,6 +32,18 @@
                     {
                          "field": "$global.attr(renderBeneficialOwner);",
                          "value": "$result.attr(BENEFICIALOWNER);"
+                    },
+                    {
+                         "field": "$global.attr(renderConrtolPerson);",
+                         "value": "$result.attr(CONTROLPERSON);"
+                    },
+                    {
+                         "field": "$global.attr(renderPartner);",
+                         "value": "$result.attr(PARTNER);"
+                    },
+                    {
+                         "field": "$global.attr(renderTrustee);",
+                         "value": "$result.attr(TRUSTEE);"
                     }
                ]
           },
@@ -49,9 +61,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_review_container+selectApplicaiton+COMPONENT",
-     "clcommon__Release_Checksum__c": "aacaf4d317e155f8734d58f81fa437b645b69835502d6e90d338eeb5ac129603",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalGetCurrentStage",
      "clcommon__Unique_Action_Name__c": "smb_back_office_review_container+selectApplicaiton",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_review_container+selectApplicaiton+COMPONENT",
+     "clcommon__Release_Checksum__c": "790d19d21109ca94dca4b56e5640bc14a4f2ad7034966154679fcea015a03cde"
 }

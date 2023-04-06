@@ -16,46 +16,46 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "editableFields": {
-                    "clcommon__Account__r.Id": false,
-                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false,
-                    "clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c": false,
-                    "clcommon__Account__r.genesis__Business_Information__r.genesis__Business_Registration_State__c": false,
-                    "genesis__Application__r.genesis__Loan_Amount__c": false,
-                    "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c": false,
-                    "clcommon__Account__r.clcommon__Legal_Entity_Type__r.Name": false,
-                    "clcommon__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c": false,
+               "fieldColumns": 1,
+               "title": "Review and Submit",
+               "blankMessage": "No Records to display",
+               "renderFields": {
                     "clcommon__Account__r.genesis__Business_Information__r.Id": false,
-                    "clcommon__Account__r.Name": false,
-                    "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c": false
-               },
-               "editable": false,
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
+                    "clcommon__Account__r.Id": false
                },
                "grid": {
                     "field": {
                          "$default": {
-                              "xs": 12,
-                              "sm": 6
+                              "sm": 6,
+                              "xs": 12
                          }
                     }
                },
-               "renderFields": {
-                    "clcommon__Account__r.Id": false,
-                    "clcommon__Account__r.genesis__Business_Information__r.Id": false
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
                },
-               "blankMessage": "No Records to display",
-               "title": "Review and Submit",
-               "fieldColumns": 1
+               "editable": false,
+               "editableFields": {
+                    "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c": false,
+                    "clcommon__Account__r.Name": false,
+                    "clcommon__Account__r.genesis__Business_Information__r.Id": false,
+                    "clcommon__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c": false,
+                    "clcommon__Account__r.clcommon__Legal_Entity_Type__r.Name": false,
+                    "clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c": false,
+                    "genesis__Application__r.genesis__Loan_Amount__c": false,
+                    "clcommon__Account__r.genesis__Business_Information__r.genesis__Business_Registration_State__c": false,
+                    "clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c": false,
+                    "genesis__Application__r.genesis__CL_Purpose__r.Name": false,
+                    "clcommon__Account__r.Id": false
+               }
           },
           "property": {
+               "structureName": "los_review_application_details",
                "whereClause": {
                     "appId": "$global.attr(applicationId);"
-               },
-               "structureName": "los_review_application_details"
+               }
           },
           "type": "detail-view",
           "category": "component"

@@ -4,17 +4,15 @@
      },
      "Name": "los_existing_business_entites",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "los_existing_business_entites",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "2f79bf39c136f079bf2ad2295510f24ad490763b14acfd6ed880195c63b3cb66",
      "clcommon__Unique_Name__c": "los_existing_business_entites",
      "clcommon__data__c": {
           "structureName": "los_existing_business_entites",
           "tableName": "clcommon__relationship__c",
           "whereClause": {
-               "freeForm": "clcommon__Entity__c = ':accountId'"
+               "freeForm": "clcommon__Entity__c = ':accountId' and clcommon__Entity_Role__c ='Principal'"
           },
           "sections": [
                {
@@ -27,54 +25,6 @@
                                    "fieldType": "string",
                                    "label": "Record ID",
                                    "ariaLabel": "Record ID"
-                              }
-                         },
-                         {
-                              "id": "2ec51c78-2862-4229-9568-4b245b886eec",
-                              "fieldName": "clcommon__Entity_Role__c",
-                              "fieldUi": {
-                                   "fieldType": "string",
-                                   "label": "Entity Role",
-                                   "ariaLabel": "Entity Role"
-                              }
-                         },
-                         {
-                              "id": "923dfc33-ae27-4a2d-8761-10ab2a1c96d4",
-                              "relationType": "reference",
-                              "fieldName": "clcommon__Entity__c",
-                              "relationName": "clcommon__Entity__r",
-                              "relationJson": {
-                                   "tableName": "Account",
-                                   "whereClause": {
-                                        "freeForm": "id != null"
-                                   },
-                                   "sections": [
-                                        {
-                                             "id": "9e49ae7e-834e-4e10-b517-4b6305cd87f5",
-                                             "fields": [
-                                                  {
-                                                       "id": "c1d6780e-9a44-4455-b56e-b0761e51338d",
-                                                       "fieldName": "Id",
-                                                       "fieldUi": {
-                                                            "fieldType": "string",
-                                                            "label": "Account ID"
-                                                       }
-                                                  },
-                                                  {
-                                                       "id": "002c954f-39ec-4a25-8711-14c4929fd82d",
-                                                       "fieldName": "Name",
-                                                       "fieldUi": {
-                                                            "fieldType": "string",
-                                                            "label": "Account Name"
-                                                       }
-                                                  }
-                                             ]
-                                        }
-                                   ]
-                              },
-                              "fieldUi": {
-                                   "fieldType": "reference",
-                                   "label": "Entity"
                               }
                          },
                          {
@@ -124,18 +74,11 @@
                                    "label": "Business Name",
                                    "ariaLabel": "Account Name"
                               }
-                         },
-                         {
-                              "id": "4b5f111b-80e6-45ce-be8f-04a95ba55113",
-                              "fieldName": "clcommon__Entity__r.Name",
-                              "fieldUi": {
-                                   "fieldType": "string",
-                                   "label": "Account Name",
-                                   "ariaLabel": "Account Name"
-                              }
                          }
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "los_existing_business_entites",
+     "clcommon__Release_Checksum__c": "2b4c6f122a8e8eaa3f03459a2da5b711be37662d94d46885eb0a93d551d43d6b"
 }

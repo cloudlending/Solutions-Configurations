@@ -5,28 +5,28 @@
      "Name": "collateralValidation",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
+          "name": "collateralValidation",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Next",
+               "style": "primary",
+               "render": "$global.attr(isHMDALoan);==true and $state(los_collaterals_list_validation).count();<1"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "assignments": [
                     {
-                         "value": "<p style=\"font-size:11px; font-weight:500; padding-top:10px; color:#f44336;\">Collateral of type 1-4 Family or Multi Family is  required.</p>",
-                         "field": "$global.attr(collateralValidation);"
+                         "field": "$global.attr(collateralValidation);",
+                         "value": "<p style=\"font-size:11px; font-weight:500; padding-top:10px; color:#f44336;\">Collateral of type 1-4 Family or Multi Family is  required.</p>"
                     }
                ]
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "render": "$global.attr(isHMDALoan);==true and $state(los_collaterals_list_validation).count();<1",
-               "style": "primary",
-               "label": "Next",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "collateralValidation"
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -36,9 +36,9 @@
      },
      "clcommon__Component_Structure_Name__c": "get_collateral_list",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_collaterals_list+collateralValidation+COMPONENT",
-     "clcommon__Release_Checksum__c": "9f5e9639fa4f52269ca006ed3169652e9bf0aabf35bc870a8d51aeede00462ca",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_collaterals_list+collateralValidation",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_collaterals_list+collateralValidation+COMPONENT",
+     "clcommon__Release_Checksum__c": "edefe0e8b895a56f08ef2ce7cd260008e6d4e76f5284ef2bef8c975634d85c09"
 }

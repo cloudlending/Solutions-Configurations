@@ -1,0 +1,95 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "ExternalBankAccount",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "ExternalBankAccount",
+     "clcommon__data__c": {
+          "structureName": "ExternalBankAccount",
+          "tableName": "genesis__funding_transaction__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId'"
+          },
+          "orderBy": "createddate desc limit 1",
+          "sections": [
+               {
+                    "id": "5b30e9be-53fd-42dd-85c3-24cc92edff7b",
+                    "fields": [
+                         {
+                              "id": "aa0d12af-7061-48e5-a510-62d6f0aee983",
+                              "fieldName": "genesis__Bank_Account__r.clcommon__Routing_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Routing Number",
+                                   "required": true,
+                                   "regex": "^\\d{10}$",
+                                   "messages": {
+                                        "regexErrorText": "Invalid Routing number. Please enter a valid routing number",
+                                        "requiredErrorText": "Routing number is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numericOnly": true
+                                        }
+                                   },
+                                   "ariaLabel": "Routing Number"
+                              }
+                         },
+                         {
+                              "id": "1b809ed9-4662-41a2-ad1d-115a70a85798",
+                              "fieldName": "genesis__Bank_Account__r.clcommon__Bank_Name__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Bank Name",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Bank name is required."
+                                   },
+                                   "ariaLabel": "Bank Name"
+                              }
+                         },
+                         {
+                              "id": "82cc6a0c-fc40-434e-88b1-b4de3ec8b525",
+                              "fieldName": "genesis__Bank_Account__r.clcommon__Bank_Account_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Bank Account Number",
+                                   "required": true,
+                                   "secure": true,
+                                   "messages": {
+                                        "requiredErrorText": "Account Number is required."
+                                   },
+                                   "ariaLabel": "Bank Account Number"
+                              }
+                         },
+                         {
+                              "id": "64c86584-8f3b-430c-89b7-7d8517213d12",
+                              "fieldName": "genesis__Bank_Account__r.solcommon__Re_Enter_Bank_Account_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Re Enter Bank Account Number",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Bank_Account__r.solcommon__Re_Enter_Bank_Account_Number__c); == $this.attr(genesis__Bank_Account__r.clcommon__Bank_Account_Number__c);",
+                                             "condition": "$this.attr(genesis__Bank_Account__r.solcommon__Re_Enter_Bank_Account_Number__c); != undefined and $this.attr(genesis__Bank_Account__r.clcommon__Bank_Account_Number__c); != undefined",
+                                             "message": "Bank account number mismatch. Kindly recheck."
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Kindly Re-enter the account number"
+                                   },
+                                   "ariaLabel": "Re Enter Bank Account Number"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "ExternalBankAccount",
+     "clcommon__Release_Checksum__c": "4653ba92b1da776285d3bcd4b09a3af77d4cfe13f8ca81e86038c6a193c62920"
+}

@@ -5,43 +5,43 @@
      "Name": "saveRecordComp",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "messages": {},
-          "disclosureNames": [],
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "saveRecordComp",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(existingCollateral);!=\"Yes\"",
+               "label": "save",
+               "style": "primary",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "collateralId": "$global.attr(collateralId);",
+               "collateralTypeDetails": "$this;"
+          },
+          "uploadActionArguments": {},
           "successHandler": {
-               "updates": [
-                    {
-                         "value": "los_collateral_type_details",
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
                "assignments": [
                     {
-                         "value": "123124",
-                         "field": "$global.attr(editAsset);"
+                         "field": "$global.attr(editAsset);",
+                         "value": "123124"
                     },
                     {
-                         "value": "Yes",
-                         "field": "$global.attr(enableAssetSubmitButton);"
+                         "field": "$global.attr(enableAssetSubmitButton);",
+                         "value": "Yes"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "los_collateral_type_details"
                     }
                ]
           },
-          "uploadActionArguments": {},
-          "remoteActionArguments": {
-               "collateralTypeDetails": "$this;",
-               "collateralId": "$global.attr(collateralId);",
-               "applicationId": "$global.attr(applicationId);"
-          },
-          "appearance": {
-               "position": "bottom-right",
-               "style": "primary",
-               "label": "save",
-               "render": "$global.attr(existingCollateral);!=\"Yes\""
-          },
-          "property": {},
-          "name": "saveRecordComp"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {}
      },
      "clcommon__Action_Order__c": 5,
      "clcommon__Action_Type__c": "submit",
@@ -53,9 +53,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_add_collateral_type_details_list",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_collateral_type_details+saveRecordComp+COMPONENT",
-     "clcommon__Release_Checksum__c": "e80f8f6049e7688193f36a941ffd2a9390c5d570e02334b24b12a8c7acf88350",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveCollateralTypeDetail",
      "clcommon__Unique_Action_Name__c": "los_collateral_type_details+saveRecordComp",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_type_details+saveRecordComp+COMPONENT",
+     "clcommon__Release_Checksum__c": "e80f8f6049e7688193f36a941ffd2a9390c5d570e02334b24b12a8c7acf88350"
 }

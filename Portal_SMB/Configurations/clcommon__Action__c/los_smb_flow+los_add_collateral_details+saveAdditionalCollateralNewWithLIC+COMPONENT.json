@@ -5,49 +5,47 @@
      "Name": "saveAdditionalCollateralNewWithLIC",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "saveAdditionalCollateralNewWithLIC",
+          "property": {},
+          "appearance": {
+               "render": "($this.attr(genesis__Collateral__r.Id); == \"\" or $this.attr(genesis__Collateral__r.Id); == undefined or $this.attr(genesis__Collateral__r.Id); == \"new_record_id\") and $global.attr(collateralTypeName); == \"Life Insurance\"",
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "$global.attr(actionLabel);"
+          },
+          "remoteActionArguments": {
+               "collateral": {
+                    "clcommon__Collateral_Type__c": "$state(los_select_collateral_type).attr(genesis__Collateral__r.clcommon__Collateral_Type__c);",
+                    "clcommon__Address__c": "$this.attr(genesis__Collateral__r.clcommon__Address__c);",
+                    "clcommon__City__c": "$this.attr(genesis__Collateral__r.clcommon__City__c);",
+                    "clcommon__State__c": "$this.attr(genesis__Collateral__r.clcommon__State__c);",
+                    "clcommon__Postal_Code__c": "$this.attr(genesis__Collateral__r.clcommon__Postal_Code__c);",
+                    "clcommon__Description__c": "$this.attr(genesis__Collateral__r.clcommon__Description__c);",
+                    "clcommon__Insurance_Amount__c": "$this.attr(genesis__Collateral__r.clcommon__Insurance_Amount__c);",
+                    "clcommon__Policy_Number__c": "$this.attr(genesis__Collateral__r.clcommon__Policy_Number__c);",
+                    "clcommon__Life_Insurance_Effective_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Effective_Date__c);",
+                    "clcommon__Life_Insurance_Verification_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Verification_Date__c);"
+               },
+               "genesis__Applications__c": {
+                    "solcommon__Portal_Stage__c": "CollateralDetails",
+                    "Id": "$global.attr(applicationId);"
+               }
+          },
           "successHandler": {
                "actions": [
                     {
-                         "name": "closeOverlayWithCollateral",
-                         "condition": "$global.attr(itemizedCollateral);==false"
+                         "condition": "$global.attr(itemizedCollateral);==false",
+                         "name": "closeOverlayWithCollateral"
                     },
                     {
-                         "name": "navigateToBusinessAssetsPage",
-                         "condition": "$global.attr(itemizedCollateral);==true"
+                         "condition": "$global.attr(itemizedCollateral);==true",
+                         "name": "navigateToBusinessAssetsPage"
                     }
                ]
           },
-          "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "Id": "$global.attr(applicationId);",
-                    "solcommon__Portal_Stage__c": "CollateralDetails"
-               },
-               "collateral": {
-                    "clcommon__Issuer_Name__c": "$this.attr(genesis__Collateral__r.clcommon__Issuer_Name__c);",
-                    "clcommon__Life_Insurance_Verification_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Verification_Date__c);",
-                    "clcommon__Life_Insurance_Effective_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Effective_Date__c);",
-                    "clcommon__Policy_Number__c": "$this.attr(genesis__Collateral__r.clcommon__Policy_Number__c);",
-                    "clcommon__Insurance_Amount__c": "$this.attr(genesis__Collateral__r.clcommon__Insurance_Amount__c);",
-                    "clcommon__Description__c": "$this.attr(genesis__Collateral__r.clcommon__Description__c);",
-                    "clcommon__Postal_Code__c": "$this.attr(genesis__Collateral__r.clcommon__Postal_Code__c);",
-                    "clcommon__State__c": "$this.attr(genesis__Collateral__r.clcommon__State__c);",
-                    "clcommon__City__c": "$this.attr(genesis__Collateral__r.clcommon__City__c);",
-                    "clcommon__Address__c": "$this.attr(genesis__Collateral__r.clcommon__Address__c);",
-                    "clcommon__Collateral_Type__c": "$state(los_select_collateral_type).attr(genesis__Collateral__r.clcommon__Collateral_Type__c);",
-                    "clcommon__Insurance_Company_Name__c": "$this.attr(genesis__Collateral__r.clcommon__Insurance_Company_Name__c);"
-               }
-          },
-          "appearance": {
-               "label": "$global.attr(actionLabel);",
-               "style": "primary",
-               "position": "bottom-left",
-               "render": "($this.attr(genesis__Collateral__r.Id); == \"\" or $this.attr(genesis__Collateral__r.Id); == undefined or $this.attr(genesis__Collateral__r.Id); == \"new_record_id\") and $global.attr(collateralTypeName); == \"Life Insurance\""
-          },
-          "property": {},
-          "name": "saveAdditionalCollateralNewWithLIC"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
      "clcommon__Action_Order__c": 7,
      "clcommon__Action_Type__c": "submit",
@@ -59,9 +57,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_add_collateral_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_add_collateral_details+saveAdditionalCollateralNewWithLIC+COMPONENT",
-     "clcommon__Release_Checksum__c": "14b2e08fe5e20b610d2a9fe47ec906ca936129cfb2ff36433b1055ecb6130423",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveCollateral",
      "clcommon__Unique_Action_Name__c": "los_add_collateral_details+saveAdditionalCollateralNewWithLIC",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_add_collateral_details+saveAdditionalCollateralNewWithLIC+COMPONENT",
+     "clcommon__Release_Checksum__c": "22acb2fd2604f38f4f22e5bd0f151224a049bfa86f15835d3a761e30879f9984"
 }

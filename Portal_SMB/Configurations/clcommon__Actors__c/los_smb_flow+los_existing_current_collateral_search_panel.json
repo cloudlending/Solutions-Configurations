@@ -16,59 +16,59 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "messagePositions": {
-                    "loadingAnimation": "global",
-                    "loadingError": "top",
-                    "saveSubmitError": "top"
-               },
-               "pagination": {
-                    "lastLinkText": "last_page",
-                    "nextLinkText": "chevron_right",
-                    "previousLinkText": "chevron_left",
-                    "firstLinkText": "first_page",
-                    "recordLineTemplate": "$start; - $end; of $total;",
-                    "numberOfPageLinks": 5,
-                    "numberOfRecordsPerPage": 10
-               },
-               "editableFields": {
-                    "clcommon__Account__c": false,
+               "render": "$state(los_collateral_list_all).count();>0",
+               "title": "Select Existing Collateral",
+               "renderFields": {
                     "clcommon__Collateral__r.Id": false,
-                    "clcommon__Collateral__r.clcommon__Postal_Code__c": false,
-                    "clcommon__Collateral__r.clcommon__State__c": false,
-                    "clcommon__Collateral__r.clcommon__City__c": false,
-                    "clcommon__Collateral__r.clcommon__Address__c": false,
-                    "clcommon__Collateral__r.clcommon__Description__c": false,
-                    "clcommon__Collateral__r.clcommon__Collateral_Type__r.Name": false
+                    "clcommon__Account__c": false,
+                    "clcommon__Collateral__c": false
                },
+               "variant": {
+                    "TextField": "default"
+               },
+               "blankMessage": "No records found!",
                "filters": {
                     "keyword": {
+                         "filterLabel": "Search Collateral",
                          "fieldNames": [
                               "clcommon__Collateral__r.clcommon__Collateral_Type__r.Name",
                               "clcommon__Collateral__r.clcommon__Description__c",
                               "clcommon__Collateral__r.clcommon__Address__c",
                               "clcommon__Collateral__r.clcommon__City__c",
                               "clcommon__Collateral__r.clcommon__State__c"
-                         ],
-                         "filterLabel": "Search Collateral"
+                         ]
                     }
                },
-               "blankMessage": "No records found!",
-               "variant": {
-                    "TextField": "default"
+               "editableFields": {
+                    "clcommon__Collateral__r.clcommon__Collateral_Type__r.Name": false,
+                    "clcommon__Collateral__r.clcommon__Description__c": false,
+                    "clcommon__Collateral__r.clcommon__Address__c": false,
+                    "clcommon__Collateral__r.clcommon__City__c": false,
+                    "clcommon__Collateral__r.clcommon__State__c": false,
+                    "clcommon__Collateral__r.clcommon__Postal_Code__c": false,
+                    "clcommon__Collateral__r.Id": false,
+                    "clcommon__Account__c": false
                },
-               "renderFields": {
-                    "clcommon__Collateral__c": false,
-                    "clcommon__Account__c": false,
-                    "clcommon__Collateral__r.Id": false
+               "pagination": {
+                    "numberOfRecordsPerPage": 10,
+                    "numberOfPageLinks": 5,
+                    "recordLineTemplate": "$start; - $end; of $total;",
+                    "firstLinkText": "first_page",
+                    "previousLinkText": "chevron_left",
+                    "nextLinkText": "chevron_right",
+                    "lastLinkText": "last_page"
                },
-               "title": "Select Existing Collateral",
-               "render": "$state(los_collateral_list_all).count();>0"
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               }
           },
           "property": {
-               "structureName": "los_fetch_existing_collateral_skip_current",
                "whereClause": {
                     "appId": "$global.attr(applicationId);"
-               }
+               },
+               "structureName": "los_fetch_existing_collateral_skip_current"
           },
           "type": "list-view",
           "category": "component"

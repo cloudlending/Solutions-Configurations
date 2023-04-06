@@ -13,6 +13,16 @@
                "showLoadingAnimation": true
           },
           "generalHandlers": {
+               "fieldChange": {
+                    "genesis__Business_Information__r.genesis__Resolution_Type__c": {
+                         "assignments": [
+                              {
+                                   "value": null,
+                                   "field": "$this.attr(genesis__Business_Information__r.genesis__Completed_Resolution_Date__c);"
+                              }
+                         ]
+                    }
+               },
                "loaded": {
                     "assignments": [
                          {
@@ -22,6 +32,14 @@
                          {
                               "value": "@mathjs{ $this.attr(clcommon__Account__r.clcommon__Legal_Entity_Type__r.clcommon__Individual__c); == true ? \"Social Security Number\" : \"Federal Tax ID\" };",
                               "field": "$global.attr(federalLabel);"
+                         },
+                         {
+                              "value": "@mathjs{($this.attr(clcommon__Legal_Entity_Type__r.Name);==\"Individual\" or $this.attr(clcommon__Legal_Entity_Type__r.Name);==\"Sole Proprietorship\" or $this.attr(clcommon__Is_Sole_Proprietorship__c);==true)  ? \"true\" : \"false\"};",
+                              "field": "$state(los_business_are_you_sole_proprietor).attr(are_you_sole_proprietor);"
+                         },
+                         {
+                              "value": "@mathjs{($this.attr(clcommon__Legal_Entity_Type__r.Name);==\"Individual\" and $this.attr(clcommon__Is_Sole_Proprietorship__c);==true)  ? \"SSN/ITIN\" : \"EIN\"};",
+                              "field": "$state(los_business_are_you_sole_proprietor).attr(business_id_type);"
                          }
                     ]
                }
@@ -29,48 +47,54 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "editableFields": {
-                    "genesis__Business_Information__r.genesis__Beneficial_Owner_Exempt__c": false
-               },
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
-               },
-               "renderFields": {
-                    "clcommon__Legal_Entity_Type__c": false,
-                    "Id": false,
-                    "genesis__Business_Information__r.genesis__Beneficial_Owner_Exempt__c": false,
-                    "clcommon__Legal_Entity_Type__r.Name": false,
-                    "clcommon__Legal_Entity_Type__r.clcommon__Individual__c": false,
-                    "genesis__Business_Information__r.Id": false,
-                    "clcommon__Legal_Entity_Type__r.Id": false
-               },
-               "editable": true,
-               "fieldColumns": 1,
                "grid": {
                     "field": {
-                         "BillingState": {
-                              "sm": 6
-                         },
                          "$default": {
-                              "xs": 12,
+                              "sm": 6,
+                              "xs": 12
+                         },
+                         "BillingState": {
                               "sm": 6
                          }
                     }
+               },
+               "render": "($this.attr(clcommon__Legal_Entity_Type__r.clcommon__Individual__c);!=true and $global.attr(businessEntityType);!=\"Individual\")",
+               "fieldColumns": 1,
+               "editable": true,
+               "renderFields": {
+                    "genesis__Business_Information__r.genesis__Completed_Resolution_Date__c": "($this.attr(genesis__Business_Information__r.genesis__Resolution_Type__c);==\"Customer providing - not needed\" or $this.attr(genesis__Business_Information__r.genesis__Resolution_Type__c);== \"Resolution on file - not needed\") and $state(los_business_legal_entity_types).attr(clcommon__Legal_Entity_Type__r).attr(Name); !=\"Sole Proprietorship\"",
+                    "genesis__Business_Information__r.genesis__Resolution_Type__c": "$state(los_business_legal_entity_types).attr(clcommon__Legal_Entity_Type__r).attr(Name); !=\"Sole Proprietorship\" and $state(los_business_are_you_sole_proprietor).attr(are_you_sole_proprietor); != \"true\"",
+                    "clcommon__Legal_Entity_Type__r.Id": false,
+                    "genesis__Business_Information__r.Id": false,
+                    "clcommon__Legal_Entity_Type__r.Name": false,
+                    "clcommon__Legal_Entity_Type__r.clcommon__Individual__c": false,
+                    "clcommon__Is_Sole_Proprietorship__c": false,
+                    "genesis__Business_Information__r.genesis__Beneficial_Owner_Exempt__c": false,
+                    "Id": false,
+                    "clcommon__Legal_Entity_Type__c": false
+               },
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               },
+               "editableFields": {
+                    "genesis__Business_Information__r.genesis__Tax_Identification_Number__c": "$global.attr(businessAccountId); == \"\" or $global.attr(businessAccountId); == null or $global.attr(businessAccountId); == undefined",
+                    "Name": "$global.attr(businessAccountId); == \"\" or $global.attr(businessAccountId); == null or $global.attr(businessAccountId); == undefined",
+                    "genesis__Business_Information__r.genesis__Beneficial_Owner_Exempt__c": false
                }
           },
           "property": {
+               "structureName": "los_basic_business_details",
+               "queryWithDefaultNew": true,
                "whereClause": {
                     "accId": "$global.attr(businessAccountId);"
-               },
-               "queryWithDefaultNew": true,
-               "structureName": "los_basic_business_details"
+               }
           },
           "type": "detail-view",
           "category": "component"
      },
      "clcommon__Actor_Name__c": "los_business_details",
      "clcommon__External_ID__c": "los_smb_flow+los_business_details",
-     "clcommon__Release_Checksum__c": "70fa44cc6a0f398005f9a056ce3b067835f851b40b6cf1b90b6a5fdb23d88062"
+     "clcommon__Release_Checksum__c": "96b37fdcd4b46b78bb9e92641064eb5f76fdebfd934205f686a01342bf1f3226"
 }

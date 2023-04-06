@@ -12,10 +12,30 @@
           "messages": {
                "showLoadingAnimation": true
           },
-          "generalHandlers": {},
+          "generalHandlers": {
+               "fieldChange": {
+                    "genesis__Identification_Type__c": {
+                         "assignments": [
+                              {
+                                   "value": "",
+                                   "field": "$this.attr(genesis__Identification_Number__c);"
+                              },
+                              {
+                                   "value": "",
+                                   "field": "$this.attr(genesis__Date_of_Issuance__c);"
+                              },
+                              {
+                                   "value": "",
+                                   "field": "$this.attr(genesis__Expiration_Date__c);"
+                              }
+                         ]
+                    }
+               }
+          },
           "recordActions": [],
           "componentActions": [],
           "appearance": {
+               "render": "$state(smb_back_office_parties_identification_record_check).count();>0",
                "messagePositions": {
                     "saveSubmitError": "top",
                     "loadingError": "top",
@@ -55,5 +75,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_identification_information",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_identification_information",
-     "clcommon__Release_Checksum__c": "365f065e659b625f99922631fefa42e84bba16459e0eea0a812dbe2e2e0fa88f"
+     "clcommon__Release_Checksum__c": "95275c09c1bd34d6990ed0d3387b9547a6efd6361b044515b25d29e6aee7c294"
 }

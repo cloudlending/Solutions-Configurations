@@ -8,9 +8,9 @@
           "name": "ExistingCustomerNext",
           "property": {},
           "appearance": {
-               "render": "$this.attr(ExistingCustomer); == \"No\"",
+               "label": "Next",
                "style": "primary",
-               "label": "Next"
+               "render": "$this.attr(ExistingCustomer); == \"No\""
           },
           "validation": [
                "smb_back_office_existing_customer"
@@ -34,6 +34,10 @@
                     },
                     {
                          "field": "$global.attr(AccName);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(contactId);",
                          "value": ""
                     }
                ],
@@ -61,9 +65,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_existing_customer",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_customer+ExistingCustomerNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "0590e80972f37e7f5fda2793b313ebf5ec1791bd57c098fd4d1b7ad2dcf20d27",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "smb_back_office_existing_customer+ExistingCustomerNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_existing_customer+ExistingCustomerNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "723e0a63337322e397747f308e650bdb3d393818fa0fdd620e4fe52247ee31a7"
 }

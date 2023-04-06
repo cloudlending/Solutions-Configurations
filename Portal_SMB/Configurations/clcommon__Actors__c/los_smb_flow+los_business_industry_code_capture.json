@@ -13,35 +13,35 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "renderFields": {
-                    "solcommon__Industry_Code__c": false,
-                    "Id": false,
-                    "solcommon__Industry_Code__r.Id": false
-               },
+               "editable": true,
+               "fieldColumns": 1,
+               "render": "$state(los_business_industry_code_condition).attr(industryCodeCheckbox); == true",
                "grid": {
                     "field": {
                          "$default": {
-                              "xs": 12,
-                              "sm": 12
+                              "sm": 12,
+                              "xs": 12
                          }
                     }
                },
-               "render": "$state(los_business_industry_code_condition).attr(industryCodeCheckbox); == true",
-               "fieldColumns": 1,
-               "editable": true
+               "renderFields": {
+                    "solcommon__Industry_Code__r.Id": false,
+                    "Id": false,
+                    "solcommon__Industry_Code__c": false
+               }
           },
           "property": {
+               "structureName": "los_business_industry_code_capture",
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "businessId": "$global.attr(businessInfoId);",
+                    "industryCode": "$global.attr(indusrtyCode);"
+               },
                "referenceWhereClause": {
                     "solcommon__Industry_Code__r": {
                          "industryCode": "$this.attr(genesis__NAICS_Code__c);"
                     }
-               },
-               "whereClause": {
-                    "industryCode": "$global.attr(indusrtyCode);",
-                    "businessId": "$global.attr(businessInfoId);"
-               },
-               "queryWithDefaultNew": true,
-               "structureName": "los_business_industry_code_capture"
+               }
           },
           "type": "detail-view",
           "category": "component"

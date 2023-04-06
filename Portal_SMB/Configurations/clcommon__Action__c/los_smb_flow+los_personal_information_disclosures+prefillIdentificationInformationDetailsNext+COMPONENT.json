@@ -1,0 +1,66 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "prefillIdentificationInformationDetailsNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "prefillIdentificationInformationDetailsNext",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Next",
+               "style": "primary",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "genesis__Identification_Information__c": {
+                    "genesis__Identification_Type__c": "$state(los_identification_details_new).attr(genesis__Identification_Type__c);",
+                    "genesis__Identification_Number__c": "$state(los_identification_details_new).attr(genesis__Identification_Number__c);",
+                    "genesis__Date_of_Issuance__c": "$state(los_identification_details_new).attr(genesis__Date_of_Issuance__c);",
+                    "genesis__Expiration_Date__c": "$state(los_identification_details_new).attr(genesis__Expiration_Date__c);"
+               },
+               "accountId": "$global.attr(borrowerAccountId);",
+               "applicationId": "$global.attr(applicationId);",
+               "partyId": "$global.attr(borrowerPartyId);"
+          },
+          "validation": [],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(identificationInfoId);",
+                         "value": "$result.attr(identificationInfoId);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$state(los_personal_income_details).attr(Id);!=\"\" and $state(los_personal_income_details).attr(Id);!=undefined and $state(los_personal_income_details).attr(Id);!=\"new_record_id\"",
+                         "name": "savePersonalAnnualIncomeExisting"
+                    },
+                    {
+                         "condition": "$state(los_personal_income_details).attr(Id);==\"\" or $state(los_personal_income_details).attr(Id);==undefined or $state(los_personal_income_details).attr(Id);==\"new_record_id\"",
+                         "name": "savePersonalAnnualIncome"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 7,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_personal_information_disclosures"
+     },
+     "clcommon__Component_Structure_Name__c": "los_personal_information_disclosures",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIdentificationInformation",
+     "clcommon__Unique_Action_Name__c": "los_personal_information_disclosures+prefillIdentificationInformationDetailsNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_personal_information_disclosures+prefillIdentificationInformationDetailsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "69dcc1b680f97bace4d8acd0803f80fb322d02a26e7f5f16215b35e9e3884186"
+}

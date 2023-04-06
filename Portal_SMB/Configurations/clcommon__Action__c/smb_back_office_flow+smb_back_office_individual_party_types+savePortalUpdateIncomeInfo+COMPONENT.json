@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "savePortalUpdateIncomeInfo",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "savePortalUpdateIncomeInfo",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "render": false,
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "genesis__Income__c": [
+                    {
+                         "genesis__Contact__c": "$global.attr(contactId);",
+                         "name": "Annual Personal Income",
+                         "genesis__Amount__c": "$state(smb_back_office_individual_personal_income_information).attr(genesis__Amount__c);",
+                         "Id": "$state(smb_back_office_individual_personal_income_information).attr(Id);"
+                    }
+               ],
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               }
+          },
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "savePortalStageExisting"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 7,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_party_types"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_individual_party_types",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIncome",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_individual_party_types+savePortalUpdateIncomeInfo",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_party_types+savePortalUpdateIncomeInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "d03c00e6327727f005a3dd9ebad3ddbbf9d94c29854344e015d22eab702e451b"
+}

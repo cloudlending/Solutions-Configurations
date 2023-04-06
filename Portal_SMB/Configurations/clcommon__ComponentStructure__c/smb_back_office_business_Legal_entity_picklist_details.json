@@ -4,11 +4,9 @@
      },
      "Name": "smb_back_office_business_Legal_entity_picklist_details",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "smb_back_office_business_Legal_entity_picklist_details",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "1a56205d3251e9af257ad315a4eaa16c37acd80d6e3b20bc28a14ca3a7e503f2",
      "clcommon__Unique_Name__c": "smb_back_office_business_Legal_entity_picklist_details",
      "clcommon__data__c": {
           "structureName": "smb_back_office_business_Legal_entity_picklist_details",
@@ -29,7 +27,7 @@
                               "relationJson": {
                                    "tableName": "clcommon__Legal_Entity__c",
                                    "whereClause": {
-                                        "freeForm": "clcommon__Individual__c = false"
+                                        "freeForm": "id!=null"
                                    },
                                    "orderBy": "Name ASC",
                                    "sections": [
@@ -65,5 +63,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "smb_back_office_business_Legal_entity_picklist_details",
+     "clcommon__Release_Checksum__c": "420237801d280498030767e3c112f449e5dc54d149ec521754e83ac88ed4e7ba"
 }

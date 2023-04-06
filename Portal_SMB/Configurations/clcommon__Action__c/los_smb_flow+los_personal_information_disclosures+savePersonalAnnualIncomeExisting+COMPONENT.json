@@ -5,10 +5,27 @@
      "Name": "savePersonalAnnualIncomeExisting",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Back",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "savePersonalAnnualIncomeExisting",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Next",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "genesis__Income__c": [
+                    {
+                         "id": "$state(los_personal_income_details).attr(Id);",
+                         "Name": "Annual Personal Income",
+                         "genesis__Amount__c": "$state(los_personal_income_details).attr(genesis__Amount__c);",
+                         "genesis__Contact__c": "$global.attr(borrowerContactId);"
+                    }
+               ],
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               }
+          },
           "successHandler": {
                "actions": [
                     {
@@ -16,29 +33,12 @@
                     }
                ]
           },
-          "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "id": "$global.attr(applicationId);"
-               },
-               "genesis__Income__c": [
-                    {
-                         "genesis__Contact__c": "$global.attr(borrowerContactId);",
-                         "genesis__Amount__c": "$state(los_personal_income_details).attr(genesis__Amount__c);",
-                         "Name": "Annual Personal Income",
-                         "id": "$state(los_personal_income_details).attr(Id);"
-                    }
-               ]
-          },
-          "appearance": {
-               "render": false,
-               "label": "Next",
-               "style": "primary",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "savePersonalAnnualIncomeExisting"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Back"
      },
-     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Order__c": 4,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -48,9 +48,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_personal_information_disclosures",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_personal_information_disclosures+savePersonalAnnualIncomeExisting+COMPONENT",
-     "clcommon__Release_Checksum__c": "35b79f5a6405ffcc43a02402916422e4c3101c1c7df5f54656bf22b91dd29409",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIncome",
      "clcommon__Unique_Action_Name__c": "los_personal_information_disclosures+savePersonalAnnualIncomeExisting",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_personal_information_disclosures+savePersonalAnnualIncomeExisting+COMPONENT",
+     "clcommon__Release_Checksum__c": "e753d4831665d6d320f893653ce696355774730430521598747668973db64cae"
 }

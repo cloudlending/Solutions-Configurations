@@ -5,47 +5,47 @@
      "Name": "savePortalStage",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "savePortalStage",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "render": false,
+               "disableWhenLoading": true,
+               "label": "Next",
+               "position": "bottom-left"
+          },
+          "remoteActionArguments": {
+               "portalStage": "BusinessParties",
+               "applicationId": "$global.attr(applicationId);"
+          },
           "successHandler": {
-               "executions": [
+               "assignments": [
                     {
-                         "name": "$ext.scrollTop"
+                         "field": "$nav(los_application_steps).appearance(current);",
+                         "value": "next"
                     }
                ],
                "updates": [
                     {
+                         "name": "$nav.reloads.add;",
                          "value": [
                               "los_demographic_information",
                               "los_demographic_gender"
-                         ],
-                         "name": "$nav.reloads.add;"
+                         ]
                     }
                ],
-               "assignments": [
+               "executions": [
                     {
-                         "value": "next",
-                         "field": "$nav(los_application_steps).appearance(current);"
+                         "name": "$ext.scrollTop"
                     }
                ]
           },
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "BusinessParties"
-          },
-          "appearance": {
-               "position": "bottom-left",
-               "label": "Next",
-               "disableWhenLoading": true,
-               "render": false,
-               "style": "primary"
-          },
-          "property": {},
-          "name": "savePortalStage"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Order__c": 5,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -55,9 +55,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_demographic_information_gender",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_demographic_gender+savePortalStage+COMPONENT",
-     "clcommon__Release_Checksum__c": "687167716eb07334dd904a8131f52813f45eabbee36daee3d9e5ff89cfd3af24",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
      "clcommon__Unique_Action_Name__c": "los_demographic_gender+savePortalStage",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_demographic_gender+savePortalStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "3a3367323ca3714bdb23f62f9975ba44fb453ebfc03f595e55844299c77b369a"
 }

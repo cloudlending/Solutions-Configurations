@@ -8,11 +8,11 @@
           "name": "NullifyDynamicFieldsOnPartyTypes",
           "property": {},
           "appearance": {
-               "enable": "$this.attr(genesis__Credit_Check_Consent__c); == true and $this.attr(solcommon__Consent_To_Disclosure_And_Document__c); == true",
-               "label": "Next",
-               "style": "primary",
+               "render": true,
                "position": "bottom-right",
-               "render": true
+               "style": "primary",
+               "label": "Next",
+               "enable": "$this.attr(genesis__Credit_Check_Consent__c); == true and $this.attr(solcommon__Consent_To_Disclosure_And_Document__c); == true"
           },
           "validation": [
                "smb_back_office_personal_information_disclosures",
@@ -45,18 +45,18 @@
                ],
                "actions": [
                     {
-                         "condition": "$global.attr(partyId); != \"new_record_id\" and $global.attr(partyId); != \"\" and $global.attr(partyId); != undefined",
+                         "condition": "$global.attr(businessPartyId); != \"new_record_id\" and $global.attr(businessPartyId); != \"\" and $global.attr(businessPartyId); != undefined",
                          "name": "personalInformationDetailsContactUpdateNext"
                     },
                     {
-                         "condition": "$global.attr(partyId); == \"\" or $global.attr(partyId); == undefined or $global.attr(partyId); == \"new_record_id\"",
+                         "condition": "$global.attr(businessPartyId); == \"\" or $global.attr(businessPartyId); == undefined or $global.attr(businessPartyId); == \"new_record_id\"",
                          "name": "personalInformationDetailsNext"
                     }
                ]
           },
           "ariaLabel": "Back"
      },
-     "clcommon__Action_Order__c": 6,
+     "clcommon__Action_Order__c": 7,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -66,9 +66,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_personal_information_consent",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section+NullifyDynamicFieldsOnPartyTypes+COMPONENT",
-     "clcommon__Release_Checksum__c": "d6129cdaec0da9ea8558eff7db991c86539d8834356efa70192c77245308750f",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "smb_back_office_personal_information_consent_section+NullifyDynamicFieldsOnPartyTypes",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section+NullifyDynamicFieldsOnPartyTypes+COMPONENT",
+     "clcommon__Release_Checksum__c": "1706f0d34179108350ee30df6b0c4bc201dbf73b55e80c0d481be987ae1d33ee"
 }

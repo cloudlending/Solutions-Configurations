@@ -5,37 +5,37 @@
      "Name": "remove",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "messages": {},
-          "disclosureNames": [],
+          "name": "remove",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>",
+               "style": "secondary",
+               "render": "$this.attr(Id); == undefined and $global.attr(existingCollateral);!=\"Yes\""
+          },
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
-               "cruds": [
-                    {
-                         "value": {
-                              "id": "$this.attr(id);"
-                         },
-                         "source": "$state(los_collateral_type_details);",
-                         "method": "remove"
-                    }
-               ],
                "assignments": [
                     {
-                         "value": "Yes",
-                         "field": "$global.attr(enableAssetSubmitButton);"
+                         "field": "$global.attr(enableAssetSubmitButton);",
+                         "value": "Yes"
+                    }
+               ],
+               "cruds": [
+                    {
+                         "method": "remove",
+                         "source": "$state(los_collateral_type_details);",
+                         "value": {
+                              "id": "$this.attr(id);"
+                         }
                     }
                ]
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "uploadActionArguments": {},
-          "remoteActionArguments": {},
-          "appearance": {
-               "render": "$this.attr(Id); == undefined and $global.attr(existingCollateral);!=\"Yes\"",
-               "style": "secondary",
-               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>"
-          },
-          "property": {},
-          "name": "remove"
+          "disclosureNames": [],
+          "messages": {}
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -47,9 +47,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_add_collateral_type_details_list",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "los_smb_flow+los_collateral_type_details+remove+RECORD",
-     "clcommon__Release_Checksum__c": "18516c14c715c7a415d3c60fff01cf36bb95f20b1c356191dd3e45f50b3850a2",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_collateral_type_details+remove",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_collateral_type_details+remove+RECORD",
+     "clcommon__Release_Checksum__c": "18516c14c715c7a415d3c60fff01cf36bb95f20b1c356191dd3e45f50b3850a2"
 }

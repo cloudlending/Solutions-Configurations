@@ -1,0 +1,136 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "intdm__Gender_Opt_Out__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(intdm__Gender_Opt_Out__c);!=true ? $state(smb_back_office_demographic_information_individual_gender).attr(clcommon__Personal_Information__r.clcommon__Gender__c); : \"\"};",
+                                   "field": "$state(smb_back_office_demographic_information_individual_gender).attr(clcommon__Personal_Information__r.clcommon__Gender__c);"
+                              }
+                         ]
+                    },
+                    "intdm__Race__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{($this.attr(intdm__Race__c); == \"Asian\" or $this.attr(intdm__Race__c); == \"Hawaiian or Pacific Islander\") ? \"\" : $this.attr(intdm__Race_Sub_Category__c);};",
+                                   "field": "$this.attr(intdm__Race_Sub_Category__c);"
+                              },
+                              {
+                                   "value": "@mathjs{$this.attr(intdm__Race__c); == \"American Indian or Alaska\" ? \"\" : $this.attr(intdm__Tribe__c);};",
+                                   "field": "$this.attr(intdm__Tribe__c);"
+                              }
+                         ]
+                    },
+                    "intdm__Race_Sub_Category__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(intdm__Race_Sub_Category__c); == \"Other Pacific Islander\" ? \"\" : $this.attr(intdm__Other_Pacific_Islander__c);};",
+                                   "field": "$this.attr(intdm__Other_Pacific_Islander__c);"
+                              },
+                              {
+                                   "value": "@mathjs{$this.attr(intdm__Race_Sub_Category__c); == \"Other Asian\" ? \"\" : $this.attr(intdm__Other_Asian__c);};",
+                                   "field": "$this.attr(intdm__Other_Asian__c);"
+                              }
+                         ]
+                    },
+                    "intdm__Race_Opt_Out__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(intdm__Race_Opt_Out__c);==true ? \"\" : $this.attr(intdm__Race__c);};",
+                                   "field": "$this.attr(intdm__Race__c);"
+                              }
+                         ]
+                    },
+                    "intdm__Ethnic_Sub_Category__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(intdm__Ethnic_Sub_Category__c); != \"Other Hispanic or Latino\" ? \"\" : $this.attr(intdm__Other_Hispanic_or_Latino__c);};",
+                                   "field": "$this.attr(intdm__Other_Hispanic_or_Latino__c);"
+                              }
+                         ]
+                    },
+                    "intdm__Hispanic_or_Latino_Ethnicity__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{($this.attr(intdm__Hispanic_or_Latino_Ethnicity__c); == \"Latino\" or $this.attr(intdm__Ethnicity_Opt_Out__c); == undefined) ? \"\": \"$this.attr(intdm__Ethnic_Sub_Category__c);\"};",
+                                   "field": "$this.attr(intdm__Ethnic_Sub_Category__c);"
+                              }
+                         ]
+                    },
+                    "intdm__Ethnicity_Opt_Out__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{($this.attr(intdm__Ethnicity_Opt_Out__c); == true) ? \"\": $this.attr(intdm__Hispanic_or_Latino_Ethnicity__c);};",
+                                   "field": "$this.attr(intdm__Hispanic_or_Latino_Ethnicity__c);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "showSectionTitle": true,
+               "sectionStyle": "layout",
+               "renderFields": {
+                    "intdm__Race__c": "$this.attr(intdm__Race_Opt_Out__c); == false",
+                    "intdm__Ethnic_Sub_Category__c": "$this.attr(intdm__Hispanic_or_Latino_Ethnicity__c); == \"Hispanic\" and $this.attr(intdm__Ethnicity_Opt_Out__c); == false",
+                    "intdm__Contact__r.Id": false,
+                    "intdm__Other_Asian__c": "$this.attr(intdm__Race_Sub_Category__c); == \"Other Asian\" and $this.attr(intdm__Race__c); == \"Asian\" and $this.attr(intdm__Race_Opt_Out__c); == false",
+                    "intdm__Other_Hispanic_or_Latino__c": "$this.attr(intdm__Hispanic_or_Latino_Ethnicity__c); == \"Hispanic\" and $this.attr(intdm__Ethnicity_Opt_Out__c); == false and $this.attr(intdm__Ethnic_Sub_Category__c); == \"Other Hispanic or Latino\"",
+                    "intdm__Tribe__c": "$this.attr(intdm__Race__c); == \"American Indian or Alaska\" and $this.attr(intdm__Race_Opt_Out__c); == false",
+                    "intdm__Race_Sub_Category__c": "($this.attr(intdm__Race__c); == \"Asian\" and $this.attr(intdm__Race_Opt_Out__c); == false) or ($this.attr(intdm__Race__c); == \"Hawaiian or Pacific Islander\" and $this.attr(intdm__Race_Opt_Out__c); == false) ",
+                    "intdm__Contact__c": false,
+                    "intdm__Hispanic_or_Latino_Ethnicity__c": "$this.attr(intdm__Ethnicity_Opt_Out__c); == false",
+                    "intdm__Other_Pacific_Islander__c": "$this.attr(intdm__Race_Sub_Category__c); == \"Other Pacific Islander\" and $this.attr(intdm__Race__c); == \"Hawaiian or Pacific Islander\" and $this.attr(intdm__Race_Opt_Out__c); == false"
+               },
+               "title": "Personal Demographic Details",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "noLabelFields": [
+                    "intdm__Hispanic_or_Latino_Ethnicity__c",
+                    "intdm__Race_Sub_Category__c",
+                    "intdm__Ethnic_Sub_Category__c",
+                    "intdm__Race__c"
+               ],
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "contactId": "$global.attr(contactId);"
+               },
+               "structureName": "smb_back_office_demographic_information"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_demographic_information_individual_summary",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_individual_summary",
+     "clcommon__Release_Checksum__c": "0a77fa6c633f342b7ffbdd2383c2354ffada7220184eb466bda35a9cfe7b74af"
+}

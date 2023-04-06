@@ -1,0 +1,60 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "updateGenderInformation",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "updateGenderInformation",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "clcommon__Personal_Information__c": {
+                    "Id": "$state(smb_back_office_demographic_information_individual_gender).attr(clcommon__Personal_Information__r.Id);",
+                    "clcommon__Gender__c": "$state(smb_back_office_demographic_information_individual_gender).attr(clcommon__Personal_Information__r.clcommon__Gender__c);"
+               },
+               "contact": {
+                    "Id": "$global.attr(contactId);",
+                    "clcommon__Personal_Information__c": "$state(smb_back_office_demographic_information_individual_gender).attr(clcommon__Personal_Information__r.Id);"
+               },
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "validation": [
+               "smb_back_office_demographic_information_individual_questionaire"
+          ],
+          "successHandler": {
+               "assignments": [],
+               "updates": [],
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_individual_questionaire"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_demographic_information_questionnaire",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSavePersonalInfo",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_demographic_information_individual_questionaire+updateGenderInformation",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_individual_questionaire+updateGenderInformation+COMPONENT",
+     "clcommon__Release_Checksum__c": "ea6e4070865c68394a5c39694387420ac72ed94513e4702a6eb17c717b6458f3"
+}

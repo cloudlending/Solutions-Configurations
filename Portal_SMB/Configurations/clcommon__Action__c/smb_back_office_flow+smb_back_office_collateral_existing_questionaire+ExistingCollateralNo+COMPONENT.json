@@ -8,10 +8,10 @@
           "name": "ExistingCollateralNo",
           "property": {},
           "appearance": {
-               "render": "$this.attr(existingCollateral); != \"Yes\"",
-               "label": "Next",
+               "disableWhenLoading": true,
                "style": "primary",
-               "disableWhenLoading": true
+               "label": "Next",
+               "render": "$this.attr(existingCollateral); != \"Yes\""
           },
           "validation": [
                "smb_back_office_collateral_existing_questionaire"
@@ -57,9 +57,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_collateral_existing_questionaire",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_collateral_existing_questionaire+ExistingCollateralNo+COMPONENT",
-     "clcommon__Release_Checksum__c": "072358c5b47db5c2aa331de0919bd5c1134831cf0aefabb6c9553a42d577d6ef",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "smb_back_office_collateral_existing_questionaire+ExistingCollateralNo",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_collateral_existing_questionaire+ExistingCollateralNo+COMPONENT",
+     "clcommon__Release_Checksum__c": "072358c5b47db5c2aa331de0919bd5c1134831cf0aefabb6c9553a42d577d6ef"
 }

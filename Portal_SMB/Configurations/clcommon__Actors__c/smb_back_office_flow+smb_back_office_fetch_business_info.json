@@ -9,6 +9,9 @@
           "clcommon__External_ID__c": "smb_back_office_flow"
      },
      "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
           "generalHandlers": {
                "loaded": {
                     "assignments": [
@@ -29,7 +32,15 @@
           },
           "recordActions": [],
           "componentActions": [],
-          "appearance": {},
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "fieldColumns": 1,
+               "title": "$global.attr(indusrtyCode);"
+          },
           "property": {
                "queryWithDefaultNew": true,
                "whereClause": {
@@ -42,5 +53,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_fetch_business_info",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_fetch_business_info",
-     "clcommon__Release_Checksum__c": "cc84aa6f1a9ca60b83cec617529dab327db0c0785ed1df69f9a43a41dea03e6e"
+     "clcommon__Release_Checksum__c": "983f76cf337736eccb031acdb3581c04dfef6eacb3533aad2e76651a710f2223"
 }

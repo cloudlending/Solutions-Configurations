@@ -1,0 +1,64 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "identificationInformationDetailsNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "identificationInformationDetailsNext",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "position": "bottom-left",
+               "style": "primary",
+               "render": true
+          },
+          "remoteActionArguments": {
+               "genesis__Identification_Information__c": {
+                    "genesis__Identification_Type__c": "$this.attr(genesis__Identification_Type__c);",
+                    "genesis__Identification_Number__c": "$this.attr(genesis__Identification_Number__c);",
+                    "genesis__Date_of_Issuance__c": "$this.attr(genesis__Date_of_Issuance__c);",
+                    "genesis__Expiration_Date__c": "$this.attr(genesis__Expiration_Date__c);"
+               },
+               "accountId": "$global.attr(borrowerAccountId);",
+               "applicationId": "$global.attr(applicationId);",
+               "partyId": "$global.attr(borrowerPartyId);"
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(identificationInfoId);",
+                         "value": "$result.attr(identificationInfoId);"
+                    },
+                    {
+                         "field": "$global.attr(portalStage);",
+                         "value": "@mathjs{$global.attr(isHMDALoan);==true ? \"BeneficialDemographicInfo\" : ($global.attr(isCollectDocumentRequired);==true ? \"Documents\" : \"ReviewAndSubmit\")};"
+                    }
+               ],
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail_new"
+     },
+     "clcommon__Component_Structure_Name__c": "los_identification_info_new",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIdentificationInformation",
+     "clcommon__Unique_Action_Name__c": "los_beneficial_identification_detail_new+identificationInformationDetailsNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail_new+identificationInformationDetailsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "6db345ec7700d12c030dd9584281625da5ac4d4f9deb7986e11462af6c04ac4d"
+}

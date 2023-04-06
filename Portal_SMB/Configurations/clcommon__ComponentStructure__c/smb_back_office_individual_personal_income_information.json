@@ -1,0 +1,83 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "smb_back_office_individual_personal_income_information",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "smb_back_office_individual_personal_income_information",
+     "clcommon__data__c": {
+          "structureName": "smb_back_office_individual_personal_income_information",
+          "tableName": "genesis__income__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__r.Id = ':appId' and genesis__Contact__r.Id = ':contactId'"
+          },
+          "orderBy": "createddate ASC LIMIT 1",
+          "sections": [
+               {
+                    "id": "8a8876f1-ff91-48ca-b641-46755480629c",
+                    "fields": [
+                         {
+                              "id": "70663398-a36f-43ba-a911-6b77895156eb",
+                              "fieldName": "genesis__Amount__c",
+                              "fieldUi": {
+                                   "fieldType": "number",
+                                   "label": "Annual Personal Income",
+                                   "placeholderText": "Enter Details",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$this.attr(genesis__Amount__c); > 0",
+                                             "message": "<span style=\"color:red\">Annual Personal Income should be greater than zero </span>"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Annual Personal Income is required."
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numeral": true,
+                                             "numeralThousandsGroupStyle": "thousand",
+                                             "initValue": "100000"
+                                        },
+                                        "prefix": "$"
+                                   },
+                                   "ariaLabel": "Amount"
+                              }
+                         },
+                         {
+                              "id": "378f89f6-0ce2-4b87-a01c-04113de200e0",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "4db55a0d-a513-4410-8b6f-ec4624ca2db2",
+                              "fieldName": "genesis__Application__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "e4cb76a9-7ca2-49aa-9717-601b34e46475",
+                              "fieldName": "genesis__Contact__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Contact ID",
+                                   "ariaLabel": "Contact ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "smb_back_office_individual_personal_income_information",
+     "clcommon__Release_Checksum__c": "37a35a84b8e9c4fcd59eba040a95e7afd03563724d84e0a3e5d96ad5e11998e5"
+}

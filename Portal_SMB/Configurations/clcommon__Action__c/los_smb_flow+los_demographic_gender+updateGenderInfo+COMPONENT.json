@@ -5,10 +5,26 @@
      "Name": "updateGenderInfo",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "updateGenderInfo",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "render": false,
+               "disableWhenLoading": true,
+               "label": "Next",
+               "position": "bottom-left"
+          },
+          "remoteActionArguments": {
+               "contact": {
+                    "clcommon__Personal_Information__c": "$this.attr(clcommon__Personal_Information__r.Id);",
+                    "Id": "$global.attr(borrowerContactId);"
+               },
+               "applicationId": "$global.attr(applicationId);",
+               "clcommon__Personal_Information__c": {
+                    "Id": "$this.attr(clcommon__Personal_Information__r.Id);",
+                    "clcommon__Gender__c": "$this.attr(clcommon__Personal_Information__r.clcommon__Gender__c);"
+               }
+          },
           "successHandler": {
                "actions": [
                     {
@@ -16,28 +32,12 @@
                     }
                ]
           },
-          "remoteActionArguments": {
-               "clcommon__Personal_Information__c": {
-                    "clcommon__Gender__c": "$this.attr(clcommon__Personal_Information__r.clcommon__Gender__c);",
-                    "Id": "$this.attr(clcommon__Personal_Information__r.Id);"
-               },
-               "applicationId": "$global.attr(applicationId);",
-               "contact": {
-                    "Id": "$global.attr(borrowerContactId);",
-                    "clcommon__Personal_Information__c": "$this.attr(clcommon__Personal_Information__r.Id);"
-               }
-          },
-          "appearance": {
-               "position": "bottom-left",
-               "label": "Next",
-               "disableWhenLoading": true,
-               "render": false,
-               "style": "primary"
-          },
-          "property": {},
-          "name": "updateGenderInfo"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -47,9 +47,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_demographic_information_gender",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_demographic_gender+updateGenderInfo+COMPONENT",
-     "clcommon__Release_Checksum__c": "f7402131709fa4b576dd436ee60505fce1f49a956efad8e26df283f34e0588e4",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSavePersonalInfo",
      "clcommon__Unique_Action_Name__c": "los_demographic_gender+updateGenderInfo",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_demographic_gender+updateGenderInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "9dddb6cb21a20a2926d5049f59e7ed02ae51e9d7850485ea15ea4d80b0720d53"
 }

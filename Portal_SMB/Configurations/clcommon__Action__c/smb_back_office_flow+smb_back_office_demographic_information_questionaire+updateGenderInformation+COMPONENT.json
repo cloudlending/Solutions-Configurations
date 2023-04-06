@@ -8,22 +8,22 @@
           "name": "updateGenderInformation",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
-               "disableWhenLoading": true,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "contact": {
-                    "clcommon__Personal_Information__c": "$state(smb_back_office_demographic_information_gender).attr(clcommon__Personal_Information__r.Id);",
-                    "Id": "$global.attr(contactId);"
-               },
                "clcommon__Personal_Information__c": {
-                    "clcommon__Gender__c": "$state(smb_back_office_demographic_information_gender).attr(clcommon__Personal_Information__r.clcommon__Gender__c);",
-                    "Id": "$state(smb_back_office_demographic_information_gender).attr(clcommon__Personal_Information__r.Id);"
-               }
+                    "Id": "$state(smb_back_office_demographic_information_gender).attr(clcommon__Personal_Information__r.Id);",
+                    "clcommon__Gender__c": "$state(smb_back_office_demographic_information_gender).attr(clcommon__Personal_Information__r.clcommon__Gender__c);"
+               },
+               "contact": {
+                    "Id": "$global.attr(borrowerContactIdExisting);",
+                    "clcommon__Personal_Information__c": "$state(smb_back_office_demographic_information_gender).attr(clcommon__Personal_Information__r.Id);"
+               },
+               "applicationId": "$global.attr(applicationId);"
           },
           "validation": [
                "smb_back_office_demographic_information_questionaire"
@@ -49,11 +49,11 @@
           },
           "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_questionaire"
      },
-     "clcommon__Component_Structure_Name__c": "smb_back_office_demographic_information_questionaire",
+     "clcommon__Component_Structure_Name__c": "smb_back_office_demographic_information_questionnaire",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_questionaire+updateGenderInformation+COMPONENT",
-     "clcommon__Release_Checksum__c": "c4918cf201143b241756fe050ee7d4a9b51df2bc6afa65488bb962e6e4713f69",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSavePersonalInfo",
      "clcommon__Unique_Action_Name__c": "smb_back_office_demographic_information_questionaire+updateGenderInformation",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_questionaire+updateGenderInformation+COMPONENT",
+     "clcommon__Release_Checksum__c": "8afbf005771d45af9b12b881ed87141bc81947cdd7267d3e4d38a5fa3b3f0cc5"
 }

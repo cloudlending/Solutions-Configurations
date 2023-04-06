@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "assignStepLabel",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "assignStepLabel",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Continue"
+          },
+          "automatic": true,
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(stepsLabel);",
+                         "value": "Document"
+                    },
+                    {
+                         "field": "$global.attr(stepperCount);",
+                         "value": "6"
+                    },
+                    {
+                         "field": "$global.attr(mainStepLabel);",
+                         "value": "Document"
+                    },
+                    {
+                         "field": "$nav(los_mobile_stepper_panel).appearance(current);",
+                         "value": "Documents"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_document_upload_list2"
+     },
+     "clcommon__Component_Structure_Name__c": "los_fetch_required_documentsforNullAcc",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_document_upload_list2+assignStepLabel",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_document_upload_list2+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "172078160e628eea8c2bc42cb0c5cf5ef1cb7e5aab0f969cb9d299695cabaf81"
+}

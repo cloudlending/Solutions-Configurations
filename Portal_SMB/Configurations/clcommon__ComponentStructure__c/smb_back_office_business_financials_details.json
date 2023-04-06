@@ -4,11 +4,9 @@
      },
      "Name": "smb_back_office_business_financials_details",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "smb_back_office_business_financials_details",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "83db42c2913f87a67b785bf07869f6cb01760d0c5a6d6af68030d7b119f73ff6",
      "clcommon__Unique_Name__c": "smb_back_office_business_financials_details",
      "clcommon__data__c": {
           "structureName": "smb_back_office_business_financials_details",
@@ -52,7 +50,8 @@
                                         "options": {
                                              "numeral": true,
                                              "numeralThousandsGroupStyle": "thousand",
-                                             "numeralDecimalScale": 0
+                                             "numeralDecimalScale": 0,
+                                             "initValue": "200000"
                                         },
                                         "prefix": "$"
                                    },
@@ -80,7 +79,8 @@
                                         "options": {
                                              "numeral": true,
                                              "numeralThousandsGroupStyle": "thousand",
-                                             "numeralDecimalScale": 0
+                                             "numeralDecimalScale": 0,
+                                             "initValue": "300000"
                                         },
                                         "prefix": "$"
                                    },
@@ -108,7 +108,8 @@
                                         "options": {
                                              "numeral": true,
                                              "numeralThousandsGroupStyle": "thousand",
-                                             "numeralDecimalScale": 0
+                                             "numeralDecimalScale": 0,
+                                             "initValue": "50000"
                                         },
                                         "prefix": "$"
                                    },
@@ -149,5 +150,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "smb_back_office_business_financials_details",
+     "clcommon__Release_Checksum__c": "cad4665ded2fcc3c34e36bc4876e5564c57605d6a6fbef234e3c407ceb6dceb4"
 }

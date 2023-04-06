@@ -5,38 +5,38 @@
      "Name": "Home",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "home",
+          "name": "Home",
+          "property": {},
+          "appearance": {
+               "label": "Home",
+               "render": "$global.attr(userInfo).attr(userType); != \"Guest\" and $global.attr(showHome); == \"YES\"",
+               "style": "link",
+               "position": "top-right"
+          },
+          "context": "hamburgermenu",
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
-               "next": "ApplicationDashboard",
-               "updates": [
-                    {
-                         "value": "los_applicatiion_list",
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
                "assignments": [
                     {
-                         "value": "NO",
-                         "field": "$global.attr(showHome);"
+                         "field": "$global.attr(showHome);",
+                         "value": "NO"
                     },
                     {
-                         "value": 0,
-                         "field": "$nav(los_review_steps).appearance(current);"
+                         "field": "$nav(los_review_steps).appearance(current);",
+                         "value": 0
                     }
-               ]
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "los_applicatiion_list"
+                    }
+               ],
+               "next": "ApplicationDashboard"
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "context": "hamburgermenu",
-          "appearance": {
-               "position": "top-right",
-               "style": "link",
-               "render": "$global.attr(userInfo).attr(userType); != \"Guest\" and $global.attr(showHome); == \"YES\"",
-               "label": "Home"
-          },
-          "property": {},
-          "name": "Home"
+          "ariaLabel": "home"
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "normal",
@@ -48,9 +48,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_header+Home+COMPONENT",
-     "clcommon__Release_Checksum__c": "c0bca9b685f9cc745df399d7f9741779739281494734f9b16895759228fb1a8f",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_header+Home",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_header+Home+COMPONENT",
+     "clcommon__Release_Checksum__c": "c0bca9b685f9cc745df399d7f9741779739281494734f9b16895759228fb1a8f"
 }

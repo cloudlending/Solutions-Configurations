@@ -4,17 +4,15 @@
      },
      "Name": "los_document_record_count",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "los_document_record_count",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "3e485648a361680a90b6468c0b080d13ce2659f0d50807b79fba06bcade57467",
      "clcommon__Unique_Name__c": "los_document_record_count",
      "clcommon__data__c": {
           "structureName": "los_document_record_count",
           "tableName": "clcommon__document_category__c",
           "whereClause": {
-               "freeForm": "genesis__Application__c = ':appId' and  clcommon__Show_In_Portal__c = 'UPLOAD_VIA_PORTAL' and clcommon__Active__c = true and (clcommon__Account__c = null or clcommon__Account__c =':accId' or clcommon__Account__c=':businessAccountId')"
+               "freeForm": "genesis__Application__c = ':appId' and  clcommon__Show_In_Portal__c = 'UPLOAD_VIA_PORTAL' and clcommon__Active__c = true and (clcommon__Account__c = null or clcommon__Account__c =':accId' or clcommon__Account__c=':businessAccountId') and clcommon__Document_Definition__r.clcommon__Parent_Document_Definition__c!=null"
           },
           "sections": [
                {
@@ -267,5 +265,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "los_document_record_count",
+     "clcommon__Release_Checksum__c": "7a11d7d3f499eb9aaf4ca4a2b84e8d596e0b7be585afa23ddd260eff4a3c0374"
 }

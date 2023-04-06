@@ -4,17 +4,15 @@
      },
      "Name": "los_party_doc_upload_list_after_submit",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "los_party_doc_upload_list_after_submit",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "2d44d094b5fa21a8684de782daad774439252d712fe40095b5a0d516e61c72d5",
      "clcommon__Unique_Name__c": "los_party_doc_upload_list_after_submit",
      "clcommon__data__c": {
           "structureName": "los_party_doc_upload_list_after_submit",
           "tableName": "clcommon__document_category__c",
           "whereClause": {
-               "freeForm": "genesis__Application__c = ':appId' and  clcommon__Show_In_Portal__c = 'UPLOAD_VIA_PORTAL' and clcommon__Active__c = true and (clcommon__Account__c =':accId' or clcommon__Account__c=':businessAccountId') and clcommon__Status__c != 'APPROVED'"
+               "freeForm": "genesis__Application__c = ':appId' and  clcommon__Show_In_Portal__c = 'UPLOAD_VIA_PORTAL' and clcommon__Active__c = true and (clcommon__Account__c =':accId' or clcommon__Account__c=':businessAccountId') and clcommon__Status__c != 'APPROVED' and clcommon__Document_Definition__r.clcommon__Parent_Document_Definition__c!=null"
           },
           "sections": [
                {
@@ -283,5 +281,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "los_party_doc_upload_list_after_submit",
+     "clcommon__Release_Checksum__c": "dba0b0943bd3799bd10ad1af14f25c7beb612d5ae12d7c250303714d096fc16f"
 }

@@ -5,13 +5,24 @@
      "Name": "updateExistngContactDetails",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {
-               "submitFailureText": "$serverMessage;"
+          "name": "updateExistngContactDetails",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Save",
+               "style": "primary",
+               "render": false
           },
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "remoteActionArguments": {
+               "contact": {
+                    "Id": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Id);",
+                    "Phone": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Phone);",
+                    "Email": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Email);",
+                    "LastName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.LastName);",
+                    "FirstName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.FirstName);"
+               },
+               "applicationId": "$global.attr(applicationId);"
+          },
           "successHandler": {
                "actions": [
                     {
@@ -19,26 +30,15 @@
                     }
                ]
           },
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "contact": {
-                    "FirstName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.FirstName);",
-                    "LastName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.LastName);",
-                    "Email": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Email);",
-                    "Phone": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Phone);",
-                    "Id": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Id);"
-               }
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
           },
-          "appearance": {
-               "render": false,
-               "style": "primary",
-               "label": "Save",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "updateExistngContactDetails"
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -48,9 +48,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_beneifical_party_types",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_party_ownership_details+updateExistngContactDetails+COMPONENT",
-     "clcommon__Release_Checksum__c": "626c4b63a92143c6e24d52a153fc34371bdcf83bac670a7e8527fcc6c9f4deab",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSavePersonalInfo",
      "clcommon__Unique_Action_Name__c": "los_party_ownership_details+updateExistngContactDetails",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_party_ownership_details+updateExistngContactDetails+COMPONENT",
+     "clcommon__Release_Checksum__c": "ee7aa9f3fa340e171a8ca03008b6c1b5e0c718ed0698d5283fb26d0d08e025ef"
 }

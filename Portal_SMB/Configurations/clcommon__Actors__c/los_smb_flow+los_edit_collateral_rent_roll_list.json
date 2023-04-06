@@ -16,56 +16,56 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
+               "title": "Rent Roll Details",
+               "renderFields": {
+                    "genesis__Collateral__r.Id": false,
+                    "genesis__Number_of_bathrooms__c": false,
+                    "genesis__Increases__c": false,
+                    "genesis__Square_Footage__c": false,
+                    "genesis__Application__r.Id": false,
+                    "genesis__Number_of_bedrooms__c": false,
+                    "genesis__Expenses_Paid__c": false,
+                    "genesis__Comments__c": false,
+                    "Id": false
                },
+               "editableFields": {
+                    "genesis__Lease_Start_Date__c": false,
+                    "Id": false,
+                    "genesis__Current_Monthly_Rent__c": false,
+                    "genesis__Suite_Unit_Number__c": false,
+                    "genesis__Collateral__r.Id": false,
+                    "genesis__Number_of_bathrooms__c": false,
+                    "genesis__Increases__c": false,
+                    "genesis__Lease_End_Date__c": false,
+                    "genesis__Square_Footage__c": false,
+                    "genesis__Business_Name__c": false,
+                    "genesis__Application__r.Id": false,
+                    "genesis__Unit_Type__c": false,
+                    "genesis__Number_of_bedrooms__c": false,
+                    "genesis__Expenses_Paid__c": false,
+                    "genesis__Comments__c": false
+               },
+               "blankMessage": "No Rent Roll added!",
                "grid": {
                     "field": {
                          "$default": {
-                              "xs": 12,
-                              "sm": 6
+                              "sm": 6,
+                              "xs": 12
                          }
                     }
                },
-               "blankMessage": "No Rent Roll added!",
-               "editableFields": {
-                    "genesis__Comments__c": false,
-                    "genesis__Expenses_Paid__c": false,
-                    "genesis__Number_of_bedrooms__c": false,
-                    "genesis__Unit_Type__c": false,
-                    "genesis__Application__r.Id": false,
-                    "genesis__Business_Name__c": false,
-                    "genesis__Square_Footage__c": false,
-                    "genesis__Lease_End_Date__c": false,
-                    "genesis__Increases__c": false,
-                    "genesis__Number_of_bathrooms__c": false,
-                    "genesis__Collateral__r.Id": false,
-                    "genesis__Suite_Unit_Number__c": false,
-                    "genesis__Current_Monthly_Rent__c": false,
-                    "Id": false,
-                    "genesis__Lease_Start_Date__c": false
-               },
-               "renderFields": {
-                    "Id": false,
-                    "genesis__Comments__c": false,
-                    "genesis__Expenses_Paid__c": false,
-                    "genesis__Number_of_bedrooms__c": false,
-                    "genesis__Application__r.Id": false,
-                    "genesis__Square_Footage__c": false,
-                    "genesis__Increases__c": false,
-                    "genesis__Number_of_bathrooms__c": false,
-                    "genesis__Collateral__r.Id": false
-               },
-               "title": "Rent Roll Details"
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               }
           },
           "property": {
+               "structureName": "los_collateral_rent_roll_list",
                "whereClause": {
-                    "collateralId": "$global.attr(collateralId);",
-                    "appId": "$global.attr(applicationId);"
-               },
-               "structureName": "los_collateral_rent_roll_list"
+                    "appId": "$global.attr(applicationId);",
+                    "collateralId": "$global.attr(collateralId);"
+               }
           },
           "type": "list-view",
           "category": "component"

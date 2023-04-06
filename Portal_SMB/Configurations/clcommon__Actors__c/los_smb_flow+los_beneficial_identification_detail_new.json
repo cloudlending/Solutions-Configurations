@@ -1,0 +1,58 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "render": "$state(los_identification_records_check).count();==0",
+               "title": "Tell us more information about you",
+               "editable": true,
+               "fieldColumns": 1,
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "sm": 6,
+                              "xs": 12
+                         }
+                    }
+               },
+               "renderFields": {
+                    "genesis__State_of_Issuance__c": false,
+                    "Id": false
+               },
+               "editableFields": {
+                    "genesis__State_of_Issuance__c": false,
+                    "Id": false
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               }
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "accId": "$global.attr(borrowerAccountId);"
+               },
+               "structureName": "los_identification_info_new"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_beneficial_identification_detail_new",
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail_new",
+     "clcommon__Release_Checksum__c": "6adfd99e2ea25213d4e9090281976ef9874aef5907c8d89236177c8d0baba1c2"
+}

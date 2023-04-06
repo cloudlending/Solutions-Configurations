@@ -1,0 +1,45 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "renderFields": {
+                    "clcommon__Type__c": false,
+                    "Id": false
+               },
+               "editable": true,
+               "fieldColumns": 1
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "partyId": "$global.attr(partyId);",
+                    "appId": "$global.attr(applicationId);"
+               },
+               "structureName": "smb_back_office_individual_consent_check"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_individual_consent_check",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_consent_check",
+     "clcommon__Release_Checksum__c": "56d62c44557eb1fd382426946e3c83ea4e14b495cce2629f7c5942e7a1fe2bf6"
+}

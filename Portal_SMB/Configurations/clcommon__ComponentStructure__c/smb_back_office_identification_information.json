@@ -4,11 +4,9 @@
      },
      "Name": "smb_back_office_identification_information",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "smb_back_office_identification_information",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "e4f7842e8f2a95b769184c92a75eca319697ea9366e5b4848a8b0a8975ec19ee",
      "clcommon__Unique_Name__c": "smb_back_office_identification_information",
      "clcommon__data__c": {
           "structureName": "smb_back_office_identification_information",
@@ -16,7 +14,7 @@
           "whereClause": {
                "freeForm": "genesis__Application2__c=':appId' and genesis__Account__c =':accountId'"
           },
-          "orderBy": "createddate LIMIT 1",
+          "orderBy": "createddate DESC LIMIT 1",
           "sections": [
                {
                     "id": "040fa7aa-68d0-435a-8f42-e6facdab74b0",
@@ -36,7 +34,6 @@
                               "fieldUi": {
                                    "fieldType": "picklist",
                                    "label": "Identification Type",
-                                   "required": true,
                                    "prompt": "Select One",
                                    "selectOptions": [
                                         {
@@ -87,9 +84,11 @@
                               "fieldUi": {
                                    "fieldType": "string",
                                    "label": "Identification Number",
-                                   "required": true,
+                                   "required": "$this.attr(genesis__Identification_Type__c); ==\"Passport\" or $this.attr(genesis__Identification_Type__c); ==\"Military ID\" or $this.attr(genesis__Identification_Type__c); ==\"Identification Card\" or $this.attr(genesis__Identification_Type__c); ==\"Drivers License\" or $this.attr(genesis__Identification_Type__c); ==\"Alien ID Card\"",
+                                   "regex": "^[a-zA-Z0-9\\s]*$",
                                    "messages": {
-                                        "requiredErrorText": "Identification Number is Required."
+                                        "requiredErrorText": "Identification Number is Required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "Identification Number"
                               }
@@ -100,7 +99,7 @@
                               "fieldUi": {
                                    "fieldType": "string",
                                    "label": "State of Issuance",
-                                   "required": true,
+                                   "required": "$this.attr(genesis__Identification_Type__c); ==\"Passport\" or $this.attr(genesis__Identification_Type__c); ==\"Military ID\" or $this.attr(genesis__Identification_Type__c); ==\"Identification Card\" or $this.attr(genesis__Identification_Type__c); ==\"Drivers License\" or $this.attr(genesis__Identification_Type__c); ==\"Alien ID Card\"",
                                    "messages": {
                                         "requiredErrorText": "State of Issuance is Required."
                                    },
@@ -113,7 +112,7 @@
                               "fieldUi": {
                                    "fieldType": "datepicker",
                                    "label": "Date of Issuance",
-                                   "required": true,
+                                   "required": "$this.attr(genesis__Identification_Type__c); ==\"Passport\" or $this.attr(genesis__Identification_Type__c); ==\"Military ID\" or $this.attr(genesis__Identification_Type__c); ==\"Identification Card\" or $this.attr(genesis__Identification_Type__c); ==\"Drivers License\" or $this.attr(genesis__Identification_Type__c); ==\"Alien ID Card\"",
                                    "validation": [
                                         {
                                              "rule": "$date",
@@ -143,7 +142,7 @@
                               "fieldUi": {
                                    "fieldType": "datepicker",
                                    "label": "Expiration Date",
-                                   "required": true,
+                                   "required": "$this.attr(genesis__Identification_Type__c); ==\"Passport\" or $this.attr(genesis__Identification_Type__c); ==\"Military ID\" or $this.attr(genesis__Identification_Type__c); ==\"Identification Card\" or $this.attr(genesis__Identification_Type__c); ==\"Drivers License\" or $this.attr(genesis__Identification_Type__c); ==\"Alien ID Card\"",
                                    "validation": [
                                         {
                                              "rule": "$date",
@@ -170,5 +169,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "smb_back_office_identification_information",
+     "clcommon__Release_Checksum__c": "27c916fbb2777e2443f5b7b00fa26a916bcb8ff0f2efcd6bd64fac03692c5a9e"
 }

@@ -31,69 +31,69 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
+               "fieldColumns": 1,
+               "columns": 1,
+               "grid": {
+                    "card": {
+                         "sm": 6,
+                         "xs": 12
+                    }
                },
-               "textBefore": "Add the details of collateral(s) that will be used to secure this Loan. To expedite the process, add a collateral whose value is atleast 120% of the loan amount.",
-               "textAfter": "$global.attr(collateralValidation);",
-               "title": "Collateral Details",
+               "blankMessage": "No Collaterals Added!",
+               "renderFields": {
+                    "Id": false,
+                    "clcommon__Collateral_Type__r.Name": true
+               },
+               "editableFields": {
+                    "clcommon__Insurance_Company__r.Name": false,
+                    "clcommon__Estimated_Value__c": false,
+                    "clcommon__Collateral_Type__c": false,
+                    "clcommon__Policy_Number__c": false,
+                    "clcommon__Stock_Type__c": false,
+                    "clcommon__State__c": false,
+                    "clcommon__Insurance_Company__r.BillingState": false,
+                    "clcommon__Collateral_Type__r.Id": false,
+                    "clcommon__City__c": false,
+                    "clcommon__Manufacturer__c": false,
+                    "clcommon__Port_Name__c": false,
+                    "clcommon__Vehicle_Identification_Number__c": false,
+                    "clcommon__Number_of_Shares__c": false,
+                    "clcommon__Airport__c": false,
+                    "clcommon__Local_Jurisdiction_Type__c": false,
+                    "clcommon__Issued_By__c": false,
+                    "clcommon__Insurance_Company__r.BillingPostalCode": false,
+                    "clcommon__Possessory_Current_Balance__c": false,
+                    "clcommon__Model__c": false,
+                    "clcommon__Account_Number__c": false,
+                    "clcommon__Property_Unit_Number__c": false,
+                    "clcommon__Collateral_Local_Jurisdiction__c": false,
+                    "Id": false,
+                    "clcommon__Address__c": false,
+                    "clcommon__Vehicle_Type__c": false,
+                    "clcommon__Postal_Code__c": false,
+                    "clcommon__Insurance_Company__r.BillingCity": false,
+                    "clcommon__Purchase_Money__c": false,
+                    "clcommon__Description__c": false,
+                    "clcommon__Insurance_Amount__c": false,
+                    "clcommon__Insurance_Company__r.BillingStreet": false
+               },
                "templates": {
                     "record": "<div class=\"customCard\"><div class=\"cardHeader cardItem\">$this.attr(genesis__Collateral__r.clcommon__Description__c);</div><div class=\"CollateralType cardItem\">$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__r.Name);</div><div class=\"cardItem\"><span class=\"text\">Street Address:  </span>$this.attr(genesis__Collateral__r.clcommon__Address__c);</div><div><span class=\"text\">City:  </span>$this.attr(genesis__Collateral__r.clcommon__City__c);</div><div><span class=\"text\">State:  </span> $this.attr(genesis__Collateral__r.clcommon__State__c);</div><div><span class=\"text\">Postal Code:  </span>$this.attr(genesis__Collateral__r.clcommon__Postal_Code__c);</div></div>"
                },
-               "editableFields": {
-                    "clcommon__Insurance_Company__r.BillingStreet": false,
-                    "clcommon__Insurance_Amount__c": false,
-                    "clcommon__Description__c": false,
-                    "clcommon__Purchase_Money__c": false,
-                    "clcommon__Insurance_Company__r.BillingCity": false,
-                    "clcommon__Postal_Code__c": false,
-                    "clcommon__Vehicle_Type__c": false,
-                    "clcommon__Address__c": false,
-                    "Id": false,
-                    "clcommon__Collateral_Local_Jurisdiction__c": false,
-                    "clcommon__Property_Unit_Number__c": false,
-                    "clcommon__Account_Number__c": false,
-                    "clcommon__Model__c": false,
-                    "clcommon__Possessory_Current_Balance__c": false,
-                    "clcommon__Insurance_Company__r.BillingPostalCode": false,
-                    "clcommon__Issued_By__c": false,
-                    "clcommon__Local_Jurisdiction_Type__c": false,
-                    "clcommon__Airport__c": false,
-                    "clcommon__Number_of_Shares__c": false,
-                    "clcommon__Vehicle_Identification_Number__c": false,
-                    "clcommon__Port_Name__c": false,
-                    "clcommon__Manufacturer__c": false,
-                    "clcommon__City__c": false,
-                    "clcommon__Collateral_Type__r.Id": false,
-                    "clcommon__Insurance_Company__r.BillingState": false,
-                    "clcommon__State__c": false,
-                    "clcommon__Stock_Type__c": false,
-                    "clcommon__Policy_Number__c": false,
-                    "clcommon__Collateral_Type__c": false,
-                    "clcommon__Estimated_Value__c": false,
-                    "clcommon__Insurance_Company__r.Name": false
-               },
-               "renderFields": {
-                    "clcommon__Collateral_Type__r.Name": true,
-                    "Id": false
-               },
-               "blankMessage": "No Collaterals Added!",
-               "grid": {
-                    "card": {
-                         "xs": 12,
-                         "sm": 6
-                    }
-               },
-               "columns": 1,
-               "fieldColumns": 1
+               "title": "Collateral Details",
+               "textAfter": "$global.attr(collateralValidation);",
+               "textBefore": "Add the details of collateral(s) that will be used to secure this Loan. To expedite the process, add a collateral whose value is atleast 120% of the loan amount.",
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               }
           },
           "property": {
+               "structureName": "get_collateral_list",
                "whereClause": {
                     "appId": "$global.attr(applicationId);"
-               },
-               "structureName": "get_collateral_list"
+               }
           },
           "type": "card-view",
           "category": "component"

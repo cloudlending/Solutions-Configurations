@@ -33,19 +33,19 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "fieldColumns": 1,
                "messagePositions": {
-                    "saveSubmitError": "top",
+                    "loadingAnimation": "global",
                     "loadingError": "top",
-                    "loadingAnimation": "global"
-               }
+                    "saveSubmitError": "top"
+               },
+               "fieldColumns": 1
           },
           "property": {
-               "queryWithDefaultNew": true,
+               "structureName": "los_fetch_asset_class_name",
                "whereClause": {
                     "product": "$state(los_loan_product_details).attr(genesis__CL_Product__c);"
                },
-               "structureName": "los_fetch_asset_class_name"
+               "queryWithDefaultNew": true
           },
           "type": "data-model",
           "category": "component"

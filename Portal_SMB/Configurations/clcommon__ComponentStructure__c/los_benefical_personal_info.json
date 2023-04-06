@@ -4,11 +4,9 @@
      },
      "Name": "los_benefical_personal_info",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "los_benefical_personal_info",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "56881bada34704f049e2b95b7830e9be925d8585a6536a5bd79949c69ac77783",
      "clcommon__Unique_Name__c": "los_benefical_personal_info",
      "clcommon__data__c": {
           "structureName": "los_benefical_personal_info",
@@ -27,8 +25,10 @@
                               "fieldUi": {
                                    "fieldType": "string",
                                    "label": "First Name",
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "First Name is required"
+                                        "requiredErrorText": "First Name is required",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "First Name"
                               }
@@ -39,8 +39,10 @@
                               "fieldUi": {
                                    "fieldType": "string",
                                    "label": "Last Name",
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "Last Name is required"
+                                        "requiredErrorText": "Last Name is required",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "Last Name"
                               }
@@ -361,6 +363,7 @@
                                    "fieldType": "addressAutocomplete",
                                    "label": "Street Address",
                                    "required": true,
+                                   "regex": "^[a-zA-Z0-9\n#/\\s]*$",
                                    "addressComponentMapping": [
                                         {
                                              "addressComponent": "street_number",
@@ -390,7 +393,8 @@
                                         ]
                                    },
                                    "messages": {
-                                        "requiredErrorText": "Street address is Required."
+                                        "requiredErrorText": "Street address is Required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "Street Address"
                               }
@@ -402,8 +406,10 @@
                                    "fieldType": "string",
                                    "label": "City",
                                    "required": true,
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "City is required"
+                                        "requiredErrorText": "City is required",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "City"
                               }
@@ -781,8 +787,18 @@
                                    "fieldType": "string",
                                    "label": "Postal Code",
                                    "required": true,
+                                   "regex": "^(\\d{5}(-\\d{4})?)$",
                                    "messages": {
-                                        "requiredErrorText": "Postal code  is required"
+                                        "requiredErrorText": "Postal code  is required",
+                                        "regexErrorText": "Please enter a valid postal code"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numericOnly": true,
+                                             "blocks": [
+                                                  5
+                                             ]
+                                        }
                                    },
                                    "ariaLabel": "Postal Code"
                               }
@@ -790,5 +806,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "los_benefical_personal_info",
+     "clcommon__Release_Checksum__c": "a43c5a7b935d07f04a08becf14bc144c861c99f0af3ac5769fa8449c5de7f63c"
 }

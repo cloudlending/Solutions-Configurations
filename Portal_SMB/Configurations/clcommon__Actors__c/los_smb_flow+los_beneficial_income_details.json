@@ -16,27 +16,27 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
+               "editable": true,
+               "fieldColumns": 1,
+               "renderFields": {
+                    "Id": false
                },
                "editableFields": {
                     "Id": false
                },
-               "renderFields": {
-                    "Id": false
-               },
-               "fieldColumns": 1,
-               "editable": true
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               }
           },
           "property": {
-               "queryWithDefaultNew": true,
+               "structureName": "los_personal_income_details",
                "whereClause": {
-                    "contactId": "$global.attr(borrowerContactId);",
-                    "appId": "$global.attr(applicationId);"
+                    "appId": "$global.attr(applicationId);",
+                    "contactId": "$global.attr(borrowerContactId);"
                },
-               "structureName": "los_personal_income_details"
+               "queryWithDefaultNew": true
           },
           "type": "detail-view",
           "category": "component"

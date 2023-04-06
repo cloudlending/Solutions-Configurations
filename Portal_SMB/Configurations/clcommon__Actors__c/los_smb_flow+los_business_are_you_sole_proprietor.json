@@ -1,0 +1,91 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {
+               "fieldChange": {
+                    "business_id_type": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(business_id_type);==\"SSN/ITIN\" ? \"Individual\" : \"Sole Proprietorship\" };",
+                                   "field": "$global.attr(businessEntityType);"
+                              },
+                              {
+                                   "value": "@mathjs{$global.attr(businessAccountId);!=\"\" ? \"\" : $global.attr(businessAccountId);};",
+                                   "field": "$global.attr(businessAccountId);"
+                              }
+                         ]
+                    },
+                    "are_you_sole_proprietor": {
+                         "assignments": [
+                              {
+                                   "value": "",
+                                   "field": "$global.attr(businessEntityType);"
+                              },
+                              {
+                                   "value": "",
+                                   "field": "$this.attr(business_id_type);"
+                              },
+                              {
+                                   "value": "@mathjs{$global.attr(businessAccountId);!=\"\" ? \"\" : $global.attr(businessAccountId);};",
+                                   "field": "$global.attr(businessAccountId);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "title": "Tell us about your business",
+               "showSectionTitle": true,
+               "editable": "$global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined or $global.attr(applicationId); == \"new_record_id\"",
+               "renderFields": {
+                    "business_id_type": "$state(los_business_are_you_sole_proprietor).attr(are_you_sole_proprietor); == \"true\""
+               },
+               "fieldColumns": 1,
+               "grid": {
+                    "field": {
+                         "are_you_sole_proprietor": {
+                              "radioButton": {
+                                   "sm": 6,
+                                   "xs": 12
+                              }
+                         },
+                         "business_id_type": {
+                              "radioButton": {
+                                   "sm": 6,
+                                   "xs": 12
+                              }
+                         },
+                         "deafult": {
+                              "sm": 12
+                         }
+                    }
+               },
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               }
+          },
+          "property": {
+               "structureName": "los_business_are_you_sole_proprietor"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "los_business_are_you_sole_proprietor",
+     "clcommon__External_ID__c": "los_smb_flow+los_business_are_you_sole_proprietor",
+     "clcommon__Release_Checksum__c": "27079156777f141b4d38ba21d2c1c3bbc8b88a8263e97625f275d50f25cc24de"
+}

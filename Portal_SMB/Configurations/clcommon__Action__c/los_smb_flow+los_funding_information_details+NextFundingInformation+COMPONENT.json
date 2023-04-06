@@ -5,34 +5,34 @@
      "Name": "NextFundingInformation",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "NextFundingInformation",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "render": "$this.attr(newAccount); == false and $this.attr(bankAccount); == false",
+               "style": "primary",
+               "position": "bottom-left"
+          },
+          "remoteActionArguments": {
+               "portalStage": "ClosingDocument",
+               "applicationId": "$global.attr(applicationId);"
+          },
           "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(los_review_steps).appearance(current);",
+                         "value": "ClosingDocument"
+                    }
+               ],
                "executions": [
                     {
                          "name": "$ext.scrollTop"
                     }
-               ],
-               "assignments": [
-                    {
-                         "value": "ClosingDocument",
-                         "field": "$nav(los_review_steps).appearance(current);"
-                    }
                ]
           },
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "ClosingDocument"
-          },
-          "appearance": {
-               "position": "bottom-left",
-               "style": "primary",
-               "render": "$this.attr(newAccount); == false and $this.attr(bankAccount); == false",
-               "label": "Next"
-          },
-          "property": {},
-          "name": "NextFundingInformation"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "submit",
@@ -44,9 +44,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_financial_information",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_funding_information_details+NextFundingInformation+COMPONENT",
-     "clcommon__Release_Checksum__c": "9abaa30a52f7eb7e8aa6bcffef7adb14ee55a057e3a0d6c894e16525eb26d27e",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
      "clcommon__Unique_Action_Name__c": "los_funding_information_details+NextFundingInformation",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_funding_information_details+NextFundingInformation+COMPONENT",
+     "clcommon__Release_Checksum__c": "9abaa30a52f7eb7e8aa6bcffef7adb14ee55a057e3a0d6c894e16525eb26d27e"
 }

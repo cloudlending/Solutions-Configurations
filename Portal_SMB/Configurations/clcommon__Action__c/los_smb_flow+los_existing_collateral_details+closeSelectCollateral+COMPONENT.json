@@ -5,32 +5,32 @@
      "Name": "closeSelectCollateral",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
+          "name": "closeSelectCollateral",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Cancel",
+               "render": false,
+               "style": "secondary"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "updates": [
                     {
+                         "name": "$nav.reloads.add;",
                          "value": [
                               "los_collaterals_list",
                               "los_collaterals_list_validation"
-                         ],
-                         "name": "$nav.reloads.add;"
+                         ]
                     },
                     {
-                         "value": "los_add_collateral_overlay",
-                         "name": "$nav.overlay.remove;"
+                         "name": "$nav.overlay.remove;",
+                         "value": "los_add_collateral_overlay"
                     }
                ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "style": "secondary",
-               "render": false,
-               "label": "Cancel",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "closeSelectCollateral"
+          }
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "normal",
@@ -42,9 +42,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_select_existing_collateral_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_existing_collateral_details+closeSelectCollateral+COMPONENT",
-     "clcommon__Release_Checksum__c": "f40c2947fb7a098c5dd143a1dd8ff52357293e016e8499f5fcf625488cd07264",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_existing_collateral_details+closeSelectCollateral",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_existing_collateral_details+closeSelectCollateral+COMPONENT",
+     "clcommon__Release_Checksum__c": "f40c2947fb7a098c5dd143a1dd8ff52357293e016e8499f5fcf625488cd07264"
 }

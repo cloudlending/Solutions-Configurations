@@ -5,53 +5,53 @@
      "Name": "saveRentRollExistingDetails",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "updates": [
-                    {
-                         "value": "los_edit_collateral_rent_roll_list",
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "previous",
-                         "field": "$nav(los_edit_collateral_rent_roll_container).appearance(current);"
-                    }
-               ]
+          "name": "saveRentRollExistingDetails",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Save",
+               "render": "$global.attr(rentRollId);!=\"\" and $global.attr(rentRollId);!=undefined",
+               "position": "bottom-right"
+          },
+          "remoteActionArguments": {
+               "genesis__Rent_Roll__c": {
+                    "genesis__Comments__c": "$this.attr(genesis__Comments__c);",
+                    "genesis__Current_Monthly_Rent__c": "$this.attr(genesis__Current_Monthly_Rent__c);",
+                    "genesis__Expenses_Paid__c": "$this.attr(genesis__Expenses_Paid__c);",
+                    "genesis__Increases__c": "$this.attr(genesis__Increases__c);",
+                    "genesis__Lease_End_Date__c": "$this.attr(genesis__Lease_End_Date__c);",
+                    "genesis__Lease_Start_Date__c": "$this.attr(genesis__Lease_Start_Date__c);",
+                    "genesis__Number_of_bathrooms__c": "$this.attr(genesis__Number_of_bathrooms__c);",
+                    "genesis__Number_of_bedrooms__c": "$this.attr(genesis__Number_of_bedrooms__c);",
+                    "genesis__Square_Footage__c": "$this.attr(genesis__Square_Footage__c);",
+                    "genesis__Suite_Unit_Number__c": "$this.attr(genesis__Suite_Unit_Number__c);",
+                    "genesis__Unit_Type__c": "$this.attr(genesis__Unit_Type__c);",
+                    "genesis__Business_Name__c": "$this.attr(genesis__Business_Name__c);",
+                    "genesis__Application__c": "$global.attr(applicationId);",
+                    "genesis__Collateral__c": "$global.attr(collateralId);",
+                    "Id": "$this.attr(Id);"
+               }
           },
           "validation": [
                "los_edit_rent_roll_details"
           ],
-          "remoteActionArguments": {
-               "genesis__Rent_Roll__c": {
-                    "Id": "$this.attr(Id);",
-                    "genesis__Collateral__c": "$global.attr(collateralId);",
-                    "genesis__Application__c": "$global.attr(applicationId);",
-                    "genesis__Business_Name__c": "$this.attr(genesis__Business_Name__c);",
-                    "genesis__Unit_Type__c": "$this.attr(genesis__Unit_Type__c);",
-                    "genesis__Suite_Unit_Number__c": "$this.attr(genesis__Suite_Unit_Number__c);",
-                    "genesis__Square_Footage__c": "$this.attr(genesis__Square_Footage__c);",
-                    "genesis__Number_of_bedrooms__c": "$this.attr(genesis__Number_of_bedrooms__c);",
-                    "genesis__Number_of_bathrooms__c": "$this.attr(genesis__Number_of_bathrooms__c);",
-                    "genesis__Lease_Start_Date__c": "$this.attr(genesis__Lease_Start_Date__c);",
-                    "genesis__Lease_End_Date__c": "$this.attr(genesis__Lease_End_Date__c);",
-                    "genesis__Increases__c": "$this.attr(genesis__Increases__c);",
-                    "genesis__Expenses_Paid__c": "$this.attr(genesis__Expenses_Paid__c);",
-                    "genesis__Current_Monthly_Rent__c": "$this.attr(genesis__Current_Monthly_Rent__c);",
-                    "genesis__Comments__c": "$this.attr(genesis__Comments__c);"
-               }
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(los_edit_collateral_rent_roll_container).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "los_edit_collateral_rent_roll_list"
+                    }
+               ]
           },
-          "appearance": {
-               "position": "bottom-right",
-               "render": "$global.attr(rentRollId);!=\"\" and $global.attr(rentRollId);!=undefined",
-               "label": "Save",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "saveRentRollExistingDetails"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "submit",
@@ -63,9 +63,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_add_collateral_rent_roll_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_edit_rent_roll_details+saveRentRollExistingDetails+COMPONENT",
-     "clcommon__Release_Checksum__c": "d379c3bb5feff086bd7883c8c711c0f08977ce3fc8fadb3aedfa58d6aaee938f",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveRentRoll",
      "clcommon__Unique_Action_Name__c": "los_edit_rent_roll_details+saveRentRollExistingDetails",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_edit_rent_roll_details+saveRentRollExistingDetails+COMPONENT",
+     "clcommon__Release_Checksum__c": "d379c3bb5feff086bd7883c8c711c0f08977ce3fc8fadb3aedfa58d6aaee938f"
 }

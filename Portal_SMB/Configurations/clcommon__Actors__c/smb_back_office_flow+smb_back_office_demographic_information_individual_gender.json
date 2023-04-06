@@ -1,0 +1,58 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
+          "generalHandlers": {},
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "noLabelFields": [
+                    "clcommon__Personal_Information__r.clcommon__Gender__c"
+               ],
+               "render": "$state(smb_back_office_demographic_information_individual_summary).attr(intdm__Gender_Opt_Out__c); == false",
+               "renderFields": {
+                    "clcommon__Personal_Information__r.Id": false,
+                    "Id": false
+               },
+               "showSectionTitle": true,
+               "sectionStyle": "layout",
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "contactId": "$global.attr(contactId);"
+               },
+               "structureName": "smb_back_office_demographic_personal_info_details"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_demographic_information_individual_gender",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_individual_gender",
+     "clcommon__Release_Checksum__c": "964ecc01314ac40a48dd2b4f4bb46e1e23115d9d095a62ae3d3eb7a4c2dbe776"
+}

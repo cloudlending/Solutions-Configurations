@@ -1,0 +1,69 @@
+{
+     "attributes": {
+          "type": "clcommon__Actors__c"
+     },
+     "clcommon__Navigation_Structure__r": {
+          "attributes": {
+               "type": "clcommon__NavigationStructure__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow"
+     },
+     "clcommon__Actor_Definition__c": {
+          "generalHandlers": {
+               "fieldChange": {
+                    "solcommon__Use_Personal_Address_As_Business_Address__c": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{$this.attr(solcommon__Use_Personal_Address_As_Business_Address__c); == false ? \"\" : $state(smb_back_office_individual_personal_information).attr(clcommon__Current_Street__c); };",
+                                   "field": "$state(smb_back_office_more_business_details).attr(BillingStreet);"
+                              },
+                              {
+                                   "value": "@mathjs{$this.attr(solcommon__Use_Personal_Address_As_Business_Address__c); == false ? \"\" : $state(smb_back_office_individual_personal_information).attr(clcommon__Current_City__c); };",
+                                   "field": "$state(smb_back_office_more_business_details).attr(BillingCity);"
+                              },
+                              {
+                                   "value": "@mathjs{$this.attr(solcommon__Use_Personal_Address_As_Business_Address__c); == false ? \"\" : $state(smb_back_office_individual_personal_information).attr(clcommon__Current_State__c); };",
+                                   "field": "$state(smb_back_office_more_business_details).attr(BillingState);"
+                              },
+                              {
+                                   "value": "@mathjs{$this.attr(solcommon__Use_Personal_Address_As_Business_Address__c); == false ? \"\" : $state(smb_back_office_individual_personal_information).attr(clcommon__Current_Zip_Code__c); };",
+                                   "field": "$state(smb_back_office_more_business_details).attr(BillingPostalCode);"
+                              }
+                         ]
+                    }
+               }
+          },
+          "recordActions": [],
+          "componentActions": [],
+          "appearance": {
+               "grid": {
+                    "messagePositions": {
+                         "saveSubmitError": "top",
+                         "loadingError": "top",
+                         "loadingAnimation": "global"
+                    },
+                    "field": {
+                         "$default": {
+                              "xs": 12,
+                              "sm": 6
+                         }
+                    }
+               },
+               "title": "Business Information",
+               "fieldColumns": 1,
+               "editable": true
+          },
+          "property": {
+               "queryWithDefaultNew": true,
+               "whereClause": {
+                    "partyId": "$global.attr(partyId);"
+               },
+               "structureName": "Smb_Use_Personal_Address_As_Business_Address"
+          },
+          "type": "detail-view",
+          "category": "component"
+     },
+     "clcommon__Actor_Name__c": "smb_back_office_same_address_checkbox",
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_same_address_checkbox",
+     "clcommon__Release_Checksum__c": "478d49936d77e3ce562375b59609c2398e850bce7641483df31cd3d3b3e79beb"
+}

@@ -4,11 +4,9 @@
      },
      "Name": "smb_back_office_business_parties_summary",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "smb_back_office_business_parties_summary",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "b3e759fde17785a48b1360309c47293df76f51a892e2be861c3ede37ff55d99e",
      "clcommon__Unique_Name__c": "smb_back_office_business_parties_summary",
      "clcommon__data__c": {
           "structureName": "smb_back_office_business_parties_summary",
@@ -327,6 +325,15 @@
                               }
                          },
                          {
+                              "id": "7770c729-6a8b-48cd-8df2-881fe378cc34",
+                              "fieldName": "clcommon__Contact__r.Email",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Email",
+                                   "ariaLabel": "Email"
+                              }
+                         },
+                         {
                               "id": "252495da-314a-46fc-8797-341c97a7fc7e",
                               "relationType": "reference",
                               "fieldName": "clcommon__Account__c",
@@ -368,5 +375,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "smb_back_office_business_parties_summary",
+     "clcommon__Release_Checksum__c": "852ac47277234aabaf555a7e05124b0f1088cef94b24780ca3951c8019952126"
 }

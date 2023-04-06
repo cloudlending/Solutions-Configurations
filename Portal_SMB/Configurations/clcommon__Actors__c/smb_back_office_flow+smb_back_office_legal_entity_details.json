@@ -23,6 +23,10 @@
                          {
                               "value": "$this.attr(genesis__Account__r.clcommon__Legal_Entity_Type__r.Name);",
                               "field": "$global.attr(HMDALegalClassName);"
+                         },
+                         {
+                              "value": "$this.attr(genesis__Account__r.clcommon__Legal_Entity_Type__r.Name);",
+                              "field": "$global.attr(businessEntityType);"
                          }
                     ]
                }
@@ -56,9 +60,7 @@
           },
           "property": {
                "whereClause": {
-                    "appId": "$global.attr(applicationId);",
-                    "soleProp": "Sole Proprietorship",
-                    "individual": "Individual"
+                    "appId": "$global.attr(applicationId);"
                },
                "structureName": "smb_back_office_hmda_legal_entity_details"
           },
@@ -67,5 +69,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_legal_entity_details",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_legal_entity_details",
-     "clcommon__Release_Checksum__c": "7ce9869efe9bb58b6e9ea9030b83caf1a42472bd63cfd1b88838db8544f4d4e1"
+     "clcommon__Release_Checksum__c": "d412529b10b74f944ad5235c019e1ebba1d06f0bccf0bc86485382af698613c1"
 }

@@ -5,21 +5,21 @@
      "Name": "Logout",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "Logout",
+          "property": {},
+          "appearance": {
+               "label": "Logout",
+               "style": "link",
+               "position": "top-right"
+          },
+          "context": "hamburgermenu",
+          "remoteActionAPIname": "logout",
           "successHandler": {
                "redirect": "/secur/logout.jsp"
           },
-          "remoteActionAPIname": "logout",
-          "context": "hamburgermenu",
-          "appearance": {
-               "position": "top-right",
-               "style": "link",
-               "label": "Logout"
-          },
-          "property": {},
-          "name": "Logout"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
      "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
@@ -31,9 +31,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_header+Logout+COMPONENT",
-     "clcommon__Release_Checksum__c": "35dd109072ba56ef136906c418003ab30d5cc7f456fe0b691918f8059244fcf7",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_header+Logout",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_header+Logout+COMPONENT",
+     "clcommon__Release_Checksum__c": "35dd109072ba56ef136906c418003ab30d5cc7f456fe0b691918f8059244fcf7"
 }

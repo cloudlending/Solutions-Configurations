@@ -5,41 +5,41 @@
      "Name": "registerNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {
-               "submitFailureText": "$serverMessage;"
+          "name": "registerNext",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Next"
           },
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "remoteActionArguments": {
+               "permissionSetName": "SMB_Secured_Borrower",
+               "contact": "$state(RegisterDetails);"
+          },
           "successHandler": {
-               "actions": [
-                    {
-                         "name": "registerWithPartialMatchNext",
-                         "condition": "$result.attr(apiResponse);==3 or $result.attr(apiResponse);==0 or $result.attr(apiResponse);==2"
-                    },
-                    {
-                         "name": "sendResetEmail",
-                         "condition": "$result.attr(apiResponse);==1"
-                    }
-               ],
                "assignments": [
                     {
-                         "value": "$result.attr(apiResponse);",
-                         "field": "$global.attr(statusCode);"
+                         "field": "$global.attr(statusCode);",
+                         "value": "$result.attr(apiResponse);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$result.attr(apiResponse);==3 or $result.attr(apiResponse);==0 or $result.attr(apiResponse);==2",
+                         "name": "registerWithPartialMatchNext"
+                    },
+                    {
+                         "condition": "$result.attr(apiResponse);==1",
+                         "name": "sendResetEmail"
                     }
                ]
           },
-          "remoteActionArguments": {
-               "contact": "$state(RegisterDetails);",
-               "permissionSetName": "SMB_Secured_Borrower"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
           },
-          "appearance": {
-               "label": "Next",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "registerNext"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "submit",
@@ -51,9 +51,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_register_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_signup+RegisterDetails+registerNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "998ffe16c075d4fd8bafcaab18266743a50b1f2f11018022574eb84e1e71d684",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveUserData",
      "clcommon__Unique_Action_Name__c": "RegisterDetails+registerNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_signup+RegisterDetails+registerNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "998ffe16c075d4fd8bafcaab18266743a50b1f2f11018022574eb84e1e71d684"
 }

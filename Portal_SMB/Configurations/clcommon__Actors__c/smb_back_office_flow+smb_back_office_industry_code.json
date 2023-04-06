@@ -9,12 +9,19 @@
           "clcommon__External_ID__c": "smb_back_office_flow"
      },
      "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
           "generalHandlers": {},
           "recordActions": [],
           "componentActions": [],
           "appearance": {
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
                "render": "$state(smb_back_office_industry_code_conditional_render).attr(industryCodeCheckbox); == false",
-               "title": "$this.attr(Code__c);",
                "renderFields": {
                     "genesis__Accounts__r": false,
                     "solcommon__Industry_Code__r.Id": false,
@@ -55,5 +62,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_industry_code",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_industry_code",
-     "clcommon__Release_Checksum__c": "def5546fb2021b5a9ee8453935503155354bfcb6e2aa1d278aa0d1580ce7b548"
+     "clcommon__Release_Checksum__c": "f48340c9c397dbbadb7b78f4eb1d2c8652563cafa67c3c99271e961095e90d05"
 }

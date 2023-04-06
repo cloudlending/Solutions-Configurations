@@ -1,0 +1,177 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "los_identification_info_new",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "los_identification_info_new",
+     "clcommon__data__c": {
+          "structureName": "los_identification_info_new",
+          "tableName": "genesis__identification_information__c",
+          "whereClause": {
+               "freeForm": "genesis__Account__c =':accId'"
+          },
+          "orderBy": "CreatedDate DESC LIMIT 1",
+          "sections": [
+               {
+                    "id": "3614648d-195b-4995-8854-a1957ae275e9",
+                    "title": "Identification Information",
+                    "fields": [
+                         {
+                              "id": "36749b0e-61d3-4a63-a670-6f6d7938f6f9",
+                              "fieldName": "genesis__Identification_Type__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Identification Type",
+                                   "required": true,
+                                   "prompt": "Select",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Alien ID Card",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Alien ID Card",
+                                             "optionValue": "Alien ID Card"
+                                        },
+                                        {
+                                             "id": "Drivers License",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Drivers License",
+                                             "optionValue": "Drivers License"
+                                        },
+                                        {
+                                             "id": "Identification Card",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Identification Card",
+                                             "optionValue": "Identification Card"
+                                        },
+                                        {
+                                             "id": "Military ID",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Military ID",
+                                             "optionValue": "Military ID"
+                                        },
+                                        {
+                                             "id": "Passport",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Passport",
+                                             "optionValue": "Passport"
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Identification type is required"
+                                   },
+                                   "ariaLabel": "Identification Type"
+                              }
+                         },
+                         {
+                              "id": "8664e858-4949-41f1-abca-78e9f48e048b",
+                              "fieldName": "genesis__State_of_Issuance__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "State of Issuance",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "State of Issuance is required"
+                                   },
+                                   "ariaLabel": "State of Issuance"
+                              }
+                         },
+                         {
+                              "id": "a9926d43-1ca9-490f-b814-7c5be1fa13fa",
+                              "fieldName": "genesis__Identification_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Identification Number",
+                                   "required": true,
+                                   "regex": "^[a-zA-Z0-9\\s]*$",
+                                   "messages": {
+                                        "requiredErrorText": "Identification number is required",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
+                                   },
+                                   "ariaLabel": "Identification Number"
+                              }
+                         },
+                         {
+                              "id": "fc9e5369-270e-4b5e-a990-27da00d938e9",
+                              "fieldName": "genesis__Date_of_Issuance__c",
+                              "fieldUi": {
+                                   "fieldType": "datepicker",
+                                   "label": "Date of Issuance",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$date",
+                                             "date": {
+                                                  "isFutureDate": false,
+                                                  "isPastDate": true,
+                                                  "includeToday": true
+                                             },
+                                             "message": "Date of Issuance should be in past "
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Date of issuance  is required"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "datePattern": "MM/dd/yyyy",
+                                             "disableFuture": true
+                                        }
+                                   },
+                                   "ariaLabel": "Date of Issuance"
+                              }
+                         },
+                         {
+                              "id": "1980641e-879a-4fb2-b943-6c4feee987a4",
+                              "fieldName": "genesis__Expiration_Date__c",
+                              "fieldUi": {
+                                   "fieldType": "datepicker",
+                                   "label": "Expiration Date",
+                                   "required": true,
+                                   "validation": [
+                                        {
+                                             "rule": "$date",
+                                             "date": {
+                                                  "isFutureDate": true,
+                                                  "isPastDate": false,
+                                                  "includeToday": false
+                                             },
+                                             "message": "Expiration Date should be in future "
+                                        }
+                                   ],
+                                   "messages": {
+                                        "requiredErrorText": "Expiration Date is required"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "datePattern": "MM/dd/yyyy",
+                                             "disablePast": true
+                                        }
+                                   },
+                                   "ariaLabel": "Expiration Date"
+                              }
+                         },
+                         {
+                              "id": "e14ecc5c-96b8-4494-8d57-03decae84688",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "los_identification_info_new",
+     "clcommon__Release_Checksum__c": "0e2e08f0b0c177c47ad368aef9e528345638e09fd7dc0ece22da76ad493d891a"
+}

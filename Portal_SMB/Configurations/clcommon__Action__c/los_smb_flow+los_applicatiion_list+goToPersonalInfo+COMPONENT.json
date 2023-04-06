@@ -5,33 +5,33 @@
      "Name": "goToPersonalInfo",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Back",
+          "name": "goToPersonalInfo",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "position": "bottom-left"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
-               "next": "Home",
                "assignments": [
                     {
-                         "value": 0,
-                         "field": "$nav(los_getting_started_steps).appearance(current);"
+                         "field": "$nav(los_getting_started_steps).appearance(current);",
+                         "value": 0
                     },
                     {
-                         "value": true,
-                         "field": "$global.attr(isPrincipal);"
+                         "field": "$global.attr(isPrincipal);",
+                         "value": true
                     },
                     {
-                         "value": "YES",
-                         "field": "$global.attr(showHome);"
+                         "field": "$global.attr(showHome);",
+                         "value": "YES"
                     }
-               ]
+               ],
+               "next": "Home"
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "position": "bottom-left",
-               "render": false
-          },
-          "property": {},
-          "name": "goToPersonalInfo"
+          "ariaLabel": "Back"
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -43,9 +43,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_fetch_applications",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list+goToPersonalInfo+COMPONENT",
-     "clcommon__Release_Checksum__c": "c108717abf3a8af7fc3b08d116014997d2fdde72b936c9f49233e2c376b007f2",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_applicatiion_list+goToPersonalInfo",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list+goToPersonalInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "c108717abf3a8af7fc3b08d116014997d2fdde72b936c9f49233e2c376b007f2"
 }

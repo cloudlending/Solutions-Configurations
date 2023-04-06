@@ -8,8 +8,8 @@
           "name": "ExistingCustomerSearchDetailsContinue",
           "property": {},
           "appearance": {
-               "label": "Continue",
-               "style": "primary"
+               "style": "primary",
+               "label": "Continue"
           },
           "successHandler": {},
           "failureHandler": {},
@@ -29,7 +29,7 @@
                          "value": ""
                     },
                     {
-                         "field": "$global.attr(contactId);",
+                         "field": "$global.attr(borrowerContactIdExisting);",
                          "value": "$this.attr(Id);"
                     }
                ]
@@ -46,9 +46,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_account_search_results_list_view",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_account_search_results+ExistingCustomerSearchDetailsContinue+RECORD",
-     "clcommon__Release_Checksum__c": "422f2a13797b430d4467f83f79854715b095f2ef3bbc85c117ba88fd5d000354",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "smb_back_office_account_search_results+ExistingCustomerSearchDetailsContinue",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_account_search_results+ExistingCustomerSearchDetailsContinue+RECORD",
+     "clcommon__Release_Checksum__c": "66ea42fc11e700d0b3aebf802829fe15619ef018e379fe8db1a5d588fa8b8a29"
 }

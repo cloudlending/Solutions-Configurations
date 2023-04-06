@@ -8,41 +8,40 @@
           "name": "savePortalIncomeInfo",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
+               "position": "bottom-right",
                "label": "Next Income",
-               "position": "bottom-right"
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "id": "$global.attr(applicationId);"
-               },
                "genesis__Income__c": [
                     {
-                         "name": "Annual Personal Income",
-                         "genesis__Contact__c": "$global.attr(contactId);",
-                         "genesis__Amount__c": "$state(smb_back_office_income_information).attr(genesis__Amount__c);"
+                         "genesis__Amount__c": "$state(smb_back_office_income_information).attr(genesis__Amount__c);",
+                         "genesis__Contact__c": "$global.attr(tempborrowerContactIdExisting);",
+                         "name": "Annual Personal Income"
                     }
-               ]
+               ],
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               }
           },
           "validation": [],
           "successHandler": {
-               "assignments": [
+               "assignments": [],
+               "updates": [
                     {
-                         "field": "$global.attr(partyId);",
-                         "value": "$global.attr(tempPartyId);"
-                    },
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "smb_back_office_parties_identification_record_check",
+                              "smb_back_office_identification_information_prefill",
+                              "smb_back_office_identification_information",
+                              "smb_back_office_business_parties_summary"
+                         ]
+                    }
+               ],
+               "actions": [
                     {
-                         "field": "$global.attr(BusinessPartyAccountId);",
-                         "value": "$global.attr(tempBusinessPartyAccountId);"
-                    },
-                    {
-                         "field": "$global.attr(borrowerAccountIdExisting);",
-                         "value": "$global.attr(tempborrowerAccountIdExisting);"
-                    },
-                    {
-                         "field": "$nav(smb_back_office_add_business_parties_container).appearance(current);",
-                         "value": "next"
+                         "name": "PartySubmitnext"
                     }
                ]
           },
@@ -51,7 +50,7 @@
           "handler": {},
           "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -61,9 +60,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_personal_information_consent",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section+savePortalIncomeInfo+COMPONENT",
-     "clcommon__Release_Checksum__c": "8222be6a8a43860da6ade70ecfb82a5ff5c1841fb406924892ce519f08a0af64",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIncome",
      "clcommon__Unique_Action_Name__c": "smb_back_office_personal_information_consent_section+savePortalIncomeInfo",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_consent_section+savePortalIncomeInfo+COMPONENT",
+     "clcommon__Release_Checksum__c": "688a454be50b896c3fe1443385d1213817a3413baba159aba8c2d94eb1046fc5"
 }

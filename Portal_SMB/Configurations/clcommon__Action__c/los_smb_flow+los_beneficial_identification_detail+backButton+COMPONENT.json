@@ -5,40 +5,40 @@
      "Name": "backButton",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Back",
+          "name": "backButton",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "secondary",
+               "variant": "text",
+               "label": "Back"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(los_application_steps).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
                "updates": [
                     {
+                         "name": "$nav.reloads.add;",
                          "value": [
                               "los_beneficial_income_details",
                               "los_beneficial_personalinfo_details",
                               "los_beneficial_ownership_details",
                               "los_beneficial_party_types",
                               "los_beneficial_personal_details_disclosures"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "previous",
-                         "field": "$nav(los_application_steps).appearance(current);"
+                         ]
                     }
                ]
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "label": "Back",
-               "variant": "text",
-               "style": "secondary",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "backButton"
+          "ariaLabel": "Back"
      },
-     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -48,9 +48,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_identification_info",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail+backButton+COMPONENT",
-     "clcommon__Release_Checksum__c": "e45e33e4ccad3134a704473249c000f809b3a9279c9ec397c64178dad265991c",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_beneficial_identification_detail+backButton",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail+backButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "ae9279e68caa0f69b695cf623aa9d9c90e32059d61af5ab2289de753cbd05c0a"
 }

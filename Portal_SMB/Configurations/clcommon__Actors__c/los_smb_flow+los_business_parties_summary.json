@@ -25,32 +25,32 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
+               "textBefore": "Below is a summary of all the Beneficial Owners associated with your business. <br><br>Please certify that all of the information is correct:",
+               "blankMessage": "No Beneficial Parties!",
+               "renderFields": {
+                    "clcommon__Contact__r.FirstName": false,
+                    "clcommon__Contact__r.Email": false,
+                    "clcommon__Account__r.Id": false,
+                    "clcommon__Contact__r.LastName": false,
+                    "clcommon__Contact__r.Id": false,
+                    "clcommon__Contact__r.Phone": false,
+                    "Id": false,
+                    "clcommon__Party_Types__c": false
                },
                "editableFields": {
                     "clcommon__Party_Types__c": false
                },
-               "renderFields": {
-                    "clcommon__Party_Types__c": false,
-                    "Id": false,
-                    "clcommon__Contact__r.Phone": false,
-                    "clcommon__Contact__r.Id": false,
-                    "clcommon__Contact__r.LastName": false,
-                    "clcommon__Account__r.Id": false,
-                    "clcommon__Contact__r.Email": false,
-                    "clcommon__Contact__r.FirstName": false
-               },
-               "blankMessage": "No Beneficial Parties!",
-               "textBefore": "Below is a summary of all the Beneficial Owners associated with your business. <br><br>Please certify that all of the information is correct:"
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               }
           },
           "property": {
+               "structureName": "los_beneficial_parties_summary",
                "whereClause": {
                     "appId": "$global.attr(applicationId);"
-               },
-               "structureName": "los_beneficial_parties_summary"
+               }
           },
           "type": "list-view",
           "category": "component"

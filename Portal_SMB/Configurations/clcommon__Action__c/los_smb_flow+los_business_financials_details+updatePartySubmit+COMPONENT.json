@@ -5,10 +5,23 @@
      "Name": "updatePartySubmit",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "updatePartySubmit",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Next",
+               "render": false,
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "clcommon__Party__c": {
+                    "genesis__Application__c": "$global.attr(applicationId);",
+                    "id": "$global.attr(businessPartyId);",
+                    "solcommon__Submission_Status__c": "SUBMITTED",
+                    "clcommon__Account__c": "$global.attr(businessAccountId);"
+               }
+          },
           "successHandler": {
                "actions": [
                     {
@@ -16,25 +29,12 @@
                     }
                ]
           },
-          "remoteActionArguments": {
-               "clcommon__Party__c": {
-                    "clcommon__Account__c": "$global.attr(businessAccountId);",
-                    "solcommon__Submission_Status__c": "SUBMITTED",
-                    "id": "$global.attr(businessPartyId);",
-                    "genesis__Application__c": "$global.attr(applicationId);"
-               },
-               "applicationId": "$global.attr(applicationId);"
-          },
-          "appearance": {
-               "style": "primary",
-               "render": false,
-               "label": "Next",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "updatePartySubmit"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 3,
+     "clcommon__Action_Order__c": 4,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -44,9 +44,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_business_financial_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_business_financials_details+updatePartySubmit+COMPONENT",
-     "clcommon__Release_Checksum__c": "1e57978e0fa9a7bcd83bb7905394168ddc0ed97aaa8f4a7d5022f1ca9a34234f",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalUpdateParty",
      "clcommon__Unique_Action_Name__c": "los_business_financials_details+updatePartySubmit",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_business_financials_details+updatePartySubmit+COMPONENT",
+     "clcommon__Release_Checksum__c": "bc15e5871633b1b50a688f306e51f008dc34b9fc6f481ea3c4a7c380e23feb61"
 }

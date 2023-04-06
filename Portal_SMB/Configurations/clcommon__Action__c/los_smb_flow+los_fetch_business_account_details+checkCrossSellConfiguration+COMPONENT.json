@@ -5,30 +5,30 @@
      "Name": "checkCrossSellConfiguration",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "checkCrossSellConfiguration",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "checkCrossSellConfiguration",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "position": "bottom-left",
+               "render": false
+          },
+          "remoteActionArguments": {
+               "crossSellInitiatedFromId": "SMB_LOS",
+               "crossSellOfferingId": "Business_Account_Opening"
+          },
+          "validation": [],
           "successHandler": {
                "assignments": [
                     {
-                         "value": "$result.count();",
-                         "field": "$global.attr(crossSellEnabled);"
+                         "field": "$global.attr(crossSellEnabled);",
+                         "value": "$result.count();"
                     }
                ]
           },
-          "validation": [],
-          "remoteActionArguments": {
-               "crossSellOfferingId": "Business_Account_Opening",
-               "crossSellInitiatedFromId": "SMB_LOS"
-          },
-          "appearance": {
-               "render": false,
-               "position": "bottom-left",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "checkCrossSellConfiguration"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "checkCrossSellConfiguration"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "submit",
@@ -40,9 +40,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_fetch_business_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_fetch_business_account_details+checkCrossSellConfiguration+COMPONENT",
-     "clcommon__Release_Checksum__c": "d07ed2cbaee2a3036077b891dced830a565854c14315fdf858b7c1c3300c20d6",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalGetCrossSellSolutions",
      "clcommon__Unique_Action_Name__c": "los_fetch_business_account_details+checkCrossSellConfiguration",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_fetch_business_account_details+checkCrossSellConfiguration+COMPONENT",
+     "clcommon__Release_Checksum__c": "d07ed2cbaee2a3036077b891dced830a565854c14315fdf858b7c1c3300c20d6"
 }

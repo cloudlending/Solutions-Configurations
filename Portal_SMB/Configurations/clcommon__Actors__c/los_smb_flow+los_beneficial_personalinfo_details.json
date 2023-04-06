@@ -16,54 +16,54 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
-               },
-               "editableFields": {
-                    "clcommon__Contact__r.Email": false,
-                    "clcommon__Contact__r.Phone": false,
-                    "clcommon__Party_Types__c": false,
-                    "clcommon__Contact__r.FirstName": false,
-                    "clcommon__Contact__r.LastName": false
-               },
-               "renderFields": {
-                    "clcommon__Contact__r.Id": false,
-                    "Id": false,
-                    "clcommon__Party_Types__c": false
-               },
+               "title": "Tell us about you",
+               "editable": true,
+               "fieldColumns": 1,
                "grid": {
                     "field": {
-                         "clcommon__Contact__r.clcommon__Current_Zip_Code__c": {
+                         "$default": {
+                              "sm": 6,
+                              "xs": 12
+                         },
+                         "clcommon__Contact__r.clcommon__Current_Street__c": {
+                              "sm": 12
+                         },
+                         "clcommon__Contact__r.clcommon__Current_State__c": {
                               "sm": 4
                          },
                          "clcommon__Contact__r.clcommon__Current_City__c": {
                               "sm": 4
                          },
-                         "clcommon__Contact__r.clcommon__Current_State__c": {
+                         "clcommon__Contact__r.clcommon__Current_Zip_Code__c": {
                               "sm": 4
-                         },
-                         "clcommon__Contact__r.clcommon__Current_Street__c": {
-                              "sm": 12
-                         },
-                         "$default": {
-                              "xs": 12,
-                              "sm": 6
                          }
                     }
                },
-               "fieldColumns": 1,
-               "editable": true,
-               "title": "Tell us about you"
+               "renderFields": {
+                    "clcommon__Party_Types__c": false,
+                    "Id": false,
+                    "clcommon__Contact__r.Id": false
+               },
+               "editableFields": {
+                    "clcommon__Contact__r.LastName": false,
+                    "clcommon__Contact__r.FirstName": false,
+                    "clcommon__Party_Types__c": false,
+                    "clcommon__Contact__r.Phone": false,
+                    "clcommon__Contact__r.Email": false
+               },
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               }
           },
           "property": {
-               "whereClause": {
-                    "applicationId": "$global.attr(applicationId);",
-                    "accountId": "$global.attr(userInfo).attr(accountId);"
-               },
+               "structureName": "los_benefical_personal_info",
                "queryWithDefaultNew": true,
-               "structureName": "los_benefical_personal_info"
+               "whereClause": {
+                    "accountId": "$global.attr(userInfo).attr(accountId);",
+                    "applicationId": "$global.attr(applicationId);"
+               }
           },
           "type": "detail-view",
           "category": "component"

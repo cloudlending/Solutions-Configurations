@@ -5,30 +5,30 @@
      "Name": "query_los_fetch_applications",
      "clcommon__API_Configurations__c": {
           "postProcessMapping": {
-               "genesis__Applications__c.Id": "1",
-               "genesis__Applications__c.Name": "2",
-               "genesis__Applications__c.genesis__Asset_Class__c": "3",
-               "genesis__Applications__c.genesis__CL_Product__c": "4",
-               "genesis__Applications__c.genesis__CL_Product__r.solcommon__Portal_Label__c": "5",
-               "genesis__Applications__c.genesis__CL_Purpose__c": "6",
-               "genesis__Applications__c.genesis__CL_Purpose__r.Name": "7",
-               "genesis__Applications__c.genesis__Other_Purpose__c": "8",
-               "genesis__Applications__c.genesis__Loan_Amount__c": "9",
-               "genesis__Applications__c.genesis__Status__c": "10",
-               "genesis__Applications__c.genesis__Account__r.Name": "11",
-               "genesis__Applications__c.genesis__CL_Product__r.solcommon__Pre_Approval_Document_Collection__c)": "14",
+               "genesis__Applications__c.genesis__Is_Review_Application__c": "12",
                "genesis__Applications__c.genesis__CL_Product__r.solcommon__Collect_Documents_Post_Approval__c": "13",
-               "genesis__Applications__c.genesis__Is_Review_Application__c": "12"
+               "genesis__Applications__c.genesis__CL_Product__r.solcommon__Pre_Approval_Document_Collection__c)": "14",
+               "genesis__Applications__c.genesis__Account__r.Name": "11",
+               "genesis__Applications__c.genesis__Status__c": "10",
+               "genesis__Applications__c.genesis__Loan_Amount__c": "9",
+               "genesis__Applications__c.genesis__Other_Purpose__c": "8",
+               "genesis__Applications__c.genesis__CL_Purpose__r.Name": "7",
+               "genesis__Applications__c.genesis__CL_Purpose__c": "6",
+               "genesis__Applications__c.genesis__CL_Product__r.solcommon__Portal_Label__c": "5",
+               "genesis__Applications__c.genesis__CL_Product__c": "4",
+               "genesis__Applications__c.genesis__Asset_Class__c": "3",
+               "genesis__Applications__c.Name": "2",
+               "genesis__Applications__c.Id": "1"
           }
      },
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "remoteActionArguments": {},
+          "name": "query_los_fetch_applications",
           "property": {},
-          "name": "query_los_fetch_applications"
+          "remoteActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "query",
@@ -40,9 +40,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_fetch_applications",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list+query_los_fetch_applications+COMPONENT",
-     "clcommon__Release_Checksum__c": "53d0f0882fa5c7187773a30797bffb4abb2045a4994264e9ac9c9967c24bfddf",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalGetApplicationList",
      "clcommon__Unique_Action_Name__c": "los_applicatiion_list+query_los_fetch_applications",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_applicatiion_list+query_los_fetch_applications+COMPONENT",
+     "clcommon__Release_Checksum__c": "53d0f0882fa5c7187773a30797bffb4abb2045a4994264e9ac9c9967c24bfddf"
 }

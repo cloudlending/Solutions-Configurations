@@ -4,11 +4,9 @@
      },
      "Name": "smb_back_office_business_parties_personal_information",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "smb_back_office_business_parties_personal_information",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "f3a6d24721d0f589dcdb2f85af46c2b792f6f72b8a440fa7c8aea2570d02d1f2",
      "clcommon__Unique_Name__c": "smb_back_office_business_parties_personal_information",
      "clcommon__data__c": {
           "structureName": "smb_back_office_business_parties_personal_information",
@@ -37,8 +35,10 @@
                                    "fieldType": "string",
                                    "label": "First Name",
                                    "required": true,
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "First Name is Required."
+                                        "requiredErrorText": "First Name is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "First Name"
                               }
@@ -50,8 +50,10 @@
                                    "fieldType": "string",
                                    "label": "Last Name",
                                    "required": true,
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "Last Name is Required."
+                                        "requiredErrorText": "Last Name is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "Last Name"
                               }
@@ -63,8 +65,10 @@
                                    "fieldType": "string",
                                    "label": "Email",
                                    "required": true,
+                                   "regex": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$",
                                    "messages": {
-                                        "requiredErrorText": "Email is Required."
+                                        "regexErrorText": "Invalid email address",
+                                        "requiredErrorText": "Email address is required"
                                    },
                                    "ariaLabel": "Email"
                               }
@@ -94,7 +98,8 @@
                                                   3,
                                                   3,
                                                   4
-                                             ]
+                                             ],
+                                             "initValue": "4353453651"
                                         }
                                    },
                                    "ariaLabel": "Phone Number"
@@ -106,6 +111,10 @@
                               "fieldUi": {
                                    "fieldType": "string",
                                    "label": " Job Title",
+                                   "regex": "^[a-zA-Z0-9\\s]*$",
+                                   "messages": {
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
+                                   },
                                    "ariaLabel": "Title"
                               }
                          },
@@ -119,7 +128,7 @@
                                    "regex": "^\\d{9}$",
                                    "messages": {
                                         "requiredErrorText": "Social security number is required.",
-                                        "regexErrorText": "Social Security Number is invalid."
+                                        "regexErrorText": "Social security number is invalid."
                                    },
                                    "format": {
                                         "options": {
@@ -130,7 +139,8 @@
                                                   3,
                                                   2,
                                                   4
-                                             ]
+                                             ],
+                                             "initValue": "000000001"
                                         }
                                    },
                                    "ariaLabel": "Social Security Number"
@@ -205,6 +215,7 @@
                                    "fieldType": "addressAutocomplete",
                                    "label": "Street Address",
                                    "required": true,
+                                   "regex": "^[a-zA-Z0-9\n#/\\s]*$",
                                    "addressComponentMapping": [
                                         {
                                              "addressComponent": "street_number",
@@ -234,7 +245,8 @@
                                         ]
                                    },
                                    "messages": {
-                                        "requiredErrorText": "Street address is Required."
+                                        "requiredErrorText": "Street address is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "Street Address"
                               }
@@ -246,8 +258,10 @@
                                    "fieldType": "string",
                                    "label": "City",
                                    "required": true,
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "City is required"
+                                        "requiredErrorText": "City is required",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "City"
                               }
@@ -625,14 +639,36 @@
                                    "fieldType": "string",
                                    "label": "Postal Code",
                                    "required": true,
+                                   "regex": "^(\\d{5}(\\d{4})?)$",
                                    "messages": {
-                                        "requiredErrorText": "Postal code  is required"
+                                        "requiredErrorText": "Postal code  is required",
+                                        "regexErrorText": "Please enter a valid postal code"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numericOnly": true,
+                                             "blocks": [
+                                                  5
+                                             ],
+                                             "initValue": "23435"
+                                        }
                                    },
                                    "ariaLabel": "Postal Code"
+                              }
+                         },
+                         {
+                              "id": "fd73c24e-d74b-4d6a-ba68-784e6b2cf9a0",
+                              "fieldName": "clcommon__Personal_Information__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
                               }
                          }
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "smb_back_office_business_parties_personal_information",
+     "clcommon__Release_Checksum__c": "f066aa939065f9ae1dde77936ea0ccf1b0ea98932f36193f68af864c259e763c"
 }

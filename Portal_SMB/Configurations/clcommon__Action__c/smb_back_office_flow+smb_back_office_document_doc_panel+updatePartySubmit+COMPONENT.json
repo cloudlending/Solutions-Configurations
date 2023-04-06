@@ -8,14 +8,14 @@
           "name": "updatePartySubmit",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": "$global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\"",
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "render": "$global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\"",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "BusinessParties"
+               "portalStage": "BusinessParties",
+               "applicationId": "$global.attr(applicationId);"
           },
           "validation": [
                "smb_back_office_document_doc_panel"
@@ -43,9 +43,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_upload_document_panel_sub_folder",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_document_doc_panel+updatePartySubmit+COMPONENT",
-     "clcommon__Release_Checksum__c": "dba21dcdb35b429d53f776108ee551138188ea8f72b2346bdc8db7d12d912c17",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
      "clcommon__Unique_Action_Name__c": "smb_back_office_document_doc_panel+updatePartySubmit",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_document_doc_panel+updatePartySubmit+COMPONENT",
+     "clcommon__Release_Checksum__c": "dba21dcdb35b429d53f776108ee551138188ea8f72b2346bdc8db7d12d912c17"
 }

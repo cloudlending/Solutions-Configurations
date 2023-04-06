@@ -1,0 +1,67 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "NullifyResolutionType",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "NullifyResolutionType",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Next"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               },
+               "genesis__Business_Information__c": {
+                    "id": "$this.attr(genesis__Business_Information__r.Id);",
+                    "genesis__Resolution_Type__c": null
+               },
+               "account": {
+                    "id": "$global.attr(businessAccountId);",
+                    "clcommon__Legal_Entity_Type__c": "$state(los_business_legal_entity_types).attr(clcommon__Legal_Entity_Type__c);",
+                    "Phone": "$this.attr(Phone);",
+                    "BillingPostalCode": "$this.attr(BillingPostalCode);",
+                    "BillingState": "$this.attr(BillingState);",
+                    "BillingCity": "$this.attr(BillingCity);",
+                    "BillingStreet": "$this.attr(BillingStreet);",
+                    "BillingCountry": "US",
+                    "name": "$this.attr(Name);"
+               }
+          },
+          "validation": [],
+          "successHandler": {
+               "actions": [
+                    {
+                         "name": "savePortalStageExisting"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_business_details"
+     },
+     "clcommon__Component_Structure_Name__c": "los_basic_business_details",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveApplication",
+     "clcommon__Unique_Action_Name__c": "los_business_details+NullifyResolutionType",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_business_details+NullifyResolutionType+COMPONENT",
+     "clcommon__Release_Checksum__c": "f9462cb428279d49d601bc2cec583aadcaad0af49734b62a920c4f782a81dd72"
+}

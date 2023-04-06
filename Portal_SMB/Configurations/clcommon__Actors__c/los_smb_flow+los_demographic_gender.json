@@ -13,33 +13,33 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "editableFields": {
-                    "clcommon__Personal_Information__r.Id": false
+               "editable": true,
+               "fieldColumns": 1,
+               "grid": {
+                    "field": {
+                         "$default": {
+                              "sm": 6,
+                              "xs": 12
+                         }
+                    }
+               },
+               "renderFields": {
+                    "clcommon__Personal_Information__r.Id": false,
+                    "clcommon__Personal_Information__r.clcommon__Gender__c": "$state(los_demographic_information).attr(intdm__Gender_Opt_Out__c); == false"
                },
                "noLabelFields": [
                     "clcommon__Personal_Information__r.clcommon__Gender__c"
                ],
-               "renderFields": {
-                    "clcommon__Personal_Information__r.clcommon__Gender__c": "$state(los_demographic_information).attr(intdm__Gender_Opt_Out__c); == false",
+               "editableFields": {
                     "clcommon__Personal_Information__r.Id": false
-               },
-               "grid": {
-                    "field": {
-                         "$default": {
-                              "xs": 12,
-                              "sm": 6
-                         }
-                    }
-               },
-               "fieldColumns": 1,
-               "editable": true
+               }
           },
           "property": {
+               "structureName": "los_demographic_information_gender",
+               "queryWithDefaultNew": true,
                "whereClause": {
                     "contactId": "$global.attr(borrowerContactId);"
-               },
-               "queryWithDefaultNew": true,
-               "structureName": "los_demographic_information_gender"
+               }
           },
           "type": "detail-view",
           "category": "component"

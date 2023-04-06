@@ -5,13 +5,27 @@
      "Name": "SendDocumentSubmitEmail",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {
-               "submitFailureText": "$serverMessage;"
+          "name": "SendDocumentSubmitEmail",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "position": "bottom-left",
+               "label": "Next"
           },
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "confirmation": {
+               "type": "prompt",
+               "title": "Confirm Submission",
+               "content": "<p>Please Verify your documents before submission.</br>Once submitted you may not be able to edit your loan information.</p>",
+               "showCloseButton": false,
+               "showConfirmButtons": true,
+               "confirmText": "Confirm",
+               "cancelText": "Cancel",
+               "cancelOrCloseHandler": {}
+          },
+          "remoteActionArguments": {
+               "documentPage": "postApproval",
+               "applicationId": "$global.attr(applicationId);"
+          },
           "successHandler": {
                "actions": [
                     {
@@ -19,27 +33,13 @@
                     }
                ]
           },
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "documentPage": "postApproval"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
           },
-          "confirmation": {
-               "cancelOrCloseHandler": {},
-               "cancelText": "Cancel",
-               "confirmText": "Confirm",
-               "showConfirmButtons": true,
-               "showCloseButton": false,
-               "content": "<p>Please Verify your documents before submission.</br>Once submitted you may not be able to edit your loan information.</p>",
-               "title": "Confirm Submission",
-               "type": "prompt"
-          },
-          "appearance": {
-               "label": "Next",
-               "position": "bottom-left",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "SendDocumentSubmitEmail"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
@@ -51,9 +51,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_post_approval_documents_list_null_acc",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_post_approval_documents_list_null_acc+SendDocumentSubmitEmail+COMPONENT",
-     "clcommon__Release_Checksum__c": "048b215c03b34f53c7211cae69317f7d31c6123ed5c87aa8bdefadf4a097353c",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalDocumentUploadNotification",
      "clcommon__Unique_Action_Name__c": "los_post_approval_documents_list_null_acc+SendDocumentSubmitEmail",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_post_approval_documents_list_null_acc+SendDocumentSubmitEmail+COMPONENT",
+     "clcommon__Release_Checksum__c": "048b215c03b34f53c7211cae69317f7d31c6123ed5c87aa8bdefadf4a097353c"
 }

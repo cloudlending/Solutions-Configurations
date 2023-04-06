@@ -5,75 +5,82 @@
      "Name": "businessBasicsExistingNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {
-               "submitFailureText": "$serverMessage;"
+          "name": "businessBasicsExistingNext",
+          "property": {},
+          "appearance": {
+               "render": "($this.attr(id); != \"\" and $this.attr(id); != undefined and $this.attr(id); != \"new_record_id\") and ($global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined and $global.attr(applicationId); != \"new_record_id\")",
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Next"
           },
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "actions": [
-                    {
-                         "name": "savePortalStageExisting"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "$result.attr(businessInfoId);",
-                         "field": "$global.attr(businessInfoId);"
-                    },
-                    {
-                         "value": "$result.attr(accountId);",
-                         "field": "$global.attr(businessAccountId);"
-                    }
-               ]
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);",
+                    "genesis__CL_Product__c": "$global.attr(loanProduct);",
+                    "genesis__CL_Purpose__c": "$global.attr(loanPurpose);",
+                    "genesis__Loan_Amount__c": "$global.attr(loanAmount);",
+                    "genesis__Other_Purpose__c": "$global.attr(otherPurposeName);"
+               },
+               "genesis__Business_Information__c": {
+                    "id": "$this.attr(genesis__Business_Information__r.Id);",
+                    "genesis__Management_Type__c": "$this.attr(genesis__Business_Information__r.genesis__Management_Type__c);",
+                    "genesis__Completed_Resolution_Date__c": "$this.attr(genesis__Business_Information__r.genesis__Completed_Resolution_Date__c);",
+                    "genesis__Resolution_Type__c": "$this.attr(genesis__Business_Information__r.genesis__Resolution_Type__c);",
+                    "genesis__Date_Business_Established__c": "$this.attr(genesis__Business_Information__r.genesis__Date_Business_Established__c);",
+                    "genesis__Tax_Identification_Number__c": "$this.attr(genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
+                    "genesis__DBA_Name__c": "$this.attr(genesis__Business_Information__r.genesis__DBA_Name__c);",
+                    "genesis__Business_Registration_State__c": "$this.attr(genesis__Business_Information__r.genesis__Business_Registration_State__c);",
+                    "genesis__Business_Description__c": "$this.attr(genesis__Business_Information__r.genesis__Business_Description__c);"
+               },
+               "account": {
+                    "id": "$global.attr(businessAccountId);",
+                    "clcommon__Legal_Entity_Type__c": "$state(los_business_legal_entity_types).attr(clcommon__Legal_Entity_Type__c);",
+                    "Phone": "$this.attr(Phone);",
+                    "BillingPostalCode": "$this.attr(BillingPostalCode);",
+                    "BillingState": "$this.attr(BillingState);",
+                    "BillingCity": "$this.attr(BillingCity);",
+                    "BillingStreet": "$this.attr(BillingStreet);",
+                    "BillingCountry": "US",
+                    "clcommon__Is_Sole_Proprietorship__c": false,
+                    "name": "$this.attr(Name);"
+               }
           },
           "validation": [
                "los_business_details",
-               "los_business_legal_entity_types"
+               "los_business_legal_entity_types",
+               "los_business_are_you_sole_proprietor"
           ],
-          "remoteActionArguments": {
-               "account": {
-                    "name": "$this.attr(Name);",
-                    "BillingCountry": "US",
-                    "BillingStreet": "$this.attr(BillingStreet);",
-                    "BillingCity": "$this.attr(BillingCity);",
-                    "BillingState": "$this.attr(BillingState);",
-                    "BillingPostalCode": "$this.attr(BillingPostalCode);",
-                    "Phone": "$this.attr(Phone);",
-                    "clcommon__Legal_Entity_Type__c": "$state(los_business_legal_entity_types).attr(clcommon__Legal_Entity_Type__c);",
-                    "id": "$global.attr(businessAccountId);"
-               },
-               "genesis__Business_Information__c": {
-                    "genesis__Business_Description__c": "$this.attr(genesis__Business_Information__r.genesis__Business_Description__c);",
-                    "genesis__Business_Registration_State__c": "$this.attr(genesis__Business_Information__r.genesis__Business_Registration_State__c);",
-                    "genesis__DBA_Name__c": "$this.attr(genesis__Business_Information__r.genesis__DBA_Name__c);",
-                    "genesis__Tax_Identification_Number__c": "$this.attr(genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
-                    "genesis__Date_Business_Established__c": "$this.attr(genesis__Business_Information__r.genesis__Date_Business_Established__c);",
-                    "genesis__Resolution_Type__c": "$this.attr(genesis__Business_Information__r.genesis__Resolution_Type__c);",
-                    "genesis__Completed_Resolution_Date__c": "$this.attr(genesis__Business_Information__r.genesis__Completed_Resolution_Date__c);",
-                    "genesis__Management_Type__c": "$this.attr(genesis__Business_Information__r.genesis__Management_Type__c);",
-                    "id": "$this.attr(genesis__Business_Information__r.Id);"
-               },
-               "genesis__Applications__c": {
-                    "genesis__Other_Purpose__c": "$global.attr(otherPurposeName);",
-                    "genesis__Loan_Amount__c": "$global.attr(loanAmount);",
-                    "genesis__CL_Purpose__c": "$global.attr(loanPurpose);",
-                    "genesis__CL_Product__c": "$global.attr(loanProduct);",
-                    "id": "$global.attr(applicationId);"
-               }
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(businessInfoId);",
+                         "value": "$result.attr(businessInfoId);"
+                    },
+                    {
+                         "field": "$global.attr(businessAccountId);",
+                         "value": "$result.attr(accountId);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$state(los_business_legal_entity_types).attr(clcommon__Legal_Entity_Type__r).attr(Name); == \"Sole Proprietorship\"",
+                         "name": "NullifyResolutionType"
+                    },
+                    {
+                         "condition": "$state(los_business_legal_entity_types).attr(clcommon__Legal_Entity_Type__r).attr(Name); != \"Sole Proprietorship\"",
+                         "name": "savePortalStageExisting"
+                    }
+               ]
           },
-          "appearance": {
-               "label": "Next",
-               "style": "primary",
-               "position": "bottom-left",
-               "render": "($this.attr(id); != \"\" and $this.attr(id); != undefined and $this.attr(id); != \"new_record_id\") and ($global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined and $global.attr(applicationId); != \"new_record_id\")"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
           },
-          "property": {},
-          "name": "businessBasicsExistingNext"
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -83,9 +90,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_basic_business_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_business_details+businessBasicsExistingNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "23d1f5389b0f94aa1ee6301ac87c50ad8f40c4b7e3e2ac498c9a2b47072f1e65",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveApplication",
      "clcommon__Unique_Action_Name__c": "los_business_details+businessBasicsExistingNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_business_details+businessBasicsExistingNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "3714137d36ca994ec43dddcdfc308d97307aed36fe3563daa2cc8541d261d002"
 }

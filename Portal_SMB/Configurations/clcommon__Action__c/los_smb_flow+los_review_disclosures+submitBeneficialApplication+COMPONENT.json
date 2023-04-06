@@ -1,0 +1,52 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "submitBeneficialApplication",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "submitBeneficialApplication",
+          "property": {},
+          "appearance": {
+               "label": "Submit",
+               "render": false,
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               }
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(los_review_steps).appearance(current);",
+                         "value": "BeneficialConfirmation"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
+     },
+     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_review_disclosures"
+     },
+     "clcommon__Component_Structure_Name__c": null,
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalApplicationSubmission",
+     "clcommon__Unique_Action_Name__c": "los_review_disclosures+submitBeneficialApplication",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_review_disclosures+submitBeneficialApplication+COMPONENT",
+     "clcommon__Release_Checksum__c": "9e3f86bbd2bf51aa908dc8108e934b33d15103082dbf7a9c73d9208179996d05"
+}

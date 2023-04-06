@@ -11,19 +11,19 @@
      "clcommon__Actor_Definition__c": {
           "generalHandlers": {
                "fieldChange": {
-                    "bankAccount": {
-                         "assignments": [
-                              {
-                                   "value": "@mathjs{ $this.attr(bankAccount); == true ? false : $this.attr(newAccount); };",
-                                   "field": "$this.attr(newAccount);"
-                              }
-                         ]
-                    },
                     "newAccount": {
                          "assignments": [
                               {
                                    "value": "@mathjs{ $this.attr(newAccount); == true ? false : $this.attr(bankAccount); };",
                                    "field": "$this.attr(bankAccount);"
+                              }
+                         ]
+                    },
+                    "bankAccount": {
+                         "assignments": [
+                              {
+                                   "value": "@mathjs{ $this.attr(bankAccount); == true ? false : $this.attr(newAccount); };",
+                                   "field": "$this.attr(newAccount);"
                               }
                          ]
                     }
@@ -32,31 +32,31 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "title": "Please enter your funding information",
-               "multipleSelections": false,
-               "renderFields": {
-                    "newAccount": "$global.attr(crossSellEnabled); == 1"
+               "editable": true,
+               "editableFields": {
+                    "newAccount": true
                },
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
-               },
+               "fieldColumns": 1,
                "grid": {
                     "field": {
                          "accountType": {
                               "selectButton": {
-                                   "xs": 12,
-                                   "sm": 9
+                                   "sm": 9,
+                                   "xs": 12
                               }
                          }
                     }
                },
-               "fieldColumns": 1,
-               "editableFields": {
-                    "newAccount": true
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
                },
-               "editable": true
+               "renderFields": {
+                    "newAccount": "$global.attr(crossSellEnabled); == 1"
+               },
+               "multipleSelections": false,
+               "title": "Please enter your funding information"
           },
           "property": {
                "structureName": "los_financial_information"

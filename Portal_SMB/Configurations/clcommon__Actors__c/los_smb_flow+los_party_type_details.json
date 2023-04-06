@@ -10,6 +10,42 @@
      },
      "clcommon__Actor_Definition__c": {
           "generalHandlers": {
+               "loaded": {
+                    "assignments": [
+                         {
+                              "arguments": [
+                                   "$this.attr(clcommon__Party_Types__c);",
+                                   "GUARANTOR"
+                              ],
+                              "value": "$ext.checkThePartyType",
+                              "field": "$global.attr(isGuarantorPartyType);"
+                         },
+                         {
+                              "arguments": [
+                                   "$this.attr(clcommon__Party_Types__c);",
+                                   "PRINCIPAL"
+                              ],
+                              "value": "$ext.checkThePartyType",
+                              "field": "$global.attr(isPrincipalPartyType);"
+                         },
+                         {
+                              "arguments": [
+                                   "$this.attr(clcommon__Party_Types__c);",
+                                   "AUTHORIZED SIGNER"
+                              ],
+                              "value": "$ext.checkThePartyType",
+                              "field": "$global.attr(isSignerPartyType);"
+                         },
+                         {
+                              "arguments": [
+                                   "$this.attr(clcommon__Party_Types__c);",
+                                   "BENEFICIAL OWNER"
+                              ],
+                              "value": "$ext.checkThePartyType",
+                              "field": "$global.attr(isBeneficialPartyType);"
+                         }
+                    ]
+               },
                "fieldChange": {
                     "clcommon__Party_Types__c": {
                          "assignments": [
@@ -47,84 +83,48 @@
                               }
                          ]
                     }
-               },
-               "loaded": {
-                    "assignments": [
-                         {
-                              "arguments": [
-                                   "$this.attr(clcommon__Party_Types__c);",
-                                   "GUARANTOR"
-                              ],
-                              "value": "$ext.checkThePartyType",
-                              "field": "$global.attr(isGuarantorPartyType);"
-                         },
-                         {
-                              "arguments": [
-                                   "$this.attr(clcommon__Party_Types__c);",
-                                   "PRINCIPAL"
-                              ],
-                              "value": "$ext.checkThePartyType",
-                              "field": "$global.attr(isPrincipalPartyType);"
-                         },
-                         {
-                              "arguments": [
-                                   "$this.attr(clcommon__Party_Types__c);",
-                                   "AUTHORIZED SIGNER"
-                              ],
-                              "value": "$ext.checkThePartyType",
-                              "field": "$global.attr(isSignerPartyType);"
-                         },
-                         {
-                              "arguments": [
-                                   "$this.attr(clcommon__Party_Types__c);",
-                                   "BENEFICIAL OWNER"
-                              ],
-                              "value": "$ext.checkThePartyType",
-                              "field": "$global.attr(isBeneficialPartyType);"
-                         }
-                    ]
                }
           },
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "renderFields": {
-                    "clcommon__AUTHORIZED SIGNER_Capacity__c": "$this.attr(clcommon__Party_Types__c); ==\"AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;AUTHORIZED SIGNER\" or  $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;GUARANTOR;BENEFICIAL OWNER\"",
-                    "clcommon__Percent_Ownership__c": "$this.attr(clcommon__Party_Types__c); ==\"BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;GUARANTOR;BENEFICIAL OWNER\"",
-                    "solcommon__Position_In_Company__c": "$this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;GUARANTOR;BENEFICIAL OWNER\""
-               },
+               "editable": true,
+               "fieldColumns": 1,
                "grid": {
                     "field": {
-                         "clcommon__Party_Types__c": {
-                              "selectButton": {
-                                   "xs": 12,
-                                   "sm": 4
-                              }
-                         },
-                         "$default": {
-                              "xs": 12,
-                              "sm": 6
-                         },
                          "solcommon__Is_Guarantor__c": {
                               "sm": 12
+                         },
+                         "$default": {
+                              "sm": 6,
+                              "xs": 12
+                         },
+                         "clcommon__Party_Types__c": {
+                              "selectbutton": {
+                                   "sm": 9,
+                                   "xs": 12
+                              }
                          }
                     }
                },
-               "fieldColumns": 1,
-               "editable": true
+               "renderFields": {
+                    "solcommon__Position_In_Company__c": "$this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;GUARANTOR;BENEFICIAL OWNER\"",
+                    "clcommon__Percent_Ownership__c": "$this.attr(clcommon__Party_Types__c); ==\"BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;GUARANTOR;BENEFICIAL OWNER\"",
+                    "clcommon__AUTHORIZED SIGNER_Capacity__c": "$this.attr(clcommon__Party_Types__c); ==\"AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;AUTHORIZED SIGNER\" or  $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;AUTHORIZED SIGNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"BENEFICIAL OWNER;GUARANTOR;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;BENEFICIAL OWNER;AUTHORIZED SIGNER\" or $this.attr(clcommon__Party_Types__c); == \"GUARANTOR;AUTHORIZED SIGNER;BENEFICIAL OWNER\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;BENEFICIAL OWNER;GUARANTOR\" or $this.attr(clcommon__Party_Types__c); == \"AUTHORIZED SIGNER;GUARANTOR;BENEFICIAL OWNER\""
+               }
           },
           "property": {
-               "whereClause": {
-                    "appId": "$global.attr(applicationId);",
-                    "partyId": "$global.attr(borrowerPartyId);"
-               },
+               "structureName": "los_party_type_details",
                "queryWithDefaultNew": true,
-               "structureName": "los_party_type_details"
+               "whereClause": {
+                    "partyId": "$global.attr(borrowerPartyId);",
+                    "appId": "$global.attr(applicationId);"
+               }
           },
           "type": "detail-view",
           "category": "component"
      },
      "clcommon__Actor_Name__c": "los_party_type_details",
      "clcommon__External_ID__c": "los_smb_flow+los_party_type_details",
-     "clcommon__Release_Checksum__c": "1fab85c340e2f5e4aa7bb2d64d270ea9a358c94b79aa628d64f2ab0dbe7090e0"
+     "clcommon__Release_Checksum__c": "a7f446bd075b1ccec0fdbccb41e4915321eaea203b47346cb831d9458c423aa5"
 }

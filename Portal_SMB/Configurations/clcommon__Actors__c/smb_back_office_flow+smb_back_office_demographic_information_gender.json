@@ -9,6 +9,9 @@
           "clcommon__External_ID__c": "smb_back_office_flow"
      },
      "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
           "generalHandlers": {},
           "recordActions": [],
           "componentActions": [],
@@ -42,8 +45,7 @@
           "property": {
                "queryWithDefaultNew": true,
                "whereClause": {
-                    "contactId": "$global.attr(contactId);",
-                    "appId": "$global.attr(applicationId);"
+                    "contactId": "$global.attr(borrowerContactIdExisting);"
                },
                "structureName": "smb_back_office_demographic_personal_info_details"
           },
@@ -52,5 +54,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_demographic_information_gender",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_gender",
-     "clcommon__Release_Checksum__c": "dbdce063fb647cbb12496b1cc908a5ed936bd95eaef888c626851098fa2a7ed0"
+     "clcommon__Release_Checksum__c": "ddbc9e56019c4de7bc4979758ffee84d36cddf8abaf74885591d22349981a62a"
 }

@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "backButton",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "backButton",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "secondary",
+               "variant": "text",
+               "label": "Back"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(los_application_steps).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "los_beneficial_income_details",
+                              "los_beneficial_personalinfo_details",
+                              "los_beneficial_ownership_details",
+                              "los_beneficial_party_types",
+                              "los_beneficial_personal_details_disclosures"
+                         ]
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail_new"
+     },
+     "clcommon__Component_Structure_Name__c": "los_identification_info_new",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_beneficial_identification_detail_new+backButton",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail_new+backButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "9a032f77f9cdcf3fa45aee05784baa89b7794ba8f8e6c738adaa9bb1173cde7d"
+}

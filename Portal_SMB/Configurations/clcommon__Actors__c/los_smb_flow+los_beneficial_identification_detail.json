@@ -13,55 +13,49 @@
                "showLoadingAnimation": true
           },
           "generalHandlers": {
-               "loaded": {
-                    "assignments": [
-                         {
-                              "value": "@mathjs{$global.attr(isHMDALoan);==true ? \"DemographicInformation\" : ($global.attr(isCollectDocumentRequired);==true ? \"Documents\" : \"ReviewAndSubmit\")};",
-                              "field": "$global.attr(portalStage);"
-                         }
-                    ]
-               }
+               "loaded": {}
           },
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
-               },
-               "editableFields": {
-                    "Id": false,
-                    "genesis__State_of_Issuance__c": false
-               },
-               "renderFields": {
-                    "Id": false,
-                    "genesis__State_of_Issuance__c": false
-               },
+               "render": "$state(los_identification_records_check).count();>0",
+               "title": "Tell us more information about you",
+               "editable": true,
+               "fieldColumns": 1,
                "grid": {
                     "field": {
                          "$default": {
-                              "xs": 12,
-                              "sm": 6
+                              "sm": 6,
+                              "xs": 12
                          }
                     }
                },
-               "fieldColumns": 1,
-               "editable": true,
-               "title": "Tell us more information about you"
+               "renderFields": {
+                    "genesis__State_of_Issuance__c": false,
+                    "Id": false
+               },
+               "editableFields": {
+                    "genesis__State_of_Issuance__c": false,
+                    "Id": false
+               },
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               }
           },
           "property": {
-               "whereClause": {
-                    "accId": "$global.attr(borrowerAccountId);",
-                    "appId": "$global.attr(applicationId);"
-               },
+               "structureName": "los_identification_info",
                "queryWithDefaultNew": true,
-               "structureName": "los_identification_info"
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);",
+                    "accId": "$global.attr(borrowerAccountId);"
+               }
           },
           "type": "detail-view",
           "category": "component"
      },
      "clcommon__Actor_Name__c": "los_beneficial_identification_detail",
      "clcommon__External_ID__c": "los_smb_flow+los_beneficial_identification_detail",
-     "clcommon__Release_Checksum__c": "d583e5eee18a4e1bd06535cf2bedaeb14fd029024f71b4627c0e8d4905f04d57"
+     "clcommon__Release_Checksum__c": "75cb91ba94044eefe1e48ae9c0f2b5c456bb386135e2f83ea50b35bd433f82f8"
 }

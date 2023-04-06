@@ -5,47 +5,47 @@
      "Name": "partyPolling",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "messages": {
-               "showSubmitAnimation": false
+          "name": "partyPolling",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "render": "$global.attr(isPrincipal);!=true",
+               "label": ""
           },
-          "handler": {},
-          "pendingHandler": {
+          "automatic": true,
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "pollingPeriod": 3000,
+          "pollingMaxTries": 30,
+          "successHandler": {
                "assignments": [
                     {
-                         "value": "Please wait while we verify your business and individual identities...",
-                         "field": "$global.attr(loadedText);"
+                         "field": "$nav(los_review_steps).appearance(current);",
+                         "value": "BeneficialConfirmation"
                     }
                ]
           },
           "failureHandler": {
                "assignments": [
                     {
-                         "value": "BeneficialConfirmation",
-                         "field": "$nav(los_review_steps).appearance(current);"
+                         "field": "$nav(los_review_steps).appearance(current);",
+                         "value": "BeneficialConfirmation"
                     }
                ]
           },
-          "successHandler": {
+          "pendingHandler": {
                "assignments": [
                     {
-                         "value": "BeneficialConfirmation",
-                         "field": "$nav(los_review_steps).appearance(current);"
+                         "field": "$global.attr(loadedText);",
+                         "value": "Please wait while we verify your business and individual identities..."
                     }
                ]
           },
-          "pollingMaxTries": 30,
-          "pollingPeriod": 3000,
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);"
-          },
-          "automatic": true,
-          "appearance": {
-               "label": "",
-               "render": "$global.attr(isPrincipal);!=true",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "partyPolling"
+          "handler": {},
+          "messages": {
+               "showSubmitAnimation": false
+          }
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "submit",
@@ -57,9 +57,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_transition_animation+partyPolling+COMPONENT",
-     "clcommon__Release_Checksum__c": "72f66c5b0df644cec4c5f03e88d3779c16740072da06d0d747e1719ed79b73ba",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalPollingAPI",
      "clcommon__Unique_Action_Name__c": "los_transition_animation+partyPolling",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_transition_animation+partyPolling+COMPONENT",
+     "clcommon__Release_Checksum__c": "72f66c5b0df644cec4c5f03e88d3779c16740072da06d0d747e1719ed79b73ba"
 }

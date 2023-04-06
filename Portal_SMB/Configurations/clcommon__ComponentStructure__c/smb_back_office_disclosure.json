@@ -4,11 +4,9 @@
      },
      "Name": "smb_back_office_disclosure",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "smb_back_office_disclosure",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "id",
      "clcommon__Record_Access_Filter__c": "ownerId",
-     "clcommon__Release_Checksum__c": "fd26318ba64f2bad6986706ae7230ef26bb6a808e202cdf12f1c3904a9190dae",
      "clcommon__Unique_Name__c": "smb_back_office_disclosure",
      "clcommon__data__c": {
           "structureName": "smb_back_office_disclosure",
@@ -61,9 +59,44 @@
                                    "messages": {},
                                    "ariaLabel": "Create account email checkbox"
                               }
+                         },
+                         {
+                              "id": "a3545645",
+                              "fieldName": "create_account_email_control_person",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Control Person",
+                                   "defaultValue": false,
+                                   "messages": {},
+                                   "ariaLabel": "Create account email checkbox"
+                              }
+                         },
+                         {
+                              "id": "a35456458677",
+                              "fieldName": "create_account_email_partner_user",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Partner",
+                                   "defaultValue": false,
+                                   "messages": {},
+                                   "ariaLabel": "Create account email checkbox"
+                              }
+                         },
+                         {
+                              "id": "a354564509078p",
+                              "fieldName": "create_account_email_trustee_user",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Trustee",
+                                   "defaultValue": false,
+                                   "messages": {},
+                                   "ariaLabel": "Create account email checkbox"
+                              }
                          }
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "smb_back_office_disclosure",
+     "clcommon__Release_Checksum__c": "07ba4f858eb387d0464f52efecf485d032098dbe51a79faf1a4f7dcbaedf0846"
 }

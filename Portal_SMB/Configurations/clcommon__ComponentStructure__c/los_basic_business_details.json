@@ -4,11 +4,9 @@
      },
      "Name": "los_basic_business_details",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "los_basic_business_details",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "1ca52b6d97c5e93e9286dc5fb23b34be928559f1730b072c7fae0e057ba627f3",
      "clcommon__Unique_Name__c": "los_basic_business_details",
      "clcommon__data__c": {
           "structureName": "los_basic_business_details",
@@ -28,7 +26,7 @@
                               "relationJson": {
                                    "tableName": "clcommon__Legal_Entity__c",
                                    "whereClause": {
-                                        "freeForm": "id !=null and clcommon__Individual__c = false"
+                                        "freeForm": "id !=null and clcommon__Individual__c=false"
                                    },
                                    "orderBy": "Name ASC",
                                    "sections": [
@@ -86,8 +84,10 @@
                                    "fieldType": "string",
                                    "label": "Business Name (Legal Name)",
                                    "required": true,
+                                   "regex": "^[a-zA-Z0-9\\s]*$",
                                    "messages": {
-                                        "requiredErrorText": "Business name is required."
+                                        "requiredErrorText": "Business name is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "Business Name"
                               }
@@ -98,6 +98,10 @@
                               "fieldUi": {
                                    "fieldType": "string",
                                    "label": "Business Description",
+                                   "regex": "^[a-zA-Z0-9\\s]*$",
+                                   "messages": {
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
+                                   },
                                    "ariaLabel": "Business Description"
                               }
                          },
@@ -144,8 +148,10 @@
                               "fieldUi": {
                                    "fieldType": "string",
                                    "label": "DBA Name (if applicable)",
+                                   "regex": "^[a-zA-Z0-9\\s]*$",
                                    "messages": {
-                                        "requiredErrorText": "DBA name is required."
+                                        "requiredErrorText": "DBA name is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "DBA Name"
                               }
@@ -211,6 +217,7 @@
                                    "fieldType": "addressAutocomplete",
                                    "label": "Street Address",
                                    "required": true,
+                                   "regex": "^[a-zA-Z0-9\n#/\\s]*$",
                                    "addressComponentMapping": [
                                         {
                                              "addressComponent": "street_number",
@@ -240,7 +247,8 @@
                                         ]
                                    },
                                    "messages": {
-                                        "requiredErrorText": "Address is required."
+                                        "requiredErrorText": "Address is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "Street Address"
                               }
@@ -252,8 +260,10 @@
                                    "fieldType": "string",
                                    "label": "City",
                                    "required": true,
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "City is required."
+                                        "requiredErrorText": "City is required.",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "City"
                               }
@@ -635,6 +645,14 @@
                                    "messages": {
                                         "requiredErrorText": "Postal code is required.",
                                         "regexErrorText": "Please enter a valid postal code"
+                                   },
+                                   "format": {
+                                        "options": {
+                                             "numericOnly": true,
+                                             "blocks": [
+                                                  5
+                                             ]
+                                        }
                                    },
                                    "ariaLabel": "Postal Code"
                               }
@@ -1145,9 +1163,21 @@
                                    "defaultValue": false,
                                    "ariaLabel": "Beneficial Owner Exempt"
                               }
+                         },
+                         {
+                              "id": "bb05f61b-3960-40ac-87a8-ac8f18674d8a",
+                              "fieldName": "clcommon__Is_Sole_Proprietorship__c",
+                              "fieldUi": {
+                                   "fieldType": "boolean",
+                                   "label": "Is Sole Proprietorship",
+                                   "defaultValue": false,
+                                   "ariaLabel": "Is Sole Proprietorship"
+                              }
                          }
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "los_basic_business_details",
+     "clcommon__Release_Checksum__c": "550ad32a80bc26c382405943eedd17b44ad6c112cf05888e9113d269ca74a8fe"
 }

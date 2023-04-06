@@ -8,10 +8,10 @@
           "name": "collateralValidation",
           "property": {},
           "appearance": {
-               "render": "$state(smb_back_office_collateral_list_validation).count();<1",
-               "style": "primary",
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "style": "primary",
+               "render": "$global.attr(HMDALoan); == true and ($global.attr(HMDALegalClassName); == \"Individual\" or $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\") and $state(smb_back_office_collateral_list_validation).count();<1"
           },
           "successHandler": {},
           "failureHandler": {},
@@ -36,9 +36,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_collateral_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_collateral_details+collateralValidation+COMPONENT",
-     "clcommon__Release_Checksum__c": "8cc04e7ab3f7c96cb095d1726a3abb97a887e946a7cb1336a661d850764ed4de",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "smb_back_office_collateral_details+collateralValidation",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_collateral_details+collateralValidation+COMPONENT",
+     "clcommon__Release_Checksum__c": "d79175b8cd7ba64478e9728a999dabd657e978b4576973667ce751db4d5770cf"
 }

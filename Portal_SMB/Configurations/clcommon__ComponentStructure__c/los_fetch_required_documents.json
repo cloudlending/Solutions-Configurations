@@ -4,17 +4,15 @@
      },
      "Name": "los_fetch_required_documents",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "los_fetch_required_documents",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "9e1c61b778847f42cd76e9fa91ad337750767334c34ca34d4bc636a410d313c0",
      "clcommon__Unique_Name__c": "los_fetch_required_documents",
      "clcommon__data__c": {
           "structureName": "los_fetch_required_documents",
           "tableName": "clcommon__document_category__c",
           "whereClause": {
-               "freeForm": "genesis__Application__c = ':appId' and  clcommon__Show_In_Portal__c = 'UPLOAD_VIA_PORTAL' and clcommon__Active__c = true and (clcommon__Account__c =':accId' or clcommon__Account__c=':businessAccountId')"
+               "freeForm": "genesis__Application__c = ':appId' and  clcommon__Show_In_Portal__c = 'UPLOAD_VIA_PORTAL' and clcommon__Active__c = true and (clcommon__Account__c =':accId' or clcommon__Account__c=':businessAccountId') and clcommon__Document_Definition__r.clcommon__Parent_Document_Definition__c!=null"
           },
           "sections": [
                {
@@ -282,5 +280,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "los_fetch_required_documents",
+     "clcommon__Release_Checksum__c": "8b985c9c0d4228f83f6e6aed6c2b55490522220cee1275ca00b62fb4b04e21b3"
 }

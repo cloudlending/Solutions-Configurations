@@ -4,11 +4,9 @@
      },
      "Name": "los_identification_info",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "los_identification_info",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "78f9eae148c6581babc14da4d16533c31ebe09fc14b3af59b4e1676bec38ce78",
      "clcommon__Unique_Name__c": "los_identification_info",
      "clcommon__data__c": {
           "structureName": "los_identification_info",
@@ -93,8 +91,10 @@
                                    "fieldType": "string",
                                    "label": "Identification Number",
                                    "required": true,
+                                   "regex": "^[a-zA-Z0-9\\s]*$",
                                    "messages": {
-                                        "requiredErrorText": "Identification number is required"
+                                        "requiredErrorText": "Identification number is required",
+                                        "regexErrorText": "Entry invalid. Only alphabets and numbers are allowed."
                                    },
                                    "ariaLabel": "Identification Number"
                               }
@@ -171,5 +171,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "los_identification_info",
+     "clcommon__Release_Checksum__c": "252bb36b230038a006ee1d5ef30cf2ea04cfd0386c9355d2709ef68d753da1e4"
 }

@@ -5,42 +5,48 @@
      "Name": "loanPurposeNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "next",
-                         "field": "$nav(los_application_steps).appearance(current);"
-                    },
-                    {
-                         "value": "@mathjs{$global.attr(loanPurposeName);==\"Other\" ? $this.attr(genesis__Application__r.genesis__Other_Purpose__c); :null};",
-                         "field": "$global.attr(otherPurposeName);"
-                    }
-               ]
+          "name": "loanPurposeNext",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(loanPurpose);!=null and $global.attr(loanPurpose);!=\"\" and $global.attr(loanPurpose);!=undefined and $global.attr(loanPurpose);!=\"new_record_id\"",
+               "position": "bottom-left",
+               "label": "Next",
+               "style": "primary"
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "remoteActionArguments": {},
           "validation": [
                "los_loan_purpose_details",
                "los_loan_existing_purpose"
           ],
-          "remoteActionArguments": {},
-          "appearance": {
-               "style": "primary",
-               "label": "Next",
-               "position": "bottom-left",
-               "render": "$global.attr(loanPurpose);!=null and $global.attr(loanPurpose);!=\"\" and $global.attr(loanPurpose);!=undefined and $global.attr(loanPurpose);!=\"new_record_id\""
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(los_application_steps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(otherPurposeName);",
+                         "value": "@mathjs{$global.attr(loanPurposeName);==\"Other\" ? $this.attr(genesis__Application__r.genesis__Other_Purpose__c); :null};"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "los_business_details"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
           },
-          "property": {},
-          "name": "loanPurposeNext"
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -50,9 +56,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_loan_existing_purpose",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_loan_existing_purpose+loanPurposeNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "1f6ffcd53ae74636529f07c019629672953ffebcd251e6f38d45a428037f50f1",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "los_loan_existing_purpose+loanPurposeNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_loan_existing_purpose+loanPurposeNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "34e4e163b572cb3478e95fa666a4e55a4a9e32c9a70cd98156aa29e4a93600b6"
 }

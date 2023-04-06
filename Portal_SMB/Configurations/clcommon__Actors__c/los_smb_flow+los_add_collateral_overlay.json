@@ -15,27 +15,27 @@
           "appearance": {
                "titles": [
                     {
-                         "render": "$global.attr(editCollateral);!=true",
-                         "title": "Collateral Type"
+                         "title": "Collateral Type",
+                         "render": "$global.attr(editCollateral);!=true"
                     },
                     {
-                         "render": "$global.attr(existingCollateral);==\"Yes\"",
-                         "title": "Select Collateral"
+                         "title": "Select Collateral",
+                         "render": "$global.attr(existingCollateral);==\"Yes\""
                     },
                     {
-                         "name": "AddCollateral",
+                         "title": "Collateral",
                          "render": "$global.attr(existingCollateral);!=\"Yes\"",
-                         "title": "Collateral"
+                         "name": "AddCollateral"
                     },
                     {
-                         "name": "rentRolls",
+                         "title": "Rent Rolls",
                          "render": "$global.attr(collateralTypeName);==\"Commercial Real Estate\"",
-                         "title": "Rent Rolls"
+                         "name": "rentRolls"
                     },
                     {
-                         "name": "BusinessAssets",
+                         "title": "Business Assets",
                          "render": "$global.attr(itemizedCollateral);==true",
-                         "title": "Business Assets"
+                         "name": "BusinessAssets"
                     }
                ]
           },

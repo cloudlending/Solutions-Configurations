@@ -5,37 +5,46 @@
      "Name": "updatePartySubmit",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "disclosureEnable": "$disclosure(los_loan_disclosure);",
-          "disclosureNames": [
-               "los_loan_disclosure"
-          ],
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "updatePartySubmit",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "label": "Submit",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "clcommon__Party__c": {
+                    "id": "$global.attr(borrowerPartyId);",
+                    "solcommon__Submission_Status__c": "SUBMITTED"
+               }
+          },
           "successHandler": {
                "actions": [
                     {
+                         "condition": "$global.attr(businessEntityType);!=\"Individual\" and $global.attr(isPrincipal);==true",
                          "name": "submit"
+                    },
+                    {
+                         "condition": "$global.attr(businessEntityType);==\"Individual\" and $global.attr(isPrincipal);==true",
+                         "name": "noAssistanceOrIndividualSubmit"
+                    },
+                    {
+                         "condition": "$global.attr(isPrincipal);==false",
+                         "name": "submitBeneficialApplication"
                     }
                ]
           },
-          "remoteActionArguments": {
-               "clcommon__Party__c": {
-                    "solcommon__Submission_Status__c": "SUBMITTED",
-                    "id": "$global.attr(borrowerPartyId);"
-               },
-               "applicationId": "$global.attr(applicationId);"
-          },
-          "appearance": {
-               "style": "primary",
-               "label": "Submit",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "updatePartySubmit"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [
+               "los_loan_disclosure"
+          ],
+          "disclosureEnable": "$disclosure(los_loan_disclosure);",
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 4,
+     "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -45,9 +54,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_review_disclosures+updatePartySubmit+COMPONENT",
-     "clcommon__Release_Checksum__c": "1a8b4ec445982d155f75a7f30341ad3317dd108b4887a426facc39eccbdce552",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalUpdateParty",
      "clcommon__Unique_Action_Name__c": "los_review_disclosures+updatePartySubmit",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_review_disclosures+updatePartySubmit+COMPONENT",
+     "clcommon__Release_Checksum__c": "44e985d6a9c90456ba733fd349fa333ce1db65cc40670adea289f53be7b60178"
 }

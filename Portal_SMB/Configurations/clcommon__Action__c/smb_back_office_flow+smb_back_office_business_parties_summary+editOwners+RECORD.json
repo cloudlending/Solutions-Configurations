@@ -8,9 +8,9 @@
           "name": "editOwners",
           "property": {},
           "appearance": {
-               "label": "edit",
+               "render": "$this.attr(clcommon__Type__r.Name);!=\"BORROWER\"",
                "style": "iconic",
-               "render": "$this.attr(clcommon__Type__r.Name);!=\"BORROWER\""
+               "label": "edit"
           },
           "successHandler": {},
           "failureHandler": {},
@@ -18,7 +18,7 @@
           "handler": {
                "assignments": [
                     {
-                         "field": "$global.attr(partyId);",
+                         "field": "$global.attr(businessPartyId);",
                          "value": "$this.attr(id);"
                     },
                     {
@@ -26,7 +26,7 @@
                          "value": true
                     },
                     {
-                         "field": "$global.attr(contactId);",
+                         "field": "$global.attr(borrowerContactIdExisting);",
                          "value": "$this.attr(clcommon__Contact__c);"
                     },
                     {
@@ -74,9 +74,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_business_parties_summary",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_parties_summary+editOwners+RECORD",
-     "clcommon__Release_Checksum__c": "4eab54c38c7e959163967e397b43db643a60d84c1d79edd2463effd3b29e0806",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "smb_back_office_business_parties_summary+editOwners",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_business_parties_summary+editOwners+RECORD",
+     "clcommon__Release_Checksum__c": "13a0801a90b1f94bbf0b2ac54119428ad92edc26d00864dffb194f1976952bf1"
 }

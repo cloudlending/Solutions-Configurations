@@ -5,52 +5,52 @@
      "Name": "businessPartiesListNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "businessPartiesListNext",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Next1",
+               "render": false,
+               "position": "bottom-right"
+          },
+          "confirmation": {
+               "type": "prompt",
+               "title": "",
+               "content": "<p style=\"font-size:16px;\">If you would like to add any more business parties, please click <b>CANCEL</b> to continue adding business parties on this page. Please click <b>OK</b> to move ahead in the application</p>",
+               "showConfirmButtons": true,
+               "confirmText": "OK",
+               "cancelText": "CANCEL",
+               "cancelOrCloseHandler": {}
+          },
+          "remoteActionArguments": {
+               "portalStage": "$global.attr(portalStage);",
+               "applicationId": "$global.attr(applicationId);"
+          },
           "successHandler": {
-               "executions": [
+               "assignments": [
                     {
-                         "name": "$ext.scrollTop"
+                         "field": "$nav(los_application_steps).appearance(current);",
+                         "value": "next"
                     }
                ],
                "updates": [
                     {
-                         "value": "los_business_parties_summary",
-                         "name": "$nav.reloads.add;"
+                         "name": "$nav.reloads.add;",
+                         "value": "los_business_parties_summary"
                     }
                ],
-               "assignments": [
+               "executions": [
                     {
-                         "value": "next",
-                         "field": "$nav(los_application_steps).appearance(current);"
+                         "name": "$ext.scrollTop"
                     }
                ]
           },
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "BeneficialSummary"
-          },
-          "confirmation": {
-               "cancelOrCloseHandler": {},
-               "cancelText": "CANCEL",
-               "confirmText": "OK",
-               "showConfirmButtons": true,
-               "content": "<p style=\"font-size:16px;\">If you would like to add any more business parties, please click <b>CANCEL</b> to continue adding business parties on this page. Please click <b>OK</b> to move ahead in the application</p>",
-               "title": "",
-               "type": "prompt"
-          },
-          "appearance": {
-               "position": "bottom-right",
-               "render": false,
-               "label": "Next1",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "businessPartiesListNext"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -60,9 +60,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_business_parties_summary",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_list+businessPartiesListNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "80e2686637678d6a78ef999d582c6f06843fac3c26c3e75897b57da3bd8f4568",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
      "clcommon__Unique_Action_Name__c": "los_business_parties_list+businessPartiesListNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_business_parties_list+businessPartiesListNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "b836a6aa270553dd912e620383138d98fbaba5d5bbd6440d1727b56fc52213ea"
 }

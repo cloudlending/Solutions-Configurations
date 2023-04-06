@@ -5,39 +5,44 @@
      "Name": "businessFinancialsNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "actions": [
-                    {
-                         "name": "updatePartySubmit"
-                    }
-               ]
+          "name": "businessFinancialsNext",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Next"
+          },
+          "remoteActionArguments": {
+               "accountId": "$global.attr(businessAccountId);",
+               "applicationId": "$global.attr(applicationId);",
+               "genesis__Business_Information__c": {
+                    "id": "$global.attr(businessInfoId);",
+                    "genesis__Total_Sales__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c);",
+                    "genesis__Total_Liabilities__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c);",
+                    "solcommon__Total_Revenue__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c);"
+               }
           },
           "validation": [
                "los_business_financials_details"
           ],
-          "remoteActionArguments": {
-               "genesis__Business_Information__c": {
-                    "solcommon__Total_Revenue__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c);",
-                    "genesis__Total_Liabilities__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c);",
-                    "genesis__Total_Sales__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c);",
-                    "id": "$global.attr(businessInfoId);"
-               },
-               "applicationId": "$global.attr(applicationId);",
-               "accountId": "$global.attr(businessAccountId);"
+          "successHandler": {
+               "actions": [
+                    {
+                         "condition": "$global.attr(businessEntityType);!=\"Individual\"",
+                         "name": "updatePartySubmit"
+                    },
+                    {
+                         "condition": "$global.attr(businessEntityType);==\"Individual\"",
+                         "name": "savePortalStage"
+                    }
+               ]
           },
-          "appearance": {
-               "label": "Next",
-               "style": "primary",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "businessFinancialsNext"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -47,9 +52,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_business_financial_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_business_financials_details+businessFinancialsNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "eee7e0abce7c821b573c850494e3be591efeca8e85df6c30d0512365446dc09b",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveBusinessInfo",
      "clcommon__Unique_Action_Name__c": "los_business_financials_details+businessFinancialsNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_business_financials_details+businessFinancialsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "d2cc84ae305a1fd57cd9f1aa664da30b887704799b1d814923cf45bd8c3bc820"
 }

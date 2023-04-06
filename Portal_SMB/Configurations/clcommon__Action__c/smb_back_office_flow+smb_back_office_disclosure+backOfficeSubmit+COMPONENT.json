@@ -9,14 +9,17 @@
           "property": {},
           "appearance": {
                "style": "primary",
+               "render": false,
                "label": "Submit"
           },
           "remoteActionArguments": {
                "genesis__Applications__c": {
-                    "id": "$global.attr(applicationId);",
-                    "solcommon__Portal_Stage__c": "ManualReview"
+                    "id": "$global.attr(applicationId);"
                },
+               "partner_user": "$this.attr(create_account_email_partner_user);",
+               "trustee_user": "$this.attr(create_account_email_trustee_user);",
                "signer_user": "$this.attr(create_account_email_signer_user);",
+               "control_person_user": "$this.attr(create_account_email_control_person);",
                "guarantor_user": "$this.attr(create_account_email_guarantor_user);",
                "owner_user": "$this.attr(create_account_email_owner_user);",
                "create_account_email": "$this.attr(create_account_email);"
@@ -30,14 +33,14 @@
           "pendingHandler": {},
           "handler": {},
           "disclosureNames": [
-               "los_loan_disclosure"
+               "smb_back_office_disclosure"
           ],
           "disclosureEnable": "$disclosure(back_office_final_disclosure);",
           "messages": {
                "submitFailureText": "$serverMessage;"
           }
      },
-     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -47,9 +50,9 @@
      },
      "clcommon__Component_Structure_Name__c": "smb_back_office_disclosure",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_disclosure+backOfficeSubmit+COMPONENT",
-     "clcommon__Release_Checksum__c": "268244bc9fc0964d3756afe7b4cbfa1906ce657017806b9b9c5990ef73885a4a",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalApplicationSubmission",
      "clcommon__Unique_Action_Name__c": "smb_back_office_disclosure+backOfficeSubmit",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_disclosure+backOfficeSubmit+COMPONENT",
+     "clcommon__Release_Checksum__c": "8b9a2ddbb0b458c626f190411fc218e733a334299a0fe71d90a361782389f86f"
 }

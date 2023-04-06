@@ -4,17 +4,15 @@
      },
      "Name": "los_review_documents_list",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "los_review_documents_list",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "b7dfb3ac02d3f724d16b62fe68f79b0934c4f1e4bf9c9d26f38aa440960effa5",
      "clcommon__Unique_Name__c": "los_review_documents_list",
      "clcommon__data__c": {
           "structureName": "los_review_documents_list",
           "tableName": "clcommon__document_category__c",
           "whereClause": {
-               "freeForm": "genesis__Application__c = ':appId' and  clcommon__Show_In_Portal__c = 'UPLOAD_VIA_PORTAL' and clcommon__Active__c = true and clcommon__Account__c!=null"
+               "freeForm": "genesis__Application__c = ':appId' and  clcommon__Show_In_Portal__c = 'UPLOAD_VIA_PORTAL' and clcommon__Active__c = true and clcommon__Account__c!=null and clcommon__Document_Definition__r.clcommon__Parent_Document_Definition__c!=null"
           },
           "sections": [
                {
@@ -234,5 +232,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "los_review_documents_list",
+     "clcommon__Release_Checksum__c": "04a5f8f3cb1b32827eff32982340613ac9cdb573b385eb37c64300bf784c4434"
 }

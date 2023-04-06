@@ -16,37 +16,37 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "editable": false,
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
+               "render": "$global.attr(preApprovalDocumentCollection);!=\"All Documents\"",
+               "droppableRecord": {
+                    "type": "FILE",
+                    "uploadActionName": "upload"
                },
-               "textBefore": "We need additional documents to process the Loan Application.",
-               "blankMessage": "Great! No Pending Documents to be uploaded proceed to next step",
-               "title": "Required Documents",
-               "queueSecondaryText": "<p>$this.attr(clcommon__Document_Category__c.clcommon__Description__c);</p><p class=\"declineReason\"></p>",
-               "queuePrimaryText": "<span class=\"$this.attr(clcommon__Document_Category__c.clcommon__Status__c, className); document-status\">$this.attr(clcommon__Document_Category__c.clcommon__Status__c);</span> <span class=\"docCategoryTitle $this.attr(clcommon__Document_Category__c.clcommon__Required__c,className);\">$this.attr(clcommon__Document_Category__c.clcommon__Category_Name__c);</span>",
+               "fieldColumns": 1,
                "groupBy": {
+                    "ascending": true,
+                    "field": "genesis__Policy_Exception__c.Id",
                     "titles": [
                          {
                               "title": "$this.attr(genesis__Policy_Exception__c.genesis__Policy_Exception_Definition__r.genesis__Portal_Title__c);"
                          }
-                    ],
-                    "field": "genesis__Policy_Exception__c.Id",
-                    "ascending": true
+                    ]
                },
-               "fieldColumns": 1,
-               "droppableRecord": {
-                    "uploadActionName": "upload",
-                    "type": "FILE"
+               "queuePrimaryText": "<span class=\"$this.attr(clcommon__Document_Category__c.clcommon__Status__c, className); document-status\">$this.attr(clcommon__Document_Category__c.clcommon__Status__c);</span> <span class=\"docCategoryTitle $this.attr(clcommon__Document_Category__c.clcommon__Required__c,className);\">$this.attr(clcommon__Document_Category__c.clcommon__Category_Name__c);</span>",
+               "queueSecondaryText": "<p>$this.attr(clcommon__Document_Category__c.clcommon__Description__c);</p><p class=\"declineReason\"></p>",
+               "title": "Required Documents",
+               "blankMessage": "Great! No Pending Documents to be uploaded proceed to next step",
+               "textBefore": "We need additional documents to process the Loan Application.",
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
                },
-               "render": "$global.attr(preApprovalDocumentCollection);!=\"All Documents\""
+               "editable": false
           },
           "property": {
-               "structureName": "document_management_queue_view",
+               "module": "document",
                "queryName": "queryPolicyConditionDocumentCategory",
-               "module": "document"
+               "structureName": "document_management_queue_view"
           },
           "type": "queue-view",
           "category": "component"

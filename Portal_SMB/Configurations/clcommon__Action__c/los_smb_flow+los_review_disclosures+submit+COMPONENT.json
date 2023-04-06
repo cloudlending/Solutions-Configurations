@@ -5,35 +5,52 @@
      "Name": "submit",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "actions": [
-                    {
-                         "name": "saveBeneficialPortalStage",
-                         "condition": "$global.attr(isPrincipal);!=true"
-                    },
-                    {
-                         "name": "savePortalStage",
-                         "condition": "$global.attr(isPrincipal);==true"
-                    }
-               ]
+          "name": "submit",
+          "property": {},
+          "appearance": {
+               "label": "Submit",
+               "render": false,
+               "style": "primary"
+          },
+          "confirmation": {
+               "type": "prompt",
+               "title": "",
+               "content": "<p style=\"font-size:16px;\">I need loan officer assistance to complete the application</p>",
+               "showConfirmButtons": true,
+               "confirmText": "Yes",
+               "cancelText": "No",
+               "cancelOrCloseHandler": {
+                    "actions": [
+                         {
+                              "name": "noAssistanceOrIndividualSubmit"
+                         }
+                    ]
+               }
           },
           "remoteActionArguments": {
+               "additional_parties": true,
                "genesis__Applications__c": {
                     "id": "$global.attr(applicationId);"
                }
           },
-          "appearance": {
-               "style": "primary",
-               "render": false,
-               "label": "Submit"
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(los_review_steps).appearance(current);",
+                         "value": "next"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
           },
-          "property": {},
-          "name": "submit"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
-     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "submit",
      "clcommon__Actor__r": {
           "attributes": {
@@ -43,9 +60,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "los_smb_flow+los_review_disclosures+submit+COMPONENT",
-     "clcommon__Release_Checksum__c": "3154bcf7997f71536aebdb3eb59f40c1196e840173bdb7d585894f6f943c5d9d",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalApplicationSubmission",
      "clcommon__Unique_Action_Name__c": "los_review_disclosures+submit",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_review_disclosures+submit+COMPONENT",
+     "clcommon__Release_Checksum__c": "eb5622d805f5140fbce062b682ea89050a4f613ae684707b92e3d2e01cfb2fa8"
 }

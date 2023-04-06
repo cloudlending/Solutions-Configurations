@@ -24,55 +24,55 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "editable": false,
-               "render": "$global.attr(isPrincipal);==true",
-               "queueSecondaryText": "<p>$this.attr(clcommon__Description__c);</p><p class=\"declineReason\"></p>",
-               "queuePrimaryText": "<span class=\"$this.attr(clcommon__Status__c, className); document-status\">$this.attr(clcommon__Status__c);</span><span class=\"docCategoryTitle $this.attr(clcommon__Required__c,className);\"> $this.attr(clcommon__Category_Name__c);</span> ",
-               "blankMessage": "$global.attr(postApprovalRecordCount);",
-               "title": "Required Documents",
-               "messagePositions": {
-                    "loadingAnimation": "global",
-                    "loadingError": "top",
-                    "saveSubmitError": "top"
-               },
-               "droppableRecord": {
-                    "uploadActionName": "upload",
-                    "type": "FILE"
-               },
-               "editableFields": {
-                    "Id": false,
-                    "Name": false,
-                    "clcommon__Description__c": false,
-                    "clcommon__Status__c": false,
-                    "clcommon__Category_Name__c": false,
-                    "clcommon__Parent_Document_Category__r.Id": false,
-                    "clcommon__Account__r.Name": false,
-                    "clcommon__Account__c": false
-               },
-               "renderFields": {
-                    "Id": false,
-                    "Name": false
-               },
-               "fieldColumns": 1,
                "groupBy": {
-                    "field": "clcommon__Account__c",
-                    "ascending": true,
                     "titles": [
                          {
-                              "title": "Documents for $this.attr(clcommon__Account__r.Name);",
-                              "render": "$this.attr(clcommon__Account__c);!=null"
+                              "render": "$this.attr(clcommon__Account__c);!=null",
+                              "title": "Documents for $this.attr(clcommon__Account__r.Name);"
                          }
-                    ]
-               }
+                    ],
+                    "ascending": true,
+                    "field": "clcommon__Account__c"
+               },
+               "fieldColumns": 1,
+               "renderFields": {
+                    "Name": false,
+                    "Id": false
+               },
+               "editableFields": {
+                    "clcommon__Account__c": false,
+                    "clcommon__Account__r.Name": false,
+                    "clcommon__Parent_Document_Category__r.Id": false,
+                    "clcommon__Category_Name__c": false,
+                    "clcommon__Status__c": false,
+                    "clcommon__Description__c": false,
+                    "Name": false,
+                    "Id": false
+               },
+               "droppableRecord": {
+                    "type": "FILE",
+                    "uploadActionName": "upload"
+               },
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
+               },
+               "title": "Required Documents",
+               "blankMessage": "$global.attr(postApprovalRecordCount);",
+               "queuePrimaryText": "<span class=\"$this.attr(clcommon__Status__c, className); document-status\">$this.attr(clcommon__Status__c);</span><span class=\"docCategoryTitle $this.attr(clcommon__Required__c,className);\"> $this.attr(clcommon__Category_Name__c);</span> ",
+               "queueSecondaryText": "<p>$this.attr(clcommon__Description__c);</p><p class=\"declineReason\"></p>",
+               "render": "$global.attr(isPrincipal);==true",
+               "editable": false
           },
           "property": {
-               "structureName": "los_document_upload_list_after_approval",
+               "module": "document",
                "whereClause": {
-                    "accId": "$global.attr(borrowerAccountId);",
+                    "appId": "$global.attr(applicationId);",
                     "businessAccountId": "$global.attr(businessAccountId);",
-                    "appId": "$global.attr(applicationId);"
+                    "accId": "$global.attr(borrowerAccountId);"
                },
-               "module": "document"
+               "structureName": "los_document_upload_list_after_approval"
           },
           "type": "queue-view",
           "category": "component"

@@ -1,0 +1,56 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "assignStepLabel",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "assignStepLabel",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Continue"
+          },
+          "automatic": true,
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(stepsLabel);",
+                         "value": "Personal Info"
+                    },
+                    {
+                         "field": "$global.attr(stepperCount);",
+                         "value": "1"
+                    },
+                    {
+                         "field": "$global.attr(mainStepLabel);",
+                         "value": "Personal Info"
+                    },
+                    {
+                         "field": "$nav(los_mobile_stepper_panel).appearance(current);",
+                         "value": "BeneficialPersonalInfo"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 0,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "los_smb_flow+los_beneficial_personalinfo_details"
+     },
+     "clcommon__Component_Structure_Name__c": "los_benefical_personal_info",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "los_beneficial_personalinfo_details+assignStepLabel",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+los_beneficial_personalinfo_details+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "ab2d4a0b375791d11a9406f13aeffcef0d6e1fe2e4d2574a8c2703166b5fbd0d"
+}

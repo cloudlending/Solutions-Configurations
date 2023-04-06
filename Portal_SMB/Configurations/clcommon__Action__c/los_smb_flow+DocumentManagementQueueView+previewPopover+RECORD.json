@@ -5,38 +5,38 @@
      "Name": "previewPopover",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
+          "name": "previewPopover",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "render": "$this.attr(clcommon__Document_Category__c.clcommon__DocCat_Attachment_Associations__r).count(); > 0",
+               "label": "View"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
-               "updates": [
-                    {
-                         "value": "DocumentPreviewContainer",
-                         "name": "$nav.overlay.add;"
-                    },
-                    {
-                         "value": "los_document_list",
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
                "assignments": [
                     {
-                         "value": "$this.attr(clcommon__Document_Category__c.clcommon__DocCat_Attachment_Associations__r);",
-                         "field": "$state(los_document_list);"
+                         "field": "$state(los_document_list);",
+                         "value": "$this.attr(clcommon__Document_Category__c.clcommon__DocCat_Attachment_Associations__r);"
                     },
                     {
-                         "value": "$this.attr(clcommon__Document_Category__c.clcommon__Category_Name__c);",
-                         "field": "$global.attr(categoryName);"
+                         "field": "$global.attr(categoryName);",
+                         "value": "$this.attr(clcommon__Document_Category__c.clcommon__Category_Name__c);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "DocumentPreviewContainer"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "los_document_list"
                     }
                ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "label": "View",
-               "render": "$this.attr(clcommon__Document_Category__c.clcommon__DocCat_Attachment_Associations__r).count(); > 0",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "previewPopover"
+          }
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -48,9 +48,9 @@
      },
      "clcommon__Component_Structure_Name__c": "document_management_queue_view",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "los_smb_flow+DocumentManagementQueueView+previewPopover+RECORD",
-     "clcommon__Release_Checksum__c": "3c1460e0d3a972f0a4bccf35436ea2c728bef153876cb12e10330281b9ce8646",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "DocumentManagementQueueView+previewPopover",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "los_smb_flow+DocumentManagementQueueView+previewPopover+RECORD",
+     "clcommon__Release_Checksum__c": "3c1460e0d3a972f0a4bccf35436ea2c728bef153876cb12e10330281b9ce8646"
 }

@@ -4,11 +4,9 @@
      },
      "Name": "los_register_details",
      "clcommon__Allow_Guest_User_Access__c": true,
-     "clcommon__External_ID__c": "los_register_details",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "id",
      "clcommon__Record_Access_Filter__c": "ownerId",
-     "clcommon__Release_Checksum__c": "cb64991b50889af1c9c57117676cda9cf840971b23a1ec0acb11073f062da858",
      "clcommon__Unique_Name__c": "los_register_details",
      "clcommon__data__c": {
           "structureName": "los_register_details",
@@ -23,8 +21,10 @@
                                    "fieldType": "string",
                                    "label": "First Name",
                                    "required": true,
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "First name is required"
+                                        "requiredErrorText": "First name is required",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "First Name"
                               }
@@ -36,8 +36,10 @@
                                    "fieldType": "string",
                                    "label": "Last Name",
                                    "required": true,
+                                   "regex": "^[A-Za-zÀ-úÀ-ÿ\\s]+$",
                                    "messages": {
-                                        "requiredErrorText": "Last name is required"
+                                        "requiredErrorText": "Last name is required",
+                                        "regexErrorText": "Entry invalid. Only alphabets are allowed."
                                    },
                                    "ariaLabel": "Last Name"
                               }
@@ -115,5 +117,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "los_register_details",
+     "clcommon__Release_Checksum__c": "3da2566d49a3983a85f07820da1c6eff26e50bb08821042dcecf25a73bb21c27"
 }

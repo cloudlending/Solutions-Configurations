@@ -16,34 +16,34 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "render": "$global.attr(isSignerPartyTypeTwo);==true or $global.attr(isBeneficialPartyTypeTwo);==true",
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
-               },
-               "renderFields": {
-                    "clcommon__Percent_Ownership__c": "$global.attr(isBeneficialPartyTypeTwo);==true",
-                    "solcommon__Position_In_Company__c": "$global.attr(isBeneficialPartyTypeTwo);==true",
-                    "clcommon__Signer_Capacity__c": "$global.attr(isSignerPartyTypeTwo);==true"
-               },
+               "editable": true,
+               "fieldColumns": 1,
                "grid": {
                     "field": {
                          "$default": {
-                              "xs": 12,
-                              "sm": 6
+                              "sm": 6,
+                              "xs": 12
                          }
                     }
                },
-               "fieldColumns": 1,
-               "editable": true
+               "renderFields": {
+                    "clcommon__Signer_Capacity__c": "$global.attr(isSignerPartyTypeTwo);==true",
+                    "solcommon__Position_In_Company__c": "$global.attr(isBeneficialPartyTypeTwo);==true",
+                    "clcommon__Percent_Ownership__c": "$global.attr(isBeneficialPartyTypeTwo);==true"
+               },
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               },
+               "render": "$global.attr(isSignerPartyTypeTwo);==true or $global.attr(isBeneficialPartyTypeTwo);==true"
           },
           "property": {
-               "queryWithDefaultNew": true,
+               "structureName": "los_party_beneficial_details",
                "whereClause": {
                     "partyId": "$global.attr(partyId);"
                },
-               "structureName": "los_party_beneficial_details"
+               "queryWithDefaultNew": true
           },
           "type": "detail-view",
           "category": "component"

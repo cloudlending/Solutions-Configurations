@@ -31,43 +31,43 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "messagePositions": {
-                    "saveSubmitError": "top",
-                    "loadingError": "top",
-                    "loadingAnimation": "global"
+               "title": "Add Rent Roll Details",
+               "editable": true,
+               "fieldColumns": 1,
+               "renderFields": {
+                    "genesis__Application__r.Id": false,
+                    "genesis__Collateral__r.Id": false,
+                    "Id": false
                },
-               "renderSections": {
-                    "residentialRentRoll": "$this.attr(genesis__Unit_Type__c);==\"Residential\""
+               "editableFields": {
+                    "genesis__Application__r.Id": false,
+                    "IsDeleted": false,
+                    "genesis__Collateral__r.Id": false,
+                    "Id": false
                },
                "grid": {
                     "field": {
                          "$default": {
-                              "xs": 12,
-                              "sm": 6
+                              "sm": 6,
+                              "xs": 12
                          }
                     }
                },
-               "editableFields": {
-                    "Id": false,
-                    "genesis__Collateral__r.Id": false,
-                    "IsDeleted": false,
-                    "genesis__Application__r.Id": false
+               "renderSections": {
+                    "residentialRentRoll": "$this.attr(genesis__Unit_Type__c);==\"Residential\""
                },
-               "renderFields": {
-                    "Id": false,
-                    "genesis__Collateral__r.Id": false,
-                    "genesis__Application__r.Id": false
-               },
-               "fieldColumns": 1,
-               "editable": true,
-               "title": "Add Rent Roll Details"
+               "messagePositions": {
+                    "loadingAnimation": "global",
+                    "loadingError": "top",
+                    "saveSubmitError": "top"
+               }
           },
           "property": {
+               "structureName": "los_add_collateral_rent_roll_details",
+               "queryWithDefaultNew": true,
                "whereClause": {
                     "rentRollId": "$global.attr(rentRollId);"
-               },
-               "queryWithDefaultNew": true,
-               "structureName": "los_add_collateral_rent_roll_details"
+               }
           },
           "type": "detail-view",
           "category": "component"

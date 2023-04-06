@@ -1,0 +1,42 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "goToBusinessPartiesSummary",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "goToBusinessPartiesSummary",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "position": "bottom-left"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(smb_back_office_application_flow_steps).appearance(current);",
+                         "value": "BusinessParties"
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_application_fetch"
+     },
+     "clcommon__Component_Structure_Name__c": "back_officer_application_query",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_application_fetch+goToBusinessPartiesSummary",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_application_fetch+goToBusinessPartiesSummary+COMPONENT",
+     "clcommon__Release_Checksum__c": "718c1af358b70ead6f2b067afdfea2bfaf83df449ddefec6a0b3021979e99cc0"
+}

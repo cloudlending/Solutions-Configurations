@@ -15,12 +15,14 @@
           "appearance": {
                "renderFields": {
                     "AccountId": false,
-                    "Id": false
+                    "Id": false,
+                    "clcommon__Personal_Information__r.Id": false
                },
                "editableFields": {
-                    "LastName": "(($global.attr(borrowerAccountIdExisting); == null or $global.attr(borrowerAccountIdExisting); == \"\" or $global.attr(borrowerAccountIdExisting); == undefined) and ($global.attr(partyId);==\"\" or  $global.attr(partyId);==null or $global.attr(partyId);==undefined)) or ($global.attr(borrowerAccountIdExisting); != null and $global.attr(borrowerAccountIdExisting); != \"\" and $global.attr(borrowerAccountIdExisting); != undefined and $global.attr(partyId);!=\"\" and $global.attr(partyId);!=null and $global.attr(partyId);!=undefined)",
-                    "FirstName": "(($global.attr(borrowerAccountIdExisting); == null or $global.attr(borrowerAccountIdExisting); == \"\" or $global.attr(borrowerAccountIdExisting); == undefined) and ($global.attr(partyId);==\"\" or  $global.attr(partyId);==null or $global.attr(partyId);==undefined)) or ($global.attr(borrowerAccountIdExisting); != null and $global.attr(borrowerAccountIdExisting); != \"\" and $global.attr(borrowerAccountIdExisting); != undefined and $global.attr(partyId);!=\"\" and $global.attr(partyId);!=null and $global.attr(partyId);!=undefined)",
-                    "Email": "$global.attr(borrowerAccountIdExisting); == null or $global.attr(borrowerAccountIdExisting); == \"\" or $global.attr(borrowerAccountIdExisting); == undefined"
+                    "FirstName": "(($global.attr(borrowerAccountIdExisting); == null or $global.attr(borrowerAccountIdExisting); == \"\" or $global.attr(borrowerAccountIdExisting); == undefined) and ($global.attr(businessPartyId);==\"\" or  $global.attr(businessPartyId);==null or $global.attr(businessPartyId);==undefined)) or ($global.attr(borrowerAccountIdExisting); != null and $global.attr(borrowerAccountIdExisting); != \"\" and $global.attr(borrowerAccountIdExisting); != undefined and $global.attr(businessPartyId);!=\"\" and $global.attr(businessPartyId);!=null and $global.attr(businessPartyId);!=undefined)",
+                    "Email": "$global.attr(borrowerAccountIdExisting); == null or $global.attr(borrowerAccountIdExisting); == \"\" or $global.attr(borrowerAccountIdExisting); == undefined",
+                    "clcommon__Personal_Information__r.Id": false,
+                    "LastName": "(($global.attr(borrowerAccountIdExisting); == null or $global.attr(borrowerAccountIdExisting); == \"\" or $global.attr(borrowerAccountIdExisting); == undefined) and ($global.attr(businessPartyId);==\"\" or  $global.attr(businessPartyId);==null or $global.attr(businessPartyId);==undefined)) or ($global.attr(borrowerAccountIdExisting); != null and $global.attr(borrowerAccountIdExisting); != \"\" and $global.attr(borrowerAccountIdExisting); != undefined and $global.attr(businessPartyId);!=\"\" and $global.attr(businessPartyId);!=null and $global.attr(businessPartyId);!=undefined)"
                },
                "grid": {
                     "messagePositions": {
@@ -63,5 +65,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_personal_information_details",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_personal_information_details",
-     "clcommon__Release_Checksum__c": "c1967fa87251e2db41f5e4e09d125bfd2b8e954090acb555b66eeaf886797ddd"
+     "clcommon__Release_Checksum__c": "e1e473155a37f94aa7815e3633a20da5cc6e606718fe79731f7b0dd63df2a38e"
 }

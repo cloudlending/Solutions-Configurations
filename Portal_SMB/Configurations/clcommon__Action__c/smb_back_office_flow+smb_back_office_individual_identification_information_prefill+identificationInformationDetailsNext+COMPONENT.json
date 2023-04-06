@@ -1,0 +1,59 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "identificationInformationDetailsNext",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "identificationInformationDetailsNext",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "style": "primary",
+               "render": true
+          },
+          "remoteActionArguments": {
+               "genesis__Identification_Information__c": {
+                    "genesis__Identification_Type__c": "$this.attr(genesis__Identification_Type__c);",
+                    "genesis__Identification_Number__c": "$this.attr(genesis__Identification_Number__c);",
+                    "genesis__Date_of_Issuance__c": "$this.attr(genesis__Date_of_Issuance__c);",
+                    "genesis__Expiration_Date__c": "$this.attr(genesis__Expiration_Date__c);"
+               },
+               "accountId": "$global.attr(backofficerAccountId);",
+               "applicationId": "$global.attr(applicationId);",
+               "partyId": "$global.attr(partyId);"
+          },
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(identificationInfoIdE);",
+                         "value": "$result.attr(identificationInfoId);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_identification_information_prefill"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_identification_information_prefill",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveIdentificationInformation",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_individual_identification_information_prefill+identificationInformationDetailsNext",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_identification_information_prefill+identificationInformationDetailsNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "89804915c54afffb1bc88f5ef5f1bf1bdbdacd317ed6709b40a5542e0e4f30c7"
+}

@@ -9,38 +9,47 @@
           "clcommon__External_ID__c": "los_smb_flow"
      },
      "clcommon__Actor_Definition__c": {
+          "messages": {
+               "showLoadingAnimation": true
+          },
           "generalHandlers": {},
           "recordActions": [],
           "componentActions": [],
           "appearance": {
-               "renderFields": {
-                    "Id": false,
-                    "genesis__State_of_Issuance__c": false
+               "messagePositions": {
+                    "saveSubmitError": "top",
+                    "loadingError": "top",
+                    "loadingAnimation": "global"
                },
+               "render": "$state(los_identification_records_check).count();>0",
+               "editable": true,
+               "fieldColumns": 1,
+               "title": "More information about you",
                "grid": {
                     "field": {
                          "$default": {
-                              "xs": 12,
-                              "sm": 6
+                              "sm": 6,
+                              "xs": 12
                          }
                     }
                },
-               "title": "More information about you",
-               "fieldColumns": 1,
-               "editable": true
+               "renderFields": {
+                    "genesis__State_of_Issuance__c": false,
+                    "Id": false
+               }
           },
           "property": {
-               "whereClause": {
-                    "accId": "$global.attr(borrowerAccountId);",
-                    "appId": "$global.attr(applicationId);"
-               },
+               "structureName": "los_identification_info",
                "queryWithDefaultNew": true,
-               "structureName": "los_identification_info"
+               "whereClause": {
+                    "appId": "$global.attr(applicationId);",
+                    "accId": "$global.attr(borrowerAccountId);"
+               }
           },
           "type": "detail-view",
           "category": "component"
      },
      "clcommon__Actor_Name__c": "los_identification_details",
      "clcommon__External_ID__c": "los_smb_flow+los_identification_details",
-     "clcommon__Release_Checksum__c": "c02108d05e105d8bbeb45f7791cdd1382f0989449e74ca7534522f7df2628253"
+     "clcommon__Release_Checksum__c": "8188135190fcc97e3966930848e68e603fb61c91de027a8afa515589aa43fc58"
 }

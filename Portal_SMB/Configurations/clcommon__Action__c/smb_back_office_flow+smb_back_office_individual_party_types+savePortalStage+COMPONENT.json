@@ -1,0 +1,72 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "savePortalStage",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "savePortalStage",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "render": false,
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(tempApplicationId);",
+               "portalStage": "MoreBusinessDetails"
+          },
+          "validation": [
+               ""
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(backofficerAccountId);",
+                         "value": "$global.attr(tempbackofficerAccountId);"
+                    },
+                    {
+                         "field": "$global.attr(applicationId);",
+                         "value": "$global.attr(tempApplicationId);"
+                    },
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": "$global.attr(tempPartyId);"
+                    },
+                    {
+                         "field": "$global.attr(contactId);",
+                         "value": "$global.attr(tempContactId);"
+                    },
+                    {
+                         "field": "$nav(smb_back_office_application_flow_steps).appearance(current);",
+                         "value": "next"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
+     },
+     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Type__c": "submit",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_party_types"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_individual_party_types",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Unique_Action_Name__c": "smb_back_office_individual_party_types+savePortalStage",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_party_types+savePortalStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "556cdb5d3efc83b3f55cd67e08f8b46a124de82fc4ab96f89929b16edea8bc8e"
+}

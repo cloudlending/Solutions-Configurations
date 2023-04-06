@@ -1,0 +1,44 @@
+{
+     "attributes": {
+          "type": "clcommon__Action__c"
+     },
+     "Name": "identificationInformationDetailsBack",
+     "clcommon__API_Configurations__c": {},
+     "clcommon__Action_Definition__c": {
+          "name": "identificationInformationDetailsBack",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "secondary",
+               "label": "Back"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(smb_back_office_application_flow_steps).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
+               "updates": []
+          },
+          "ariaLabel": "Back"
+     },
+     "clcommon__Action_Order__c": 1,
+     "clcommon__Action_Type__c": "normal",
+     "clcommon__Actor__r": {
+          "attributes": {
+               "type": "clcommon__Actors__c"
+          },
+          "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_identification_information"
+     },
+     "clcommon__Component_Structure_Name__c": "smb_back_office_identification_information",
+     "clcommon__Display_Type__c": "COMPONENT",
+     "clcommon__Remote_Action_Class__c": null,
+     "clcommon__Unique_Action_Name__c": "smb_back_office_individual_identification_information+identificationInformationDetailsBack",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_individual_identification_information+identificationInformationDetailsBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "c8134e42125fe3597251c5c058ab7c630abac4a55f3830a1a7468a743e8aaf83"
+}
