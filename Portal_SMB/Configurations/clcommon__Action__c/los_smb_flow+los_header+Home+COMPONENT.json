@@ -8,10 +8,10 @@
           "name": "Home",
           "property": {},
           "appearance": {
-               "label": "Home",
-               "render": "$global.attr(userInfo).attr(userType); != \"Guest\" and $global.attr(showHome); == \"YES\"",
+               "position": "top-right",
                "style": "link",
-               "position": "top-right"
+               "render": "$global.attr(userInfo).attr(userType); != \"Guest\" and $global.attr(showHome); == \"YES\"",
+               "label": "Home"
           },
           "context": "hamburgermenu",
           "successHandler": {},

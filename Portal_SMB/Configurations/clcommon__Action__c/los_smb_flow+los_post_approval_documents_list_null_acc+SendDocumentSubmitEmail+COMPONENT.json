@@ -8,9 +8,9 @@
           "name": "SendDocumentSubmitEmail",
           "property": {},
           "appearance": {
-               "style": "primary",
+               "label": "Next",
                "position": "bottom-left",
-               "label": "Next"
+               "style": "primary"
           },
           "confirmation": {
                "type": "prompt",
@@ -23,8 +23,8 @@
                "cancelOrCloseHandler": {}
           },
           "remoteActionArguments": {
-               "documentPage": "postApproval",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "documentPage": "postApproval"
           },
           "successHandler": {
                "actions": [

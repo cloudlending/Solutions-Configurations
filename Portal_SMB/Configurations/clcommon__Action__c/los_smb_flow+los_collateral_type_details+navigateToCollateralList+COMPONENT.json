@@ -8,11 +8,11 @@
           "name": "navigateToCollateralList",
           "property": {},
           "appearance": {
-               "enable": "$global.attr(enableAssetSubmitButton);==\"Yes\"",
-               "render": "$global.attr(collateralEdit);!=true",
-               "position": "bottom-left",
+               "style": "primary",
                "label": "Submit",
-               "style": "primary"
+               "position": "bottom-left",
+               "render": "$global.attr(collateralEdit);!=true",
+               "enable": "$global.attr(enableAssetSubmitButton);==\"Yes\""
           },
           "validation": [],
           "successHandler": {},

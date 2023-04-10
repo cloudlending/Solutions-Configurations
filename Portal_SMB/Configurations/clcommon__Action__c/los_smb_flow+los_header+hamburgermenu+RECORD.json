@@ -8,10 +8,10 @@
           "name": "hamburgermenu",
           "property": {},
           "appearance": {
-               "label": "$global.attr(userInfo).attr(firstName); $global.attr(userInfo).attr(lastName); <i class=\"fa fa-angle-down\" style=\"font-size:20px;\" aria-hidden=\"true\"></i>",
-               "style": "tertiary",
+               "position": "top-right",
                "render": "$global.attr(userInfo).attr(userType); != \"Guest\" and false",
-               "position": "top-right"
+               "style": "tertiary",
+               "label": "$global.attr(userInfo).attr(firstName); $global.attr(userInfo).attr(lastName); <i class=\"fa fa-angle-down\" style=\"font-size:20px;\" aria-hidden=\"true\"></i>"
           },
           "successHandler": {},
           "failureHandler": {},

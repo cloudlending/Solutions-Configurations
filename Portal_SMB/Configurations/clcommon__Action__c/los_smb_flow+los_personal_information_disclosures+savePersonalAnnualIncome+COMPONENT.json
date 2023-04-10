@@ -8,22 +8,22 @@
           "name": "savePersonalAnnualIncome",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "style": "primary",
+               "render": false,
                "label": "Next",
-               "render": false
+               "style": "primary",
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "genesis__Income__c": [
-                    {
-                         "genesis__Amount__c": "$state(los_personal_income_details).attr(genesis__Amount__c);",
-                         "genesis__Contact__c": "$global.attr(borrowerContactId);",
-                         "Name": "Annual Personal Income"
-                    }
-               ],
                "genesis__Applications__c": {
                     "id": "$global.attr(applicationId);"
-               }
+               },
+               "genesis__Income__c": [
+                    {
+                         "Name": "Annual Personal Income",
+                         "genesis__Contact__c": "$global.attr(borrowerContactId);",
+                         "genesis__Amount__c": "$state(los_personal_income_details).attr(genesis__Amount__c);"
+                    }
+               ]
           },
           "successHandler": {
                "actions": [

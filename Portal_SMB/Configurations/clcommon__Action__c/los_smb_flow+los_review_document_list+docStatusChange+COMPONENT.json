@@ -8,13 +8,13 @@
           "name": "docStatusChange",
           "property": {},
           "appearance": {
-               "label": "View",
+               "style": "primary",
                "render": false,
-               "style": "primary"
+               "label": "View"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "documentCategoryId": "$global.attr(SubmittedDoc);"
+               "documentCategoryId": "$global.attr(SubmittedDoc);",
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "updates": [

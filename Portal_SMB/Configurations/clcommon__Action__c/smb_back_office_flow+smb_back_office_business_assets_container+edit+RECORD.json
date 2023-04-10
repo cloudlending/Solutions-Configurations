@@ -8,9 +8,9 @@
           "name": "edit",
           "property": {},
           "appearance": {
-               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i>",
+               "style": "secondary",
                "render": "$this.attr(Id);!=$global.attr(editAsset); and $this.attr(Id);!=undefined  and $global.attr(existingCollateral);!=\"Yes\"",
-               "style": "secondary"
+               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

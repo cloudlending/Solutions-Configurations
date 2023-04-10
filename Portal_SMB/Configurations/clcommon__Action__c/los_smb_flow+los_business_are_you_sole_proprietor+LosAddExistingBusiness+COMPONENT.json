@@ -8,10 +8,10 @@
           "name": "LosAddExistingBusiness",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "render": "($global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined or $global.attr(applicationId); == \"new_record_id\") and ($this.attr(are_you_sole_proprietor); ==\"false\" or $this.attr(business_id_type);==\"EIN\")",
+               "style": "primary",
                "label": "<span>Choose From Existing</span>  <i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>",
-               "style": "primary"
+               "render": "($global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined or $global.attr(applicationId); == \"new_record_id\") and ($this.attr(are_you_sole_proprietor); ==\"false\" or $this.attr(business_id_type);==\"EIN\")",
+               "position": "top-right"
           },
           "successHandler": {},
           "failureHandler": {},

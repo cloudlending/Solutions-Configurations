@@ -8,15 +8,15 @@
           "name": "savePortalStage",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
-               "disableWhenLoading": true,
+               "position": "bottom-left",
                "label": "Next",
-               "position": "bottom-left"
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "BusinessParties",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "BusinessParties"
           },
           "successHandler": {
                "assignments": [

@@ -8,15 +8,15 @@
           "name": "savePortalStage",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
-               "disableWhenLoading": true,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "BusinessParties",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "BusinessParties"
           },
           "validation": [
                "smb_back_office_existing _business_parties_details"

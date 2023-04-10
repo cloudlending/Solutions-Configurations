@@ -8,18 +8,18 @@
           "name": "SmbBackOfficeUpdateConsentPartyInfo",
           "property": {},
           "appearance": {
-               "position": "bottom-right",
-               "style": "primary",
+               "enable": "$this.attr(genesis__Credit_Check_Consent__c); and $this.attr(solcommon__Consent_To_Disclosure_And_Document__c);",
                "label": "Next",
-               "enable": "$this.attr(genesis__Credit_Check_Consent__c); and $this.attr(solcommon__Consent_To_Disclosure_And_Document__c);"
+               "style": "primary",
+               "position": "bottom-right"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
                "clcommon__Party__c": {
-                    "genesis__Credit_Check_Consent__c": "$this.attr(genesis__Credit_Check_Consent__c);",
+                    "Id": "$global.attr(partyId);",
                     "solcommon__Consent_To_Disclosure_And_Document__c": "$this.attr(solcommon__Consent_To_Disclosure_And_Document__c);",
-                    "Id": "$global.attr(partyId);"
-               }
+                    "genesis__Credit_Check_Consent__c": "$this.attr(genesis__Credit_Check_Consent__c);"
+               },
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "assignments": [

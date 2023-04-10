@@ -8,11 +8,11 @@
           "name": "NullifyDynamicFieldsOnPartyTypes",
           "property": {},
           "appearance": {
-               "render": true,
-               "position": "bottom-right",
-               "style": "primary",
+               "enable": "$this.attr(genesis__Credit_Check_Consent__c); == true and $this.attr(solcommon__Consent_To_Disclosure_And_Document__c); == true",
                "label": "Next",
-               "enable": "$this.attr(genesis__Credit_Check_Consent__c); == true and $this.attr(solcommon__Consent_To_Disclosure_And_Document__c); == true"
+               "style": "primary",
+               "position": "bottom-right",
+               "render": true
           },
           "validation": [
                "smb_back_office_personal_information_disclosures",

@@ -8,11 +8,11 @@
           "name": "backButton",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Back",
-               "render": "$global.attr(collateralEdit);!=true and $global.attr(existingCollateral);!=\"Yes\"",
+               "style": "secondary",
                "variant": "text",
-               "style": "secondary"
+               "render": "$global.attr(collateralEdit);!=true and $global.attr(existingCollateral);!=\"Yes\"",
+               "label": "Back",
+               "position": "bottom-left"
           },
           "successHandler": {},
           "failureHandler": {},

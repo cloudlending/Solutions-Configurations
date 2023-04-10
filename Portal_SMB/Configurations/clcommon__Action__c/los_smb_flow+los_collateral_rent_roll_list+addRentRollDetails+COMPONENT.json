@@ -8,10 +8,10 @@
           "name": "addRentRollDetails",
           "property": {},
           "appearance": {
-               "position": "top-right",
-               "render": "$global.attr(existingCollateral);!=\"Yes\"",
+               "style": "primary",
                "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Rent Roll</span>",
-               "style": "primary"
+               "render": "$global.attr(existingCollateral);!=\"Yes\"",
+               "position": "top-right"
           },
           "successHandler": {},
           "failureHandler": {},

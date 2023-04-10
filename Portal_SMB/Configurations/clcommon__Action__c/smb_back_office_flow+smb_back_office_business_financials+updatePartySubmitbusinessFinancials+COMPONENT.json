@@ -8,18 +8,18 @@
           "name": "updatePartySubmitbusinessFinancials",
           "property": {},
           "appearance": {
-               "position": "bottom-right",
-               "label": "Next",
+               "style": "primary",
                "render": false,
-               "style": "primary"
+               "label": "Next",
+               "position": "bottom-right"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
                "clcommon__Party__c": {
-                    "id": "$state(smb_back_office_borrower_party).attr(Id);",
+                    "clcommon__account__c": "$global.attr(backofficerAccountId);",
                     "solcommon__Submission_Status__c": "SUBMITTED",
-                    "clcommon__account__c": "$global.attr(backofficerAccountId);"
-               }
+                    "id": "$state(smb_back_office_borrower_party).attr(Id);"
+               },
+               "applicationId": "$global.attr(applicationId);"
           },
           "validation": [
                "smb_back_office_business_financials"

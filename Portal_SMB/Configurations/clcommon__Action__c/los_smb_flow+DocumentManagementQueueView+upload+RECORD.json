@@ -7,18 +7,18 @@
      "clcommon__Action_Definition__c": {
           "name": "upload",
           "property": {
-               "uploadType": "document",
-               "multiple": true,
+               "accept": ".pdf, .png, .jpg, .jpeg, .txt, .xls",
                "maxSize": 3000000000,
-               "accept": ".pdf, .png, .jpg, .jpeg, .txt, .xls"
+               "multiple": true,
+               "uploadType": "document"
           },
           "appearance": {
-               "label": "Upload File",
-               "style": "primary"
+               "style": "primary",
+               "label": "Upload File"
           },
           "remoteActionArguments": {
-               "documentCategoryId": "$this.attr(clcommon__Document_Category__c.Id);",
-               "attachmentIds": "$uploadedAttachmentIds;"
+               "attachmentIds": "$uploadedAttachmentIds;",
+               "documentCategoryId": "$this.attr(clcommon__Document_Category__c.Id);"
           },
           "uploadActionArguments": {
                "attachmentParentId": "$this.attr(clcommon__Document_Category__c.Id);"

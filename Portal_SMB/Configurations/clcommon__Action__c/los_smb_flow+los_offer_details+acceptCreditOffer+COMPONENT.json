@@ -8,13 +8,13 @@
           "name": "acceptCreditOffer",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
+               "label": "Accept Credit Offer",
                "style": "primary",
-               "label": "Accept Credit Offer"
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "offerId": "$currentStage.attr(selectedOffer);"
+               "offerId": "$currentStage.attr(selectedOffer);",
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "actions": [

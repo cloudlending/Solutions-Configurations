@@ -8,13 +8,13 @@
           "name": "deleteAsset",
           "property": {},
           "appearance": {
-               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>",
+               "render": "$this.attr(Id); != undefined and $global.attr(existingCollateral);!=\"Yes\"",
                "style": "secondary",
-               "render": "$this.attr(Id); != undefined and $global.attr(existingCollateral);!=\"Yes\""
+               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>"
           },
           "remoteActionArguments": {
-               "collateralTypeDetail": "$this;",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "collateralTypeDetail": "$this;"
           },
           "successHandler": {
                "updates": [

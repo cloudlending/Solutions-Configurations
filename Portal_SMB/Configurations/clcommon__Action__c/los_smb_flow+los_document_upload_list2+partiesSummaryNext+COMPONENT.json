@@ -8,14 +8,14 @@
           "name": "partiesSummaryNext",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Next",
+               "position": "bottom-left",
                "render": true,
-               "position": "bottom-left"
+               "label": "Next",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "ReviewAndSubmit",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "ReviewAndSubmit"
           },
           "successHandler": {
                "assignments": [

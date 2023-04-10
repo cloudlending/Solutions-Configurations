@@ -8,20 +8,20 @@
           "name": "updateExistngContactDetails",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Save",
+               "render": false,
                "style": "primary",
-               "render": false
+               "label": "Save",
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
                "contact": {
-                    "Id": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Id);",
-                    "Phone": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Phone);",
-                    "Email": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Email);",
+                    "FirstName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.FirstName);",
                     "LastName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.LastName);",
-                    "FirstName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.FirstName);"
-               },
-               "applicationId": "$global.attr(applicationId);"
+                    "Email": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Email);",
+                    "Phone": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Phone);",
+                    "Id": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Id);"
+               }
           },
           "successHandler": {
                "actions": [

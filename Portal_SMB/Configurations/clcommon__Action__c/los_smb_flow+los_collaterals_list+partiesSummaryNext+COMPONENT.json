@@ -8,15 +8,15 @@
           "name": "partiesSummaryNext",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Next",
-               "style": "primary",
+               "render": "$global.attr(isHMDALoan);!=true",
                "enable": "$state(los_collaterals_list).count();>=1",
-               "render": "$global.attr(isHMDALoan);!=true"
+               "style": "primary",
+               "label": "Next",
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "$global.attr(portalStage);"
+               "portalStage": "$global.attr(portalStage);",
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {},
           "failureHandler": {},

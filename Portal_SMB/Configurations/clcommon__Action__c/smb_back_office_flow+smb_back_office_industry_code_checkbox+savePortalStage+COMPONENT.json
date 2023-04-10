@@ -8,15 +8,15 @@
           "name": "savePortalStage",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
-               "disableWhenLoading": true,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "BusinessFinancials",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "BusinessFinancials"
           },
           "successHandler": {
                "assignments": [

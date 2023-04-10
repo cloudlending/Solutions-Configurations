@@ -8,11 +8,11 @@
           "name": "backButtonWithNew",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "variant": "text",
-               "label": "Back",
+               "style": "secondary",
                "render": "$global.attr(existingCollateral);!=\"Yes\"",
-               "style": "secondary"
+               "label": "Back",
+               "variant": "text",
+               "position": "bottom-left"
           },
           "successHandler": {},
           "failureHandler": {},

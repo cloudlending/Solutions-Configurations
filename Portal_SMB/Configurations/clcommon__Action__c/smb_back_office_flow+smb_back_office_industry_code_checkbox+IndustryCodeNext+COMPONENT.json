@@ -8,16 +8,16 @@
           "name": "IndustryCodeNext",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Next"
+               "label": "Next",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "accountId": "$global.attr(backofficerAccountId);",
                "genesis__Business_Information__c": {
-                    "Id": "$global.attr(businessInfoId);",
-                    "genesis__NAICS_Code__c": "$this.attr(genesis__NAICS_Code__c);"
-               }
+                    "genesis__NAICS_Code__c": "$this.attr(genesis__NAICS_Code__c);",
+                    "Id": "$global.attr(businessInfoId);"
+               },
+               "accountId": "$global.attr(backofficerAccountId);",
+               "applicationId": "$global.attr(applicationId);"
           },
           "validation": [
                "smb_back_office_industry_code_checkbox"

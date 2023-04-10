@@ -8,14 +8,14 @@
           "name": "DocumentSubmit",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
+               "label": "Next",
                "position": "bottom-left",
-               "label": "Next"
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "FundingInformation",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "FundingInformation"
           },
           "successHandler": {
                "assignments": [

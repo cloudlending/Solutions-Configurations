@@ -8,20 +8,20 @@
           "name": "personalInformationExistingNext",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Save",
+               "style": "primary",
                "render": false,
-               "style": "primary"
+               "label": "Save",
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
                "clcommon__Party__c": {
-                    "id": "$global.attr(partyId);",
-                    "clcommon__Percent_Ownership__c": "$state(los_party_beneficial_details).attr(clcommon__Percent_Ownership__c);",
-                    "solcommon__Position_In_Company__c": "$state(los_party_beneficial_details).attr(solcommon__Position_In_Company__c);",
+                    "clcommon__Party_Types__c": "$this.attr(clcommon__Party_Types__c);",
                     "clcommon__Signer_Capacity__c": "$state(los_party_beneficial_details).attr(clcommon__Signer_Capacity__c);",
-                    "clcommon__Party_Types__c": "$this.attr(clcommon__Party_Types__c);"
-               }
+                    "solcommon__Position_In_Company__c": "$state(los_party_beneficial_details).attr(solcommon__Position_In_Company__c);",
+                    "clcommon__Percent_Ownership__c": "$state(los_party_beneficial_details).attr(clcommon__Percent_Ownership__c);",
+                    "id": "$global.attr(partyId);"
+               },
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "updates": [

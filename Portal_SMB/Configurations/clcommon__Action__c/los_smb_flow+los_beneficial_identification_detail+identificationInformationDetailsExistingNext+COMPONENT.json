@@ -8,22 +8,22 @@
           "name": "identificationInformationDetailsExistingNext",
           "property": {},
           "appearance": {
-               "label": "Next",
-               "style": "primary",
+               "render": "$this.attr(Id); != \"\" and $this.attr(Id); != undefined and $this.attr(Id); != \"new_record_id\"",
                "position": "bottom-left",
-               "render": "$this.attr(Id); != \"\" and $this.attr(Id); != undefined and $this.attr(Id); != \"new_record_id\""
+               "style": "primary",
+               "label": "Next"
           },
           "remoteActionArguments": {
-               "genesis__Identification_Information__c": {
-                    "genesis__Identification_Type__c": "$this.attr(genesis__Identification_Type__c);",
-                    "genesis__Identification_Number__c": "$this.attr(genesis__Identification_Number__c);",
-                    "genesis__Date_of_Issuance__c": "$this.attr(genesis__Date_of_Issuance__c);",
-                    "genesis__Expiration_Date__c": "$this.attr(genesis__Expiration_Date__c);",
-                    "Id": "$this.attr(Id);"
-               },
-               "accountId": "$global.attr(borrowerAccountId);",
+               "partyId": "$global.attr(borrowerPartyId);",
                "applicationId": "$global.attr(applicationId);",
-               "partyId": "$global.attr(borrowerPartyId);"
+               "accountId": "$global.attr(borrowerAccountId);",
+               "genesis__Identification_Information__c": {
+                    "Id": "$this.attr(Id);",
+                    "genesis__Expiration_Date__c": "$this.attr(genesis__Expiration_Date__c);",
+                    "genesis__Date_of_Issuance__c": "$this.attr(genesis__Date_of_Issuance__c);",
+                    "genesis__Identification_Number__c": "$this.attr(genesis__Identification_Number__c);",
+                    "genesis__Identification_Type__c": "$this.attr(genesis__Identification_Type__c);"
+               }
           },
           "successHandler": {
                "assignments": [

@@ -8,10 +8,10 @@
           "name": "collateralValidation",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Next",
+               "render": "$global.attr(isHMDALoan);==true and $state(los_collaterals_list_validation).count();<1",
                "style": "primary",
-               "render": "$global.attr(isHMDALoan);==true and $state(los_collaterals_list_validation).count();<1"
+               "label": "Next",
+               "position": "bottom-left"
           },
           "successHandler": {},
           "failureHandler": {},

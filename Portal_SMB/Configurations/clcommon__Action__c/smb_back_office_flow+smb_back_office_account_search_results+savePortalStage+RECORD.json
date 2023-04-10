@@ -8,13 +8,13 @@
           "name": "savePortalStage",
           "property": {},
           "appearance": {
-               "label": "Continue",
+               "style": "primary",
                "render": false,
-               "style": "primary"
+               "label": "Continue"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "businessParties"
+               "portalStage": "businessParties",
+               "applicationId": "$global.attr(applicationId);"
           },
           "validation": [
                "smb_back_office_account_search_results"

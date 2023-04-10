@@ -8,9 +8,9 @@
           "name": "submit",
           "property": {},
           "appearance": {
-               "label": "Submit",
+               "style": "primary",
                "render": false,
-               "style": "primary"
+               "label": "Submit"
           },
           "confirmation": {
                "type": "prompt",
@@ -28,10 +28,10 @@
                }
           },
           "remoteActionArguments": {
-               "additional_parties": true,
                "genesis__Applications__c": {
                     "id": "$global.attr(applicationId);"
-               }
+               },
+               "additional_parties": true
           },
           "successHandler": {
                "assignments": [

@@ -8,27 +8,27 @@
           "name": "personalInformationDetailsContactUpdateNext",
           "property": {},
           "appearance": {
-               "render": false,
+               "style": "primary",
                "label": "Next",
-               "style": "primary"
+               "render": false
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
                "contact": {
-                    "Birthdate": "$state(smb_back_office_personal_information_details).attr(Birthdate);",
-                    "ints__Social_Security_Number__c": "$state(smb_back_office_personal_information_details).attr(ints__Social_Security_Number__c);",
-                    "Phone": "$state(smb_back_office_personal_information_details).attr(Phone);",
-                    "Email": "$state(smb_back_office_personal_information_details).attr(Email);",
-                    "Id": "$global.attr(borrowerContactIdExisting);",
-                    "LastName": "$state(smb_back_office_personal_information_details).attr(LastName);",
-                    "FirstName": "$state(smb_back_office_personal_information_details).attr(FirstName);",
-                    "clcommon__Current_City__c": "$state(smb_back_office_personal_information_details).attr(clcommon__Current_City__c);",
-                    "clcommon__Current_State__c": "$state(smb_back_office_personal_information_details).attr(clcommon__Current_State__c);",
-                    "clcommon__Current_Zip_Code__c": "$state(smb_back_office_personal_information_details).attr(clcommon__Current_Zip_Code__c);",
-                    "clcommon__Current_Country__c": "US",
+                    "Title": "$state(smb_back_office_personal_information_details).attr(Title);",
                     "clcommon__Current_Street__c": "$state(smb_back_office_personal_information_details).attr(clcommon__Current_Street__c);",
-                    "Title": "$state(smb_back_office_personal_information_details).attr(Title);"
-               }
+                    "clcommon__Current_Country__c": "US",
+                    "clcommon__Current_Zip_Code__c": "$state(smb_back_office_personal_information_details).attr(clcommon__Current_Zip_Code__c);",
+                    "clcommon__Current_State__c": "$state(smb_back_office_personal_information_details).attr(clcommon__Current_State__c);",
+                    "clcommon__Current_City__c": "$state(smb_back_office_personal_information_details).attr(clcommon__Current_City__c);",
+                    "FirstName": "$state(smb_back_office_personal_information_details).attr(FirstName);",
+                    "LastName": "$state(smb_back_office_personal_information_details).attr(LastName);",
+                    "Id": "$global.attr(borrowerContactIdExisting);",
+                    "Email": "$state(smb_back_office_personal_information_details).attr(Email);",
+                    "Phone": "$state(smb_back_office_personal_information_details).attr(Phone);",
+                    "ints__Social_Security_Number__c": "$state(smb_back_office_personal_information_details).attr(ints__Social_Security_Number__c);",
+                    "Birthdate": "$state(smb_back_office_personal_information_details).attr(Birthdate);"
+               },
+               "applicationId": "$global.attr(applicationId);"
           },
           "validation": [
                "smb_back_office_personal_information_disclosures",

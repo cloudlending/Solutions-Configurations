@@ -8,26 +8,26 @@
           "name": "personalInformationDetailsNext",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Save",
+               "render": false,
                "style": "primary",
-               "render": false
+               "label": "Save",
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "create_account_email": true,
-               "contact": {
-                    "Phone": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Phone);",
-                    "Email": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Email);",
-                    "LastName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.LastName);",
-                    "FirstName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.FirstName);"
+               "clcommon__Party__c": {
+                    "clcommon__Party_Types__c": "$this.attr(clcommon__Party_Types__c);",
+                    "clcommon__Signer_Capacity__c": "$state(los_party_beneficial_details).attr(clcommon__Signer_Capacity__c);",
+                    "solcommon__Position_In_Company__c": "$state(los_party_beneficial_details).attr(solcommon__Position_In_Company__c);",
+                    "clcommon__Percent_Ownership__c": "$state(los_party_beneficial_details).attr(clcommon__Percent_Ownership__c);"
                },
                "applicationId": "$global.attr(applicationId);",
-               "clcommon__Party__c": {
-                    "clcommon__Percent_Ownership__c": "$state(los_party_beneficial_details).attr(clcommon__Percent_Ownership__c);",
-                    "solcommon__Position_In_Company__c": "$state(los_party_beneficial_details).attr(solcommon__Position_In_Company__c);",
-                    "clcommon__Signer_Capacity__c": "$state(los_party_beneficial_details).attr(clcommon__Signer_Capacity__c);",
-                    "clcommon__Party_Types__c": "$this.attr(clcommon__Party_Types__c);"
-               }
+               "contact": {
+                    "FirstName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.FirstName);",
+                    "LastName": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.LastName);",
+                    "Email": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Email);",
+                    "Phone": "$state(los_party_personalinfo_details).attr(clcommon__Contact__r.Phone);"
+               },
+               "create_account_email": true
           },
           "successHandler": {
                "assignments": [
@@ -68,9 +68,9 @@
      },
      "clcommon__Component_Structure_Name__c": "los_beneifical_party_types",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__Remote_Action_Class__c": "PortalCreateParty",
+     "clcommon__Remote_Action_Class__c": "solcommon.PortalCreateParty",
      "clcommon__Unique_Action_Name__c": "los_party_ownership_details+personalInformationDetailsNext",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "los_smb_flow+los_party_ownership_details+personalInformationDetailsNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "574645dc4065f6f476eb538f13326f962ed6e5e6ca48d525ab0de9405cf01e6f"
+     "clcommon__Release_Checksum__c": "89ca2f9913104aa946675fd38467bf0f34f3348d5d4aca496397e4bf133de23c"
 }

@@ -8,14 +8,14 @@
           "name": "portalSaveStage",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Next",
+               "render": false,
                "style": "primary",
-               "render": false
+               "label": "Next",
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "portalStage": "ClosingDocument",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "ClosingDocument"
           },
           "successHandler": {
                "assignments": [

@@ -8,10 +8,10 @@
           "name": "SMBBackOfficeBackButton",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Back",
+               "style": "secondary",
                "render": "$global.attr(collateralEdit);!=true and $global.attr(existingCollateral);!=\"Yes\"",
-               "style": "secondary"
+               "label": "Back",
+               "position": "bottom-left"
           },
           "successHandler": {},
           "failureHandler": {},

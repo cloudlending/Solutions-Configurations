@@ -8,10 +8,10 @@
           "name": "SMBBackOfficeAddAsset",
           "property": {},
           "appearance": {
-               "label": "<span>Add More Item</span>&nbsp;<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>",
-               "render": "$global.attr(existingCollateral);!=\"Yes\"",
+               "position": "top-right",
                "style": "primary",
-               "position": "top-right"
+               "render": "$global.attr(existingCollateral);!=\"Yes\"",
+               "label": "<span>Add More Item</span>&nbsp;<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>"
           },
           "successHandler": {},
           "failureHandler": {},
@@ -28,8 +28,8 @@
                          "method": "insert",
                          "source": "$state(smb_back_office_business_assets_container);",
                          "options": {
-                              "structureName": "smb_back_office_business_assets_container",
-                              "defaultValue": true
+                              "defaultValue": true,
+                              "structureName": "smb_back_office_business_assets_container"
                          }
                     }
                ]

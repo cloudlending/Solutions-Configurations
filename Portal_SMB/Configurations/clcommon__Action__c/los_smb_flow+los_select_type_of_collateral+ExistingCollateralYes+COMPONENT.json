@@ -8,11 +8,11 @@
           "name": "ExistingCollateralYes",
           "property": {},
           "appearance": {
-               "disableWhenLoading": true,
-               "position": "bottom-left",
-               "style": "primary",
+               "render": "$this.attr(existingCollateral); == \"Yes\"",
                "label": "Next",
-               "render": "$this.attr(existingCollateral); == \"Yes\""
+               "style": "primary",
+               "position": "bottom-left",
+               "disableWhenLoading": true
           },
           "validation": [
                "los_select_type_of_collateral"

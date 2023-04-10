@@ -8,22 +8,22 @@
           "name": "savePortalIncomeInfo",
           "property": {},
           "appearance": {
-               "position": "bottom-right",
-               "label": "Next Income",
+               "style": "primary",
                "render": false,
-               "style": "primary"
+               "label": "Next Income",
+               "position": "bottom-right"
           },
           "remoteActionArguments": {
-               "genesis__Income__c": [
-                    {
-                         "genesis__Amount__c": "$state(smb_back_office_individual_personal_income_information).attr(genesis__Amount__c);",
-                         "genesis__Contact__c": "$global.attr(tempContactId);",
-                         "name": "Annual Personal Income"
-                    }
-               ],
                "genesis__Applications__c": {
                     "id": "$global.attr(tempApplicationId);"
-               }
+               },
+               "genesis__Income__c": [
+                    {
+                         "name": "Annual Personal Income",
+                         "genesis__Contact__c": "$global.attr(tempContactId);",
+                         "genesis__Amount__c": "$state(smb_back_office_individual_personal_income_information).attr(genesis__Amount__c);"
+                    }
+               ]
           },
           "validation": [],
           "successHandler": {

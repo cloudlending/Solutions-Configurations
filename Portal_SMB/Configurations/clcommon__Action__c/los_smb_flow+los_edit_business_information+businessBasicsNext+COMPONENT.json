@@ -8,23 +8,23 @@
           "name": "businessBasicsNext",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
+               "style": "primary",
                "label": "Save",
-               "style": "primary"
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "Id": "$global.attr(applicationId);"
-               },
-               "genesis__Business_Information__c": {
-                    "Id": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.Id);",
-                    "genesis__Total_Liabilities__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c);",
-                    "genesis__Total_Sales__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c);",
-                    "genesis__DBA_Name__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);",
-                    "solcommon__Total_Revenue__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c);"
-               },
                "account": {
                     "Id": "$this.attr(clcommon__Account__r.Id);"
+               },
+               "genesis__Business_Information__c": {
+                    "solcommon__Total_Revenue__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c);",
+                    "genesis__DBA_Name__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);",
+                    "genesis__Total_Sales__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c);",
+                    "genesis__Total_Liabilities__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c);",
+                    "Id": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.Id);"
+               },
+               "genesis__Applications__c": {
+                    "Id": "$global.attr(applicationId);"
                }
           },
           "validation": [

@@ -8,16 +8,16 @@
           "name": "updatePartySubmit",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
+               "style": "primary",
                "label": "Submit",
-               "style": "primary"
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
                "clcommon__Party__c": {
-                    "id": "$global.attr(borrowerPartyId);",
-                    "solcommon__Submission_Status__c": "SUBMITTED"
-               }
+                    "solcommon__Submission_Status__c": "SUBMITTED",
+                    "id": "$global.attr(borrowerPartyId);"
+               },
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "actions": [

@@ -8,14 +8,14 @@
           "name": "collateralNext",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Next",
+               "render": "$global.attr(isHMDALoan);==true and $state(los_collaterals_list_validation).count();>=1",
                "style": "primary",
-               "render": "$global.attr(isHMDALoan);==true and $state(los_collaterals_list_validation).count();>=1"
+               "label": "Next",
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "$global.attr(portalStage);"
+               "portalStage": "$global.attr(portalStage);",
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {},
           "failureHandler": {},

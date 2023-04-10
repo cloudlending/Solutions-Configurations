@@ -8,15 +8,15 @@
           "name": "deleteParties",
           "property": {},
           "appearance": {
-               "render": false,
-               "style": "iconic",
+               "tooltip": "Delete Party",
                "label": "delete",
-               "tooltip": "Delete Party"
+               "style": "iconic",
+               "render": false
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
+               "objectName": "party",
                "recordId": "$this.attr(id);",
-               "objectName": "party"
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "updates": [

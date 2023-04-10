@@ -8,10 +8,10 @@
           "name": "crossSellBAO",
           "property": {},
           "appearance": {
-               "label": "Next",
-               "position": "bottom-left",
+               "style": "primary",
                "render": "$this.attr(newAccount);",
-               "style": "primary"
+               "position": "bottom-left",
+               "label": "Next"
           },
           "confirmation": {
                "type": "prompt",
@@ -27,17 +27,17 @@
           "pendingHandler": {},
           "handler": {
                "next": {
-                    "data": {
-                         "applicationId": "$global.attr(applicationId);",
-                         "businessAccountId": "$global.attr(businessAccountId);",
-                         "portalStage": "BaoProducts",
-                         "isPrincipal": "$global.attr(isPrincipal);",
-                         "assetClassName": "$global.attr(assetClassName);",
-                         "isHMDALoan": "$global.attr(isHMDALoan);",
-                         "isCollectDocumentRequired": "$global.attr(isCollectDocumentRequired);"
-                    },
+                    "stageName": "Home",
                     "navName": "cross_sell_bao",
-                    "stageName": "Home"
+                    "data": {
+                         "isCollectDocumentRequired": "$global.attr(isCollectDocumentRequired);",
+                         "isHMDALoan": "$global.attr(isHMDALoan);",
+                         "assetClassName": "$global.attr(assetClassName);",
+                         "isPrincipal": "$global.attr(isPrincipal);",
+                         "portalStage": "BaoProducts",
+                         "businessAccountId": "$global.attr(businessAccountId);",
+                         "applicationId": "$global.attr(applicationId);"
+                    }
                }
           },
           "ariaLabel": "Next"

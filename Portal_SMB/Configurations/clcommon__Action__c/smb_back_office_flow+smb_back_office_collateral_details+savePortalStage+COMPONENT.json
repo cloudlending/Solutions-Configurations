@@ -8,16 +8,16 @@
           "name": "savePortalStage",
           "property": {},
           "appearance": {
-               "position": "bottom-right",
-               "label": "Next",
-               "enable": "$state(smb_back_office_collateral_details).count();>=1",
-               "disableWhenLoading": true,
+               "style": "primary",
                "render": "($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\" and $global.attr(HMDALegalClassName); !=\"Individual\") or ($global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\" and $global.attr(HMDALegalClassName); !=\"Individual\") or ($global.attr(HMDALoan); == false and ($global.attr(HMDALegalClassName); ==\"Sole Proprietorship\" or $global.attr(HMDALegalClassName); ==\"Individual\"))",
-               "style": "primary"
+               "disableWhenLoading": true,
+               "enable": "$state(smb_back_office_collateral_details).count();>=1",
+               "label": "Next",
+               "position": "bottom-right"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "ReviewAndSubmit"
+               "portalStage": "ReviewAndSubmit",
+               "applicationId": "$global.attr(applicationId);"
           },
           "validation": [
                "smb_back_office_business_details"

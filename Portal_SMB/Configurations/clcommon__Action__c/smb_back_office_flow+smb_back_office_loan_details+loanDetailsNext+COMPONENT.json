@@ -8,21 +8,21 @@
           "name": "loanDetailsNext",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Next"
+               "label": "Next",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "genesis__CL_Product__c": "$this.attr(genesis__CL_Product__c);",
-                    "genesis__Loan_Amount__c": "$this.attr(genesis__Loan_Amount__c);",
-                    "genesis__Requested_Loan_Amount__c": "$this.attr(genesis__Loan_Amount__c);",
-                    "id": "$global.attr(applicationId);"
+               "genesis__Business_Information__c": {
+                    "id": "$global.attr(businessInfoId);"
                },
                "account": {
                     "id": "$global.attr(backofficerAccountId);"
                },
-               "genesis__Business_Information__c": {
-                    "id": "$global.attr(businessInfoId);"
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);",
+                    "genesis__Requested_Loan_Amount__c": "$this.attr(genesis__Loan_Amount__c);",
+                    "genesis__Loan_Amount__c": "$this.attr(genesis__Loan_Amount__c);",
+                    "genesis__CL_Product__c": "$this.attr(genesis__CL_Product__c);"
                }
           },
           "validation": [

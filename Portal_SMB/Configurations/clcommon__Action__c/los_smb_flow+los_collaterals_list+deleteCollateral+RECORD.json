@@ -8,13 +8,13 @@
           "name": "deleteCollateral",
           "property": {},
           "appearance": {
-               "tooltip": "Delete Collateral",
+               "label": "delete",
                "style": "iconic",
-               "label": "delete"
+               "tooltip": "Delete Collateral"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "collateralId": "$this.attr(genesis__Collateral__r.Id);"
+               "collateralId": "$this.attr(genesis__Collateral__r.Id);",
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "assignments": [

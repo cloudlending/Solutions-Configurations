@@ -8,19 +8,19 @@
           "name": "updatePartyInfo",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Next",
+               "position": "bottom-left",
                "render": false,
-               "position": "bottom-left"
+               "label": "Next",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
                "clcommon__Party__c": {
-                    "id": "$global.attr(borrowerPartyId);",
-                    "clcommon__Party_Types__c": "$state(los_beneficial_party_types).attr(clcommon__Party_Types__c);",
+                    "genesis__Credit_Check_Consent__c": "$this.attr(genesis__Credit_Check_Consent__c);",
                     "solcommon__Consent_To_Disclosure_And_Document__c": "$this.attr(solcommon__Consent_To_Disclosure_And_Document__c);",
-                    "genesis__Credit_Check_Consent__c": "$this.attr(genesis__Credit_Check_Consent__c);"
-               }
+                    "clcommon__Party_Types__c": "$state(los_beneficial_party_types).attr(clcommon__Party_Types__c);",
+                    "id": "$global.attr(borrowerPartyId);"
+               },
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "actions": [
