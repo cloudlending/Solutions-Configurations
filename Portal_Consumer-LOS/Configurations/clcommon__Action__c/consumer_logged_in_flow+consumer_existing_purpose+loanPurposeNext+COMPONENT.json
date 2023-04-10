@@ -5,30 +5,13 @@
      "Name": "loanPurposeNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "assignments": []
+          "name": "loanPurposeNext",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined and $global.attr(partyType); == $global.attr(borrowerParty);",
+               "label": "Next",
+               "style": "primary"
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "actions": [
-                    {
-                         "name": "savePortalStage"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "$result.attr(applicationId);",
-                         "field": "$global.attr(tempApplicationId);"
-                    }
-               ]
-          },
-          "validation": [
-               "consumer_purpose",
-               "consumer_loan_amount",
-               "consumer_existing_purpose"
-          ],
           "remoteActionArguments": {
                "genesis__Applications__c": {
                     "Id": "$global.attr(applicationId);",
@@ -39,13 +22,30 @@
                     "genesis__Other_Purpose__c": "$this.attr(genesis__Application__r.genesis__Other_Purpose__c);"
                }
           },
-          "appearance": {
-               "render": "$global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined and $global.attr(partyType); == $global.attr(borrowerParty);",
-               "label": "Next",
-               "style": "primary"
+          "validation": [
+               "consumer_purpose",
+               "consumer_loan_amount",
+               "consumer_existing_purpose"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(tempApplicationId);",
+                         "value": "$result.attr(applicationId);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "name": "savePortalStage"
+                    }
+               ]
           },
-          "property": {},
-          "name": "loanPurposeNext"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": []
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 4,
      "clcommon__Action_Type__c": "submit",
@@ -57,9 +57,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_loan_existing_purpose",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose+loanPurposeNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "f7171f968ba841840d6ead88f032346533a358cd550005b75c624730a2b6307a",
      "clcommon__Remote_Action_Class__c": "consumerlos.PortalSaveConsumerApplication",
      "clcommon__Unique_Action_Name__c": "consumer_existing_purpose+loanPurposeNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose+loanPurposeNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "f7171f968ba841840d6ead88f032346533a358cd550005b75c624730a2b6307a"
 }

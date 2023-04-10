@@ -5,30 +5,30 @@
      "Name": "liabilityBack",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "previous",
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "liabilityBack",
+          "property": {},
           "appearance": {
                "position": "bottom-right",
                "label": "Back",
                "style": "secondary"
           },
-          "property": {},
-          "name": "liabilityBack"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -40,9 +40,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_liability_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability+liabilityBack+COMPONENT",
-     "clcommon__Release_Checksum__c": "8533d21ffdddc8d6c86ffe033d05a02f1520fbc2235630c7398161176f58ce31",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_liability+liabilityBack",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability+liabilityBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "8533d21ffdddc8d6c86ffe033d05a02f1520fbc2235630c7398161176f58ce31"
 }

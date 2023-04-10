@@ -5,26 +5,26 @@
      "Name": "registrationBack",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
+          "name": "registrationBack",
+          "property": {},
+          "appearance": {
+               "style": "secondary",
+               "render": "$global.attr(startStep);==undefined or $global.attr(startStep);==\"\"",
+               "label": "Back",
+               "position": "bottom-right"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "assignments": [
                     {
-                         "value": "previous",
-                         "field": "$nav(consumer_getting_started).appearance(current);"
+                         "field": "$nav(consumer_getting_started).appearance(current);",
+                         "value": "previous"
                     }
                ]
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "position": "bottom-right",
-               "label": "Back",
-               "render": "$global.attr(startStep);==undefined or $global.attr(startStep);==\"\"",
-               "style": "secondary"
-          },
-          "property": {},
-          "name": "registrationBack"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -36,9 +36,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_registration_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_guest_flow+consumer_registration+registrationBack+COMPONENT",
-     "clcommon__Release_Checksum__c": "914652f46b213a636e28420608b28b69f6309fc11d079786e5ac8ea308867d64",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_registration+registrationBack",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_guest_flow+consumer_registration+registrationBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "914652f46b213a636e28420608b28b69f6309fc11d079786e5ac8ea308867d64"
 }

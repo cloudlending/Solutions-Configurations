@@ -5,30 +5,30 @@
      "Name": "morePersonalBack",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "previous",
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "morePersonalBack",
+          "property": {},
           "appearance": {
                "style": "secondary",
                "label": "Back",
                "position": "bottom-right"
           },
-          "property": {},
-          "name": "morePersonalBack"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -40,9 +40,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_more_personal_information",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_more_personal_information+morePersonalBack+COMPONENT",
-     "clcommon__Release_Checksum__c": "19cdc8d20f5fd38c52ad8c11361c8d40f050b4ccd17127e9f9bba9c9a54f36a2",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_more_personal_information+morePersonalBack",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_more_personal_information+morePersonalBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "19cdc8d20f5fd38c52ad8c11361c8d40f050b4ccd17127e9f9bba9c9a54f36a2"
 }

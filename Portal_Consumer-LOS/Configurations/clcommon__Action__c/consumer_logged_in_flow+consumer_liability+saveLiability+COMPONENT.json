@@ -5,36 +5,36 @@
      "Name": "saveLiability",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "updates": [
-                    {
-                         "value": [
-                              "consumer_liability",
-                              "consumer_review_liabilities"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ]
-          },
-          "validation": [
-               "consumer_liability"
-          ],
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "genesis__Liability__c": "$this;",
-               "contactId": "$global.attr(contactId);"
-          },
+          "name": "saveLiability",
+          "property": {},
           "appearance": {
                "position": "bottom-left",
                "label": "Save",
                "style": "primary"
           },
-          "property": {},
-          "name": "saveLiability"
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "genesis__Liability__c": "$this;",
+               "contactId": "$global.attr(contactId);"
+          },
+          "validation": [
+               "consumer_liability"
+          ],
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "consumer_liability",
+                              "consumer_review_liabilities"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
@@ -46,9 +46,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_liability_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability+saveLiability+COMPONENT",
-     "clcommon__Release_Checksum__c": "bea33684171df5da99dd7e608cddb46073f6086ae1447ff50e25be1bdc8427bc",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveLiabilityInformation",
      "clcommon__Unique_Action_Name__c": "consumer_liability+saveLiability",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability+saveLiability+COMPONENT",
+     "clcommon__Release_Checksum__c": "bea33684171df5da99dd7e608cddb46073f6086ae1447ff50e25be1bdc8427bc"
 }

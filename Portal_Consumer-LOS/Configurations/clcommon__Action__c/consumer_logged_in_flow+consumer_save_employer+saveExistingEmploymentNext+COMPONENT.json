@@ -5,35 +5,14 @@
      "Name": "saveExistingEmploymentNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "updates": [
-                    {
-                         "value": "consumer_add_employer_container",
-                         "name": "$nav.overlay.remove;"
-                    },
-                    {
-                         "value": [
-                              "consumer_save_employer",
-                              "consumer_add_employment",
-                              "consumer_employment_review"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "",
-                         "field": "$global.attr(employmentId);"
-                    }
-               ]
+          "name": "saveExistingEmploymentNext",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Save",
+               "style": "primary",
+               "render": "$global.attr(employmentId); != \"\" and $this.attr(genesis__Is_Current_Employer__c);"
           },
-          "validation": [
-               "consumer_save_employer"
-          ],
           "remoteActionArguments": {
                "genesis__Employment_Information__c": {
                     "genesis__Is_Current_Employer__c": "$this.attr(genesis__Is_Current_Employer__c);",
@@ -51,14 +30,35 @@
                },
                "genesis__Applications__c": "$global.attr(applicationId);"
           },
-          "appearance": {
-               "position": "bottom-right",
-               "label": "Save",
-               "style": "primary",
-               "render": "$global.attr(employmentId); != \"\" and $this.attr(genesis__Is_Current_Employer__c);"
+          "validation": [
+               "consumer_save_employer"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(employmentId);",
+                         "value": ""
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "consumer_add_employer_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "consumer_save_employer",
+                              "consumer_add_employment",
+                              "consumer_employment_review"
+                         ]
+                    }
+               ]
           },
-          "property": {},
-          "name": "saveExistingEmploymentNext"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "submit",
@@ -70,9 +70,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_add_employment_info",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_save_employer+saveExistingEmploymentNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "89a0168e8b41bd0fac927548f8d2fa6f42f7378c108414bd64d8b7a4b6bf42fe",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveEmploymentInformation",
      "clcommon__Unique_Action_Name__c": "consumer_save_employer+saveExistingEmploymentNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_save_employer+saveExistingEmploymentNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "89a0168e8b41bd0fac927548f8d2fa6f42f7378c108414bd64d8b7a4b6bf42fe"
 }

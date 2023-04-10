@@ -5,31 +5,8 @@
      "Name": "startNewApplication",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Back",
-          "handler": {
-               "next": "Home",
-               "assignments": [
-                    {
-                         "value": "BORROWER",
-                         "field": "$global.attr(partyType);"
-                    },
-                    {
-                         "value": 0,
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(applicationId);"
-                    },
-                    {
-                         "value": "YES",
-                         "field": "$global.attr(showHome);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "startNewApplication",
+          "property": {},
           "appearance": [
                {
                     "value": {
@@ -48,8 +25,31 @@
                     "condition": "$client; == \"phone\""
                }
           ],
-          "property": {},
-          "name": "startNewApplication"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(partyType);",
+                         "value": "BORROWER"
+                    },
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": 0
+                    },
+                    {
+                         "field": "$global.attr(applicationId);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(showHome);",
+                         "value": "YES"
+                    }
+               ],
+               "next": "Home"
+          },
+          "ariaLabel": "Back"
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -61,9 +61,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_fetch_applications",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_application_list+startNewApplication+COMPONENT",
-     "clcommon__Release_Checksum__c": "6bcb8b7bae297425e575fa585ae6cd0346452fee35eb0a6edb2ebd2479466543",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_application_list+startNewApplication",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_application_list+startNewApplication+COMPONENT",
+     "clcommon__Release_Checksum__c": "6bcb8b7bae297425e575fa585ae6cd0346452fee35eb0a6edb2ebd2479466543"
 }

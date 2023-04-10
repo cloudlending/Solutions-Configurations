@@ -5,50 +5,50 @@
      "Name": "registerExistingNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {
-               "submitFailureText": "$serverMessage;"
+          "name": "registerExistingNext",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "style": "primary",
+               "position": "bottom-right"
           },
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "actions": [
-                    {
-                         "name": "registerWithPartialMatchNext",
-                         "condition": "$result.attr(apiResponse);==3"
-                    },
-                    {
-                         "name": "sendRegistrationEmail",
-                         "condition": "$result.attr(apiResponse);==0 or $result.attr(apiResponse);==2"
-                    },
-                    {
-                         "name": "resetPassword",
-                         "condition": "$result.attr(apiResponse);==1"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "$result.attr(apiResponse);",
-                         "field": "$global.attr(statusCode);"
-                    }
-               ]
+          "remoteActionArguments": {
+               "isExistingUser": true,
+               "contact": "$state(consumer_existing);",
+               "permissionSetName": "Consumer_Unsecured_Borrower"
           },
           "validation": [
                "consumer_existing"
           ],
-          "remoteActionArguments": {
-               "permissionSetName": "Consumer_Unsecured_Borrower",
-               "contact": "$state(consumer_existing);",
-               "isExistingUser": true
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(statusCode);",
+                         "value": "$result.attr(apiResponse);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$result.attr(apiResponse);==3",
+                         "name": "registerWithPartialMatchNext"
+                    },
+                    {
+                         "condition": "$result.attr(apiResponse);==0 or $result.attr(apiResponse);==2",
+                         "name": "sendRegistrationEmail"
+                    },
+                    {
+                         "condition": "$result.attr(apiResponse);==1",
+                         "name": "resetPassword"
+                    }
+               ]
           },
-          "appearance": {
-               "position": "bottom-right",
-               "style": "primary",
-               "label": "Next"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
           },
-          "property": {},
-          "name": "registerExistingNext"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "submit",
@@ -60,9 +60,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_existing_signup_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_guest_flow+consumer_existing+registerExistingNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "48786cae6ec7f009942bb807fc824ed927a1ec01b6f70a528ab516e7f54802c2",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveUserData",
      "clcommon__Unique_Action_Name__c": "consumer_existing+registerExistingNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_guest_flow+consumer_existing+registerExistingNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "48786cae6ec7f009942bb807fc824ed927a1ec01b6f70a528ab516e7f54802c2"
 }

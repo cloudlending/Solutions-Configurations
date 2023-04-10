@@ -14,14 +14,6 @@
           },
           "generalHandlers": {
                "loaded": {
-                    "updates": [
-                         {
-                              "value": [
-                                   "consumer_liability"
-                              ],
-                              "name": "$nav.reloads.add;"
-                         }
-                    ],
                     "assignments": [
                          {
                               "value": "$date('yyyy, MM, dd');",
@@ -44,6 +36,16 @@
                },
                "title": "Asset Details",
                "blankMessage": "No asset information!",
+               "renderAs": [
+                    {
+                         "value": "card-view",
+                         "condition": "$client; == \"phone\""
+                    },
+                    {
+                         "value": "list-view",
+                         "condition": "$client; != \"phone\""
+                    }
+               ],
                "editableFields": {
                     "Id": false
                },
@@ -65,5 +67,5 @@
      },
      "clcommon__Actor_Name__c": "consumer_asset",
      "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_asset",
-     "clcommon__Release_Checksum__c": "7bb75d9d52cf5916737c0a38c9a7a4bb80d41d23ecc1ecbab451e03c2f8d9efe"
+     "clcommon__Release_Checksum__c": "3162628f03603f8cd00a297bedf3e16646f01d083855768a317c437678ddb6bc"
 }

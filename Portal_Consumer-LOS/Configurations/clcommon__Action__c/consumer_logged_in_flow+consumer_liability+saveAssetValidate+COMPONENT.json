@@ -5,33 +5,39 @@
      "Name": "saveAssetValidate",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "name": "saveAssetValidate",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Next",
+               "style": "primary"
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "genesis__Asset_Information__c": "$state(consumer_asset);",
+               "contactId": "$global.attr(contactId);"
+          },
+          "validation": [
+               "consumer_asset",
+               "consumer_liability"
+          ],
           "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(portalStage);",
+                         "value": "@mathjs{($global.attr(assetClassName); ==\"Consumer Unsecured\" or $global.attr(partyType); != $global.attr(borrowerParty);) ? \"ReviewAndSubmit\" : \"Collateral\"};"
+                    }
+               ],
                "actions": [
                     {
                          "name": "saveLiabilityValidate"
                     }
                ]
           },
-          "validation": [
-               "consumer_asset",
-               "consumer_liability"
-          ],
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "genesis__Asset_Information__c": "$state(consumer_asset);",
-               "contactId": "$global.attr(contactId);"
-          },
-          "appearance": {
-               "position": "bottom-right",
-               "label": "Next",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "saveAssetValidate"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 4,
      "clcommon__Action_Type__c": "submit",
@@ -43,9 +49,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_liability_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability+saveAssetValidate+COMPONENT",
-     "clcommon__Release_Checksum__c": "c11be303e277dd7a0e5aeea7aa1fedb026ec1947f42b2fbdc3dfa0a1bfbc6ab0",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveAssetInformation",
      "clcommon__Unique_Action_Name__c": "consumer_liability+saveAssetValidate",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability+saveAssetValidate+COMPONENT",
+     "clcommon__Release_Checksum__c": "bc6d9dcc51d70dc359aff0c678cfe53780783eb334e6a5faa658a30f582d2082"
 }

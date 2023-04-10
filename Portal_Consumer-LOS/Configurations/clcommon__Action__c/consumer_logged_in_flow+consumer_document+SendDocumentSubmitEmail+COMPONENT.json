@@ -5,13 +5,26 @@
      "Name": "SendDocumentSubmitEmail",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {
-               "submitFailureText": "$serverMessage;"
+          "name": "SendDocumentSubmitEmail",
+          "property": {},
+          "appearance": {
+               "label": "Next",
+               "position": "bottom-left",
+               "style": "primary"
           },
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "confirmation": {
+               "type": "prompt",
+               "title": "Confirm Submission",
+               "content": "<p>Please Verify your documents before submission.</br>Once submitted you may not be able to edit your loan information.</p>",
+               "showCloseButton": false,
+               "showConfirmButtons": true,
+               "confirmText": "Confirm",
+               "cancelText": "Cancel",
+               "cancelOrCloseHandler": {}
+          },
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);"
+          },
           "successHandler": {
                "actions": [
                     {
@@ -19,26 +32,13 @@
                     }
                ]
           },
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
           },
-          "confirmation": {
-               "cancelOrCloseHandler": {},
-               "cancelText": "Cancel",
-               "confirmText": "Confirm",
-               "showConfirmButtons": true,
-               "showCloseButton": false,
-               "content": "<p>Please Verify your documents before submission.</br>Once submitted you may not be able to edit your loan information.</p>",
-               "title": "Confirm Submission",
-               "type": "prompt"
-          },
-          "appearance": {
-               "label": "Next",
-               "position": "bottom-left",
-               "style": "primary"
-          },
-          "property": {},
-          "name": "SendDocumentSubmitEmail"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
@@ -50,9 +50,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_document_management_queue_view",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_document+SendDocumentSubmitEmail+COMPONENT",
-     "clcommon__Release_Checksum__c": "bd0242505ad41b53b81443a5e67baf96816e4130c290ef2113062291189b7141",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalDocumentUploadNotification",
      "clcommon__Unique_Action_Name__c": "consumer_document+SendDocumentSubmitEmail",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_document+SendDocumentSubmitEmail+COMPONENT",
+     "clcommon__Release_Checksum__c": "bd0242505ad41b53b81443a5e67baf96816e4130c290ef2113062291189b7141"
 }

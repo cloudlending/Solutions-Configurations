@@ -4,11 +4,9 @@
      },
      "Name": "consumer_liability_query",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "consumer_liability_query",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "6c2459436a6e552b546f322cbebe1adf09ecb337b0a25a64924850e21137b0c2",
      "clcommon__Unique_Name__c": "consumer_liability_query",
      "clcommon__data__c": {
           "structureName": "consumer_liability_query",
@@ -312,9 +310,24 @@
                                    "label": "Contact ID",
                                    "ariaLabel": "Contact ID"
                               }
+                         },
+                         {
+                              "id": "abd34852-b85f-4c73-8f05-5fa8c48a36ed",
+                              "fieldName": "Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Liability Description",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "Liability Description"
+                              }
                          }
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "consumer_liability_query",
+     "clcommon__Release_Checksum__c": "0280df94bf1de5d194b9a1982b8601f3c1dcccd947b72f3627b673a09681eeb0"
 }

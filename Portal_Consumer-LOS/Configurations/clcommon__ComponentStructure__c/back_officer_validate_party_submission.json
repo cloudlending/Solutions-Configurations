@@ -1,0 +1,71 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_validate_party_submission",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "back_officer_validate_party_submission",
+     "clcommon__data__c": {
+          "structureName": "back_officer_validate_party_submission",
+          "tableName": "clcommon__party__c",
+          "whereClause": {
+               "freeForm": "genesis__Application__c = ':appId' and genesis__Is_Internal_User__c=false and solcommon__Submission_Status__c='PENDING' and clcommon__Party_Types__c!='BORROWER'"
+          },
+          "sections": [
+               {
+                    "id": "7105fa33-c165-4c60-a059-08c17b1d3374",
+                    "fields": [
+                         {
+                              "id": "8886e91c-fa8a-4bdd-b1c4-d1c08764deaf",
+                              "fieldName": "Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Record ID",
+                                   "ariaLabel": "Record ID"
+                              }
+                         },
+                         {
+                              "id": "48e662a3-16dc-4bec-8624-067d89d15bf6",
+                              "fieldName": "solcommon__Submission_Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Submission Status",
+                                   "defaultValue": "PENDING",
+                                   "selectOptions": [
+                                        {
+                                             "id": "PENDING",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "PENDING",
+                                             "optionValue": "PENDING"
+                                        },
+                                        {
+                                             "id": "SUBMITTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "SUBMITTED",
+                                             "optionValue": "SUBMITTED"
+                                        }
+                                   ],
+                                   "ariaLabel": "Submission Status"
+                              }
+                         },
+                         {
+                              "id": "1a4dd55d-b8f8-4b91-ba06-c924f2dee6ca",
+                              "fieldName": "clcommon__Account__r.Id",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account ID",
+                                   "ariaLabel": "Account ID"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "back_officer_validate_party_submission",
+     "clcommon__Release_Checksum__c": "04ea2c49dae2530994e285f85323db6fa64f4bdb9d90be525c5cdc4e31e07116"
+}

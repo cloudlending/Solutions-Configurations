@@ -5,30 +5,14 @@
      "Name": "personalInformationNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "actions": [
-                    {
-                         "name": "updateParty"
-                    }
-               ],
-               "updates": [
-                    {
-                         "value": [
-                              "consumer_applicant_review",
-                              "consumer_personal_information",
-                              "consumer_party"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ]
+          "name": "personalInformationNext",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Save",
+               "disableWhenLoading": true,
+               "style": "primary"
           },
-          "validation": [
-               "consumer_edit_applicant"
-          ],
           "remoteActionArguments": {
                "contact": {
                     "ints__Social_Security_Number__c": "$this.attr(clcommon__Contact__r.ints__Social_Security_Number__c);",
@@ -47,14 +31,30 @@
                     "id": "$this.attr(clcommon__Contact__r.Id);"
                }
           },
-          "appearance": {
-               "position": "bottom-right",
-               "label": "Save",
-               "disableWhenLoading": true,
-               "style": "primary"
+          "validation": [
+               "consumer_edit_applicant"
+          ],
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "consumer_applicant_review",
+                              "consumer_personal_information",
+                              "consumer_party"
+                         ]
+                    }
+               ],
+               "actions": [
+                    {
+                         "name": "updateParty"
+                    }
+               ]
           },
-          "property": {},
-          "name": "personalInformationNext"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "submit",
@@ -66,9 +66,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_edit_applicant_info",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_edit_applicant+personalInformationNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "4b9899e7e4548edca033a76a3547a8596ecb8fe920924fdeb24bd11d41fb0008",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSavePersonalInfo",
      "clcommon__Unique_Action_Name__c": "consumer_edit_applicant+personalInformationNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_edit_applicant+personalInformationNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "4b9899e7e4548edca033a76a3547a8596ecb8fe920924fdeb24bd11d41fb0008"
 }

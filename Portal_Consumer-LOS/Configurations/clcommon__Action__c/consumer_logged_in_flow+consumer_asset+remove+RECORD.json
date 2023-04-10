@@ -5,31 +5,31 @@
      "Name": "remove",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "messages": {},
-          "disclosureNames": [],
-          "handler": {
-               "cruds": [
-                    {
-                         "value": {
-                              "id": "$this.attr(id);"
-                         },
-                         "source": "$state(consumer_asset);",
-                         "method": "remove"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "uploadActionArguments": {},
-          "remoteActionArguments": {},
+          "name": "remove",
+          "property": {},
           "appearance": {
                "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>",
                "style": "secondary",
                "render": "$this.attr(Id); == undefined"
           },
-          "property": {},
-          "name": "remove"
+          "remoteActionArguments": {},
+          "uploadActionArguments": {},
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "cruds": [
+                    {
+                         "method": "remove",
+                         "source": "$state(consumer_asset);",
+                         "value": {
+                              "id": "$this.attr(id);"
+                         }
+                    }
+               ]
+          },
+          "disclosureNames": [],
+          "messages": {}
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -41,9 +41,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_asset_information_query",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_asset+remove+RECORD",
-     "clcommon__Release_Checksum__c": "20f6f41314c8511138ec076224b8a6d5aded9a27ef609d6680b5d00dd3e2997c",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_asset+remove",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_asset+remove+RECORD",
+     "clcommon__Release_Checksum__c": "20f6f41314c8511138ec076224b8a6d5aded9a27ef609d6680b5d00dd3e2997c"
 }

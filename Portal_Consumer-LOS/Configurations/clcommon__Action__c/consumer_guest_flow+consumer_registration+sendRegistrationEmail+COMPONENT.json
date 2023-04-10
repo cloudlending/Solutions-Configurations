@@ -5,32 +5,32 @@
      "Name": "sendRegistrationEmail",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {
-               "submitFailureText": "$serverMessage;"
-          },
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "assignments": [
-                    {
-                         "value": "consumer_check_inbox",
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    }
-               ]
+          "name": "sendRegistrationEmail",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "label": "reset",
+               "style": "primary",
+               "position": "bottom-right"
           },
           "remoteActionArguments": {
                "email": "$this.attr(email);"
           },
-          "appearance": {
-               "position": "bottom-right",
-               "style": "primary",
-               "label": "reset",
-               "render": false
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "consumer_check_inbox"
+                    }
+               ]
           },
-          "property": {},
-          "name": "sendRegistrationEmail"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 4,
      "clcommon__Action_Type__c": "submit",
@@ -42,9 +42,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_registration_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_guest_flow+consumer_registration+sendRegistrationEmail+COMPONENT",
-     "clcommon__Release_Checksum__c": "9e7367f6df4b7d20d9db09832fbed5af5ecdbb053add5c1cecc06b72d208e1b8",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalForgotPassword",
      "clcommon__Unique_Action_Name__c": "consumer_registration+sendRegistrationEmail",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_guest_flow+consumer_registration+sendRegistrationEmail+COMPONENT",
+     "clcommon__Release_Checksum__c": "9e7367f6df4b7d20d9db09832fbed5af5ecdbb053add5c1cecc06b72d208e1b8"
 }

@@ -5,25 +5,25 @@
      "Name": "closeEmployment",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "updates": [
-                    {
-                         "value": "consumer_add_employer_container",
-                         "name": "$nav.overlay.remove;"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "closeEmployment",
+          "property": {},
           "appearance": {
                "position": "bottom-right",
                "label": "Close",
                "style": "secondary"
           },
-          "property": {},
-          "name": "closeEmployment"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "consumer_add_employer_container"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -35,9 +35,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_add_employment_info",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_save_employer+closeEmployment+COMPONENT",
-     "clcommon__Release_Checksum__c": "53de92e89d388e86280f56345150df052997871fadba160da044a0c43d5525a3",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_save_employer+closeEmployment",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_save_employer+closeEmployment+COMPONENT",
+     "clcommon__Release_Checksum__c": "53de92e89d388e86280f56345150df052997871fadba160da044a0c43d5525a3"
 }

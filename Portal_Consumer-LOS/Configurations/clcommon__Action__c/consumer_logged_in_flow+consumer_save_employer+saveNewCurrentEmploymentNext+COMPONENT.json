@@ -5,29 +5,23 @@
      "Name": "saveNewCurrentEmploymentNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "updates": [
-                    {
-                         "value": "consumer_add_employer_container",
-                         "name": "$nav.overlay.remove;"
-                    },
-                    {
-                         "value": [
-                              "consumer_save_employer",
-                              "consumer_add_employment",
-                              "consumer_employment_review"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ]
+          "name": "saveNewCurrentEmploymentNext",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "label": "Save",
+               "style": "primary",
+               "render": "$global.attr(employmentId); == \"\" and not $this.attr(genesis__Is_Current_Employer__c);"
           },
-          "validation": [
-               "consumer_save_employer"
-          ],
+          "confirmation": {
+               "type": "prompt",
+               "title": "Are you sure?",
+               "content": "<p>Please ensure to add atleast one current employment information</p>",
+               "showConfirmButtons": true,
+               "confirmText": "Yes",
+               "cancelText": "No",
+               "cancelOrCloseHandler": {}
+          },
           "remoteActionArguments": {
                "genesis__Employment_Information__c": {
                     "genesis__Is_Current_Employer__c": "$this.attr(genesis__Is_Current_Employer__c);",
@@ -45,23 +39,29 @@
                },
                "genesis__Applications__c": "$global.attr(applicationId);"
           },
-          "confirmation": {
-               "cancelOrCloseHandler": {},
-               "cancelText": "No",
-               "confirmText": "Yes",
-               "showConfirmButtons": true,
-               "content": "<p>Please ensure to add atleast one current employment information</p>",
-               "title": "Are you sure?",
-               "type": "prompt"
+          "validation": [
+               "consumer_save_employer"
+          ],
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "consumer_add_employer_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "consumer_save_employer",
+                              "consumer_add_employment",
+                              "consumer_employment_review"
+                         ]
+                    }
+               ]
           },
-          "appearance": {
-               "position": "bottom-right",
-               "label": "Save",
-               "style": "primary",
-               "render": "$global.attr(employmentId); == \"\" and not $this.attr(genesis__Is_Current_Employer__c);"
-          },
-          "property": {},
-          "name": "saveNewCurrentEmploymentNext"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
@@ -73,9 +73,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_add_employment_info",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_save_employer+saveNewCurrentEmploymentNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "09925b44ddcdc23272a91696b28db6653459652e6536220792d0c4f9fa199d92",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveEmploymentInformation",
      "clcommon__Unique_Action_Name__c": "consumer_save_employer+saveNewCurrentEmploymentNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_save_employer+saveNewCurrentEmploymentNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "09925b44ddcdc23272a91696b28db6653459652e6536220792d0c4f9fa199d92"
 }

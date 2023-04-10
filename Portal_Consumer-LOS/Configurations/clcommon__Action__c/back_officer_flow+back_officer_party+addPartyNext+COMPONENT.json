@@ -10,7 +10,7 @@
           "appearance": {
                "style": "primary",
                "label": "Next",
-               "enable": "$this.count(); > 1",
+               "enable": "$this.count(); > 1 and $state(back_officer_validate_party_submission).count();==0",
                "position": "bottom-left"
           },
           "remoteActionArguments": {
@@ -45,9 +45,9 @@
      },
      "clcommon__Component_Structure_Name__c": "back_officer_parties",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "back_officer_flow+back_officer_party+addPartyNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "8c8fe6e01cbfb03098a4c15bd7190f9bf1a6a6db94dfadd1ee94eeb0eada7114",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
      "clcommon__Unique_Action_Name__c": "back_officer_party+addPartyNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_party+addPartyNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "dbcf8a44f7b56a9908f9c4a499a92def8ae9092de328a8c790cf80fd7e044dcc"
 }

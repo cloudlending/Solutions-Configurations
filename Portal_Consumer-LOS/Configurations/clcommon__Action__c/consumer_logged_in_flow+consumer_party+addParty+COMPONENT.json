@@ -5,35 +5,35 @@
      "Name": "addParty",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {
-               "updates": [
-                    {
-                         "value": "consumer_add_party_container",
-                         "name": "$nav.overlay.add;"
-                    },
-                    {
-                         "value": "consumer_add_party",
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "",
-                         "field": "$global.attr(partyId);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "addParty",
+          "property": {},
           "appearance": {
                "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Party</span>",
                "render": "$global.attr(partyType); == $global.attr(borrowerParty);",
                "style": "primary",
                "position": "top-right"
           },
-          "property": {},
-          "name": "addParty"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(partyId);",
+                         "value": ""
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "consumer_add_party_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "consumer_add_party"
+                    }
+               ]
+          }
      },
      "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "normal",
@@ -45,9 +45,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_parties",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_party+addParty+COMPONENT",
-     "clcommon__Release_Checksum__c": "c9eaf9fa031d1dbeec490e3a8504fb5ec6c5aabbdedc728b1f149c7c05af5e00",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_party+addParty",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_party+addParty+COMPONENT",
+     "clcommon__Release_Checksum__c": "c9eaf9fa031d1dbeec490e3a8504fb5ec6c5aabbdedc728b1f149c7c05af5e00"
 }

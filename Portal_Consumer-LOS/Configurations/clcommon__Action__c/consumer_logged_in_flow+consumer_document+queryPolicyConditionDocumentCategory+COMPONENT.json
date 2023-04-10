@@ -22,15 +22,15 @@
           }
      },
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "queryPolicyConditionDocumentCategory",
+          "property": {},
           "remoteActionArguments": {
                "applicationId": "$global.attr(applicationId);"
           },
-          "property": {},
-          "name": "queryPolicyConditionDocumentCategory"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "query",
@@ -42,9 +42,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_document_management_queue_view",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_document+queryPolicyConditionDocumentCategory+COMPONENT",
-     "clcommon__Release_Checksum__c": "cc6bfe7bcde8362a2947a14ad5c63c6688443e05b69480fe850ada8e48818b19",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalPolicyCondition",
      "clcommon__Unique_Action_Name__c": "consumer_document+queryPolicyConditionDocumentCategory",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_document+queryPolicyConditionDocumentCategory+COMPONENT",
+     "clcommon__Release_Checksum__c": "cc6bfe7bcde8362a2947a14ad5c63c6688443e05b69480fe850ada8e48818b19"
 }

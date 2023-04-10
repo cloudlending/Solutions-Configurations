@@ -5,30 +5,30 @@
      "Name": "assignStepLabel",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
+          "name": "assignStepLabel",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Continue"
+          },
+          "automatic": true,
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "assignments": [
                     {
-                         "value": "Register",
-                         "field": "$global.attr(stepsLabel);"
+                         "field": "$global.attr(stepsLabel);",
+                         "value": "Register"
                     },
                     {
-                         "value": "1",
-                         "field": "$global.attr(stepperCount);"
+                         "field": "$global.attr(stepperCount);",
+                         "value": "1"
                     }
                ]
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "automatic": true,
-          "appearance": {
-               "label": "Continue",
-               "style": "primary",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "assignStepLabel"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -40,9 +40,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_guest_flow+consumer_getting_started+assignStepLabel+COMPONENT",
-     "clcommon__Release_Checksum__c": "1f98fa17dc5f5e1a404cdb74cf449f4a7c08fa41de4d31c47b3ad3f8804aec9b",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_getting_started+assignStepLabel",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_guest_flow+consumer_getting_started+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "1f98fa17dc5f5e1a404cdb74cf449f4a7c08fa41de4d31c47b3ad3f8804aec9b"
 }

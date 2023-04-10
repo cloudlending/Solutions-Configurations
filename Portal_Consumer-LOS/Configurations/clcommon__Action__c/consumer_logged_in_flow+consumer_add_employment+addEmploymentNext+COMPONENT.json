@@ -5,38 +5,38 @@
      "Name": "addEmploymentNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "next",
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    }
-               ]
-          },
-          "validation": [
-               "consumer_add_employment"
-          ],
-          "remoteActionArguments": {
-               "portalStage": "PersonalIncome",
-               "applicationId": "$global.attr(applicationId);"
-          },
+          "name": "addEmploymentNext",
+          "property": {},
           "appearance": {
                "position": "bottom-left",
                "enable": "$this.count(); >0",
                "label": "Next",
                "style": "primary"
           },
-          "property": {},
-          "name": "addEmploymentNext"
+          "remoteActionArguments": {
+               "portalStage": "PersonalIncome",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "validation": [
+               "consumer_add_employment"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "next"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
@@ -48,9 +48,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_employment_info",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_employment+addEmploymentNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "465a77cf925de5af2dfc17378eafaa9057d7a7ef62355118d76ad508791f5d1b",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
      "clcommon__Unique_Action_Name__c": "consumer_add_employment+addEmploymentNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_employment+addEmploymentNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "465a77cf925de5af2dfc17378eafaa9057d7a7ef62355118d76ad508791f5d1b"
 }

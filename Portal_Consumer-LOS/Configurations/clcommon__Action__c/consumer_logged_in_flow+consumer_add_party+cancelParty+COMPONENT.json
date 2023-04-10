@@ -5,23 +5,23 @@
      "Name": "cancelParty",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {
-               "updates": [
-                    {
-                         "value": "consumer_add_party_container",
-                         "name": "$nav.overlay.remove;"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "cancelParty",
+          "property": {},
           "appearance": {
                "style": "secondary",
                "label": "Cancel"
           },
-          "property": {},
-          "name": "cancelParty"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "consumer_add_party_container"
+                    }
+               ]
+          }
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -33,9 +33,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_add_party_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_party+cancelParty+COMPONENT",
-     "clcommon__Release_Checksum__c": "524826b07981e0f9b19736f014283ba9cab6d95c1e53723cc124def5c75cf90c",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_add_party+cancelParty",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_party+cancelParty+COMPONENT",
+     "clcommon__Release_Checksum__c": "524826b07981e0f9b19736f014283ba9cab6d95c1e53723cc124def5c75cf90c"
 }

@@ -2,10 +2,10 @@
      "attributes": {
           "type": "clcommon__Action__c"
      },
-     "Name": "goToReview",
+     "Name": "goToBorrowerSubmittedFlow",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "name": "goToReview",
+          "name": "goToBorrowerSubmittedFlow",
           "property": {},
           "appearance": {
                "render": false,
@@ -18,11 +18,7 @@
                "assignments": [
                     {
                          "field": "$nav(application_flow_steps).appearance(current);",
-                         "value": "ReviewAndSubmit"
-                    },
-                    {
-                         "field": "$nav(back_officer_review_step).appearance(current);",
-                         "value": "$global.attr(portalStage);"
+                         "value": "OwnerInformation"
                     }
                ],
                "updates": [
@@ -47,9 +43,9 @@
      },
      "clcommon__Component_Structure_Name__c": "back_officer_application_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "back_officer_flow+back_officer_application_fetch+goToReview+COMPONENT",
-     "clcommon__Release_Checksum__c": "b4c7a3adca096496cebfa4a3b9092fa0c4ff0614bde50a0c0ff7a9d535c99534",
      "clcommon__Remote_Action_Class__c": null,
-     "clcommon__Unique_Action_Name__c": "back_officer_application_fetch+goToReview",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Unique_Action_Name__c": "back_officer_application_fetch+goToBorrowerSubmittedFlow",
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_application_fetch+goToBorrowerSubmittedFlow+COMPONENT",
+     "clcommon__Release_Checksum__c": "12267e5e94ed3b0b988d729f9459c817590256a915035ccec8562c7d94284f53"
 }

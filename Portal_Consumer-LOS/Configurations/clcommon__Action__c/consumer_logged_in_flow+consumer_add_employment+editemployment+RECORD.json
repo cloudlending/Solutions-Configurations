@@ -5,36 +5,36 @@
      "Name": "editemployment",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {
-               "updates": [
-                    {
-                         "value": "consumer_add_employer_container",
-                         "name": "$nav.overlay.add;"
-                    },
-                    {
-                         "value": [
-                              "consumer_save_employment",
-                              "consumer_save_employer"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "$this.attr(Id);",
-                         "field": "$global.attr(employmentId);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "editemployment",
+          "property": {},
           "appearance": {
                "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Edit",
                "style": "primary"
           },
-          "property": {},
-          "name": "editemployment"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(employmentId);",
+                         "value": "$this.attr(Id);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "consumer_add_employer_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "consumer_save_employment",
+                              "consumer_save_employer"
+                         ]
+                    }
+               ]
+          }
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -46,9 +46,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_employment_info",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_employment+editemployment+RECORD",
-     "clcommon__Release_Checksum__c": "7f6bb1ca7130d273efaf8cee31ef55a98c5979b798f116933d23f983ac1628a4",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_add_employment+editemployment",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_employment+editemployment+RECORD",
+     "clcommon__Release_Checksum__c": "7f6bb1ca7130d273efaf8cee31ef55a98c5979b798f116933d23f983ac1628a4"
 }

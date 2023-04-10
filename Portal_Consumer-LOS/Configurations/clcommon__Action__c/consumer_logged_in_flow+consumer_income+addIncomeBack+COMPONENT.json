@@ -5,30 +5,30 @@
      "Name": "addIncomeBack",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "previous",
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "addIncomeBack",
+          "property": {},
           "appearance": {
                "position": "bottom-left",
                "label": "Back",
                "style": "secondary"
           },
-          "property": {},
-          "name": "addIncomeBack"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "normal",
@@ -40,9 +40,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_income_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_income+addIncomeBack+COMPONENT",
-     "clcommon__Release_Checksum__c": "ffd4430c16285479f27477ca200bf26edf59d8b306a67745b9c9d96f809e76b4",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_income+addIncomeBack",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_income+addIncomeBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "ffd4430c16285479f27477ca200bf26edf59d8b306a67745b9c9d96f809e76b4"
 }

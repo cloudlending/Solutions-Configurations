@@ -18,10 +18,6 @@
                          {
                               "value": "@mathjs{$state(consumer_asset).sum(genesis__Market_Value__c); - $this.sum(genesis__Amount_Owing__c);};",
                               "field": "$global.attr(networths);"
-                         },
-                         {
-                              "value": "@mathjs{($global.attr(assetClassName); ==\"Consumer Unsecured\" or $global.attr(partyType); != $global.attr(borrowerParty);) ? \"ReviewAndSubmit\" : \"Collateral\"};",
-                              "field": "$global.attr(portalStage);"
                          }
                     ]
                }
@@ -29,8 +25,20 @@
           "recordActions": [],
           "componentActions": [],
           "appearance": {
+               "columns": 1,
+               "fieldColumns": 1,
                "editable": true,
                "textAfter": "<p><b>Net Worth: $global.attr(networths, currency);</b></p>",
+               "renderAs": [
+                    {
+                         "value": "card-view",
+                         "condition": "$client; == \"phone\""
+                    },
+                    {
+                         "value": "list-view",
+                         "condition": "$client; != \"phone\""
+                    }
+               ],
                "messagePositions": {
                     "saveSubmitError": "top",
                     "loadingError": "top",
@@ -53,10 +61,10 @@
                },
                "structureName": "consumer_liability_query"
           },
-          "type": "list-view",
+          "type": "card-view",
           "category": "component"
      },
      "clcommon__Actor_Name__c": "consumer_liability",
      "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability",
-     "clcommon__Release_Checksum__c": "c83d0681ab586302075ced65ae91fade572adaaf198f968caf594ae79cfe1c1b"
+     "clcommon__Release_Checksum__c": "cc7e5c08266451bc7636f088b7ab9a548b2cb707519e7263ecdb2632fec9c556"
 }

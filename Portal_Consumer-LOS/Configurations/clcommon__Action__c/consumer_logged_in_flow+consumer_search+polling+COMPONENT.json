@@ -5,46 +5,46 @@
      "Name": "polling",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "messages": {
-               "showSubmitAnimation": false
+          "name": "polling",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "test"
           },
-          "handler": {},
-          "pendingHandler": {
+          "automatic": true,
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "pollingPeriod": 3000,
+          "pollingMaxTries": 30,
+          "successHandler": {
                "assignments": [
                     {
-                         "value": "Please wait while we verify your business and individual identities...",
-                         "field": "$global.attr(loadedText);"
+                         "field": "$nav(consumer_review_step).appearance(current);",
+                         "value": "$result.attr(portalStage);"
                     }
                ]
           },
           "failureHandler": {
                "assignments": [
                     {
-                         "value": "pendingApplicationPolling",
-                         "field": "$nav(consumer_review_step).appearance(current);"
+                         "field": "$nav(consumer_review_step).appearance(current);",
+                         "value": "pendingApplicationPolling"
                     }
                ]
           },
-          "successHandler": {
+          "pendingHandler": {
                "assignments": [
                     {
-                         "value": "$result.attr(portalStage);",
-                         "field": "$nav(consumer_review_step).appearance(current);"
+                         "field": "$global.attr(loadedText);",
+                         "value": "Please wait while we verify your business and individual identities..."
                     }
                ]
           },
-          "pollingMaxTries": 30,
-          "pollingPeriod": 3000,
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);"
-          },
-          "automatic": true,
-          "appearance": {
-               "style": "primary",
-               "label": "test"
-          },
-          "property": {},
-          "name": "polling"
+          "handler": {},
+          "messages": {
+               "showSubmitAnimation": false
+          }
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "submit",
@@ -56,9 +56,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_search+polling+COMPONENT",
-     "clcommon__Release_Checksum__c": "1bbec27b151b0215fc8d8d6d2746a3da2090b11259f77910dd67296856a51f33",
      "clcommon__Remote_Action_Class__c": "consumerlos.PortalPollingAPI",
      "clcommon__Unique_Action_Name__c": "consumer_search+polling",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_search+polling+COMPONENT",
+     "clcommon__Release_Checksum__c": "1bbec27b151b0215fc8d8d6d2746a3da2090b11259f77910dd67296856a51f33"
 }

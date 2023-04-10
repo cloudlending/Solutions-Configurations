@@ -5,31 +5,31 @@
      "Name": "closeIncome",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "updates": [
-                    {
-                         "value": "consumer_edit_applicant_container",
-                         "name": "$nav.overlay.remove;"
-                    },
-                    {
-                         "value": [
-                              "consumer_applicant_review"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "closeIncome",
+          "property": {},
           "appearance": {
                "position": "bottom-right",
                "label": "Close",
                "style": "secondary"
           },
-          "property": {},
-          "name": "closeIncome"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "consumer_edit_applicant_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "consumer_applicant_review"
+                         ]
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "normal",
@@ -41,9 +41,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_edit_applicant_info",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_edit_applicant+closeIncome+COMPONENT",
-     "clcommon__Release_Checksum__c": "02f37d527433aefee26c2715e17cc4f621cfbee427d1e27a6fc8a6663c713817",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_edit_applicant+closeIncome",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_edit_applicant+closeIncome+COMPONENT",
+     "clcommon__Release_Checksum__c": "02f37d527433aefee26c2715e17cc4f621cfbee427d1e27a6fc8a6663c713817"
 }

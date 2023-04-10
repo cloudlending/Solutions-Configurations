@@ -5,43 +5,43 @@
      "Name": "assignStepLabel",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "Income Details",
-                         "field": "$global.attr(stepsLabel);"
-                    },
-                    {
-                         "value": "@mathjs{$global.attr(typeOfApplicant); == \"Joint Credit\"? \"5\" : \"4\"};",
-                         "field": "$global.attr(stepperCount);"
-                    },
-                    {
-                         "value": "Income Details",
-                         "field": "$global.attr(mainStepLabel);"
-                    },
-                    {
-                         "value": "PersonalIncome",
-                         "field": "$nav(consumer_mobile_stepper_panel).appearance(current);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "automatic": true,
+          "name": "assignStepLabel",
+          "property": {},
           "appearance": {
                "position": "bottom-left",
                "style": "primary",
                "label": "Continue"
           },
-          "property": {},
-          "name": "assignStepLabel"
+          "automatic": true,
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(stepsLabel);",
+                         "value": "Income Details"
+                    },
+                    {
+                         "field": "$global.attr(stepperCount);",
+                         "value": "@mathjs{$global.attr(typeOfApplicant); == \"Joint Credit\"? \"5\" : \"4\"};"
+                    },
+                    {
+                         "field": "$global.attr(mainStepLabel);",
+                         "value": "Income Details"
+                    },
+                    {
+                         "field": "$nav(consumer_mobile_stepper_panel).appearance(current);",
+                         "value": "PersonalIncome"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -53,9 +53,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_income_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_income+assignStepLabel+COMPONENT",
-     "clcommon__Release_Checksum__c": "dd495c174b4c193d40d9eb1502877c24ed85adf5702ec0e271dcdb2e5a6b8847",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_income+assignStepLabel",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_income+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "dd495c174b4c193d40d9eb1502877c24ed85adf5702ec0e271dcdb2e5a6b8847"
 }

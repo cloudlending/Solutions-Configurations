@@ -5,37 +5,37 @@
      "Name": "addIncomeNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "next",
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    }
-               ]
-          },
-          "validation": [
-               "consumer_income"
-          ],
-          "remoteActionArguments": {
-               "portalStage": "AssetLiability",
-               "applicationId": "$global.attr(applicationId);"
-          },
+          "name": "addIncomeNext",
+          "property": {},
           "appearance": {
                "position": "bottom-left",
                "label": "Next",
                "style": "primary"
           },
-          "property": {},
-          "name": "addIncomeNext"
+          "remoteActionArguments": {
+               "portalStage": "AssetLiability",
+               "applicationId": "$global.attr(applicationId);"
+          },
+          "validation": [
+               "consumer_income"
+          ],
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "next"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
@@ -47,9 +47,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_income_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_income+addIncomeNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "c60c6d9e69aa82ea344b0a8bcf6efb63a550d8abfb11569ffb50c0cc43618e93",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
      "clcommon__Unique_Action_Name__c": "consumer_income+addIncomeNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_income+addIncomeNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "c60c6d9e69aa82ea344b0a8bcf6efb63a550d8abfb11569ffb50c0cc43618e93"
 }
