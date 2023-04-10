@@ -8,14 +8,14 @@
           "name": "savePortalStageExisting",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Next",
+               "style": "primary",
                "render": false,
-               "style": "primary"
+               "label": "Next",
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "IndustryCode"
+               "portalStage": "IndustryCode",
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "assignments": [

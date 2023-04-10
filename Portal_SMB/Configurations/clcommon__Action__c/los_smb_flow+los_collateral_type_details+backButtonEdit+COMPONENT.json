@@ -8,11 +8,11 @@
           "name": "backButtonEdit",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Back",
-               "render": "$global.attr(collateralEdit);==true",
+               "style": "secondary",
                "variant": "text",
-               "style": "secondary"
+               "render": "$global.attr(collateralEdit);==true",
+               "label": "Back",
+               "position": "bottom-left"
           },
           "successHandler": {},
           "failureHandler": {},

@@ -8,22 +8,22 @@
           "name": "savePersonalIncome",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "style": "primary",
+               "render": false,
                "label": "Next",
-               "render": false
+               "style": "primary",
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "id": "$global.attr(applicationId);"
-               },
                "genesis__Income__c": [
                     {
-                         "genesis__Contact__c": "$global.attr(borrowerContactId);",
+                         "genesis__Amount__c": "$state(los_beneficial_income_details).attr(genesis__Amount__c);",
                          "name": "Annual Personal Income",
-                         "genesis__Amount__c": "$state(los_beneficial_income_details).attr(genesis__Amount__c);"
+                         "genesis__Contact__c": "$global.attr(borrowerContactId);"
                     }
-               ]
+               ],
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               }
           },
           "successHandler": {
                "actions": [

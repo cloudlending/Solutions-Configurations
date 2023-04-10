@@ -8,11 +8,11 @@
           "name": "cancelFundingInformation",
           "property": {},
           "appearance": {
-               "label": "Back",
-               "render": "$this.attr(bankAccount); == false and $global.attr(postApprovalDocumentCollection);==true",
-               "variant": "text",
+               "position": "bottom-left",
                "style": "secondary",
-               "position": "bottom-left"
+               "variant": "text",
+               "render": "$this.attr(bankAccount); == false and $global.attr(postApprovalDocumentCollection);==true",
+               "label": "Back"
           },
           "successHandler": {},
           "failureHandler": {},

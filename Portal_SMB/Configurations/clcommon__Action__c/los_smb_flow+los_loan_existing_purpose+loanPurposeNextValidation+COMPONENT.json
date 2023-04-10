@@ -8,10 +8,10 @@
           "name": "loanPurposeNextValidation",
           "property": {},
           "appearance": {
-               "label": "Next",
-               "render": "$global.attr(loanPurpose);==null or $global.attr(loanPurpose);==\"\" or $global.attr(loanPurpose);==undefined",
+               "style": "primary",
                "position": "bottom-left",
-               "style": "primary"
+               "render": "$global.attr(loanPurpose);==null or $global.attr(loanPurpose);==\"\" or $global.attr(loanPurpose);==undefined",
+               "label": "Next"
           },
           "remoteActionArguments": {},
           "validation": [

@@ -8,22 +8,22 @@
           "name": "updatePartyInfo",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "style": "primary",
+               "render": false,
                "label": "Next",
-               "render": false
+               "style": "primary",
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
                "clcommon__Party__c": {
-                    "solcommon__Position_In_Company__c": "$state(los_ownership_details).attr(solcommon__Position_In_Company__c);",
-                    "clcommon__Percent_Ownership__c": "$state(los_ownership_details).attr(clcommon__Percent_Ownership__c);",
-                    "clcommon__Signer_Capacity__c": "$state(los_signer_details).attr(clcommon__Signer_Capacity__c);",
-                    "genesis__Credit_Check_Consent__c": "$this.attr(genesis__Credit_Check_Consent__c);",
-                    "solcommon__Consent_To_Disclosure_And_Document__c": "$this.attr(solcommon__Consent_To_Disclosure_And_Document__c);",
+                    "clcommon__Party_Types__c": "$state(los_party_type_details).attr(clcommon__Party_Types__c);",
                     "id": "$global.attr(borrowerPartyId);",
-                    "clcommon__Party_Types__c": "$state(los_party_type_details).attr(clcommon__Party_Types__c);"
-               }
+                    "solcommon__Consent_To_Disclosure_And_Document__c": "$this.attr(solcommon__Consent_To_Disclosure_And_Document__c);",
+                    "genesis__Credit_Check_Consent__c": "$this.attr(genesis__Credit_Check_Consent__c);",
+                    "clcommon__Signer_Capacity__c": "$state(los_signer_details).attr(clcommon__Signer_Capacity__c);",
+                    "clcommon__Percent_Ownership__c": "$state(los_ownership_details).attr(clcommon__Percent_Ownership__c);",
+                    "solcommon__Position_In_Company__c": "$state(los_ownership_details).attr(solcommon__Position_In_Company__c);"
+               },
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "actions": [

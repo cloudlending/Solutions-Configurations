@@ -8,14 +8,14 @@
           "name": "partiesSummaryNext",
           "property": {},
           "appearance": {
-               "enable": "$this.attr(certify_beneficial_owner);==true",
-               "style": "primary",
+               "position": "bottom-left",
                "label": "Next",
-               "position": "bottom-left"
+               "style": "primary",
+               "enable": "$this.attr(certify_beneficial_owner);==true"
           },
           "remoteActionArguments": {
-               "portalStage": "$global.attr(portalStage);",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "$global.attr(portalStage);"
           },
           "validation": [
                "los_business_parties_disclosure"

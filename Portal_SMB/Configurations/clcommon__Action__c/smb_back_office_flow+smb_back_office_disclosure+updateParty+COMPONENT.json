@@ -8,18 +8,18 @@
           "name": "updateParty",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": "$global.attr(businessEntityType);==\"Individual\"",
+               "position": "bottom-right",
                "label": "Submit",
-               "position": "bottom-right"
+               "render": "$global.attr(businessEntityType);==\"Individual\"",
+               "style": "primary"
           },
           "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
                "clcommon__Party__c": {
-                    "clcommon__account__c": "$global.attr(backofficerAccountId);",
+                    "id": "$global.attr(partyId);",
                     "solcommon__Submission_Status__c": "SUBMITTED",
-                    "id": "$global.attr(partyId);"
-               },
-               "applicationId": "$global.attr(applicationId);"
+                    "clcommon__account__c": "$global.attr(backofficerAccountId);"
+               }
           },
           "validation": [
                ""

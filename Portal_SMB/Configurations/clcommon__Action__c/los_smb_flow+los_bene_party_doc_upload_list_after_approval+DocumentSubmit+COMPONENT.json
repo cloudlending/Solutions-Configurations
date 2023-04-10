@@ -8,14 +8,14 @@
           "name": "DocumentSubmit",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
+               "label": "Next",
                "position": "bottom-right",
-               "label": "Next"
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "BeneficialConfirmation",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "BeneficialConfirmation"
           },
           "successHandler": {
                "assignments": [

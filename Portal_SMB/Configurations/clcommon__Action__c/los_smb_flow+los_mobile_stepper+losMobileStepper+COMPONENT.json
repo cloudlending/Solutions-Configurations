@@ -8,11 +8,11 @@
           "name": "losMobileStepper",
           "property": {},
           "appearance": {
-               "label": "<div class=\"mobile_stepper\"><div class=\"stepper_count\">$global.attr(stepperCount);</div><div class=\"stepper_label\">$global.attr(stepsLabel);</div><div><i class=\"fa fa-chevron-down\" aria-hidden=\"true\"></i></div></div>",
-               "style": "primary",
-               "variant": "text",
+               "render": true,
                "position": "top-left",
-               "render": true
+               "variant": "text",
+               "style": "primary",
+               "label": "<div class=\"mobile_stepper\"><div class=\"stepper_count\">$global.attr(stepperCount);</div><div class=\"stepper_label\">$global.attr(stepsLabel);</div><div><i class=\"fa fa-chevron-down\" aria-hidden=\"true\"></i></div></div>"
           },
           "successHandler": {},
           "failureHandler": {},

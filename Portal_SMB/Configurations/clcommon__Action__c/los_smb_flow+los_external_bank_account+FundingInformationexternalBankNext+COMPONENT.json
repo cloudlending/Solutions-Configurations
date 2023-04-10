@@ -8,18 +8,18 @@
           "name": "FundingInformationexternalBankNext",
           "property": {},
           "appearance": {
-               "label": "Next",
+               "style": "primary",
                "position": "bottom-left",
-               "style": "primary"
+               "label": "Next"
           },
           "remoteActionArguments": {
-               "clcommon__Bank_Account__c": {
-                    "clcommon__Bank_Account_Number__c": "$this.attr(genesis__Bank_Account__r.clcommon__Bank_Account_Number__c);",
-                    "clcommon__Bank_Name__c": "$this.attr(genesis__Bank_Account__r.clcommon__Bank_Name__c);",
-                    "clcommon__Routing_Number__c": "$this.attr(genesis__Bank_Account__r.clcommon__Routing_Number__c);"
-               },
                "genesis__Applications__c": {
                     "id": "$global.attr(applicationId);"
+               },
+               "clcommon__Bank_Account__c": {
+                    "clcommon__Routing_Number__c": "$this.attr(genesis__Bank_Account__r.clcommon__Routing_Number__c);",
+                    "clcommon__Bank_Name__c": "$this.attr(genesis__Bank_Account__r.clcommon__Bank_Name__c);",
+                    "clcommon__Bank_Account_Number__c": "$this.attr(genesis__Bank_Account__r.clcommon__Bank_Account_Number__c);"
                }
           },
           "validation": [],

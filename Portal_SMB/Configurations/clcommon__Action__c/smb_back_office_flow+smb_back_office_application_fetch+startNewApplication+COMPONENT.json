@@ -9,22 +9,22 @@
           "property": {},
           "appearance": [
                {
+                    "condition": "$client; != \"phone\"",
                     "value": {
-                         "position": "top-right",
-                         "render": false,
+                         "label": "Start New Application",
                          "style": "primary",
-                         "label": "Start New Application"
-                    },
-                    "condition": "$client; != \"phone\""
+                         "render": false,
+                         "position": "top-right"
+                    }
                },
                {
+                    "condition": "$client; == \"phone\"",
                     "value": {
-                         "position": "bottom-left",
-                         "render": "$global.attr(partyType); == $global.attr(borrowerParty);",
+                         "label": "Start New Application",
                          "style": "primary",
-                         "label": "Start New Application"
-                    },
-                    "condition": "$client; == \"phone\""
+                         "render": "$global.attr(partyType); == $global.attr(borrowerParty);",
+                         "position": "bottom-left"
+                    }
                }
           ],
           "successHandler": {},

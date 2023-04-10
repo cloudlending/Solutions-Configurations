@@ -8,22 +8,22 @@
           "name": "updateGenderInformation",
           "property": {},
           "appearance": {
-               "position": "bottom-right",
-               "label": "Next",
-               "disableWhenLoading": true,
+               "style": "primary",
                "render": false,
-               "style": "primary"
+               "disableWhenLoading": true,
+               "label": "Next",
+               "position": "bottom-right"
           },
           "remoteActionArguments": {
-               "clcommon__Personal_Information__c": {
-                    "Id": "$state(smb_back_office_demographic_information_individual_gender).attr(clcommon__Personal_Information__r.Id);",
-                    "clcommon__Gender__c": "$state(smb_back_office_demographic_information_individual_gender).attr(clcommon__Personal_Information__r.clcommon__Gender__c);"
-               },
+               "applicationId": "$global.attr(applicationId);",
                "contact": {
-                    "Id": "$global.attr(contactId);",
-                    "clcommon__Personal_Information__c": "$state(smb_back_office_demographic_information_individual_gender).attr(clcommon__Personal_Information__r.Id);"
+                    "clcommon__Personal_Information__c": "$state(smb_back_office_demographic_information_individual_gender).attr(clcommon__Personal_Information__r.Id);",
+                    "Id": "$global.attr(contactId);"
                },
-               "applicationId": "$global.attr(applicationId);"
+               "clcommon__Personal_Information__c": {
+                    "clcommon__Gender__c": "$state(smb_back_office_demographic_information_individual_gender).attr(clcommon__Personal_Information__r.clcommon__Gender__c);",
+                    "Id": "$state(smb_back_office_demographic_information_individual_gender).attr(clcommon__Personal_Information__r.Id);"
+               }
           },
           "validation": [
                "smb_back_office_demographic_information_individual_questionaire"

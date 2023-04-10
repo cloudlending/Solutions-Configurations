@@ -8,29 +8,29 @@
           "name": "savePersonalInfo",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "enable": "$this.attr(solcommon__Consent_To_Disclosure_And_Document__c);==true and $this.attr(genesis__Credit_Check_Consent__c);==true",
+               "position": "bottom-left",
                "label": "Next",
-               "position": "bottom-left"
+               "enable": "$this.attr(solcommon__Consent_To_Disclosure_And_Document__c);==true and $this.attr(genesis__Credit_Check_Consent__c);==true",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
                "contact": {
-                    "id": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Id);",
-                    "LastName": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.LastName);",
-                    "clcommon__Current_Street__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.clcommon__Current_Street__c);",
-                    "clcommon__Current_State__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.clcommon__Current_State__c);",
-                    "Birthdate": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Birthdate);",
-                    "Phone": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Phone);",
-                    "FirstName": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.FirstName);",
-                    "Email": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Email);",
-                    "Title": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Title);",
-                    "clcommon__Current_Country__c": "US",
-                    "clcommon__Current_Country_Code__c": "US",
-                    "ints__Social_Security_Number__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.ints__Social_Security_Number__c);",
+                    "clcommon__Current_Zip_Code__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.clcommon__Current_Zip_Code__c);",
                     "clcommon__Current_City__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.clcommon__Current_City__c);",
-                    "clcommon__Current_Zip_Code__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.clcommon__Current_Zip_Code__c);"
-               }
+                    "ints__Social_Security_Number__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.ints__Social_Security_Number__c);",
+                    "clcommon__Current_Country_Code__c": "US",
+                    "clcommon__Current_Country__c": "US",
+                    "Title": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Title);",
+                    "Email": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Email);",
+                    "FirstName": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.FirstName);",
+                    "Phone": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Phone);",
+                    "Birthdate": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Birthdate);",
+                    "clcommon__Current_State__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.clcommon__Current_State__c);",
+                    "clcommon__Current_Street__c": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.clcommon__Current_Street__c);",
+                    "LastName": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.LastName);",
+                    "id": "$state(los_beneficial_personalinfo_details).attr(clcommon__Contact__r.Id);"
+               },
+               "applicationId": "$global.attr(applicationId);"
           },
           "validation": [
                "los_beneficial_income_details",

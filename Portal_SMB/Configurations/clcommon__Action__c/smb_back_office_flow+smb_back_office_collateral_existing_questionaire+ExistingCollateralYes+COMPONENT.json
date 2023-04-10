@@ -8,10 +8,10 @@
           "name": "ExistingCollateralYes",
           "property": {},
           "appearance": {
-               "disableWhenLoading": true,
-               "style": "primary",
+               "render": "$this.attr(existingCollateral); == \"Yes\"",
                "label": "Next",
-               "render": "$this.attr(existingCollateral); == \"Yes\""
+               "style": "primary",
+               "disableWhenLoading": true
           },
           "validation": [
                "smb_back_office_collateral_existing_questionaire"

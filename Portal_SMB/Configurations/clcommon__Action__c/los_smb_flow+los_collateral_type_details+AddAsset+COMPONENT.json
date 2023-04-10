@@ -8,10 +8,10 @@
           "name": "AddAsset",
           "property": {},
           "appearance": {
-               "render": "$global.attr(existingCollateral);!=\"Yes\"",
-               "label": "<span>Add More Item</span><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>",
+               "position": "top-right",
                "style": "primary",
-               "position": "top-right"
+               "label": "<span>Add More Item</span><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i>",
+               "render": "$global.attr(existingCollateral);!=\"Yes\""
           },
           "successHandler": {},
           "failureHandler": {},
@@ -28,8 +28,8 @@
                          "method": "insert",
                          "source": "$state(los_collateral_type_details);",
                          "options": {
-                              "structureName": "los_add_collateral_type_details_list",
-                              "defaultValue": true
+                              "defaultValue": true,
+                              "structureName": "los_add_collateral_type_details_list"
                          }
                     }
                ]

@@ -8,11 +8,11 @@
           "name": "SMBSaveRecord",
           "property": {},
           "appearance": {
-               "label": "Submit",
-               "style": "primary",
-               "position": "bottom-left",
+               "enable": "$global.attr(enableAssetSubmitButton);==\"Yes\"",
                "render": "$global.attr(existingCollateral);!=\"Yes\"",
-               "enable": "$global.attr(enableAssetSubmitButton);==\"Yes\""
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Submit"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},

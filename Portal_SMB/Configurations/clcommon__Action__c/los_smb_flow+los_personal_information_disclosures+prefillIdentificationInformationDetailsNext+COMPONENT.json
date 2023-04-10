@@ -8,21 +8,21 @@
           "name": "prefillIdentificationInformationDetailsNext",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Next",
+               "render": false,
                "style": "primary",
-               "render": false
+               "label": "Next",
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "genesis__Identification_Information__c": {
-                    "genesis__Identification_Type__c": "$state(los_identification_details_new).attr(genesis__Identification_Type__c);",
-                    "genesis__Identification_Number__c": "$state(los_identification_details_new).attr(genesis__Identification_Number__c);",
-                    "genesis__Date_of_Issuance__c": "$state(los_identification_details_new).attr(genesis__Date_of_Issuance__c);",
-                    "genesis__Expiration_Date__c": "$state(los_identification_details_new).attr(genesis__Expiration_Date__c);"
-               },
-               "accountId": "$global.attr(borrowerAccountId);",
+               "partyId": "$global.attr(borrowerPartyId);",
                "applicationId": "$global.attr(applicationId);",
-               "partyId": "$global.attr(borrowerPartyId);"
+               "accountId": "$global.attr(borrowerAccountId);",
+               "genesis__Identification_Information__c": {
+                    "genesis__Expiration_Date__c": "$state(los_identification_details_new).attr(genesis__Expiration_Date__c);",
+                    "genesis__Date_of_Issuance__c": "$state(los_identification_details_new).attr(genesis__Date_of_Issuance__c);",
+                    "genesis__Identification_Number__c": "$state(los_identification_details_new).attr(genesis__Identification_Number__c);",
+                    "genesis__Identification_Type__c": "$state(los_identification_details_new).attr(genesis__Identification_Type__c);"
+               }
           },
           "validation": [],
           "successHandler": {

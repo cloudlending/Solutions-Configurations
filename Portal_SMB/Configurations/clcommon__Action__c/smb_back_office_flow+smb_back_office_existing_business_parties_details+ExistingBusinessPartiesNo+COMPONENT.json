@@ -8,10 +8,10 @@
           "name": "ExistingBusinessPartiesNo",
           "property": {},
           "appearance": {
-               "disableWhenLoading": true,
-               "style": "primary",
+               "render": "$this.attr(existingCustomer); == \"No\"",
                "label": "Next",
-               "render": "$this.attr(existingCustomer); == \"No\""
+               "style": "primary",
+               "disableWhenLoading": true
           },
           "validation": [
                "existingCustomer"

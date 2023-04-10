@@ -8,29 +8,29 @@
           "name": "NullifyResolutionType",
           "property": {},
           "appearance": {
-               "render": false,
-               "position": "bottom-left",
+               "label": "Next",
                "style": "primary",
-               "label": "Next"
+               "position": "bottom-left",
+               "render": false
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "id": "$global.attr(applicationId);"
+               "account": {
+                    "name": "$this.attr(Name);",
+                    "BillingCountry": "US",
+                    "BillingStreet": "$this.attr(BillingStreet);",
+                    "BillingCity": "$this.attr(BillingCity);",
+                    "BillingState": "$this.attr(BillingState);",
+                    "BillingPostalCode": "$this.attr(BillingPostalCode);",
+                    "Phone": "$this.attr(Phone);",
+                    "clcommon__Legal_Entity_Type__c": "$state(los_business_legal_entity_types).attr(clcommon__Legal_Entity_Type__c);",
+                    "id": "$global.attr(businessAccountId);"
                },
                "genesis__Business_Information__c": {
-                    "id": "$this.attr(genesis__Business_Information__r.Id);",
-                    "genesis__Resolution_Type__c": null
+                    "genesis__Resolution_Type__c": null,
+                    "id": "$this.attr(genesis__Business_Information__r.Id);"
                },
-               "account": {
-                    "id": "$global.attr(businessAccountId);",
-                    "clcommon__Legal_Entity_Type__c": "$state(los_business_legal_entity_types).attr(clcommon__Legal_Entity_Type__c);",
-                    "Phone": "$this.attr(Phone);",
-                    "BillingPostalCode": "$this.attr(BillingPostalCode);",
-                    "BillingState": "$this.attr(BillingState);",
-                    "BillingCity": "$this.attr(BillingCity);",
-                    "BillingStreet": "$this.attr(BillingStreet);",
-                    "BillingCountry": "US",
-                    "name": "$this.attr(Name);"
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
                }
           },
           "validation": [],

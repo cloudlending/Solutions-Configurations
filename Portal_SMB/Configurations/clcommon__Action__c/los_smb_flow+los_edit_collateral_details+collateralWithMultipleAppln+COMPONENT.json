@@ -8,10 +8,10 @@
           "name": "collateralWithMultipleAppln",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": "$state(los_find_collateral_relationship).count(); >0",
+               "position": "bottom-left",
                "label": "Save",
-               "position": "bottom-left"
+               "render": "$state(los_find_collateral_relationship).count(); >0",
+               "style": "primary"
           },
           "confirmation": {
                "type": "prompt",

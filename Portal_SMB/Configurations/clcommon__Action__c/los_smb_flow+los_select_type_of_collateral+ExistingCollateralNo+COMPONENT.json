@@ -8,10 +8,10 @@
           "name": "ExistingCollateralNo",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "position": "bottom-left",
+               "render": "$this.attr(existingCollateral); != \"Yes\"",
                "label": "Next",
-               "render": "$this.attr(existingCollateral); != \"Yes\""
+               "position": "bottom-left",
+               "style": "primary"
           },
           "validation": [
                "los_select_type_of_collateral"

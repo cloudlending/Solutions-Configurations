@@ -8,25 +8,25 @@
           "name": "SMBbackexistingpersonalInfo",
           "property": {},
           "appearance": {
-               "position": "bottom-right",
-               "label": "Next",
+               "style": "primary",
                "render": "$global.attr(contactId); != null and $global.attr(contactId); != \"\" and $global.attr(contactId); != undefined ",
-               "style": "primary"
+               "label": "Next",
+               "position": "bottom-right"
           },
           "remoteActionArguments": {
                "contact": {
-                    "Birthdate": "$state(smb_back_office_individual_personal_information).attr(Birthdate);",
-                    "ints__Social_Security_Number__c": "$state(smb_back_office_individual_personal_information).attr(ints__Social_Security_Number__c);",
-                    "FirstName": "$state(smb_back_office_individual_personal_information).attr(FirstName);",
-                    "LastName": "$state(smb_back_office_individual_personal_information).attr(LastName);",
-                    "Email": "$state(smb_back_office_individual_personal_information).attr(Email);",
-                    "Phone": "$state(smb_back_office_individual_personal_information).attr(Phone);",
-                    "clcommon__Current_City__c": "$state(smb_back_office_individual_personal_information).attr(clcommon__Current_City__c);",
-                    "clcommon__Current_State_Code__c": "$state(smb_back_office_individual_personal_information).attr(clcommon__Current_State_Code__c);",
-                    "clcommon__Current_Zip_Code__c": "$state(smb_back_office_individual_personal_information).attr(clcommon__Current_Zip_Code__c);",
-                    "clcommon__Current_Country__c": "US",
+                    "Id": "$global.attr(contactId);",
                     "clcommon__Current_Street__c": "$state(smb_back_office_individual_personal_information).attr(clcommon__Current_Street__c);",
-                    "Id": "$global.attr(contactId);"
+                    "clcommon__Current_Country__c": "US",
+                    "clcommon__Current_Zip_Code__c": "$state(smb_back_office_individual_personal_information).attr(clcommon__Current_Zip_Code__c);",
+                    "clcommon__Current_State_Code__c": "$state(smb_back_office_individual_personal_information).attr(clcommon__Current_State_Code__c);",
+                    "clcommon__Current_City__c": "$state(smb_back_office_individual_personal_information).attr(clcommon__Current_City__c);",
+                    "Phone": "$state(smb_back_office_individual_personal_information).attr(Phone);",
+                    "Email": "$state(smb_back_office_individual_personal_information).attr(Email);",
+                    "LastName": "$state(smb_back_office_individual_personal_information).attr(LastName);",
+                    "FirstName": "$state(smb_back_office_individual_personal_information).attr(FirstName);",
+                    "ints__Social_Security_Number__c": "$state(smb_back_office_individual_personal_information).attr(ints__Social_Security_Number__c);",
+                    "Birthdate": "$state(smb_back_office_individual_personal_information).attr(Birthdate);"
                }
           },
           "validation": [

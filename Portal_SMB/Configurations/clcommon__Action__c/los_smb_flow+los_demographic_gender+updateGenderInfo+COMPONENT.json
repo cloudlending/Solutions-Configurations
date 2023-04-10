@@ -8,21 +8,21 @@
           "name": "updateGenderInfo",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
-               "disableWhenLoading": true,
+               "position": "bottom-left",
                "label": "Next",
-               "position": "bottom-left"
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "contact": {
-                    "clcommon__Personal_Information__c": "$this.attr(clcommon__Personal_Information__r.Id);",
-                    "Id": "$global.attr(borrowerContactId);"
+               "clcommon__Personal_Information__c": {
+                    "clcommon__Gender__c": "$this.attr(clcommon__Personal_Information__r.clcommon__Gender__c);",
+                    "Id": "$this.attr(clcommon__Personal_Information__r.Id);"
                },
                "applicationId": "$global.attr(applicationId);",
-               "clcommon__Personal_Information__c": {
-                    "Id": "$this.attr(clcommon__Personal_Information__r.Id);",
-                    "clcommon__Gender__c": "$this.attr(clcommon__Personal_Information__r.clcommon__Gender__c);"
+               "contact": {
+                    "Id": "$global.attr(borrowerContactId);",
+                    "clcommon__Personal_Information__c": "$this.attr(clcommon__Personal_Information__r.Id);"
                }
           },
           "successHandler": {

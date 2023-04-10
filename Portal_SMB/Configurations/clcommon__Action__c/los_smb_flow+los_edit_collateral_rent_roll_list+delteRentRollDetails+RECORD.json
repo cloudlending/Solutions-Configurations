@@ -8,13 +8,13 @@
           "name": "delteRentRollDetails",
           "property": {},
           "appearance": {
-               "style": "secondary",
-               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>"
+               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>",
+               "style": "secondary"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
+               "objectName": "rentRoll",
                "recordId": "$this.attr(Id);",
-               "objectName": "rentRoll"
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "updates": [

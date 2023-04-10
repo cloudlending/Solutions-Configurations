@@ -8,10 +8,10 @@
           "name": "businessPartiesListNext",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Next1",
+               "position": "bottom-right",
                "render": false,
-               "position": "bottom-right"
+               "label": "Next1",
+               "style": "primary"
           },
           "confirmation": {
                "type": "prompt",
@@ -23,8 +23,8 @@
                "cancelOrCloseHandler": {}
           },
           "remoteActionArguments": {
-               "portalStage": "$global.attr(portalStage);",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "$global.attr(portalStage);"
           },
           "successHandler": {
                "assignments": [

@@ -8,14 +8,14 @@
           "name": "savePortalStage",
           "property": {},
           "appearance": {
-               "position": "bottom-right",
-               "label": "Next",
+               "style": "primary",
                "render": false,
-               "style": "primary"
+               "label": "Next",
+               "position": "bottom-right"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "IdentificationInformation"
+               "portalStage": "IdentificationInformation",
+               "applicationId": "$global.attr(applicationId);"
           },
           "validation": [
                "smb_back_office_business_details"

@@ -8,14 +8,14 @@
           "name": "NextFundingInformation",
           "property": {},
           "appearance": {
-               "label": "Next",
-               "render": "$this.attr(newAccount); == false and $this.attr(bankAccount); == false",
+               "position": "bottom-left",
                "style": "primary",
-               "position": "bottom-left"
+               "render": "$this.attr(newAccount); == false and $this.attr(bankAccount); == false",
+               "label": "Next"
           },
           "remoteActionArguments": {
-               "portalStage": "ClosingDocument",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "ClosingDocument"
           },
           "successHandler": {
                "assignments": [

@@ -8,15 +8,15 @@
           "name": "saveRecordComp",
           "property": {},
           "appearance": {
-               "render": "$global.attr(existingCollateral);!=\"Yes\"",
-               "label": "save",
+               "position": "bottom-right",
                "style": "primary",
-               "position": "bottom-right"
+               "label": "save",
+               "render": "$global.attr(existingCollateral);!=\"Yes\""
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
+               "collateralTypeDetails": "$this;",
                "collateralId": "$global.attr(collateralId);",
-               "collateralTypeDetails": "$this;"
+               "applicationId": "$global.attr(applicationId);"
           },
           "uploadActionArguments": {},
           "successHandler": {

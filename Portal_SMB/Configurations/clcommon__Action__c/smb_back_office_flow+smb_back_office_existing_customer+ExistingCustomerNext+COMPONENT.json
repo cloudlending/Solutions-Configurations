@@ -8,9 +8,9 @@
           "name": "ExistingCustomerNext",
           "property": {},
           "appearance": {
-               "label": "Next",
+               "render": "$this.attr(ExistingCustomer); == \"No\"",
                "style": "primary",
-               "render": "$this.attr(ExistingCustomer); == \"No\""
+               "label": "Next"
           },
           "validation": [
                "smb_back_office_existing_customer"
