@@ -4,11 +4,9 @@
      },
      "Name": "back_officer_asset_information_query",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "back_officer_asset_information_query",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "03ec025153008417165096930116d192841b67f30b8b5f25bd3ec6aa7c43aa7a",
      "clcommon__Unique_Name__c": "back_officer_asset_information_query",
      "clcommon__data__c": {
           "structureName": "back_officer_asset_information_query",
@@ -107,7 +105,8 @@
                                         "options": {
                                              "numeral": true,
                                              "numeralThousandsGroupStyle": "thousand",
-                                             "numeralDecimalScale": 0
+                                             "numeralDecimalScale": 0,
+                                             "initValue": "2345"
                                         },
                                         "prefix": "$"
                                    },
@@ -149,5 +148,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "back_officer_asset_information_query",
+     "clcommon__Release_Checksum__c": "6759afe0d71824cd99ec390d11a1d0db9ec25a8fb29e3720554047b3366802cf"
 }

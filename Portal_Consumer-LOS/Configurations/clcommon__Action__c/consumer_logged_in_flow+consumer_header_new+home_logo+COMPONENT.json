@@ -5,67 +5,67 @@
      "Name": "home_logo",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
+          "name": "home_logo",
+          "property": {},
+          "appearance": {
+               "position": "top-left",
+               "style": "primary",
+               "label": "<img src=\"../resource/consumerlos__thrive_logo\" />"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
-               "next": "ApplicationDashboard",
+               "assignments": [
+                    {
+                         "field": "$global.attr(productName);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(loanPurpose);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(loanPurposeName);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(loanProduct);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(portalStage);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(actualProductName);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(typeOfApplicant);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$nav(consumer_review_step).appearance(current);",
+                         "value": 0
+                    },
+                    {
+                         "field": "$global.attr(showCollateral);",
+                         "value": ""
+                    }
+               ],
                "updates": [
                     {
+                         "name": "$nav.reloads.add;",
                          "value": [
                               "consumer_applying_for",
                               "consumer_loan_amount",
                               "consumer_application_list"
-                         ],
-                         "name": "$nav.reloads.add;"
+                         ]
                     }
                ],
-               "assignments": [
-                    {
-                         "value": "",
-                         "field": "$global.attr(productName);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(loanPurpose);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(loanPurposeName);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(loanProduct);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(portalStage);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(actualProductName);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(typeOfApplicant);"
-                    },
-                    {
-                         "value": 0,
-                         "field": "$nav(consumer_review_step).appearance(current);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(showCollateral);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "position": "top-left",
-               "style": "primary",
-               "label": "<img src=\"../resource/thrive_logo\" />"
-          },
-          "property": {},
-          "name": "home_logo"
+               "next": "ApplicationDashboard"
+          }
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -77,9 +77,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_header_new+home_logo+COMPONENT",
-     "clcommon__Release_Checksum__c": "f0577bb4582dae08be172d60bfee68f4ef94441fa11e099b6f8e64c9e03773e5",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_header_new+home_logo",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_header_new+home_logo+COMPONENT",
+     "clcommon__Release_Checksum__c": "088a10507530f0f2fe1a3e4a42f1fab868923f88dd518b64e74e843c0c43647e"
 }

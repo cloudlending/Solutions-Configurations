@@ -5,30 +5,30 @@
      "Name": "BackButton",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Back",
-          "handler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "previous",
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "BackButton",
+          "property": {},
           "appearance": {
                "style": "secondary",
                "label": "back",
                "position": "bottom-right"
           },
-          "property": {},
-          "name": "BackButton"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Back"
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -40,9 +40,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_applying_for_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_applying_for+BackButton+COMPONENT",
-     "clcommon__Release_Checksum__c": "54e13ae2a2d2882ac30d565e710ec344a09016f4b465cd5ac9d55c02f2d7a26b",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_applying_for+BackButton",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_applying_for+BackButton+COMPONENT",
+     "clcommon__Release_Checksum__c": "54e13ae2a2d2882ac30d565e710ec344a09016f4b465cd5ac9d55c02f2d7a26b"
 }

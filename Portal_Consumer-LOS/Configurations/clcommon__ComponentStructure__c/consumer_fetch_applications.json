@@ -4,11 +4,9 @@
      },
      "Name": "consumer_fetch_applications",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "consumer_fetch_applications",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "879d0dafeba24faa2d3c6a4d8252b078c0f83fc1f7b780667e5377a3ab7fe026",
      "clcommon__Unique_Name__c": "consumer_fetch_applications",
      "clcommon__data__c": {
           "structureName": "consumer_fetch_applications",
@@ -58,150 +56,6 @@
                                    "fieldType": "string",
                                    "label": "Record ID",
                                    "ariaLabel": "Record ID"
-                              }
-                         },
-                         {
-                              "id": "87be2d6a-86b6-452b-bd70-058ae3ca6fd7",
-                              "fieldName": "genesis__Application__r.solcommon__Portal_Stage__c",
-                              "fieldUi": {
-                                   "fieldType": "picklist",
-                                   "label": "Portal Stage",
-                                   "selectOptions": [
-                                        {
-                                             "id": "AdditionalOwners",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "AdditionalOwners",
-                                             "optionValue": "AdditionalOwners"
-                                        },
-                                        {
-                                             "id": "ApplicationSubmitted",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "ApplicationSubmitted",
-                                             "optionValue": "ApplicationSubmitted"
-                                        },
-                                        {
-                                             "id": "autoApprove",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "AutoApprove",
-                                             "optionValue": "autoApprove"
-                                        },
-                                        {
-                                             "id": "autoDecline",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "AutoDecline",
-                                             "optionValue": "autoDecline"
-                                        },
-                                        {
-                                             "id": "BusinessAnnualRevenue",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "BusinessAnnualRevenue",
-                                             "optionValue": "BusinessAnnualRevenue"
-                                        },
-                                        {
-                                             "id": "BusinessEntity",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "BusinessEntity",
-                                             "optionValue": "BusinessEntity"
-                                        },
-                                        {
-                                             "id": "BusinessInformation",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "BusinessInformation",
-                                             "optionValue": "BusinessInformation"
-                                        },
-                                        {
-                                             "id": "BusinessFinancials",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "BusinessFinancials",
-                                             "optionValue": "BusinessFinancials"
-                                        },
-                                        {
-                                             "id": "CollateralDetails",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "CollateralDetails",
-                                             "optionValue": "CollateralDetails"
-                                        },
-                                        {
-                                             "id": "manualReview",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "ManualReview",
-                                             "optionValue": "manualReview"
-                                        },
-                                        {
-                                             "id": "OwnerInformation",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "OwnerInformation",
-                                             "optionValue": "OwnerInformation"
-                                        },
-                                        {
-                                             "id": "ReviewAndSubmit",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "ReviewAndSubmit",
-                                             "optionValue": "ReviewAndSubmit"
-                                        },
-                                        {
-                                             "id": "PersonalIncome",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "PersonalIncome",
-                                             "optionValue": "PersonalIncome"
-                                        },
-                                        {
-                                             "id": "GettingStarted",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "GettingStarted",
-                                             "optionValue": "GettingStarted"
-                                        },
-                                        {
-                                             "id": "AboutYou",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "AboutYou",
-                                             "optionValue": "AboutYou"
-                                        },
-                                        {
-                                             "id": "Employment",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "Employment",
-                                             "optionValue": "Employment"
-                                        },
-                                        {
-                                             "id": "Income",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "Income",
-                                             "optionValue": "Income"
-                                        },
-                                        {
-                                             "id": "Review",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "Review",
-                                             "optionValue": "Review"
-                                        },
-                                        {
-                                             "id": "OfferGenerated",
-                                             "active": true,
-                                             "defaultOption": false,
-                                             "optionText": "OfferGenerated",
-                                             "optionValue": "OfferGenerated"
-                                        }
-                                   ],
-                                   "ariaLabel": "Portal Stage"
                               }
                          },
                          {
@@ -728,5 +582,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "consumer_fetch_applications",
+     "clcommon__Release_Checksum__c": "86ae97c0724567c903623f5abe9fbdb48c4e3cf88f6dee70df3386fa617f4a36"
 }

@@ -4,11 +4,9 @@
      },
      "Name": "back_officer_liability_query",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "back_officer_liability_query",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "0e20fe0ef6426b13decf0b1f2720d14d17f29554d460e2c9f46a23fcca4ce38a",
      "clcommon__Unique_Name__c": "back_officer_liability_query",
      "clcommon__data__c": {
           "structureName": "back_officer_liability_query",
@@ -298,7 +296,8 @@
                                         "options": {
                                              "numeral": true,
                                              "numeralThousandsGroupStyle": "thousand",
-                                             "numeralDecimalScale": 0
+                                             "numeralDecimalScale": 0,
+                                             "initValue": "800"
                                         },
                                         "prefix": "$"
                                    },
@@ -313,9 +312,24 @@
                                    "label": "Contact ID",
                                    "ariaLabel": "Contact ID"
                               }
+                         },
+                         {
+                              "id": "abd34852-b85f-4c73-8f05-5fa8c48a36ed",
+                              "fieldName": "Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Liability Description",
+                                   "required": true,
+                                   "messages": {
+                                        "requiredErrorText": "Required."
+                                   },
+                                   "ariaLabel": "Liability Description"
+                              }
                          }
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "back_officer_liability_query",
+     "clcommon__Release_Checksum__c": "ac1f9fe415f34a4747098c84d98e06032f715d06b113adef24d671134f2c195f"
 }

@@ -5,40 +5,8 @@
      "Name": "treasuryMobileStepper",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {
-               "executions": [
-                    {
-                         "name": "$ext.toggleIcon"
-                    }
-               ],
-               "updates": [
-                    {
-                         "value": "consumer_mobile_stepper_panel",
-                         "name": "$nav.overlay.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "arguments": [
-                              "$global.attr(stepsLabel);"
-                         ],
-                         "value": "$ext.stepsStyles",
-                         "field": "$global.attr(retainStepsStyles);"
-                    },
-                    {
-                         "value": false,
-                         "field": "$global.attr(renderMobileStepper);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "popup": {
-               "overlay": "treasury_mobile_stepper_container",
-               "anchor": "right",
-               "direction": "bottom"
-          },
+          "name": "treasuryMobileStepper",
+          "property": {},
           "appearance": {
                "label": "<div class=\"mobile_stepper\"><div class=\"stepper_count\">$global.attr(stepperCount);</div><div class=\"stepper_label\">$global.attr(stepsLabel);</div><div><i class=\"fa fa-chevron-down\" aria-hidden=\"true\"></i></div></div>",
                "style": "primary",
@@ -46,8 +14,40 @@
                "position": "top-left",
                "render": true
           },
-          "property": {},
-          "name": "treasuryMobileStepper"
+          "popup": {
+               "direction": "bottom",
+               "anchor": "right",
+               "overlay": "treasury_mobile_stepper_container"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(retainStepsStyles);",
+                         "value": "$ext.stepsStyles",
+                         "arguments": [
+                              "$global.attr(stepsLabel);"
+                         ]
+                    },
+                    {
+                         "field": "$global.attr(renderMobileStepper);",
+                         "value": false
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "consumer_mobile_stepper_panel"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.toggleIcon"
+                    }
+               ]
+          }
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "context",
@@ -59,9 +59,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_mobile_stepper+treasuryMobileStepper+COMPONENT",
-     "clcommon__Release_Checksum__c": "97138e0ae3829dde82ae0656ee87c8229113018d62fb50f2011f372517379d74",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_mobile_stepper+treasuryMobileStepper",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_mobile_stepper+treasuryMobileStepper+COMPONENT",
+     "clcommon__Release_Checksum__c": "97138e0ae3829dde82ae0656ee87c8229113018d62fb50f2011f372517379d74"
 }

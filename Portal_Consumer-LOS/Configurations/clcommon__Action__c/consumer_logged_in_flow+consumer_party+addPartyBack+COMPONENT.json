@@ -5,30 +5,30 @@
      "Name": "addPartyBack",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "previous",
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "addPartyBack",
+          "property": {},
           "appearance": {
                "position": "bottom-left",
                "label": "Back",
                "style": "secondary"
           },
-          "property": {},
-          "name": "addPartyBack"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "previous"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -40,9 +40,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_parties",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_party+addPartyBack+COMPONENT",
-     "clcommon__Release_Checksum__c": "14003dd50ec3818611746cedc90319966df986255c95b91881dfd84ea35bf761",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_party+addPartyBack",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_party+addPartyBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "14003dd50ec3818611746cedc90319966df986255c95b91881dfd84ea35bf761"
 }

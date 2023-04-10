@@ -5,38 +5,38 @@
      "Name": "assignStepLabel",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "assignments": [
-                    {
-                         "value": "More About You",
-                         "field": "$global.attr(stepsLabel);"
-                    },
-                    {
-                         "value": "2",
-                         "field": "$global.attr(stepperCount);"
-                    },
-                    {
-                         "value": "About You",
-                         "field": "$global.attr(mainStepLabel);"
-                    },
-                    {
-                         "value": "AboutYou",
-                         "field": "$nav(consumer_mobile_stepper_panel).appearance(current);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "automatic": true,
+          "name": "assignStepLabel",
+          "property": {},
           "appearance": {
                "position": "bottom-left",
                "style": "primary",
                "label": "Continue"
           },
-          "property": {},
-          "name": "assignStepLabel"
+          "automatic": true,
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(stepsLabel);",
+                         "value": "More About You"
+                    },
+                    {
+                         "field": "$global.attr(stepperCount);",
+                         "value": "2"
+                    },
+                    {
+                         "field": "$global.attr(mainStepLabel);",
+                         "value": "About You"
+                    },
+                    {
+                         "field": "$nav(consumer_mobile_stepper_panel).appearance(current);",
+                         "value": "AboutYou"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -48,9 +48,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_more_personal_information",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_more_personal_information+assignStepLabel+COMPONENT",
-     "clcommon__Release_Checksum__c": "a1bc6c7020cd75b8f6cb95b4538836c456c94f8df7144e451ba5fdc14cb4f120",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_more_personal_information+assignStepLabel",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_more_personal_information+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "a1bc6c7020cd75b8f6cb95b4538836c456c94f8df7144e451ba5fdc14cb4f120"
 }

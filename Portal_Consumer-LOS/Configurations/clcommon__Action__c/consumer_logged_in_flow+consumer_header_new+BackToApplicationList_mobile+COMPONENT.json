@@ -5,66 +5,66 @@
      "Name": "BackToApplicationList_mobile",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "ExitToApplicationList",
-          "messages": {},
-          "disclosureNames": [],
-          "handler": {
-               "next": "ApplicationDashboard",
-               "updates": [
-                    {
-                         "value": [
-                              "consumer_applying_for",
-                              "consumer_loan_amount",
-                              "consumer_application_list"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "",
-                         "field": "$global.attr(productName);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(loanPurpose);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(loanPurposeName);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(portalStage);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(loanProduct);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(typeOfApplicant);"
-                    },
-                    {
-                         "value": 0,
-                         "field": "$nav(consumer_review_step).appearance(current);"
-                    },
-                    {
-                         "value": "",
-                         "field": "$global.attr(showCollateral);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "context": "Menu",
+          "name": "BackToApplicationList_mobile",
+          "property": {},
           "appearance": {
                "label": "Home",
                "style": "secondary"
           },
-          "property": {},
-          "name": "BackToApplicationList_mobile"
+          "context": "Menu",
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(productName);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(loanPurpose);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(loanPurposeName);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(portalStage);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(loanProduct);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$global.attr(typeOfApplicant);",
+                         "value": ""
+                    },
+                    {
+                         "field": "$nav(consumer_review_step).appearance(current);",
+                         "value": 0
+                    },
+                    {
+                         "field": "$global.attr(showCollateral);",
+                         "value": ""
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "consumer_applying_for",
+                              "consumer_loan_amount",
+                              "consumer_application_list"
+                         ]
+                    }
+               ],
+               "next": "ApplicationDashboard"
+          },
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "ExitToApplicationList"
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "normal",
@@ -76,9 +76,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_header_new+BackToApplicationList_mobile+COMPONENT",
-     "clcommon__Release_Checksum__c": "47855905ec1113e72acf1f647ec3a282d2eb34bf6017a8ef239c8d847fb5445d",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_header_new+BackToApplicationList_mobile",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_header_new+BackToApplicationList_mobile+COMPONENT",
+     "clcommon__Release_Checksum__c": "47855905ec1113e72acf1f647ec3a282d2eb34bf6017a8ef239c8d847fb5445d"
 }

@@ -5,30 +5,30 @@
      "Name": "assignStepLabel",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
+          "name": "assignStepLabel",
+          "property": {},
+          "appearance": {
+               "position": "bottom-left",
+               "style": "primary",
+               "label": "Continue"
+          },
+          "automatic": true,
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "assignments": [
                     {
-                         "value": "Confirm",
-                         "field": "$global.attr(stepsLabel);"
+                         "field": "$global.attr(stepsLabel);",
+                         "value": "Confirm"
                     },
                     {
-                         "value": "2",
-                         "field": "$global.attr(stepperCount);"
+                         "field": "$global.attr(stepperCount);",
+                         "value": "2"
                     }
                ]
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "automatic": true,
-          "appearance": {
-               "label": "Continue",
-               "style": "primary",
-               "position": "bottom-left"
-          },
-          "property": {},
-          "name": "assignStepLabel"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -40,9 +40,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_guest_flow+consumer_check_inbox+assignStepLabel+COMPONENT",
-     "clcommon__Release_Checksum__c": "6b316f70843b49e4630d82a0df4bdcdf4df9ec9faeeca777b4ca50cdeff0b672",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_check_inbox+assignStepLabel",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_guest_flow+consumer_check_inbox+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "6b316f70843b49e4630d82a0df4bdcdf4df9ec9faeeca777b4ca50cdeff0b672"
 }

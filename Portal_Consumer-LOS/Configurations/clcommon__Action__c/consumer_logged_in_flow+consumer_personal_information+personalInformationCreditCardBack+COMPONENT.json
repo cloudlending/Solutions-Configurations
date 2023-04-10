@@ -5,37 +5,37 @@
      "Name": "personalInformationCreditCardBack",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "updates": [
-                    {
-                         "value": "consumer_product",
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": 0,
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "personalInformationCreditCardBack",
+          "property": {},
           "appearance": {
                "position": "bottom-right",
                "label": "Back",
                "render": "$global.attr(productName); == \"Credit Card\"",
                "style": "secondary"
           },
-          "property": {},
-          "name": "personalInformationCreditCardBack"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": 0
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "consumer_product"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "normal",
@@ -47,9 +47,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_personal_information_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_personal_information+personalInformationCreditCardBack+COMPONENT",
-     "clcommon__Release_Checksum__c": "b5c57bd04bd507db57946a087e78916d06e9f55b976f75783e1146f38998a4be",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_personal_information+personalInformationCreditCardBack",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_personal_information+personalInformationCreditCardBack+COMPONENT",
+     "clcommon__Release_Checksum__c": "b5c57bd04bd507db57946a087e78916d06e9f55b976f75783e1146f38998a4be"
 }

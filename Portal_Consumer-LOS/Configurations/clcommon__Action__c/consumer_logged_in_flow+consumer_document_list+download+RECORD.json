@@ -5,21 +5,21 @@
      "Name": "download",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "download",
+          "name": "download",
+          "property": {},
+          "appearance": {
+               "label": "cloud_download",
+               "style": "iconic"
+          },
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
           "handler": {
                "redirect": {
                     "url": "/sfc/servlet.shepherd/version/download/$this.attr(clcommon__Content_Version_Id__c);"
                }
           },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "appearance": {
-               "label": "cloud_download",
-               "style": "iconic"
-          },
-          "property": {},
-          "name": "download"
+          "ariaLabel": "download"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -31,9 +31,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_document_preview",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_document_list+download+RECORD",
-     "clcommon__Release_Checksum__c": "fa30d9861f32c622549ac664426cc5c5ce3287c493be668b502d89e5cc366cf4",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_document_list+download",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_document_list+download+RECORD",
+     "clcommon__Release_Checksum__c": "fa30d9861f32c622549ac664426cc5c5ce3287c493be668b502d89e5cc366cf4"
 }

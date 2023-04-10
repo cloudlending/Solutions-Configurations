@@ -12,7 +12,16 @@
           "messages": {
                "showLoadingAnimation": true
           },
-          "generalHandlers": {},
+          "generalHandlers": {
+               "loaded": {
+                    "updates": [
+                         {
+                              "value": "back_officer_validate_party_submission",
+                              "name": "$nav.reloads.add;"
+                         }
+                    ]
+               }
+          },
           "recordActions": [],
           "componentActions": [],
           "appearance": {
@@ -45,7 +54,7 @@
                "blankMessage": "No party information!",
                "title": "Party Details",
                "templates": {
-                    "record": "<div class=\"customCard\"><span class=\"cardHeader\">$this.attr(clcommon__Contact__r.FirstName); $this.attr(clcommon__Contact__r.LastName);</span><div class=\"text\">$this.attr(clcommon__Contact__r.Phone, phone, 'x|\\(xxx\\) xxx-xxxx');</div><div class=\"text\">$this.attr(clcommon__Contact__r.Email, email);</div></div>"
+                    "record": "<div class=\"customCard\"><div class=\"cardHeader\">$this.attr(clcommon__Contact__r.FirstName); $this.attr(clcommon__Contact__r.LastName);</div><div class=\"text\">Submission Status:&nbsp;&nbsp;<span class=\"text label\">$this.attr(solcommon__Submission_Status__c);</span></div> <div class=\"text\">$this.attr(clcommon__Contact__r.Phone, phone, 'x|\\(xxx\\) xxx-xxxx');</div><div class=\"text\">$this.attr(clcommon__Contact__r.Email, email);</div></div>"
                },
                "columns": 1,
                "fieldColumns": 1
@@ -61,5 +70,5 @@
      },
      "clcommon__Actor_Name__c": "back_officer_party",
      "clcommon__External_ID__c": "back_officer_flow+back_officer_party",
-     "clcommon__Release_Checksum__c": "3b0fba203f6dbc5530f08e90d8df3e4a6126dcfed99f678fe6cc589d03358432"
+     "clcommon__Release_Checksum__c": "75340014f7ef3ea69b714f8a2593533101972980a7db497d165b5c3d2644ccf9"
 }

@@ -5,28 +5,28 @@
      "Name": "AddLiability",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {
-               "cruds": [
-                    {
-                         "options": {
-                              "structureName": "consumer_liability_query",
-                              "defaultValue": true
-                         },
-                         "source": "$state(consumer_liability);",
-                         "method": "insert"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "AddLiability",
+          "property": {},
           "appearance": {
                "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Liability</span>",
                "style": "primary",
                "position": "top-right"
           },
-          "property": {},
-          "name": "AddLiability"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "cruds": [
+                    {
+                         "method": "insert",
+                         "source": "$state(consumer_liability);",
+                         "options": {
+                              "structureName": "consumer_liability_query",
+                              "defaultValue": true
+                         }
+                    }
+               ]
+          }
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -38,9 +38,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_liability_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability+AddLiability+COMPONENT",
-     "clcommon__Release_Checksum__c": "fb197eea2dce2fcee8499039bc64d19547b148a433ad5780973bc22476b9f2b6",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_liability+AddLiability",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_liability+AddLiability+COMPONENT",
+     "clcommon__Release_Checksum__c": "fb197eea2dce2fcee8499039bc64d19547b148a433ad5780973bc22476b9f2b6"
 }

@@ -5,23 +5,11 @@
      "Name": "saveParty",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "updates": [
-                    {
-                         "value": [
-                              "consumer_party",
-                              "consumer_add_party"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    },
-                    {
-                         "value": "consumer_add_party_container",
-                         "name": "$nav.overlay.remove;"
-                    }
-               ]
+          "name": "saveParty",
+          "property": {},
+          "appearance": {
+               "style": "primary",
+               "label": "Save"
           },
           "remoteActionArguments": {
                "permissionSetName": "Consumer_Unsecured_Borrower",
@@ -34,12 +22,24 @@
                },
                "applicationId": "$global.attr(applicationId);"
           },
-          "appearance": {
-               "style": "primary",
-               "label": "Save"
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "consumer_party",
+                              "consumer_add_party"
+                         ]
+                    },
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "consumer_add_party_container"
+                    }
+               ]
           },
-          "property": {},
-          "name": "saveParty"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "submit",
@@ -51,9 +51,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_add_party_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_party+saveParty+COMPONENT",
-     "clcommon__Release_Checksum__c": "f97a0e9131ec5b372b9f5d849c642baebe93d5beae451bbd4f29d87a3751f9ae",
      "clcommon__Remote_Action_Class__c": "consumerlos.PortalCreateJointPartyAndUser",
      "clcommon__Unique_Action_Name__c": "consumer_add_party+saveParty",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_party+saveParty+COMPONENT",
+     "clcommon__Release_Checksum__c": "f97a0e9131ec5b372b9f5d849c642baebe93d5beae451bbd4f29d87a3751f9ae"
 }

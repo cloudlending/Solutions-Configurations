@@ -5,31 +5,31 @@
      "Name": "goToCoborrowerFlow",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Back",
-          "handler": {
-               "next": "Home",
-               "assignments": [
-                    {
-                         "value": "ReviewAndSubmit",
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    },
-                    {
-                         "value": "DocumentReview",
-                         "field": "$nav(consumer_review_step).appearance(current);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "goToCoborrowerFlow",
+          "property": {},
           "appearance": {
                "render": false,
                "position": "bottom-left"
           },
-          "property": {},
-          "name": "goToCoborrowerFlow"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "ReviewAndSubmit"
+                    },
+                    {
+                         "field": "$nav(consumer_review_step).appearance(current);",
+                         "value": "DocumentReview"
+                    }
+               ],
+               "next": "Home"
+          },
+          "ariaLabel": "Back"
      },
-     "clcommon__Action_Order__c": 5,
+     "clcommon__Action_Order__c": 4,
      "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
@@ -39,9 +39,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_fetch_applications",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_application_list+goToCoborrowerFlow+COMPONENT",
-     "clcommon__Release_Checksum__c": "fe64f11cf2bc7f49942fe3bd76cbf08c73f0fb863f30dfe502701640d7e042c3",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_application_list+goToCoborrowerFlow",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_application_list+goToCoborrowerFlow+COMPONENT",
+     "clcommon__Release_Checksum__c": "c292f8447a02adc2b171c16a2dd7a0b8477a1e14d8edae5e82cffcefeb020a98"
 }

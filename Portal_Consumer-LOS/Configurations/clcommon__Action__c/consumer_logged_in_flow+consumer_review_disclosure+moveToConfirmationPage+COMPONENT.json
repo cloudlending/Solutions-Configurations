@@ -5,38 +5,34 @@
      "Name": "moveToConfirmationPage",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "IndividualSubmit",
-                         "field": "$nav(consumer_review_step).appearance(current);"
-                    }
-               ]
-          },
-          "remoteActionArguments": {
-               "portalStage": "IndividualSubmit",
-               "applicationId": "$global.attr(applicationId);"
-          },
+          "name": "moveToConfirmationPage",
+          "property": {},
           "appearance": {
                "position": "bottom-right",
                "label": "Back",
                "style": "secondary",
                "render": false
           },
-          "property": {},
-          "name": "moveToConfirmationPage"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(consumer_review_step).appearance(current);",
+                         "value": "IndividualSubmit"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
-     "clcommon__Action_Order__c": 3,
-     "clcommon__Action_Type__c": "submit",
+     "clcommon__Action_Order__c": 2,
+     "clcommon__Action_Type__c": "normal",
      "clcommon__Actor__r": {
           "attributes": {
                "type": "clcommon__Actors__c"
@@ -45,9 +41,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_review_disclosure+moveToConfirmationPage+COMPONENT",
-     "clcommon__Release_Checksum__c": "9cb4b8eddb5401d0c8a24768ae5ebc2f820fd7ab51544a0f12ceb0665940d0d4",
-     "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveStage",
+     "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_review_disclosure+moveToConfirmationPage",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_review_disclosure+moveToConfirmationPage+COMPONENT",
+     "clcommon__Release_Checksum__c": "6f05163aa684887a2c3fbca744ebd6972ef4324f1a37b1e49999c5c25bd32a5b"
 }

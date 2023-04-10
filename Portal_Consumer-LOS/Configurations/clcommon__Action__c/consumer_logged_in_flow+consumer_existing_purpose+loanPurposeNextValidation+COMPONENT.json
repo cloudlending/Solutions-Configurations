@@ -5,35 +5,35 @@
      "Name": "loanPurposeNextValidation",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "<p style=\"font-size:10.5px; font-weight:400; color:#f44336;\">Purpose is required</p>",
-                         "field": "$global.attr(purposeValidation);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "validation": [
-               "los_loan_purpose_details",
-               "consumer_loan_amount"
-          ],
-          "remoteActionArguments": {},
+          "name": "loanPurposeNextValidation",
+          "property": {},
           "appearance": {
                "style": "primary",
                "render": "($global.attr(loanPurpose);==null or $global.attr(loanPurpose);==\"\" or $global.attr(loanPurpose);==undefined) and ($global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined)",
                "label": "Next"
           },
-          "property": {},
-          "name": "loanPurposeNextValidation"
+          "remoteActionArguments": {},
+          "validation": [
+               "los_loan_purpose_details",
+               "consumer_loan_amount"
+          ],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(purposeValidation);",
+                         "value": "<p style=\"font-size:10.5px; font-weight:400; color:#f44336;\">Purpose is required</p>"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "normal",
@@ -45,9 +45,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_loan_existing_purpose",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose+loanPurposeNextValidation+COMPONENT",
-     "clcommon__Release_Checksum__c": "b2398f5e66c7a0398b47a4d94a2a9dff7845806eee0f2ada370316abf19a0a48",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_existing_purpose+loanPurposeNextValidation",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose+loanPurposeNextValidation+COMPONENT",
+     "clcommon__Release_Checksum__c": "b2398f5e66c7a0398b47a4d94a2a9dff7845806eee0f2ada370316abf19a0a48"
 }

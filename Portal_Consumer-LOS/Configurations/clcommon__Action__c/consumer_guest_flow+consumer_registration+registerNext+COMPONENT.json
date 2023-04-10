@@ -5,51 +5,51 @@
      "Name": "registerNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {
-               "submitFailureText": "$serverMessage;"
+          "name": "registerNext",
+          "property": {},
+          "appearance": {
+               "render": "$global.attr(startStep);==undefined or $global.attr(startStep);==\"\"",
+               "label": "Register",
+               "style": "primary",
+               "position": "bottom-right"
           },
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "actions": [
-                    {
-                         "name": "registerWithPartialMatchNext",
-                         "condition": "$result.attr(apiResponse);==3"
-                    },
-                    {
-                         "name": "sendRegistrationEmail",
-                         "condition": "$result.attr(apiResponse);==0 or $result.attr(apiResponse);==2"
-                    },
-                    {
-                         "name": "resetPassword",
-                         "condition": "$result.attr(apiResponse);==1"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "$result.attr(apiResponse);",
-                         "field": "$global.attr(statusCode);"
-                    }
-               ]
+          "remoteActionArguments": {
+               "isExistingUser": false,
+               "contact": "$state(consumer_registration);",
+               "permissionSetName": "Consumer_Unsecured_Borrower"
           },
           "validation": [
                "consumer_registration"
           ],
-          "remoteActionArguments": {
-               "permissionSetName": "Consumer_Unsecured_Borrower",
-               "contact": "$state(consumer_registration);",
-               "isExistingUser": false
+          "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(statusCode);",
+                         "value": "$result.attr(apiResponse);"
+                    }
+               ],
+               "actions": [
+                    {
+                         "condition": "$result.attr(apiResponse);==3",
+                         "name": "registerWithPartialMatchNext"
+                    },
+                    {
+                         "condition": "$result.attr(apiResponse);==0 or $result.attr(apiResponse);==2",
+                         "name": "sendRegistrationEmail"
+                    },
+                    {
+                         "condition": "$result.attr(apiResponse);==1",
+                         "name": "resetPassword"
+                    }
+               ]
           },
-          "appearance": {
-               "position": "bottom-right",
-               "style": "primary",
-               "label": "Register",
-               "render": "$global.attr(startStep);==undefined or $global.attr(startStep);==\"\""
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
           },
-          "property": {},
-          "name": "registerNext"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "submit",
@@ -61,9 +61,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_registration_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_guest_flow+consumer_registration+registerNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "79c5e61f088452db3b63599d0c56d67962a0578e8027085d3a44d444b02212ca",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveUserData",
      "clcommon__Unique_Action_Name__c": "consumer_registration+registerNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_guest_flow+consumer_registration+registerNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "79c5e61f088452db3b63599d0c56d67962a0578e8027085d3a44d444b02212ca"
 }
