@@ -5,11 +5,9 @@
      "Name": "back_officer_flow",
      "clcommon__Allow_Guest_User_Access__c": false,
      "clcommon__Description__c": null,
-     "clcommon__External_ID__c": "back_officer_flow",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Is_Template__c": false,
      "clcommon__Related_Configuration_Mapping__c": null,
-     "clcommon__Release_Checksum__c": "f71abfc7dee21997ae38589c7122e6b06de1cc24cdd5057c60e30c960245c15e",
      "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
      "clcommon__Unique_Name__c": "back_officer_flow",
      "clcommon__data__c": {
@@ -459,11 +457,6 @@
                                                                            "width": "25%",
                                                                            "name": "back_officer_more_personal_information_helper",
                                                                            "layoutId": "6602ae97-9122-4d30-8bda-6f0d8a6d5882"
-                                                                      },
-                                                                      {
-                                                                           "width": "100%",
-                                                                           "name": "back_officer_fetch_personal_information",
-                                                                           "layoutId": "4e375e95-fef5-4f5b-8d25-10301ab78558"
                                                                       }
                                                                  ],
                                                                  "name": "back_officer_more_personal_information_container",
@@ -559,6 +552,11 @@
                                                                                                          "width": "100%",
                                                                                                          "name": "back_officer_party",
                                                                                                          "layoutId": "c5d07082-ac12-2233-a000-ab181ca3df08"
+                                                                                                    },
+                                                                                                    {
+                                                                                                         "width": "100%",
+                                                                                                         "name": "back_officer_validate_party_submission",
+                                                                                                         "layoutId": "b3e73e0b-8eaa-4f4f-97bf-3b6bb35c0459"
                                                                                                     }
                                                                                                ],
                                                                                                "name": "back_officer_party_block",
@@ -858,5 +856,7 @@
                }
           },
           "start": "ApplicationDashboard"
-     }
+     },
+     "clcommon__External_ID__c": "back_officer_flow",
+     "clcommon__Release_Checksum__c": "1aa71dece6140d81353038fc139e0348be207bf8ba7552381eb87c9bf5dabac9"
 }

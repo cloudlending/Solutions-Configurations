@@ -5,28 +5,28 @@
      "Name": "AddAsset",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {
-               "cruds": [
-                    {
-                         "options": {
-                              "structureName": "consumer_asset_information_query",
-                              "defaultValue": true
-                         },
-                         "source": "$state(consumer_asset);",
-                         "method": "insert"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "AddAsset",
+          "property": {},
           "appearance": {
                "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Asset</span>",
                "style": "primary",
                "position": "top-right"
           },
-          "property": {},
-          "name": "AddAsset"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "cruds": [
+                    {
+                         "method": "insert",
+                         "source": "$state(consumer_asset);",
+                         "options": {
+                              "structureName": "consumer_asset_information_query",
+                              "defaultValue": true
+                         }
+                    }
+               ]
+          }
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -38,9 +38,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_asset_information_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_asset+AddAsset+COMPONENT",
-     "clcommon__Release_Checksum__c": "2845a6a0b203a5dd72a0e0f64e4fd749efc76f4484d191a5eb732bf1ba2bf8c1",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_asset+AddAsset",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_asset+AddAsset+COMPONENT",
+     "clcommon__Release_Checksum__c": "2845a6a0b203a5dd72a0e0f64e4fd749efc76f4484d191a5eb732bf1ba2bf8c1"
 }

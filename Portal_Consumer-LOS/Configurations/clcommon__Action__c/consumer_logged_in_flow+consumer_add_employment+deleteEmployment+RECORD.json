@@ -5,28 +5,28 @@
      "Name": "deleteEmployment",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "updates": [
-                    {
-                         "value": "consumer_add_employment",
-                         "name": "$nav.reloads.add;"
-                    }
-               ]
+          "name": "deleteEmployment",
+          "property": {},
+          "appearance": {
+               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>  Delete",
+               "style": "secondary"
           },
           "remoteActionArguments": {
                "objectName": "employmentInformation",
                "recordId": "$this.attr(Id);",
                "applicationId": "$global.attr(applicationId);"
           },
-          "appearance": {
-               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>  Delete",
-               "style": "secondary"
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "consumer_add_employment"
+                    }
+               ]
           },
-          "property": {},
-          "name": "deleteEmployment"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "submit",
@@ -38,9 +38,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_employment_info",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_employment+deleteEmployment+RECORD",
-     "clcommon__Release_Checksum__c": "104973c9bd4ac5c2b157cbce61755ce549f1b06d2b878fc917b721a03eafd8da",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalGenericDeleteAPI",
      "clcommon__Unique_Action_Name__c": "consumer_add_employment+deleteEmployment",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_employment+deleteEmployment+RECORD",
+     "clcommon__Release_Checksum__c": "104973c9bd4ac5c2b157cbce61755ce549f1b06d2b878fc917b721a03eafd8da"
 }

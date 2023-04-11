@@ -5,37 +5,43 @@
      "Name": "applyingNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "next",
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    },
-                    {
-                         "value": "$this.attr(are_you_applying_for);",
-                         "field": "$global.attr(typeOfApplicant);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "validation": [
-               "consumer_applying_for"
-          ],
+          "name": "applyingNext",
+          "property": {},
           "appearance": {
                "style": "primary",
                "label": "Next",
                "position": "bottom-right"
           },
-          "property": {},
-          "name": "applyingNext"
+          "validation": [
+               "consumer_applying_for"
+          ],
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "next"
+                    },
+                    {
+                         "field": "$global.attr(typeOfApplicant);",
+                         "value": "$this.attr(are_you_applying_for);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "consumer_existing_purpose"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "normal",
@@ -47,9 +53,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_applying_for_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_applying_for+applyingNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "014875e067f75dcc7b75e2c39707a07882d213a6d5badfb05635922d41c460a9",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_applying_for+applyingNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_applying_for+applyingNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "e536a494faa13cd237c9b7865905a0fa234f12fe0d5658cbe72f3a1640dd0d0b"
 }

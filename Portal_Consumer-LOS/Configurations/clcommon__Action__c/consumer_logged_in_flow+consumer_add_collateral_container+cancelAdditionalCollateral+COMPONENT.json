@@ -5,24 +5,24 @@
      "Name": "cancelAdditionalCollateral",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {
-               "updates": [
-                    {
-                         "value": "consumer_add_collateral_container",
-                         "name": "$nav.overlay.remove;"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "cancelAdditionalCollateral",
+          "property": {},
           "appearance": {
                "position": "bottom-right",
                "label": "Cancel",
                "style": "secondary"
           },
-          "property": {},
-          "name": "cancelAdditionalCollateral"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "updates": [
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "consumer_add_collateral_container"
+                    }
+               ]
+          }
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -34,9 +34,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_add_collateral_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_collateral_container+cancelAdditionalCollateral+COMPONENT",
-     "clcommon__Release_Checksum__c": "29ed30c542f7e274bb98c0ab6e3046d6df969b1c549489e90288b61ae72b8a2c",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_add_collateral_container+cancelAdditionalCollateral",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_collateral_container+cancelAdditionalCollateral+COMPONENT",
+     "clcommon__Release_Checksum__c": "29ed30c542f7e274bb98c0ab6e3046d6df969b1c549489e90288b61ae72b8a2c"
 }

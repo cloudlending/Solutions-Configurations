@@ -5,39 +5,39 @@
      "Name": "nextButtonSkipStage",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "executions": [
-                    {
-                         "name": "$ext.scrollTop"
-                    }
-               ],
-               "updates": [
-                    {
-                         "value": [
-                              "consumer_product",
-                              "consumer_product_fetch"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "AboutYou",
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "nextButtonSkipStage",
+          "property": {},
           "appearance": {
                "render": "$global.attr(productName); == \"Credit Card\" and $global.attr(partyType); != $global.attr(borrowerParty);",
                "label": "Next",
                "style": "primary"
           },
-          "property": {},
-          "name": "nextButtonSkipStage"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "AboutYou"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "consumer_product",
+                              "consumer_product_fetch"
+                         ]
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "normal",
@@ -49,9 +49,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_product_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_product+nextButtonSkipStage+COMPONENT",
-     "clcommon__Release_Checksum__c": "3751c718ec84a34151cd54e55b619ec150f13daf73ec0de70d19445fa8869a51",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_product+nextButtonSkipStage",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_product+nextButtonSkipStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "3751c718ec84a34151cd54e55b619ec150f13daf73ec0de70d19445fa8869a51"
 }

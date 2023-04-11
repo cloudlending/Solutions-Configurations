@@ -5,11 +5,9 @@
      "Name": "consumer_logged_in_flow",
      "clcommon__Allow_Guest_User_Access__c": false,
      "clcommon__Description__c": null,
-     "clcommon__External_ID__c": "consumer_logged_in_flow",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Is_Template__c": false,
      "clcommon__Related_Configuration_Mapping__c": null,
-     "clcommon__Release_Checksum__c": "f612387f159b0ab4a99ad62bc8357f6620be530f7af971753afab583adce51ac",
      "clcommon__Skip_Record_Access_For_Internal_Users__c": false,
      "clcommon__Unique_Name__c": "consumer_logged_in_flow",
      "clcommon__data__c": {
@@ -32,6 +30,7 @@
                "accountName": "",
                "selectedProduct": "Personal Loan",
                "showCollateral": false,
+               "assetClassName": "Consumer Unsecured",
                "typeOfApplicant": "",
                "applicationId": "",
                "multiApplicant": false,
@@ -789,5 +788,7 @@
                }
           },
           "start": "ApplicationDashboard"
-     }
+     },
+     "clcommon__External_ID__c": "consumer_logged_in_flow",
+     "clcommon__Release_Checksum__c": "79b6d065f5d720124f70419c14f204acd4b0f299e9634272dca9337c5b0849e8"
 }

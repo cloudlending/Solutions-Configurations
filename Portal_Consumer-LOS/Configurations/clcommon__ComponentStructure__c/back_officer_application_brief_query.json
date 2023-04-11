@@ -1,0 +1,273 @@
+{
+     "attributes": {
+          "type": "clcommon__ComponentStructure__c"
+     },
+     "Name": "back_officer_application_brief_query",
+     "clcommon__Allow_Guest_User_Access__c": false,
+     "clcommon__Is_Editor_JSON__c": false,
+     "clcommon__Record_Access_Filter_Value__c": "1",
+     "clcommon__Record_Access_Filter__c": "1",
+     "clcommon__Unique_Name__c": "back_officer_application_brief_query",
+     "clcommon__data__c": {
+          "structureName": "back_officer_application_brief_query",
+          "tableName": "genesis__applications__c",
+          "whereClause": {
+               "freeForm": "Id = ':applicationId'"
+          },
+          "sections": [
+               {
+                    "id": "4f9d8b03-603d-4e8a-8ec7-e87f1030a72a",
+                    "fields": [
+                         {
+                              "id": "d0437936-c385-407c-bac8-9d95ce89a478",
+                              "fieldName": "Name",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Application ID",
+                                   "ariaLabel": "Application ID"
+                              }
+                         },
+                         {
+                              "id": "2e7bb32a-23dc-4b79-9d52-110bca253457",
+                              "fieldName": "genesis__Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Status",
+                                   "defaultValue": "NEW - ENTERED",
+                                   "selectOptions": [
+                                        {
+                                             "id": "APPROVED - APPROVED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - APPROVED",
+                                             "optionValue": "APPROVED - APPROVED"
+                                        },
+                                        {
+                                             "id": "APPROVED - CONVERTED TO CONTRACT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - CONVERTED TO CONTRACT",
+                                             "optionValue": "APPROVED - CONVERTED TO CONTRACT"
+                                        },
+                                        {
+                                             "id": "APPROVED - DOCUMENT CHECK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "APPROVED - DOCUMENT CHECK",
+                                             "optionValue": "APPROVED - DOCUMENT CHECK"
+                                        },
+                                        {
+                                             "id": "NEW - CREDIT PULLED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - CREDIT PULLED",
+                                             "optionValue": "NEW - CREDIT PULLED"
+                                        },
+                                        {
+                                             "id": "NEW - ENTERED",
+                                             "active": true,
+                                             "defaultOption": true,
+                                             "optionText": "NEW - ENTERED",
+                                             "optionValue": "NEW - ENTERED"
+                                        },
+                                        {
+                                             "id": "NEW - IN CREDIT CHECK",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - IN CREDIT CHECK",
+                                             "optionValue": "NEW - IN CREDIT CHECK"
+                                        },
+                                        {
+                                             "id": "NEW - IN REVIEW",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - IN REVIEW",
+                                             "optionValue": "NEW - IN REVIEW"
+                                        },
+                                        {
+                                             "id": "NEW - PRICING GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - PRICING GENERATED",
+                                             "optionValue": "NEW - PRICING GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW - SCORECARD GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - SCORECARD GENERATED",
+                                             "optionValue": "NEW - SCORECARD GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW - CHECKLIST GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - CHECKLIST GENERATED",
+                                             "optionValue": "NEW - CHECKLIST GENERATED"
+                                        },
+                                        {
+                                             "id": "NEW-SUBMITTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW-SUBMITTED",
+                                             "optionValue": "NEW-SUBMITTED"
+                                        },
+                                        {
+                                             "id": "NEW - VEHICLE VALUATION REQUIRED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "NEW - VEHICLE VALUATION REQUIRED",
+                                             "optionValue": "NEW - VEHICLE VALUATION REQUIRED"
+                                        },
+                                        {
+                                             "id": "REJECTED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "REJECTED",
+                                             "optionValue": "REJECTED"
+                                        },
+                                        {
+                                             "id": "PULL CREDIT",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "PULL CREDIT",
+                                             "optionValue": "PULL CREDIT"
+                                        },
+                                        {
+                                             "id": "CLOSING DOCUMENTS GENERATED",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "CLOSING DOCUMENTS GENERATED",
+                                             "optionValue": "CLOSING DOCUMENTS GENERATED"
+                                        },
+                                        {
+                                             "id": "WITHDRAWN",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "WITHDRAWN",
+                                             "optionValue": "WITHDRAWN"
+                                        }
+                                   ],
+                                   "ariaLabel": "Status"
+                              }
+                         },
+                         {
+                              "id": "5ead9da4-c9ca-4ec3-9b43-d104235de920",
+                              "fieldName": "ANZ_Settlement_Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Financial Settlement Status",
+                                   "selectOptions": [
+                                        {
+                                             "id": "Disbursed",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Disbursed",
+                                             "optionValue": "Disbursed"
+                                        },
+                                        {
+                                             "id": "Disbursing",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Disbursing",
+                                             "optionValue": "Disbursing"
+                                        },
+                                        {
+                                             "id": "In Preparation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "In Preparation",
+                                             "optionValue": "In Preparation"
+                                        },
+                                        {
+                                             "id": "Ready",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Ready",
+                                             "optionValue": "Ready"
+                                        },
+                                        {
+                                             "id": "Settled",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Settled",
+                                             "optionValue": "Settled"
+                                        },
+                                        {
+                                             "id": "Settling",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Settling",
+                                             "optionValue": "Settling"
+                                        },
+                                        {
+                                             "id": "Signed",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Signed",
+                                             "optionValue": "Signed"
+                                        }
+                                   ],
+                                   "ariaLabel": "Financial Settlement Status"
+                              }
+                         },
+                         {
+                              "id": "b3b0c7aa-3837-4e4e-908e-15fae89845f7",
+                              "fieldName": "Lodgement_Status__c",
+                              "fieldUi": {
+                                   "fieldType": "picklist",
+                                   "label": "Lodgement Status",
+                                   "selectOptions": [
+                                        {
+                                             "id": "In Preparation",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "In Preparation",
+                                             "optionValue": "In Preparation"
+                                        },
+                                        {
+                                             "id": "Prepared",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Prepared",
+                                             "optionValue": "Prepared"
+                                        },
+                                        {
+                                             "id": "Ready",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Ready",
+                                             "optionValue": "Ready"
+                                        },
+                                        {
+                                             "id": "Lodging",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Lodging",
+                                             "optionValue": "Lodging"
+                                        },
+                                        {
+                                             "id": "Lodged",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Lodged",
+                                             "optionValue": "Lodged"
+                                        },
+                                        {
+                                             "id": "Complete",
+                                             "active": true,
+                                             "defaultOption": false,
+                                             "optionText": "Complete",
+                                             "optionValue": "Complete"
+                                        }
+                                   ],
+                                   "ariaLabel": "Lodgement Status"
+                              }
+                         }
+                    ]
+               }
+          ]
+     },
+     "clcommon__External_ID__c": "back_officer_application_brief_query",
+     "clcommon__Release_Checksum__c": "df083952ec2ea9591604f28d30a002cdade1262a4c45dc132319f83299443cd2"
+}

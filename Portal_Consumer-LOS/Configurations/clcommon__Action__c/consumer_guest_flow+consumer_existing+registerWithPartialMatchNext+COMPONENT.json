@@ -5,46 +5,46 @@
      "Name": "registerWithPartialMatchNext",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "messages": {
-               "submitFailureText": "$serverMessage;"
+          "name": "registerWithPartialMatchNext",
+          "property": {},
+          "appearance": {
+               "render": false,
+               "label": "Next",
+               "style": "primary"
           },
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
+          "confirmation": {
+               "type": "prompt",
+               "content": "<p>The input details do not match with our records , Do you want to proceed with registering as a new customer ?</p>",
+               "showConfirmButtons": true,
+               "confirmText": "Yes",
+               "cancelText": "No",
+               "cancelOrCloseHandler": {}
+          },
+          "remoteActionArguments": {
+               "createNewUserForPartialMatch": true,
+               "contact": "$state(consumer_existing);",
+               "permissionSetName": "Consumer_Unsecured_Borrower"
+          },
           "successHandler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(statusCode);",
+                         "value": 0
+                    }
+               ],
                "actions": [
                     {
                          "name": "sendRegistrationEmail"
                     }
-               ],
-               "assignments": [
-                    {
-                         "value": 0,
-                         "field": "$global.attr(statusCode);"
-                    }
                ]
           },
-          "remoteActionArguments": {
-               "permissionSetName": "Consumer_Unsecured_Borrower",
-               "contact": "$state(consumer_existing);",
-               "createNewUserForPartialMatch": true
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "messages": {
+               "submitFailureText": "$serverMessage;"
           },
-          "confirmation": {
-               "cancelOrCloseHandler": {},
-               "cancelText": "No",
-               "confirmText": "Yes",
-               "showConfirmButtons": true,
-               "content": "<p>The input details do not match with our records , Do you want to proceed with registering as a new customer ?</p>",
-               "type": "prompt"
-          },
-          "appearance": {
-               "style": "primary",
-               "label": "Next",
-               "render": false
-          },
-          "property": {},
-          "name": "registerWithPartialMatchNext"
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "submit",
@@ -56,9 +56,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_existing_signup_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_guest_flow+consumer_existing+registerWithPartialMatchNext+COMPONENT",
-     "clcommon__Release_Checksum__c": "50c80d5a9304d537f3f594afec38c6a1aa68d65840c98753ae7eedeff58c6e92",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveUserData",
      "clcommon__Unique_Action_Name__c": "consumer_existing+registerWithPartialMatchNext",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_guest_flow+consumer_existing+registerWithPartialMatchNext+COMPONENT",
+     "clcommon__Release_Checksum__c": "50c80d5a9304d537f3f594afec38c6a1aa68d65840c98753ae7eedeff58c6e92"
 }

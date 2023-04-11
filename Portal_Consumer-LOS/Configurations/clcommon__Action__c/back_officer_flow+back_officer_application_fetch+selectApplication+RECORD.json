@@ -68,15 +68,15 @@
                ],
                "actions": [
                     {
-                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"manualReview\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"ReviewAndSubmit\"",
-                         "name": "goToReview"
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"manualReview\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"IndividualSubmit\"",
+                         "name": "goToBorrowerSubmittedFlow"
                     },
                     {
                          "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"AboutYou\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"MoreInfo\"",
                          "name": "goToPersonalInfo"
                     },
                     {
-                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"Employment\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"Collateral\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"PersonalIncome\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"AssetLiability\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); ==  \"OwnerInformation\"",
+                         "condition": "$this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"Employment\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"Collateral\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"PersonalIncome\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"AssetLiability\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); ==  \"OwnerInformation\" or $this.attr(genesis__Application__r.solcommon__Portal_Stage__c); == \"ReviewAndSubmit\"",
                          "name": "goToflow"
                     }
                ]
@@ -92,9 +92,9 @@
      },
      "clcommon__Component_Structure_Name__c": "back_officer_application_query",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "back_officer_flow+back_officer_application_fetch+selectApplication+RECORD",
-     "clcommon__Release_Checksum__c": "14a1cd16d84d00e41863c97ea43fbf6bccdbb93b9e965194e3ad81740f68afae",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "back_officer_application_fetch+selectApplication",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "back_officer_flow+back_officer_application_fetch+selectApplication+RECORD",
+     "clcommon__Release_Checksum__c": "3d65e08045bb8d70a255669669ae08a9746f3eb38fe6837833239e2d3f8d695d"
 }

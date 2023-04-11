@@ -5,20 +5,20 @@
      "Name": "Menu",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "hamburger_menu",
-          "messages": {},
-          "disclosureNames": [],
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "Menu",
+          "property": {},
           "appearance": {
                "position": "top-right",
                "label": "Welcome <b>$global.attr(userInfo).attr(firstName); <i class=\"fa fa-angle-down\" style=\"font-size:20px;\" aria-hidden=\"true\"></i>",
                "style": "primary"
           },
-          "property": {},
-          "name": "Menu"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "disclosureNames": [],
+          "messages": {},
+          "ariaLabel": "hamburger_menu"
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "context",
@@ -30,9 +30,9 @@
      },
      "clcommon__Component_Structure_Name__c": null,
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_header_new+Menu+COMPONENT",
-     "clcommon__Release_Checksum__c": "33d49a0de921c358b012006bf71fe836a84ed5105a7607366cc6484cf6ec78af",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_header_new+Menu",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_header_new+Menu+COMPONENT",
+     "clcommon__Release_Checksum__c": "33d49a0de921c358b012006bf71fe836a84ed5105a7607366cc6484cf6ec78af"
 }

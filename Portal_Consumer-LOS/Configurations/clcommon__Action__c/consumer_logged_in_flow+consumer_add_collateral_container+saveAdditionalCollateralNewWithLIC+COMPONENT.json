@@ -5,27 +5,13 @@
      "Name": "saveAdditionalCollateralNewWithLIC",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "updates": [
-                    {
-                         "value": "consumer_add_collateral_container",
-                         "name": "$nav.reloads.add;"
-                    },
-                    {
-                         "value": [
-                              "consumer_collateral_details",
-                              "consumer_review_collateral"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    },
-                    {
-                         "value": "consumer_add_collateral_container",
-                         "name": "$nav.overlay.remove;"
-                    }
-               ]
+          "name": "saveAdditionalCollateralNewWithLIC",
+          "property": {},
+          "appearance": {
+               "position": "bottom-right",
+               "render": "($this.attr(genesis__Collateral__r.Id); == \"\" or $this.attr(genesis__Collateral__r.Id); == undefined or $this.attr(genesis__Collateral__r.Id); == \"new_record_id\") and $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Life Insurance\" ",
+               "style": "primary",
+               "label": "Save"
           },
           "remoteActionArguments": {
                "collateral": {
@@ -49,14 +35,28 @@
                     "Id": "$global.attr(applicationId);"
                }
           },
-          "appearance": {
-               "position": "bottom-right",
-               "render": "($this.attr(genesis__Collateral__r.Id); == \"\" or $this.attr(genesis__Collateral__r.Id); == undefined or $this.attr(genesis__Collateral__r.Id); == \"new_record_id\") and $this.attr(clcommon__Collateral_Type__r).attr(Name); == \"Life Insurance\" ",
-               "style": "primary",
-               "label": "Save"
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "consumer_add_collateral_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "consumer_collateral_details",
+                              "consumer_review_collateral"
+                         ]
+                    },
+                    {
+                         "name": "$nav.overlay.remove;",
+                         "value": "consumer_add_collateral_container"
+                    }
+               ]
           },
-          "property": {},
-          "name": "saveAdditionalCollateralNewWithLIC"
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {}
      },
      "clcommon__Action_Order__c": 4,
      "clcommon__Action_Type__c": "submit",
@@ -68,9 +68,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_add_collateral_details",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_collateral_container+saveAdditionalCollateralNewWithLIC+COMPONENT",
-     "clcommon__Release_Checksum__c": "82773309a947a876bbd079c790192b5bd4589c60733428f550b5333b070effaf",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveCollateral",
      "clcommon__Unique_Action_Name__c": "consumer_add_collateral_container+saveAdditionalCollateralNewWithLIC",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_add_collateral_container+saveAdditionalCollateralNewWithLIC+COMPONENT",
+     "clcommon__Release_Checksum__c": "82773309a947a876bbd079c790192b5bd4589c60733428f550b5333b070effaf"
 }

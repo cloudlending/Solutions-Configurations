@@ -5,34 +5,34 @@
      "Name": "otherIncomeAdd",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "handler": {
-               "updates": [
-                    {
-                         "value": "consumer_add_income_container",
-                         "name": "$nav.overlay.add;"
-                    },
-                    {
-                         "value": "consumer_add_income",
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "",
-                         "field": "$global.attr(incomeId);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "otherIncomeAdd",
+          "property": {},
           "appearance": {
                "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Income</span>",
                "style": "primary",
                "position": "top-right"
           },
-          "property": {},
-          "name": "otherIncomeAdd"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(incomeId);",
+                         "value": ""
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "consumer_add_income_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "consumer_add_income"
+                    }
+               ]
+          }
      },
      "clcommon__Action_Order__c": 1,
      "clcommon__Action_Type__c": "normal",
@@ -44,9 +44,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_income_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_income+otherIncomeAdd+COMPONENT",
-     "clcommon__Release_Checksum__c": "cbe3442f4745ce3b79bfe5ada8a0d7728b4c4b20e1260e274decde20509f46a0",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_income+otherIncomeAdd",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_income+otherIncomeAdd+COMPONENT",
+     "clcommon__Release_Checksum__c": "cbe3442f4745ce3b79bfe5ada8a0d7728b4c4b20e1260e274decde20509f46a0"
 }

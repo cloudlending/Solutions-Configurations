@@ -4,11 +4,9 @@
      },
      "Name": "consumer_add_collateral_details",
      "clcommon__Allow_Guest_User_Access__c": false,
-     "clcommon__External_ID__c": "consumer_add_collateral_details",
      "clcommon__Is_Editor_JSON__c": false,
      "clcommon__Record_Access_Filter_Value__c": "1",
      "clcommon__Record_Access_Filter__c": "1",
-     "clcommon__Release_Checksum__c": "183d7cfe31987c02a9a7d604c373664e08e112b6416f3c96cf297d698d0886bd",
      "clcommon__Unique_Name__c": "consumer_add_collateral_details",
      "clcommon__data__c": {
           "structureName": "consumer_add_collateral_details",
@@ -75,6 +73,7 @@
                                    "whereClause": {
                                         "freeForm": "id != null"
                                    },
+                                   "orderBy": "Name ASC",
                                    "sections": [
                                         {
                                              "id": "de02277e-979e-4f50-bee8-e1679b4f4715",
@@ -649,8 +648,7 @@
                                         "options": {
                                              "numeral": true,
                                              "numeralThousandsGroupStyle": "thousand",
-                                             "numeralDecimalScale": 0,
-                                             "initValue": "2000"
+                                             "numeralDecimalScale": 0
                                         },
                                         "prefix": "$"
                                    },
@@ -1624,5 +1622,7 @@
                     ]
                }
           ]
-     }
+     },
+     "clcommon__External_ID__c": "consumer_add_collateral_details",
+     "clcommon__Release_Checksum__c": "f89d56466ac26f31baa50954387964e9a9945dcd4e4d52535ee66f5798aa852d"
 }

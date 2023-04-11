@@ -5,38 +5,38 @@
      "Name": "assignStepLabel",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "assignments": [
-                    {
-                         "value": "Loan Details",
-                         "field": "$global.attr(stepsLabel);"
-                    },
-                    {
-                         "value": "1",
-                         "field": "$global.attr(stepperCount);"
-                    },
-                    {
-                         "value": "GettingStated",
-                         "field": "$nav(consumer_mobile_stepper_panel).appearance(current);"
-                    },
-                    {
-                         "value": "Getting Stated",
-                         "field": "$global.attr(mainStepLabel);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
-          "automatic": true,
+          "name": "assignStepLabel",
+          "property": {},
           "appearance": {
                "position": "bottom-left",
                "style": "primary",
                "label": "Continue"
           },
-          "property": {},
-          "name": "assignStepLabel"
+          "automatic": true,
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(stepsLabel);",
+                         "value": "Loan Details"
+                    },
+                    {
+                         "field": "$global.attr(stepperCount);",
+                         "value": "1"
+                    },
+                    {
+                         "field": "$nav(consumer_mobile_stepper_panel).appearance(current);",
+                         "value": "GettingStated"
+                    },
+                    {
+                         "field": "$global.attr(mainStepLabel);",
+                         "value": "Getting Stated"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -48,9 +48,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_loan_existing_purpose",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose+assignStepLabel+COMPONENT",
-     "clcommon__Release_Checksum__c": "58507c1e04137e32bfb22dab2709047aefa3f53a7095dc790dcad6001ae3c302",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_existing_purpose+assignStepLabel",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose+assignStepLabel+COMPONENT",
+     "clcommon__Release_Checksum__c": "58507c1e04137e32bfb22dab2709047aefa3f53a7095dc790dcad6001ae3c302"
 }

@@ -5,36 +5,36 @@
      "Name": "saveAsset",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {},
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {
-               "updates": [
-                    {
-                         "value": [
-                              "consumer_asset",
-                              "consumer_review_assets"
-                         ],
-                         "name": "$nav.reloads.add;"
-                    }
-               ]
-          },
-          "validation": [
-               "consumer_asset"
-          ],
-          "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "genesis__Asset_Information__c": "$this;",
-               "contactId": "$global.attr(contactId);"
-          },
+          "name": "saveAsset",
+          "property": {},
           "appearance": {
                "position": "bottom-left",
                "label": "Save",
                "style": "primary"
           },
-          "property": {},
-          "name": "saveAsset"
+          "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
+               "genesis__Asset_Information__c": "$this;",
+               "contactId": "$global.attr(contactId);"
+          },
+          "validation": [
+               "consumer_asset"
+          ],
+          "successHandler": {
+               "updates": [
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": [
+                              "consumer_asset",
+                              "consumer_review_assets"
+                         ]
+                    }
+               ]
+          },
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {},
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 2,
      "clcommon__Action_Type__c": "submit",
@@ -46,9 +46,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_asset_information_query",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_asset+saveAsset+COMPONENT",
-     "clcommon__Release_Checksum__c": "7686c63754dc32afec775004020ab87497a183207861378d9d8b1e556cb0c2d6",
      "clcommon__Remote_Action_Class__c": "solcommon.PortalSaveAssetInformation",
      "clcommon__Unique_Action_Name__c": "consumer_asset+saveAsset",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_asset+saveAsset+COMPONENT",
+     "clcommon__Release_Checksum__c": "7686c63754dc32afec775004020ab87497a183207861378d9d8b1e556cb0c2d6"
 }

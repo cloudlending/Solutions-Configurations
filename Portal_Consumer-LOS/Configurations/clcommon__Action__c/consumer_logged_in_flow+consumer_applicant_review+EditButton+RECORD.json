@@ -5,34 +5,34 @@
      "Name": "EditButton",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "updates": [
-                    {
-                         "value": "consumer_edit_applicant_container",
-                         "name": "$nav.overlay.add;"
-                    },
-                    {
-                         "value": "consumer_edit_applicant",
-                         "name": "$nav.reloads.add;"
-                    }
-               ],
-               "assignments": [
-                    {
-                         "value": "$this.attr(Id);",
-                         "field": "$global.attr(applicantId);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "EditButton",
+          "property": {},
           "appearance": {
                "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Edit ",
                "style": "primary"
           },
-          "property": {},
-          "name": "EditButton"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$global.attr(applicantId);",
+                         "value": "$this.attr(Id);"
+                    }
+               ],
+               "updates": [
+                    {
+                         "name": "$nav.overlay.add;",
+                         "value": "consumer_edit_applicant_container"
+                    },
+                    {
+                         "name": "$nav.reloads.add;",
+                         "value": "consumer_edit_applicant"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 0,
      "clcommon__Action_Type__c": "normal",
@@ -44,9 +44,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_applicant_info",
      "clcommon__Display_Type__c": "RECORD",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_applicant_review+EditButton+RECORD",
-     "clcommon__Release_Checksum__c": "28dcc69bc32afd92f1dac624d92b8076a835fc841231623513ba390fa737e238",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_applicant_review+EditButton",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_applicant_review+EditButton+RECORD",
+     "clcommon__Release_Checksum__c": "28dcc69bc32afd92f1dac624d92b8076a835fc841231623513ba390fa737e238"
 }

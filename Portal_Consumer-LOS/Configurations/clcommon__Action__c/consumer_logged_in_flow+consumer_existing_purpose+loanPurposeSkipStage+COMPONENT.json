@@ -5,25 +5,25 @@
      "Name": "loanPurposeSkipStage",
      "clcommon__API_Configurations__c": {},
      "clcommon__Action_Definition__c": {
-          "ariaLabel": "Next",
-          "handler": {
-               "assignments": [
-                    {
-                         "value": "next",
-                         "field": "$nav(application_flow_steps).appearance(current);"
-                    }
-               ]
-          },
-          "pendingHandler": {},
-          "failureHandler": {},
-          "successHandler": {},
+          "name": "loanPurposeSkipStage",
+          "property": {},
           "appearance": {
                "render": "$global.attr(partyType); != $global.attr(borrowerParty);",
                "label": "Next",
                "style": "primary"
           },
-          "property": {},
-          "name": "loanPurposeSkipStage"
+          "successHandler": {},
+          "failureHandler": {},
+          "pendingHandler": {},
+          "handler": {
+               "assignments": [
+                    {
+                         "field": "$nav(application_flow_steps).appearance(current);",
+                         "value": "next"
+                    }
+               ]
+          },
+          "ariaLabel": "Next"
      },
      "clcommon__Action_Order__c": 5,
      "clcommon__Action_Type__c": "normal",
@@ -35,9 +35,9 @@
      },
      "clcommon__Component_Structure_Name__c": "consumer_loan_existing_purpose",
      "clcommon__Display_Type__c": "COMPONENT",
-     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose+loanPurposeSkipStage+COMPONENT",
-     "clcommon__Release_Checksum__c": "bc704f658b26049adfaf18ab53f45d2f88c5303b96ce1f5bc4a0d2e9f174f6ef",
      "clcommon__Remote_Action_Class__c": null,
      "clcommon__Unique_Action_Name__c": "consumer_existing_purpose+loanPurposeSkipStage",
-     "clcommon__Validation_Class__c": null
+     "clcommon__Validation_Class__c": null,
+     "clcommon__External_ID__c": "consumer_logged_in_flow+consumer_existing_purpose+loanPurposeSkipStage+COMPONENT",
+     "clcommon__Release_Checksum__c": "bc704f658b26049adfaf18ab53f45d2f88c5303b96ce1f5bc4a0d2e9f174f6ef"
 }
