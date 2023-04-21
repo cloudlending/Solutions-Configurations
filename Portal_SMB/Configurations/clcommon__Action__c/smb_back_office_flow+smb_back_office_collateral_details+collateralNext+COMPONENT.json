@@ -8,14 +8,14 @@
           "name": "collateralNext",
           "property": {},
           "appearance": {
-               "position": "bottom-right",
-               "label": "Next",
+               "render": "$global.attr(HMDALoan); == true and ($global.attr(HMDALegalClassName); == \"Individual\" or $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\") and $state(smb_back_office_collateral_list_validation).count();>=1",
                "style": "primary",
-               "render": "$global.attr(HMDALoan); == true and ($global.attr(HMDALegalClassName); == \"Individual\" or $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\") and $state(smb_back_office_collateral_list_validation).count();>=1"
+               "label": "Next",
+               "position": "bottom-right"
           },
           "remoteActionArguments": {
-               "portalStage": "ReviewAndSubmit",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "ReviewAndSubmit"
           },
           "validation": [
                "smb_back_office_business_details"

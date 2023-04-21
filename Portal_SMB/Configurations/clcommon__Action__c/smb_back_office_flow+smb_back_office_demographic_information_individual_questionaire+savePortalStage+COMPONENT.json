@@ -8,15 +8,15 @@
           "name": "savePortalStage",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
-               "disableWhenLoading": true,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "BusinessParties",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "BusinessParties"
           },
           "validation": [
                ""
@@ -26,6 +26,11 @@
                     {
                          "field": "$nav(smb_back_office_application_flow_steps).appearance(current);",
                          "value": "next"
+                    }
+               ],
+               "executions": [
+                    {
+                         "name": "$ext.scrollTop"
                     }
                ]
           },
@@ -48,5 +53,5 @@
      "clcommon__Unique_Action_Name__c": "smb_back_office_demographic_information_individual_questionaire+savePortalStage",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_demographic_information_individual_questionaire+savePortalStage+COMPONENT",
-     "clcommon__Release_Checksum__c": "87b457e6b21c61913917b96cfe5365dfbaa140d3e759dc833f2488ed9ca8eba9"
+     "clcommon__Release_Checksum__c": "e382ea0cc863966a14b7e1a5ade9a9ec146b168f0f4379f3e0306d8e70f18471"
 }

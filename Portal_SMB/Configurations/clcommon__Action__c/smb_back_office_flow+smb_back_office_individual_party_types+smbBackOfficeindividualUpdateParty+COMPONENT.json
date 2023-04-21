@@ -8,17 +8,17 @@
           "name": "smbBackOfficeindividualUpdateParty",
           "property": {},
           "appearance": {
-               "render": false,
+               "label": "Next",
                "style": "primary",
-               "label": "Next"
+               "render": false
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(tempApplicationId);",
-               "additionalPartyTypes": "$this.attr(clcommon__Party_Types__c);",
                "clcommon__Party__c": {
-                    "clcommon__Signer_Capacity__c": "$this.attr(clcommon__Signer_Capacity__c);",
-                    "id": "$global.attr(tempPartyId);"
-               }
+                    "id": "$global.attr(tempPartyId);",
+                    "clcommon__Signer_Capacity__c": "$this.attr(clcommon__Signer_Capacity__c);"
+               },
+               "additionalPartyTypes": "$this.attr(clcommon__Party_Types__c);",
+               "applicationId": "$global.attr(tempApplicationId);"
           },
           "successHandler": {},
           "failureHandler": {},

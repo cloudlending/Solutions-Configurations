@@ -8,17 +8,17 @@
           "name": "PartySubmitnext",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
                "clcommon__Party__c": {
-                    "solcommon__Submission_Status__c": "SUBMITTED",
-                    "id": "$global.attr(tempPartyId);"
-               },
-               "applicationId": "$global.attr(applicationId);"
+                    "id": "$global.attr(tempPartyId);",
+                    "solcommon__Submission_Status__c": "SUBMITTED"
+               }
           },
           "validation": [
                "smb_back_office_personal_information_consent_section"

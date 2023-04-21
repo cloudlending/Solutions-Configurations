@@ -12,7 +12,7 @@
           "structureName": "los_review_application_details",
           "tableName": "clcommon__party__c",
           "whereClause": {
-               "freeForm": "genesis__Application__c = ':appId' and clcommon__Type__r.Name = 'BORROWER'"
+               "freeForm": "genesis__Application__c = ':appId' and clcommon__Party_Types__c INCLUDES ('BORROWER')"
           },
           "orderBy": "createddate LIMIT 1",
           "sections": [
@@ -164,5 +164,5 @@
           ]
      },
      "clcommon__External_ID__c": "los_review_application_details",
-     "clcommon__Release_Checksum__c": "449b4835cb7618fbef8aa8ba287b7e058a30e3ef7205ad6391df66c652366469"
+     "clcommon__Release_Checksum__c": "fc11f1cc5daa7c31ed346fef1f5ca11b4c34ea297f135a8d3164f6fb5fcbd0cb"
 }

@@ -8,10 +8,10 @@
           "name": "collateralValidation",
           "property": {},
           "appearance": {
-               "render": "$global.attr(HMDALoan); == true and ($global.attr(HMDALegalClassName); == \"Individual\" or $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\") and $state(smb_back_office_collateral_list_validation).count();<1",
-               "style": "primary",
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "style": "primary",
+               "render": "$global.attr(HMDALoan); == true and ($global.attr(HMDALegalClassName); == \"Individual\" or $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\") and $state(smb_back_office_collateral_list_validation).count();<1"
           },
           "successHandler": {},
           "failureHandler": {},

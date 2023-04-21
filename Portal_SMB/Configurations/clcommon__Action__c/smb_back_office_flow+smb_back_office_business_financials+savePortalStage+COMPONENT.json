@@ -8,14 +8,14 @@
           "name": "savePortalStage",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "LoanDetails",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "LoanDetails"
           },
           "validation": [
                "smb_back_office_business_financials"

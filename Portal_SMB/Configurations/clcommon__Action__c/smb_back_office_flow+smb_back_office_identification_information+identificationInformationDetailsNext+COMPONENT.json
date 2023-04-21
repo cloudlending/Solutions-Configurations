@@ -8,20 +8,20 @@
           "name": "identificationInformationDetailsNext",
           "property": {},
           "appearance": {
-               "label": "Next",
+               "render": "($this.attr(Id); == \"\" or $this.attr(Id); == undefined or $this.attr(Id); == \"new_record_id\") and ($this.attr(genesis__Identification_Type__c); != undefined and $this.attr(genesis__Identification_Type__c); != \"\" and $this.attr(genesis__Identification_Type__c); != \"Select one\")",
                "style": "primary",
-               "render": "($this.attr(Id); == \"\" or $this.attr(Id); == undefined or $this.attr(Id); == \"new_record_id\") and ($this.attr(genesis__Identification_Type__c); != undefined and $this.attr(genesis__Identification_Type__c); != \"\" and $this.attr(genesis__Identification_Type__c); != \"Select one\")"
+               "label": "Next"
           },
           "remoteActionArguments": {
-               "genesis__Identification_Information__c": {
-                    "genesis__Identification_Type__c": "$this.attr(genesis__Identification_Type__c);",
-                    "genesis__Identification_Number__c": "$this.attr(genesis__Identification_Number__c);",
-                    "genesis__Date_of_Issuance__c": "$this.attr(genesis__Date_of_Issuance__c);",
-                    "genesis__Expiration_Date__c": "$this.attr(genesis__Expiration_Date__c);"
-               },
-               "accountId": "$global.attr(borrowerAccountIdExisting);",
+               "partyId": "$global.attr(businessPartyId);",
                "applicationId": "$global.attr(applicationId);",
-               "partyId": "$global.attr(businessPartyId);"
+               "accountId": "$global.attr(borrowerAccountIdExisting);",
+               "genesis__Identification_Information__c": {
+                    "genesis__Expiration_Date__c": "$this.attr(genesis__Expiration_Date__c);",
+                    "genesis__Date_of_Issuance__c": "$this.attr(genesis__Date_of_Issuance__c);",
+                    "genesis__Identification_Number__c": "$this.attr(genesis__Identification_Number__c);",
+                    "genesis__Identification_Type__c": "$this.attr(genesis__Identification_Type__c);"
+               }
           },
           "successHandler": {
                "assignments": [

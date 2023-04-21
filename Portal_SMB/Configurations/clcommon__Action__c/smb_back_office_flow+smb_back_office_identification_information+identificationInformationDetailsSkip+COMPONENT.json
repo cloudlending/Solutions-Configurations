@@ -8,9 +8,9 @@
           "name": "identificationInformationDetailsSkip",
           "property": {},
           "appearance": {
-               "label": "Skip",
+               "render": "($this.attr(Id); == \"\" or $this.attr(Id); == undefined or $this.attr(Id); == \"new_record_id\") and ($this.attr(genesis__Identification_Type__c); == undefined or $this.attr(genesis__Identification_Type__c); == \"\" or $this.attr(genesis__Identification_Type__c); == \"Select one\")",
                "style": "primary",
-               "render": "($this.attr(Id); == \"\" or $this.attr(Id); == undefined or $this.attr(Id); == \"new_record_id\") and ($this.attr(genesis__Identification_Type__c); == undefined or $this.attr(genesis__Identification_Type__c); == \"\" or $this.attr(genesis__Identification_Type__c); == \"Select one\")"
+               "label": "Skip"
           },
           "remoteActionArguments": {},
           "successHandler": {

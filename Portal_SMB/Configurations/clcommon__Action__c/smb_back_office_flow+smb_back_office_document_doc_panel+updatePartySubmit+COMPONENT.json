@@ -8,14 +8,14 @@
           "name": "updatePartySubmit",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": "$global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\"",
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "render": "$global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\"",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "BusinessParties"
+               "portalStage": "BusinessParties",
+               "applicationId": "$global.attr(applicationId);"
           },
           "validation": [
                "smb_back_office_document_doc_panel"

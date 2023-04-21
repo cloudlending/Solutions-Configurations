@@ -8,10 +8,10 @@
           "name": "collateralWithMultipleAppln",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": "$state(smb_back_office_find_collateral_relationship).count(); >0",
+               "position": "bottom-right",
                "label": "Save",
-               "position": "bottom-right"
+               "render": "$state(smb_back_office_find_collateral_relationship).count(); >0",
+               "style": "primary"
           },
           "confirmation": {
                "type": "prompt",

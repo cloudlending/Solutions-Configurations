@@ -8,14 +8,14 @@
           "name": "smbBackOfficeindividualUpdateParty",
           "property": {},
           "appearance": {
-               "render": false,
+               "label": "Next",
                "style": "primary",
-               "label": "Next"
+               "render": false
           },
           "remoteActionArguments": {
                "clcommon__Party__c": {
-                    "id": "$global.attr(partyId);",
-                    "clcommon__Party_Types__c": "$this.attr(clcommon__Party_Types__c);"
+                    "clcommon__Party_Types__c": "$this.attr(clcommon__Party_Types__c);",
+                    "id": "$global.attr(partyId);"
                }
           },
           "successHandler": {},

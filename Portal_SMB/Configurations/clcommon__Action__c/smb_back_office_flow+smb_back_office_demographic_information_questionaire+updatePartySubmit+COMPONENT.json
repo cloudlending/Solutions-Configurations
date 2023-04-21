@@ -8,17 +8,17 @@
           "name": "updatePartySubmit",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
                "clcommon__Party__c": {
-                    "solcommon__Submission_Status__c": "SUBMITTED",
-                    "id": "$global.attr(businessPartyId);"
-               },
-               "applicationId": "$global.attr(applicationId);"
+                    "id": "$global.attr(businessPartyId);",
+                    "solcommon__Submission_Status__c": "SUBMITTED"
+               }
           },
           "validation": [
                "smb_back_office_demographic_information_questionaire"

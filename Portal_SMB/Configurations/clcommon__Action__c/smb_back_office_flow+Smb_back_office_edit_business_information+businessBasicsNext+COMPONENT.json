@@ -8,24 +8,24 @@
           "name": "businessBasicsNext",
           "property": {},
           "appearance": {
-               "label": "Save",
-               "style": "primary"
+               "style": "primary",
+               "label": "Save"
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "id": "$global.attr(applicationId);"
+               "account": {
+                    "name": "$this.attr(clcommon__Account__r.Name);",
+                    "clcommon__Legal_Entity_Type__c": "$this.attr(clcommon__Account__r.clcommon__Legal_Entity_Type__c);",
+                    "id": "$this.attr(clcommon__Account__r.Id);"
                },
                "genesis__Business_Information__c": {
-                    "id": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.Id);",
-                    "genesis__Total_Liabilities__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c);",
-                    "genesis__Total_Sales__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c);",
+                    "solcommon__Total_Revenue__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c);",
                     "genesis__DBA_Name__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__DBA_Name__c);",
-                    "solcommon__Total_Revenue__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.solcommon__Total_Revenue__c);"
+                    "genesis__Total_Sales__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Sales__c);",
+                    "genesis__Total_Liabilities__c": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.genesis__Total_Liabilities__c);",
+                    "id": "$this.attr(clcommon__Account__r.genesis__Business_Information__r.Id);"
                },
-               "account": {
-                    "id": "$this.attr(clcommon__Account__r.Id);",
-                    "clcommon__Legal_Entity_Type__c": "$this.attr(clcommon__Account__r.clcommon__Legal_Entity_Type__c);",
-                    "name": "$this.attr(clcommon__Account__r.Name);"
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
                }
           },
           "validation": [

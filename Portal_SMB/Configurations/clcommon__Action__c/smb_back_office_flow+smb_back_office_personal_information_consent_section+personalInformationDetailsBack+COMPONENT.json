@@ -8,10 +8,10 @@
           "name": "personalInformationDetailsBack",
           "property": {},
           "appearance": {
-               "label": "Back",
-               "style": "secondary",
+               "render": "$global.attr(editParty);==false",
                "position": "bottom-left",
-               "render": "$global.attr(editParty);==false"
+               "style": "secondary",
+               "label": "Back"
           },
           "successHandler": {},
           "failureHandler": {},

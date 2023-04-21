@@ -8,29 +8,29 @@
           "name": "smbbackofficeindividualpersonalinformation",
           "property": {},
           "appearance": {
-               "render": false,
+               "label": "Next",
                "style": "primary",
-               "label": "Next"
+               "render": false
           },
           "remoteActionArguments": {
-               "genesis__Business_Information__c": {
-                    "genesis__Date_Business_Established__c": "$this.attr(genesis__Business_Information__r.genesis__Date_Business_Established__c);",
-                    "genesis__Tax_Identification_Number__c": "$this.attr(genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
-                    "genesis__DBA_Name__c": "$this.attr(genesis__Business_Information__r.genesis__DBA_Name__c);",
-                    "genesis__Business_Registration_State__c": "$this.attr(genesis__Business_Information__r.genesis__Business_Registration_State__c);",
-                    "genesis__Resolution_Type__c": "$this.attr(genesis__Business_Information__r.genesis__Resolution_Type__c);",
-                    "genesis__Completed_Resolution_Date__c": "$this.attr(genesis__Business_Information__r.genesis__Completed_Resolution_Date__c);",
-                    "genesis__Management_Type__c": "$this.attr(genesis__Business_Information__r.genesis__Management_Type__c);",
-                    "genesis__Beneficial_Owner_Exempt__c": "$this.attr(genesis__Business_Information__r.genesis__Beneficial_Owner_Exempt__c);",
-                    "genesis__Business_Description__c": "$this.attr(genesis__Business_Information__r.genesis__Business_Description__c);"
-               },
-               "account": {
-                    "name": "$state(smb_back_office_individual_personal_information).attr(FirstName);",
-                    "clcommon__Is_Sole_Proprietorship__c": true,
-                    "clcommon__Legal_Entity_Type__c": "$state(smb_back_office_business_Legal_entity_picklist_details).attr(clcommon__Legal_Entity_Type__c);"
-               },
                "contact": {
                     "id": "$global.attr(contactId);"
+               },
+               "account": {
+                    "clcommon__Legal_Entity_Type__c": "$state(smb_back_office_business_Legal_entity_picklist_details).attr(clcommon__Legal_Entity_Type__c);",
+                    "clcommon__Is_Sole_Proprietorship__c": true,
+                    "name": "$state(smb_back_office_individual_personal_information).attr(FirstName);"
+               },
+               "genesis__Business_Information__c": {
+                    "genesis__Business_Description__c": "$this.attr(genesis__Business_Information__r.genesis__Business_Description__c);",
+                    "genesis__Beneficial_Owner_Exempt__c": "$this.attr(genesis__Business_Information__r.genesis__Beneficial_Owner_Exempt__c);",
+                    "genesis__Management_Type__c": "$this.attr(genesis__Business_Information__r.genesis__Management_Type__c);",
+                    "genesis__Completed_Resolution_Date__c": "$this.attr(genesis__Business_Information__r.genesis__Completed_Resolution_Date__c);",
+                    "genesis__Resolution_Type__c": "$this.attr(genesis__Business_Information__r.genesis__Resolution_Type__c);",
+                    "genesis__Business_Registration_State__c": "$this.attr(genesis__Business_Information__r.genesis__Business_Registration_State__c);",
+                    "genesis__DBA_Name__c": "$this.attr(genesis__Business_Information__r.genesis__DBA_Name__c);",
+                    "genesis__Tax_Identification_Number__c": "$this.attr(genesis__Business_Information__r.genesis__Tax_Identification_Number__c);",
+                    "genesis__Date_Business_Established__c": "$this.attr(genesis__Business_Information__r.genesis__Date_Business_Established__c);"
                }
           },
           "validation": [
