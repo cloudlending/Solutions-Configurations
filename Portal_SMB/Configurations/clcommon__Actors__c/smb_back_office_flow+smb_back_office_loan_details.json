@@ -12,7 +12,18 @@
           "messages": {
                "showLoadingAnimation": true
           },
-          "generalHandlers": {},
+          "generalHandlers": {
+               "fieldChange": {
+                    "genesis__CL_Product__c": {
+                         "assignments": [
+                              {
+                                   "value": "",
+                                   "field": "$global.attr(loanPurpose);"
+                              }
+                         ]
+                    }
+               }
+          },
           "recordActions": [],
           "componentActions": [],
           "appearance": {
@@ -64,5 +75,5 @@
      },
      "clcommon__Actor_Name__c": "smb_back_office_loan_details",
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_loan_details",
-     "clcommon__Release_Checksum__c": "b279835518af2e07585ebe62b83d01b4f3c337b3a2b219183f38c34c0c3dcf16"
+     "clcommon__Release_Checksum__c": "095acc5f9997a7036bdb0f3dc4c5ba44de975ebb8ba8af5c6a8619cc3563957e"
 }

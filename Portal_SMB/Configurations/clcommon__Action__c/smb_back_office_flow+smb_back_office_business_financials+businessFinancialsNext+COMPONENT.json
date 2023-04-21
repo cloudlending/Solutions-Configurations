@@ -8,18 +8,18 @@
           "name": "businessFinancialsNext",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Next"
+               "label": "Next",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "accountId": "$global.attr(backofficerAccountId);",
-               "applicationId": "$global.attr(applicationId);",
                "genesis__Business_Information__c": {
-                    "id": "$global.attr(businessInfoId);",
-                    "genesis__Total_Liabilities__c": "$this.attr(genesis__Total_Liabilities__c);",
+                    "solcommon__Total_Revenue__c": "$this.attr(solcommon__Total_Revenue__c);",
                     "genesis__Total_Sales__c": "$this.attr(genesis__Total_Sales__c);",
-                    "solcommon__Total_Revenue__c": "$this.attr(solcommon__Total_Revenue__c);"
-               }
+                    "genesis__Total_Liabilities__c": "$this.attr(genesis__Total_Liabilities__c);",
+                    "id": "$global.attr(businessInfoId);"
+               },
+               "applicationId": "$global.attr(applicationId);",
+               "accountId": "$global.attr(backofficerAccountId);"
           },
           "validation": [
                "smb_back_office_business_financials"

@@ -8,14 +8,14 @@
           "name": "savePortalStageExisting",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "MoreBusinessDetails",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "MoreBusinessDetails"
           },
           "validation": [
                ""

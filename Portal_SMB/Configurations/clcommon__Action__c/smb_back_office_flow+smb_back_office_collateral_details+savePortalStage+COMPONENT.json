@@ -8,16 +8,16 @@
           "name": "savePortalStage",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": "($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\" and $global.attr(HMDALegalClassName); !=\"Individual\") or ($global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\" and $global.attr(HMDALegalClassName); !=\"Individual\") or ($global.attr(HMDALoan); == false and ($global.attr(HMDALegalClassName); ==\"Sole Proprietorship\" or $global.attr(HMDALegalClassName); ==\"Individual\"))",
-               "disableWhenLoading": true,
-               "enable": "$state(smb_back_office_collateral_details).count();>=1",
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "enable": "$state(smb_back_office_collateral_details).count();>=1",
+               "disableWhenLoading": true,
+               "render": "($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\" and $global.attr(HMDALegalClassName); !=\"Individual\") or ($global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\" and $global.attr(HMDALegalClassName); !=\"Individual\") or ($global.attr(HMDALoan); == false and ($global.attr(HMDALegalClassName); ==\"Sole Proprietorship\" or $global.attr(HMDALegalClassName); ==\"Individual\"))",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "ReviewAndSubmit",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "ReviewAndSubmit"
           },
           "validation": [
                "smb_back_office_business_details"

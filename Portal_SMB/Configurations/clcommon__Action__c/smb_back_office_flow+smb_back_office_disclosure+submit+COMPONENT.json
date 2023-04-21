@@ -8,9 +8,9 @@
           "name": "submit",
           "property": {},
           "appearance": {
-               "label": "Submit",
+               "style": "primary",
                "render": "$global.attr(businessEntityType);!=\"Individual\"",
-               "style": "primary"
+               "label": "Submit"
           },
           "confirmation": {
                "type": "prompt",
@@ -47,7 +47,11 @@
           },
           "failureHandler": {},
           "pendingHandler": {},
-          "handler": {}
+          "handler": {},
+          "disclosureNames": [
+               "smb_back_office_disclosure"
+          ],
+          "disclosureEnable": "$disclosure(back_office_final_disclosure);"
      },
      "clcommon__Action_Order__c": 3,
      "clcommon__Action_Type__c": "submit",
@@ -63,5 +67,5 @@
      "clcommon__Unique_Action_Name__c": "smb_back_office_disclosure+submit",
      "clcommon__Validation_Class__c": null,
      "clcommon__External_ID__c": "smb_back_office_flow+smb_back_office_disclosure+submit+COMPONENT",
-     "clcommon__Release_Checksum__c": "62aa551b362a8a0f8846a004987f6281e9e6be6e543a8dd2db20dfd4368a4bb4"
+     "clcommon__Release_Checksum__c": "0a7e5f65d19f4d39e4a22ba0058621937f0ef3d409772de954d060cdb29e09a9"
 }

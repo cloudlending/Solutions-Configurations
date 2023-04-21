@@ -8,21 +8,21 @@
           "name": "backOfficeSubmit",
           "property": {},
           "appearance": {
-               "label": "Submit",
+               "style": "primary",
                "render": false,
-               "style": "primary"
+               "label": "Submit"
           },
           "remoteActionArguments": {
-               "create_account_email": "$this.attr(create_account_email);",
-               "owner_user": "$this.attr(create_account_email_owner_user);",
-               "guarantor_user": "$this.attr(create_account_email_guarantor_user);",
-               "control_person_user": "$this.attr(create_account_email_control_person);",
-               "signer_user": "$this.attr(create_account_email_signer_user);",
-               "trustee_user": "$this.attr(create_account_email_trustee_user);",
-               "partner_user": "$this.attr(create_account_email_partner_user);",
                "genesis__Applications__c": {
                     "id": "$global.attr(applicationId);"
-               }
+               },
+               "partner_user": "$this.attr(create_account_email_partner_user);",
+               "trustee_user": "$this.attr(create_account_email_trustee_user);",
+               "signer_user": "$this.attr(create_account_email_signer_user);",
+               "control_person_user": "$this.attr(create_account_email_control_person);",
+               "guarantor_user": "$this.attr(create_account_email_guarantor_user);",
+               "owner_user": "$this.attr(create_account_email_owner_user);",
+               "create_account_email": "$this.attr(create_account_email);"
           },
           "successHandler": {
                "redirect": {

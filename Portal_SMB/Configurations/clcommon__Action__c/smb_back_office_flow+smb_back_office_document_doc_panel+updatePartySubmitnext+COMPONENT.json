@@ -8,17 +8,17 @@
           "name": "updatePartySubmitnext",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": "($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\") or ($global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\") or ($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\")",
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "render": "($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\") or ($global.attr(HMDALoan); == true and $global.attr(HMDALegalClassName); !=\"Sole Proprietorship\") or ($global.attr(HMDALoan); == false and $global.attr(HMDALegalClassName); ==\"Sole Proprietorship\")",
+               "style": "primary"
           },
           "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
                "clcommon__Party__c": {
-                    "solcommon__Submission_Status__c": "SUBMITTED",
-                    "id": "$global.attr(partyId);"
-               },
-               "applicationId": "$global.attr(applicationId);"
+                    "id": "$global.attr(partyId);",
+                    "solcommon__Submission_Status__c": "SUBMITTED"
+               }
           },
           "validation": [
                "smb_back_office_document_doc_panel"

@@ -8,21 +8,21 @@
           "name": "loanPurposeNext",
           "property": {},
           "appearance": {
-               "label": "Next",
+               "render": "$global.attr(loanPurpose);!=null and $global.attr(loanPurpose);!=\"\" and $global.attr(loanPurpose);!=undefined and $global.attr(loanPurpose);!=\"new_record_id\"",
                "style": "primary",
-               "render": "$global.attr(loanPurpose);!=null and $global.attr(loanPurpose);!=\"\" and $global.attr(loanPurpose);!=undefined and $global.attr(loanPurpose);!=\"new_record_id\""
+               "label": "Next"
           },
           "remoteActionArguments": {
-               "genesis__Business_Information__c": {
-                    "id": "$global.attr(businessInfoId);"
+               "genesis__Applications__c": {
+                    "genesis__Other_Purpose__c": "$this.attr(genesis__Application__r.genesis__Other_Purpose__c);",
+                    "genesis__CL_Purpose__c": "$global.attr(loanPurpose);",
+                    "id": "$global.attr(applicationId);"
                },
                "account": {
                     "id": "$global.attr(backofficerAccountId);"
                },
-               "genesis__Applications__c": {
-                    "id": "$global.attr(applicationId);",
-                    "genesis__CL_Purpose__c": "$global.attr(loanPurpose);",
-                    "genesis__Other_Purpose__c": "$this.attr(genesis__Application__r.genesis__Other_Purpose__c);"
+               "genesis__Business_Information__c": {
+                    "id": "$global.attr(businessInfoId);"
                }
           },
           "validation": [

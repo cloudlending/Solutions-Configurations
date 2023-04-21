@@ -8,23 +8,23 @@
           "name": "savePortalUpdateIncomeInfo",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "id": "$global.attr(applicationId);"
-               },
                "genesis__Income__c": [
                     {
-                         "Id": "$state(smb_back_office_individual_personal_income_information).attr(Id);",
-                         "genesis__Amount__c": "$state(smb_back_office_individual_personal_income_information).attr(genesis__Amount__c);",
+                         "genesis__Contact__c": "$global.attr(contactId);",
                          "name": "Annual Personal Income",
-                         "genesis__Contact__c": "$global.attr(contactId);"
+                         "genesis__Amount__c": "$state(smb_back_office_individual_personal_income_information).attr(genesis__Amount__c);",
+                         "Id": "$state(smb_back_office_individual_personal_income_information).attr(Id);"
                     }
-               ]
+               ],
+               "genesis__Applications__c": {
+                    "id": "$global.attr(applicationId);"
+               }
           },
           "successHandler": {
                "actions": [

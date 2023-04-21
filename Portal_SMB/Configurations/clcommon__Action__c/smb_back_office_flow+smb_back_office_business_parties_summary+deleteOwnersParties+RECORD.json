@@ -8,14 +8,14 @@
           "name": "deleteOwnersParties",
           "property": {},
           "appearance": {
-               "label": "delete",
+               "render": false,
                "style": "iconic",
-               "render": false
+               "label": "delete"
           },
           "remoteActionArguments": {
-               "objectName": "party",
+               "applicationId": "$global.attr(applicationId);",
                "recordId": "$this.attr(id);",
-               "applicationId": "$global.attr(applicationId);"
+               "objectName": "party"
           },
           "successHandler": {
                "updates": [

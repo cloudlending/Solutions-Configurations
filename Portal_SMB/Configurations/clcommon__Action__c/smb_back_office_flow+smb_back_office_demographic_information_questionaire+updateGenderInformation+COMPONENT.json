@@ -8,22 +8,22 @@
           "name": "updateGenderInformation",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
-               "disableWhenLoading": true,
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "disableWhenLoading": true,
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "contact": {
-                    "clcommon__Personal_Information__c": "$state(smb_back_office_demographic_information_gender).attr(clcommon__Personal_Information__r.Id);",
-                    "Id": "$global.attr(borrowerContactIdExisting);"
-               },
                "clcommon__Personal_Information__c": {
-                    "clcommon__Gender__c": "$state(smb_back_office_demographic_information_gender).attr(clcommon__Personal_Information__r.clcommon__Gender__c);",
-                    "Id": "$state(smb_back_office_demographic_information_gender).attr(clcommon__Personal_Information__r.Id);"
-               }
+                    "Id": "$state(smb_back_office_demographic_information_gender).attr(clcommon__Personal_Information__r.Id);",
+                    "clcommon__Gender__c": "$state(smb_back_office_demographic_information_gender).attr(clcommon__Personal_Information__r.clcommon__Gender__c);"
+               },
+               "contact": {
+                    "Id": "$global.attr(borrowerContactIdExisting);",
+                    "clcommon__Personal_Information__c": "$state(smb_back_office_demographic_information_gender).attr(clcommon__Personal_Information__r.Id);"
+               },
+               "applicationId": "$global.attr(applicationId);"
           },
           "validation": [
                "smb_back_office_demographic_information_questionaire"

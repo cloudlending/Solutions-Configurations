@@ -8,9 +8,9 @@
           "name": "editOwners",
           "property": {},
           "appearance": {
-               "label": "edit",
+               "render": "$this.attr(clcommon__Type__r.Name);!=\"BORROWER\"",
                "style": "iconic",
-               "render": "$this.attr(clcommon__Type__r.Name);!=\"BORROWER\""
+               "label": "edit"
           },
           "successHandler": {},
           "failureHandler": {},
