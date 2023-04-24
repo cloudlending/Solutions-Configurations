@@ -8,10 +8,10 @@
           "name": "personalInformationBackCreditAppnWithAppId",
           "property": {},
           "appearance": {
-               "style": "secondary",
-               "render": "$global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined and $global.attr(applicationId); !=null and $global.attr(productName); == \"Credit Card\"",
+               "position": "bottom-left",
                "label": "Back",
-               "position": "bottom-left"
+               "render": "$global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined and $global.attr(applicationId); !=null and $global.attr(productName); == \"Credit Card\"",
+               "style": "secondary"
           },
           "successHandler": {},
           "failureHandler": {},

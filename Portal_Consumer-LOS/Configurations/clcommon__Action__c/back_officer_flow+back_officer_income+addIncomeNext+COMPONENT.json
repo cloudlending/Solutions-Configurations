@@ -8,13 +8,13 @@
           "name": "addIncomeNext",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
+               "style": "primary",
                "label": "Next",
-               "style": "primary"
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "portalStage": "AssetLiability",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "AssetLiability"
           },
           "validation": [
                "back_officer_income"

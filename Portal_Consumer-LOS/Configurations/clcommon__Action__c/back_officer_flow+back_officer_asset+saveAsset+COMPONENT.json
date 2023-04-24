@@ -8,14 +8,14 @@
           "name": "saveAsset",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
+               "style": "primary",
                "label": "Save",
-               "style": "primary"
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
+               "contactId": "$global.attr(borrowerContactId);",
                "genesis__Asset_Information__c": "$this;",
-               "contactId": "$global.attr(borrowerContactId);"
+               "applicationId": "$global.attr(applicationId);"
           },
           "validation": [
                "back_officer_asset"

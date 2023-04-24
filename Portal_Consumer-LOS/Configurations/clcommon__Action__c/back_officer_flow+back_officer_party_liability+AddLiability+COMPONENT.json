@@ -8,9 +8,9 @@
           "name": "AddLiability",
           "property": {},
           "appearance": {
-               "position": "top-right",
+               "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Liability</span>",
                "style": "primary",
-               "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Liability</span>"
+               "position": "top-right"
           },
           "successHandler": {},
           "failureHandler": {},
@@ -21,8 +21,8 @@
                          "method": "insert",
                          "source": "$state(back_officer_party_liability);",
                          "options": {
-                              "defaultValue": true,
-                              "structureName": "back_officer_party_liability_query"
+                              "structureName": "back_officer_party_liability_query",
+                              "defaultValue": true
                          }
                     }
                ]

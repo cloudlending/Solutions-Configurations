@@ -8,21 +8,21 @@
           "name": "ApplicationNext",
           "property": {},
           "appearance": {
-               "render": false,
-               "position": "bottom-left",
+               "style": "primary",
                "label": "Next",
-               "style": "primary"
+               "position": "bottom-left",
+               "render": false
           },
           "remoteActionArguments": {
+               "contactId": "$global.attr(borrowerContactId);",
                "genesis__Applications__c": {
-                    "solcommon__Multiple_Applicant__c": "$global.attr(multiApplicant);",
-                    "solcommon__Portal_Stage__c": "MoreInfo",
-                    "genesis__Loan_Amount__c": "$global.attr(loanAmount);",
-                    "genesis__CL_Product__c": "$global.attr(loanProduct);",
+                    "genesis__Other_Purpose__c": "$global.attr(otherPurposeName);",
                     "genesis__CL_Purpose__c": "$global.attr(purpose);",
-                    "genesis__Other_Purpose__c": "$global.attr(otherPurposeName);"
-               },
-               "contactId": "$global.attr(borrowerContactId);"
+                    "genesis__CL_Product__c": "$global.attr(loanProduct);",
+                    "genesis__Loan_Amount__c": "$global.attr(loanAmount);",
+                    "solcommon__Portal_Stage__c": "MoreInfo",
+                    "solcommon__Multiple_Applicant__c": "$global.attr(multiApplicant);"
+               }
           },
           "successHandler": {
                "assignments": [

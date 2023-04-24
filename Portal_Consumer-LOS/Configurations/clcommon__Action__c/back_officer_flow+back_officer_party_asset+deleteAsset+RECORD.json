@@ -8,14 +8,14 @@
           "name": "deleteAsset",
           "property": {},
           "appearance": {
-               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>",
+               "render": "$this.attr(Id); != undefined",
                "style": "secondary",
-               "render": "$this.attr(Id); != undefined"
+               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>"
           },
           "remoteActionArguments": {
-               "objectName": "asset",
+               "applicationId": "$global.attr(applicationId);",
                "recordId": "$this.attr(Id);",
-               "applicationId": "$global.attr(applicationId);"
+               "objectName": "asset"
           },
           "successHandler": {
                "updates": [

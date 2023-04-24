@@ -8,29 +8,29 @@
           "name": "saveParty",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Save"
+               "label": "Save",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "contact": {
-                    "FirstName": "$this.attr(clcommon__Contact__r.FirstName);",
-                    "LastName": "$this.attr(clcommon__Contact__r.LastName);",
-                    "MailingStreet": "$this.attr(clcommon__Contact__r.MailingStreet);",
-                    "MailingCity": "$this.attr(clcommon__Contact__r.MailingCity);",
-                    "MailingState": "$this.attr(clcommon__Contact__r.MailingState);",
-                    "MailingPostalCode": "$this.attr(clcommon__Contact__r.MailingPostalCode);",
-                    "MobilePhone": "$this.attr(clcommon__Contact__r.MobilePhone);",
-                    "Email": "$this.attr(clcommon__Contact__r.Email);",
-                    "ints__Social_Security_Number__c": "$this.attr(clcommon__Contact__r.ints__Social_Security_Number__c);",
-                    "id": "$this.attr(clcommon__Contact__r.Id);"
-               },
-               "clcommon__Party__c": {
-                    "clcommon__Percent_Ownership__c": "$this.attr(clcommon__Percent_Ownership__c);",
-                    "solcommon__Is_Guarantor__c": "$this.attr(solcommon__Is_Guarantor__c);",
-                    "id": "$this.attr(Id);"
-               },
                "genesis__Applications__c": {
                     "id": "$global.attr(applicationId);"
+               },
+               "clcommon__Party__c": {
+                    "id": "$this.attr(Id);",
+                    "solcommon__Is_Guarantor__c": "$this.attr(solcommon__Is_Guarantor__c);",
+                    "clcommon__Percent_Ownership__c": "$this.attr(clcommon__Percent_Ownership__c);"
+               },
+               "contact": {
+                    "id": "$this.attr(clcommon__Contact__r.Id);",
+                    "ints__Social_Security_Number__c": "$this.attr(clcommon__Contact__r.ints__Social_Security_Number__c);",
+                    "Email": "$this.attr(clcommon__Contact__r.Email);",
+                    "MobilePhone": "$this.attr(clcommon__Contact__r.MobilePhone);",
+                    "MailingPostalCode": "$this.attr(clcommon__Contact__r.MailingPostalCode);",
+                    "MailingState": "$this.attr(clcommon__Contact__r.MailingState);",
+                    "MailingCity": "$this.attr(clcommon__Contact__r.MailingCity);",
+                    "MailingStreet": "$this.attr(clcommon__Contact__r.MailingStreet);",
+                    "LastName": "$this.attr(clcommon__Contact__r.LastName);",
+                    "FirstName": "$this.attr(clcommon__Contact__r.FirstName);"
                }
           },
           "successHandler": {

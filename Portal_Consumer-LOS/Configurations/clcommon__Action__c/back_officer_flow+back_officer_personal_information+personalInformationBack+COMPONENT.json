@@ -8,10 +8,10 @@
           "name": "personalInformationBack",
           "property": {},
           "appearance": {
-               "style": "secondary",
-               "render": "$global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined",
+               "position": "bottom-left",
                "label": "Back",
-               "position": "bottom-left"
+               "render": "$global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined",
+               "style": "secondary"
           },
           "successHandler": {},
           "failureHandler": {},

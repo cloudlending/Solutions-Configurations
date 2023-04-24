@@ -8,12 +8,12 @@
           "name": "deleteCollateral",
           "property": {},
           "appearance": {
-               "label": "<i class=\"fa fa-trash\" aria-hidden=\"true\"></i> Delete",
-               "style": "secondary"
+               "style": "secondary",
+               "label": "<i class=\"fa fa-trash\" aria-hidden=\"true\"></i> Delete"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "collateralId": "$this.attr(genesis__Collateral__r.Id);"
+               "collateralId": "$this.attr(genesis__Collateral__r.Id);",
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "updates": [

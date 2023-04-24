@@ -8,14 +8,14 @@
           "name": "saveLiability",
           "property": {},
           "appearance": {
-               "style": "primary",
+               "position": "bottom-left",
                "label": "Save",
-               "position": "bottom-left"
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "genesis__Liability__c": "$this;",
+               "contactId": "$global.attr(borrowerContactId);",
                "applicationId": "$global.attr(applicationId);",
-               "contactId": "$global.attr(borrowerContactId);"
+               "genesis__Liability__c": "$this;"
           },
           "validation": [
                "back_officer_liability"

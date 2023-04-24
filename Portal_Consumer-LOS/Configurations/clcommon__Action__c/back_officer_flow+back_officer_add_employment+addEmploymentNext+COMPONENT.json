@@ -8,14 +8,14 @@
           "name": "addEmploymentNext",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Next",
+               "style": "primary",
                "enable": "$this.count(); >0",
-               "style": "primary"
+               "label": "Next",
+               "position": "bottom-left"
           },
           "remoteActionArguments": {
-               "portalStage": "PersonalIncome",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "PersonalIncome"
           },
           "validation": [
                "back_officer_add_employment"

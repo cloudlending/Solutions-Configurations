@@ -8,14 +8,14 @@
           "name": "nextLiability",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Next",
+               "position": "bottom-right",
                "render": false,
-               "position": "bottom-right"
+               "label": "Next",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "$global.attr(portalStage);"
+               "portalStage": "$global.attr(portalStage);",
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "assignments": [

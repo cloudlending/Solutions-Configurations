@@ -8,31 +8,31 @@
           "name": "morePersonalNext",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Next",
-               "enable": "$this.attr(solcommon__Consent_To_Disclosure_And_Document__c); and $this.attr(genesis__Credit_Check_Consent__c);",
+               "position": "bottom-right",
                "disableWhenLoading": true,
-               "position": "bottom-right"
+               "enable": "$this.attr(solcommon__Consent_To_Disclosure_And_Document__c); and $this.attr(genesis__Credit_Check_Consent__c);",
+               "label": "Next",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "clcommon__Personal_Information__c": {
-                    "Id": "$this.attr(clcommon__Contact__r.clcommon__Personal_Information__c);",
-                    "clcommon__Not_A_Citizen__c": "$this.attr(clcommon__Contact__r.clcommon__Personal_Information__r.clcommon__Not_A_Citizen__c);"
-               },
+               "applicationId": "$global.attr(applicationId);",
                "contact": {
-                    "clcommon__Personal_Information__c": "$this.attr(clcommon__Contact__r.clcommon__Personal_Information__c);",
-                    "clcommon__Residential_Status__c": "$this.attr(clcommon__Contact__r.clcommon__Residential_Status__c);",
-                    "clcommon__Monthly_Residential_Payment_Amount__c": "$this.attr(clcommon__Contact__r.clcommon__Monthly_Residential_Payment_Amount__c);",
-                    "clcommon__Employee__c": "$this.attr(clcommon__Contact__r.clcommon__Employee__c);",
-                    "clcommon__Service_Member_Military_Status__c": "$this.attr(clcommon__Contact__r.clcommon__Service_Member_Military_Status__c);",
-                    "clcommon__Military_Relationship__c": "$this.attr(clcommon__Contact__r.clcommon__Military_Relationship__c);",
-                    "ints__Social_Security_Number__c": "$this.attr(clcommon__Contact__r.ints__Social_Security_Number__c);",
-                    "Birthdate": "$this.attr(clcommon__Contact__r.Birthdate);",
-                    "Id": "$global.attr(partyContactId);",
+                    "clcommon__Country_of_Citizenship__c": "$this.attr(clcommon__Contact__r.clcommon__Country_of_Citizenship__c);",
                     "clcommon__Marital_Status__c": "$this.attr(clcommon__Contact__r.clcommon__Marital_Status__c);",
-                    "clcommon__Country_of_Citizenship__c": "$this.attr(clcommon__Contact__r.clcommon__Country_of_Citizenship__c);"
+                    "Id": "$global.attr(partyContactId);",
+                    "Birthdate": "$this.attr(clcommon__Contact__r.Birthdate);",
+                    "ints__Social_Security_Number__c": "$this.attr(clcommon__Contact__r.ints__Social_Security_Number__c);",
+                    "clcommon__Military_Relationship__c": "$this.attr(clcommon__Contact__r.clcommon__Military_Relationship__c);",
+                    "clcommon__Service_Member_Military_Status__c": "$this.attr(clcommon__Contact__r.clcommon__Service_Member_Military_Status__c);",
+                    "clcommon__Employee__c": "$this.attr(clcommon__Contact__r.clcommon__Employee__c);",
+                    "clcommon__Monthly_Residential_Payment_Amount__c": "$this.attr(clcommon__Contact__r.clcommon__Monthly_Residential_Payment_Amount__c);",
+                    "clcommon__Residential_Status__c": "$this.attr(clcommon__Contact__r.clcommon__Residential_Status__c);",
+                    "clcommon__Personal_Information__c": "$this.attr(clcommon__Contact__r.clcommon__Personal_Information__c);"
                },
-               "applicationId": "$global.attr(applicationId);"
+               "clcommon__Personal_Information__c": {
+                    "clcommon__Not_A_Citizen__c": "$this.attr(clcommon__Contact__r.clcommon__Personal_Information__r.clcommon__Not_A_Citizen__c);",
+                    "Id": "$this.attr(clcommon__Contact__r.clcommon__Personal_Information__c);"
+               }
           },
           "validation": [
                "back_officer_party_more_information"

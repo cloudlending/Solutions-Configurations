@@ -8,9 +8,9 @@
           "name": "registerWithPartialMatchNext",
           "property": {},
           "appearance": {
-               "render": false,
+               "style": "primary",
                "label": "Next",
-               "style": "primary"
+               "render": false
           },
           "confirmation": {
                "type": "prompt",
@@ -21,9 +21,9 @@
                "cancelOrCloseHandler": {}
           },
           "remoteActionArguments": {
-               "createNewUserForPartialMatch": true,
+               "permissionSetName": "Consumer_Unsecured_Borrower",
                "contact": "$state(consumer_registration);",
-               "permissionSetName": "Consumer_Unsecured_Borrower"
+               "createNewUserForPartialMatch": true
           },
           "successHandler": {
                "assignments": [

@@ -8,16 +8,16 @@
           "name": "submitCoApplicantNext",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Submit",
+               "render": false,
                "position": "bottom-right",
-               "render": false
+               "label": "Submit",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "accountId": "$global.attr(partyAccountId);",
                "genesis__Applications__c": {
                     "id": "$global.attr(applicationId);"
-               }
+               },
+               "accountId": "$global.attr(partyAccountId);"
           },
           "successHandler": {
                "assignments": [

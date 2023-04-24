@@ -8,15 +8,15 @@
           "name": "registerNext",
           "property": {},
           "appearance": {
-               "render": "$global.attr(startStep);==undefined or $global.attr(startStep);==\"\"",
-               "label": "Register",
+               "position": "bottom-right",
                "style": "primary",
-               "position": "bottom-right"
+               "label": "Register",
+               "render": "$global.attr(startStep);==undefined or $global.attr(startStep);==\"\""
           },
           "remoteActionArguments": {
-               "isExistingUser": false,
+               "permissionSetName": "Consumer_Unsecured_Borrower",
                "contact": "$state(consumer_registration);",
-               "permissionSetName": "Consumer_Unsecured_Borrower"
+               "isExistingUser": false
           },
           "validation": [
                "consumer_registration"

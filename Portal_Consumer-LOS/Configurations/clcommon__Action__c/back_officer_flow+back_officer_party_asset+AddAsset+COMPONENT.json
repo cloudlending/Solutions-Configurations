@@ -8,9 +8,9 @@
           "name": "AddAsset",
           "property": {},
           "appearance": {
-               "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Asset</span>",
+               "position": "top-right",
                "style": "primary",
-               "position": "top-right"
+               "label": "<i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i> <span>Add Asset</span>"
           },
           "successHandler": {},
           "failureHandler": {},
@@ -21,8 +21,8 @@
                          "method": "insert",
                          "source": "$state(back_officer_party_asset);",
                          "options": {
-                              "structureName": "back_officer_party_asset_information_query",
-                              "defaultValue": true
+                              "defaultValue": true,
+                              "structureName": "back_officer_party_asset_information_query"
                          }
                     }
                ]

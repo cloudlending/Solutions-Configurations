@@ -8,9 +8,9 @@
           "name": "editParty",
           "property": {},
           "appearance": {
-               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Edit",
+               "render": "$this.attr(clcommon__Account__r.Id); != $global.attr(borrowerAccountId);",
                "style": "primary",
-               "render": "$this.attr(clcommon__Account__r.Id); != $global.attr(borrowerAccountId);"
+               "label": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Edit"
           },
           "successHandler": {},
           "failureHandler": {},
