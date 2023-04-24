@@ -8,14 +8,14 @@
           "name": "addPartyNext",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Next",
+               "position": "bottom-left",
                "enable": "$this.count(); > 1 and $state(back_officer_validate_party_submission).count();==0",
-               "position": "bottom-left"
+               "label": "Next",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "ReviewAndSubmit"
+               "portalStage": "ReviewAndSubmit",
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "assignments": [

@@ -8,9 +8,9 @@
           "name": "creditApplicationNext",
           "property": {},
           "appearance": {
-               "render": "$global.attr(productName); == \"Credit Card\" and ($global.attr(applicationId); != \"\" and $global.attr(applicationId); != null)",
+               "style": "primary",
                "label": "Next",
-               "style": "primary"
+               "render": "$global.attr(productName); == \"Credit Card\" and ($global.attr(applicationId); != \"\" and $global.attr(applicationId); != null)"
           },
           "remoteActionArguments": {},
           "validation": [

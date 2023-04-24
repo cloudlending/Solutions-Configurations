@@ -8,10 +8,10 @@
           "name": "searchAccountsNext",
           "property": {},
           "appearance": {
-               "enable": "$global.attr(borrowerAccountId); != \"\" and  $global.attr(borrowerAccountId); != \"undefined\"",
-               "style": "primary",
+               "position": "bottom-left",
                "label": "Next",
-               "position": "bottom-left"
+               "style": "primary",
+               "enable": "$global.attr(borrowerAccountId); != \"\" and  $global.attr(borrowerAccountId); != \"undefined\""
           },
           "validation": [
                "back_officer_search_account"

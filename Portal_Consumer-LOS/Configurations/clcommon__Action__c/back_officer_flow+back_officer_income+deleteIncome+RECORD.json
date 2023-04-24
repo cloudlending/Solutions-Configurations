@@ -8,13 +8,13 @@
           "name": "deleteIncome",
           "property": {},
           "appearance": {
-               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>  Delete",
-               "style": "secondary"
+               "style": "secondary",
+               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>  Delete"
           },
           "remoteActionArguments": {
-               "objectName": "income",
+               "applicationId": "$global.attr(applicationId);",
                "recordId": "$this.attr(Id);",
-               "applicationId": "$global.attr(applicationId);"
+               "objectName": "income"
           },
           "successHandler": {
                "updates": [

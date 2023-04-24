@@ -8,13 +8,13 @@
           "name": "nextButton",
           "property": {},
           "appearance": {
-               "style": "primary",
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "applicationId": "$global.attr(applicationId);",
-               "portalStage": "$global.attr(portalStage);"
+               "portalStage": "$global.attr(portalStage);",
+               "applicationId": "$global.attr(applicationId);"
           },
           "successHandler": {
                "assignments": [

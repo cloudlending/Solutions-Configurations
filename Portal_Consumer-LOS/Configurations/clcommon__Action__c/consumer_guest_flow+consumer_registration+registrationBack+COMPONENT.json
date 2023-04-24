@@ -8,10 +8,10 @@
           "name": "registrationBack",
           "property": {},
           "appearance": {
-               "style": "secondary",
-               "render": "$global.attr(startStep);==undefined or $global.attr(startStep);==\"\"",
+               "position": "bottom-right",
                "label": "Back",
-               "position": "bottom-right"
+               "render": "$global.attr(startStep);==undefined or $global.attr(startStep);==\"\"",
+               "style": "secondary"
           },
           "successHandler": {},
           "failureHandler": {},

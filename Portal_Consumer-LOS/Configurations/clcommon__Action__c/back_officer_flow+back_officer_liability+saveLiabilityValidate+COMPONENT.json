@@ -8,15 +8,15 @@
           "name": "saveLiabilityValidate",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "label": "Save",
+               "position": "bottom-left",
                "render": false,
-               "position": "bottom-left"
+               "label": "Save",
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "genesis__Liability__c": "$this;",
+               "contactId": "$global.attr(borrowerContactId);",
                "applicationId": "$global.attr(applicationId);",
-               "contactId": "$global.attr(borrowerContactId);"
+               "genesis__Liability__c": "$this;"
           },
           "successHandler": {
                "actions": [

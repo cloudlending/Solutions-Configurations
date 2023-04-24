@@ -8,9 +8,9 @@
           "name": "loanPurposeNext",
           "property": {},
           "appearance": {
-               "style": "primary",
+               "render": "($global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined) and $global.attr(purpose);!=null and $global.attr(purpose);!=\"\" and $global.attr(purpose);!=undefined",
                "label": "Next",
-               "render": "($global.attr(applicationId); == \"\" or $global.attr(applicationId); == undefined) and $global.attr(purpose);!=null and $global.attr(purpose);!=\"\" and $global.attr(purpose);!=undefined"
+               "style": "primary"
           },
           "validation": [
                "back_officer_purpose",

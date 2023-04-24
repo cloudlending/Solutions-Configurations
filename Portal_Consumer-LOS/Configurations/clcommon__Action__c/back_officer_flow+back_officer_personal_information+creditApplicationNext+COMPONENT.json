@@ -8,19 +8,19 @@
           "name": "creditApplicationNext",
           "property": {},
           "appearance": {
-               "render": false,
+               "style": "primary",
                "label": "Next",
-               "style": "primary"
+               "render": false
           },
           "remoteActionArguments": {
+               "contactId": "$global.attr(borrowerContactId);",
                "genesis__Applications__c": {
-                    "genesis__Loan_Amount__c": 0,
-                    "solcommon__Portal_Stage__c": "MoreInfo",
-                    "genesis__Requested_Loan_Amount__c": 1,
+                    "genesis__CL_Product__c": "$global.attr(loanProduct);",
                     "genesis__Credit_Limit__c": 1,
-                    "genesis__CL_Product__c": "$global.attr(loanProduct);"
-               },
-               "contactId": "$global.attr(borrowerContactId);"
+                    "genesis__Requested_Loan_Amount__c": 1,
+                    "solcommon__Portal_Stage__c": "MoreInfo",
+                    "genesis__Loan_Amount__c": 0
+               }
           },
           "successHandler": {
                "assignments": [

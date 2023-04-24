@@ -8,34 +8,34 @@
           "name": "saveAdditionalCollateralExistingWithLIC",
           "property": {},
           "appearance": {
-               "label": "Save",
-               "style": "primary",
+               "render": "($this.attr(genesis__Collateral__r.Id); != \"\" and $this.attr(genesis__Collateral__r.Id); != undefined and $this.attr(genesis__Collateral__r.Id); != \"new_record_id\") and $global.attr(isLifeInsurance); == \"Life Insurance\" ",
                "position": "bottom-right",
-               "render": "($this.attr(genesis__Collateral__r.Id); != \"\" and $this.attr(genesis__Collateral__r.Id); != undefined and $this.attr(genesis__Collateral__r.Id); != \"new_record_id\") and $global.attr(isLifeInsurance); == \"Life Insurance\" "
+               "style": "primary",
+               "label": "Save"
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": {
-                    "id": "$global.attr(applicationId);",
-                    "solcommon__Portal_Stage__c": "Collateral"
+               "collateral": {
+                    "clcommon__Is_Insured_Party_Not_Policy_Owner__c": "$this.attr(genesis__Collateral__r.clcommon__Is_Insured_Party_Not_Policy_Owner__c);",
+                    "clcommon__Collateral_Type__c": "$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__c);",
+                    "clcommon__Address__c": "$this.attr(genesis__Collateral__r.clcommon__Address__c);",
+                    "clcommon__City__c": "$this.attr(genesis__Collateral__r.clcommon__City__c);",
+                    "clcommon__State__c": "$this.attr(genesis__Collateral__r.clcommon__State__c);",
+                    "clcommon__Postal_Code__c": "$this.attr(genesis__Collateral__r.clcommon__Postal_Code__c);",
+                    "clcommon__Description__c": "$this.attr(genesis__Collateral__r.clcommon__Description__c);",
+                    "clcommon__Insured_Party_Of_Insurance_Policy__c": "$this.attr(genesis__Collateral__r.clcommon__Insured_Party_Of_Insurance_Policy__c);",
+                    "clcommon__Life_Insurance_Beneficiary__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Beneficiary__c);",
+                    "clcommon__Life_Insurance_Verification_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Verification_Date__c);",
+                    "clcommon__Life_Insurance_Effective_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Effective_Date__c);",
+                    "clcommon__Insurance_Amount__c": "$this.attr(genesis__Collateral__r.clcommon__Insurance_Amount__c);",
+                    "clcommon__Policy_Number__c": "$this.attr(genesis__Collateral__r.clcommon__Policy_Number__c);",
+                    "Id": "$this.attr(genesis__Collateral__r.Id);"
                },
                "clcommon__Insurance_Company__c": {
                     "id": "$this.attr(genesis__Collateral__r.clcommon__Insurance_Company__c);"
                },
-               "collateral": {
-                    "Id": "$this.attr(genesis__Collateral__r.Id);",
-                    "clcommon__Policy_Number__c": "$this.attr(genesis__Collateral__r.clcommon__Policy_Number__c);",
-                    "clcommon__Insurance_Amount__c": "$this.attr(genesis__Collateral__r.clcommon__Insurance_Amount__c);",
-                    "clcommon__Life_Insurance_Effective_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Effective_Date__c);",
-                    "clcommon__Life_Insurance_Verification_Date__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Verification_Date__c);",
-                    "clcommon__Life_Insurance_Beneficiary__c": "$this.attr(genesis__Collateral__r.clcommon__Life_Insurance_Beneficiary__c);",
-                    "clcommon__Insured_Party_Of_Insurance_Policy__c": "$this.attr(genesis__Collateral__r.clcommon__Insured_Party_Of_Insurance_Policy__c);",
-                    "clcommon__Description__c": "$this.attr(genesis__Collateral__r.clcommon__Description__c);",
-                    "clcommon__Postal_Code__c": "$this.attr(genesis__Collateral__r.clcommon__Postal_Code__c);",
-                    "clcommon__State__c": "$this.attr(genesis__Collateral__r.clcommon__State__c);",
-                    "clcommon__City__c": "$this.attr(genesis__Collateral__r.clcommon__City__c);",
-                    "clcommon__Address__c": "$this.attr(genesis__Collateral__r.clcommon__Address__c);",
-                    "clcommon__Collateral_Type__c": "$this.attr(genesis__Collateral__r.clcommon__Collateral_Type__c);",
-                    "clcommon__Is_Insured_Party_Not_Policy_Owner__c": "$this.attr(genesis__Collateral__r.clcommon__Is_Insured_Party_Not_Policy_Owner__c);"
+               "genesis__Applications__c": {
+                    "solcommon__Portal_Stage__c": "Collateral",
+                    "id": "$global.attr(applicationId);"
                }
           },
           "successHandler": {

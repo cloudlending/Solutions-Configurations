@@ -8,15 +8,15 @@
           "name": "submitApplicantNext",
           "property": {},
           "appearance": {
-               "style": "primary",
+               "position": "bottom-left",
                "label": "Submit",
-               "position": "bottom-left"
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "accountId": "$global.attr(borrowerAccountId);",
                "genesis__Applications__c": {
                     "id": "$global.attr(applicationId);"
-               }
+               },
+               "accountId": "$global.attr(borrowerAccountId);"
           },
           "successHandler": {
                "redirect": {

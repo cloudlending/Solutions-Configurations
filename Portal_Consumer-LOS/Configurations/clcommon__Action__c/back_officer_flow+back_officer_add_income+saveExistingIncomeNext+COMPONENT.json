@@ -8,21 +8,21 @@
           "name": "saveExistingIncomeNext",
           "property": {},
           "appearance": {
-               "position": "bottom-right",
-               "label": "Save",
+               "render": "$global.attr(incomeId); != \"\"",
                "style": "primary",
-               "render": "$global.attr(incomeId); != \"\""
+               "label": "Save",
+               "position": "bottom-right"
           },
           "remoteActionArguments": {
+               "genesis__Applications__c": "$global.attr(applicationId);",
                "genesis__Income__c": {
-                    "genesis__Frequency__c": "$this.attr(genesis__Frequency__c);",
-                    "genesis__Amount__c": "$this.attr(genesis__Amount__c);",
-                    "genesis__Contact__c": "$global.attr(contactId);",
-                    "genesis__Income_Type__c": "$this.attr(genesis__Income_Type__c);",
+                    "Id": "$global.attr(incomeId);",
                     "Name": "$this.attr(Name);",
-                    "Id": "$global.attr(incomeId);"
-               },
-               "genesis__Applications__c": "$global.attr(applicationId);"
+                    "genesis__Income_Type__c": "$this.attr(genesis__Income_Type__c);",
+                    "genesis__Contact__c": "$global.attr(contactId);",
+                    "genesis__Amount__c": "$this.attr(genesis__Amount__c);",
+                    "genesis__Frequency__c": "$this.attr(genesis__Frequency__c);"
+               }
           },
           "validation": [
                "back_officer_add_income"

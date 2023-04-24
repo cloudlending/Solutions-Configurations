@@ -9,20 +9,20 @@
           "property": {},
           "appearance": [
                {
-                    "condition": "$client; != \"phone\"",
                     "value": {
-                         "label": "Start New Application",
+                         "position": "top-right",
                          "style": "primary",
-                         "position": "top-right"
-                    }
+                         "label": "Start New Application"
+                    },
+                    "condition": "$client; != \"phone\""
                },
                {
-                    "condition": "$client; == \"phone\"",
                     "value": {
-                         "label": "Start New Application",
+                         "position": "bottom-left",
                          "style": "primary",
-                         "position": "bottom-left"
-                    }
+                         "label": "Start New Application"
+                    },
+                    "condition": "$client; == \"phone\""
                }
           ],
           "successHandler": {},

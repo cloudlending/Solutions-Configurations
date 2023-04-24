@@ -8,26 +8,26 @@
           "name": "personalInfoNext",
           "property": {},
           "appearance": {
-               "position": "bottom-right",
+               "style": "primary",
                "label": "Save",
-               "style": "primary"
+               "position": "bottom-right"
           },
           "remoteActionArguments": {
+               "applicationId": "$global.attr(applicationId);",
                "contact": {
-                    "firstName": "$this.attr(clcommon__Contact__r.FirstName);",
-                    "lastName": "$this.attr(clcommon__Contact__r.LastName);",
-                    "Birthdate": "$this.attr(clcommon__Contact__r.Birthdate);",
-                    "Phone": "$this.attr(clcommon__Contact__r.Phone);",
-                    "email": "$this.attr(clcommon__Contact__r.Email);",
-                    "clcommon__Current_Country__c": "USA",
-                    "ints__Social_Security_Number__c": "$this.attr(clcommon__Contact__r.ints__Social_Security_Number__c);",
-                    "clcommon__Current_Street__c": "$this.attr(clcommon__Contact__r.clcommon__Current_Street__c);",
-                    "clcommon__Current_City__c": "$this.attr(clcommon__Contact__r.clcommon__Current_City__c);",
-                    "clcommon__Current_State__c": "$this.attr(clcommon__Contact__r.clcommon__Current_State__c);",
+                    "id": "$this.attr(clcommon__Contact__r.Id);",
                     "clcommon__Current_Zip_Code__c": "$this.attr(clcommon__Contact__r.clcommon__Current_Zip_Code__c);",
-                    "id": "$this.attr(clcommon__Contact__r.Id);"
-               },
-               "applicationId": "$global.attr(applicationId);"
+                    "clcommon__Current_State__c": "$this.attr(clcommon__Contact__r.clcommon__Current_State__c);",
+                    "clcommon__Current_City__c": "$this.attr(clcommon__Contact__r.clcommon__Current_City__c);",
+                    "clcommon__Current_Street__c": "$this.attr(clcommon__Contact__r.clcommon__Current_Street__c);",
+                    "ints__Social_Security_Number__c": "$this.attr(clcommon__Contact__r.ints__Social_Security_Number__c);",
+                    "clcommon__Current_Country__c": "USA",
+                    "email": "$this.attr(clcommon__Contact__r.Email);",
+                    "Phone": "$this.attr(clcommon__Contact__r.Phone);",
+                    "Birthdate": "$this.attr(clcommon__Contact__r.Birthdate);",
+                    "lastName": "$this.attr(clcommon__Contact__r.LastName);",
+                    "firstName": "$this.attr(clcommon__Contact__r.FirstName);"
+               }
           },
           "validation": [
                "back_officer_edit_party_info"

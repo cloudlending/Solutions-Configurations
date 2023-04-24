@@ -8,10 +8,10 @@
           "name": "addEmploymentNext",
           "property": {},
           "appearance": {
-               "position": "bottom-left",
-               "label": "Next",
+               "enable": "$this.count(); >0",
                "style": "primary",
-               "enable": "$this.count(); >0"
+               "label": "Next",
+               "position": "bottom-left"
           },
           "successHandler": {},
           "failureHandler": {},

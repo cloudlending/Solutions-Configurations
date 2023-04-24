@@ -8,15 +8,15 @@
           "name": "savePortalStage",
           "property": {},
           "appearance": {
-               "style": "primary",
-               "render": false,
-               "label": "Next",
+               "position": "bottom-left",
                "disableWhenLoading": true,
-               "position": "bottom-left"
+               "label": "Next",
+               "render": false,
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "portalStage": "MoreInfo",
-               "applicationId": "$global.attr(applicationId);"
+               "applicationId": "$global.attr(applicationId);",
+               "portalStage": "MoreInfo"
           },
           "validation": [],
           "successHandler": {

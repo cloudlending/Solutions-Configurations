@@ -8,21 +8,21 @@
           "name": "loanPurposeExistingNext",
           "property": {},
           "appearance": {
-               "style": "primary",
+               "render": "$global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined",
                "label": "Next",
-               "render": "$global.attr(applicationId); != \"\" and $global.attr(applicationId); != undefined"
+               "style": "primary"
           },
           "remoteActionArguments": {
-               "contactId": "$global.attr(borrowerContactId);",
                "genesis__Applications__c": {
-                    "genesis__Other_Purpose__c": "$this.attr(genesis__Application__r.genesis__Other_Purpose__c);",
-                    "genesis__CL_Purpose__c": "$global.attr(purpose);",
-                    "genesis__CL_Product__c": "$global.attr(loanProduct);",
-                    "genesis__Loan_Amount__c": "$state(back_officer_loan_amount).attr(genesis__Loan_Amount__c);",
-                    "solcommon__Portal_Stage__c": "AboutYou",
+                    "Id": "$global.attr(applicationId);",
                     "solcommon__Multiple_Applicant__c": "$global.attr(multiApplicant);",
-                    "Id": "$global.attr(applicationId);"
-               }
+                    "solcommon__Portal_Stage__c": "AboutYou",
+                    "genesis__Loan_Amount__c": "$state(back_officer_loan_amount).attr(genesis__Loan_Amount__c);",
+                    "genesis__CL_Product__c": "$global.attr(loanProduct);",
+                    "genesis__CL_Purpose__c": "$global.attr(purpose);",
+                    "genesis__Other_Purpose__c": "$this.attr(genesis__Application__r.genesis__Other_Purpose__c);"
+               },
+               "contactId": "$global.attr(borrowerContactId);"
           },
           "validation": [
                "back_officer_purpose",

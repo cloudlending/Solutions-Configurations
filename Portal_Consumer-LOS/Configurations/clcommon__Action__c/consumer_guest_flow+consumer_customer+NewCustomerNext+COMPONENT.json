@@ -8,10 +8,10 @@
           "name": "NewCustomerNext",
           "property": {},
           "appearance": {
-               "render": "$this.attr(are_you_customer);==\"No\"",
-               "style": "primary",
+               "position": "bottom-right",
                "label": "Next",
-               "position": "bottom-right"
+               "style": "primary",
+               "render": "$this.attr(are_you_customer);==\"No\""
           },
           "validation": [
                "consumer_customer"

@@ -8,10 +8,10 @@
           "name": "saveExistingCurrentEmploymentNext",
           "property": {},
           "appearance": {
-               "render": "$global.attr(employmentId); != \"\" and not $this.attr(genesis__Is_Current_Employer__c);",
-               "style": "primary",
+               "position": "bottom-right",
                "label": "Save",
-               "position": "bottom-right"
+               "style": "primary",
+               "render": "$global.attr(employmentId); != \"\" and not $this.attr(genesis__Is_Current_Employer__c);"
           },
           "confirmation": {
                "type": "prompt",
@@ -23,21 +23,21 @@
                "cancelOrCloseHandler": {}
           },
           "remoteActionArguments": {
-               "genesis__Applications__c": "$global.attr(applicationId);",
                "genesis__Employment_Information__c": {
-                    "Id": "$global.attr(employmentId);",
-                    "genesis__Name_of_employer__c": "$this.attr(genesis__Name_of_employer__c);",
-                    "genesis__Position__c": "$this.attr(genesis__Position__c);",
-                    "genesis__Number_of_years_on_job__c": "$this.attr(genesis__Number_of_years_on_job__c);",
-                    "genesis__Average_Monthly_Income__c": "$this.attr(genesis__Average_Monthly_Income__c);",
-                    "genesis__Employer_Street__c": "$this.attr(genesis__Employer_Street__c);",
-                    "genesis__Employer_City__c": "$this.attr(genesis__Employer_City__c);",
-                    "genesis__Employer_State__c": "$this.attr(genesis__Employer_State__c);",
-                    "genesis__Employer_Zipcode__c": "$this.attr(genesis__Employer_Zipcode__c);",
-                    "genesis__Self_Employed__c": "$this.attr(genesis__Self_Employed__c);",
+                    "genesis__Is_Current_Employer__c": "$this.attr(genesis__Is_Current_Employer__c);",
                     "genesis__Contact__c": "$global.attr(contactId);",
-                    "genesis__Is_Current_Employer__c": "$this.attr(genesis__Is_Current_Employer__c);"
-               }
+                    "genesis__Self_Employed__c": "$this.attr(genesis__Self_Employed__c);",
+                    "genesis__Employer_Zipcode__c": "$this.attr(genesis__Employer_Zipcode__c);",
+                    "genesis__Employer_State__c": "$this.attr(genesis__Employer_State__c);",
+                    "genesis__Employer_City__c": "$this.attr(genesis__Employer_City__c);",
+                    "genesis__Employer_Street__c": "$this.attr(genesis__Employer_Street__c);",
+                    "genesis__Average_Monthly_Income__c": "$this.attr(genesis__Average_Monthly_Income__c);",
+                    "genesis__Number_of_years_on_job__c": "$this.attr(genesis__Number_of_years_on_job__c);",
+                    "genesis__Position__c": "$this.attr(genesis__Position__c);",
+                    "genesis__Name_of_employer__c": "$this.attr(genesis__Name_of_employer__c);",
+                    "Id": "$global.attr(employmentId);"
+               },
+               "genesis__Applications__c": "$global.attr(applicationId);"
           },
           "validation": [
                "back_officer_save_employer"

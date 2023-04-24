@@ -8,14 +8,14 @@
           "name": "registerExistingNext",
           "property": {},
           "appearance": {
-               "label": "Next",
+               "position": "bottom-right",
                "style": "primary",
-               "position": "bottom-right"
+               "label": "Next"
           },
           "remoteActionArguments": {
-               "isExistingUser": true,
+               "permissionSetName": "Consumer_Unsecured_Borrower",
                "contact": "$state(consumer_existing);",
-               "permissionSetName": "Consumer_Unsecured_Borrower"
+               "isExistingUser": true
           },
           "validation": [
                "consumer_existing"

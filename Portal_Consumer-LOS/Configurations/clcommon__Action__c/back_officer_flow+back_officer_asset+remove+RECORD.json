@@ -8,9 +8,9 @@
           "name": "remove",
           "property": {},
           "appearance": {
-               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>",
+               "render": "$this.attr(Id); == undefined",
                "style": "secondary",
-               "render": "$this.attr(Id); == undefined"
+               "label": "<i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>"
           },
           "remoteActionArguments": {},
           "uploadActionArguments": {},
