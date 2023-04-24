@@ -19,7 +19,7 @@
                     "id": "bef586d6-64a8-4964-a64c-0661161c8c51",
                     "fields": [
                          {
-                              "id": "1fc6957f-7998-4048-b166-e5835fa80b8a",
+                              "id": "54306fcb-7f39-482d-a966-5093fd01d98e",
                               "fieldName": "genesis__Liability_Type__c",
                               "fieldUi": {
                                    "fieldType": "picklist",
@@ -273,7 +273,7 @@
                               }
                          },
                          {
-                              "id": "ab8d7051-a1fa-43c9-aac4-556a58b786cc",
+                              "id": "09af6914-abba-432e-a579-00c486f935a7",
                               "fieldName": "Id",
                               "fieldUi": {
                                    "fieldType": "string",
@@ -282,7 +282,7 @@
                               }
                          },
                          {
-                              "id": "555f1108-4271-439f-8c60-42d272f0f87c",
+                              "id": "64ddd7bc-0bab-42c4-9ff6-91f8e93ee4cc",
                               "fieldName": "genesis__Amount_Owing__c",
                               "fieldUi": {
                                    "fieldType": "currency",
@@ -303,7 +303,7 @@
                               }
                          },
                          {
-                              "id": "8f4d65cf-1a73-443a-a383-e1c63f9fa2c7",
+                              "id": "a7d5efe9-b27a-458e-8708-01f19b7e7f8c",
                               "fieldName": "genesis__Contact__r.Id",
                               "fieldUi": {
                                    "fieldType": "string",
@@ -312,7 +312,7 @@
                               }
                          },
                          {
-                              "id": "abd34852-b85f-4c73-8f05-5fa8c48a36ed",
+                              "id": "f9ba9e65-665d-4286-b98d-a67582e13010",
                               "fieldName": "Name",
                               "fieldUi": {
                                    "fieldType": "string",
@@ -323,11 +323,59 @@
                                    },
                                    "ariaLabel": "Liability Description"
                               }
+                         },
+                         {
+                              "id": "c25e918b-9c2f-4f12-a42d-972067d6aa42",
+                              "fieldName": "genesis__Account_Number__c",
+                              "fieldUi": {
+                                   "fieldType": "string",
+                                   "label": "Account Number",
+                                   "ariaLabel": "Account Number"
+                              }
+                         },
+                         {
+                              "id": "f4353447-2549-4ab7-b0aa-40020d16353c",
+                              "relationType": "reference",
+                              "fieldName": "genesis__Application__c",
+                              "relationName": "genesis__Application__r",
+                              "relationJson": {
+                                   "tableName": "genesis__Applications__c",
+                                   "whereClause": {
+                                        "freeForm": "id!=null"
+                                   },
+                                   "sections": [
+                                        {
+                                             "id": "3d044af0-9816-4aa2-87d2-5d1231c21f69",
+                                             "fields": [
+                                                  {
+                                                       "id": "6c2b6e7a-2156-4058-8a92-b6237efd4077",
+                                                       "fieldName": "Id",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Record ID"
+                                                       }
+                                                  },
+                                                  {
+                                                       "id": "32a20b6d-58ec-4d0b-b52b-9ca4b70424a3",
+                                                       "fieldName": "Name",
+                                                       "fieldUi": {
+                                                            "fieldType": "string",
+                                                            "label": "Application ID"
+                                                       }
+                                                  }
+                                             ]
+                                        }
+                                   ]
+                              },
+                              "fieldUi": {
+                                   "fieldType": "reference",
+                                   "label": "Application"
+                              }
                          }
                     ]
                }
           ]
      },
      "clcommon__External_ID__c": "consumer_liability_query",
-     "clcommon__Release_Checksum__c": "0280df94bf1de5d194b9a1982b8601f3c1dcccd947b72f3627b673a09681eeb0"
+     "clcommon__Release_Checksum__c": "0c15807b122486cb0ebdf7fc45831a0317a07081f18c20f6176637a91f8dc154"
 }
