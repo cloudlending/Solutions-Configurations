@@ -323,59 +323,11 @@
                                    },
                                    "ariaLabel": "Liability Description"
                               }
-                         },
-                         {
-                              "id": "c25e918b-9c2f-4f12-a42d-972067d6aa42",
-                              "fieldName": "genesis__Account_Number__c",
-                              "fieldUi": {
-                                   "fieldType": "string",
-                                   "label": "Account Number",
-                                   "ariaLabel": "Account Number"
-                              }
-                         },
-                         {
-                              "id": "f4353447-2549-4ab7-b0aa-40020d16353c",
-                              "relationType": "reference",
-                              "fieldName": "genesis__Application__c",
-                              "relationName": "genesis__Application__r",
-                              "relationJson": {
-                                   "tableName": "genesis__Applications__c",
-                                   "whereClause": {
-                                        "freeForm": "id!=null"
-                                   },
-                                   "sections": [
-                                        {
-                                             "id": "3d044af0-9816-4aa2-87d2-5d1231c21f69",
-                                             "fields": [
-                                                  {
-                                                       "id": "6c2b6e7a-2156-4058-8a92-b6237efd4077",
-                                                       "fieldName": "Id",
-                                                       "fieldUi": {
-                                                            "fieldType": "string",
-                                                            "label": "Record ID"
-                                                       }
-                                                  },
-                                                  {
-                                                       "id": "32a20b6d-58ec-4d0b-b52b-9ca4b70424a3",
-                                                       "fieldName": "Name",
-                                                       "fieldUi": {
-                                                            "fieldType": "string",
-                                                            "label": "Application ID"
-                                                       }
-                                                  }
-                                             ]
-                                        }
-                                   ]
-                              },
-                              "fieldUi": {
-                                   "fieldType": "reference",
-                                   "label": "Application"
-                              }
                          }
                     ]
                }
           ]
      },
      "clcommon__External_ID__c": "consumer_liability_query",
-     "clcommon__Release_Checksum__c": "0c15807b122486cb0ebdf7fc45831a0317a07081f18c20f6176637a91f8dc154"
+     "clcommon__Release_Checksum__c": "3545aa90b2dade617468017945dab4dd6ad0159461c96148b0633c683cb0d07e"
 }
