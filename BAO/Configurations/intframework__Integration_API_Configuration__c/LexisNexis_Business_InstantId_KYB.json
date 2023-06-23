@@ -42,184 +42,214 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 1,
-     "intframework__Release_Checksum__c": "65d668edcaf27aa8673a0d4d958d8bfcc6a7bdac84a5dab82b40bb6e489e1265",
+     "intframework__Release_Checksum__c": "65d668edcaf27aa8673a0d4d958d8bfcc6a7bdac84a5dab82b40bb6e489e1266",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
-               "name": "LexisNexis Business InstantId",
-               "dynamicDataParameters": [],
-               "filters": [
-                    {
-                         "objectAPI": "Account",
-                         "objectAlias": "AccountDetails",
-                         "fields": [
-                              {
-                                   "externalField": "CompanyName",
-                                   "fieldAPI": "Name",
-                                   "isUrlParameter": "false"
-                              },
-                              {
-                                   "externalField": "Phone",
-                                   "fieldAPI": "Phone",
-                                   "isUrlParameter": "false"
-                              },
-                              {
-                                   "externalField": "QueryId",
-                                   "fieldAPI": "Id",
-                                   "isUrlParameter": "false"
-                              },
-                              {
-                                   "externalField": "TaxIdentificationNumber",
-                                   "fieldAPI": "genesis__Business_Information__r.genesis__Tax_ID__c",
-                                   "isUrlParameter": "false"
-                              }
-                         ],
-                         "whereClause": "Id = :accountId"
-                    },
-                    {
-                         "objectAPI": "Account",
-                         "objectAlias": "AddressDetails",
-                         "fields": [
-                              {
-                                   "externalField": "AddressLine2",
-                                   "fieldAPI": "oao__Billing_Address_Second_Line__c",
-                                   "isUrlParameter": "false"
-                              },
-                              {
-                                   "externalField": "City",
-                                   "fieldAPI": "BillingCity",
-                                   "isUrlParameter": "false"
-                              },
-                              {
-                                   "externalField": "Country",
-                                   "fieldAPI": "BillingCountry",
-                                   "isUrlParameter": "false"
-                              },
-                              {
-                                   "externalField": "StateProvince",
-                                   "fieldAPI": "BillingState",
-                                   "isUrlParameter": "false"
-                              },
-                              {
-                                   "externalField": "StreetAddress",
-                                   "fieldAPI": "BillingStreet",
-                                   "isUrlParameter": "false"
-                              },
-                              {
-                                   "externalField": "ZipCode",
-                                   "fieldAPI": "BillingPostalCode",
-                                   "isUrlParameter": "false"
-                              }
-                         ],
-                         "whereClause": "Id = :accountId"
-                    }
-               ],
-               "staticParameters": [
-                    {
-                         "externalField": "OutputType",
-                         "value": "B"
-                    },
-                    {
-                         "externalField": "GlobalWatchlistThreshold",
-                         "value": 0.84
-                    },
-                    {
-                         "externalField": "DOBRadius",
-                         "value": 0
-                    },
-                    {
-                         "externalField": "ReferenceCode",
-                         "value": "Corporation name"
-                    },
-                    {
-                         "externalField": "BillingCode",
-                         "value": "Account Manager name"
-                    },
-                    {
-                         "externalField": "GLBPurpose",
-                         "value": 0
-                    },
-                    {
-                         "externalField": "DLPurpose",
-                         "value": 0
-                    },
-                    {
-                         "externalField": "AccountNumber",
-                         "value": "123456789"
-                    },
-                    {
-                         "externalField": "Company Name",
-                         "value": "Ame Corporation"
-                    },
-                    {
-                         "externalField": "Street Address1",
-                         "value": "123 NW Main Street"
-                    },
-                    {
+               "thirdPartySystem": {
+                 "name": "LexisNexis Business InstantId",
+                 "useRequestGenerator": true,
+                 "delimiter": "$$",
+                 "dynamicDataParameters": [
+                   {
+                     "externalField": "useLNForAuthReps",
+                     "ignoreInRequest": true
+                   }
+                 ],
+                 "XMLAttributes": [
+                   {
+                     "XMLNode": "soap:Envelope",
+                     "parameters": [
+                       {
+                         "name": "xmlns:soap",
+                         "value": "http://schemas.xmlsoap.org/soap/envelope/"
+                       },
+                       {
+                         "name": "xmlns",
+                         "value": "http://webservices.seisint.com/WsIdentity"
+                       },
+                       {
+                         "name": "xmlns:SOAP-ENC",
+                         "value": "http://schemas.xmlsoap.org/soap/encoding/"
+                       }
+                     ]
+                   }
+                 ],
+                 "filters": [
+                   {
+                     "objectAPI": "Account",
+                     "objectAlias": "soap:Envelope$$soap:Body$$BusinessInstantID20Request",
+                     "fields": [
+                       {
+                         "externalField": "SearchBy$$Company$$CompanyName",
+                         "fieldAPI": "Name",
+                         "isUrlParameter": "false",
+                         "isMandatory": true
+                       },
+                       {
+                         "externalField": "SearchBy$$Company$$Phone",
+                         "fieldAPI": "Phone",
+                         "isUrlParameter": "false"
+                       },
+                       {
+                         "externalField": "User$$QueryId",
+                         "fieldAPI": "Id",
+                         "isUrlParameter": "false"
+                       },
+                       {
+                         "externalField": "SearchBy$$Company$$FEIN",
+                         "fieldAPI": "genesis__Business_Information__r.genesis__Tax_ID__c",
+                         "isUrlParameter": "false"
+                       }
+                     ],
+                     "whereClause": "Id = :accountId"
+                   },
+                   {
+                     "objectAPI": "Account",
+                     "objectAlias": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$SearchBy$$Company$$Address",
+                     "orderBy": "CreatedDate Desc",
+                     "fields": [
+                       {
+                         "externalField": "StreetAddress2",
+                         "fieldAPI": "oao__Billing_Address_Second_Line__c",
+                         "isUrlParameter": "false"
+                       },
+                       {
                          "externalField": "City",
-                         "value": "Cocoplum"
-                    },
-                    {
+                         "fieldAPI": "BillingCity",
+                         "isUrlParameter": "false",
+                         "isMandatory": true
+                       },
+                       {
+                         "externalField": "Country",
+                         "fieldAPI": "BillingCountry",
+                         "isUrlParameter": "false"
+                       },
+                       {
                          "externalField": "State",
-                         "value": "FL"
-                    },
-                    {
+                         "fieldAPI": "BillingState",
+                         "isUrlParameter": "false",
+                         "isMandatory": true
+                       },
+                       {
+                         "externalField": "StreetAddress1",
+                         "fieldAPI": "BillingStreet",
+                         "isUrlParameter": "false",
+                         "isMandatory": true
+                       },
+                       {
                          "externalField": "Zip5",
-                         "value": 33442
-                    },
-                    {
-                         "externalField": "Phone",
-                         "value": 5555551234
-                    },
-                    {
-                         "externalField": "DOBMatchType",
-                         "value": "ExactCCYYMMDD"
-                    },
-                    {
-                         "externalField": "ExactAddressMatch",
-                         "value": 1
-                    },
-                    {
-                         "externalField": "ExactDOBMatch",
-                         "value": 1
-                    },
-                    {
-                         "externalField": "ExactDriverLicenseMatch",
-                         "value": 1
-                    },
-                    {
-                         "externalField": "ExactFirstNameMatch",
-                         "value": 1
-                    },
-                    {
-                         "externalField": "ExactFirstNameMatchAllowNicknames",
-                         "value": 0
-                    },
-                    {
-                         "externalField": "ExactLastNameMatch",
-                         "value": 1
-                    },
-                    {
-                         "externalField": "ExactPhoneMatch",
-                         "value": 1
-                    },
-                    {
-                         "externalField": "ExactSSNMatch",
-                         "value": 1
-                    },
-                    {
-                         "externalField": "IncludeOFAC",
-                         "value": 1
-                    },
-                    {
-                         "externalField": "ExactSSNMatch",
-                         "value": 1
-                    },
-                    {
-                         "externalField": "NameInputOrder",
-                         "value": "Unknown"
-                    }
-               ]
-          }
+                         "fieldAPI": "BillingPostalCode",
+                         "isUrlParameter": "false",
+                         "isMandatory": true
+                       }
+                     ],
+                     "whereClause": "Id = :accountId"
+                   }
+                 ],
+                 "staticParameters": [
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$OutputType",
+                     "value": "B"
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$GlobalWatchlistThreshold",
+                     "value": 0.84
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$DOBRadius",
+                     "value": 0
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$ReferenceCode",
+                     "value": "Corporation name"
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$BillingCode",
+                     "value": "Account Manager name"
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$GLBPurpose",
+                     "value": 0
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$DLPurpose",
+                     "value": 0
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$AccountNumber",
+                     "value": "123456789"
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$EndUser$$CompanyName",
+                     "value": "Ame Corporation"
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$EndUser$$StreetAddress1",
+                     "value": "123 NW Main Street"
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$EndUser$$City",
+                     "value": "Cocoplum"
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$EndUser$$State",
+                     "value": "FL"
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$EndUser$$Zip5",
+                     "value": 33442
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$User$$EndUser$$Phone",
+                     "value": 5555551234
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$DOBMatchOptions$$Matchtype",
+                     "value": "ExactCCYYMMDD"
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactAddressMatch",
+                     "value": 1
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactDOBMatch",
+                     "value": 1
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactDriverLicenseMatch",
+                     "value": 1
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactFirstNameMatch",
+                     "value": 1
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactFirstNameMatchAllowNicknames",
+                     "value": 0
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactLastNameMatch",
+                     "value": 1
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactPhoneMatch",
+                     "value": 1
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$ExactSSNMatch",
+                     "value": 1
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$IncludeOFAC",
+                     "value": 1
+                   },
+                   {
+                     "externalField": "soap:Envelope$$soap:Body$$BusinessInstantID20Request$$Options$$NameInputOrder",
+                     "value": "Unknown"
+                   }
+                 ]
+               }
+             }
      },
      "intframework__Request_Timeout__c": 20000,
      "intframework__Response_Mapping__c": {
