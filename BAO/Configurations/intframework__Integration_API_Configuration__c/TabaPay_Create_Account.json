@@ -44,7 +44,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 0,
-     "intframework__Release_Checksum__c": "cf77fdcd2ed7d0ce6ef390cc3657d125124b41a8236963bcb0979fc003ce1123",
+     "intframework__Release_Checksum__c": "f278a180f128ea071aba233e728fc1fad659fd849e9c0b423065a05eae49a993",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "TabaPay",
@@ -123,6 +123,10 @@
                                    {
                                         "externalField": "appFundingStatus",
                                         "fieldAPI": "oao__Funding_Status__c"
+                                   },
+                                   {
+                                        "externalField": "appStatus",
+                                        "fieldAPI": "genesis__Status__c"
                                    }
                               ],
                               "whereClause": "id = :recordId"
