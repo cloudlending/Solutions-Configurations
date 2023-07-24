@@ -1,0 +1,12 @@
+{
+     "attributes": {
+          "type": "oao__Data_Export_Configuration__c"
+     },
+     "Name": "Party configs",
+     "oao__Sequence__c": 2,
+     "oao__Object_API_Name__c": "clcommon__Party__c",
+     "oao__SOQL_Query__c": "SELECT clcommon__Account__c,clcommon__Account__r.Name,clcommon__Contact__c,clcommon__Contact__r.Name,genesis__Party_Name__c,Name,clcommon__Type__c,clcommon__Type__r.Name,clcommon__Signer_Capacity__c,clcommon__Signing_on_Behalf_of__c,clcommon__Signing_on_Behalf_of__r.Name,Id,clcommon__Account__r.clcommon__Legal_Entity_Type__c,clcommon__Account__r.clcommon__Legal_Entity_Type__r.Name,genesis__Application__c,genesis__Application__r.Name,genesis__Application__r.Id,clcommon__Related_NonIndividual__c,clcommon__Related_NonIndividual__r.Name,clcommon__Related_Individual__c,clcommon__Related_Individual__r.Name,clcommon__Percent_Ownership__c,clcommon__Type__r.clcommon__Related_Individual__c,clcommon__Type__r.clcommon__Related_Business_Entity__c,clcommon__Party_Types__c,clcommon__Account__r.Id,clcommon__Contact__r.Id,clcommon__Guaranty_Type__c,clcommon__Liability_Amount__c,clcommon__Trustee_Of__c,clcommon__Trustee_Of__r.Name FROM clcommon__Party__c",
+     "oao__Where_Clause__c": "LastModifiedDate = LAST_N_DAYS: 30",
+     "oao__Release_Checksum__c": "444f731688945a85518949f3ff28cbd17118ce56501727f58b04ad6a5b958e4e",
+     "oao__External_Id__c": "clcommon_Party_c"
+}
