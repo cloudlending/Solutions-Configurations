@@ -5,8 +5,8 @@
      "Name": "Funding configs",
      "oao__Sequence__c": 3,
      "oao__Object_API_Name__c": "oao__Funding_Detail__c",
-     "oao__SOQL_Query__c": "SELECT  Id,Name,oao__Payment_Type__r.oao__Maximum_Funding_Payment__c, oao__Payment_Type__r.oao__Minimum_Funding_Payment__c, oao__Payment_Type__r.Name, oao__Payment_Type__r.oao__User_Type__r.oao__Maximum_Funding__c, oao__Payment_Type__r.oao__User_Type__r.oao__Minimum_Funding__c, oao__Payment_Type__r.oao__User_Type__r.Name, oao__Billing_Address__c, oao__Billing_Address_Line_2__c, oao__Billing_City__c, oao__Billing_State__c, oao__Billing_Zip_Code__c, oao__Company_Name__c, oao__First_Name__c, oao__Last_Name__c, oao__Card_Type__c,  oao__Funding_Amount__c, oao__Application__r.genesis__CL_Product_Name__c\r\nFROM\r\noao__Funding_Detail__c",
+     "oao__SOQL_Query__c": "SELECT  Id,Name,oao__Application__c,oao__Application__r.Name,oao__Payment_Type__r.oao__Maximum_Funding_Payment__c, oao__Payment_Type__r.oao__Minimum_Funding_Payment__c, oao__Payment_Type__r.Name, oao__Payment_Type__r.oao__User_Type__r.oao__Maximum_Funding__c, oao__Payment_Type__r.oao__User_Type__r.oao__Minimum_Funding__c, oao__Payment_Type__r.oao__User_Type__r.Name, oao__Billing_Address__c, oao__Billing_Address_Line_2__c, oao__Billing_City__c, oao__Billing_State__c, oao__Billing_Zip_Code__c, oao__Company_Name__c, oao__First_Name__c, oao__Last_Name__c, oao__Card_Type__c,  oao__Funding_Amount__c, oao__Application__r.genesis__CL_Product_Name__c\r\nFROM\r\noao__Funding_Detail__c",
      "oao__Where_Clause__c": null,
-     "oao__Release_Checksum__c": "fbe8baab3805b5dbb9a55dba88cd3e28e132047f2a0b3ef61888c651709b77c9",
+     "oao__Release_Checksum__c": "a27106f35ed223dac9dc5a470d03594bfd2bc9eaa4df051acd8e0999d4ea753f",
      "oao__External_Id__c": "oao_Funding_Detail_c"
 }
