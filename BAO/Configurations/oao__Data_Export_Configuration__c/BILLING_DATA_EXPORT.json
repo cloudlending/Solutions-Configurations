@@ -1,0 +1,12 @@
+{
+     "attributes": {
+          "type": "oao__Data_Export_Configuration__c"
+     },
+     "Name": "Billing Applications Config",
+     "oao__Sequence__c": 4,
+     "oao__Object_API_Name__c": "genesis__Applications__c",
+     "oao__SOQL_Query__c": "SELECT Id, Name, genesis__Status__c FROM genesis__Applications__c",
+     "oao__Where_Clause__c": "genesis__Status__c IN ('APPROVED','FUNDED','PENDING FUNDING','PROCESSING FUNDING','PROCESSED FUNDING') AND Id NOT IN (SELECT genesis__Application__c FROM genesis__Application_Status_History__c WHERE genesis__New_Value__c IN ('APPROVED','FUNDED','PENDING FUNDING','PROCESSING FUNDING','PROCESSED FUNDING') AND CreatedDate < LAST_N_DAYS: 30)",
+     "oao__Release_Checksum__c": "e7295a09028e84592a78e69be693828e174502b3c87d6fa9db14f56c2950f3e0",
+     "oao__External_Id__c": "BILLING_DATA_EXPORT"
+}
