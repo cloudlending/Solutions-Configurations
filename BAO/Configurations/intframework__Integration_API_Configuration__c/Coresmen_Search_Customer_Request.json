@@ -4,7 +4,7 @@
      },
      "Name": "Coresmen Search Customer Request",
      "intframework__API_Endpoint__c": "customer/get",
-     "intframework__API_Named_Credential__c": null,
+     "intframework__API_Named_Credential__c": "Coresmen",
      "intframework__Adapter_Class_Name__c": "q2adapters.CoresmenCustomerSearchAdapter",
      "intframework__Additional_Header_Parameters__c": null,
      "intframework__Data_Format_Config_Set__r": null,
@@ -44,7 +44,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 1,
-     "intframework__Release_Checksum__c": "a49068a695f177f2b3a79589ad785f64d8ff30630aed5039c09b857060638089",
+     "intframework__Release_Checksum__c": "a49068a695f177f2b3a79589ad785f64d8ff30630aed5039c09b857060638088",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "dynamicDataParameters": [
@@ -111,6 +111,10 @@
                     {
                          "value": true,
                          "externalField": "custom_partyMessage.messageContext.includeZeroNumerics"
+                    },
+                    {
+                         "externalField": "searchByOption",
+                          "value": "TAXID"
                     }
                ],
                "name": "Q2CORESMENAPI"
