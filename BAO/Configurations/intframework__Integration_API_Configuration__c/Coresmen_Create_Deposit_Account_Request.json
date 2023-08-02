@@ -4,8 +4,8 @@
      },
      "Name": "Coresmen Create Deposit Account Request",
      "intframework__API_Endpoint__c": "accounts",
-     "intframework__API_Named_Credential__c": null,
-     "intframework__Adapter_Class_Name__c": "q2adapters.CoresmenCreateDepositAccountAdapter",
+     "intframework__API_Named_Credential__c": "Coresmen",
+     "intframework__Adapter_Class_Name__c": "oao.BAOCoresmenCreateDepositAccountAdapter",
      "intframework__Additional_Header_Parameters__c": null,
      "intframework__Data_Format_Config_Set__r": {
           "attributes": {
@@ -49,9 +49,9 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 1,
-     "intframework__Release_Checksum__c": "591db06de097ee70e013d411d294a92de117ca25ac5222916834c5e2f7fcbb47",
+     "intframework__Release_Checksum__c": "591db06de097ee70e013d411d294a92de117ca25ac5222916834c5e2f7fcbb48",
      "intframework__Request_Mapping__c": {
-          "thirdPartySystem": {
+         "thirdPartySystem": {
                "name": "Q2CoresmenAPI",
                "staticParameters": [],
                "filters": [
@@ -69,7 +69,7 @@
                               },
                               {
                                    "externalField": "depositPartyId",
-                                   "fieldAPI": "clcommon__Account__r.clcommon__CIF__c"
+                                   "fieldAPI": "clcommon__Account__r.genesis__Business_Information__r.q2adapters__CIF__c"
                               }
                          ],
                          "whereClause": "genesis__Application__c = :appId AND clcommon__Contact__c = null AND clcommon__Account__r.genesis__Business_Information__r.q2adapters__Does_Account_exist_in_core__c = TRUE"
@@ -88,7 +88,7 @@
                               },
                               {
                                    "externalField": "depositPartyId",
-                                   "fieldAPI": "clcommon__Contact__r.clcommon__CIF__c"
+                                   "fieldAPI": "clcommon__Contact__r.clcommon__Personal_Information__r.q2adapters__CIF__c"
                               }
                          ],
                          "whereClause": "genesis__Application__c = :appId AND clcommon__Contact__c != null AND clcommon__Contact__r.clcommon__Personal_Information__r.q2adapters__Does_Contact_exist_in_core__c = TRUE"
@@ -119,6 +119,25 @@
                               }
                          ],
                          "whereClause": "id = :childAppId"
+                    },
+                    {
+                         "objectAPI": "oao__Additional_Service__c",
+                         "objectAlias": "appAdditionalServicesDetails",
+                         "fields": [
+                              {
+                                   "externalField": "applicationId",
+                                   "fieldAPI": "oao__Application__c"
+                              },
+                              {
+                                   "externalField": "productAppliedForId",
+                                   "fieldAPI": "oao__CL_Product__c"
+                              },
+                              {
+                                   "externalField": "additionalService",
+                                   "fieldAPI": "oao__Service_Name__c"
+                              }
+                         ],
+                         "whereClause": "oao__Application__c = :appId AND oao__Active__c = TRUE"
                     }
                ]
           }
@@ -126,8 +145,8 @@
      "intframework__Request_Timeout__c": 120000,
      "intframework__Response_Mapping__c": {
           "StorageConfiguration": {
-               "StoreInDB": "True",
-               "PublishAsJSON": "True"
+               "StoreInDB":"True",
+               "PublishAsJSON":"True"
           },
           "DMLOperations": [
                {
@@ -143,6 +162,14 @@
                                    {
                                         "externalField": "data.applicationMessage.applicationList.application[0].productAppliedForList.productAppliedFor[0].productDetail.deposit.accountId",
                                         "fieldAPI": "genesis__Loan_Number__c"
+                                   },
+                                   {
+                                        "externalField": "data.applicationMessage.applicationList.application[0].productAppliedForList.productAppliedFor[0].productDetail.deposit.accountId",
+                                        "fieldAPI": "genesis__Bank_Account_Number__c"
+                                   },
+                                   {
+                                        "externalField": "data.applicationMessage.applicationList.application[0].productAppliedForList.productAppliedFor[0].productDetail.deposit.type",
+                                        "fieldAPI": "genesis__Bank_Account_Type__c"
                                    }
                               ],
                               "whereClause": "Id = :childAppId AND genesis__Loan_Number__c = NULL"
