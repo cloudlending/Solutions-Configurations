@@ -26,6 +26,12 @@
           },
           "intframework__External_Id__c": "Alloy_Integration_Config"
      },
+     "intframework__Integration_Family__r": {
+          "attributes": {
+               "type": "intframework__Integration_Family__c"
+          },
+          "intframework__External_Id__c": "Alloy_KYC_KYB"
+     },
      "intframework__Integration_Provider__r": {
           "attributes": {
                "type": "intframework__Integration_Provider__c"
@@ -36,7 +42,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 0,
-     "intframework__Release_Checksum__c": "39382c0efa35f48eea78e39913a5c988076adedd7c21d687efe7a16fc8216c1e",
+     "intframework__Release_Checksum__c": "d2a313283afe02e2d5259be3e6f74ea5ac5e2864edeb94a85c387695d85162ea",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "Alloy",
@@ -63,7 +69,7 @@
                          "value": "business"
                     },
                     {
-                         "externalField": "do_await_additional_entities",
+                         "externalField": "has_finished_sending_additional_entities",
                          "value": "true"
                     },
                     {
