@@ -28,6 +28,12 @@
           },
           "intframework__External_Id__c": "TabaPay_Funding_Config"
      },
+     "intframework__Integration_Family__r": {
+          "attributes": {
+               "type": "intframework__Integration_Family__c"
+          },
+          "intframework__External_Id__c": "Funding"
+     },
      "intframework__Integration_Provider__r": {
           "attributes": {
                "type": "intframework__Integration_Provider__c"
@@ -38,7 +44,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 0,
-     "intframework__Release_Checksum__c": "07bb2c3c78726e47c82b4e49da6205270916ed209c84d82e4d73ccbca0a90634",
+     "intframework__Release_Checksum__c": "6a865e532fac47c2f3386c43664cdbbfb21e1bbc7189328e2ad57e1a6985ff8e",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "TabaPay",
@@ -47,6 +53,10 @@
                     {
                          "externalField": "accounts.sourceAccountID",
                          "value": "iN06isgEiWwVjL9ox6wGEA"
+                    },
+                    {
+                         "externalField": "accounts.destinationAccount.bank.routingNumber",
+                         "value": "011001234"
                     },
                     {
                          "externalField": "type",
@@ -66,10 +76,6 @@
                          "objectAPI": "genesis__Applications__c",
                          "objectAlias": "accounts.destinationAccount.bank",
                          "fields": [
-                              {
-                                   "externalField": "routingNumber",
-                                   "fieldAPI": "genesis__Routing_Number__c"
-                              },
                               {
                                    "externalField": "accountNumber",
                                    "fieldAPI": "genesis__Bank_Account_Number__c"
