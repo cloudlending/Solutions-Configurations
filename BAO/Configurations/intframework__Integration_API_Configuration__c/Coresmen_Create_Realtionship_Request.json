@@ -5,7 +5,7 @@
      "Name": "Coresmen Create Realtionship Request",
      "intframework__API_Endpoint__c": "relationships/customerToCustomer",
      "intframework__API_Named_Credential__c": null,
-     "intframework__Adapter_Class_Name__c": "q2adapters.CoresmenRelationshipCreateAdapter",
+     "intframework__Adapter_Class_Name__c": "oao.BAOCoresmenRelationshipCreateAdapter",
      "intframework__Additional_Header_Parameters__c": null,
      "intframework__Data_Format_Config_Set__r": {
           "attributes": {
@@ -49,7 +49,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 1,
-     "intframework__Release_Checksum__c": "fa8cd4249acdacf84fd23c23582f6425dacc7ec3758172552f181cd50580181d",
+     "intframework__Release_Checksum__c": "fa8cd4249acdacf84fd23c23582f6425dacc7ec3758172552f181cd50580187d",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "dynamicDataParameters": [
@@ -94,6 +94,14 @@
                               {
                                    "fieldAPI": "oao__Percentage_Ownership__c",
                                    "externalField": "percentHeld"
+                              },
+                              {
+                                "fieldAPI": "oao__Position_in_Company__c",
+                                "externalField": "positionAtCompanyPicklist"
+                              },
+                              {
+                                "fieldAPI": "oao__Position_at_Company__c",
+                                "externalField": "positionAtCompanyText"
                               }
                          ],
                          "objectAlias": "partyAssociation.partyAssociationType",
@@ -103,7 +111,7 @@
                          "whereClause": "Id = :partyId",
                          "fields": [
                               {
-                                   "fieldAPI": "oao__Position_At_Company__c",
+                                   "fieldAPI": "oao__Position_in_Company__c",
                                    "externalField": "custom_partyAssociationMessage.partyAssociationList.partyAssociation[0].customData.valuePair[0].value"
                               }
                          ],
