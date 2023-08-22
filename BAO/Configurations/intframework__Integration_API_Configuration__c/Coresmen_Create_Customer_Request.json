@@ -5,7 +5,7 @@
      "Name": "Coresmen Create Customer Request",
      "intframework__API_Endpoint__c": "customer",
      "intframework__API_Named_Credential__c": "Coresmen",
-     "intframework__Adapter_Class_Name__c": "q2adapters.CoresmenCustomerCreateAdapter",
+     "intframework__Adapter_Class_Name__c": "oao.BAOCoresmenCustomerCreateAdapter",
      "intframework__Additional_Header_Parameters__c": null,
      "intframework__Data_Format_Config_Set__r": {
           "attributes": {
@@ -49,7 +49,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 1,
-     "intframework__Release_Checksum__c": "586dbf2a070628bfb44b81914d97d4160b031b67d89cc9dccd8437f0219e21cf",
+     "intframework__Release_Checksum__c": "586dbf2a070628bfb44b81914d97d4160b031b67d89cc9dccd8437f0219e21mn",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "filters": [
@@ -75,6 +75,10 @@
                               {
                                    "fieldAPI": "Name",
                                    "externalField": "formattedName"
+                              },
+                              {
+                                   "fieldAPI": "oao__Mother_Maiden_Name__c",
+                                   "externalField": "mothersMaidenName"
                               }
                          ],
                          "objectAlias": "party.characteristics.individual",
@@ -105,6 +109,10 @@
                               {
                                    "fieldAPI": "ints__Social_Security_Number__c",
                                    "externalField": "taxId"
+                              },
+                              {
+                                   "fieldAPI": "oao__SSN_Certification_Timestamp__c",
+                                   "externalField": "taxIdCert"
                               }
                          ],
                          "objectAlias": "party.taxInformation.individual",
@@ -124,6 +132,10 @@
                               {
                                    "fieldAPI": "clcommon__Industry_Classification_Code__r.clcommon__Code__c",
                                    "externalField": "custom_applicationMessage.applicationList.application[0].applicantList.applicant[0].party.customData.valuePair[0].value"
+                              },
+                              {
+                                   "fieldAPI": "genesis__Business_Information__r.oao__Tax_ID_Certification_Timestamp__c",
+                                   "externalField": "taxIdCert"
                               }
                          ],
                          "objectAlias": "party.taxInformation.organization",
