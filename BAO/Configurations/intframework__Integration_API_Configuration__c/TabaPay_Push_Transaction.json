@@ -44,7 +44,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 0,
-     "intframework__Release_Checksum__c": "6a865e532fac47c2f3386c43664cdbbfb21e1bbc7189328e2ad57e1a6985ff8e",
+     "intframework__Release_Checksum__c": "5fb76e04fe790cd0d72357a6d64f8d5d02a2193847bbba7f41182c9aa05069db",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "TabaPay",
@@ -143,7 +143,7 @@
                                         "fieldAPI": "oao__Push_Transaction_Status__c"
                                    }
                               ],
-                              "whereClause": "oao__Application__c = :recordId"
+                              "whereClause": "oao__Application__c = :recordId AND oao__Active__c = true"
                          }
                     ]
                }
