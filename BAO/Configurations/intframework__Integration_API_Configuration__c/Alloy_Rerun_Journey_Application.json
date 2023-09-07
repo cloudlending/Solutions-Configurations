@@ -42,7 +42,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 0,
-     "intframework__Release_Checksum__c": "d2a313283afe02e2d5259be3e6f74ea5ac5e2864edeb94a85c387695d85162ea",
+     "intframework__Release_Checksum__c": "d32c8174a67e2f10af53d5654344be225a4fbf710a99e9d787bc436c9ded8885",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "name": "Alloy",
@@ -78,7 +78,7 @@
                     },
                     {
                          "externalField": "entities[1]$$data$$representatives[0]$$addresses[0]$$type",
-                         "value": "primary"
+                         "value": "business_primary"
                     },
                     {
                          "externalField": "entities[1]$$data$$addresses[0]$$type",
@@ -530,6 +530,84 @@
                               }
                          ],
                          "whereClause": "Id = :appId"
+                    },
+                    {
+                         "objectAPI": "clcommon__Party__c",
+                         "objectAlias": "additionalParties",
+                         "ignoreObjectAliasInRequestGeneration": true,
+                         "fields": [
+                              {
+                                   "externalField": "accountId",
+                                   "fieldAPI": "clcommon__Account__c",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "address_line_1",
+                                   "fieldAPI": "clcommon__Contact__r.OtherStreet",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "address_city",
+                                   "fieldAPI": "clcommon__Contact__r.OtherCity",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "address_state",
+                                   "fieldAPI": "clcommon__Contact__r.OtherStateCode",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "address_postal_code",
+                                   "fieldAPI": "clcommon__Contact__r.OtherPostalCode",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "address_country_code",
+                                   "fieldAPI": "clcommon__Contact__r.OtherCountryCode",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "name_first",
+                                   "fieldAPI": "clcommon__Contact__r.FirstName",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "name_last",
+                                   "fieldAPI": "clcommon__Contact__r.LastName",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "phone_number",
+                                   "fieldAPI": "clcommon__Contact__r.oao__Formatted_Mobile__c",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "email_address",
+                                   "fieldAPI": "clcommon__Contact__r.Email",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "birth_date",
+                                   "fieldAPI": "clcommon__Contact__r.Birthdate",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "document_ssn",
+                                   "fieldAPI": "clcommon__Contact__r.ints__Social_Security_Number__c",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "iovation_blackbox",
+                                   "fieldAPI": "oao__Iovation_Blackbox_Token__c",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "partyId",
+                                   "fieldAPI": "id",
+                                   "ignoreInRequest": true
+                              }
+                         ],
+                         "whereClause": "clcommon__Active__c = true AND genesis__Application__c = :appId AND clcommon__Type__r.Name != 'PRIMARY' AND clcommon__Type__r.Name != 'BUSINESS'"
                     }
                ]
           }
