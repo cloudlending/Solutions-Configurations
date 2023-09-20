@@ -49,7 +49,7 @@
      "intframework__Log_Request_Response__c": false,
      "intframework__Long_Running_Operation__c": false,
      "intframework__Number_Of_Retries__c": 1,
-     "intframework__Release_Checksum__c": "586dbf2a070628bfb44b81914d97d4160b031b67d89cc9dccd8437f0219e21mn",
+     "intframework__Release_Checksum__c": "586dbf2a070628bfb44b81914d97d4160b031b67d89cc9dccd8437f0219e22no",
      "intframework__Request_Mapping__c": {
           "thirdPartySystem": {
                "filters": [
@@ -83,6 +83,33 @@
                          ],
                          "objectAlias": "party.characteristics.individual",
                          "objectAPI": "Contact"
+                    },
+                    {
+                         "whereClause": "genesis__Contact__c = :contactId",
+                         "fields": [
+                              {
+                              "fieldAPI": "genesis__Occupation__c",
+                              "externalField": "employeeOccupationPicklist"
+                              },
+                              {
+                              "fieldAPI": "oao__Occupation_Text__c",
+                              "externalField": "employeeOccupationText"
+                              },
+                              {
+                              "fieldAPI": "genesis__Name_of_employer__c",
+                              "externalField": "employerName"
+                              },
+                              {
+                              "fieldAPI": "genesis__Phone__c",
+                              "externalField": "employerPhone"
+                              },
+                              {
+                              "fieldAPI": "genesis__Position__c",
+                              "externalField": "position"
+                              }
+                         ],
+                         "objectAlias": "employmentInformation",
+                         "objectAPI": "genesis__Employment_Information__c"
                     },
                     {
                          "whereClause": "Id = :accountId",
@@ -126,19 +153,22 @@
                                    "externalField": "taxId"
                               },
                               {
-                                   "fieldAPI": "genesis__Business_Information__r.genesis__DBA_Name__c",
-                                   "externalField": "custom_applicationMessage.applicationList.application[0].applicantList.applicant[0].party.characteristics.organization.doingBusinessAsList.doingBusinessAs[0].doingBusinessAsName"
-                              },
-                              {
-                                   "fieldAPI": "clcommon__Industry_Classification_Code__r.clcommon__Code__c",
-                                   "externalField": "custom_applicationMessage.applicationList.application[0].applicantList.applicant[0].party.customData.valuePair[0].value"
-                              },
-                              {
                                    "fieldAPI": "genesis__Business_Information__r.oao__Tax_ID_Certification_Timestamp__c",
                                    "externalField": "taxIdCert"
                               }
                          ],
                          "objectAlias": "party.taxInformation.organization",
+                         "objectAPI": "Account"
+                    },
+                    {
+                         "whereClause": "Id = :accountId",
+                         "fields": [
+                              {
+                                   "fieldAPI": "genesis__Business_Information__r.genesis__DBA_Name__c",
+                                   "externalField": "custom_applicationMessage.applicationList.application[0].applicantList.applicant[0].party.characteristics.organization.doingBusinessAsList.doingBusinessAs[0].doingBusinessAsName"
+                              }
+                         ],
+                         "objectAlias": "custom_Account",
                          "objectAPI": "Account"
                     },
                     {
@@ -284,9 +314,6 @@
                "dynamicDataParameters": [
                     {
                          "externalField": "custom_applicationMessage.applicationList.application[0].applicationDate"
-                    },
-                    {
-                         "externalField": "custom_applicationMessage.applicationList.application[0].applicantList.applicant[0].party.customData.valuePair[0].name"
                     },
                     {
                          "externalField": "custom_applicationMessage.applicationList.application[0].applicantList.applicant[0].applicantId"
