@@ -17,7 +17,7 @@
                {
                     "type": "Apex",
                     "priority": null,
-                    "apexClassName": "solcommon.PartyKYBVerificationAction",
+                    "apexClassName": "genesis.PartyKYBVerificationAction",
                     "additionalParams": "{\"Action type\":\"true\"}",
                     "actionName": "Action1"
                }
@@ -34,7 +34,7 @@
                {
                     "type": "Apex",
                     "priority": null,
-                    "apexClassName": "solcommon.PartyKYBVerificationAction",
+                    "apexClassName": "genesis.PartyKYBVerificationAction",
                     "additionalParams": "{\"Adverse Action Name\":\"Unable To Verify Business Entity\",\"Action type\":\"false\"}",
                     "actionName": "Action2"
                }
@@ -53,7 +53,7 @@
                     "matchingType": "==",
                     "fieldType": "BOOLEAN",
                     "fieldName": "KYB Requested",
-                    "fieldAPIName": "solcommon__kyb_requested__c",
+                    "fieldAPIName": "genesis__kyb_requested__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -68,7 +68,7 @@
                     "matchingType": "==",
                     "fieldType": "BOOLEAN",
                     "fieldName": "Name Mismatch Indicator",
-                    "fieldAPIName": "solcommon__kyb_fraud__r.intdm__name_mismatch_indicator__c",
+                    "fieldAPIName": "genesis__kyb_fraud__r.intdm__name_mismatch_indicator__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -83,7 +83,7 @@
                     "matchingType": "==",
                     "fieldType": "BOOLEAN",
                     "fieldName": "Address Mismatch Indicator",
-                    "fieldAPIName": "solcommon__kyb_fraud__r.intdm__address_mismatch_indicator__c",
+                    "fieldAPIName": "genesis__kyb_fraud__r.intdm__address_mismatch_indicator__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -98,7 +98,7 @@
                     "matchingType": "==",
                     "fieldType": "BOOLEAN",
                     "fieldName": "Phone Number Mismatch Indicator",
-                    "fieldAPIName": "solcommon__kyb_fraud__r.intdm__phone_number_mismatch_indicator__c",
+                    "fieldAPIName": "genesis__kyb_fraud__r.intdm__phone_number_mismatch_indicator__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -113,7 +113,7 @@
                     "matchingType": "==",
                     "fieldType": "BOOLEAN",
                     "fieldName": "Residential Business Indicator",
-                    "fieldAPIName": "solcommon__kyb_fraud__r.intdm__residential_business_indicator__c",
+                    "fieldAPIName": "genesis__kyb_fraud__r.intdm__residential_business_indicator__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -128,7 +128,7 @@
                     "matchingType": "==",
                     "fieldType": "BOOLEAN",
                     "fieldName": "FEIN Mismatch Indicator",
-                    "fieldAPIName": "solcommon__kyb_fraud__r.intdm__fein_mismatch_indicator__c",
+                    "fieldAPIName": "genesis__kyb_fraud__r.intdm__fein_mismatch_indicator__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -143,7 +143,7 @@
                     "matchingType": "==",
                     "fieldType": "BOOLEAN",
                     "fieldName": "Global Watchlist Indicator",
-                    "fieldAPIName": "solcommon__kyb_fraud__r.intdm__global_watchlist_indicator__c",
+                    "fieldAPIName": "genesis__kyb_fraud__r.intdm__global_watchlist_indicator__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -158,7 +158,7 @@
                     "matchingType": "==",
                     "fieldType": "BOOLEAN",
                     "fieldName": "TIN Mismatch Indicator",
-                    "fieldAPIName": "solcommon__kyb_fraud__r.intdm__tin_mismatch_indicator__c",
+                    "fieldAPIName": "genesis__kyb_fraud__r.intdm__tin_mismatch_indicator__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -173,7 +173,7 @@
                     "matchingType": "==",
                     "fieldType": "BOOLEAN",
                     "fieldName": "OFAC Indicator",
-                    "fieldAPIName": "solcommon__kyb_fraud__r.intdm__ofac_indicator__c",
+                    "fieldAPIName": "genesis__kyb_fraud__r.intdm__ofac_indicator__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -189,8 +189,5 @@
           },
           "clcommon__External_ID__c": "KYB_Rules"
      },
-     "genesis__Department_Members__r": null,
-     "solcommon__CL_Product__r": null,
-     "solcommon__Release_Checksum__c": null,
-     "solcommon__Type__c": null
+     "genesis__Department_Members__r": null
 }
