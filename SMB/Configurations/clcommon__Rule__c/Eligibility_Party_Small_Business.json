@@ -17,7 +17,7 @@
                {
                     "type": "Apex",
                     "priority": null,
-                    "apexClassName": "solcommon.PartyEligibilityAction",
+                    "apexClassName": "genesis.PartyEligibilityAction",
                     "additionalParams": "{\"Action type\":\"Success\"}",
                     "actionName": "Action1"
                }
@@ -34,7 +34,7 @@
                {
                     "type": "Apex",
                     "priority": null,
-                    "apexClassName": "solcommon.PartyEligibilityAction",
+                    "apexClassName": "genesis.PartyEligibilityAction",
                     "additionalParams": "{\"Adverse Action Name\":\"Ineligible Industry Or Business Type\",\"Action type\":\"Failure\"}",
                     "actionName": "Action2"
                }
@@ -57,7 +57,7 @@
                     "isFieldComparison": null,
                     "fieldType": "STRING",
                     "fieldName": "Industry Sub Sector",
-                    "fieldAPIName": "clcommon__account__r.genesis__business_information__r.solcommon__industry_sub_sector__c",
+                    "fieldAPIName": "clcommon__account__r.genesis__business_information__r.genesis__industry_sub_sector__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -109,8 +109,5 @@
           },
           "clcommon__External_ID__c": "Knockout_Rules_For_SMB"
      },
-     "genesis__Department_Members__r": null,
-     "solcommon__CL_Product__r": null,
-     "solcommon__Release_Checksum__c": null,
-     "solcommon__Type__c": null
+     "genesis__Department_Members__r": null
 }

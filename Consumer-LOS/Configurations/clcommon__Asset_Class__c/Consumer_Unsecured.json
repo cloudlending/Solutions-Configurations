@@ -5,14 +5,20 @@
      "Name": "Consumer Unsecured",
      "clcommon__Asset_Category__c": "Consumer Loans",
      "clcommon__Asset_Class_API_Name__c": null,
+     "clcommon__Is_Flow_Enabled__c": true,
      "clcommon__External_ID__c": "Consumer_Unsecured",
      "clcommon__Release_Checksum__c": "6b5817b4301cab36b3bbce0ff8660da669d26d1a0b4b40785eac39fbb20668e4",
      "genesis__UUX_Customer__c": true,
-     "solcommon__Credit_Score_Rating__r": {
+     "genesis__Credit_Score_Rating__r": {
           "attributes": {
-               "type": "solcommon__Credit_Score_Rating__c"
+               "type": "genesis__Credit_Score_Rating__c"
           },
-          "solcommon__External_Id__c": "Default_Credit_Score_Range"
+          "genessi__External_Id__c": "Default_Credit_Score_Range"
      },
-     "solcommon__Release_Checksum__c": null
+     "clcommon__End_To_End_Workflow__r": {
+          "attributes": {
+               "type": "clcommon__End_To_End_Workflow__c"
+          },
+          "clcommon__External_ID__c": "Unsecured_Consumer_Workflow"
+     }
 }

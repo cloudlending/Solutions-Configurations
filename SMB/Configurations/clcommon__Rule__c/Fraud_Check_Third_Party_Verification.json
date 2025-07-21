@@ -17,7 +17,7 @@
                {
                     "type": "Apex",
                     "priority": null,
-                    "apexClassName": "solcommon.PartyFraudCheckVerificationAction",
+                    "apexClassName": "genesis.PartyFraudCheckVerificationAction",
                     "additionalParams": "{\"Action type\":\"Success\"}",
                     "actionName": "Action1"
                }
@@ -34,7 +34,7 @@
                {
                     "type": "Apex",
                     "priority": null,
-                    "apexClassName": "solcommon.PartyFraudCheckVerificationAction",
+                    "apexClassName": "genesis.PartyFraudCheckVerificationAction",
                     "additionalParams": "{\"Action type\":\"Failure\"}",
                     "actionName": "Action2"
                }
@@ -53,7 +53,7 @@
                     "matchingType": ">=",
                     "fieldType": "DOUBLE",
                     "fieldName": "Fraud Risk Score Percentile",
-                    "fieldAPIName": "solcommon__kyc_fraud__r.intdm__fraud_risk_score_percentile__c",
+                    "fieldAPIName": "genesis__kyc_fraud__r.intdm__fraud_risk_score_percentile__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
@@ -69,8 +69,5 @@
           },
           "clcommon__External_ID__c": "Fraud_Check_Rules"
      },
-     "genesis__Department_Members__r": null,
-     "solcommon__CL_Product__r": null,
-     "solcommon__Release_Checksum__c": null,
-     "solcommon__Type__c": null
+     "genesis__Department_Members__r": null
 }
