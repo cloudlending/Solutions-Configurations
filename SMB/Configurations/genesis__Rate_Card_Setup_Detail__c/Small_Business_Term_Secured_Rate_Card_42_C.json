@@ -35,12 +35,17 @@
      "genesis__Minimum_Financed_Amount__c": 1000,
      "genesis__Payment_Amount_Per_Period__c": 0,
      "genesis__Payment_Frequency__c": null,
-     "genesis__Pricing_Factors__c": null,
-     "genesis__Pricing_Generation_Rule__r": null,
+     "genesis__Pricing_Factors__c": "[{\"term\": 42, \"index\": 0, \"frequency\": \"MONTHLY\"}]",
+     "genesis__Pricing_Generation_Rule__r": {
+          "attributes": {
+               "type": "clcommon__Rule__c"
+          },
+          "clcommon__External_ID__c": "Small_Business_Term_Secured_Rate_Card_42_C_Rule"
+     },
      "genesis__Pricing_Method__c": "INTEREST RATE",
      "genesis__Rate_Factor_Based_On_Amount__c": 0,
      "genesis__Rate_Factor__c": 0,
-     "genesis__Release_Checksum__c": "5cc07345b1542d91668411eee5dba507f6a2d5b66d638338171c373ea6518c5e",
+     "genesis__Release_Checksum__c": "ebad2b18cfa4f80d637e4c6970d8d9db2a45fb03c750403111732c9719daf933",
      "genesis__Residual_Amount__c": 0,
      "genesis__Residual_Percent__c": 0,
      "genesis__Residual_Term__c": 0,

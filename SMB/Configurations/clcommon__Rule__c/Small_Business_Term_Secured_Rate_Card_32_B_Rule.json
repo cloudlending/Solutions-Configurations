@@ -1,0 +1,108 @@
+{
+     "attributes": {
+          "type": "clcommon__Rule__c"
+     },
+     "Name": "Small Business Term Secured Rate Card 32 B Rule",
+     "clcommon__Document_Definition__r": null,
+     "clcommon__Enabled__c": true,
+     "clcommon__External_ID__c": "Small_Business_Term_Secured_Rate_Card_32_B_Rule",
+     "clcommon__Object_Type__c": "genesis__Applications__c",
+     "clcommon__Parent_Record_Id__c": null,
+     "clcommon__Parent_Rule__r": null,
+     "clcommon__Release_Checksum__c": "dcf30ca994e33504fa9e26eeac43dce4b89753c1c619379bdbc68d6328b6f639",
+     "clcommon__Rule_Json__c": {
+          "validationClassName": null,
+          "successMessage": "Rule Evaluation Passed for rule : Small_Business_Term_Secured_Rate_Card_32_B",
+          "successActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.RateCardGenerationAction",
+                    "additionalParams": "{\"Action type\":\"Success\"}",
+                    "actionName": "Action1"
+               }
+          ],
+          "sObjectName": "genesis__Rate_Card_Setup_Detail__c",
+          "saveRuleClass": "genesis.RateCardDetailRuleManagement",
+          "ruleName": "Small_Business_Term_Secured_Rate_Card_32_B",
+          "priority": 23,
+          "parentRuleID": null,
+          "objectType": "genesis__Applications__c",
+          "failureMessage": "Rule Evaluation Failed for rule : Small_Business_Term_Secured_Rate_Card_32_B",
+          "failureActions": [
+               {
+                    "type": "Apex",
+                    "priority": null,
+                    "apexClassName": "genesis.RateCardGenerationAction",
+                    "additionalParams": "{\"Action type\":\"Failure\"}",
+                    "actionName": "Action2"
+               }
+          ],
+          "externalId": "Small_Business_Term_Secured_Rate_Card_32_B_RULE",
+          "executeActions": null,
+          "evaluationExpression": "$1&&$2&&$3&&$4&&$5",
+          "enabled": null,
+          "criteria": [
+               {
+                    "type": "Expression",
+                    "sequence": "$1",
+                    "relatedObject": "genesis__Applications__c",
+                    "matchingValue": "1000",
+                    "matchingType": ">",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Loan Amount",
+                    "fieldAPIName": "genesis__loan_amount__c"
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$2",
+                    "relatedObject": "genesis__Applications__c",
+                    "matchingValue": "250000",
+                    "matchingType": "<",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Loan Amount",
+                    "fieldAPIName": "genesis__loan_amount__c"
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$3",
+                    "relatedObject": "genesis__Applications__c",
+                    "matchingValue": "1",
+                    "matchingType": ">",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Term",
+                    "fieldAPIName": "genesis__term__c"
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$4",
+                    "relatedObject": "genesis__Applications__c",
+                    "matchingValue": "60",
+                    "matchingType": "<",
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Term",
+                    "fieldAPIName": "genesis__term__c"
+               },
+               {
+                    "type": "Expression",
+                    "sequence": "$5",
+                    "relatedObject": "genesis__Applications__c",
+                    "matchingValue": "B",
+                    "matchingType": "==",
+                    "fieldType": "STRING",
+                    "fieldName": "Credit Rating Matrix Name",
+                    "fieldAPIName": "genesis__credit_rating__r.name"
+               }
+          ],
+          "category": "RateCardGenerationConfiguration",
+          "abortQueueExecutionOnFailure": null
+     },
+     "clcommon__Rule_Priority__c": 1,
+     "clcommon__Rule_Set__r": {
+          "attributes": {
+               "type": "clcommon__Rule_Set__c"
+          },
+          "clcommon__External_ID__c": "Rate_Card_Generation_Config"
+     },
+     "genesis__Department_Members__r": null
+}
