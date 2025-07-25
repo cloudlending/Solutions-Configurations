@@ -14,7 +14,7 @@
           },
           "clcommon__External_ID__c": "Individual_Borrower_Consumer_Rule"
      },
-     "clcommon__Release_Checksum__c": "22b794232af02320eaa4fc6776f9175c15ea2e0c67224f23537932d54bb91718",
+     "clcommon__Release_Checksum__c": "4a714feb7f79f8949424e13b50f9cff735db2746e933ec597886d10cf110d11e",
      "clcommon__Rule_Json__c": {
           "validationClassName": "genesis.ScorecardRulesValidator",
           "successMessage": "Rule Evaluation Passed for rule : Entity Criteria 3",
@@ -23,7 +23,7 @@
                     "type": "Apex",
                     "priority": null,
                     "apexClassName": "genesis.ScorecardResultGenerator",
-                    "additionalParams": "{\"Weight\":\"1\",\"Score\":\"40\",\"Action type\":\"Success\"}",
+                    "additionalParams": "{\"Action type\":\"Success\",\"Score\":\"40\",\"Weight\":\"1\"}",
                     "actionName": "Action1"
                }
           ],
@@ -31,7 +31,7 @@
           "saveRuleClass": null,
           "ruleName": "Entity Criteria 3",
           "priority": 4,
-          "parentRuleID": "a3W6O000000lgVFUAY",
+          "parentRuleID": "a3abn000000tSMOAA2",
           "parentRecordId": null,
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : Entity Criteria 3",
@@ -44,27 +44,49 @@
                     "actionName": "Action2"
                }
           ],
+          "externalId": "Entity_Criteria_3_Consumer_Rule",
           "executeActions": null,
-          "evaluationExpression": "$1",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {
+                    "useBusinessDays": null,
                     "type": "Expression",
                     "sequence": "$1",
                     "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "700",
-                    "maximumValue": "749",
-                    "matchingValue": "",
-                    "matchingType": "BETWEEN",
+                    "offsetValue": null,
+                    "minimumValue": null,
+                    "maximumValue": null,
+                    "matchingValue": "700",
+                    "matchingType": ">=",
+                    "isFieldComparison": null,
                     "fieldType": "DOUBLE",
-                    "fieldName": "FICO Score",
-                    "fieldAPIName": "genesis__Credit_Report__r.genesis__Credit_Score__c",
+                    "fieldName": "Credit Score",
+                    "fieldAPIName": "clcommon__contact__r.clcommon__personal_information__r.intdm__credit_score__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "useBusinessDays": null,
+                    "type": "Expression",
+                    "sequence": "$2",
+                    "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "749",
+                    "matchingType": "<=",
+                    "isFieldComparison": null,
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Credit Score",
+                    "fieldAPIName": "clcommon__contact__r.clcommon__personal_information__r.intdm__credit_score__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
                }
           ],
-          "category": "score card",
+          "category": "LOS Scorecard",
           "abortQueueExecutionOnFailure": null
      },
      "clcommon__Rule_Priority__c": 4,

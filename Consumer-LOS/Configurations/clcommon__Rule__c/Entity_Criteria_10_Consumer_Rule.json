@@ -14,7 +14,7 @@
           },
           "clcommon__External_ID__c": "Individual_Borrower_Consumer_Rule"
      },
-     "clcommon__Release_Checksum__c": "d3eb36b2b9b43e0291fcb01c5f1d3fa5e2ff5bab4e361dc8b023b3c9223a3c32",
+     "clcommon__Release_Checksum__c": "aca7c92ac7a2e6bcf98b6c7d5c7822f9ff4a644714f96801059b74f0a0180d27",
      "clcommon__Rule_Json__c": {
           "validationClassName": "genesis.ScorecardRulesValidator",
           "successMessage": "Rule Evaluation Passed for rule : Entity Criteria 10",
@@ -23,15 +23,15 @@
                     "type": "Apex",
                     "priority": null,
                     "apexClassName": "genesis.ScorecardResultGenerator",
-                    "additionalParams": "{\"Weight\":\"1\",\"Score\":\"25\",\"Action type\":\"Success\"}",
+                    "additionalParams": "{\"Action type\":\"Success\",\"Score\":\"25\",\"Weight\":\"1\"}",
                     "actionName": "Action1"
                }
           ],
           "sObjectName": "",
           "saveRuleClass": null,
           "ruleName": "Entity Criteria 10",
-          "priority": 11,
-          "parentRuleID": "a3W6O000000lgVFUAY",
+          "priority": 10,
+          "parentRuleID": "a3abn000000tSMOAA2",
           "parentRecordId": null,
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : Entity Criteria 10",
@@ -44,18 +44,40 @@
                     "actionName": "Action2"
                }
           ],
+          "externalId": "Entity_Criteria_10_Consumer_Rule",
           "executeActions": null,
-          "evaluationExpression": "$1",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {
+                    "useBusinessDays": null,
                     "type": "Expression",
                     "sequence": "$1",
                     "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
                     "minimumValue": "0.30",
                     "maximumValue": "0.34",
-                    "matchingValue": "",
-                    "matchingType": "BETWEEN",
+                    "matchingValue": "0.30",
+                    "matchingType": ">=",
+                    "isFieldComparison": null,
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Back End Debt To Income Ratio",
+                    "fieldAPIName": "genesis__back_end_debt_to_income_ratio__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "useBusinessDays": null,
+                    "type": "Expression",
+                    "sequence": "$2",
+                    "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "0.34",
+                    "matchingType": "<=",
+                    "isFieldComparison": null,
                     "fieldType": "DOUBLE",
                     "fieldName": "Back End Debt To Income Ratio",
                     "fieldAPIName": "genesis__back_end_debt_to_income_ratio__c",
@@ -64,7 +86,7 @@
                     "additionalParams": null
                }
           ],
-          "category": "score card",
+          "category": "LOS Scorecard",
           "abortQueueExecutionOnFailure": null
      },
      "clcommon__Rule_Priority__c": 10,
