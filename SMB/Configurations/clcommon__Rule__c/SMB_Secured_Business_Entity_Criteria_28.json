@@ -14,7 +14,7 @@
           },
           "clcommon__External_ID__c": "SMB_Secured_Business_Entity"
      },
-     "clcommon__Release_Checksum__c": "e597836f6cb195d69e991e2f7d2971de757aa5cb4d9a1b6f5381e3c0e19935a0",
+     "clcommon__Release_Checksum__c": "0cf908925946bc7c682efc5998002d0fe44e1fdeb2f7616729651a0c6ccfb37c",
      "clcommon__Rule_Json__c": {
           "validationClassName": "genesis.ScorecardRulesValidator",
           "successMessage": "Rule Evaluation Passed for rule : SMB Secured Business Entity Criteria 28",
@@ -23,7 +23,7 @@
                     "type": "Apex",
                     "priority": null,
                     "apexClassName": "genesis.ScorecardResultGenerator",
-                    "additionalParams": "{\"Action type\":\"Success\",\"Score\":\"-25\",\"Weight\":\"1\"}",
+                    "additionalParams": "{\"Weight\":\"1\",\"Score\":\"-25\",\"Action type\":\"Success\"}",
                     "actionName": "Action1"
                }
           ],
@@ -31,7 +31,7 @@
           "saveRuleClass": null,
           "ruleName": "SMB Secured Business Entity Criteria 28",
           "priority": 29,
-          "parentRuleID": "a3I5e0000009JRnEAM",
+          "parentRuleID": "a3abn000000sdKRAAY",
           "parentRecordId": null,
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : SMB Secured Business Entity Criteria 28",
@@ -40,31 +40,35 @@
                     "type": "Apex",
                     "priority": null,
                     "apexClassName": "genesis.ScorecardResultGenerator",
-                    "additionalParams": "{\"Adverse Action Name\":\"Existing Lien\",\"Action type\":\"Failure\"}",
+                    "additionalParams": "{\"Action type\":\"Failure\",\"Adverse Action Name\":\"Existing Lien\"}",
                     "actionName": "Action2"
                }
           ],
+          "externalId": "SMB_Secured_Business_Entity_Criteria_28",
           "executeActions": null,
           "evaluationExpression": "$1",
           "enabled": null,
           "criteria": [
                {
+                    "useBusinessDays": null,
                     "type": "Expression",
                     "sequence": "$1",
                     "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
                     "minimumValue": "",
                     "maximumValue": "",
                     "matchingValue": "1",
                     "matchingType": ">=",
+                    "isFieldComparison": null,
                     "fieldType": "DOUBLE",
                     "fieldName": "Number of Liens",
-                    "fieldAPIName": "intdm__Number_of_Liens__c",
+                    "fieldAPIName": "intdm__number_of_liens__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
                }
           ],
-          "category": "Small Business Secured Scorecards",
+          "category": "LOS Scorecard",
           "abortQueueExecutionOnFailure": null
      },
      "clcommon__Rule_Priority__c": 29,

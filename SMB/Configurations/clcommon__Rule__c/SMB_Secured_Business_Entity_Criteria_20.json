@@ -14,7 +14,7 @@
           },
           "clcommon__External_ID__c": "SMB_Secured_Business_Entity"
      },
-     "clcommon__Release_Checksum__c": "a2d26d19599f7c87d20a7709ea9151eb5efb59fcfe39e19eea659cae32ca6cca",
+     "clcommon__Release_Checksum__c": "c04a8a5be2c0debf82f091bdc16045310030a156a71be4fcbeec284625a75e59",
      "clcommon__Rule_Json__c": {
           "validationClassName": "genesis.ScorecardRulesValidator",
           "successMessage": "Rule Evaluation Passed for rule : SMB Secured Business Entity Criteria 20",
@@ -23,7 +23,7 @@
                     "type": "Apex",
                     "priority": null,
                     "apexClassName": "genesis.ScorecardResultGenerator",
-                    "additionalParams": "{\"Weight\":\"1\",\"Score\":\"10\",\"Action type\":\"Success\"}",
+                    "additionalParams": "{\"Action type\":\"Success\",\"Score\":\"10\",\"Weight\":\"1\"}",
                     "actionName": "Action1"
                }
           ],
@@ -31,7 +31,7 @@
           "saveRuleClass": null,
           "ruleName": "SMB Secured Business Entity Criteria 20",
           "priority": 21,
-          "parentRuleID": "a3L5Y000002O3lIUAS",
+          "parentRuleID": "a3abn000000sdKRAAY",
           "parentRecordId": null,
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : SMB Secured Business Entity Criteria 20",
@@ -44,27 +44,49 @@
                     "actionName": "Action2"
                }
           ],
+          "externalId": "SMB_Secured_Business_Entity_Criteria_20",
           "executeActions": null,
-          "evaluationExpression": "$1",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {
+                    "useBusinessDays": null,
                     "type": "Expression",
                     "sequence": "$1",
                     "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
                     "minimumValue": "1.3",
                     "maximumValue": "1.39",
-                    "matchingValue": "",
-                    "matchingType": "BETWEEN",
-                    "fieldType": "PERCENT",
-                    "fieldName": "Debt Service Coverage Ratio",
-                    "fieldAPIName": "clcommon__Debt_Service_Coverage_Ratio_DSCR__c",
+                    "matchingValue": "1.3",
+                    "matchingType": ">=",
+                    "isFieldComparison": null,
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Debt Service Coverage Ratio(DSCR)",
+                    "fieldAPIName": "clcommon__debt_service_coverage_ratio_dscr__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "useBusinessDays": null,
+                    "type": "Expression",
+                    "sequence": "$2",
+                    "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "1.39",
+                    "matchingType": "<=",
+                    "isFieldComparison": null,
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Debt Service Coverage Ratio(DSCR)",
+                    "fieldAPIName": "clcommon__debt_service_coverage_ratio_dscr__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
                }
           ],
-          "category": "Small Business Secured Scorecards",
+          "category": "LOS Scorecard",
           "abortQueueExecutionOnFailure": null
      },
      "clcommon__Rule_Priority__c": 21,

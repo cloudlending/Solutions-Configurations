@@ -14,7 +14,7 @@
           },
           "clcommon__External_ID__c": "SMB_Secured_Business_Entity"
      },
-     "clcommon__Release_Checksum__c": "5f21e5c1339b96edef3b00b51302f6e5ebbec0e7eaa688e65a43064c9e9f67c9",
+     "clcommon__Release_Checksum__c": "f3d29a709b0fb83b61a6f64a0407a604d48033db53930a5f6f0217f9042d1ada",
      "clcommon__Rule_Json__c": {
           "validationClassName": "genesis.ScorecardRulesValidator",
           "successMessage": "Rule Evaluation Passed for rule : SMB Secured Business Entity Criteria 14",
@@ -23,7 +23,7 @@
                     "type": "Apex",
                     "priority": null,
                     "apexClassName": "genesis.ScorecardResultGenerator",
-                    "additionalParams": "{\"Action type\":\"Success\",\"Score\":\"0\",\"Weight\":\"1\"}",
+                    "additionalParams": "{\"Weight\":\"1\",\"Score\":\"0\",\"Action type\":\"Success\"}",
                     "actionName": "Action1"
                }
           ],
@@ -31,7 +31,7 @@
           "saveRuleClass": null,
           "ruleName": "SMB Secured Business Entity Criteria 14",
           "priority": 15,
-          "parentRuleID": "a3I5e0000009JRnEAM",
+          "parentRuleID": "a3abn000000sdKRAAY",
           "parentRecordId": null,
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : SMB Secured Business Entity Criteria 14",
@@ -40,31 +40,35 @@
                     "type": "Apex",
                     "priority": null,
                     "apexClassName": "genesis.ScorecardResultGenerator",
-                    "additionalParams": "{\"Adverse Action Name\":\"Income Insufficient For Amount Of Credit Requested\",\"Action type\":\"Failure\"}",
+                    "additionalParams": "{\"Action type\":\"Failure\",\"Adverse Action Name\":\"Income Insufficient For Amount Of Credit Requested\"}",
                     "actionName": "Action2"
                }
           ],
+          "externalId": "SMB_Secured_Business_Entity_Criteria_14",
           "executeActions": null,
           "evaluationExpression": "$1",
           "enabled": null,
           "criteria": [
                {
+                    "useBusinessDays": null,
                     "type": "Expression",
                     "sequence": "$1",
                     "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
                     "minimumValue": "",
                     "maximumValue": "",
                     "matchingValue": "120000",
                     "matchingType": "<",
-                    "fieldType": "CURRENCY",
-                    "fieldName": "Total Revenue",
-                    "fieldAPIName": "clcommon__Gross_Annual_Revenue__c",
+                    "isFieldComparison": null,
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Gross Annual Revenue",
+                    "fieldAPIName": "clcommon__gross_annual_revenue__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
                }
           ],
-          "category": "Small Business Secured Scorecards",
+          "category": "LOS Scorecard",
           "abortQueueExecutionOnFailure": null
      },
      "clcommon__Rule_Priority__c": 15,
