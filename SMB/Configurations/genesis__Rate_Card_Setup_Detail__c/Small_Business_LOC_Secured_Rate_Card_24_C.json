@@ -22,6 +22,7 @@
           "genesis__External_ID__c": "C_Small_Business"
      },
      "genesis__Days_Convention__c": null,
+     "genesis__Description__c": null,
      "genesis__Determining_Factor_Key_Value__c": null,
      "genesis__Enabled_Flag__c": true,
      "genesis__Equipment_Class__c": "TRUCK",
@@ -34,10 +35,23 @@
      "genesis__Minimum_Financed_Amount__c": 1000,
      "genesis__Payment_Amount_Per_Period__c": 0,
      "genesis__Payment_Frequency__c": null,
+     "genesis__Pricing_Factors__c": [
+          {
+               "term": 24,
+               "index": 0,
+               "frequency": "MONTHLY"
+          }
+     ],
+     "genesis__Pricing_Generation_Rule__r": {
+          "attributes": {
+               "type": "clcommon__Rule__c"
+          },
+          "clcommon__External_ID__c": "Small_Business_LOC_Secured_Rate_Card_24_C_Rule"
+     },
      "genesis__Pricing_Method__c": "INTEREST RATE",
      "genesis__Rate_Factor_Based_On_Amount__c": 0,
      "genesis__Rate_Factor__c": 0,
-     "genesis__Release_Checksum__c": "2dc0ac63ec4627a5cff7c1fb558c26f0f77cc653c9a02ff670af4e6c10a0b809",
+     "genesis__Release_Checksum__c": "39f52e220c3a93747705d118ea482d3cd96c93915e9be8d2f0cca528e630da66",
      "genesis__Residual_Amount__c": 0,
      "genesis__Residual_Percent__c": 0,
      "genesis__Residual_Term__c": 0,
