@@ -9,6 +9,7 @@
           "DeveloperName": "Loan"
      },
      "clcommon__Accrual_Type__c": null,
+     "clcommon__Active__c": true,
      "clcommon__Asset_Class__r": {
           "attributes": {
                "type": "clcommon__Asset_Class__c"
@@ -18,14 +19,16 @@
      "clcommon__Available_Principal_Amount_Type__c": null,
      "clcommon__Class__c": "Consumer",
      "clcommon__Covered_under_MLA__c": false,
+     "clcommon__Default_Interest_Rate__c": 4,
      "clcommon__External_Id__c": "Home_Equity_Loan",
      "clcommon__HMDA_Loan__c": false,
      "clcommon__Interest_In_Advance__c": false,
+     "clcommon__Is_Household_for_Expense_Required__c": false,
      "clcommon__Pricing_Method__c": "Rate Card",
      "clcommon__Primary_Collateral_Type__r": null,
      "clcommon__Product_Abbreviation__c": null,
      "clcommon__Product_Name__c": "Home Equity Loan",
-     "clcommon__Release_Checksum__c": "760a43a2a1efbaaa3ad59ed60dc25a15563558a3b0ea2d15c53ec7bc727b2f1c",
+     "clcommon__Release_Checksum__c": "210c3d7d5224ae3aea5996abf7d6d57ead6d9f10729df92315482a8913addc0b",
      "clcommon__Secondary_Collateral_Type__r": null,
      "clcommon__Select_If_Letter_Of_Credit__c": false,
      "clcommon__Status_Tracking_At_Document_File_Level__c": false,
@@ -56,11 +59,14 @@
      "genesis__Added_Interest__c": null,
      "genesis__Allow_SubLimits__c": false,
      "genesis__Annual_Review_Product__r": null,
+     "genesis__Days_for_Auto_Withdrawal_of_Application__c": 15,
      "genesis__Digits_After_Decimal__c": 2,
      "genesis__External_ID__c": "Home_Equity_Loan",
      "genesis__Generate_Amortization_Schedule__c": false,
      "genesis__Interest_Period_Calculation__c": null,
      "genesis__LOC_Amort_Term__c": null,
+     "genesis__LOC_Interest_rate_for_DTI__c": 4,
+     "genesis__Minimum_Amount_for_LOC_in_DTI__c": null,
      "genesis__Move_Across_Month__c": false,
      "genesis__Product_API_Name__c": null,
      "genesis__Rounding_Method__c": "Up",
@@ -68,7 +74,5 @@
      "genesis__TRID_Loan__c": true,
      "genesis__Use_As_Package_Product__c": false,
      "genesis__Use_As_SubLimit_Product__c": false,
-     "genesis__Variable_Rate_Payment_Adjustment_Type__c": null,
-     "genesis__Days_for_Auto_Withdrawal_of_Application__c": 15,
-     "clcommon__Default_Interest_Rate__c": 4
+     "genesis__Variable_Rate_Payment_Adjustment_Type__c": null
 }
