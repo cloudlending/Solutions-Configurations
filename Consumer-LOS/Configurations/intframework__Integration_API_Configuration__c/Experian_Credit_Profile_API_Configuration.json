@@ -1,0 +1,447 @@
+{
+     "attributes": {
+          "type": "intframework__Integration_API_Configuration__c"
+     },
+     "Name": "Experian Credit Profile API Configuration",
+     "intframework__API_Endpoint__c": "consumerservices/credit-profile/v2/credit-report",
+     "intframework__API_Named_Credential__c": "Experian Consumer Credit",
+     "intframework__Adapter_Class_Name__c": "intadapter.ExperianCreditProfileAdapter",
+     "intframework__Additional_Header_Parameters__c": null,
+     "intframework__Data_Format_Config_Set__r": null,
+     "intframework__Disable_Integration_Logs__c": false,
+     "intframework__Execution_Priority__c": 1,
+     "intframework__External_Id__c": "Experian_Credit_Profile_API_Configuration",
+     "intframework__File_Extension__c": null,
+     "intframework__File_Name_Prefix__c": null,
+     "intframework__Generate_File__c": false,
+     "intframework__HTTP_Content_Type__c": "application/json",
+     "intframework__HTTP_Method__c": "POST",
+     "intframework__Integration_API_Type__r": {
+          "attributes": {
+               "type": "intframework__Integration_API_Type__c"
+          },
+          "intframework__External_Id__c": "Credit_Profile"
+     },
+     "intframework__Integration_Configuration__r": {
+          "attributes": {
+               "type": "intframework__Integration_Configuration__c"
+          },
+          "intframework__External_Id__c": "Experian_Credit_Profile"
+     },
+     "intframework__Integration_Family__r": {
+          "attributes": {
+               "type": "intframework__Integration_Family__c"
+          },
+          "intframework__External_Id__c": "Consumer_Credit"
+     },
+     "intframework__Integration_Provider__r": {
+          "attributes": {
+               "type": "intframework__Integration_Provider__c"
+          },
+          "intframework__External_Id__c": "Consumer_Credit_Experian_Consumer_Credit"
+     },
+     "intframework__Log_Filter__c": null,
+     "intframework__Log_Request_Response__c": false,
+     "intframework__Long_Running_Operation__c": false,
+     "intframework__Number_Of_Retries__c": 1,
+     "intframework__Release_Checksum__c": "25df76322d2675d8e0c7ab5b75dd9d7e36b09c7793340bf019797967107150d0",
+     "intframework__Request_Mapping__c": {
+          "thirdPartySystem": {
+               "name": "Experian",
+               "useRequestGenerator": true,
+               "staticParameters": [
+                    {
+                         "externalField": "requestor$$subscriberCode",
+                         "value": "xxxxxx"
+                    },
+                    {
+                         "externalField": "enableExistingCreditPull",
+                         "value": false,
+                         "ignoreInRequest": true
+                    },
+                    {
+                         "externalField": "reuseReportValidity",
+                         "value": 30,
+                         "ignoreInRequest": true
+                    }
+               ],
+               "dynamicDataParameters": [
+                    {
+                         "externalField": "freezeOverride$$primaryApplFreezeOverrideCode"
+                    }
+               ],
+               "filters": [
+                    {
+                         "objectAPI": "Contact",
+                         "limitTo": "1",
+                         "objectAlias": "consumerPii$$primaryApplicant",
+                         "fields": [
+                              {
+                                   "externalField": "name$$lastName",
+                                   "fieldAPI": "LastName",
+                                   "isMandatory": true
+                              },
+                              {
+                                   "externalField": "name$$firstName",
+                                   "fieldAPI": "FirstName",
+                                   "isMandatory": true
+                              },
+                              {
+                                   "externalField": "name$$middleName",
+                                   "fieldAPI": "ints__Middle_Name__c"
+                              },
+                              {
+                                   "externalField": "dob$$dob",
+                                   "fieldAPI": "BirthDate"
+                              },
+                              {
+                                   "externalField": "ssn$$ssn",
+                                   "fieldAPI": "ints__Social_Security_Number__c"
+                              },
+                              {
+                                   "externalField": "HomePhone",
+                                   "fieldAPI": "HomePhone",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "MobilePhone",
+                                   "fieldAPI": "MobilePhone",
+                                   "ignoreInRequest": true
+                              },
+                              {
+                                   "externalField": "Phone",
+                                   "fieldAPI": "Phone",
+                                   "ignoreInRequest": true
+                              }
+                         ],
+                         "whereClause": "AccountId = :borrowerId"
+                    },
+                    {
+                         "objectAPI": "genesis__Identification_Information__c",
+                         "limitTo": "1",
+                         "objectAlias": "consumerPii$$primaryApplicant$$driverslicense",
+                         "fields": [
+                              {
+                                   "externalField": "number",
+                                   "fieldAPI": "genesis__Identification_Number__c"
+                              },
+                              {
+                                   "externalField": "state",
+                                   "fieldAPI": "genesis__State_of_Issuance__c"
+                              }
+                         ],
+                         "whereClause": "genesis__Identification_Type__c = 'Drivers License' AND genesis__Account__c  = :borrowerId"
+                    },
+                    {
+                         "objectAPI": "genesis__Employment_Information__c",
+                         "limitTo": "1",
+                         "objectAlias": "consumerPii$$primaryApplicant$$employment",
+                         "fields": [
+                              {
+                                   "externalField": "employerName",
+                                   "fieldAPI": "genesis__Name_of_employer__c"
+                              },
+                              {
+                                   "externalField": "employerAddress$$line1",
+                                   "fieldAPI": "genesis__Employer_Street__c"
+                              },
+                              {
+                                   "externalField": "employerAddress$$city",
+                                   "fieldAPI": "genesis__Employer_City__c"
+                              },
+                              {
+                                   "externalField": "employerAddress$$state",
+                                   "fieldAPI": "genesis__Employer_State__c"
+                              },
+                              {
+                                   "externalField": "employerAddress$$zipCode",
+                                   "fieldAPI": "genesis__Employer_Zipcode__c"
+                              }
+                         ],
+                         "whereClause": "genesis__Contact__c  = :contactId"
+                    },
+                    {
+                         "objectAPI": "clcommon__Address__c",
+                         "limitTo": "1",
+                         "objectAlias": "consumerPii$$primaryApplicant$$currentAddress",
+                         "fields": [
+                              {
+                                   "externalField": "line1",
+                                   "fieldAPI": "clcommon__Street_Address__c",
+                                   "isMandatory": true
+                              },
+                              {
+                                   "externalField": "city",
+                                   "fieldAPI": "clcommon__City__c"
+                              },
+                              {
+                                   "externalField": "state",
+                                   "fieldAPI": "clcommon__State_Province__c"
+                              },
+                              {
+                                   "externalField": "zipCode",
+                                   "fieldAPI": "clcommon__Zip_Code__c",
+                                   "isMandatory": true
+                              }
+                         ],
+                         "whereClause": "clcommon__Contact__c  = :contactId AND clcommon__Mailing_Address__c = True AND clcommon__Current_Address__c = True"
+                    },
+                    {
+                         "objectAPI": "clcommon__Address__c",
+                         "limitTo": "1",
+                         "orderBy": "clcommon__End_Date__c Desc",
+                         "objectAlias": "consumerPii$$primaryApplicant$$previousAddress[]",
+                         "fields": [
+                              {
+                                   "externalField": "line1",
+                                   "fieldAPI": "clcommon__Street_Address__c"
+                              },
+                              {
+                                   "externalField": "city",
+                                   "fieldAPI": "clcommon__City__c"
+                              },
+                              {
+                                   "externalField": "state",
+                                   "fieldAPI": "clcommon__State_Province__c"
+                              },
+                              {
+                                   "externalField": "zipCode",
+                                   "fieldAPI": "clcommon__Zip_Code__c"
+                              }
+                         ],
+                         "whereClause": "clcommon__Contact__c  = :contactId AND clcommon__Mailing_Address__c = True AND clcommon__Previous_Address__c = True"
+                    }
+               ]
+          }
+     },
+     "intframework__Request_Timeout__c": 120000,
+     "intframework__Response_Mapping__c": {
+          "StorageConfiguration": {
+               "StoreInDB": "True",
+               "PublishAsJSON": "False"
+          },
+          "DMLOperations": [
+               {
+                    "dmlOperation": "Insert",
+                    "objectMappings": [
+                         {
+                              "objectAPI": "intdm__Credit_Check__c",
+                              "externalObject": "creditProfile",
+                              "fields": [
+                                   {
+                                        "fieldAPI": "intdm__Transaction_Id__c",
+                                        "externalField": "serviceInvocationId"
+                                   },
+                                   {
+                                        "fieldAPI": "intdm__Date__c",
+                                        "externalField": "reportDate"
+                                   },
+                                   {
+                                        "fieldAPI": "intdm__Contact__c",
+                                        "externalField": "#contactId"
+                                   },
+                                   {
+                                        "fieldAPI": "intdm__Account__c",
+                                        "externalField": "#borrowerId"
+                                   },
+                                   {
+                                        "fieldAPI": "intdm__Vendor__c",
+                                        "defaultValue": "Experian"
+                                   },
+                                   {
+                                        "fieldAPI": "intdm__Product__c",
+                                        "defaultValue": "Credit Profile"
+                                   }
+                              ],
+                              "Children": [
+                                   {
+                                        "objectMappings": [
+                                             {
+                                                  "objectAPI": "intdm__Tradeline__c",
+                                                  "externalObject": "SKIP_EXTERNAL_OBJECT",
+                                                  "fields": [
+                                                       {
+                                                            "fieldAPI": "intdm__Account__c",
+                                                            "externalField": "#borrowerId"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Contact__c",
+                                                            "externalField": "#contactId"
+                                                       }
+                                                  ],
+                                                  "relationshipFields": [
+                                                       {
+                                                            "relation": "intdm__Credit_Check__c"
+                                                       }
+                                                  ],
+                                                  "Children": [
+                                                       {
+                                                            "objectMappings": [
+                                                                 {
+                                                                      "objectAPI": "intdm__Tradeline_Details__c",
+                                                                      "externalObject": "tradeline",
+                                                                      "fields": [
+                                                                           {
+                                                                                "fieldAPI": "intdm__Creditor_Name__c",
+                                                                                "externalField": "originalCreditorName"
+                                                                           },
+                                                                           {
+                                                                                "fieldAPI": "intdm__Liability_Type__c",
+                                                                                "externalField": "accountType"
+                                                                           },
+                                                                           {
+                                                                                "fieldAPI": "intdm__Status__c",
+                                                                                "externalField": "openOrClosed"
+                                                                           },
+                                                                           {
+                                                                                "fieldAPI": "intdm__Account_Number__c",
+                                                                                "externalField": "accountNumber"
+                                                                           },
+                                                                           {
+                                                                                "fieldAPI": "intdm__Monthly_Payment_Amount__c",
+                                                                                "externalField": "monthlyPaymentAmount"
+                                                                           },
+                                                                           {
+                                                                                "fieldAPI": "intdm__Account_Balance__c",
+                                                                                "externalField": "balanceAmount"
+                                                                           },
+                                                                           {
+                                                                                "fieldAPI": "intdm__Account_Balance_Date__c",
+                                                                                "externalField": "balanceDate"
+                                                                           },
+                                                                           {
+                                                                                "fieldAPI": "intdm__Open_Date__c",
+                                                                                "externalField": "openDate"
+                                                                           },
+                                                                           {
+                                                                                "fieldAPI": "intdm__Term_of_Loan__c",
+                                                                                "externalField": "terms"
+                                                                           }
+                                                                      ],
+                                                                      "relationshipFields": [
+                                                                           {
+                                                                                "relation": "intdm__Tradeline__c"
+                                                                           }
+                                                                      ]
+                                                                 }
+                                                            ]
+                                                       }
+                                                  ]
+                                             }
+                                        ]
+                                   },
+                                   {
+                                        "objectMappings": [
+                                             {
+                                                  "objectAPI": "intdm__Score__c",
+                                                  "externalObject": "riskModel",
+                                                  "fields": [
+                                                       {
+                                                            "fieldAPI": "intdm__Account__c",
+                                                            "externalField": "#borrowerId"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Contact__c",
+                                                            "externalField": "#contactId"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Type__c",
+                                                            "defaultValue": "Experian Score"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Score__c",
+                                                            "externalField": "score"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Score_Model__c",
+                                                            "externalField": "modelIndicator"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Score_Percentile_Ranking__c",
+                                                            "externalField": "scorePercentile"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Score_Reason_1__c",
+                                                            "externalField": "scoreFactors[0].code"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Score_Reason_2__c",
+                                                            "externalField": "scoreFactors[1].code"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Score_Reason_3__c",
+                                                            "externalField": "scoreFactors[2].code"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Score_Reason_4__c",
+                                                            "externalField": "scoreFactors[3].code"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Score_Reason_5__c",
+                                                            "externalField": "scoreFactors[4].code"
+                                                       }
+                                                  ],
+                                                  "relationshipFields": [
+                                                       {
+                                                            "relation": "intdm__Credit_Check__c"
+                                                       }
+                                                  ]
+                                             }
+                                        ]
+                                   },
+                                   {
+                                        "objectMappings": [
+                                             {
+                                                  "objectAPI": "intdm__Inquiry__c",
+                                                  "externalObject": "inquiry",
+                                                  "fields": [
+                                                       {
+                                                            "fieldAPI": "intdm__Inquiry_Date__c",
+                                                            "externalField": "date"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Inquiry_Amount__c",
+                                                            "externalField": "amount"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Inquiry_Purpose__c",
+                                                            "externalField": "type"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Inquiry_By__c",
+                                                            "externalField": "subscriberName"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "Name",
+                                                            "externalField": "subscriberCode"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Account__c",
+                                                            "externalField": "#borrowerId"
+                                                       },
+                                                       {
+                                                            "fieldAPI": "intdm__Contact__c",
+                                                            "externalField": "#contactId"
+                                                       }
+                                                  ],
+                                                  "relationshipFields": [
+                                                       {
+                                                            "relation": "intdm__Credit_Check__c"
+                                                       }
+                                                  ]
+                                             }
+                                        ]
+                                   }
+                              ]
+                         }
+                    ]
+               }
+          ]
+     },
+     "intframework__Retry_On_Failure__c": false,
+     "intframework__Send_File__c": false,
+     "intframework__UI_Page_Name__c": null,
+     "intframework__UI_Page_Type__c": null,
+     "intframework__Use_New_Logging_Mechanism__c": true,
+     "intframework__Use_Response_Mocker__c": false
+}

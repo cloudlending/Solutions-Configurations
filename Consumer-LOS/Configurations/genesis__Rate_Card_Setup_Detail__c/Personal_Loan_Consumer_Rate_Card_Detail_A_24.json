@@ -1,52 +1,24 @@
 {
-     "attributes": {
-          "type": "genesis__Rate_Card_Setup_Detail__c"
-     },
-     "genesis__Rate_Card_Setup_Header__r": {
-          "attributes": {
-               "type": "genesis__Rate_Card_Setup_Header__c"
-          },
-          "genesis__External_ID__c": "Personal_Loan"
-     },
-     "genesis__Adjustment_Description__c": null,
-     "genesis__Adjustment_Rate__c": null,
-     "genesis__Adjustment_Term__c": null,
-     "genesis__Adjustment_Unit__c": null,
-     "genesis__Adjustment__c": false,
-     "genesis__Arrears__c": false,
-     "genesis__Credit_Grade__c": null,
-     "genesis__Credit_Rating__r": {
-          "attributes": {
-               "type": "genesis__Credit_Rating_Matrix__c"
-          },
-          "genesis__External_ID__c": "A_Consumer"
-     },
-     "genesis__Days_Convention__c": "30/360",
-     "genesis__Determining_Factor_Key_Value__c": null,
-     "genesis__Enabled_Flag__c": true,
-     "genesis__Equipment_Class__c": "TRUCK",
-     "genesis__Equipment_Condition__c": "NEW",
-     "genesis__External_ID__c": "Personal_Loan_Consumer_Rate_Card_Detail_A_24",
-     "genesis__Interest_Rate__c": 4.05,
-     "genesis__Max_Term__c": null,
-     "genesis__Maximum_Financed_Amount__c": 1000000,
-     "genesis__Min_Term__c": null,
-     "genesis__Minimum_Financed_Amount__c": 0,
-     "genesis__Payment_Amount_Per_Period__c": 0,
-     "genesis__Payment_Frequency__c": null,
-     "genesis__Pricing_Method__c": "INTEREST RATE",
-     "genesis__Rate_Factor_Based_On_Amount__c": 0,
-     "genesis__Rate_Factor__c": 0,
-     "genesis__Release_Checksum__c": "4b236f789a75bfddc30ba275a7cb2d581e4fc7b53b7086a3e9b68e8a5018071d",
-     "genesis__Residual_Amount__c": 0,
-     "genesis__Residual_Percent__c": 0,
-     "genesis__Residual_Term__c": 0,
-     "genesis__Residual_Type__c": null,
-     "genesis__Source__c": null,
-     "genesis__Term__c": 24,
-     "genesis__Total_Payments__c": 0,
-     "genesis__Usage_Of_Equipment__c": null,
-     "genesis__Use_Additional_Determining_Factors__c": false,
-     "genesis__Year_Of_Manufacture__c": null,
-     "genesis__Yield_Percent__c": 0
+  "attributes": {
+    "type": "genesis__Rate_Card_Setup_Detail__c"
+  },
+  "genesis__Rate_Card_Setup_Header__r": {
+    "attributes": {
+      "type": "genesis__Rate_Card_Setup_Header__c"
+    },
+    "genesis__External_ID__c": "Personal_Loan"
+  },
+  "genesis__Enabled_Flag__c": true,
+  "genesis__External_ID__c": "Personal_Loan_Consumer_Rate_Card_Detail_A_24",
+  "genesis__Interest_Rate__c": 4.05,
+  "genesis__Pricing_Method__c": "INTEREST RATE",
+  "genesis__Release_Checksum__c": "4b236f789a75bfddc30ba275a7cb2d581e4fc7b53b7086a3e9b68e8a5018071d",
+  "genesis__Pricing_Factors__c":  "[{\"term\": 24, \"index\": 0, \"frequency\": \"MONTHLY\"}]",
+  "genesis__Pricing_Generation_Rule__r": {
+    "attributes": {
+      "type": "clcommon__Rule__c"
+    },
+    "genesis__External_ID__c": "Personal_Loan_Consumer_Rate_Card_Detail_A_24_Rule"
+  },
+  "genesis__Days_Convention__c": "30/360"
 }
