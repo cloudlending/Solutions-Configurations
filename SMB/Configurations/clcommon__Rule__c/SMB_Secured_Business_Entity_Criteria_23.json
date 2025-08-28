@@ -14,7 +14,7 @@
           },
           "clcommon__External_ID__c": "SMB_Secured_Business_Entity"
      },
-     "clcommon__Release_Checksum__c": "83fd2ea0eb8438f3817a3dbfe9d69a15e3c564af0a0d2037d25f1ae4655980e1",
+     "clcommon__Release_Checksum__c": "fb9cf165e14dc7a60f53db46676d7da86b6c0b5a296617a520ca58c0abe712ec",
      "clcommon__Rule_Json__c": {
           "validationClassName": "genesis.ScorecardRulesValidator",
           "successMessage": "Rule Evaluation Passed for rule : SMB Secured Business Entity Criteria 23",
@@ -23,7 +23,7 @@
                     "type": "Apex",
                     "priority": null,
                     "apexClassName": "genesis.ScorecardResultGenerator",
-                    "additionalParams": "{\"Weight\":\"1\",\"Score\":\"25\",\"Action type\":\"Success\"}",
+                    "additionalParams": "{\"Action type\":\"Success\",\"Score\":\"25\",\"Weight\":\"1\"}",
                     "actionName": "Action1"
                }
           ],
@@ -31,7 +31,7 @@
           "saveRuleClass": null,
           "ruleName": "SMB Secured Business Entity Criteria 23",
           "priority": 24,
-          "parentRuleID": "a3L5Y000002O3lIUAS",
+          "parentRuleID": "a3abn000000sdKRAAY",
           "parentRecordId": null,
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : SMB Secured Business Entity Criteria 23",
@@ -44,18 +44,22 @@
                     "actionName": "Action2"
                }
           ],
+          "externalId": "SMB_Secured_Business_Entity_Criteria_23",
           "executeActions": null,
           "evaluationExpression": "$1",
           "enabled": null,
           "criteria": [
                {
+                    "useBusinessDays": null,
                     "type": "Expression",
                     "sequence": "$1",
                     "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
                     "minimumValue": "",
                     "maximumValue": "",
                     "matchingValue": "6",
                     "matchingType": ">",
+                    "isFieldComparison": null,
                     "fieldType": "DOUBLE",
                     "fieldName": "Years in Business",
                     "fieldAPIName": "clcommon__account__r.genesis__business_information__r.genesis__years_in_business__c",
@@ -64,7 +68,7 @@
                     "additionalParams": null
                }
           ],
-          "category": "Small Business Secured Scorecards",
+          "category": "LOS Scorecard",
           "abortQueueExecutionOnFailure": null
      },
      "clcommon__Rule_Priority__c": 24,

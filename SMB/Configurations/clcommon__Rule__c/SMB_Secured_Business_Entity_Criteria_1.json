@@ -14,7 +14,7 @@
           },
           "clcommon__External_ID__c": "SMB_Secured_Business_Entity"
      },
-     "clcommon__Release_Checksum__c": "86b5b56a3f22090308c6afcc14daef5d8e21993835ab7e1995f783e354417f1a",
+     "clcommon__Release_Checksum__c": "c753a510150a844580879a98645ae5cf6847b2706418fc7cdf8a69757f8b65d3",
      "clcommon__Rule_Json__c": {
           "validationClassName": "genesis.ScorecardRulesValidator",
           "successMessage": "Rule Evaluation Passed for rule : SMB Secured Business Entity Criteria 1",
@@ -31,7 +31,7 @@
           "saveRuleClass": null,
           "ruleName": "SMB Secured Business Entity Criteria 1",
           "priority": 2,
-          "parentRuleID": "a3L5Y000002O3lIUAS",
+          "parentRuleID": "a3abn000000sdKRAAY",
           "parentRecordId": null,
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : SMB Secured Business Entity Criteria 1",
@@ -44,27 +44,31 @@
                     "actionName": "Action2"
                }
           ],
+          "externalId": "SMB_Secured_Business_Entity_Criteria_1",
           "executeActions": null,
           "evaluationExpression": "$1",
           "enabled": null,
           "criteria": [
                {
+                    "useBusinessDays": null,
                     "type": "Expression",
                     "sequence": "$1",
                     "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
                     "minimumValue": "",
                     "maximumValue": "",
                     "matchingValue": "200",
                     "matchingType": ">=",
+                    "isFieldComparison": null,
                     "fieldType": "DOUBLE",
                     "fieldName": "SBSS Score",
-                    "fieldAPIName": "clcommon__account__r.intdm__sbss_score__c",
+                    "fieldAPIName": "clcommon__account__r.genesis__business_information__r.genesis__sbss_score__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
                }
           ],
-          "category": "Small Business Secured Scorecards",
+          "category": "LOS Scorecard",
           "abortQueueExecutionOnFailure": null
      },
      "clcommon__Rule_Priority__c": 2,

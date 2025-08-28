@@ -14,7 +14,7 @@
           },
           "clcommon__External_ID__c": "SMB_Secured_Guarantor"
      },
-     "clcommon__Release_Checksum__c": "c4e725b79982f9697c183e957d8cce5d6a18db25667d7e90cb5d583e2d802f72",
+     "clcommon__Release_Checksum__c": "17c81db76b83327a7ff853484142d98ff6bf9cbe107506db1e0ada97a3d65863",
      "clcommon__Rule_Json__c": {
           "validationClassName": "genesis.ScorecardRulesValidator",
           "successMessage": "Rule Evaluation Passed for rule : SMB Secured Guarantor Criteria 11",
@@ -23,7 +23,7 @@
                     "type": "Apex",
                     "priority": null,
                     "apexClassName": "genesis.ScorecardResultGenerator",
-                    "additionalParams": "{\"Weight\":\"1\",\"Score\":\"-10\",\"Action type\":\"Success\"}",
+                    "additionalParams": "{\"Action type\":\"Success\",\"Score\":\"-10\",\"Weight\":\"1\"}",
                     "actionName": "Action1"
                }
           ],
@@ -31,7 +31,7 @@
           "saveRuleClass": null,
           "ruleName": "SMB Secured Guarantor Criteria 11",
           "priority": 55,
-          "parentRuleID": "a3L5Y000002O3obUAC",
+          "parentRuleID": "a3abn000000sdKuAAI",
           "parentRecordId": null,
           "objectType": "clcommon__Party__c",
           "failureMessage": "Rule Evaluation Failed for rule : SMB Secured Guarantor Criteria 11",
@@ -44,18 +44,40 @@
                     "actionName": "Action2"
                }
           ],
+          "externalId": "SMB_Secured_Guarantor_Criteria_11",
           "executeActions": null,
-          "evaluationExpression": "$1",
+          "evaluationExpression": "$1&&$2",
           "enabled": null,
           "criteria": [
                {
+                    "useBusinessDays": null,
                     "type": "Expression",
                     "sequence": "$1",
                     "relatedObject": "clcommon__Party__c",
-                    "minimumValue": "0.35",
-                    "maximumValue": "0.39",
-                    "matchingValue": "",
-                    "matchingType": "BETWEEN",
+                    "offsetValue": null,
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "0.35",
+                    "matchingType": ">=",
+                    "isFieldComparison": null,
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Back End Debt To Income Ratio",
+                    "fieldAPIName": "genesis__back_end_debt_to_income_ratio__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "useBusinessDays": null,
+                    "type": "Expression",
+                    "sequence": "$2",
+                    "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": "0.39",
+                    "matchingType": "<=",
+                    "isFieldComparison": null,
                     "fieldType": "DOUBLE",
                     "fieldName": "Back End Debt To Income Ratio",
                     "fieldAPIName": "genesis__back_end_debt_to_income_ratio__c",
