@@ -9,7 +9,7 @@
      "clcommon__Object_Type__c": "clcommon__Party__c",
      "clcommon__Parent_Record_Id__c": null,
      "clcommon__Parent_Rule__r": null,
-     "clcommon__Release_Checksum__c": "271ce12181da3055e4d88da50e2a3ad98a19fd809f94e0f4d5c55a87bf8bf169",
+     "clcommon__Release_Checksum__c": "ba80ea1f1c7fae35f29b728c992749a9afc3812bc13e20726193c0dc21b75d16",
      "clcommon__Rule_Json__c": {
           "validationClassName": null,
           "successMessage": "Rule Evaluation Passed for rule : Credit Policy - Bankruptcy Rule",
@@ -39,8 +39,9 @@
                     "actionName": "Action2"
                }
           ],
+          "externalId": "Credit_Policy_Bankruptcy_Rule_Consumer_Rule",
           "executeActions": null,
-          "evaluationExpression": "$1||$2||$3",
+          "evaluationExpression": "($1||$2||$3)&&$4",
           "enabled": null,
           "criteria": [
                {
@@ -84,6 +85,24 @@
                     "fieldType": "STRING",
                     "fieldName": "Asset Class",
                     "fieldAPIName": "genesis__application__r.genesis__asset_class__c",
+                    "criterionName": null,
+                    "apexClassName": null,
+                    "additionalParams": null
+               },
+               {
+                    "useBusinessDays": null,
+                    "type": "Expression",
+                    "sequence": "$4",
+                    "relatedObject": "clcommon__Party__c",
+                    "offsetValue": null,
+                    "minimumValue": "",
+                    "maximumValue": "",
+                    "matchingValue": null,
+                    "matchingType": "IS NOT NULL",
+                    "isFieldComparison": null,
+                    "fieldType": "DOUBLE",
+                    "fieldName": "Number of Bankruptcies",
+                    "fieldAPIName": "intdm__number_of_bankruptcies__c",
                     "criterionName": null,
                     "apexClassName": null,
                     "additionalParams": null
